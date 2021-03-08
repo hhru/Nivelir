@@ -1,0 +1,1647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
+		C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
+		C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */; };
+		C0270CA425F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */; };
+		C0270CA525F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */; };
+		C0270CA625F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */; };
+		C0270CA725F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */; };
+		C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */; };
+		C0270CC425F3DB8600ECC57C /* ScreenStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */; };
+		C0270CC525F3DB8600ECC57C /* ScreenStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */; };
+		C0270CC625F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */; };
+		C0270CC725F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */; };
+		C0270CC825F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */; };
+		C0270CC925F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */; };
+		C0270CCA25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */; };
+		C0270CCB25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */; };
+		C0270CCC25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */; };
+		C0270CCD25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */; };
+		C0270CCE25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */; };
+		C0270CCF25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */; };
+		C0270CE225F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */; };
+		C0270CE325F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */; };
+		C0270CE425F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */; };
+		C0270CE525F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */; };
+		C0270D0425F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */; };
+		C0270D0525F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */; };
+		C0270D0625F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */; };
+		C0270D0725F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */; };
+		C0270D0A25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */; };
+		C0270D0B25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */; };
+		C0270D0C25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */; };
+		C0270D0D25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */; };
+		C0270D1A25F3DEA100ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */; };
+		C0270D1F25F3DEA200ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */; };
+		C0270D8625F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */; };
+		C0270D8725F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */; };
+		C0270D9A25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */; };
+		C0270D9B25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */; };
+		C0270DA625F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */; };
+		C0270DA725F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */; };
+		C0270DB125F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */; };
+		C0270DB225F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */; };
+		C0270DB825F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */; };
+		C0270DB925F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */; };
+		C0270DC425F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */; };
+		C0270DC525F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */; };
+		C0270DCF25F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */; };
+		C0270DD025F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */; };
+		C0270DD725F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */; };
+		C0270DD825F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */; };
+		C0270DDF25F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */; };
+		C0270DE025F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */; };
+		C0270DF325F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */; };
+		C0270DF425F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */; };
+		C0270DFE25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */; };
+		C0270DFF25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */; };
+		C0270E0525F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */; };
+		C0270E0625F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */; };
+		C0270E0C25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */; };
+		C0270E0D25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */; };
+		C0270E1725F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */; };
+		C0270E1825F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */; };
+		C0270E1F25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */; };
+		C0270E2025F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */; };
+		C0270E2E25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */; };
+		C0270E2F25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */; };
+		C0270E3525F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */; };
+		C0270E3625F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */; };
+		C0270E3D25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */; };
+		C0270E3E25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */; };
+		C0270E4825F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */; };
+		C0270E4925F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */; };
+		C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */; };
+		C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */; };
+		C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */; };
+		C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */; };
+		C0270E7E25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */; };
+		C0270E7F25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */; };
+		C0270E8E25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */; };
+		C0270E8F25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */; };
+		C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */; };
+		C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */; };
+		C0270ECB25F4A5D300ECC57C /* ScreenTabBarItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */; };
+		C0270ED025F4A5D400ECC57C /* ScreenTabBarItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */; };
+		C0270ED525F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */; };
+		C0270EDA25F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */; };
+		C0270EDF25F4A5EB00ECC57C /* ScreenStackContainerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */; };
+		C0270EE425F4A5EC00ECC57C /* ScreenStackContainerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */; };
+		C0270EFE25F4A68000ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */; };
+		C0270F0325F4A68100ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */; };
+		C0270F0825F4A69700ECC57C /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */; };
+		C0270F0D25F4A69800ECC57C /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */; };
+		C0270F1225F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */; };
+		C0270F1725F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */; };
+		C0270F1C25F4A6AC00ECC57C /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */; };
+		C0270F2125F4A6AD00ECC57C /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */; };
+		C0270F2625F4A6B900ECC57C /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */; };
+		C0270F2B25F4A6BA00ECC57C /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */; };
+		C0270FCB25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */; };
+		C0270FCC25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */; };
+		C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107025F50F9200ECC57C /* ScreenIterator.swift */; };
+		C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */; };
+		C027107C25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */; };
+		C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107025F50F9200ECC57C /* ScreenIterator.swift */; };
+		C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */; };
+		C027108C25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */; };
+		C027109F25F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */; };
+		C02710A025F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */; };
+		C02710B225F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */; };
+		C02710B325F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */; };
+		C02710B925F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */; };
+		C02710BA25F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */; };
+		C027110B25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */; };
+		C027110C25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */; };
+		C027111525F55D8000ECC57C /* ScreenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */; };
+		C027111A25F55D8000ECC57C /* ScreenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */; };
+		C027111F25F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */; };
+		C027112425F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */; };
+		C027113225F600F300ECC57C /* ScreenInterception.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027113125F600F300ECC57C /* ScreenInterception.swift */; };
+		C027113325F600F300ECC57C /* ScreenInterception.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027113125F600F300ECC57C /* ScreenInterception.swift */; };
+		C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */; };
+		C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */; };
+		C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */; };
+		C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */; };
+		C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
+		C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
+		C027117E25F60B7500ECC57C /* DefaultScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027117D25F60B7500ECC57C /* DefaultScreenNavigator.swift */; };
+		C027117F25F60B7500ECC57C /* DefaultScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027117D25F60B7500ECC57C /* DefaultScreenNavigator.swift */; };
+		C027118625F60BBC00ECC57C /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027118525F60BBC00ECC57C /* ScreenWindowProvider.swift */; };
+		C027118725F60BBC00ECC57C /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027118525F60BBC00ECC57C /* ScreenWindowProvider.swift */; };
+		C027119125F60BCD00ECC57C /* ScreenCustomWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027119025F60BCD00ECC57C /* ScreenCustomWindowProvider.swift */; };
+		C027119225F60BCD00ECC57C /* ScreenCustomWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027119025F60BCD00ECC57C /* ScreenCustomWindowProvider.swift */; };
+		C027119825F60BE600ECC57C /* ScreenKeyWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027119725F60BE600ECC57C /* ScreenKeyWindowProvider.swift */; };
+		C027119925F60BE600ECC57C /* ScreenKeyWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027119725F60BE600ECC57C /* ScreenKeyWindowProvider.swift */; };
+		C02711AB25F61DC000ECC57C /* CustomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02711AA25F61DC000ECC57C /* CustomScreen.swift */; };
+		C02711AC25F61DC000ECC57C /* CustomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02711AA25F61DC000ECC57C /* CustomScreen.swift */; };
+		C057F01823CB8EEB00C2D895 /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C057F00E23CB8EEB00C2D895 /* Nivelir.framework */; };
+		C057F01D23CB8EEB00C2D895 /* NivelirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */; };
+		C057F01F23CB8EEB00C2D895 /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
+		C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */; };
+		C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0A01A6023CB92FB00AC2C3A /* NivelirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */; };
+		C0AAD97125EEC0160087439E /* UIViewController+ScreenModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */; };
+		C0AAD99325EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */; };
+		C0AAD9A325EEC23C0087439E /* ScreenCustomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */; };
+		C0AAD9A925EEC2790087439E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A825EEC2790087439E /* Screen.swift */; };
+		C0AAD9B025EEC34B0087439E /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */; };
+		C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
+		C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */; };
+		C0AAD9D925EED3EE0087439E /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9D825EED3EE0087439E /* ScreenKey.swift */; };
+		C0AAD9E225EED53D0087439E /* AnyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9E125EED53D0087439E /* AnyScreen.swift */; };
+		C0AAD9EC25EED5550087439E /* AnyScreenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */; };
+		C0AAD9F225EED7680087439E /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9F125EED7680087439E /* AnyScreenAction.swift */; };
+		C0AADA1525EED7740087439E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A825EEC2790087439E /* Screen.swift */; };
+		C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
+		C0AADA1E25EED7C00087439E /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */; };
+		C0AADA2925EED8110087439E /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2825EED8110087439E /* ScreenAction.swift */; };
+		C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2F25EED85C0087439E /* ScreenError.swift */; };
+		C0AADA3A25EED86E0087439E /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */; };
+		C0AADA4625EEE0F10087439E /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */; };
+		C0AADA4D25EEE1F10087439E /* ScreenInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4C25EEE1F10087439E /* ScreenInfoContainer.swift */; };
+		C0AADA5325EEE2010087439E /* ScreenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA5225EEE2010087439E /* ScreenInfo.swift */; };
+		C0AADA5A25EEE2480087439E /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA5925EEE2480087439E /* ScreenRoute.swift */; };
+		C0AADA7225EF5ED80087439E /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */; };
+		C0AADA7825EF60E00087439E /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */; };
+		C0AADABE25EF6F2A0087439E /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */; };
+		C0AADAC825EF6F5D0087439E /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */; };
+		C0AADAE625EF7D380087439E /* ScreenJoinAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */; };
+		C0AADB1325EF89C30087439E /* ScreenNavigateToAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */; };
+		C0AADB1825EF89C40087439E /* ScreenNavigateToAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */; };
+		C0AADB3B25EF8FE60087439E /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA5925EEE2480087439E /* ScreenRoute.swift */; };
+		C0AADB4025EF8FEC0087439E /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */; };
+		C0AADB4125EF8FEC0087439E /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */; };
+		C0AADB4225EF8FEC0087439E /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */; };
+		C0AADB4325EF8FEC0087439E /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */; };
+		C0AADB4825EF8FF00087439E /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */; };
+		C0AADB4D25EF8FF30087439E /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */; };
+		C0AADB5225EF8FF70087439E /* ScreenCustomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */; };
+		C0AADB5325EF8FF70087439E /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9D825EED3EE0087439E /* ScreenKey.swift */; };
+		C0AADB5825EF8FFB0087439E /* ScreenInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4C25EEE1F10087439E /* ScreenInfoContainer.swift */; };
+		C0AADB5925EF8FFB0087439E /* ScreenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA5225EEE2010087439E /* ScreenInfo.swift */; };
+		C0AADB6425EF900B0087439E /* UIWindow+ScreenWindowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */; };
+		C0AADB6525EF900B0087439E /* UIViewController+ScreenModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */; };
+		C0AADB6A25EF900F0087439E /* AnyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9E125EED53D0087439E /* AnyScreen.swift */; };
+		C0AADB6B25EF900F0087439E /* AnyScreenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */; };
+		C0AADB7025EF90120087439E /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2825EED8110087439E /* ScreenAction.swift */; };
+		C0AADB7125EF90120087439E /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9F125EED7680087439E /* AnyScreenAction.swift */; };
+		C0AADB7625EF90160087439E /* ScreenJoinAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */; };
+		C0AADB8125EF901F0087439E /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */; };
+		C0AADB8225EF901F0087439E /* ScreenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2F25EED85C0087439E /* ScreenError.swift */; };
+		C0AADB8325EF901F0087439E /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */; };
+		C0AADB8825EF90270087439E /* RangeReplaceableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */; };
+		C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
+		C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
+		C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C057F01923CB8EEB00C2D895 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C057F00523CB8EEB00C2D895 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C057F00D23CB8EEB00C2D895;
+			remoteInfo = Nivelir;
+		};
+		C0A01A5123CB92EB00AC2C3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C057F00523CB8EEB00C2D895 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0A01A4623CB92EB00AC2C3A;
+			remoteInfo = "Nivelir tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; };
+		C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
+		C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackAction.swift; sourceTree = "<group>"; };
+		C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPresentingAction.swift; sourceTree = "<group>"; };
+		C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsAction.swift; sourceTree = "<group>"; };
+		C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDismissAction.swift; sourceTree = "<group>"; };
+		C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPresentAction.swift; sourceTree = "<group>"; };
+		C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPresentedAction.swift; sourceTree = "<group>"; };
+		C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectedTabAction.swift; sourceTree = "<group>"; };
+		C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSetupTabAction.swift; sourceTree = "<group>"; };
+		C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabAction.swift; sourceTree = "<group>"; };
+		C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabAnimation.swift; sourceTree = "<group>"; };
+		C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabTransitionAnimation.swift; sourceTree = "<group>"; };
+		C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabCustomAnimation.swift; sourceTree = "<group>"; };
+		C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabPredicate.swift; sourceTree = "<group>"; };
+		C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootAction.swift; sourceTree = "<group>"; };
+		C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootAction.swift; sourceTree = "<group>"; };
+		C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootCustomAnimation.swift; sourceTree = "<group>"; };
+		C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootAnimation.swift; sourceTree = "<group>"; };
+		C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootTransitionAnimation.swift; sourceTree = "<group>"; };
+		C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackTopAction.swift; sourceTree = "<group>"; };
+		C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackVisibleAction.swift; sourceTree = "<group>"; };
+		C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetStackAction.swift; sourceTree = "<group>"; };
+		C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackModifier.swift; sourceTree = "<group>"; };
+		C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackCustomAnimation.swift; sourceTree = "<group>"; };
+		C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackAnimation.swift; sourceTree = "<group>"; };
+		C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackTransitionAnimation.swift; sourceTree = "<group>"; };
+		C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopModifier.swift; sourceTree = "<group>"; };
+		C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPushModifier.swift; sourceTree = "<group>"; };
+		C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopToRootModifier.swift; sourceTree = "<group>"; };
+		C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackClearModifier.swift; sourceTree = "<group>"; };
+		C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackReplaceModifier.swift; sourceTree = "<group>"; };
+		C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopToPredicate.swift; sourceTree = "<group>"; };
+		C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopToModifier.swift; sourceTree = "<group>"; };
+		C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLogger.swift; sourceTree = "<group>"; };
+		C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenLogger.swift; sourceTree = "<group>"; };
+		C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsDecorator.swift; sourceTree = "<group>"; };
+		C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDecoratorPayload.swift; sourceTree = "<group>"; };
+		C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackDecorator.swift; sourceTree = "<group>"; };
+		C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabBarItemDecorator.swift; sourceTree = "<group>"; };
+		C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRightBarButtonDecorator.swift; sourceTree = "<group>"; };
+		C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackContainerDecorator.swift; sourceTree = "<group>"; };
+		C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyle.swift; sourceTree = "<group>"; };
+		C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyleDecorator.swift; sourceTree = "<group>"; };
+		C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLeftBarButtonDecorator.swift; sourceTree = "<group>"; };
+		C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDecoratorWrapper.swift; sourceTree = "<group>"; };
+		C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDecorator.swift; sourceTree = "<group>"; };
+		C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyStackScreen.swift; sourceTree = "<group>"; };
+		C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTabsScreen.swift; sourceTree = "<group>"; };
+		C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyModalScreen.swift; sourceTree = "<group>"; };
+		C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInterceptAction.swift; sourceTree = "<group>"; };
+		C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInterceptor.swift; sourceTree = "<group>"; };
+		C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromAction.swift; sourceTree = "<group>"; };
+		C027107025F50F9200ECC57C /* ScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterator.swift; sourceTree = "<group>"; };
+		C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenIterator.swift; sourceTree = "<group>"; };
+		C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationPredicate.swift; sourceTree = "<group>"; };
+		C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationResult.swift; sourceTree = "<group>"; };
+		C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromPredicate.swift; sourceTree = "<group>"; };
+		C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromTopAction.swift; sourceTree = "<group>"; };
+		C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromFirstAction.swift; sourceTree = "<group>"; };
+		C027113125F600F300ECC57C /* ScreenInterception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInterception.swift; sourceTree = "<group>"; };
+		C027117D25F60B7500ECC57C /* DefaultScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenNavigator.swift; sourceTree = "<group>"; };
+		C027118525F60BBC00ECC57C /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
+		C027119025F60BCD00ECC57C /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
+		C027119725F60BE600ECC57C /* ScreenKeyWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyWindowProvider.swift; sourceTree = "<group>"; };
+		C02711AA25F61DC000ECC57C /* CustomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScreen.swift; sourceTree = "<group>"; };
+		C057F00E23CB8EEB00C2D895 /* Nivelir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nivelir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C057F01123CB8EEB00C2D895 /* Nivelir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nivelir.h; sourceTree = "<group>"; };
+		C057F01223CB8EEB00C2D895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C057F01723CB8EEB00C2D895 /* Nivelir Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nivelir Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NivelirTests.swift; sourceTree = "<group>"; };
+		C057F01E23CB8EEB00C2D895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
+		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C0A01A1723CB900900AC2C3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C0A01A1823CB900900AC2C3A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		C0A01A1923CB900900AC2C3A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C0A01A1A23CB901C00AC2C3A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C0A01A1C23CB901C00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C0A01A1D23CB901C00AC2C3A /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
+		C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nivelir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A01A4F23CB92EB00AC2C3A /* Nivelir Tests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nivelir Tests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A01A6323CB9B0A00AC2C3A /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		C0A01A6423CB9B1600AC2C3A /* Dangerfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dangerfile; sourceTree = "<group>"; };
+		C0A01A6523CB9B1600AC2C3A /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		C0A01A6623CB9B5900AC2C3A /* Brewfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
+		C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenModalContainer.swift"; sourceTree = "<group>"; };
+		C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+ScreenWindowContainer.swift"; sourceTree = "<group>"; };
+		C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomKey.swift; sourceTree = "<group>"; };
+		C0AAD9A825EEC2790087439E /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigator.swift; sourceTree = "<group>"; };
+		C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+Extensions.swift"; sourceTree = "<group>"; };
+		C0AAD9D825EED3EE0087439E /* ScreenKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
+		C0AAD9E125EED53D0087439E /* AnyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreen.swift; sourceTree = "<group>"; };
+		C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBox.swift; sourceTree = "<group>"; };
+		C0AAD9F125EED7680087439E /* AnyScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenAction.swift; sourceTree = "<group>"; };
+		C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigation.swift; sourceTree = "<group>"; };
+		C0AADA2825EED8110087439E /* ScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
+		C0AADA2F25EED85C0087439E /* ScreenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenError.swift; sourceTree = "<group>"; };
+		C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInvalidContainerError.swift; sourceTree = "<group>"; };
+		C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotFoundError.swift; sourceTree = "<group>"; };
+		C0AADA4C25EEE1F10087439E /* ScreenInfoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInfoContainer.swift; sourceTree = "<group>"; };
+		C0AADA5225EEE2010087439E /* ScreenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInfo.swift; sourceTree = "<group>"; };
+		C0AADA5925EEE2480087439E /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
+		C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowRoute.swift; sourceTree = "<group>"; };
+		C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
+		C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
+		C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
+		C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigateToAction.swift; sourceTree = "<group>"; };
+		C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenJoinAction.swift; sourceTree = "<group>"; };
+		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C057F00B23CB8EEB00C2D895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C057F01423CB8EEB00C2D895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C057F01823CB8EEB00C2D895 /* Nivelir.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4423CB92EB00AC2C3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4C23CB92EB00AC2C3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0270CBD25F3DB8600ECC57C /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */,
+				C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */,
+				C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */,
+				C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */,
+				C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */,
+				C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		C0270CD825F3DCEA00ECC57C /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C0270CFD25F3DE1C00ECC57C /* SelectTab */,
+				C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */,
+				C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C0270CFD25F3DE1C00ECC57C /* SelectTab */ = {
+			isa = PBXGroup;
+			children = (
+				C0270CFF25F3DE1C00ECC57C /* Animations */,
+				C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */,
+				C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */,
+			);
+			path = SelectTab;
+			sourceTree = "<group>";
+		};
+		C0270CFF25F3DE1C00ECC57C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */,
+				C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */,
+				C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C0270D8425F3E3A900ECC57C /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				C0270D9825F3E42900ECC57C /* SetRoot */,
+				C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		C0270D9825F3E42900ECC57C /* SetRoot */ = {
+			isa = PBXGroup;
+			children = (
+				C0270DA425F3E45000ECC57C /* Animations */,
+				C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */,
+			);
+			path = SetRoot;
+			sourceTree = "<group>";
+		};
+		C0270DA425F3E45000ECC57C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */,
+				C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */,
+				C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C0270DC225F3E54E00ECC57C /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				C0270DD525F3E63200ECC57C /* SetStack */,
+				C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */,
+				C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		C0270DD525F3E63200ECC57C /* SetStack */ = {
+			isa = PBXGroup;
+			children = (
+				C0270DF125F3E68B00ECC57C /* Animations */,
+				C0270DDD25F3E65400ECC57C /* Modifiers */,
+				C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */,
+			);
+			path = SetStack;
+			sourceTree = "<group>";
+		};
+		C0270DDD25F3E65400ECC57C /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E3B25F3EB6F00ECC57C /* PopTo */,
+				C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */,
+				C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */,
+				C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */,
+				C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */,
+				C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */,
+				C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C0270DF125F3E68B00ECC57C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */,
+				C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */,
+				C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C0270E3B25F3EB6F00ECC57C /* PopTo */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */,
+				C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */,
+			);
+			path = PopTo;
+			sourceTree = "<group>";
+		};
+		C0270E5225F3EC4A00ECC57C /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */,
+				C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		C0270E6C25F4245800ECC57C /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E7225F4245800ECC57C /* Modal */,
+				C0270E7025F4245800ECC57C /* Stack */,
+				C0270E6D25F4245800ECC57C /* Tabs */,
+				C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */,
+				C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */,
+				C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+		C0270E6D25F4245800ECC57C /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C0270E7025F4245800ECC57C /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		C0270E7225F4245800ECC57C /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E7625F4245800ECC57C /* ModalStyle */,
+				C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */,
+				C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */,
+				C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */,
+				C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		C0270E7625F4245800ECC57C /* ModalStyle */ = {
+			isa = PBXGroup;
+			children = (
+				C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */,
+				C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */,
+			);
+			path = ModalStyle;
+			sourceTree = "<group>";
+		};
+		C0270F3425F4A89300ECC57C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */,
+				C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */,
+				C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */,
+				C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		C0270F7925F4DDE100ECC57C /* Intercept */ = {
+			isa = PBXGroup;
+			children = (
+				C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */,
+				C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */,
+				C027113125F600F300ECC57C /* ScreenInterception.swift */,
+			);
+			path = Intercept;
+			sourceTree = "<group>";
+		};
+		C027106F25F50F8700ECC57C /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */,
+				C027107025F50F9200ECC57C /* ScreenIterator.swift */,
+				C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */,
+				C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */,
+			);
+			path = Iterator;
+			sourceTree = "<group>";
+		};
+		C02710DE25F5358500ECC57C /* From */ = {
+			isa = PBXGroup;
+			children = (
+				C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */,
+				C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */,
+				C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */,
+				C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */,
+			);
+			path = From;
+			sourceTree = "<group>";
+		};
+		C027118425F60B9C00ECC57C /* WindowProvider */ = {
+			isa = PBXGroup;
+			children = (
+				C027118525F60BBC00ECC57C /* ScreenWindowProvider.swift */,
+				C027119025F60BCD00ECC57C /* ScreenCustomWindowProvider.swift */,
+				C027119725F60BE600ECC57C /* ScreenKeyWindowProvider.swift */,
+			);
+			path = WindowProvider;
+			sourceTree = "<group>";
+		};
+		C057F00423CB8EEB00C2D895 = {
+			isa = PBXGroup;
+			children = (
+				C057F01023CB8EEB00C2D895 /* Sources */,
+				C057F01B23CB8EEB00C2D895 /* Tests */,
+				C057F00F23CB8EEB00C2D895 /* Products */,
+				C0A01A6323CB9B0A00AC2C3A /* Scripts */,
+				C0A01A1A23CB901C00AC2C3A /* .gitignore */,
+				C0A01A1D23CB901C00AC2C3A /* .ruby-version */,
+				C0007FFA23CBAAA5005F95E0 /* .swift-version */,
+				C0A01A1C23CB901C00AC2C3A /* .swiftlint.yml */,
+				C0A01A6623CB9B5900AC2C3A /* Brewfile */,
+				C0A01A6423CB9B1600AC2C3A /* Dangerfile */,
+				C0A01A6523CB9B1600AC2C3A /* Gemfile */,
+				C0A01A1923CB900900AC2C3A /* LICENSE */,
+				C010082725EEA6B700A2FF1A /* Nivelir.podspec */,
+				C0A01A1823CB900900AC2C3A /* Package.swift */,
+				C0A01A1723CB900900AC2C3A /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		C057F00F23CB8EEB00C2D895 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C057F00E23CB8EEB00C2D895 /* Nivelir.framework */,
+				C057F01723CB8EEB00C2D895 /* Nivelir Tests iOS.xctest */,
+				C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */,
+				C0A01A4F23CB92EB00AC2C3A /* Nivelir Tests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C057F01023CB8EEB00C2D895 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C08F982125EEB9910077AE40 /* Extensions */,
+				C08F980E25EEB5A60077AE40 /* Screen */,
+				C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */,
+				C057F01223CB8EEB00C2D895 /* Info.plist */,
+				C057F01123CB8EEB00C2D895 /* Nivelir.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C057F01B23CB8EEB00C2D895 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */,
+				C057F01E23CB8EEB00C2D895 /* Info.plist */,
+				C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C08F980E25EEB5A60077AE40 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C0AAD9DE25EED50F0087439E /* Actions */,
+				C0AAD9E025EED5320087439E /* Any */,
+				C08F982225EEB99B0077AE40 /* Container */,
+				C0270E6C25F4245800ECC57C /* Decorators */,
+				C0AADA2E25EED8470087439E /* Errors */,
+				C0AADA4B25EEE1E80087439E /* Info */,
+				C0AAD9CF25EED3C80087439E /* Key */,
+				C0AAD9AE25EEC33D0087439E /* Navigation */,
+				C0AADA5825EEE2380087439E /* Route */,
+				C0AAD9A825EEC2790087439E /* Screen.swift */,
+				C02711AA25F61DC000ECC57C /* CustomScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C08F982125EEB9910077AE40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0270F3425F4A89300ECC57C /* UIKit */,
+				C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */,
+				C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */,
+				C0AADC8225EFB5360087439E /* Collection+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C08F982225EEB99B0077AE40 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				C0AAD96F25EEBFBD0087439E /* Extensions */,
+				C08F981B25EEB9830077AE40 /* ScreenContainer.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		C0AAD96F25EEBFBD0087439E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */,
+				C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C0AAD9AE25EEC33D0087439E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C027106F25F50F8700ECC57C /* Iterator */,
+				C0270E5225F3EC4A00ECC57C /* Logger */,
+				C0AADA2325EED7C40087439E /* Navigator */,
+				C027118425F60B9C00ECC57C /* WindowProvider */,
+				C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C0AAD9CF25EED3C80087439E /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */,
+				C0AAD9D825EED3EE0087439E /* ScreenKey.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		C0AAD9DE25EED50F0087439E /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C0AADAD125EF71EC0087439E /* Generic */,
+				C0270CBD25F3DB8600ECC57C /* Modal */,
+				C0270DC225F3E54E00ECC57C /* Stack */,
+				C0270CD825F3DCEA00ECC57C /* Tabs */,
+				C0270D8425F3E3A900ECC57C /* Window */,
+				C0AAD9F125EED7680087439E /* AnyScreenAction.swift */,
+				C0AADA2825EED8110087439E /* ScreenAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		C0AAD9E025EED5320087439E /* Any */ = {
+			isa = PBXGroup;
+			children = (
+				C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */,
+				C0AAD9E125EED53D0087439E /* AnyScreen.swift */,
+				C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */,
+				C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */,
+				C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */,
+			);
+			path = Any;
+			sourceTree = "<group>";
+		};
+		C0AADA2325EED7C40087439E /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */,
+				C027117D25F60B7500ECC57C /* DefaultScreenNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		C0AADA2E25EED8470087439E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */,
+				C0AADA2F25EED85C0087439E /* ScreenError.swift */,
+				C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		C0AADA4B25EEE1E80087439E /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				C0AADA5225EEE2010087439E /* ScreenInfo.swift */,
+				C0AADA4C25EEE1F10087439E /* ScreenInfoContainer.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		C0AADA5825EEE2380087439E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				C0AADA7025EF5EC50087439E /* Aliases */,
+				C0AADA5925EEE2480087439E /* ScreenRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		C0AADA7025EF5EC50087439E /* Aliases */ = {
+			isa = PBXGroup;
+			children = (
+				C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */,
+				C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */,
+				C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */,
+				C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */,
+			);
+			path = Aliases;
+			sourceTree = "<group>";
+		};
+		C0AADAD125EF71EC0087439E /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				C02710DE25F5358500ECC57C /* From */,
+				C0270F7925F4DDE100ECC57C /* Intercept */,
+				C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */,
+				C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C057F00923CB8EEB00C2D895 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C057F01F23CB8EEB00C2D895 /* Nivelir.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4223CB92EB00AC2C3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C057F00D23CB8EEB00C2D895 /* Nivelir iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C057F02223CB8EEB00C2D895 /* Build configuration list for PBXNativeTarget "Nivelir iOS" */;
+			buildPhases = (
+				C0A01A2323CB907300AC2C3A /* SwiftLint */,
+				C057F00923CB8EEB00C2D895 /* Headers */,
+				C057F00A23CB8EEB00C2D895 /* Sources */,
+				C057F00B23CB8EEB00C2D895 /* Frameworks */,
+				C057F00C23CB8EEB00C2D895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nivelir iOS";
+			productName = Nivelir;
+			productReference = C057F00E23CB8EEB00C2D895 /* Nivelir.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C057F01623CB8EEB00C2D895 /* Nivelir Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C057F02523CB8EEB00C2D895 /* Build configuration list for PBXNativeTarget "Nivelir Tests iOS" */;
+			buildPhases = (
+				C057F01323CB8EEB00C2D895 /* Sources */,
+				C057F01423CB8EEB00C2D895 /* Frameworks */,
+				C057F01523CB8EEB00C2D895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C057F01A23CB8EEB00C2D895 /* PBXTargetDependency */,
+			);
+			name = "Nivelir Tests iOS";
+			productName = NivelirTests;
+			productReference = C057F01723CB8EEB00C2D895 /* Nivelir Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C0A01A4623CB92EB00AC2C3A /* Nivelir tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A01A5823CB92EB00AC2C3A /* Build configuration list for PBXNativeTarget "Nivelir tvOS" */;
+			buildPhases = (
+				C0A01A6223CB932700AC2C3A /* SwiftLint */,
+				C0A01A4223CB92EB00AC2C3A /* Headers */,
+				C0A01A4323CB92EB00AC2C3A /* Sources */,
+				C0A01A4423CB92EB00AC2C3A /* Frameworks */,
+				C0A01A4523CB92EB00AC2C3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nivelir tvOS";
+			productName = "Nivelir tvOS";
+			productReference = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0A01A4E23CB92EB00AC2C3A /* Nivelir Tests tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0A01A5B23CB92EB00AC2C3A /* Build configuration list for PBXNativeTarget "Nivelir Tests tvOS" */;
+			buildPhases = (
+				C0A01A4B23CB92EB00AC2C3A /* Sources */,
+				C0A01A4C23CB92EB00AC2C3A /* Frameworks */,
+				C0A01A4D23CB92EB00AC2C3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0A01A5223CB92EB00AC2C3A /* PBXTargetDependency */,
+			);
+			name = "Nivelir Tests tvOS";
+			productName = "Nivelir tvOSTests";
+			productReference = C0A01A4F23CB92EB00AC2C3A /* Nivelir Tests tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C057F00523CB8EEB00C2D895 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Almaz Ibragimov";
+				TargetAttributes = {
+					C057F00D23CB8EEB00C2D895 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1240;
+					};
+					C057F01623CB8EEB00C2D895 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					C0A01A4623CB92EB00AC2C3A = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+					C0A01A4E23CB92EB00AC2C3A = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = C057F00823CB8EEB00C2D895 /* Build configuration list for PBXProject "Nivelir" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C057F00423CB8EEB00C2D895;
+			productRefGroup = C057F00F23CB8EEB00C2D895 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C057F00D23CB8EEB00C2D895 /* Nivelir iOS */,
+				C0A01A4623CB92EB00AC2C3A /* Nivelir tvOS */,
+				C057F01623CB8EEB00C2D895 /* Nivelir Tests iOS */,
+				C0A01A4E23CB92EB00AC2C3A /* Nivelir Tests tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C057F00C23CB8EEB00C2D895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C057F01523CB8EEB00C2D895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4523CB92EB00AC2C3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4D23CB92EB00AC2C3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C0A01A2323CB907300AC2C3A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh Scripts/swiftlint.sh\n";
+		};
+		C0A01A6223CB932700AC2C3A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh Scripts/swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C057F00A23CB8EEB00C2D895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0270E3525F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */,
+				C02710B225F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */,
+				C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */,
+				C0270ECB25F4A5D300ECC57C /* ScreenTabBarItemDecorator.swift in Sources */,
+				C027119825F60BE600ECC57C /* ScreenKeyWindowProvider.swift in Sources */,
+				C0AADA1E25EED7C00087439E /* ScreenNavigation.swift in Sources */,
+				C0270CCC25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */,
+				C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
+				C0AADA2925EED8110087439E /* ScreenAction.swift in Sources */,
+				C0AADA3A25EED86E0087439E /* ScreenInvalidContainerError.swift in Sources */,
+				C02711AB25F61DC000ECC57C /* CustomScreen.swift in Sources */,
+				C02710B925F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */,
+				C0AADA7225EF5ED80087439E /* ScreenWindowRoute.swift in Sources */,
+				C0AAD9E225EED53D0087439E /* AnyScreen.swift in Sources */,
+				C0270E2E25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */,
+				C0270DCF25F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */,
+				C0270D0625F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */,
+				C0270E0525F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */,
+				C0270CA525F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
+				C027117E25F60B7500ECC57C /* DefaultScreenNavigator.swift in Sources */,
+				C027110B25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */,
+				C0270CE225F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */,
+				C0AADA7825EF60E00087439E /* ScreenModalRoute.swift in Sources */,
+				C0AAD9EC25EED5550087439E /* AnyScreenBox.swift in Sources */,
+				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
+				C0270CE425F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */,
+				C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
+				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
+				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
+				C0270D9A25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */,
+				C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */,
+				C0270CC425F3DB8600ECC57C /* ScreenStackAction.swift in Sources */,
+				C0270F0825F4A69700ECC57C /* ScreenModalStyleDecorator.swift in Sources */,
+				C0AAD9B025EEC34B0087439E /* ScreenNavigator.swift in Sources */,
+				C0270E0C25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */,
+				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
+				C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
+				C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
+				C0270F2625F4A6B900ECC57C /* ScreenStackDecorator.swift in Sources */,
+				C0AADABE25EF6F2A0087439E /* ScreenStackRoute.swift in Sources */,
+				C0AAD9A325EEC23C0087439E /* ScreenCustomKey.swift in Sources */,
+				C0270DB125F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */,
+				C0270E4825F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */,
+				C0270E3D25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */,
+				C0270DD725F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */,
+				C0270CC825F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */,
+				C0270DA625F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */,
+				C0AAD9F225EED7680087439E /* AnyScreenAction.swift in Sources */,
+				C0270DDF25F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */,
+				C0AAD9A925EEC2790087439E /* Screen.swift in Sources */,
+				C0270E1F25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */,
+				C027119125F60BCD00ECC57C /* ScreenCustomWindowProvider.swift in Sources */,
+				C0AAD97125EEC0160087439E /* UIViewController+ScreenModalContainer.swift in Sources */,
+				C0270E1725F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */,
+				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
+				C0AAD99325EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift in Sources */,
+				C0270ED525F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */,
+				C0AADA4625EEE0F10087439E /* ScreenContainerNotFoundError.swift in Sources */,
+				C0270D8625F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */,
+				C0270EFE25F4A68000ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */,
+				C027111A25F55D8000ECC57C /* ScreenInterceptor.swift in Sources */,
+				C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */,
+				C0270E8E25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */,
+				C0270EDF25F4A5EB00ECC57C /* ScreenStackContainerDecorator.swift in Sources */,
+				C0270D0425F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */,
+				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
+				C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */,
+				C027113225F600F300ECC57C /* ScreenInterception.swift in Sources */,
+				C0270CCA25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */,
+				C0270DC425F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */,
+				C0AADAC825EF6F5D0087439E /* ScreenTabsRoute.swift in Sources */,
+				C0270F1C25F4A6AC00ECC57C /* ScreenTabsDecorator.swift in Sources */,
+				C0AADA4D25EEE1F10087439E /* ScreenInfoContainer.swift in Sources */,
+				C027109F25F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
+				C0270E7E25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */,
+				C027118625F60BBC00ECC57C /* ScreenWindowProvider.swift in Sources */,
+				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
+				C0AADA5325EEE2010087439E /* ScreenInfo.swift in Sources */,
+				C0270D0C25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */,
+				C027111F25F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */,
+				C0270DB825F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */,
+				C0270F1225F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */,
+				C0270D1A25F3DEA100ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */,
+				C0AAD9D925EED3EE0087439E /* ScreenKey.swift in Sources */,
+				C0270D0A25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */,
+				C0270FCB25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */,
+				C0AADAE625EF7D380087439E /* ScreenJoinAction.swift in Sources */,
+				C0270CC625F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */,
+				C0AADA5A25EEE2480087439E /* ScreenRoute.swift in Sources */,
+				C0270DFE25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */,
+				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
+				C0270CA725F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
+				C0270CCE25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */,
+				C0AADB1325EF89C30087439E /* ScreenNavigateToAction.swift in Sources */,
+				C0270DF325F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C057F01323CB8EEB00C2D895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C057F01D23CB8EEB00C2D895 /* NivelirTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4323CB92EB00AC2C3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0270E3625F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */,
+				C02710B325F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */,
+				C0AADB7625EF90160087439E /* ScreenJoinAction.swift in Sources */,
+				C0270ED025F4A5D400ECC57C /* ScreenTabBarItemDecorator.swift in Sources */,
+				C027119925F60BE600ECC57C /* ScreenKeyWindowProvider.swift in Sources */,
+				C0AADB7125EF90120087439E /* AnyScreenAction.swift in Sources */,
+				C0270CCD25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */,
+				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
+				C0AADB4025EF8FEC0087439E /* ScreenWindowRoute.swift in Sources */,
+				C0AADB8125EF901F0087439E /* ScreenInvalidContainerError.swift in Sources */,
+				C02711AC25F61DC000ECC57C /* CustomScreen.swift in Sources */,
+				C02710BA25F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */,
+				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
+				C0AADB6425EF900B0087439E /* UIWindow+ScreenWindowContainer.swift in Sources */,
+				C0270E2F25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */,
+				C0270DD025F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */,
+				C0270D0725F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */,
+				C0270E0625F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */,
+				C027107C25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
+				C027117F25F60B7500ECC57C /* DefaultScreenNavigator.swift in Sources */,
+				C027110C25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */,
+				C0AADB8825EF90270087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
+				C0270CE325F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */,
+				C0AADB5925EF8FFB0087439E /* ScreenInfo.swift in Sources */,
+				C0AADB1825EF89C40087439E /* ScreenNavigateToAction.swift in Sources */,
+				C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
+				C0270CE525F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */,
+				C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */,
+				C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */,
+				C0AADB6525EF900B0087439E /* UIViewController+ScreenModalContainer.swift in Sources */,
+				C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */,
+				C0270D9B25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */,
+				C0AADB7025EF90120087439E /* ScreenAction.swift in Sources */,
+				C0270CC525F3DB8600ECC57C /* ScreenStackAction.swift in Sources */,
+				C0270F0D25F4A69800ECC57C /* ScreenModalStyleDecorator.swift in Sources */,
+				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
+				C0270E0D25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */,
+				C0AADB5325EF8FF70087439E /* ScreenKey.swift in Sources */,
+				C0270F2B25F4A6BA00ECC57C /* ScreenStackDecorator.swift in Sources */,
+				C0AADB3B25EF8FE60087439E /* ScreenRoute.swift in Sources */,
+				C0AADB5825EF8FFB0087439E /* ScreenInfoContainer.swift in Sources */,
+				C0270DB225F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */,
+				C0270E4925F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */,
+				C0270E3E25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */,
+				C0270DD825F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */,
+				C0270CC925F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */,
+				C0270DA725F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */,
+				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
+				C0AADB4325EF8FEC0087439E /* ScreenTabsRoute.swift in Sources */,
+				C0270DE025F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */,
+				C0AADB4825EF8FF00087439E /* ScreenNavigator.swift in Sources */,
+				C027119225F60BCD00ECC57C /* ScreenCustomWindowProvider.swift in Sources */,
+				C0270E2025F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */,
+				C0AADB8325EF901F0087439E /* ScreenContainerNotFoundError.swift in Sources */,
+				C0270E1825F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */,
+				C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
+				C0AADB4225EF8FEC0087439E /* ScreenStackRoute.swift in Sources */,
+				C0270EDA25F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */,
+				C0AADB4D25EF8FF30087439E /* ScreenNavigation.swift in Sources */,
+				C027111525F55D8000ECC57C /* ScreenInterceptor.swift in Sources */,
+				C0270D8725F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */,
+				C0270F0325F4A68100ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */,
+				C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */,
+				C0270E8F25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */,
+				C0270EE425F4A5EC00ECC57C /* ScreenStackContainerDecorator.swift in Sources */,
+				C027113325F600F300ECC57C /* ScreenInterception.swift in Sources */,
+				C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */,
+				C0270D0525F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */,
+				C0AADB5225EF8FF70087439E /* ScreenCustomKey.swift in Sources */,
+				C0270CCB25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */,
+				C0270DC525F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */,
+				C0AADB6A25EF900F0087439E /* AnyScreen.swift in Sources */,
+				C02710A025F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
+				C0270F2125F4A6AD00ECC57C /* ScreenTabsDecorator.swift in Sources */,
+				C0AADA1525EED7740087439E /* Screen.swift in Sources */,
+				C027118725F60BBC00ECC57C /* ScreenWindowProvider.swift in Sources */,
+				C0270E7F25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */,
+				C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */,
+				C027112425F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */,
+				C0270D0D25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */,
+				C0270DB925F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */,
+				C0270F1725F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */,
+				C0270D1F25F3DEA200ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */,
+				C0AADB6B25EF900F0087439E /* AnyScreenBox.swift in Sources */,
+				C0270FCC25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */,
+				C0270D0B25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */,
+				C0AADB4125EF8FEC0087439E /* ScreenModalRoute.swift in Sources */,
+				C0270CC725F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */,
+				C0270CA425F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
+				C0270DFF25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */,
+				C027108C25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
+				C0270CA625F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
+				C0270CCF25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */,
+				C0AADB8225EF901F0087439E /* ScreenError.swift in Sources */,
+				C0270DF425F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A01A4B23CB92EB00AC2C3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A01A6023CB92FB00AC2C3A /* NivelirTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C057F01A23CB8EEB00C2D895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C057F00D23CB8EEB00C2D895 /* Nivelir iOS */;
+			targetProxy = C057F01923CB8EEB00C2D895 /* PBXContainerItemProxy */;
+		};
+		C0A01A5223CB92EB00AC2C3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0A01A4623CB92EB00AC2C3A /* Nivelir tvOS */;
+			targetProxy = C0A01A5123CB92EB00AC2C3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C057F02023CB8EEB00C2D895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C057F02123CB8EEB00C2D895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C057F02323CB8EEB00C2D895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = "1.0.0-alpha.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_NAME = Nivelir;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		C057F02423CB8EEB00C2D895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = "1.0.0-alpha.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_NAME = Nivelir;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		C057F02623CB8EEB00C2D895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		C057F02723CB8EEB00C2D895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		C0A01A5923CB92EB00AC2C3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = "1.0.0-alpha.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_NAME = Nivelir;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		C0A01A5A23CB92EB00AC2C3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = "1.0.0-alpha.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_NAME = Nivelir;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		C0A01A5C23CB92EB00AC2C3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		C0A01A5D23CB92EB00AC2C3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C057F00823CB8EEB00C2D895 /* Build configuration list for PBXProject "Nivelir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C057F02023CB8EEB00C2D895 /* Debug */,
+				C057F02123CB8EEB00C2D895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C057F02223CB8EEB00C2D895 /* Build configuration list for PBXNativeTarget "Nivelir iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C057F02323CB8EEB00C2D895 /* Debug */,
+				C057F02423CB8EEB00C2D895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C057F02523CB8EEB00C2D895 /* Build configuration list for PBXNativeTarget "Nivelir Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C057F02623CB8EEB00C2D895 /* Debug */,
+				C057F02723CB8EEB00C2D895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A01A5823CB92EB00AC2C3A /* Build configuration list for PBXNativeTarget "Nivelir tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A01A5923CB92EB00AC2C3A /* Debug */,
+				C0A01A5A23CB92EB00AC2C3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0A01A5B23CB92EB00AC2C3A /* Build configuration list for PBXNativeTarget "Nivelir Tests tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0A01A5C23CB92EB00AC2C3A /* Debug */,
+				C0A01A5D23CB92EB00AC2C3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C057F00523CB8EEB00C2D895 /* Project object */;
+}

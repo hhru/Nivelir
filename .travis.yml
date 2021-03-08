@@ -1,0 +1,43 @@
+language: swift
+osx_image: xcode12.4
+
+rvm: 2.7.2
+gemfile: Gemfile
+
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - LANG=en_US.UTF-8
+
+    - PROJECT='Nivelir.xcodeproj'
+
+    - IOS_SCHEME='Nivelir iOS'
+    - IOS_DESTINATION='platform=iOS Simulator,OS=14.4,name=iPhone 12'
+    - IOS_BUILD_LOG_PATH='xcodebuild-ios.json'
+
+    - TVOS_SCHEME='Nivelir tvOS'
+    - TVOS_DESTINATION='platform=tvOS Simulator,OS=14.3,name=Apple TV 4K'
+    - TVOS_BUILD_LOG_PATH='xcodebuild-tvos.json'
+
+    - SKIP_SWIFTLINT=TRUE
+
+install:
+  - gem update bundler
+  - bundle install --without=documentation
+
+script:
+  - set -o pipefail
+  - swift --version
+
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+  - bash <(curl -s https://codecov.io/bash) -cF ios -J 'Nivelir'
+
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$TVOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+  - bash <(curl -s https://codecov.io/bash) -cF tvos -J 'Nivelir'
+
+  - bundle exec pod lib lint --skip-tests --allow-warnings
+  - bundle exec danger --remove-previous-comments
+
+branches:
+  only:
+    - master
