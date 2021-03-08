@@ -1,0 +1,80 @@
+name: "CI"
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  LC_CTYPE: en_US.UTF-8
+  LANG: en_US.UTF-8
+  RUBY_VERSION: 2.7.x
+
+jobs:
+  BuildAndTests:
+    name: Build & Tests
+    runs-on: macOS-latest
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
+      XCODE_PROJECT: Nivelir.xcodeproj
+      IOS_SCHEME: Nivelir iOS
+      IOS_DESTINATION: OS=14.4,name=iPhone 12
+      IOS_BUILD_LOG_PATH: xcodebuild-ios.json
+      TVOS_SCHEME: Nivelir tvOS
+      TVOS_DESTINATION: OS=14.3,name=Apple TV 4K
+      TVOS_BUILD_LOG_PATH: xcodebuild-tvos.json
+      SKIP_SWIFTLINT: TRUE
+      DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Bundler
+        run: |
+          gem install bundler
+          bundle install --without=documentation
+      - name: Preparation
+        run: |
+          set -o pipefail
+          swift --version
+      - name: Test iOS
+        run: |
+          xcodebuild clean build test -project "$XCODE_PROJECT" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+          bash <(curl -s https://codecov.io/bash) -cF ios -J 'Nivelir'
+      - name: Test tvOS
+        run: |
+          xcodebuild clean build test -project "$XCODE_PROJECT" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$TVOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+          bash <(curl -s https://codecov.io/bash) -cF tvos -J 'Nivelir'
+      - name: Danger
+        run: bundle exec danger --remove-previous-comments
+
+  Cocoapods:
+    name: Cocoapods
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Bundler
+        run: |
+          gem install bundler
+          bundle install --without=documentation
+      - name: Linting
+        run: bundle exec pod lib lint --skip-tests --allow-warnings
+
+  SPM:
+    name: Swift Package Manager
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: swift build
+      - name: Test
+        run: swift test
