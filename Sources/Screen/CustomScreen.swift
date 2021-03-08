@@ -10,7 +10,10 @@ public struct CustomScreen<Container: ScreenContainer>: Screen {
     public let key: ScreenKey
     public let builder: Builder
 
-    public init(key: ScreenKey, builder: @escaping Builder) {
+    public init(
+        key: ScreenKey = .default(type: type(of: Self.self)),
+        builder: @escaping Builder
+    ) {
         self.key = key
         self.builder = builder
     }
