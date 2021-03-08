@@ -13,7 +13,7 @@ public struct ScreenKeyWindowProvider: ScreenWindowProvider {
         }
     }
 
-    public init(application: UIApplication) {
+    public init(application: UIApplication = .shared) {
         self.application = application
     }
 }

@@ -8,9 +8,9 @@ public final class DefaultScreenNavigator: ScreenNavigator {
     private let logger: ScreenLogger?
 
     public init(
-        windowProvider: ScreenWindowProvider,
-        iterator: ScreenIterator,
-        logger: ScreenLogger?
+        windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
+        iterator: ScreenIterator = DefaultScreenIterator(),
+        logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = windowProvider
         self.iterator = iterator
