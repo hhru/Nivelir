@@ -24,7 +24,7 @@ public struct ScreenJoinAction<
         first.perform(container: container, navigation: navigation) { result in
             switch result {
             case let .success(container):
-                second.perform(
+                self.second.perform(
                     container: container,
                     navigation: navigation,
                     completion: completion

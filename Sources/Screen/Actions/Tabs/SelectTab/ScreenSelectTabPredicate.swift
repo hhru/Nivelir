@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenSelectTabPredicate<Container: UITabBarController> {
@@ -8,7 +9,7 @@ public struct ScreenSelectTabPredicate<Container: UITabBarController> {
         self.box = box
     }
 
-    public func callAsFunction(_ tabs: [UIViewController]) -> Int? {
+    public func tabIndex(in tabs: [UIViewController]) -> Int? {
         box(tabs)
     }
 }
@@ -33,3 +34,4 @@ extension ScreenSelectTabPredicate {
         }
     }
 }
+#endif

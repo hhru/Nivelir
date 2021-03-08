@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAction {
@@ -144,3 +145,4 @@ extension ScreenRoute where Container: UINavigationController {
         )
     }
 }
+#endif

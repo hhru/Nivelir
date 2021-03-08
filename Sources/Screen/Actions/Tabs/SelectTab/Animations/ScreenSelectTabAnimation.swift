@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public enum ScreenSelectTabAnimation {
@@ -21,3 +22,4 @@ public enum ScreenSelectTabAnimation {
         }
     }
 }
+#endif

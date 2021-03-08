@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenTabsDecorator<Container: UITabBarController>: ScreenDecorator {
@@ -116,3 +117,4 @@ extension Screen where Container: UITabBarController {
         )
     }
 }
+#endif

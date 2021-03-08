@@ -49,6 +49,7 @@ extension ScreenRoute {
     }
 }
 
+#if canImport(UIKit)
 extension ScreenNavigator {
 
     public func navigate<Container: ScreenContainer>(
@@ -77,3 +78,4 @@ extension ScreenNavigator {
         )
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackClearModifier: ScreenStackModifier {
@@ -25,3 +26,4 @@ extension ScreenRoute where Container: UINavigationController {
         )
     }
 }
+#endif

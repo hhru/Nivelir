@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackPushModifier<
@@ -58,3 +59,4 @@ extension ScreenRoute where Container: UINavigationController {
         )
     }
 }
+#endif

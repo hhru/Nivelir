@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenCustomWindowProvider: ScreenWindowProvider {
@@ -8,3 +9,4 @@ public struct ScreenCustomWindowProvider: ScreenWindowProvider {
         self.window = window
     }
 }
+#endif

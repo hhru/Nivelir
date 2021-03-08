@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenSetupTabAction<
@@ -51,3 +52,4 @@ extension ScreenRoute where Container: UITabBarController {
         )
     }
 }
+#endif

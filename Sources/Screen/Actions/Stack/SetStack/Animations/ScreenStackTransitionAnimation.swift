@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackTransitionAnimation: ScreenStackCustomAnimation, Equatable {
@@ -44,3 +45,4 @@ extension ScreenStackAnimation {
         ScreenStackTransitionAnimation.crossDissolve
     )
 }
+#endif

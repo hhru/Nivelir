@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 extension UITabBarController {
@@ -7,3 +8,4 @@ extension UITabBarController {
         set { selectedViewController = newValue }
     }
 }
+#endif

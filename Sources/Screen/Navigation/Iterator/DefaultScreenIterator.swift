@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public final class DefaultScreenIterator: ScreenIterator {
@@ -12,7 +13,7 @@ public final class DefaultScreenIterator: ScreenIterator {
         var recentContainer = fallbackContainer
 
         for container in containers {
-            switch predicate(container) {
+            switch predicate.checkContainer(container) {
             case let .shouldContinue(matchingContainer):
                 recentContainer = matchingContainer ?? recentContainer
 
@@ -96,7 +97,7 @@ public final class DefaultScreenIterator: ScreenIterator {
 
         let recentContainer: ScreenContainer?
 
-        switch predicate(presentedContainer) {
+        switch predicate.checkContainer(presentedContainer) {
         case let .shouldContinue(matchingContainer):
             recentContainer = matchingContainer ?? localRecentContainer
 
@@ -122,7 +123,7 @@ public final class DefaultScreenIterator: ScreenIterator {
 
         let recentContainer: ScreenContainer?
 
-        switch predicate(rootContainer) {
+        switch predicate.checkContainer(rootContainer) {
         case let .shouldContinue(matchingContainer):
             recentContainer = matchingContainer ?? fallbackContainer
 
@@ -143,7 +144,7 @@ public final class DefaultScreenIterator: ScreenIterator {
     ) -> ScreenContainer? {
         let recentContainer: ScreenContainer?
 
-        switch predicate(container) {
+        switch predicate.checkContainer(container) {
         case let .shouldContinue(matchingContainer):
             recentContainer = matchingContainer
 
@@ -197,3 +198,4 @@ public final class DefaultScreenIterator: ScreenIterator {
         )
     }
 }
+#endif

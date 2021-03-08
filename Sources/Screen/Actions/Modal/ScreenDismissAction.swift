@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
@@ -33,3 +34,4 @@ extension ScreenRoute where Container: UIViewController {
         then(action: ScreenDismissAction<Container>(animated: animated))
     }
 }
+#endif

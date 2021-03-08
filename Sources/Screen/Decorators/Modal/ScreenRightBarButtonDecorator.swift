@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenRightBarButtonDecorator<Container: UIViewController>: ScreenDecorator {
@@ -34,3 +35,4 @@ extension Screen where Container: UIViewController {
         decorated(by: ScreenRightBarButtonDecorator(item: item))
     }
 }
+#endif

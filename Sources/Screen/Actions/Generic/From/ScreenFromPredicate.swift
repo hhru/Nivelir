@@ -1,4 +1,8 @@
+#if canImport(UIKit)
 import UIKit
+#else
+import Foundation
+#endif
 
 public struct ScreenFromPredicate<Container: ScreenContainer> {
 
@@ -8,7 +12,7 @@ public struct ScreenFromPredicate<Container: ScreenContainer> {
         self.box = box
     }
 
-    internal func callAsFunction(_ container: Container) -> Bool {
+    internal func checkContainer(_ container: Container) -> Bool {
         box(container)
     }
 }
@@ -30,6 +34,7 @@ extension ScreenFromPredicate {
     }
 }
 
+#if canImport(UIKit)
 extension ScreenFromPredicate where Container == UIViewController {
 
     public static var modalContainer: Self {
@@ -62,3 +67,4 @@ extension ScreenFromPredicate where Container == UITabBarController {
         container(of: Container.self, key: key)
     }
 }
+#endif

@@ -23,7 +23,7 @@ public struct ScreenFromTopAction<
                 return false
             }
 
-            return predicate(container)
+            return self.predicate.checkContainer(container)
         }
 
         guard let output = top as? Output else {
@@ -57,6 +57,7 @@ extension ScreenRoute {
     }
 }
 
+#if canImport(UIKit)
 extension ScreenNavigator {
 
     public func navigate<Container: ScreenContainer>(
@@ -85,3 +86,4 @@ extension ScreenNavigator {
         )
     }
 }
+#endif

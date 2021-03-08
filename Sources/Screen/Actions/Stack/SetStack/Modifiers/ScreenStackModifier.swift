@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public protocol ScreenStackModifier: CustomStringConvertible {
@@ -6,3 +7,4 @@ public protocol ScreenStackModifier: CustomStringConvertible {
         navigation: ScreenNavigation
     ) throws -> [UIViewController]
 }
+#endif

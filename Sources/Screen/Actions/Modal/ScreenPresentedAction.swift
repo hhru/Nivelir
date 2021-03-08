@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenPresentedAction<
@@ -62,3 +63,4 @@ extension ScreenRoute where Container: UIViewController {
         )
     }
 }
+#endif

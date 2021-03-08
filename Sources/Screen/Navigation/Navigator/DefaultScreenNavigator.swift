@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public final class DefaultScreenNavigator: ScreenNavigator {
@@ -53,3 +54,4 @@ public final class DefaultScreenNavigator: ScreenNavigator {
         }
     }
 }
+#endif

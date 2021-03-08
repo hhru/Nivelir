@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenModalStyleDecorator<Container: UIViewController>: ScreenDecorator {
@@ -67,3 +68,4 @@ extension Screen where Container: UIViewController {
         withModalStyle(.custom(delegate: delegate))
     }
 }
+#endif

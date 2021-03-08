@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackPopToModifier: ScreenStackModifier {
@@ -16,7 +17,7 @@ public struct ScreenStackPopToModifier: ScreenStackModifier {
         in stack: [UIViewController],
         navigation: ScreenNavigation
     ) throws -> [UIViewController] {
-        guard let stackIndex = predicate(stack) else {
+        guard let stackIndex = predicate.containerIndex(in: stack) else {
             throw ScreenContainerNotFoundError<UIViewController>(for: self)
         }
 
@@ -36,3 +37,4 @@ extension ScreenRoute where Container: UINavigationController {
         )
     }
 }
+#endif
