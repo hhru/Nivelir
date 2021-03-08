@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackDecorator<Container: UINavigationController>: ScreenDecorator {
@@ -116,3 +117,4 @@ extension Screen where Container: UINavigationController {
         )
     }
 }
+#endif

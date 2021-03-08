@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public enum ScreenModalStyle {
@@ -9,3 +10,4 @@ public enum ScreenModalStyle {
 
     case custom(delegate: UIViewControllerTransitioningDelegate)
 }
+#endif

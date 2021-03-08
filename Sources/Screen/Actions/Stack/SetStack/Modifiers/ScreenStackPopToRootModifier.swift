@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackPopToRootModifier: ScreenStackModifier {
@@ -29,3 +30,4 @@ extension ScreenRoute where Container: UINavigationController {
         )
     }
 }
+#endif

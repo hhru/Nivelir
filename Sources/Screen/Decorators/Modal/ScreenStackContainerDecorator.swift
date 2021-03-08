@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackContainerDecorator<
@@ -37,3 +38,4 @@ extension Screen where Container: UIViewController {
         withStackContainer(of: UINavigationController.self)
     }
 }
+#endif

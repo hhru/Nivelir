@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public typealias AnyTabsScreen = AnyScreen<UITabBarController>
@@ -28,3 +29,4 @@ extension Screen where Container: UITabBarController {
         AnyTabsScreen(self)
     }
 }
+#endif

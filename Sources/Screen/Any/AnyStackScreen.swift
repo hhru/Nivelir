@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public typealias AnyStackScreen = AnyScreen<UINavigationController>
@@ -28,3 +29,4 @@ extension Screen where Container: UINavigationController {
         AnyStackScreen(self)
     }
 }
+#endif

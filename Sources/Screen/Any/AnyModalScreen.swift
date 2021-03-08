@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public typealias AnyModalScreen = AnyScreen<UIViewController>
@@ -25,3 +26,4 @@ extension Screen where Container: UIViewController {
         AnyModalScreen(self)
     }
 }
+#endif

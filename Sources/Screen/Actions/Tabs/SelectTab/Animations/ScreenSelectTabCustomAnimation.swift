@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public protocol ScreenSelectTabCustomAnimation {
@@ -8,3 +9,4 @@ public protocol ScreenSelectTabCustomAnimation {
         completion: @escaping () -> Void
     )
 }
+#endif

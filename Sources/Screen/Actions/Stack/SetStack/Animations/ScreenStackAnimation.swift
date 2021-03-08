@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public enum ScreenStackAnimation {
@@ -55,3 +56,4 @@ extension ScreenStackAnimation: Equatable {
         }
     }
 }
+#endif

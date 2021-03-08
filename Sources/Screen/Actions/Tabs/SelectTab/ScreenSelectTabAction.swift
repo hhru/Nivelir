@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenSelectTabAction<
@@ -47,7 +48,7 @@ public struct ScreenSelectTabAction<
 
         let selectedTab = container.selectedTab
 
-        guard let newSelectedTabIndex = predicate(container.viewControllers ?? []) else {
+        guard let newSelectedTabIndex = predicate.tabIndex(in: container.viewControllers ?? []) else {
             return completion(.failure(ScreenContainerNotFoundError<UIViewController>(for: self)))
         }
 
@@ -128,3 +129,4 @@ extension ScreenRoute where Container: UITabBarController {
         )
     }
 }
+#endif

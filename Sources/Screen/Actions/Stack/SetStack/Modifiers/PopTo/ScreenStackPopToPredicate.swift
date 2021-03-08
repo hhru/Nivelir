@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenStackPopToPredicate {
@@ -8,7 +9,7 @@ public struct ScreenStackPopToPredicate {
         self.box = box
     }
 
-    internal func callAsFunction(_ stack: [UIViewController]) -> Int? {
+    internal func containerIndex(in stack: [UIViewController]) -> Int? {
         box(stack)
     }
 }
@@ -29,3 +30,4 @@ extension ScreenStackPopToPredicate {
         }
     }
 }
+#endif

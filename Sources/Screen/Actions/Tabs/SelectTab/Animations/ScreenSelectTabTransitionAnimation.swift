@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenSelectTabTransitionAnimation: ScreenSelectTabCustomAnimation {
@@ -44,3 +45,4 @@ extension ScreenSelectTabAnimation {
         ScreenSelectTabTransitionAnimation.crossDissolve
     )
 }
+#endif

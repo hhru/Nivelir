@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public protocol ScreenStackCustomAnimation {
@@ -20,3 +21,4 @@ extension ScreenStackCustomAnimation where Self: Equatable {
         return self == other
     }
 }
+#endif

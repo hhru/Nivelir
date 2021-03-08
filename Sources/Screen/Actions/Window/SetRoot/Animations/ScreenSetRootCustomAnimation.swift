@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public protocol ScreenSetRootCustomAnimation {
@@ -9,3 +10,4 @@ public protocol ScreenSetRootCustomAnimation {
         completion: @escaping () -> Void
     )
 }
+#endif

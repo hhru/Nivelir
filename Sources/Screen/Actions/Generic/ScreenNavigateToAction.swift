@@ -56,6 +56,7 @@ public struct ScreenNavigateToAction<Container: ScreenContainer>: ScreenAction {
     }
 }
 
+#if canImport(UIKit)
 extension ScreenNavigator {
 
     public func navigate(
@@ -78,3 +79,4 @@ extension ScreenNavigator {
         )
     }
 }
+#endif

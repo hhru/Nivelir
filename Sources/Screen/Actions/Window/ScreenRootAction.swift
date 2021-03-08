@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenRootAction<
@@ -60,3 +61,4 @@ extension ScreenRoute where Container: UIWindow {
         )
     }
 }
+#endif

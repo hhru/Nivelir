@@ -8,7 +8,7 @@ public struct ScreenIterationPredicate {
         self.box = box
     }
 
-    public func callAsFunction(_ container: ScreenContainer) -> ScreenIterationResult {
+    public func checkContainer(_ container: ScreenContainer) -> ScreenIterationResult {
         box(container)
     }
 }

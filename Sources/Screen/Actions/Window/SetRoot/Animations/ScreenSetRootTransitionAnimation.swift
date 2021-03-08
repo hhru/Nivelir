@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenSetRootTransitionAnimation: ScreenSetRootCustomAnimation {
@@ -45,3 +46,4 @@ extension ScreenSetRootAnimation {
         ScreenSetRootTransitionAnimation.crossDissolve
     )
 }
+#endif

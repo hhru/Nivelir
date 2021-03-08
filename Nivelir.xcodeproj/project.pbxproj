@@ -923,7 +923,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "HeadHunter";
+				ORGANIZATIONNAME = HeadHunter;
 				TargetAttributes = {
 					C057F00D23CB8EEB00C2D895 = {
 						CreatedOnToolsVersion = 11.3;
