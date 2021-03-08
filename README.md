@@ -10,6 +10,16 @@
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
 
+``` swift
+let navigator = DefaultScreenNavigator()
+
+navigator.navigate(fromTop: .stackContainer) { route in
+    route
+        .popToRoot()
+        .push(someScreen(color: .red))
+        .push(someScreen(color: .green))
+}
+```
 
 ## Requirements
 - iOS 10.0+ / tvOS 10.0+
