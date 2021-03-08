@@ -923,7 +923,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "Almaz Ibragimov";
+				ORGANIZATIONNAME = "HeadHunter";
 				TargetAttributes = {
 					C057F00D23CB8EEB00C2D895 = {
 						CreatedOnToolsVersion = 11.3;
@@ -1409,7 +1409,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = "1.0.0-alpha.1";
-				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1438,7 +1438,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = "1.0.0-alpha.1";
-				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1460,7 +1460,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1481,7 +1481,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1508,7 +1508,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = "1.0.0-alpha.1";
-				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1538,7 +1538,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = "1.0.0-alpha.1";
-				PRODUCT_BUNDLE_IDENTIFIER = com.almazrafi.Nivelir;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1561,7 +1561,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -1583,7 +1583,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.almazrafi.Nivelir.Tests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;

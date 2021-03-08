@@ -1,12 +1,12 @@
 # Nivelir
-[![Build Status](https://github.com/almazrafi/Nivelir/workflows/CI/badge.svg?branch=master)](https://github.com/almazrafi/Nivelir/actions)
+[![Travis CI](https://travis-ci.org/hhru/Nivelir.svg?branch=master)](https://travis-ci.org/hhru/Nivelir)
 [![Cocoapods](https://img.shields.io/cocoapods/v/Nivelir.svg?style=flat)](http://cocoapods.org/pods/Nivelir)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Platforms](https://img.shields.io/cocoapods/p/Nivelir.svg?style=flat)](https://developer.apple.com/discover/)
 [![Xcode](https://img.shields.io/badge/Xcode-11-blue.svg)](https://developer.apple.com/xcode)
-[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
-[![License](https://img.shields.io/github/license/almazrafi/Nivelir.svg)](https://opensource.org/licenses/MIT)
+[![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg)](https://swift.org)
+[![License](https://img.shields.io/github/license/hhru/Nivelir.svg)](https://opensource.org/licenses/MIT)
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
 
@@ -48,7 +48,7 @@ $ brew install carthage
 
 To integrate Nivelir into your Xcode project using Carthage, specify it in your `Cartfile`:
 ```ogdl
-github "almazrafi/Nivelir" ~> 1.0.0-alpha.1
+github "hhru/Nivelir" ~> 1.0.0-alpha.1
 ```
 
 Finally run `carthage update` to build the framework and drag the built `Nivelir.framework` into your Xcode project.
@@ -60,7 +60,7 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for ma
 To integrate Nivelir into your Xcode project using Swift Package Manager,
 add the following as a dependency to your `Package.swift`:
 ```swift
-.package(url: "https://github.com/almazrafi/Nivelir.git", from: "1.0.0-alpha.1")
+.package(url: "https://github.com/hhru/Nivelir.git", from: "1.0.0-alpha.1")
 ```
 and then specify `"Nivelir"` as a dependency of the Target in which you wish to use Nivelir.
 
@@ -75,7 +75,7 @@ let package = Package(
         .library(name: "MyPackage", targets: ["MyPackage"])
     ],
     dependencies: [
-        .package(url: "https://github.com/almazrafi/Nivelir.git", from: "1.0.0-alpha.1")
+        .package(url: "https://github.com/hhru/Nivelir.git", from: "1.0.0-alpha.1")
     ],
     targets: [
         .target(name: "MyPackage", dependencies: ["Nivelir"])
