@@ -9,6 +9,6 @@ public protocol ScreenDecorator {
     func buildDecorated<Wrapped: Screen>(
         screen: Wrapped,
         navigator: ScreenNavigator,
-        associating payload: Any?
+        payload: Any?
     ) -> Output where Wrapped.Container == Container
 }

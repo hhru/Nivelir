@@ -25,8 +25,8 @@ extension ScreenStackPopToPredicate {
     public static func container(key: ScreenKey) -> Self {
         Self { stack in
             stack
-                .map { $0 as? ScreenInfoContainer }
-                .lastIndex { $0?.screenInfo.key == key }
+                .map { $0 as? ScreenKeyProvider }
+                .lastIndex { $0?.screenKey == key }
         }
     }
 }

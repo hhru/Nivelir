@@ -25,11 +25,11 @@ extension ScreenFromPredicate {
 
     public static func container(of type: Container.Type, key: ScreenKey) -> Self {
         Self { container in
-            guard let container = container as? ScreenInfoContainer else {
+            guard let container = container as? ScreenKeyProvider else {
                 return false
             }
 
-            return container.screenInfo.key == key
+            return container.screenKey == key
         }
     }
 }

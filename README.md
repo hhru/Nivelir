@@ -10,16 +10,18 @@
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
 
-``` swift
-let navigator = DefaultScreenNavigator()
 
-navigator.navigate(fromTop: .stackContainer) { route in
-    route
-        .popToRoot()
-        .push(someScreen(color: .red))
-        .push(someScreen(color: .green))
-}
-```
+## Contents
+- [Requirements](#requirements)
+- [Installation](#installation)
+    - [CocoaPods](#cocoapods)
+    - [Carthage](#carthage)
+    - [Swift Package Manager](#swift-package-manager)
+- [Usage](#usage)
+    - [Quick Start](#quick-start)
+- [Communication](#communication)
+- [License](#license)
+
 
 ## Requirements
 - iOS 10.0+ / tvOS 10.0+
@@ -72,7 +74,7 @@ add the following as a dependency to your `Package.swift`:
 ```swift
 .package(url: "https://github.com/hhru/Nivelir.git", from: "1.0.0-alpha.1")
 ```
-and then specify `"Nivelir"` as a dependency of the Target in which you wish to use Nivelir.
+Then specify `"Nivelir"` as a dependency of the Target in which you wish to use Nivelir.
 
 Here's an example `Package.swift`:
 ```swift
@@ -93,11 +95,77 @@ let package = Package(
 )
 ```
 
+
+## Usage
+### Quick Start
+
+Let's implement a simple view controller that can set the background color:
+
+``` swift
+class SomeViewController: UIViewController {
+
+    let color: UIColor
+
+    init(color: UIColor) {
+        self.color = color
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = color
+    }
+}
+```
+
+Next, we need to implement a builder that creates our controller:
+
+``` swift
+struct SomeScreen: Screen, ScreenPayloadAssociating {
+
+    let color: UIColor
+
+    func build(navigator: ScreenNavigator) -> UIViewController {
+        SomeViewController(color: color)
+    }
+}
+```
+
+Now we can use this screen in navigation:
+
+``` swift
+let navigator = DefaultScreenNavigator()
+
+navigator.navigate(fromTop: .stackContainer) { route in
+    route
+        .popToRoot()
+        .push(SomeScreen(color: .red))
+        .push(SomeScreen(color: .green)) { route in
+            route.present(SomeScreen(color: .blue))
+        }
+}
+```
+
+This navigation performs the following steps:
+- Finding for the topmost container of the stack (UINavigationController)
+- Resetting its stack to the first screen
+- Adding a red screen to the stack
+- Adding a green screen to the stack
+- Presenting a blue screen on the green screen modally
+
+
 ## Communication
 - If you need help, open an issue.
 - If you found a bug, open an issue.
 - If you have a feature request, open an issue.
 - If you want to contribute, submit a pull request.
+
 
 ## License
 Nivelir is available under the MIT license. See the [LICENSE](LICENSE) file for more info.

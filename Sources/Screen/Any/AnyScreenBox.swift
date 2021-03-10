@@ -2,7 +2,6 @@ import Foundation
 
 internal struct AnyScreenBox<Container: ScreenContainer> {
 
-    internal let key: () -> ScreenKey
     internal let description: () -> String
 
     internal let build: (

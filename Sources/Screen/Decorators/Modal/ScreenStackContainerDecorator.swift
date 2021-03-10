@@ -15,11 +15,11 @@ public struct ScreenStackContainerDecorator<
     public func buildDecorated<Wrapped: Screen>(
         screen: Wrapped,
         navigator: ScreenNavigator,
-        associating payload: Any?
+        payload: Any?
     ) -> Output where Wrapped.Container == Container {
         let container = screen.build(
             navigator: navigator,
-            associating: payload
+            payload: payload
         )
 
         return Output(rootViewController: container)

@@ -3,28 +3,22 @@ import Foundation
 public protocol Screen: CustomStringConvertible {
     associatedtype Container: ScreenContainer
 
-    var key: ScreenKey { get }
-
     func build(
         navigator: ScreenNavigator,
-        associating payload: Any?
+        payload: Any?
     ) -> Container
 }
 
 extension Screen {
 
-    public var key: ScreenKey {
-        .default(type: Self.self)
-    }
-
     public var description: String {
-        "\(key)"
+        "\(Self.self)"
     }
 
     public func build(navigator: ScreenNavigator) -> Container {
         build(
             navigator: navigator,
-            associating: nil
+            payload: nil
         )
     }
 }

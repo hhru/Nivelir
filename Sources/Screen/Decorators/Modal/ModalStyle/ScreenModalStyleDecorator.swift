@@ -22,11 +22,11 @@ public struct ScreenModalStyleDecorator<Container: UIViewController>: ScreenDeco
     public func buildDecorated<Wrapped: Screen>(
         screen: Wrapped,
         navigator: ScreenNavigator,
-        associating payload: Any?
+        payload: Any?
     ) -> Container where Wrapped.Container == Container {
         let container = screen.build(
             navigator: navigator,
-            associating: payload
+            payload: payload
         )
 
         switch style {
