@@ -10,10 +10,12 @@ extension AnyModalScreen {
     ) where Wrapped.Container: UIViewController {
         self.init(
             box: AnyScreenBox(
-                key: { wrapped.key },
                 description: { wrapped.description },
                 build: { navigator, payload in
-                    wrapped.build(navigator: navigator, associating: payload)
+                    wrapped.build(
+                        navigator: navigator,
+                        payload: payload
+                    )
                 }
             )
         )

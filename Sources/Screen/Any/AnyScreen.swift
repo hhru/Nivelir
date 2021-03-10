@@ -4,10 +4,6 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
 
     private let box: AnyScreenBox<Container>
 
-    public var key: ScreenKey {
-        box.key()
-    }
-
     public var description: String {
         box.description()
     }
@@ -21,19 +17,18 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
     ) where Wrapped.Container == Container {
         self.init(
             box: AnyScreenBox(
-                key: { wrapped.key },
                 description: { wrapped.description },
                 build: { navigator, payload in
                     wrapped.build(
                         navigator: navigator,
-                        associating: payload
+                        payload: payload
                     )
                 }
             )
         )
     }
 
-    public func build(navigator: ScreenNavigator, associating payload: Any?) -> Container {
+    public func build(navigator: ScreenNavigator, payload: Any?) -> Container {
         box.build(navigator, payload)
     }
 }

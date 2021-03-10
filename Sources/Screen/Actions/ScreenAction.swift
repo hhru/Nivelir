@@ -6,6 +6,8 @@ public protocol ScreenAction: AnyScreenAction {
 
     typealias Completion = (Result<Output, Error>) -> Void
 
+    func combine(with other: AnyScreenAction) -> [AnyScreenAction]
+
     func perform(
         container: Container,
         navigation: ScreenNavigation,

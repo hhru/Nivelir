@@ -10,12 +10,11 @@ extension AnyTabsScreen where Container == UITabBarController {
     ) where Wrapped.Container: UITabBarController {
         self.init(
             box: AnyScreenBox(
-                key: { wrapped.key },
                 description: { wrapped.description },
                 build: { navigator, payload in
                     wrapped.build(
                         navigator: navigator,
-                        associating: payload
+                        payload: payload
                     )
                 }
             )

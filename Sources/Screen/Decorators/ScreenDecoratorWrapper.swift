@@ -8,15 +8,11 @@ internal struct ScreenDecoratorWrapper<
     internal let wrapped: Wrapped
     internal let decorator: Decorator
 
-    internal var key: ScreenKey {
-        wrapped.key
-    }
-
     internal var description: String {
         wrapped.description
     }
 
-    internal func build(navigator: ScreenNavigator, associating payload: Any?) -> Decorator.Output {
+    internal func build(navigator: ScreenNavigator, payload: Any?) -> Decorator.Output {
         let decoratedPayload = decorator.payload.map { decoratorPayload in
             ScreenDecoratorPayload(
                 wrapped: payload,
@@ -27,7 +23,7 @@ internal struct ScreenDecoratorWrapper<
         return decorator.buildDecorated(
             screen: wrapped,
             navigator: navigator,
-            associating: decoratedPayload
+            payload: decoratedPayload
         )
     }
 }

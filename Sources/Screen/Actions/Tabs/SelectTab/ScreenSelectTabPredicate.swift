@@ -29,8 +29,8 @@ extension ScreenSelectTabPredicate {
     public static func container(key: ScreenKey) -> Self {
         Self { tabs in
             tabs
-                .map { $0 as? ScreenInfoContainer }
-                .firstIndex { $0?.screenInfo.key == key }
+                .map { $0 as? ScreenKeyProvider }
+                .firstIndex { $0?.screenKey == key }
         }
     }
 }
