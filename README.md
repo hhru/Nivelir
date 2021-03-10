@@ -153,7 +153,7 @@ navigator.navigate(fromTop: .stackContainer) { route in
 ```
 
 This navigation performs the following steps:
-- Finding for the topmost container of the stack (UINavigationController)
+- Search for the topmost container of the stack (UINavigationController)
 - Resetting its stack to the first screen
 - Adding a red screen to the stack
 - Adding a green screen to the stack
