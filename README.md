@@ -37,7 +37,7 @@ $ gem install cocoapods
 ```
 
 To integrate Nivelir into your Xcode project using [CocoaPods](http://cocoapods.org), specify it in your `Podfile`:
-```ruby
+``` ruby
 platform :ios, '10.0'
 use_frameworks!
 
@@ -53,13 +53,13 @@ $ pod install
 
 ### Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. You can install Carthage with Homebrew using the following command:
-```bash
+``` sh
 $ brew update
 $ brew install carthage
 ```
 
 To integrate Nivelir into your Xcode project using Carthage, specify it in your `Cartfile`:
-```ogdl
+``` ogdl
 github "hhru/Nivelir" ~> 1.0.0-alpha.2
 ```
 
@@ -71,13 +71,13 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for ma
 
 To integrate Nivelir into your Xcode project using Swift Package Manager,
 add the following as a dependency to your `Package.swift`:
-```swift
+``` swift
 .package(url: "https://github.com/hhru/Nivelir.git", from: "1.0.0-alpha.2")
 ```
 Then specify `"Nivelir"` as a dependency of the Target in which you wish to use Nivelir.
 
 Here's an example `Package.swift`:
-```swift
+``` swift
 // swift-tools-version:5.0
 import PackageDescription
 
