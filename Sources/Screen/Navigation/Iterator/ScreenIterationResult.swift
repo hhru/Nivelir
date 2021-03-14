@@ -2,6 +2,6 @@ import Foundation
 
 public enum ScreenIterationResult {
 
-    case shouldContinue(matchingContainer: ScreenContainer?)
-    case shouldStop(matchingContainer: ScreenContainer)
+    case shouldContinue(suitableContainer: ScreenContainer?)
+    case shouldStop(suitableContainer: ScreenContainer)
 }

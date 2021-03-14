@@ -11,6 +11,11 @@ public protocol ScreenIterator {
         where predicate: @escaping (_ container: ScreenContainer) -> Bool
     ) -> ScreenContainer?
 
+    func last(
+        in container: ScreenContainer,
+        where predicate: @escaping (_ container: ScreenContainer) -> Bool
+    ) -> ScreenContainer?
+
     func top(
         in container: ScreenContainer,
         where predicate: @escaping (_ container: ScreenContainer) -> Bool

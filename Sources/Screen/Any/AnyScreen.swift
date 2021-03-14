@@ -2,34 +2,38 @@ import Foundation
 
 public struct AnyScreen<Container: ScreenContainer>: Screen {
 
-    private let box: AnyScreenBox<Container>
+    public typealias BuildBox = (_ navigator: ScreenNavigator) -> Container
 
-    public var description: String {
-        box.description()
-    }
+    private let nameBox: () -> String
+    private let traitsBox: () -> Set<AnyHashable>
+    private let descriptionBox: () -> String
+    private let buildBox: (_ navigator: ScreenNavigator) -> Container
 
-    internal init(box: AnyScreenBox<Container>) {
-        self.box = box
+    internal init(
+        name: @escaping () -> String,
+        traits: @escaping () -> Set<AnyHashable>,
+        description: @escaping () -> String,
+        build: @escaping (_ navigator: ScreenNavigator) -> Container
+    ) {
+        self.nameBox = name
+        self.traitsBox = traits
+        self.descriptionBox = description
+        self.buildBox = build
     }
 
     public init<Wrapped: Screen>(
         _ wrapped: Wrapped
     ) where Wrapped.Container == Container {
         self.init(
-            box: AnyScreenBox(
-                description: { wrapped.description },
-                build: { navigator, payload in
-                    wrapped.build(
-                        navigator: navigator,
-                        payload: payload
-                    )
-                }
-            )
+            name: { wrapped.name },
+            traits: { wrapped.traits },
+            description: { wrapped.description },
+            build: wrapped.build
         )
     }
 
-    public func build(navigator: ScreenNavigator, payload: Any?) -> Container {
-        box.build(navigator, payload)
+    public func build(navigator: ScreenNavigator) -> Container {
+        buildBox(navigator)
     }
 }
 

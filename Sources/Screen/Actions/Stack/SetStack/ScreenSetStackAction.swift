@@ -53,9 +53,11 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
         }
     }
 
-    public func combine(with other: AnyScreenAction) -> [AnyScreenAction] {
-        guard !separated, let action = other as? Self else {
-            return [self, other]
+    public func combine<Action: ScreenAction>(
+        with other: Action
+    ) -> Action? where Action.Container == Container {
+        guard !separated, let action = other.cast(to: Self.self) else {
+            return nil
         }
 
         let modifiers = self
@@ -67,7 +69,10 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
             second: action.animation
         )
 
-        return [Self(modifiers: modifiers, animation: animation)]
+        return Self(
+            modifiers: modifiers,
+            animation: animation
+        ) as? Action
     }
 
     public func perform(
@@ -117,7 +122,7 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
     }
 }
 
-extension ScreenRoute where Container: UINavigationController {
+extension ScreenThenable where Then: UINavigationController {
 
     public func setStack(
         modifiers: [ScreenStackModifier],
@@ -125,7 +130,7 @@ extension ScreenRoute where Container: UINavigationController {
         separated: Bool = false
     ) -> Self {
         then(
-            action: ScreenSetStackAction<Container>(
+            ScreenSetStackAction<Then>(
                 modifiers: modifiers,
                 animation: animation,
                 separated: separated

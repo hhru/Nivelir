@@ -14,51 +14,50 @@ public struct ScreenStackTopAction<
         completion: @escaping Completion
     ) {
         guard let stackTop = container.stackTop else {
-            return completion(.failure(ScreenContainerNotFoundError<UIViewController>(for: self)))
+            return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
         guard let output = stackTop as? Output else {
-            return completion(.failure(ScreenInvalidContainerError<Output>(for: self)))
+            return completion(.invalidContainer(stackTop, type: Output.self, for: self))
         }
 
         completion(.success(output))
     }
 }
 
-extension ScreenRoute where Container: UINavigationController {
+extension ScreenThenable where Then: UINavigationController {
+
+    public var stackTop: ScreenChildRoute<Root, UIViewController> {
+        stackTop(of: UIViewController.self)
+    }
 
     public func stackTop<Output: UIViewController>(
-        of type: Output.Type,
-        route: ScreenRoute<Output>
-    ) -> Self {
-        join(
-            action: ScreenStackTopAction<Container, Output>(),
-            route: route
+        of type: Output.Type
+    ) -> ScreenChildRoute<Root, Output> {
+        nest(action: ScreenStackTopAction<Then, Output>())
+    }
+
+    public func stackTop<Route: ScreenThenable>(
+        route: Route
+    ) -> Self where Route.Root: UIViewController {
+        nest(
+            action: ScreenStackTopAction<Then, Route.Root>(),
+            nested: route
         )
     }
 
     public func stackTop<Output: UIViewController>(
-        of type: Output.Type,
+        of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
     ) -> Self {
-        stackTop(
-            of: type,
-            route: route(.initial)
-        )
+        stackTop(route: route(.initial))
     }
 
-    public func stackTop(route: ScreenModalRoute) -> Self {
-        stackTop(
-            of: UIViewController.self,
-            route: route
-        )
-    }
-
-    public func stackTop(route: (_ route: ScreenModalRoute) -> ScreenModalRoute) -> Self {
-        stackTop(
-            of: UIViewController.self,
-            route: route
-        )
+    public func stackTop<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+    ) -> Self {
+        stackTop(route: route(.initial))
     }
 }
 #endif

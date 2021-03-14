@@ -22,7 +22,7 @@ public final class DefaultScreenNavigator: ScreenNavigator {
         completion: @escaping Action.Completion
     ) where Action.Container == UIWindow {
         guard let window = windowProvider.window else {
-            return completion(.failure(ScreenContainerNotFoundError<UIWindow>(for: self)))
+            return completion(.containerNotFound(type: UIWindow.self, for: self))
         }
 
         let navigation = ScreenNavigation(

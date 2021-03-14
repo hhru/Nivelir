@@ -1,12 +1,18 @@
 import Foundation
 
-public protocol ScreenAction: AnyScreenAction {
+public protocol ScreenAction {
     associatedtype Container: ScreenContainer
     associatedtype Output
 
     typealias Completion = (Result<Output, Error>) -> Void
 
-    func combine(with other: AnyScreenAction) -> [AnyScreenAction]
+    func cast<Action: ScreenAction>(
+        to type: Action.Type
+    ) -> Action? where Action.Container == Container
+
+    func combine<Action: ScreenAction>(
+        with other: Action
+    ) -> Action? where Action.Container == Container
 
     func perform(
         container: Container,
@@ -17,17 +23,15 @@ public protocol ScreenAction: AnyScreenAction {
 
 extension ScreenAction {
 
-    public func performIfPossible(
-        container: ScreenContainer,
-        navigation: ScreenNavigation,
-        completion: @escaping (Result<Void, Error>) -> Void
-    ) {
-        guard let container = container as? Container else {
-            return completion(.failure(ScreenInvalidContainerError<Container>(for: self)))
-        }
+    public func cast<Action: ScreenAction>(
+        to type: Action.Type
+    ) -> Action? where Action.Container == Container {
+        self as? Action
+    }
 
-        return perform(container: container, navigation: navigation) { result in
-            completion(result.ignoringValue())
-        }
+    public func combine<Action: ScreenAction>(
+        with other: Action
+    ) -> Action? where Action.Container == Container {
+        nil
     }
 }

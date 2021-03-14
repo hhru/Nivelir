@@ -14,11 +14,11 @@ public final class DefaultScreenIterator: ScreenIterator {
 
         for container in containers {
             switch predicate.checkContainer(container) {
-            case let .shouldContinue(matchingContainer):
-                recentContainer = matchingContainer ?? recentContainer
+            case let .shouldContinue(suitableContainer):
+                recentContainer = suitableContainer ?? recentContainer
 
-            case let .shouldStop(matchingContainer):
-                return .shouldStop(matchingContainer: matchingContainer)
+            case let .shouldStop(suitableContainer):
+                return .shouldStop(suitableContainer: suitableContainer)
             }
 
             let result = iterateLocally(
@@ -28,15 +28,15 @@ public final class DefaultScreenIterator: ScreenIterator {
             )
 
             switch result {
-            case let .shouldContinue(matchingContainer):
-                recentContainer = matchingContainer ?? recentContainer
+            case let .shouldContinue(suitableContainer):
+                recentContainer = suitableContainer ?? recentContainer
 
-            case let .shouldStop(matchingContainer):
-                return .shouldStop(matchingContainer: matchingContainer)
+            case let .shouldStop(suitableContainer):
+                return .shouldStop(suitableContainer: suitableContainer)
             }
         }
 
-        return .shouldContinue(matchingContainer: recentContainer)
+        return .shouldContinue(suitableContainer: recentContainer)
     }
 
     private func iterateLocally(
@@ -84,11 +84,11 @@ public final class DefaultScreenIterator: ScreenIterator {
         let localRecentContainer: ScreenContainer?
 
         switch result {
-        case let .shouldContinue(matchingContainer):
-            localRecentContainer = matchingContainer ?? fallbackContainer
+        case let .shouldContinue(suitableContainer):
+            localRecentContainer = suitableContainer ?? fallbackContainer
 
-        case let .shouldStop(matchingContainer):
-            return matchingContainer
+        case let .shouldStop(suitableContainer):
+            return suitableContainer
         }
 
         guard let presentedContainer = container.presentedViewController else {
@@ -98,11 +98,11 @@ public final class DefaultScreenIterator: ScreenIterator {
         let recentContainer: ScreenContainer?
 
         switch predicate.checkContainer(presentedContainer) {
-        case let .shouldContinue(matchingContainer):
-            recentContainer = matchingContainer ?? localRecentContainer
+        case let .shouldContinue(suitableContainer):
+            recentContainer = suitableContainer ?? localRecentContainer
 
-        case let .shouldStop(matchingContainer):
-            return matchingContainer
+        case let .shouldStop(suitableContainer):
+            return suitableContainer
         }
 
         return iterate(
@@ -124,11 +124,11 @@ public final class DefaultScreenIterator: ScreenIterator {
         let recentContainer: ScreenContainer?
 
         switch predicate.checkContainer(rootContainer) {
-        case let .shouldContinue(matchingContainer):
-            recentContainer = matchingContainer ?? fallbackContainer
+        case let .shouldContinue(suitableContainer):
+            recentContainer = suitableContainer ?? fallbackContainer
 
-        case let .shouldStop(matchingContainer):
-            return matchingContainer
+        case let .shouldStop(suitableContainer):
+            return suitableContainer
         }
 
         return iterate(
@@ -145,11 +145,11 @@ public final class DefaultScreenIterator: ScreenIterator {
         let recentContainer: ScreenContainer?
 
         switch predicate.checkContainer(container) {
-        case let .shouldContinue(matchingContainer):
-            recentContainer = matchingContainer
+        case let .shouldContinue(suitableContainer):
+            recentContainer = suitableContainer
 
-        case let .shouldStop(matchingContainer):
-            return matchingContainer
+        case let .shouldStop(suitableContainer):
+            return suitableContainer
         }
 
         switch container {
@@ -180,8 +180,20 @@ public final class DefaultScreenIterator: ScreenIterator {
             from: container,
             while: ScreenIterationPredicate { container in
                 predicate(container)
-                    ? .shouldStop(matchingContainer: container)
-                    : .shouldContinue(matchingContainer: nil)
+                    ? .shouldStop(suitableContainer: container)
+                    : .shouldContinue(suitableContainer: nil)
+            }
+        )
+    }
+
+    public func last(
+        in container: ScreenContainer,
+        where predicate: @escaping (_ container: ScreenContainer) -> Bool
+    ) -> ScreenContainer? {
+        iterate(
+            from: container,
+            while: ScreenIterationPredicate { container in
+                .shouldContinue(suitableContainer: predicate(container) ? container : nil)
             }
         )
     }
@@ -193,7 +205,11 @@ public final class DefaultScreenIterator: ScreenIterator {
         iterate(
             from: container,
             while: ScreenIterationPredicate { container in
-                .shouldContinue(matchingContainer: predicate(container) ? container : nil)
+                if container.isVisible {
+                    return .shouldContinue(suitableContainer: predicate(container) ? container : nil)
+                } else {
+                    return .shouldContinue(suitableContainer: nil)
+                }
             }
         )
     }

@@ -14,51 +14,50 @@ public struct ScreenRootAction<
         completion: @escaping Completion
     ) {
         guard let root = container.root else {
-            return completion(.failure(ScreenContainerNotFoundError<UIViewController>(for: self)))
+            return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
         guard let output = root as? Output else {
-            return completion(.failure(ScreenInvalidContainerError<Output>(for: self)))
+            return completion(.invalidContainer(root, type: Output.self, for: self))
         }
 
         completion(.success(output))
     }
 }
 
-extension ScreenRoute where Container: UIWindow {
+extension ScreenThenable where Then: UIWindow {
+
+    public var root: ScreenChildRoute<Root, UIViewController> {
+        root(of: UIViewController.self)
+    }
 
     public func root<Output: UIViewController>(
-        of type: Output.Type,
-        route: ScreenRoute<Output>
-    ) -> Self {
-        join(
-            action: ScreenRootAction<Container, Output>(),
-            route: route
+        of type: Output.Type = Output.self
+    ) -> ScreenChildRoute<Root, Output> {
+        nest(action: ScreenRootAction<Then, Output>())
+    }
+
+    public func root<Route: ScreenThenable>(
+        route: Route
+    ) -> Self where Route.Root: UIViewController {
+        nest(
+            action: ScreenRootAction<Then, Route.Root>(),
+            nested: route
         )
     }
 
     public func root<Output: UIViewController>(
-        of type: Output.Type,
+        of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
     ) -> Self {
-        root(
-            of: type,
-            route: route(.initial)
-        )
+        root(route: route(.initial))
     }
 
-    public func root(route: ScreenModalRoute) -> Self {
-        root(
-            of: UIViewController.self,
-            route: route
-        )
-    }
-
-    public func root(route: (_ route: ScreenModalRoute) -> ScreenModalRoute) -> Self {
-        root(
-            of: UIViewController.self,
-            route: route
-        )
+    public func root<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+    ) -> Self {
+        root(route: route(.initial))
     }
 }
 #endif

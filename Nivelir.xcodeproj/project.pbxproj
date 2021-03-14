@@ -15,98 +15,14 @@
 		C0270CA625F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */; };
 		C0270CA725F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */; };
 		C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */; };
-		C0270CC425F3DB8600ECC57C /* ScreenStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */; };
-		C0270CC525F3DB8600ECC57C /* ScreenStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */; };
-		C0270CC625F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */; };
-		C0270CC725F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */; };
-		C0270CC825F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */; };
-		C0270CC925F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */; };
-		C0270CCA25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */; };
-		C0270CCB25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */; };
-		C0270CCC25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */; };
-		C0270CCD25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */; };
-		C0270CCE25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */; };
-		C0270CCF25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */; };
-		C0270CE225F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */; };
-		C0270CE325F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */; };
-		C0270CE425F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */; };
-		C0270CE525F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */; };
-		C0270D0425F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */; };
-		C0270D0525F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */; };
-		C0270D0625F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */; };
-		C0270D0725F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */; };
-		C0270D0A25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */; };
-		C0270D0B25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */; };
-		C0270D0C25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */; };
-		C0270D0D25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */; };
-		C0270D1A25F3DEA100ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */; };
-		C0270D1F25F3DEA200ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */; };
-		C0270D8625F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */; };
-		C0270D8725F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */; };
-		C0270D9A25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */; };
-		C0270D9B25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */; };
-		C0270DA625F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */; };
-		C0270DA725F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */; };
-		C0270DB125F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */; };
-		C0270DB225F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */; };
-		C0270DB825F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */; };
-		C0270DB925F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */; };
-		C0270DC425F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */; };
-		C0270DC525F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */; };
-		C0270DCF25F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */; };
-		C0270DD025F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */; };
-		C0270DD725F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */; };
-		C0270DD825F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */; };
-		C0270DDF25F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */; };
-		C0270DE025F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */; };
-		C0270DF325F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */; };
-		C0270DF425F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */; };
-		C0270DFE25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */; };
-		C0270DFF25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */; };
-		C0270E0525F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */; };
-		C0270E0625F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */; };
-		C0270E0C25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */; };
-		C0270E0D25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */; };
-		C0270E1725F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */; };
-		C0270E1825F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */; };
-		C0270E1F25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */; };
-		C0270E2025F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */; };
-		C0270E2E25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */; };
-		C0270E2F25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */; };
-		C0270E3525F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */; };
-		C0270E3625F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */; };
-		C0270E3D25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */; };
-		C0270E3E25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */; };
-		C0270E4825F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */; };
-		C0270E4925F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */; };
 		C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */; };
 		C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */; };
 		C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */; };
 		C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */; };
 		C0270E7E25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */; };
 		C0270E7F25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */; };
-		C0270E8E25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */; };
-		C0270E8F25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */; };
 		C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */; };
 		C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */; };
-		C0270ECB25F4A5D300ECC57C /* ScreenTabBarItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */; };
-		C0270ED025F4A5D400ECC57C /* ScreenTabBarItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */; };
-		C0270ED525F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */; };
-		C0270EDA25F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */; };
-		C0270EDF25F4A5EB00ECC57C /* ScreenStackContainerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */; };
-		C0270EE425F4A5EC00ECC57C /* ScreenStackContainerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */; };
-		C0270EFE25F4A68000ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */; };
-		C0270F0325F4A68100ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */; };
-		C0270F0825F4A69700ECC57C /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */; };
-		C0270F0D25F4A69800ECC57C /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */; };
-		C0270F1225F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */; };
-		C0270F1725F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */; };
-		C0270F1C25F4A6AC00ECC57C /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */; };
-		C0270F2125F4A6AD00ECC57C /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */; };
-		C0270F2625F4A6B900ECC57C /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */; };
-		C0270F2B25F4A6BA00ECC57C /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */; };
-		C0270FCB25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */; };
-		C0270FCC25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */; };
 		C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107025F50F9200ECC57C /* ScreenIterator.swift */; };
 		C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */; };
 		C027107C25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */; };
@@ -115,18 +31,6 @@
 		C027108C25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */; };
 		C027109F25F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */; };
 		C02710A025F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */; };
-		C02710B225F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */; };
-		C02710B325F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */; };
-		C02710B925F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */; };
-		C02710BA25F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */; };
-		C027110B25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */; };
-		C027110C25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */; };
-		C027111525F55D8000ECC57C /* ScreenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */; };
-		C027111A25F55D8000ECC57C /* ScreenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */; };
-		C027111F25F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */; };
-		C027112425F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */; };
-		C027113225F600F300ECC57C /* ScreenInterception.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027113125F600F300ECC57C /* ScreenInterception.swift */; };
-		C027113325F600F300ECC57C /* ScreenInterception.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027113125F600F300ECC57C /* ScreenInterception.swift */; };
 		C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */; };
 		C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */; };
 		C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */; };
@@ -144,72 +48,165 @@
 		C057F01823CB8EEB00C2D895 /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C057F00E23CB8EEB00C2D895 /* Nivelir.framework */; };
 		C057F01D23CB8EEB00C2D895 /* NivelirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */; };
 		C057F01F23CB8EEB00C2D895 /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C05870E825F7FC1C00FCA808 /* ScreenPayloadAssociating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05870E725F7FC1C00FCA808 /* ScreenPayloadAssociating.swift */; };
-		C05870E925F7FC1C00FCA808 /* ScreenPayloadAssociating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05870E725F7FC1C00FCA808 /* ScreenPayloadAssociating.swift */; };
-		C058716525F9081C00FCA808 /* KeyedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058716425F9081C00FCA808 /* KeyedScreen.swift */; };
-		C058716F25F9084A00FCA808 /* KeyedScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058716E25F9084A00FCA808 /* KeyedScreenContainer.swift */; };
-		C058717625F9087F00FCA808 /* KeyedScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058717525F9087F00FCA808 /* KeyedScreenData.swift */; };
-		C058719A25F90BAD00FCA808 /* CustomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058719925F90BAD00FCA808 /* CustomScreen.swift */; };
-		C058719F25F90BB500FCA808 /* KeyedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058716425F9081C00FCA808 /* KeyedScreen.swift */; };
-		C05871A025F90BB500FCA808 /* KeyedScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058716E25F9084A00FCA808 /* KeyedScreenContainer.swift */; };
-		C05871A125F90BB500FCA808 /* KeyedScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058717525F9087F00FCA808 /* KeyedScreenData.swift */; };
-		C05871A625F90BB800FCA808 /* CustomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058719925F90BAD00FCA808 /* CustomScreen.swift */; };
-		C05871B025F90C7900FCA808 /* CustomKeyedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05871AF25F90C7900FCA808 /* CustomKeyedScreen.swift */; };
+		C05E97EC2602B53900A4C8B8 /* ScreenDismissAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E97EB2602B53900A4C8B8 /* ScreenDismissAction.swift */; };
+		C05E97ED2602B53900A4C8B8 /* ScreenDismissAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E97EB2602B53900A4C8B8 /* ScreenDismissAction.swift */; };
+		C05E97F72602B57900A4C8B8 /* ScreenPresentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E97F62602B57900A4C8B8 /* ScreenPresentAction.swift */; };
+		C05E97F82602B57900A4C8B8 /* ScreenPresentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E97F62602B57900A4C8B8 /* ScreenPresentAction.swift */; };
+		C05E97FE2602BAF700A4C8B8 /* ScreenPresentedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E97FD2602BAF700A4C8B8 /* ScreenPresentedAction.swift */; };
+		C05E97FF2602BAF700A4C8B8 /* ScreenPresentedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E97FD2602BAF700A4C8B8 /* ScreenPresentedAction.swift */; };
+		C05E98052602BB7600A4C8B8 /* ScreenPresentingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98042602BB7600A4C8B8 /* ScreenPresentingAction.swift */; };
+		C05E98062602BB7600A4C8B8 /* ScreenPresentingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98042602BB7600A4C8B8 /* ScreenPresentingAction.swift */; };
+		C05E980C2602BC9400A4C8B8 /* ScreenStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E980B2602BC9400A4C8B8 /* ScreenStackAction.swift */; };
+		C05E980D2602BC9400A4C8B8 /* ScreenStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E980B2602BC9400A4C8B8 /* ScreenStackAction.swift */; };
+		C05E98132602C23900A4C8B8 /* ScreenTabsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98122602C23900A4C8B8 /* ScreenTabsAction.swift */; };
+		C05E98142602C23900A4C8B8 /* ScreenTabsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98122602C23900A4C8B8 /* ScreenTabsAction.swift */; };
+		C05E981B2602C32300A4C8B8 /* ScreenRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E981A2602C32300A4C8B8 /* ScreenRootAction.swift */; };
+		C05E981C2602C32300A4C8B8 /* ScreenRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E981A2602C32300A4C8B8 /* ScreenRootAction.swift */; };
+		C05E982B2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E982A2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift */; };
+		C05E982C2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E982A2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift */; };
+		C05E98332602C47300A4C8B8 /* ScreenRootAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98322602C47300A4C8B8 /* ScreenRootAnimation.swift */; };
+		C05E98342602C47300A4C8B8 /* ScreenRootAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98322602C47300A4C8B8 /* ScreenRootAnimation.swift */; };
+		C05E984A2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98492602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift */; };
+		C05E984B2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98492602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift */; };
+		C05E98512602C72700A4C8B8 /* ScreenSetRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98502602C72700A4C8B8 /* ScreenSetRootAction.swift */; };
+		C05E98522602C72700A4C8B8 /* ScreenSetRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98502602C72700A4C8B8 /* ScreenSetRootAction.swift */; };
+		C05E98592602C84A00A4C8B8 /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98582602C84A00A4C8B8 /* ScreenSelectedTabAction.swift */; };
+		C05E985A2602C84A00A4C8B8 /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98582602C84A00A4C8B8 /* ScreenSelectedTabAction.swift */; };
+		C05E98602602C91500A4C8B8 /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E985F2602C91500A4C8B8 /* ScreenSetupTabAction.swift */; };
+		C05E98612602C91500A4C8B8 /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E985F2602C91500A4C8B8 /* ScreenSetupTabAction.swift */; };
+		C05E98692602CA0100A4C8B8 /* ScreenTabAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98682602CA0100A4C8B8 /* ScreenTabAnimation.swift */; };
+		C05E986A2602CA0100A4C8B8 /* ScreenTabAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98682602CA0100A4C8B8 /* ScreenTabAnimation.swift */; };
+		C05E98702602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E986F2602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift */; };
+		C05E98712602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E986F2602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift */; };
+		C05E98772602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98762602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift */; };
+		C05E98782602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98762602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift */; };
+		C05E987E2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E987D2602CA5800A4C8B8 /* ScreenTabPredicate.swift */; };
+		C05E987F2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E987D2602CA5800A4C8B8 /* ScreenTabPredicate.swift */; };
+		C05E98892602CAA500A4C8B8 /* ScreenSelectTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98882602CAA500A4C8B8 /* ScreenSelectTabAction.swift */; };
+		C05E988A2602CAA500A4C8B8 /* ScreenSelectTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98882602CAA500A4C8B8 /* ScreenSelectTabAction.swift */; };
+		C05E98952602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98942602CDC400A4C8B8 /* ScreenRefreshableContainer.swift */; };
+		C05E98962602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98942602CDC400A4C8B8 /* ScreenRefreshableContainer.swift */; };
+		C05E989C2602CDD300A4C8B8 /* ScreenRefreshAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E989B2602CDD300A4C8B8 /* ScreenRefreshAction.swift */; };
+		C05E989D2602CDD300A4C8B8 /* ScreenRefreshAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E989B2602CDD300A4C8B8 /* ScreenRefreshAction.swift */; };
+		C05E98AC2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98AB2602CFB200A4C8B8 /* ScreenStackTopAction.swift */; };
+		C05E98AD2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98AB2602CFB200A4C8B8 /* ScreenStackTopAction.swift */; };
+		C05E98B72602D01C00A4C8B8 /* ScreenStackVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98B62602D01C00A4C8B8 /* ScreenStackVisibleAction.swift */; };
+		C05E98B82602D01C00A4C8B8 /* ScreenStackVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98B62602D01C00A4C8B8 /* ScreenStackVisibleAction.swift */; };
+		C05E98BE2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98BD2602D05D00A4C8B8 /* ScreenStackRootAction.swift */; };
+		C05E98BF2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98BD2602D05D00A4C8B8 /* ScreenStackRootAction.swift */; };
+		C05E98C72602D13800A4C8B8 /* ScreenStackAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98C62602D13800A4C8B8 /* ScreenStackAnimation.swift */; };
+		C05E98C82602D13800A4C8B8 /* ScreenStackAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98C62602D13800A4C8B8 /* ScreenStackAnimation.swift */; };
+		C05E98CE2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98CD2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift */; };
+		C05E98CF2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98CD2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift */; };
+		C05E98D52602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98D42602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift */; };
+		C05E98D62602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98D42602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift */; };
+		C05E98DD2602D17200A4C8B8 /* ScreenStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98DC2602D17200A4C8B8 /* ScreenStackModifier.swift */; };
+		C05E98DE2602D17200A4C8B8 /* ScreenStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98DC2602D17200A4C8B8 /* ScreenStackModifier.swift */; };
+		C05E98E42602D18B00A4C8B8 /* ScreenSetStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98E32602D18B00A4C8B8 /* ScreenSetStackAction.swift */; };
+		C05E98E52602D18B00A4C8B8 /* ScreenSetStackAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98E32602D18B00A4C8B8 /* ScreenSetStackAction.swift */; };
+		C05E98EF2602D48000A4C8B8 /* ScreenStackClearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98EE2602D48000A4C8B8 /* ScreenStackClearModifier.swift */; };
+		C05E98F02602D48000A4C8B8 /* ScreenStackClearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98EE2602D48000A4C8B8 /* ScreenStackClearModifier.swift */; };
+		C05E98F62602D4BC00A4C8B8 /* ScreenStackPushModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98F52602D4BC00A4C8B8 /* ScreenStackPushModifier.swift */; };
+		C05E98F72602D4BC00A4C8B8 /* ScreenStackPushModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98F52602D4BC00A4C8B8 /* ScreenStackPushModifier.swift */; };
+		C05E98FD2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98FC2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift */; };
+		C05E98FE2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E98FC2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift */; };
+		C05E99052602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99042602D65400A4C8B8 /* ScreenStackPopPredicate.swift */; };
+		C05E99062602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99042602D65400A4C8B8 /* ScreenStackPopPredicate.swift */; };
+		C05E99202602D7DD00A4C8B8 /* ScreenStackPopModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E991F2602D7DD00A4C8B8 /* ScreenStackPopModifier.swift */; };
+		C05E99212602D7DD00A4C8B8 /* ScreenStackPopModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E991F2602D7DD00A4C8B8 /* ScreenStackPopModifier.swift */; };
+		C05E992C2602DBCC00A4C8B8 /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E992B2602DBCC00A4C8B8 /* ScreenFromAction.swift */; };
+		C05E992D2602DBCC00A4C8B8 /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E992B2602DBCC00A4C8B8 /* ScreenFromAction.swift */; };
+		C05E99332602DF5400A4C8B8 /* ScreenPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99322602DF5400A4C8B8 /* ScreenPredicate.swift */; };
+		C05E99342602DF5400A4C8B8 /* ScreenPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99322602DF5400A4C8B8 /* ScreenPredicate.swift */; };
+		C05E993A2602DF9400A4C8B8 /* ScreenTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99392602DF9400A4C8B8 /* ScreenTopAction.swift */; };
+		C05E993B2602DF9400A4C8B8 /* ScreenTopAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99392602DF9400A4C8B8 /* ScreenTopAction.swift */; };
+		C05E99452602E2FD00A4C8B8 /* ScreenFirstAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99442602E2FD00A4C8B8 /* ScreenFirstAction.swift */; };
+		C05E99462602E2FD00A4C8B8 /* ScreenFirstAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E99442602E2FD00A4C8B8 /* ScreenFirstAction.swift */; };
+		C05E994C2602E36600A4C8B8 /* ScreenLastAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E994B2602E36600A4C8B8 /* ScreenLastAction.swift */; };
+		C05E994D2602E36600A4C8B8 /* ScreenLastAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E994B2602E36600A4C8B8 /* ScreenLastAction.swift */; };
+		C06286F82600B607005BC0E8 /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06286F72600B607005BC0E8 /* ScreenAction.swift */; };
+		C06286F92600B607005BC0E8 /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06286F72600B607005BC0E8 /* ScreenAction.swift */; };
+		C06287042600B66D005BC0E8 /* AnyScreenActionBaseBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287032600B66D005BC0E8 /* AnyScreenActionBaseBox.swift */; };
+		C06287052600B66D005BC0E8 /* AnyScreenActionBaseBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287032600B66D005BC0E8 /* AnyScreenActionBaseBox.swift */; };
+		C06287132600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287122600B6A8005BC0E8 /* AnyScreenActionBox.swift */; };
+		C06287142600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287122600B6A8005BC0E8 /* AnyScreenActionBox.swift */; };
+		C062871A2600B7EA005BC0E8 /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287192600B7EA005BC0E8 /* AnyScreenAction.swift */; };
+		C062871B2600B7EA005BC0E8 /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287192600B7EA005BC0E8 /* AnyScreenAction.swift */; };
+		C062878B2600FDFC005BC0E8 /* ScreenThenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062878A2600FDFC005BC0E8 /* ScreenThenable.swift */; };
+		C062878C2600FDFC005BC0E8 /* ScreenThenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062878A2600FDFC005BC0E8 /* ScreenThenable.swift */; };
+		C06287F426029C85005BC0E8 /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287F326029C85005BC0E8 /* ScreenRoute.swift */; };
+		C06287F526029C85005BC0E8 /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287F326029C85005BC0E8 /* ScreenRoute.swift */; };
+		C06287FC26029CD3005BC0E8 /* ScreenNavigateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287FB26029CD3005BC0E8 /* ScreenNavigateAction.swift */; };
+		C06287FD26029CD3005BC0E8 /* ScreenNavigateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06287FB26029CD3005BC0E8 /* ScreenNavigateAction.swift */; };
+		C062880826029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */; };
+		C062880926029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */; };
+		C062880A26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880526029D76005BC0E8 /* ScreenModalRoute.swift */; };
+		C062880B26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880526029D76005BC0E8 /* ScreenModalRoute.swift */; };
+		C062880C26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */; };
+		C062880D26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */; };
+		C062880E26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880726029D76005BC0E8 /* ScreenStackRoute.swift */; };
+		C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880726029D76005BC0E8 /* ScreenStackRoute.swift */; };
+		C062881D2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */; };
+		C062881E2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */; };
+		C06288282602A315005BC0E8 /* ScreenNestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06288272602A315005BC0E8 /* ScreenNestAction.swift */; };
+		C06288292602A315005BC0E8 /* ScreenNestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06288272602A315005BC0E8 /* ScreenNestAction.swift */; };
+		C06B615B262C0C040022678C /* ScreenTryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B615A262C0C040022678C /* ScreenTryAction.swift */; };
+		C06B615C262C0C040022678C /* ScreenTryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B615A262C0C040022678C /* ScreenTryAction.swift */; };
+		C06B6162262C0E930022678C /* ScreenTryResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B6161262C0E930022678C /* ScreenTryResolution.swift */; };
+		C06B6163262C0E930022678C /* ScreenTryResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B6161262C0E930022678C /* ScreenTryResolution.swift */; };
 		C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
 		C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */; };
 		C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A01A6023CB92FB00AC2C3A /* NivelirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */; };
-		C0AAD97125EEC0160087439E /* UIViewController+ScreenModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */; };
-		C0AAD99325EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */; };
-		C0AAD9A325EEC23C0087439E /* ScreenCustomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */; };
+		C0AAD97125EEC0160087439E /* UIViewController+ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenContainer.swift */; };
+		C0AAD99325EEC1A50087439E /* UIWindow+ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenContainer.swift */; };
 		C0AAD9A925EEC2790087439E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A825EEC2790087439E /* Screen.swift */; };
 		C0AAD9B025EEC34B0087439E /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */; };
 		C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
 		C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */; };
-		C0AAD9D925EED3EE0087439E /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9D825EED3EE0087439E /* ScreenKey.swift */; };
 		C0AAD9E225EED53D0087439E /* AnyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9E125EED53D0087439E /* AnyScreen.swift */; };
-		C0AAD9EC25EED5550087439E /* AnyScreenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */; };
-		C0AAD9F225EED7680087439E /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9F125EED7680087439E /* AnyScreenAction.swift */; };
 		C0AADA1525EED7740087439E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A825EEC2790087439E /* Screen.swift */; };
 		C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
 		C0AADA1E25EED7C00087439E /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */; };
-		C0AADA2925EED8110087439E /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2825EED8110087439E /* ScreenAction.swift */; };
 		C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2F25EED85C0087439E /* ScreenError.swift */; };
-		C0AADA3A25EED86E0087439E /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */; };
-		C0AADA4625EEE0F10087439E /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */; };
-		C0AADA4D25EEE1F10087439E /* ScreenKeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4C25EEE1F10087439E /* ScreenKeyProvider.swift */; };
-		C0AADA5A25EEE2480087439E /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA5925EEE2480087439E /* ScreenRoute.swift */; };
-		C0AADA7225EF5ED80087439E /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */; };
-		C0AADA7825EF60E00087439E /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */; };
-		C0AADABE25EF6F2A0087439E /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */; };
-		C0AADAC825EF6F5D0087439E /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */; };
-		C0AADAE625EF7D380087439E /* ScreenJoinAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */; };
-		C0AADB1325EF89C30087439E /* ScreenNavigateToAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */; };
-		C0AADB1825EF89C40087439E /* ScreenNavigateToAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */; };
-		C0AADB3B25EF8FE60087439E /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA5925EEE2480087439E /* ScreenRoute.swift */; };
-		C0AADB4025EF8FEC0087439E /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */; };
-		C0AADB4125EF8FEC0087439E /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */; };
-		C0AADB4225EF8FEC0087439E /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */; };
-		C0AADB4325EF8FEC0087439E /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */; };
+		C0AADA4D25EEE1F10087439E /* ScreenKeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */; };
 		C0AADB4825EF8FF00087439E /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */; };
 		C0AADB4D25EF8FF30087439E /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */; };
-		C0AADB5225EF8FF70087439E /* ScreenCustomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */; };
-		C0AADB5325EF8FF70087439E /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9D825EED3EE0087439E /* ScreenKey.swift */; };
-		C0AADB5825EF8FFB0087439E /* ScreenKeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4C25EEE1F10087439E /* ScreenKeyProvider.swift */; };
-		C0AADB6425EF900B0087439E /* UIWindow+ScreenWindowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */; };
-		C0AADB6525EF900B0087439E /* UIViewController+ScreenModalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */; };
+		C0AADB5825EF8FFB0087439E /* ScreenKeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */; };
+		C0AADB6425EF900B0087439E /* UIWindow+ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenContainer.swift */; };
+		C0AADB6525EF900B0087439E /* UIViewController+ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenContainer.swift */; };
 		C0AADB6A25EF900F0087439E /* AnyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9E125EED53D0087439E /* AnyScreen.swift */; };
-		C0AADB6B25EF900F0087439E /* AnyScreenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */; };
-		C0AADB7025EF90120087439E /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2825EED8110087439E /* ScreenAction.swift */; };
-		C0AADB7125EF90120087439E /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9F125EED7680087439E /* AnyScreenAction.swift */; };
-		C0AADB7625EF90160087439E /* ScreenJoinAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */; };
-		C0AADB8125EF901F0087439E /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */; };
 		C0AADB8225EF901F0087439E /* ScreenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA2F25EED85C0087439E /* ScreenError.swift */; };
-		C0AADB8325EF901F0087439E /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */; };
 		C0AADB8825EF90270087439E /* RangeReplaceableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */; };
 		C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
 		C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
 		C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
+		C0E932C3262B0BEF0041C564 /* ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */; };
+		C0E932C4262B0BEF0041C564 /* ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */; };
+		C0E932D7262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932D6262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift */; };
+		C0E932D8262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932D6262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift */; };
+		C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */; };
+		C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */; };
+		C0E932EF262B16910041C564 /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932EE262B16910041C564 /* ScreenTabsDecorator.swift */; };
+		C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932EE262B16910041C564 /* ScreenTabsDecorator.swift */; };
+		C0E932FD262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932F6262B16B80041C564 /* ScreenTabBarItemDecorator.swift */; };
+		C0E932FE262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932F6262B16B80041C564 /* ScreenTabBarItemDecorator.swift */; };
+		C0E932FF262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932F7262B16B80041C564 /* ScreenRightBarButtonDecorator.swift */; };
+		C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932F7262B16B80041C564 /* ScreenRightBarButtonDecorator.swift */; };
+		C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932F8262B16B80041C564 /* ScreenStackContainerDecorator.swift */; };
+		C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932F8262B16B80041C564 /* ScreenStackContainerDecorator.swift */; };
+		C0E93303262B16B80041C564 /* ScreenModalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FA262B16B80041C564 /* ScreenModalStyle.swift */; };
+		C0E93304262B16B80041C564 /* ScreenModalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FA262B16B80041C564 /* ScreenModalStyle.swift */; };
+		C0E93305262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */; };
+		C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */; };
+		C0E93307262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */; };
+		C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */; };
+		C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */; };
+		C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */; };
+		C0F9A47525FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */; };
+		C0F9A47625FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */; };
+		C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */; };
+		C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,65 +233,17 @@
 		C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
-		C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackAction.swift; sourceTree = "<group>"; };
-		C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPresentingAction.swift; sourceTree = "<group>"; };
-		C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsAction.swift; sourceTree = "<group>"; };
-		C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDismissAction.swift; sourceTree = "<group>"; };
-		C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPresentAction.swift; sourceTree = "<group>"; };
-		C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPresentedAction.swift; sourceTree = "<group>"; };
-		C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectedTabAction.swift; sourceTree = "<group>"; };
-		C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSetupTabAction.swift; sourceTree = "<group>"; };
-		C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabAction.swift; sourceTree = "<group>"; };
-		C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabAnimation.swift; sourceTree = "<group>"; };
-		C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabTransitionAnimation.swift; sourceTree = "<group>"; };
-		C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabCustomAnimation.swift; sourceTree = "<group>"; };
-		C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabPredicate.swift; sourceTree = "<group>"; };
-		C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootAction.swift; sourceTree = "<group>"; };
-		C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootAction.swift; sourceTree = "<group>"; };
-		C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootCustomAnimation.swift; sourceTree = "<group>"; };
-		C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootAnimation.swift; sourceTree = "<group>"; };
-		C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootTransitionAnimation.swift; sourceTree = "<group>"; };
-		C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackTopAction.swift; sourceTree = "<group>"; };
-		C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackVisibleAction.swift; sourceTree = "<group>"; };
-		C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetStackAction.swift; sourceTree = "<group>"; };
-		C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackModifier.swift; sourceTree = "<group>"; };
-		C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackCustomAnimation.swift; sourceTree = "<group>"; };
-		C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackAnimation.swift; sourceTree = "<group>"; };
-		C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackTransitionAnimation.swift; sourceTree = "<group>"; };
-		C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopModifier.swift; sourceTree = "<group>"; };
-		C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPushModifier.swift; sourceTree = "<group>"; };
-		C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopToRootModifier.swift; sourceTree = "<group>"; };
-		C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackClearModifier.swift; sourceTree = "<group>"; };
-		C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackReplaceModifier.swift; sourceTree = "<group>"; };
-		C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopToPredicate.swift; sourceTree = "<group>"; };
-		C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopToModifier.swift; sourceTree = "<group>"; };
 		C0270E5325F3EC6000ECC57C /* ScreenLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLogger.swift; sourceTree = "<group>"; };
 		C0270E5E25F3EC7200ECC57C /* DefaultScreenLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenLogger.swift; sourceTree = "<group>"; };
-		C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsDecorator.swift; sourceTree = "<group>"; };
 		C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDecoratorPayload.swift; sourceTree = "<group>"; };
-		C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackDecorator.swift; sourceTree = "<group>"; };
-		C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabBarItemDecorator.swift; sourceTree = "<group>"; };
-		C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRightBarButtonDecorator.swift; sourceTree = "<group>"; };
-		C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackContainerDecorator.swift; sourceTree = "<group>"; };
-		C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyle.swift; sourceTree = "<group>"; };
-		C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyleDecorator.swift; sourceTree = "<group>"; };
-		C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLeftBarButtonDecorator.swift; sourceTree = "<group>"; };
-		C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDecoratorWrapper.swift; sourceTree = "<group>"; };
 		C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDecorator.swift; sourceTree = "<group>"; };
 		C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyStackScreen.swift; sourceTree = "<group>"; };
 		C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTabsScreen.swift; sourceTree = "<group>"; };
 		C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyModalScreen.swift; sourceTree = "<group>"; };
-		C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInterceptAction.swift; sourceTree = "<group>"; };
-		C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInterceptor.swift; sourceTree = "<group>"; };
-		C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromAction.swift; sourceTree = "<group>"; };
 		C027107025F50F9200ECC57C /* ScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterator.swift; sourceTree = "<group>"; };
 		C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenIterator.swift; sourceTree = "<group>"; };
 		C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationPredicate.swift; sourceTree = "<group>"; };
 		C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationResult.swift; sourceTree = "<group>"; };
-		C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromPredicate.swift; sourceTree = "<group>"; };
-		C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromTopAction.swift; sourceTree = "<group>"; };
-		C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromFirstAction.swift; sourceTree = "<group>"; };
-		C027113125F600F300ECC57C /* ScreenInterception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInterception.swift; sourceTree = "<group>"; };
 		C027117D25F60B7500ECC57C /* DefaultScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenNavigator.swift; sourceTree = "<group>"; };
 		C027118525F60BBC00ECC57C /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
 		C027119025F60BCD00ECC57C /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
@@ -305,12 +254,59 @@
 		C057F01723CB8EEB00C2D895 /* Nivelir Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nivelir Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NivelirTests.swift; sourceTree = "<group>"; };
 		C057F01E23CB8EEB00C2D895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C05870E725F7FC1C00FCA808 /* ScreenPayloadAssociating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadAssociating.swift; sourceTree = "<group>"; };
-		C058716425F9081C00FCA808 /* KeyedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedScreen.swift; sourceTree = "<group>"; };
-		C058716E25F9084A00FCA808 /* KeyedScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedScreenContainer.swift; sourceTree = "<group>"; };
-		C058717525F9087F00FCA808 /* KeyedScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedScreenData.swift; sourceTree = "<group>"; };
-		C058719925F90BAD00FCA808 /* CustomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScreen.swift; sourceTree = "<group>"; };
-		C05871AF25F90C7900FCA808 /* CustomKeyedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyedScreen.swift; sourceTree = "<group>"; };
+		C05E97EB2602B53900A4C8B8 /* ScreenDismissAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDismissAction.swift; sourceTree = "<group>"; };
+		C05E97F62602B57900A4C8B8 /* ScreenPresentAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPresentAction.swift; sourceTree = "<group>"; };
+		C05E97FD2602BAF700A4C8B8 /* ScreenPresentedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPresentedAction.swift; sourceTree = "<group>"; };
+		C05E98042602BB7600A4C8B8 /* ScreenPresentingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPresentingAction.swift; sourceTree = "<group>"; };
+		C05E980B2602BC9400A4C8B8 /* ScreenStackAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackAction.swift; sourceTree = "<group>"; };
+		C05E98122602C23900A4C8B8 /* ScreenTabsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabsAction.swift; sourceTree = "<group>"; };
+		C05E981A2602C32300A4C8B8 /* ScreenRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootAction.swift; sourceTree = "<group>"; };
+		C05E982A2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootCustomAnimation.swift; sourceTree = "<group>"; };
+		C05E98322602C47300A4C8B8 /* ScreenRootAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootAnimation.swift; sourceTree = "<group>"; };
+		C05E98492602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootTransitionAnimation.swift; sourceTree = "<group>"; };
+		C05E98502602C72700A4C8B8 /* ScreenSetRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetRootAction.swift; sourceTree = "<group>"; };
+		C05E98582602C84A00A4C8B8 /* ScreenSelectedTabAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelectedTabAction.swift; sourceTree = "<group>"; };
+		C05E985F2602C91500A4C8B8 /* ScreenSetupTabAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetupTabAction.swift; sourceTree = "<group>"; };
+		C05E98682602CA0100A4C8B8 /* ScreenTabAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabAnimation.swift; sourceTree = "<group>"; };
+		C05E986F2602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabCustomAnimation.swift; sourceTree = "<group>"; };
+		C05E98762602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabTransitionAnimation.swift; sourceTree = "<group>"; };
+		C05E987D2602CA5800A4C8B8 /* ScreenTabPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabPredicate.swift; sourceTree = "<group>"; };
+		C05E98882602CAA500A4C8B8 /* ScreenSelectTabAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabAction.swift; sourceTree = "<group>"; };
+		C05E98942602CDC400A4C8B8 /* ScreenRefreshableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRefreshableContainer.swift; sourceTree = "<group>"; };
+		C05E989B2602CDD300A4C8B8 /* ScreenRefreshAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRefreshAction.swift; sourceTree = "<group>"; };
+		C05E98AB2602CFB200A4C8B8 /* ScreenStackTopAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackTopAction.swift; sourceTree = "<group>"; };
+		C05E98B62602D01C00A4C8B8 /* ScreenStackVisibleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackVisibleAction.swift; sourceTree = "<group>"; };
+		C05E98BD2602D05D00A4C8B8 /* ScreenStackRootAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackRootAction.swift; sourceTree = "<group>"; };
+		C05E98C62602D13800A4C8B8 /* ScreenStackAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackAnimation.swift; sourceTree = "<group>"; };
+		C05E98CD2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackCustomAnimation.swift; sourceTree = "<group>"; };
+		C05E98D42602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackTransitionAnimation.swift; sourceTree = "<group>"; };
+		C05E98DC2602D17200A4C8B8 /* ScreenStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackModifier.swift; sourceTree = "<group>"; };
+		C05E98E32602D18B00A4C8B8 /* ScreenSetStackAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSetStackAction.swift; sourceTree = "<group>"; };
+		C05E98EE2602D48000A4C8B8 /* ScreenStackClearModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackClearModifier.swift; sourceTree = "<group>"; };
+		C05E98F52602D4BC00A4C8B8 /* ScreenStackPushModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPushModifier.swift; sourceTree = "<group>"; };
+		C05E98FC2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackReplaceModifier.swift; sourceTree = "<group>"; };
+		C05E99042602D65400A4C8B8 /* ScreenStackPopPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopPredicate.swift; sourceTree = "<group>"; };
+		C05E991F2602D7DD00A4C8B8 /* ScreenStackPopModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackPopModifier.swift; sourceTree = "<group>"; };
+		C05E992B2602DBCC00A4C8B8 /* ScreenFromAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFromAction.swift; sourceTree = "<group>"; };
+		C05E99322602DF5400A4C8B8 /* ScreenPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPredicate.swift; sourceTree = "<group>"; };
+		C05E99392602DF9400A4C8B8 /* ScreenTopAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTopAction.swift; sourceTree = "<group>"; };
+		C05E99442602E2FD00A4C8B8 /* ScreenFirstAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFirstAction.swift; sourceTree = "<group>"; };
+		C05E994B2602E36600A4C8B8 /* ScreenLastAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLastAction.swift; sourceTree = "<group>"; };
+		C06286F72600B607005BC0E8 /* ScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
+		C06287032600B66D005BC0E8 /* AnyScreenActionBaseBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenActionBaseBox.swift; sourceTree = "<group>"; };
+		C06287122600B6A8005BC0E8 /* AnyScreenActionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenActionBox.swift; sourceTree = "<group>"; };
+		C06287192600B7EA005BC0E8 /* AnyScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenAction.swift; sourceTree = "<group>"; };
+		C062878A2600FDFC005BC0E8 /* ScreenThenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenThenable.swift; sourceTree = "<group>"; };
+		C06287F326029C85005BC0E8 /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
+		C06287FB26029CD3005BC0E8 /* ScreenNavigateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigateAction.swift; sourceTree = "<group>"; };
+		C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenWindowRoute.swift; sourceTree = "<group>"; };
+		C062880526029D76005BC0E8 /* ScreenModalRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
+		C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
+		C062880726029D76005BC0E8 /* ScreenStackRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
+		C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenChildRoute.swift; sourceTree = "<group>"; };
+		C06288272602A315005BC0E8 /* ScreenNestAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNestAction.swift; sourceTree = "<group>"; };
+		C06B615A262C0C040022678C /* ScreenTryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTryAction.swift; sourceTree = "<group>"; };
+		C06B6161262C0E930022678C /* ScreenTryResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTryResolution.swift; sourceTree = "<group>"; };
 		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
 		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -326,31 +322,31 @@
 		C0A01A6423CB9B1600AC2C3A /* Dangerfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dangerfile; sourceTree = "<group>"; };
 		C0A01A6523CB9B1600AC2C3A /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		C0A01A6623CB9B5900AC2C3A /* Brewfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
-		C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenModalContainer.swift"; sourceTree = "<group>"; };
-		C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+ScreenWindowContainer.swift"; sourceTree = "<group>"; };
-		C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomKey.swift; sourceTree = "<group>"; };
+		C0AAD97025EEC0160087439E /* UIViewController+ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenContainer.swift"; sourceTree = "<group>"; };
+		C0AAD99225EEC1A50087439E /* UIWindow+ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+ScreenContainer.swift"; sourceTree = "<group>"; };
 		C0AAD9A825EEC2790087439E /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		C0AAD9AF25EEC34B0087439E /* ScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigator.swift; sourceTree = "<group>"; };
 		C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+Extensions.swift"; sourceTree = "<group>"; };
-		C0AAD9D825EED3EE0087439E /* ScreenKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
 		C0AAD9E125EED53D0087439E /* AnyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreen.swift; sourceTree = "<group>"; };
-		C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBox.swift; sourceTree = "<group>"; };
-		C0AAD9F125EED7680087439E /* AnyScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenAction.swift; sourceTree = "<group>"; };
 		C0AADA1D25EED7C00087439E /* ScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigation.swift; sourceTree = "<group>"; };
-		C0AADA2825EED8110087439E /* ScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
 		C0AADA2F25EED85C0087439E /* ScreenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenError.swift; sourceTree = "<group>"; };
-		C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenInvalidContainerError.swift; sourceTree = "<group>"; };
-		C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotFoundError.swift; sourceTree = "<group>"; };
-		C0AADA4C25EEE1F10087439E /* ScreenKeyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyProvider.swift; sourceTree = "<group>"; };
-		C0AADA5925EEE2480087439E /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
-		C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowRoute.swift; sourceTree = "<group>"; };
-		C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
-		C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
-		C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
-		C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigateToAction.swift; sourceTree = "<group>"; };
-		C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenJoinAction.swift; sourceTree = "<group>"; };
+		C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyedContainer.swift; sourceTree = "<group>"; };
 		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDecorableContainer.swift; sourceTree = "<group>"; };
+		C0E932D6262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenDecorableContainer.swift"; sourceTree = "<group>"; };
+		C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackDecorator.swift; sourceTree = "<group>"; };
+		C0E932EE262B16910041C564 /* ScreenTabsDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsDecorator.swift; sourceTree = "<group>"; };
+		C0E932F6262B16B80041C564 /* ScreenTabBarItemDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabBarItemDecorator.swift; sourceTree = "<group>"; };
+		C0E932F7262B16B80041C564 /* ScreenRightBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRightBarButtonDecorator.swift; sourceTree = "<group>"; };
+		C0E932F8262B16B80041C564 /* ScreenStackContainerDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackContainerDecorator.swift; sourceTree = "<group>"; };
+		C0E932FA262B16B80041C564 /* ScreenModalStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyle.swift; sourceTree = "<group>"; };
+		C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyleDecorator.swift; sourceTree = "<group>"; };
+		C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLeftBarButtonDecorator.swift; sourceTree = "<group>"; };
+		C0F18A2D260D20FE0022C540 /* Demo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demo; sourceTree = "<group>"; };
+		C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
+		C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenInvalidContainerError.swift; sourceTree = "<group>"; };
+		C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotFoundError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,128 +383,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C0270CBD25F3DB8600ECC57C /* Modal */ = {
+		C02373D5262B228900C2D1D7 /* Try */ = {
 			isa = PBXGroup;
 			children = (
-				C0270CC125F3DB8600ECC57C /* ScreenDismissAction.swift */,
-				C0270CC225F3DB8600ECC57C /* ScreenPresentAction.swift */,
-				C0270CC325F3DB8600ECC57C /* ScreenPresentedAction.swift */,
-				C0270CBF25F3DB8600ECC57C /* ScreenPresentingAction.swift */,
-				C0270CBE25F3DB8600ECC57C /* ScreenStackAction.swift */,
-				C0270CC025F3DB8600ECC57C /* ScreenTabsAction.swift */,
+				C06B615A262C0C040022678C /* ScreenTryAction.swift */,
+				C06B6161262C0E930022678C /* ScreenTryResolution.swift */,
 			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
-		C0270CD825F3DCEA00ECC57C /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				C0270CFD25F3DE1C00ECC57C /* SelectTab */,
-				C0270CD925F3DCEA00ECC57C /* ScreenSelectedTabAction.swift */,
-				C0270CDA25F3DCEA00ECC57C /* ScreenSetupTabAction.swift */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
-		C0270CFD25F3DE1C00ECC57C /* SelectTab */ = {
-			isa = PBXGroup;
-			children = (
-				C0270CFF25F3DE1C00ECC57C /* Animations */,
-				C0270CFE25F3DE1C00ECC57C /* ScreenSelectTabAction.swift */,
-				C0270D0325F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift */,
-			);
-			path = SelectTab;
-			sourceTree = "<group>";
-		};
-		C0270CFF25F3DE1C00ECC57C /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				C0270D0025F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift */,
-				C0270D0225F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift */,
-				C0270D0125F3DE1C00ECC57C /* ScreenSelectTabTransitionAnimation.swift */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		C0270D8425F3E3A900ECC57C /* Window */ = {
-			isa = PBXGroup;
-			children = (
-				C0270D9825F3E42900ECC57C /* SetRoot */,
-				C0270D8525F3E3BA00ECC57C /* ScreenRootAction.swift */,
-			);
-			path = Window;
-			sourceTree = "<group>";
-		};
-		C0270D9825F3E42900ECC57C /* SetRoot */ = {
-			isa = PBXGroup;
-			children = (
-				C0270DA425F3E45000ECC57C /* Animations */,
-				C0270D9925F3E44300ECC57C /* ScreenSetRootAction.swift */,
-			);
-			path = SetRoot;
-			sourceTree = "<group>";
-		};
-		C0270DA425F3E45000ECC57C /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				C0270DB025F3E48400ECC57C /* ScreenSetRootAnimation.swift */,
-				C0270DA525F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift */,
-				C0270DB725F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		C0270DC225F3E54E00ECC57C /* Stack */ = {
-			isa = PBXGroup;
-			children = (
-				C0270DD525F3E63200ECC57C /* SetStack */,
-				C0270DC325F3E56300ECC57C /* ScreenStackTopAction.swift */,
-				C0270DCE25F3E5F400ECC57C /* ScreenStackVisibleAction.swift */,
-			);
-			path = Stack;
-			sourceTree = "<group>";
-		};
-		C0270DD525F3E63200ECC57C /* SetStack */ = {
-			isa = PBXGroup;
-			children = (
-				C0270DF125F3E68B00ECC57C /* Animations */,
-				C0270DDD25F3E65400ECC57C /* Modifiers */,
-				C0270DD625F3E64600ECC57C /* ScreenSetStackAction.swift */,
-			);
-			path = SetStack;
-			sourceTree = "<group>";
-		};
-		C0270DDD25F3E65400ECC57C /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				C0270E3B25F3EB6F00ECC57C /* PopTo */,
-				C0270E2D25F3E9AD00ECC57C /* ScreenStackClearModifier.swift */,
-				C0270DDE25F3E66A00ECC57C /* ScreenStackModifier.swift */,
-				C0270E0B25F3E7F400ECC57C /* ScreenStackPopModifier.swift */,
-				C0270E1E25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift */,
-				C0270E1625F3E8A700ECC57C /* ScreenStackPushModifier.swift */,
-				C0270E3425F3E9E900ECC57C /* ScreenStackReplaceModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		C0270DF125F3E68B00ECC57C /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				C0270DFD25F3E71100ECC57C /* ScreenStackAnimation.swift */,
-				C0270DF225F3E6B100ECC57C /* ScreenStackCustomAnimation.swift */,
-				C0270E0425F3E73800ECC57C /* ScreenStackTransitionAnimation.swift */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		C0270E3B25F3EB6F00ECC57C /* PopTo */ = {
-			isa = PBXGroup;
-			children = (
-				C0270E4725F3EBC100ECC57C /* ScreenStackPopToModifier.swift */,
-				C0270E3C25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift */,
-			);
-			path = PopTo;
+			path = Try;
 			sourceTree = "<group>";
 		};
 		C0270E5225F3EC4A00ECC57C /* Logger */ = {
@@ -523,51 +404,15 @@
 		C0270E6C25F4245800ECC57C /* Decorators */ = {
 			isa = PBXGroup;
 			children = (
-				C0270E7225F4245800ECC57C /* Modal */,
-				C0270E7025F4245800ECC57C /* Stack */,
-				C0270E6D25F4245800ECC57C /* Tabs */,
+				C0E932CD262B10AF0041C564 /* Extensions */,
+				C0E932F5262B16B80041C564 /* Modal */,
+				C0E932E5262B166D0041C564 /* Stack */,
+				C0E932ED262B16910041C564 /* Tabs */,
+				C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */,
 				C0270E7B25F4245800ECC57C /* ScreenDecorator.swift */,
 				C0270E6F25F4245800ECC57C /* ScreenDecoratorPayload.swift */,
-				C0270E7A25F4245800ECC57C /* ScreenDecoratorWrapper.swift */,
 			);
 			path = Decorators;
-			sourceTree = "<group>";
-		};
-		C0270E6D25F4245800ECC57C /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				C0270E6E25F4245800ECC57C /* ScreenTabsDecorator.swift */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
-		C0270E7025F4245800ECC57C /* Stack */ = {
-			isa = PBXGroup;
-			children = (
-				C0270E7125F4245800ECC57C /* ScreenStackDecorator.swift */,
-			);
-			path = Stack;
-			sourceTree = "<group>";
-		};
-		C0270E7225F4245800ECC57C /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				C0270E7625F4245800ECC57C /* ModalStyle */,
-				C0270E7925F4245800ECC57C /* ScreenLeftBarButtonDecorator.swift */,
-				C0270E7425F4245800ECC57C /* ScreenRightBarButtonDecorator.swift */,
-				C0270E7525F4245800ECC57C /* ScreenStackContainerDecorator.swift */,
-				C0270E7325F4245800ECC57C /* ScreenTabBarItemDecorator.swift */,
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
-		C0270E7625F4245800ECC57C /* ModalStyle */ = {
-			isa = PBXGroup;
-			children = (
-				C0270E7725F4245800ECC57C /* ScreenModalStyle.swift */,
-				C0270E7825F4245800ECC57C /* ScreenModalStyleDecorator.swift */,
-			);
-			path = ModalStyle;
 			sourceTree = "<group>";
 		};
 		C0270F3425F4A89300ECC57C /* UIKit */ = {
@@ -581,16 +426,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		C0270F7925F4DDE100ECC57C /* Intercept */ = {
-			isa = PBXGroup;
-			children = (
-				C0270F3A25F4AACD00ECC57C /* ScreenInterceptAction.swift */,
-				C0270F8E25F4DFF100ECC57C /* ScreenInterceptor.swift */,
-				C027113125F600F300ECC57C /* ScreenInterception.swift */,
-			);
-			path = Intercept;
-			sourceTree = "<group>";
-		};
 		C027106F25F50F8700ECC57C /* Iterator */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,17 +435,6 @@
 				C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */,
 			);
 			path = Iterator;
-			sourceTree = "<group>";
-		};
-		C02710DE25F5358500ECC57C /* From */ = {
-			isa = PBXGroup;
-			children = (
-				C0270FCA25F4F04E00ECC57C /* ScreenFromAction.swift */,
-				C027110A25F554D000ECC57C /* ScreenFromFirstAction.swift */,
-				C02710B125F52B8200ECC57C /* ScreenFromPredicate.swift */,
-				C02710B825F52BEF00ECC57C /* ScreenFromTopAction.swift */,
-			);
-			path = From;
 			sourceTree = "<group>";
 		};
 		C027118425F60B9C00ECC57C /* WindowProvider */ = {
@@ -629,6 +453,7 @@
 				C057F01023CB8EEB00C2D895 /* Sources */,
 				C057F01B23CB8EEB00C2D895 /* Tests */,
 				C057F00F23CB8EEB00C2D895 /* Products */,
+				C0F18A2D260D20FE0022C540 /* Demo */,
 				C0A01A6323CB9B0A00AC2C3A /* Scripts */,
 				C0A01A1A23CB901C00AC2C3A /* .gitignore */,
 				C0A01A1D23CB901C00AC2C3A /* .ruby-version */,
@@ -677,40 +502,230 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		C058716325F9080000FCA808 /* Keyed */ = {
+		C05E97EA2602B51B00A4C8B8 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				C058716425F9081C00FCA808 /* KeyedScreen.swift */,
-				C058716E25F9084A00FCA808 /* KeyedScreenContainer.swift */,
-				C058717525F9087F00FCA808 /* KeyedScreenData.swift */,
+				C05E97EB2602B53900A4C8B8 /* ScreenDismissAction.swift */,
+				C05E97F62602B57900A4C8B8 /* ScreenPresentAction.swift */,
+				C05E97FD2602BAF700A4C8B8 /* ScreenPresentedAction.swift */,
+				C05E98042602BB7600A4C8B8 /* ScreenPresentingAction.swift */,
+				C05E980B2602BC9400A4C8B8 /* ScreenStackAction.swift */,
+				C05E98122602C23900A4C8B8 /* ScreenTabsAction.swift */,
 			);
-			path = Keyed;
+			path = Modal;
 			sourceTree = "<group>";
 		};
-		C058719725F90B4F00FCA808 /* Custom */ = {
+		C05E98192602C30C00A4C8B8 /* Window */ = {
 			isa = PBXGroup;
 			children = (
-				C058719925F90BAD00FCA808 /* CustomScreen.swift */,
-				C05871AF25F90C7900FCA808 /* CustomKeyedScreen.swift */,
+				C05E98292602C44A00A4C8B8 /* SetRoot */,
+				C05E981A2602C32300A4C8B8 /* ScreenRootAction.swift */,
 			);
-			path = Custom;
+			path = Window;
+			sourceTree = "<group>";
+		};
+		C05E98292602C44A00A4C8B8 /* SetRoot */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98312602C46500A4C8B8 /* Animations */,
+				C05E98502602C72700A4C8B8 /* ScreenSetRootAction.swift */,
+			);
+			path = SetRoot;
+			sourceTree = "<group>";
+		};
+		C05E98312602C46500A4C8B8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98322602C47300A4C8B8 /* ScreenRootAnimation.swift */,
+				C05E982A2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift */,
+				C05E98492602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C05E98572602C83600A4C8B8 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98662602C9E300A4C8B8 /* SelectTab */,
+				C05E98582602C84A00A4C8B8 /* ScreenSelectedTabAction.swift */,
+				C05E985F2602C91500A4C8B8 /* ScreenSetupTabAction.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C05E98662602C9E300A4C8B8 /* SelectTab */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98672602C9E800A4C8B8 /* Animations */,
+				C05E987D2602CA5800A4C8B8 /* ScreenTabPredicate.swift */,
+				C05E98882602CAA500A4C8B8 /* ScreenSelectTabAction.swift */,
+			);
+			path = SelectTab;
+			sourceTree = "<group>";
+		};
+		C05E98672602C9E800A4C8B8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98682602CA0100A4C8B8 /* ScreenTabAnimation.swift */,
+				C05E986F2602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift */,
+				C05E98762602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C05E98932602CDB600A4C8B8 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98942602CDC400A4C8B8 /* ScreenRefreshableContainer.swift */,
+				C05E989B2602CDD300A4C8B8 /* ScreenRefreshAction.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		C05E98AA2602CF9B00A4C8B8 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98C42602D11B00A4C8B8 /* SetStack */,
+				C05E98BD2602D05D00A4C8B8 /* ScreenStackRootAction.swift */,
+				C05E98AB2602CFB200A4C8B8 /* ScreenStackTopAction.swift */,
+				C05E98B62602D01C00A4C8B8 /* ScreenStackVisibleAction.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		C05E98C42602D11B00A4C8B8 /* SetStack */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98DB2602D16700A4C8B8 /* Modifiers */,
+				C05E98C52602D12900A4C8B8 /* Animations */,
+				C05E98E32602D18B00A4C8B8 /* ScreenSetStackAction.swift */,
+			);
+			path = SetStack;
+			sourceTree = "<group>";
+		};
+		C05E98C52602D12900A4C8B8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C05E98C62602D13800A4C8B8 /* ScreenStackAnimation.swift */,
+				C05E98CD2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift */,
+				C05E98D42602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C05E98DB2602D16700A4C8B8 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C05E99032602D64500A4C8B8 /* Pop */,
+				C05E98EE2602D48000A4C8B8 /* ScreenStackClearModifier.swift */,
+				C05E98DC2602D17200A4C8B8 /* ScreenStackModifier.swift */,
+				C05E98F52602D4BC00A4C8B8 /* ScreenStackPushModifier.swift */,
+				C05E98FC2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C05E99032602D64500A4C8B8 /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				C05E991F2602D7DD00A4C8B8 /* ScreenStackPopModifier.swift */,
+				C05E99042602D65400A4C8B8 /* ScreenStackPopPredicate.swift */,
+			);
+			path = Pop;
+			sourceTree = "<group>";
+		};
+		C05E992A2602DBB400A4C8B8 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				C05E99442602E2FD00A4C8B8 /* ScreenFirstAction.swift */,
+				C05E994B2602E36600A4C8B8 /* ScreenLastAction.swift */,
+				C05E99322602DF5400A4C8B8 /* ScreenPredicate.swift */,
+				C05E99392602DF9400A4C8B8 /* ScreenTopAction.swift */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		C062865525FFDF47005BC0E8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C06286FE2600B652005BC0E8 /* Any */,
+				C06287FA26029CB8005BC0E8 /* Generic */,
+				C05E97EA2602B51B00A4C8B8 /* Modal */,
+				C05E98AA2602CF9B00A4C8B8 /* Stack */,
+				C05E98572602C83600A4C8B8 /* Tabs */,
+				C05E98192602C30C00A4C8B8 /* Window */,
+				C06286F72600B607005BC0E8 /* ScreenAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		C06286AC260007C2005BC0E8 /* Thenable */ = {
+			isa = PBXGroup;
+			children = (
+				C062880326029D59005BC0E8 /* Aliases */,
+				C06287F326029C85005BC0E8 /* ScreenRoute.swift */,
+				C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */,
+				C062878A2600FDFC005BC0E8 /* ScreenThenable.swift */,
+			);
+			path = Thenable;
+			sourceTree = "<group>";
+		};
+		C06286FE2600B652005BC0E8 /* Any */ = {
+			isa = PBXGroup;
+			children = (
+				C06287032600B66D005BC0E8 /* AnyScreenActionBaseBox.swift */,
+				C06287122600B6A8005BC0E8 /* AnyScreenActionBox.swift */,
+				C06287192600B7EA005BC0E8 /* AnyScreenAction.swift */,
+			);
+			path = Any;
+			sourceTree = "<group>";
+		};
+		C06287FA26029CB8005BC0E8 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				C05E992A2602DBB400A4C8B8 /* Find */,
+				C05E98932602CDB600A4C8B8 /* Refresh */,
+				C02373D5262B228900C2D1D7 /* Try */,
+				C06287FB26029CD3005BC0E8 /* ScreenNavigateAction.swift */,
+				C06288272602A315005BC0E8 /* ScreenNestAction.swift */,
+				C05E992B2602DBCC00A4C8B8 /* ScreenFromAction.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		C062880326029D59005BC0E8 /* Aliases */ = {
+			isa = PBXGroup;
+			children = (
+				C062880526029D76005BC0E8 /* ScreenModalRoute.swift */,
+				C062880726029D76005BC0E8 /* ScreenStackRoute.swift */,
+				C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */,
+				C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */,
+			);
+			path = Aliases;
+			sourceTree = "<group>";
+		};
+		C066836D25FD04BB0025FA93 /* Aliases */ = {
+			isa = PBXGroup;
+			children = (
+				C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */,
+				C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */,
+				C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */,
+			);
+			path = Aliases;
 			sourceTree = "<group>";
 		};
 		C08F980E25EEB5A60077AE40 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C058719725F90B4F00FCA808 /* Custom */,
-				C0AAD9DE25EED50F0087439E /* Actions */,
+				C062865525FFDF47005BC0E8 /* Actions */,
 				C0AAD9E025EED5320087439E /* Any */,
 				C08F982225EEB99B0077AE40 /* Container */,
 				C0270E6C25F4245800ECC57C /* Decorators */,
-				C0AAD9CF25EED3C80087439E /* Key */,
-				C058716325F9080000FCA808 /* Keyed */,
 				C0AADA2E25EED8470087439E /* Errors */,
 				C0AAD9AE25EEC33D0087439E /* Navigation */,
-				C0AADA5825EEE2380087439E /* Route */,
+				C06286AC260007C2005BC0E8 /* Thenable */,
 				C0AAD9A825EEC2790087439E /* Screen.swift */,
-				C05870E725F7FC1C00FCA808 /* ScreenPayloadAssociating.swift */,
+				C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -731,6 +746,7 @@
 			children = (
 				C0AAD96F25EEBFBD0087439E /* Extensions */,
 				C08F981B25EEB9830077AE40 /* ScreenContainer.swift */,
+				C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -738,8 +754,8 @@
 		C0AAD96F25EEBFBD0087439E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C0AAD97025EEC0160087439E /* UIViewController+ScreenModalContainer.swift */,
-				C0AAD99225EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift */,
+				C0AAD97025EEC0160087439E /* UIViewController+ScreenContainer.swift */,
+				C0AAD99225EEC1A50087439E /* UIWindow+ScreenContainer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -756,38 +772,11 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		C0AAD9CF25EED3C80087439E /* Key */ = {
-			isa = PBXGroup;
-			children = (
-				C0AAD9A225EEC23C0087439E /* ScreenCustomKey.swift */,
-				C0AAD9D825EED3EE0087439E /* ScreenKey.swift */,
-				C0AADA4C25EEE1F10087439E /* ScreenKeyProvider.swift */,
-			);
-			path = Key;
-			sourceTree = "<group>";
-		};
-		C0AAD9DE25EED50F0087439E /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				C0AADAD125EF71EC0087439E /* Generic */,
-				C0270CBD25F3DB8600ECC57C /* Modal */,
-				C0270DC225F3E54E00ECC57C /* Stack */,
-				C0270CD825F3DCEA00ECC57C /* Tabs */,
-				C0270D8425F3E3A900ECC57C /* Window */,
-				C0AAD9F125EED7680087439E /* AnyScreenAction.swift */,
-				C0AADA2825EED8110087439E /* ScreenAction.swift */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
 		C0AAD9E025EED5320087439E /* Any */ = {
 			isa = PBXGroup;
 			children = (
-				C0270EF725F4A64A00ECC57C /* AnyModalScreen.swift */,
+				C066836D25FD04BB0025FA93 /* Aliases */,
 				C0AAD9E125EED53D0087439E /* AnyScreen.swift */,
-				C0AAD9EB25EED5550087439E /* AnyScreenBox.swift */,
-				C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */,
-				C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */,
 			);
 			path = Any;
 			sourceTree = "<group>";
@@ -804,42 +793,56 @@
 		C0AADA2E25EED8470087439E /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				C0AADA4525EEE0F10087439E /* ScreenContainerNotFoundError.swift */,
+				C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */,
 				C0AADA2F25EED85C0087439E /* ScreenError.swift */,
-				C0AADA3925EED86E0087439E /* ScreenInvalidContainerError.swift */,
+				C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		C0AADA5825EEE2380087439E /* Route */ = {
+		C0E932CD262B10AF0041C564 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C0AADA7025EF5EC50087439E /* Aliases */,
-				C0AADA5925EEE2480087439E /* ScreenRoute.swift */,
+				C0E932D6262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift */,
 			);
-			path = Route;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C0AADA7025EF5EC50087439E /* Aliases */ = {
+		C0E932E5262B166D0041C564 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
-				C0AADA7725EF60E00087439E /* ScreenModalRoute.swift */,
-				C0AADABD25EF6F2A0087439E /* ScreenStackRoute.swift */,
-				C0AADAC725EF6F5D0087439E /* ScreenTabsRoute.swift */,
-				C0AADA7125EF5ED80087439E /* ScreenWindowRoute.swift */,
+				C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */,
 			);
-			path = Aliases;
+			path = Stack;
 			sourceTree = "<group>";
 		};
-		C0AADAD125EF71EC0087439E /* Generic */ = {
+		C0E932ED262B16910041C564 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				C02710DE25F5358500ECC57C /* From */,
-				C0270F7925F4DDE100ECC57C /* Intercept */,
-				C0AADAE525EF7D380087439E /* ScreenJoinAction.swift */,
-				C0AADAD225EF71FC0087439E /* ScreenNavigateToAction.swift */,
+				C0E932EE262B16910041C564 /* ScreenTabsDecorator.swift */,
 			);
-			path = Generic;
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C0E932F5262B16B80041C564 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				C0E932F9262B16B80041C564 /* ModalStyle */,
+				C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */,
+				C0E932F7262B16B80041C564 /* ScreenRightBarButtonDecorator.swift */,
+				C0E932F8262B16B80041C564 /* ScreenStackContainerDecorator.swift */,
+				C0E932F6262B16B80041C564 /* ScreenTabBarItemDecorator.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		C0E932F9262B16B80041C564 /* ModalStyle */ = {
+			isa = PBXGroup;
+			children = (
+				C0E932FA262B16B80041C564 /* ScreenModalStyle.swift */,
+				C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */,
+			);
+			path = ModalStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1060,105 +1063,103 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0270E3525F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */,
-				C02710B225F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */,
+				C05E97F72602B57900A4C8B8 /* ScreenPresentAction.swift in Sources */,
 				C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */,
-				C0270ECB25F4A5D300ECC57C /* ScreenTabBarItemDecorator.swift in Sources */,
+				C062880A26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */,
+				C05E980C2602BC9400A4C8B8 /* ScreenStackAction.swift in Sources */,
+				C05E98DD2602D17200A4C8B8 /* ScreenStackModifier.swift in Sources */,
+				C06287FC26029CD3005BC0E8 /* ScreenNavigateAction.swift in Sources */,
+				C05E98AC2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */,
+				C062881D2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */,
+				C06287132600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C027119825F60BE600ECC57C /* ScreenKeyWindowProvider.swift in Sources */,
 				C0AADA1E25EED7C00087439E /* ScreenNavigation.swift in Sources */,
-				C0270CCC25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */,
+				C05E98952602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
+				C06B6162262C0E930022678C /* ScreenTryResolution.swift in Sources */,
 				C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
-				C0AADA2925EED8110087439E /* ScreenAction.swift in Sources */,
-				C0AADA3A25EED86E0087439E /* ScreenInvalidContainerError.swift in Sources */,
-				C02710B925F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */,
-				C0AADA7225EF5ED80087439E /* ScreenWindowRoute.swift in Sources */,
+				C05E99052602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */,
+				C05E987E2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */,
+				C05E98BE2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */,
 				C0AAD9E225EED53D0087439E /* AnyScreen.swift in Sources */,
-				C0270E2E25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */,
-				C0270DCF25F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */,
-				C0270D0625F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */,
-				C0270E0525F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */,
 				C0270CA525F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
 				C027117E25F60B7500ECC57C /* DefaultScreenNavigator.swift in Sources */,
-				C027110B25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */,
-				C0270CE225F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */,
-				C0AADA7825EF60E00087439E /* ScreenModalRoute.swift in Sources */,
-				C0AAD9EC25EED5550087439E /* AnyScreenBox.swift in Sources */,
 				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
-				C0270CE425F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */,
 				C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
+				C05E989C2602CDD300A4C8B8 /* ScreenRefreshAction.swift in Sources */,
+				C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
+				C05E98B72602D01C00A4C8B8 /* ScreenStackVisibleAction.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
+				C05E98332602C47300A4C8B8 /* ScreenRootAnimation.swift in Sources */,
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
-				C0270D9A25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */,
 				C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */,
-				C0270CC425F3DB8600ECC57C /* ScreenStackAction.swift in Sources */,
-				C0270F0825F4A69700ECC57C /* ScreenModalStyleDecorator.swift in Sources */,
+				C05E981B2602C32300A4C8B8 /* ScreenRootAction.swift in Sources */,
+				C0E93307262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
+				C06288282602A315005BC0E8 /* ScreenNestAction.swift in Sources */,
+				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
+				C05E98C72602D13800A4C8B8 /* ScreenStackAnimation.swift in Sources */,
+				C062880E26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */,
+				C05E98FD2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift in Sources */,
 				C0AAD9B025EEC34B0087439E /* ScreenNavigator.swift in Sources */,
-				C0270E0C25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */,
+				C05E98892602CAA500A4C8B8 /* ScreenSelectTabAction.swift in Sources */,
 				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
+				C0E93305262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
+				C062878B2600FDFC005BC0E8 /* ScreenThenable.swift in Sources */,
 				C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
+				C05E97FE2602BAF700A4C8B8 /* ScreenPresentedAction.swift in Sources */,
+				C05E98EF2602D48000A4C8B8 /* ScreenStackClearModifier.swift in Sources */,
+				C05E99332602DF5400A4C8B8 /* ScreenPredicate.swift in Sources */,
 				C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
-				C0270F2625F4A6B900ECC57C /* ScreenStackDecorator.swift in Sources */,
-				C0AADABE25EF6F2A0087439E /* ScreenStackRoute.swift in Sources */,
-				C0AAD9A325EEC23C0087439E /* ScreenCustomKey.swift in Sources */,
-				C0270DB125F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */,
-				C0270E4825F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */,
-				C0270E3D25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */,
-				C0270DD725F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */,
-				C0270CC825F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */,
-				C0270DA625F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */,
-				C058716F25F9084A00FCA808 /* KeyedScreenContainer.swift in Sources */,
-				C0AAD9F225EED7680087439E /* AnyScreenAction.swift in Sources */,
-				C0270DDF25F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */,
+				C062880C26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */,
+				C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
+				C05E994C2602E36600A4C8B8 /* ScreenLastAction.swift in Sources */,
+				C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C0AAD9A925EEC2790087439E /* Screen.swift in Sources */,
-				C0270E1F25F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */,
 				C027119125F60BCD00ECC57C /* ScreenCustomWindowProvider.swift in Sources */,
-				C0AAD97125EEC0160087439E /* UIViewController+ScreenModalContainer.swift in Sources */,
-				C0270E1725F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */,
+				C05E99202602D7DD00A4C8B8 /* ScreenStackPopModifier.swift in Sources */,
+				C0AAD97125EEC0160087439E /* UIViewController+ScreenContainer.swift in Sources */,
+				C05E98E42602D18B00A4C8B8 /* ScreenSetStackAction.swift in Sources */,
+				C05E98512602C72700A4C8B8 /* ScreenSetRootAction.swift in Sources */,
+				C0E932FD262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
+				C05E98602602C91500A4C8B8 /* ScreenSetupTabAction.swift in Sources */,
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
-				C05871B025F90C7900FCA808 /* CustomKeyedScreen.swift in Sources */,
-				C0AAD99325EEC1A50087439E /* UIWindow+ScreenWindowContainer.swift in Sources */,
-				C0270ED525F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */,
-				C0AADA4625EEE0F10087439E /* ScreenContainerNotFoundError.swift in Sources */,
-				C0270D8625F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */,
-				C0270EFE25F4A68000ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */,
-				C027111A25F55D8000ECC57C /* ScreenInterceptor.swift in Sources */,
+				C062880826029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */,
+				C0E932EF262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
+				C05E98772602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift in Sources */,
+				C062871A2600B7EA005BC0E8 /* AnyScreenAction.swift in Sources */,
+				C05E97EC2602B53900A4C8B8 /* ScreenDismissAction.swift in Sources */,
+				C05E984A2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */,
+				C0AAD99325EEC1A50087439E /* UIWindow+ScreenContainer.swift in Sources */,
+				C0E932D7262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift in Sources */,
 				C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */,
-				C0270E8E25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */,
-				C0270EDF25F4A5EB00ECC57C /* ScreenStackContainerDecorator.swift in Sources */,
-				C0270D0425F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */,
+				C05E98592602C84A00A4C8B8 /* ScreenSelectedTabAction.swift in Sources */,
+				C05E98132602C23900A4C8B8 /* ScreenTabsAction.swift in Sources */,
+				C05E98CE2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift in Sources */,
+				C05E98702602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift in Sources */,
+				C05E992C2602DBCC00A4C8B8 /* ScreenFromAction.swift in Sources */,
+				C0F9A47525FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */,
+				C06287042600B66D005BC0E8 /* AnyScreenActionBaseBox.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
+				C06287F426029C85005BC0E8 /* ScreenRoute.swift in Sources */,
+				C05E98F62602D4BC00A4C8B8 /* ScreenStackPushModifier.swift in Sources */,
+				C05E993A2602DF9400A4C8B8 /* ScreenTopAction.swift in Sources */,
 				C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */,
-				C027113225F600F300ECC57C /* ScreenInterception.swift in Sources */,
-				C0270CCA25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */,
-				C0270DC425F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */,
-				C0AADAC825EF6F5D0087439E /* ScreenTabsRoute.swift in Sources */,
-				C0270F1C25F4A6AC00ECC57C /* ScreenTabsDecorator.swift in Sources */,
-				C0AADA4D25EEE1F10087439E /* ScreenKeyProvider.swift in Sources */,
+				C0E93303262B16B80041C564 /* ScreenModalStyle.swift in Sources */,
+				C0AADA4D25EEE1F10087439E /* ScreenKeyedContainer.swift in Sources */,
+				C05E99452602E2FD00A4C8B8 /* ScreenFirstAction.swift in Sources */,
+				C0E932C3262B0BEF0041C564 /* ScreenDecorableContainer.swift in Sources */,
+				C0E932FF262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
 				C027109F25F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
-				C058717625F9087F00FCA808 /* KeyedScreenData.swift in Sources */,
+				C05E98692602CA0100A4C8B8 /* ScreenTabAnimation.swift in Sources */,
 				C0270E7E25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */,
+				C05E98052602BB7600A4C8B8 /* ScreenPresentingAction.swift in Sources */,
+				C06B615B262C0C040022678C /* ScreenTryAction.swift in Sources */,
+				C06286F82600B607005BC0E8 /* ScreenAction.swift in Sources */,
 				C027118625F60BBC00ECC57C /* ScreenWindowProvider.swift in Sources */,
 				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
-				C0270D0C25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */,
-				C027111F25F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */,
-				C0270DB825F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */,
-				C0270F1225F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */,
-				C0270D1A25F3DEA100ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */,
-				C0AAD9D925EED3EE0087439E /* ScreenKey.swift in Sources */,
-				C0270D0A25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */,
-				C0270FCB25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */,
-				C0AADAE625EF7D380087439E /* ScreenJoinAction.swift in Sources */,
-				C0270CC625F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */,
-				C05870E825F7FC1C00FCA808 /* ScreenPayloadAssociating.swift in Sources */,
-				C0AADA5A25EEE2480087439E /* ScreenRoute.swift in Sources */,
-				C0270DFE25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */,
+				C05E982B2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift in Sources */,
 				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
 				C0270CA725F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
-				C0270CCE25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */,
-				C0AADB1325EF89C30087439E /* ScreenNavigateToAction.swift in Sources */,
-				C058716525F9081C00FCA808 /* KeyedScreen.swift in Sources */,
-				C0270DF325F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */,
-				C058719A25F90BAD00FCA808 /* CustomScreen.swift in Sources */,
+				C05E98D52602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,104 +1175,103 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0270E3625F3E9E900ECC57C /* ScreenStackReplaceModifier.swift in Sources */,
-				C02710B325F52B8200ECC57C /* ScreenFromPredicate.swift in Sources */,
-				C0AADB7625EF90160087439E /* ScreenJoinAction.swift in Sources */,
-				C0270ED025F4A5D400ECC57C /* ScreenTabBarItemDecorator.swift in Sources */,
+				C05E97F82602B57900A4C8B8 /* ScreenPresentAction.swift in Sources */,
+				C062880B26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */,
 				C027119925F60BE600ECC57C /* ScreenKeyWindowProvider.swift in Sources */,
-				C0AADB7125EF90120087439E /* AnyScreenAction.swift in Sources */,
-				C0270CCD25F3DB8600ECC57C /* ScreenPresentAction.swift in Sources */,
+				C05E980D2602BC9400A4C8B8 /* ScreenStackAction.swift in Sources */,
+				C05E98DE2602D17200A4C8B8 /* ScreenStackModifier.swift in Sources */,
+				C06287FD26029CD3005BC0E8 /* ScreenNavigateAction.swift in Sources */,
+				C05E98AD2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */,
+				C062881E2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */,
+				C06287142600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
-				C0AADB4025EF8FEC0087439E /* ScreenWindowRoute.swift in Sources */,
-				C0AADB8125EF901F0087439E /* ScreenInvalidContainerError.swift in Sources */,
-				C02710BA25F52BEF00ECC57C /* ScreenFromTopAction.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
-				C0AADB6425EF900B0087439E /* UIWindow+ScreenWindowContainer.swift in Sources */,
-				C0270E2F25F3E9AD00ECC57C /* ScreenStackClearModifier.swift in Sources */,
-				C0270DD025F3E5F400ECC57C /* ScreenStackVisibleAction.swift in Sources */,
-				C0270D0725F3DE1C00ECC57C /* ScreenSelectTabAnimation.swift in Sources */,
-				C0270E0625F3E73800ECC57C /* ScreenStackTransitionAnimation.swift in Sources */,
+				C05E98962602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
+				C06B6163262C0E930022678C /* ScreenTryResolution.swift in Sources */,
+				C0AADB6425EF900B0087439E /* UIWindow+ScreenContainer.swift in Sources */,
+				C05E99062602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */,
+				C05E987F2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */,
+				C05E98BF2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */,
 				C027107C25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
 				C027117F25F60B7500ECC57C /* DefaultScreenNavigator.swift in Sources */,
-				C027110C25F554D000ECC57C /* ScreenFromFirstAction.swift in Sources */,
 				C0AADB8825EF90270087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
-				C0270CE325F3DCEA00ECC57C /* ScreenSelectedTabAction.swift in Sources */,
-				C0AADB1825EF89C40087439E /* ScreenNavigateToAction.swift in Sources */,
 				C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
-				C0270CE525F3DCEA00ECC57C /* ScreenSetupTabAction.swift in Sources */,
 				C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */,
+				C05E989D2602CDD300A4C8B8 /* ScreenRefreshAction.swift in Sources */,
+				C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
+				C05E98B82602D01C00A4C8B8 /* ScreenStackVisibleAction.swift in Sources */,
 				C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */,
-				C0AADB6525EF900B0087439E /* UIViewController+ScreenModalContainer.swift in Sources */,
+				C05E98342602C47300A4C8B8 /* ScreenRootAnimation.swift in Sources */,
+				C0AADB6525EF900B0087439E /* UIViewController+ScreenContainer.swift in Sources */,
 				C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */,
-				C0270D9B25F3E44300ECC57C /* ScreenSetRootAction.swift in Sources */,
-				C0AADB7025EF90120087439E /* ScreenAction.swift in Sources */,
-				C0270CC525F3DB8600ECC57C /* ScreenStackAction.swift in Sources */,
-				C0270F0D25F4A69800ECC57C /* ScreenModalStyleDecorator.swift in Sources */,
+				C05E981C2602C32300A4C8B8 /* ScreenRootAction.swift in Sources */,
+				C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
+				C06288292602A315005BC0E8 /* ScreenNestAction.swift in Sources */,
+				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
+				C05E98C82602D13800A4C8B8 /* ScreenStackAnimation.swift in Sources */,
+				C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */,
+				C05E98FE2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift in Sources */,
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
-				C0270E0D25F3E7F400ECC57C /* ScreenStackPopModifier.swift in Sources */,
-				C0AADB5325EF8FF70087439E /* ScreenKey.swift in Sources */,
-				C0270F2B25F4A6BA00ECC57C /* ScreenStackDecorator.swift in Sources */,
-				C0AADB3B25EF8FE60087439E /* ScreenRoute.swift in Sources */,
-				C0AADB5825EF8FFB0087439E /* ScreenKeyProvider.swift in Sources */,
-				C0270DB225F3E48400ECC57C /* ScreenSetRootAnimation.swift in Sources */,
-				C0270E4925F3EBC100ECC57C /* ScreenStackPopToModifier.swift in Sources */,
-				C0270E3E25F3EB7D00ECC57C /* ScreenStackPopToPredicate.swift in Sources */,
-				C0270DD825F3E64600ECC57C /* ScreenSetStackAction.swift in Sources */,
-				C0270CC925F3DB8600ECC57C /* ScreenTabsAction.swift in Sources */,
-				C0270DA725F3E46500ECC57C /* ScreenSetRootCustomAnimation.swift in Sources */,
+				C05E988A2602CAA500A4C8B8 /* ScreenSelectTabAction.swift in Sources */,
+				C062878C2600FDFC005BC0E8 /* ScreenThenable.swift in Sources */,
+				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
+				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
+				C05E97FF2602BAF700A4C8B8 /* ScreenPresentedAction.swift in Sources */,
+				C05E98F02602D48000A4C8B8 /* ScreenStackClearModifier.swift in Sources */,
+				C05E99342602DF5400A4C8B8 /* ScreenPredicate.swift in Sources */,
+				C0AADB5825EF8FFB0087439E /* ScreenKeyedContainer.swift in Sources */,
+				C062880D26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */,
+				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
-				C05871A025F90BB500FCA808 /* KeyedScreenContainer.swift in Sources */,
-				C0AADB4325EF8FEC0087439E /* ScreenTabsRoute.swift in Sources */,
-				C0270DE025F3E66A00ECC57C /* ScreenStackModifier.swift in Sources */,
-				C05871A125F90BB500FCA808 /* KeyedScreenData.swift in Sources */,
+				C05E994D2602E36600A4C8B8 /* ScreenLastAction.swift in Sources */,
 				C0AADB4825EF8FF00087439E /* ScreenNavigator.swift in Sources */,
 				C027119225F60BCD00ECC57C /* ScreenCustomWindowProvider.swift in Sources */,
-				C0270E2025F3E96A00ECC57C /* ScreenStackPopToRootModifier.swift in Sources */,
-				C0AADB8325EF901F0087439E /* ScreenContainerNotFoundError.swift in Sources */,
-				C0270E1825F3E8A700ECC57C /* ScreenStackPushModifier.swift in Sources */,
+				C05E99212602D7DD00A4C8B8 /* ScreenStackPopModifier.swift in Sources */,
 				C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
-				C0AADB4225EF8FEC0087439E /* ScreenStackRoute.swift in Sources */,
-				C0270EDA25F4A5E300ECC57C /* ScreenRightBarButtonDecorator.swift in Sources */,
+				C05E98E52602D18B00A4C8B8 /* ScreenSetStackAction.swift in Sources */,
+				C05E98522602C72700A4C8B8 /* ScreenSetRootAction.swift in Sources */,
+				C05E98612602C91500A4C8B8 /* ScreenSetupTabAction.swift in Sources */,
+				C0E932FE262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
+				C062880926029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */,
+				C05E98782602CA3500A4C8B8 /* ScreenTabTransitionAnimation.swift in Sources */,
+				C062871B2600B7EA005BC0E8 /* AnyScreenAction.swift in Sources */,
+				C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
+				C05E97ED2602B53900A4C8B8 /* ScreenDismissAction.swift in Sources */,
+				C05E984B2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C0AADB4D25EF8FF30087439E /* ScreenNavigation.swift in Sources */,
-				C027111525F55D8000ECC57C /* ScreenInterceptor.swift in Sources */,
-				C0270D8725F3E3BA00ECC57C /* ScreenRootAction.swift in Sources */,
-				C0270F0325F4A68100ECC57C /* ScreenLeftBarButtonDecorator.swift in Sources */,
+				C0F9A47625FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */,
 				C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */,
-				C0270E8F25F4245800ECC57C /* ScreenDecoratorWrapper.swift in Sources */,
-				C0270EE425F4A5EC00ECC57C /* ScreenStackContainerDecorator.swift in Sources */,
-				C027113325F600F300ECC57C /* ScreenInterception.swift in Sources */,
+				C0E932D8262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift in Sources */,
+				C05E985A2602C84A00A4C8B8 /* ScreenSelectedTabAction.swift in Sources */,
+				C05E98142602C23900A4C8B8 /* ScreenTabsAction.swift in Sources */,
+				C05E98CF2602D14900A4C8B8 /* ScreenStackCustomAnimation.swift in Sources */,
+				C05E98712602CA1D00A4C8B8 /* ScreenTabCustomAnimation.swift in Sources */,
+				C05E992D2602DBCC00A4C8B8 /* ScreenFromAction.swift in Sources */,
+				C06287052600B66D005BC0E8 /* AnyScreenActionBaseBox.swift in Sources */,
 				C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */,
-				C0270D0525F3DE1C00ECC57C /* ScreenSelectTabAction.swift in Sources */,
-				C0AADB5225EF8FF70087439E /* ScreenCustomKey.swift in Sources */,
-				C0270CCB25F3DB8600ECC57C /* ScreenDismissAction.swift in Sources */,
-				C0270DC525F3E56300ECC57C /* ScreenStackTopAction.swift in Sources */,
 				C0AADB6A25EF900F0087439E /* AnyScreen.swift in Sources */,
+				C06287F526029C85005BC0E8 /* ScreenRoute.swift in Sources */,
+				C05E98F72602D4BC00A4C8B8 /* ScreenStackPushModifier.swift in Sources */,
+				C05E993B2602DF9400A4C8B8 /* ScreenTopAction.swift in Sources */,
 				C02710A025F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
-				C0270F2125F4A6AD00ECC57C /* ScreenTabsDecorator.swift in Sources */,
 				C0AADA1525EED7740087439E /* Screen.swift in Sources */,
+				C0E93304262B16B80041C564 /* ScreenModalStyle.swift in Sources */,
+				C05E99462602E2FD00A4C8B8 /* ScreenFirstAction.swift in Sources */,
 				C027118725F60BBC00ECC57C /* ScreenWindowProvider.swift in Sources */,
+				C0E932C4262B0BEF0041C564 /* ScreenDecorableContainer.swift in Sources */,
+				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
 				C0270E7F25F4245800ECC57C /* ScreenDecoratorPayload.swift in Sources */,
+				C05E986A2602CA0100A4C8B8 /* ScreenTabAnimation.swift in Sources */,
 				C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */,
-				C027112425F55EA500ECC57C /* ScreenInterceptAction.swift in Sources */,
-				C0270D0D25F3DE1C00ECC57C /* ScreenSelectTabPredicate.swift in Sources */,
-				C0270DB925F3E4AB00ECC57C /* ScreenSetRootTransitionAnimation.swift in Sources */,
-				C0270F1725F4A69B00ECC57C /* ScreenModalStyle.swift in Sources */,
-				C0270D1F25F3DEA200ECC57C /* ScreenSelectTabTransitionAnimation.swift in Sources */,
-				C0AADB6B25EF900F0087439E /* AnyScreenBox.swift in Sources */,
-				C0270FCC25F4F04E00ECC57C /* ScreenFromAction.swift in Sources */,
-				C0270D0B25F3DE1C00ECC57C /* ScreenSelectTabCustomAnimation.swift in Sources */,
-				C0AADB4125EF8FEC0087439E /* ScreenModalRoute.swift in Sources */,
-				C0270CC725F3DB8600ECC57C /* ScreenPresentingAction.swift in Sources */,
-				C05870E925F7FC1C00FCA808 /* ScreenPayloadAssociating.swift in Sources */,
+				C05E98062602BB7600A4C8B8 /* ScreenPresentingAction.swift in Sources */,
+				C06B615C262C0C040022678C /* ScreenTryAction.swift in Sources */,
+				C06286F92600B607005BC0E8 /* ScreenAction.swift in Sources */,
 				C0270CA425F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
-				C0270DFF25F3E71100ECC57C /* ScreenStackAnimation.swift in Sources */,
+				C05E982C2602C45700A4C8B8 /* ScreenRootCustomAnimation.swift in Sources */,
 				C027108C25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
 				C0270CA625F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
-				C0270CCF25F3DB8600ECC57C /* ScreenPresentedAction.swift in Sources */,
 				C0AADB8225EF901F0087439E /* ScreenError.swift in Sources */,
-				C058719F25F90BB500FCA808 /* KeyedScreen.swift in Sources */,
-				C0270DF425F3E6B100ECC57C /* ScreenStackCustomAnimation.swift in Sources */,
-				C05871A625F90BB800FCA808 /* CustomScreen.swift in Sources */,
+				C05E98D62602D15700A4C8B8 /* ScreenStackTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

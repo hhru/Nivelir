@@ -19,7 +19,7 @@ public struct ScreenSetupTabAction<
         navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info("Setting up new tab in \(container) with \(screen)")
+        navigation.logger?.info("Setting up new tab in \(type(of: container)) with \(screen)")
 
         let tabs = container.viewControllers ?? []
         let output = screen.build(navigator: navigation.navigator)
@@ -30,26 +30,30 @@ public struct ScreenSetupTabAction<
     }
 }
 
-extension ScreenRoute where Container: UITabBarController {
+extension ScreenThenable where Then: UITabBarController {
 
-    public func setupTab<New: Screen>(
+    public func setupTab<New: Screen, Route: ScreenThenable>(
         with screen: New,
-        route: ScreenRoute<New.Container>
-    ) -> Self where New.Container: UIViewController {
-        join(
-            action: ScreenSetupTabAction<New, Container>(screen: screen),
-            route: route
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
+        nest(
+            action: ScreenSetupTabAction<New, Then>(screen: screen),
+            nested: route
         )
     }
 
     public func setupTab<New: Screen>(
         with screen: New,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container>
     ) -> Self where New.Container: UIViewController {
-        setupTab(
-            with: screen,
-            route: route(.initial)
-        )
+        setupTab(with: screen, route: route(.initial))
+    }
+
+    public func setupTab<New: Screen, Next: ScreenContainer>(
+        with screen: New,
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
+    ) -> Self where New.Container: UIViewController {
+        setupTab(with: screen, route: route(.initial))
     }
 }
 #endif

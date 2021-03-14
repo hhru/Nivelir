@@ -1,3 +1,5 @@
 import Foundation
 
-public protocol ScreenContainer: AnyObject { }
+public protocol ScreenContainer {
+    var isVisible: Bool { get }
+}

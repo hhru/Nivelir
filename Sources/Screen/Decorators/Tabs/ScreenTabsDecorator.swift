@@ -9,19 +9,19 @@ public struct ScreenTabsDecorator<Container: UITabBarController>: ScreenDecorato
         nil
     }
 
+    public var description: String {
+        "TabsDecorator"
+    }
+
     public init(tabs: [AnyModalScreen], selected: Int = 0) {
         self.tabs = tabs
     }
 
-    public func buildDecorated<Wrapped: Screen>(
+    public func build<Wrapped: Screen>(
         screen: Wrapped,
-        navigator: ScreenNavigator,
-        payload: Any?
+        navigator: ScreenNavigator
     ) -> Container where Wrapped.Container == Container {
-        let container = screen.build(
-            navigator: navigator,
-            payload: payload
-        )
+        let container = screen.build(navigator: navigator)
 
         container.viewControllers = tabs.map { screen in
             screen.build(navigator: navigator)

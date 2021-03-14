@@ -25,33 +25,54 @@ public struct ScreenStackReplaceModifier<
     }
 }
 
-extension ScreenRoute where Container: UINavigationController {
+extension ScreenThenable where Then: UINavigationController {
 
     public func replace<New: Screen>(
         with screen: New,
         animation: ScreenStackAnimation? = .default,
-        separated: Bool = false,
-        route: ScreenRoute<New.Container>
+        separated: Bool = false
     ) -> Self where New.Container: UIViewController {
-        let setStackRoute = setStack(
+        setStack(
             modifier: ScreenStackReplaceModifier(screen: screen),
             animation: animation,
             separated: separated
         )
+    }
 
-        return route.isEmpty
-            ? setStackRoute
-            : setStackRoute.stackTop(
-                of: New.Container.self,
-                route: route
-            )
+    public func replace<New: Screen, Route: ScreenThenable>(
+        with screen: New,
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false,
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
+        replace(
+            with: screen,
+            animation: animation,
+            separated: separated
+        ).stackTop(
+            route: route
+        )
     }
 
     public func replace<New: Screen>(
         with screen: New,
         animation: ScreenStackAnimation? = .default,
         separated: Bool = false,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container>
+    ) -> Self where New.Container: UIViewController {
+        replace(
+            with: screen,
+            animation: animation,
+            separated: separated,
+            route: route(.initial)
+        )
+    }
+
+    public func replace<New: Screen, Next: ScreenContainer>(
+        with screen: New,
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false,
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         replace(
             with: screen,

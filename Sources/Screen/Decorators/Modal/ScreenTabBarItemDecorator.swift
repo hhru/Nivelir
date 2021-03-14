@@ -9,19 +9,19 @@ public struct ScreenTabBarItemDecorator<Container: UIViewController>: ScreenDeco
         nil
     }
 
+    public var description: String {
+        "TabBarItemDecorator"
+    }
+
     public init(item: UITabBarItem) {
         self.item = item
     }
 
-    public func buildDecorated<Wrapped: Screen>(
+    public func build<Wrapped: Screen>(
         screen: Wrapped,
-        navigator: ScreenNavigator,
-        payload: Any?
+        navigator: ScreenNavigator
     ) -> Container where Wrapped.Container == Container {
-        let container = screen.build(
-            navigator: navigator,
-            payload: payload
-        )
+        let container = screen.build(navigator: navigator)
 
         container.tabBarItem = item
 

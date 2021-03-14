@@ -2,13 +2,26 @@ import Foundation
 
 public final class DefaultScreenLogger: ScreenLogger {
 
-    public init() { }
+    public let isInfoEnabled: Bool
+    public let isErrorsEnabled: Bool
+
+    public init(
+        isInfoEnabled: Bool = true,
+        isErrorsEnabled: Bool = true
+    ) {
+        self.isInfoEnabled = isInfoEnabled
+        self.isErrorsEnabled = isErrorsEnabled
+    }
 
     public func info(_ info: @autoclosure () -> String) {
-        print("Nivelir info: \(info())")
+        if isInfoEnabled {
+            print("Nivelir info: \(info())")
+        }
     }
 
     public func error(_ error: @autoclosure () -> Error) {
-        print("Nivelir error: \(error())")
+        if isErrorsEnabled {
+            print("Nivelir error: \(error())")
+        }
     }
 }

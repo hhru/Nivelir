@@ -10,19 +10,17 @@ public struct ScreenStackContainerDecorator<
         nil
     }
 
+    public var description: String {
+        "StackContainerDecorator"
+    }
+
     public init() { }
 
-    public func buildDecorated<Wrapped: Screen>(
+    public func build<Wrapped: Screen>(
         screen: Wrapped,
-        navigator: ScreenNavigator,
-        payload: Any?
+        navigator: ScreenNavigator
     ) -> Output where Wrapped.Container == Container {
-        let container = screen.build(
-            navigator: navigator,
-            payload: payload
-        )
-
-        return Output(rootViewController: container)
+        Output(rootViewController: screen.build(navigator: navigator))
     }
 }
 

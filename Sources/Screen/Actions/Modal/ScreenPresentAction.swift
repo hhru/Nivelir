@@ -21,7 +21,7 @@ public struct ScreenPresentAction<
         navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info("Presenting \(screen) on \(container)")
+        navigation.logger?.info("Presenting \(screen) on \(type(of: container))")
 
         let output = screen.build(navigator: navigation.navigator)
 
@@ -31,19 +31,19 @@ public struct ScreenPresentAction<
     }
 }
 
-extension ScreenRoute where Container: UIViewController {
+extension ScreenThenable where Then: UIViewController {
 
-    public func present<New: Screen>(
+    public func present<New: Screen, Route: ScreenThenable>(
         _ screen: New,
         animated: Bool = true,
-        route: ScreenRoute<New.Container>
-    ) -> Self where New.Container: UIViewController {
-        join(
-            action: ScreenPresentAction<New, Container>(
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
+        nest(
+            action: ScreenPresentAction<New, Then>(
                 screen: screen,
                 animated: animated
             ),
-            route: route
+            nested: route
         )
     }
 
@@ -51,6 +51,18 @@ extension ScreenRoute where Container: UIViewController {
         _ screen: New,
         animated: Bool = true,
         route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
+    ) -> Self where New.Container: UIViewController {
+        present(
+            screen,
+            animated: animated,
+            route: route(.initial)
+        )
+    }
+
+    public func present<New: Screen, Next: ScreenContainer>(
+        _ screen: New,
+        animated: Bool = true,
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         present(
             screen,

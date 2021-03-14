@@ -9,19 +9,19 @@ public struct ScreenRightBarButtonDecorator<Container: UIViewController>: Screen
         nil
     }
 
+    public var description: String {
+        "RightBarButtonDecorator"
+    }
+
     public init(item: UIBarButtonItem) {
         self.item = item
     }
 
-    public func buildDecorated<Wrapped: Screen>(
+    public func build<Wrapped: Screen>(
         screen: Wrapped,
-        navigator: ScreenNavigator,
-        payload: Any?
+        navigator: ScreenNavigator
     ) -> Container where Wrapped.Container == Container {
-        let container = screen.build(
-            navigator: navigator,
-            payload: payload
-        )
+        let container = screen.build(navigator: navigator)
 
         container.navigationItem.rightBarButtonItem = item
 
