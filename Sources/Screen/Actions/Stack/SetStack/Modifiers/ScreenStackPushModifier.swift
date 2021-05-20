@@ -17,39 +17,69 @@ public struct ScreenStackPushModifier<
 
     public func perform(
         in stack: [UIViewController],
-        navigation: ScreenNavigation
-    ) throws -> [UIViewController] {
-        stack.appending(screen.build(navigator: navigation.navigator))
+        navigator: ScreenNavigator,
+        completion: @escaping Completion
+    ) {
+        navigator.buildScreen(screen) { result in
+            switch result {
+            case let .success(output):
+                completion(.success(stack.appending(output)))
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 }
 
-extension ScreenRoute where Container: UINavigationController {
+extension ScreenThenable where Then: UINavigationController {
 
     public func push<New: Screen>(
         _ screen: New,
         animation: ScreenStackAnimation? = .default,
-        separated: Bool = false,
-        route: ScreenRoute<New.Container>
+        separated: Bool = false
     ) -> Self where New.Container: UIViewController {
-        let setStackRoute = setStack(
+        setStack(
             modifier: ScreenStackPushModifier(screen: screen),
             animation: animation,
             separated: separated
         )
+    }
 
-        return route.isEmpty
-            ? setStackRoute
-            : setStackRoute.stackTop(
-                of: New.Container.self,
-                route: route
-            )
+    public func push<New: Screen, Route: ScreenThenable>(
+        _ screen: New,
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false,
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
+        push(
+            screen,
+            animation: animation,
+            separated: separated
+        ).stackTop(
+            route: route
+        )
     }
 
     public func push<New: Screen>(
         _ screen: New,
         animation: ScreenStackAnimation? = .default,
         separated: Bool = false,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container>
+    ) -> Self where New.Container: UIViewController {
+        push(
+            screen,
+            animation: animation,
+            separated: separated,
+            route: route(.initial)
+        )
+    }
+
+    public func push<New: Screen, Next: ScreenContainer>(
+        _ screen: New,
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false,
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         push(
             screen,

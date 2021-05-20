@@ -10,57 +10,54 @@ public struct ScreenPresentingAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let presenting = container.presenting else {
-            return completion(.failure(ScreenContainerNotFoundError<UIViewController>(for: self)))
+            return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
         guard let output = presenting as? Output else {
-            return completion(.failure(ScreenInvalidContainerError<Output>(for: self)))
+            return completion(.invalidContainer(presenting, type: Output.self, for: self))
         }
 
         completion(.success(output))
     }
 }
 
-extension ScreenRoute where Container: UIViewController {
+extension ScreenThenable where Then: UIViewController {
+
+    public var presenting: ScreenChildRoute<Root, UIViewController> {
+        presenting(of: UIViewController.self)
+    }
 
     public func presenting<Output: UIViewController>(
-        of type: Output.Type,
-        route: ScreenRoute<Output>
-    ) -> Self {
-        join(
-            action: ScreenPresentingAction<Container, Output>(),
-            route: route
+        of type: Output.Type
+    ) -> ScreenChildRoute<Root, Output> {
+        nest(action: ScreenPresentingAction<Then, Output>())
+    }
+
+    public func presenting<Route: ScreenThenable>(
+        route: Route
+    ) -> Self where Route.Root: UIViewController {
+        nest(
+            action: ScreenPresentingAction<Then, Route.Root>(),
+            nested: route
         )
     }
 
     public func presenting<Output: UIViewController>(
-        of type: Output.Type,
+        of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
     ) -> Self {
-        presenting(
-            of: type,
-            route: route(.initial)
-        )
+        presenting(route: route(.initial))
     }
 
-    public func presenting(route: ScreenModalRoute) -> Self {
-        presenting(
-            of: UIViewController.self,
-            route: route
-        )
-    }
-
-    public func presenting(
-        route: (_ route: ScreenModalRoute) -> ScreenModalRoute
+    public func presenting<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
     ) -> Self {
-        presenting(
-            of: UIViewController.self,
-            route: route
-        )
+        presenting(route: route(.initial))
     }
 }
 #endif

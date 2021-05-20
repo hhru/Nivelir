@@ -10,57 +10,54 @@ public struct ScreenTabsAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let tabs = container.tabs else {
-            return completion(.failure(ScreenContainerNotFoundError<UITabBarController>(for: self)))
+            return completion(.containerNotFound(type: UITabBarController.self, for: self))
         }
 
         guard let output = tabs as? Output else {
-            return completion(.failure(ScreenInvalidContainerError<Output>(for: self)))
+            return completion(.invalidContainer(tabs, type: Output.self, for: self))
         }
 
         completion(.success(output))
     }
 }
 
-extension ScreenRoute where Container: UIViewController {
+extension ScreenThenable where Then: UIViewController {
+
+    public var tabs: ScreenChildRoute<Root, UITabBarController> {
+        tabs(of: UITabBarController.self)
+    }
 
     public func tabs<Output: UITabBarController>(
-        of type: Output.Type,
-        route: ScreenRoute<Output>
-    ) -> Self {
-        join(
-            action: ScreenTabsAction<Container, Output>(),
-            route: route
+        of type: Output.Type
+    ) -> ScreenChildRoute<Root, Output> {
+        nest(action: ScreenTabsAction<Then, Output>())
+    }
+
+    public func tabs<Route: ScreenThenable>(
+        route: Route
+    ) -> Self where Route.Root: UITabBarController {
+        nest(
+            action: ScreenTabsAction<Then, Route.Root>(),
+            nested: route
         )
     }
 
     public func tabs<Output: UITabBarController>(
-        of type: Output.Type,
+        of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
     ) -> Self {
-        tabs(
-            of: type,
-            route: route(.initial)
-        )
+        tabs(route: route(.initial))
     }
 
-    public func tabs(route: ScreenTabsRoute) -> Self {
-        tabs(
-            of: UITabBarController.self,
-            route: route
-        )
-    }
-
-    public func tabs(
-        route: (_ route: ScreenTabsRoute) -> ScreenTabsRoute
+    public func tabs<Output: UITabBarController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
     ) -> Self {
-        tabs(
-            of: UITabBarController.self,
-            route: route
-        )
+        tabs(route: route(.initial))
     }
 }
 #endif

@@ -6,12 +6,12 @@ public struct ScreenSelectTabAction<
     Output: ScreenContainer
 >: ScreenAction {
 
-    public let predicate: ScreenSelectTabPredicate<Container>
-    public let animation: ScreenSelectTabAnimation?
+    public let predicate: ScreenTabPredicate
+    public let animation: ScreenTabAnimation?
 
     public init(
-        predicate: ScreenSelectTabPredicate<Container>,
-        animation: ScreenSelectTabAnimation? = nil
+        predicate: ScreenTabPredicate,
+        animation: ScreenTabAnimation? = nil
     ) {
         self.predicate = predicate
         self.animation = animation
@@ -41,19 +41,19 @@ public struct ScreenSelectTabAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info("Selecting tab of \(Output.self) type in \(container)")
+        navigator.logInfo("Selecting tab of \(Output.self) type in \(type(of: container))")
 
         let selectedTab = container.selectedTab
 
         guard let newSelectedTabIndex = predicate.tabIndex(in: container.viewControllers ?? []) else {
-            return completion(.failure(ScreenContainerNotFoundError<UIViewController>(for: self)))
+            return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
         guard let newSelectedTab = container.viewControllers?[safe: newSelectedTabIndex] else {
-            return completion(.failure(ScreenContainerNotFoundError<UIViewController>(for: self)))
+            return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
         animateIfNeeded(
@@ -64,7 +64,7 @@ public struct ScreenSelectTabAction<
             container.selectedIndex = newSelectedTabIndex
 
             guard let output = newSelectedTab as? Output else {
-                return completion(.failure(ScreenInvalidContainerError<Output>(for: self)))
+                return completion(.invalidContainer(newSelectedTab, type: Output.self, for: self))
             }
 
             completion(.success(output))
@@ -72,60 +72,45 @@ public struct ScreenSelectTabAction<
     }
 }
 
-extension ScreenRoute where Container: UITabBarController {
+extension ScreenThenable where Then: UITabBarController {
 
-    public func selectTab<Output: UIViewController>(
-        of type: Output.Type,
-        with predicate: ScreenSelectTabPredicate<Container>,
-        animation: ScreenSelectTabAnimation? = nil,
-        route: ScreenRoute<Output>
-    ) -> Self {
-        join(
-            action: ScreenSelectTabAction<Container, Output>(
+    public func selectTab<Route: ScreenThenable>(
+        with predicate: ScreenTabPredicate,
+        animation: ScreenTabAnimation? = nil,
+        route: Route
+    ) -> Self where Route.Root: UIViewController {
+        nest(
+            action: ScreenSelectTabAction<Then, Route.Root>(
                 predicate: predicate,
                 animation: animation
             ),
-            route: route
+            nested: route
         )
     }
 
     public func selectTab<Output: UIViewController>(
-        of type: Output.Type,
-        with predicate: ScreenSelectTabPredicate<Container>,
-        animation: ScreenSelectTabAnimation? = nil,
+        of type: Output.Type = Output.self,
+        with predicate: ScreenTabPredicate,
+        animation: ScreenTabAnimation? = nil,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output> = { $0 }
     ) -> Self {
         selectTab(
-            of: type,
             with: predicate,
             animation: animation,
             route: route(.initial)
         )
     }
 
-    public func selectTab(
-        with predicate: ScreenSelectTabPredicate<Container>,
-        animation: ScreenSelectTabAnimation? = nil,
-        route: ScreenModalRoute
+    public func selectTab<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        with predicate: ScreenTabPredicate,
+        animation: ScreenTabAnimation? = nil,
+        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
     ) -> Self {
         selectTab(
-            of: UIViewController.self,
             with: predicate,
             animation: animation,
-            route: route
-        )
-    }
-
-    public func selectTab(
-        with predicate: ScreenSelectTabPredicate<Container>,
-        animation: ScreenSelectTabAnimation? = nil,
-        route: (_ route: ScreenModalRoute) -> ScreenModalRoute = { $0 }
-    ) -> Self {
-        selectTab(
-            of: UIViewController.self,
-            with: predicate,
-            animation: animation,
-            route: route
+            route: route(.initial)
         )
     }
 }

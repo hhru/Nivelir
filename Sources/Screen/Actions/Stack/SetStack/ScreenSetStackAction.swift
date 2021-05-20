@@ -31,6 +31,32 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
         )
     }
 
+    private func performModifiers(
+        from index: Int = .zero,
+        in stack: [UIViewController],
+        navigator: ScreenNavigator,
+        completion: @escaping ScreenStackModifier.Completion
+    ) {
+        guard index < modifiers.count else {
+            return completion(.success(stack))
+        }
+
+        modifiers[index].perform(in: stack, navigator: navigator) { result in
+            switch result {
+            case let .success(stack):
+                performModifiers(
+                    from: index + 1,
+                    in: stack,
+                    navigator: navigator,
+                    completion: completion
+                )
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
+
     private func resolveAnimation(
         first: ScreenStackAnimation?,
         second: ScreenStackAnimation?
@@ -53,9 +79,11 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
         }
     }
 
-    public func combine(with other: AnyScreenAction) -> [AnyScreenAction] {
-        guard !separated, let action = other as? Self else {
-            return [self, other]
+    public func combine<Action: ScreenAction>(
+        with other: Action
+    ) -> Action? where Action.Container == Container {
+        guard !separated, let action = other.cast(to: Self.self) else {
+            return nil
         }
 
         let modifiers = self
@@ -67,57 +95,54 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
             second: action.animation
         )
 
-        return [Self(modifiers: modifiers, animation: animation)]
+        return Self(
+            modifiers: modifiers,
+            animation: animation
+        ) as? Action
     }
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info(
+        navigator.logInfo(
             """
             Setting stack of \(container) with modifiers:
             \(modifiers.map { "  - \($0)" }.joined(separator: "\n"))
             """
         )
 
-        let stack: [UIViewController]
+        performModifiers(in: container.viewControllers, navigator: navigator) { result in
+            switch result {
+            case let .success(stack):
+                let isAnimated = self.animation == nil
+                    ? false
+                    : !container.viewControllers.isEmpty
 
-        do {
-            stack = try modifiers.reduce(container.viewControllers) { stack, modifier in
-                try modifier.perform(
-                    in: stack,
-                    navigation: navigation
+                let isDefaultAnimated = isAnimated && (self.animation?.isDefault == true)
+
+                container.setViewControllers(
+                    stack,
+                    animated: isDefaultAnimated
                 )
+
+                guard isAnimated, let animation = self.animation else {
+                    return completion(.success)
+                }
+
+                animation.animate(container: container, stack: stack) {
+                    completion(.success)
+                }
+
+            case let .failure(error):
+                completion(.failure(error))
             }
-        } catch {
-            return completion(.failure(error))
-        }
-
-        let isAnimated = animation == nil
-            ? false
-            : !container.viewControllers.isEmpty
-
-        container.setViewControllers(
-            stack,
-            animated: isAnimated && (animation?.isDefault == true)
-        )
-
-        guard isAnimated, let animation = animation else {
-            return completion(.success)
-        }
-
-        animation.animate(
-            container: container,
-            stack: stack
-        ) {
-            completion(.success)
         }
     }
 }
 
-extension ScreenRoute where Container: UINavigationController {
+extension ScreenThenable where Then: UINavigationController {
 
     public func setStack(
         modifiers: [ScreenStackModifier],
@@ -125,7 +150,7 @@ extension ScreenRoute where Container: UINavigationController {
         separated: Bool = false
     ) -> Self {
         then(
-            action: ScreenSetStackAction<Container>(
+            ScreenSetStackAction<Then>(
                 modifiers: modifiers,
                 animation: animation,
                 separated: separated

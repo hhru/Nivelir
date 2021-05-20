@@ -10,57 +10,54 @@ public struct ScreenStackAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let stack = container.stack else {
-            return completion(.failure(ScreenContainerNotFoundError<UINavigationController>(for: self)))
+            return completion(.containerNotFound(type: UINavigationController.self, for: self))
         }
 
         guard let output = stack as? Output else {
-            return completion(.failure(ScreenInvalidContainerError<Output>(for: self)))
+            return completion(.invalidContainer(stack, type: Output.self, for: self))
         }
 
         completion(.success(output))
     }
 }
 
-extension ScreenRoute where Container: UIViewController {
+extension ScreenThenable where Then: UIViewController {
+
+    public var stack: ScreenChildRoute<Root, UINavigationController> {
+        stack(of: UINavigationController.self)
+    }
 
     public func stack<Output: UINavigationController>(
-        of type: Output.Type,
-        route: ScreenRoute<Output>
-    ) -> Self {
-        join(
-            action: ScreenStackAction<Container, Output>(),
-            route: route
+        of type: Output.Type
+    ) -> ScreenChildRoute<Root, Output> {
+        nest(action: ScreenStackAction<Then, Output>())
+    }
+
+    public func stack<Route: ScreenThenable>(
+        route: Route
+    ) -> Self where Route.Root: UINavigationController {
+        nest(
+            action: ScreenStackAction<Then, Route.Root>(),
+            nested: route
         )
     }
 
     public func stack<Output: UINavigationController>(
-        of type: Output.Type,
+        of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
     ) -> Self {
-        stack(
-            of: type,
-            route: route(.initial)
-        )
+        stack(route: route(.initial))
     }
 
-    public func stack(route: ScreenStackRoute) -> Self {
-        stack(
-            of: UINavigationController.self,
-            route: route
-        )
-    }
-
-    public func stack(
-        route: (_ route: ScreenStackRoute) -> ScreenStackRoute
+    public func stack<Output: UINavigationController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
     ) -> Self {
-        stack(
-            of: UINavigationController.self,
-            route: route
-        )
+        stack(route: route(.initial))
     }
 }
 #endif

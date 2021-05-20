@@ -9,19 +9,19 @@ public struct ScreenStackDecorator<Container: UINavigationController>: ScreenDec
         nil
     }
 
+    public var description: String {
+        "StackDecorator"
+    }
+
     public init(stack: [AnyModalScreen]) {
         self.stack = stack
     }
 
-    public func buildDecorated<Wrapped: Screen>(
+    public func build<Wrapped: Screen>(
         screen: Wrapped,
-        navigator: ScreenNavigator,
-        payload: Any?
+        navigator: ScreenNavigator
     ) -> Container where Wrapped.Container == Container {
-        let container = screen.build(
-            navigator: navigator,
-            payload: payload
-        )
+        let container = screen.build(navigator: navigator)
 
         container.viewControllers = stack.map { screen in
             screen.build(navigator: navigator)

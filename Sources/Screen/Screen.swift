@@ -3,22 +3,32 @@ import Foundation
 public protocol Screen: CustomStringConvertible {
     associatedtype Container: ScreenContainer
 
-    func build(
-        navigator: ScreenNavigator,
-        payload: Any?
-    ) -> Container
+    var name: String { get }
+    var traits: Set<AnyHashable> { get }
+
+    func cast<T>(to type: T.Type) -> T?
+    func build(navigator: ScreenNavigator) -> Container
 }
 
 extension Screen {
 
-    public var description: String {
+    public var name: String {
         "\(Self.self)"
     }
 
-    public func build(navigator: ScreenNavigator) -> Container {
-        build(
-            navigator: navigator,
-            payload: nil
-        )
+    public var traits: Set<AnyHashable> {
+        []
+    }
+
+    public var description: String {
+        key.name
+    }
+
+    public var key: ScreenKey {
+        ScreenKey(name: name, traits: traits)
+    }
+
+    public func cast<T>(to type: T.Type) -> T? {
+        self as? T
     }
 }

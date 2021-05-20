@@ -15,19 +15,19 @@ public struct ScreenModalStyleDecorator<Container: UIViewController>: ScreenDeco
         }
     }
 
+    public var description: String {
+        "ModalStyleDecorator"
+    }
+
     public init(style: ScreenModalStyle) {
         self.style = style
     }
 
-    public func buildDecorated<Wrapped: Screen>(
+    public func build<Wrapped: Screen>(
         screen: Wrapped,
-        navigator: ScreenNavigator,
-        payload: Any?
+        navigator: ScreenNavigator
     ) -> Container where Wrapped.Container == Container {
-        let container = screen.build(
-            navigator: navigator,
-            payload: payload
-        )
+        let container = screen.build(navigator: navigator)
 
         switch style {
         case let .default(presentationStyle, transitionStyle):
