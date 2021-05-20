@@ -27,13 +27,10 @@ internal final class AnyScreenActionBox<
 
     internal override func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
-        wrapped.perform(
-            container: container,
-            navigator: navigator
-        ) { result in
+        wrapped.perform(container: container, navigation: navigation) { result in
             completion(self.mapper(result))
         }
     }

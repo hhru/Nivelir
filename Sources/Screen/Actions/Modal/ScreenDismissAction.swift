@@ -13,10 +13,10 @@ public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
 
     public func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
-        navigator.logInfo("Dismissing screen presented by \(type(of: container))")
+        navigation.logInfo("Dismissing screen presented by \(type(of: container))")
 
         guard container.presented != nil else {
             return completion(.success)

@@ -10,7 +10,7 @@ public struct ScreenRootAction<
 
     public func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
         guard let root = container.root else {

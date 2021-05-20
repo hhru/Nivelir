@@ -187,6 +187,8 @@
 		C0C9FE992655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE972655E5340074D669 /* ScreenKeyWindowProvider.swift */; };
 		C0C9FE9B2655E5700074D669 /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */; };
 		C0C9FE9C2655E5700074D669 /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */; };
+		C0D247EE2656C3C800151F87 /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D247ED2656C3C800151F87 /* ScreenNavigation.swift */; };
+		C0D247EF2656C3C800151F87 /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D247ED2656C3C800151F87 /* ScreenNavigation.swift */; };
 		C0E932C3262B0BEF0041C564 /* ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */; };
 		C0E932C4262B0BEF0041C564 /* ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */; };
 		C0E932D7262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932D6262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift */; };
@@ -342,6 +344,7 @@
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE972655E5340074D669 /* ScreenKeyWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigator.swift; sourceTree = "<group>"; };
+		C0D247ED2656C3C800151F87 /* ScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigation.swift; sourceTree = "<group>"; };
 		C0E932C2262B0BEF0041C564 /* ScreenDecorableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenDecorableContainer.swift; sourceTree = "<group>"; };
 		C0E932D6262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenDecorableContainer.swift"; sourceTree = "<group>"; };
 		C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackDecorator.swift; sourceTree = "<group>"; };
@@ -774,6 +777,7 @@
 				C027106F25F50F8700ECC57C /* Iterator */,
 				C0270E5225F3EC4A00ECC57C /* Logger */,
 				C0C9FE902655E4480074D669 /* WindowProvider */,
+				C0D247ED2656C3C800151F87 /* ScreenNavigation.swift */,
 				C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */,
 			);
 			path = Navigator;
@@ -1095,6 +1099,7 @@
 				C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
 				C05E989C2602CDD300A4C8B8 /* ScreenRefreshAction.swift in Sources */,
 				C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
+				C0D247EE2656C3C800151F87 /* ScreenNavigation.swift in Sources */,
 				C05E98B72602D01C00A4C8B8 /* ScreenStackVisibleAction.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C05E98332602C47300A4C8B8 /* ScreenRootAnimation.swift in Sources */,
@@ -1210,6 +1215,7 @@
 				C0AADB8825EF90270087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
 				C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
 				C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */,
+				C0D247EF2656C3C800151F87 /* ScreenNavigation.swift in Sources */,
 				C05E989D2602CDD300A4C8B8 /* ScreenRefreshAction.swift in Sources */,
 				C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
 				C05E98B82602D01C00A4C8B8 /* ScreenStackVisibleAction.swift in Sources */,

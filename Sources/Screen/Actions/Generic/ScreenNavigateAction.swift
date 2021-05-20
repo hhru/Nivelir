@@ -15,21 +15,21 @@ public struct ScreenNavigateAction<Route: ScreenThenable>: ScreenAction {
         _ actions: [AnyScreenAction<Container, Void>],
         from index: Int = .zero,
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
         guard index < actions.count else {
             return completion(.success)
         }
 
-        route.actions[index].perform(container: container, navigator: navigator) { result in
+        route.actions[index].perform(container: container, navigation: navigation) { result in
             switch result {
             case .success:
                 self.performRouteActions(
                     actions,
                     from: index + 1,
                     container: container,
-                    navigator: navigator,
+                    navigation: navigation,
                     completion: completion
                 )
 
@@ -41,14 +41,14 @@ public struct ScreenNavigateAction<Route: ScreenThenable>: ScreenAction {
 
     public func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
         performRouteActions(
             route.actions,
             from: .zero,
             container: container,
-            navigator: navigator,
+            navigation: navigation,
             completion: completion
         )
     }

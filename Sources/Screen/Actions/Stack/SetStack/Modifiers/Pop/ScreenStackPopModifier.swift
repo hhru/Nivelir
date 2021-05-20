@@ -15,7 +15,7 @@ public struct ScreenStackPopModifier: ScreenStackModifier {
 
     public func perform(
         in stack: [UIViewController],
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
         guard let stackIndex = predicate.containerIndex(in: stack) else {

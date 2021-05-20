@@ -41,10 +41,10 @@ public struct ScreenSelectTabAction<
 
     public func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
-        navigator.logInfo("Selecting tab of \(Output.self) type in \(type(of: container))")
+        navigation.logInfo("Selecting tab of \(Output.self) type in \(type(of: container))")
 
         let selectedTab = container.selectedTab
 

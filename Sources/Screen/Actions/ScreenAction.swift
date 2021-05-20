@@ -14,7 +14,7 @@ public protocol ScreenAction {
 
     func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     )
 }
