@@ -18,12 +18,12 @@ public struct ScreenSetRootAction<
 
     public func perform(
         container: Container,
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     ) {
-        navigator.logInfo("Setting root of \(type(of: container)) to \(screen)")
+        navigation.logInfo("Setting root of \(type(of: container)) to \(screen)")
 
-        navigator.buildScreen(screen) { result in
+        navigation.buildScreen(screen) { result in
             switch result {
             case let .success(newRoot):
                 let root = container.root

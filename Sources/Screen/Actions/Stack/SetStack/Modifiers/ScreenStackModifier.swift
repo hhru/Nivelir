@@ -6,7 +6,7 @@ public protocol ScreenStackModifier: CustomStringConvertible {
 
     func perform(
         in stack: [UIViewController],
-        navigator: ScreenNavigator,
+        navigation: ScreenNavigation,
         completion: @escaping Completion
     )
 }
