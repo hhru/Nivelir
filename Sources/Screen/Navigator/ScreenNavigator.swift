@@ -1,15 +1,22 @@
 #if canImport(UIKit)
 import UIKit
+#else
+import Foundation
+#endif
 
 public final class ScreenNavigator {
 
     public typealias Completion = (Result<Void, Error>) -> Void
 
+    #if canImport(UIKit)
     private let windowProvider: ScreenWindowProvider
+    #endif
+
     private let builder: ScreenBuilder
     private let iterator: ScreenIterator
     private let logger: ScreenLogger?
 
+    #if canImport(UIKit)
     public init(
         windowProvider: ScreenWindowProvider,
         builder: ScreenBuilder = DefaultScreenBuilder(),
@@ -35,7 +42,19 @@ public final class ScreenNavigator {
             logger: logger
         )
     }
+    #else
+    public init(
+        builder: ScreenBuilder = DefaultScreenBuilder(),
+        iterator: ScreenIterator = DefaultScreenIterator(),
+        logger: ScreenLogger? = DefaultScreenLogger()
+    ) {
+        self.builder = builder
+        self.iterator = iterator
+        self.logger = logger
+    }
+    #endif
 
+    #if canImport(UIKit)
     private func perform<Action: ScreenAction>(
         action: Action,
         completion: @escaping Action.Completion
@@ -66,6 +85,7 @@ public final class ScreenNavigator {
             }
         }
     }
+    #endif
 
     public func buildScreen<New: Screen>(
         _ screen: New,
@@ -114,6 +134,3 @@ public final class ScreenNavigator {
         logger?.error(error())
     }
 }
-#else
-public final class ScreenNavigator { }
-#endif
