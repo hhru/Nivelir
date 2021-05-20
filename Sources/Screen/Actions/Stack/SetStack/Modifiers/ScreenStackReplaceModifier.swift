@@ -17,11 +17,18 @@ public struct ScreenStackReplaceModifier<
 
     public func perform(
         in stack: [UIViewController],
-        navigation: ScreenNavigation
-    ) throws -> [UIViewController] {
-        stack
-            .dropLast()
-            .appending(screen.build(navigator: navigation.navigator))
+        navigator: ScreenNavigator,
+        completion: @escaping Completion
+    ) {
+        navigator.buildScreen(screen) { result in
+            switch result {
+            case let .success(output):
+                completion(.success(stack.dropLast().appending(output)))
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 }
 

@@ -172,7 +172,7 @@ public final class DefaultScreenIterator: ScreenIterator {
         }
     }
 
-    public func first(
+    public func firstContainer(
         in container: ScreenContainer,
         where predicate: @escaping (_ container: ScreenContainer) -> Bool
     ) -> ScreenContainer? {
@@ -186,7 +186,7 @@ public final class DefaultScreenIterator: ScreenIterator {
         )
     }
 
-    public func last(
+    public func lastContainer(
         in container: ScreenContainer,
         where predicate: @escaping (_ container: ScreenContainer) -> Bool
     ) -> ScreenContainer? {
@@ -198,7 +198,7 @@ public final class DefaultScreenIterator: ScreenIterator {
         )
     }
 
-    public func top(
+    public func topContainer(
         in container: ScreenContainer,
         where predicate: @escaping (_ container: ScreenContainer) -> Bool
     ) -> ScreenContainer? {

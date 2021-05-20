@@ -31,6 +31,32 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
         )
     }
 
+    private func performModifiers(
+        from index: Int = .zero,
+        in stack: [UIViewController],
+        navigator: ScreenNavigator,
+        completion: @escaping ScreenStackModifier.Completion
+    ) {
+        guard index < modifiers.count else {
+            return completion(.success(stack))
+        }
+
+        modifiers[index].perform(in: stack, navigator: navigator) { result in
+            switch result {
+            case let .success(stack):
+                performModifiers(
+                    from: index + 1,
+                    in: stack,
+                    navigator: navigator,
+                    completion: completion
+                )
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
+
     private func resolveAnimation(
         first: ScreenStackAnimation?,
         second: ScreenStackAnimation?
@@ -77,47 +103,41 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info(
+        navigator.logInfo(
             """
             Setting stack of \(container) with modifiers:
             \(modifiers.map { "  - \($0)" }.joined(separator: "\n"))
             """
         )
 
-        let stack: [UIViewController]
+        performModifiers(in: container.viewControllers, navigator: navigator) { result in
+            switch result {
+            case let .success(stack):
+                let isAnimated = self.animation == nil
+                    ? false
+                    : !container.viewControllers.isEmpty
 
-        do {
-            stack = try modifiers.reduce(container.viewControllers) { stack, modifier in
-                try modifier.perform(
-                    in: stack,
-                    navigation: navigation
+                let isDefaultAnimated = isAnimated && (self.animation?.isDefault == true)
+
+                container.setViewControllers(
+                    stack,
+                    animated: isDefaultAnimated
                 )
+
+                guard isAnimated, let animation = self.animation else {
+                    return completion(.success)
+                }
+
+                animation.animate(container: container, stack: stack) {
+                    completion(.success)
+                }
+
+            case let .failure(error):
+                completion(.failure(error))
             }
-        } catch {
-            return completion(.failure(error))
-        }
-
-        let isAnimated = animation == nil
-            ? false
-            : !container.viewControllers.isEmpty
-
-        container.setViewControllers(
-            stack,
-            animated: isAnimated && (animation?.isDefault == true)
-        )
-
-        guard isAnimated, let animation = animation else {
-            return completion(.success)
-        }
-
-        animation.animate(
-            container: container,
-            stack: stack
-        ) {
-            completion(.success)
         }
     }
 }

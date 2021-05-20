@@ -5,19 +5,17 @@ internal final class AnyScreenActionBox<
     Output
 >: AnyScreenActionBaseBox<Wrapped.Container, Output> {
 
-    internal typealias Mapper = (Result<Wrapped.Output, Error>) -> Result<Output, Error>
+    internal typealias Mapper = (_ result: Result<Wrapped.Output, Error>) -> Result<Output, Error>
 
     private let wrapped: Wrapped
     private let mapper: Mapper
 
-    internal init(wrapped: Wrapped, mapper: @escaping Mapper) {
+    internal init(_ wrapped: Wrapped, mapper: @escaping Mapper) {
         self.wrapped = wrapped
         self.mapper = mapper
     }
 
-    internal override func cast<Action: ScreenAction>(
-        to type: Action.Type
-    ) -> Action? where Action.Container == Container {
+    internal override func cast<T>(to type: T.Type) -> T? {
         wrapped.cast(to: type)
     }
 
@@ -29,12 +27,12 @@ internal final class AnyScreenActionBox<
 
     internal override func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         wrapped.perform(
             container: container,
-            navigation: navigation
+            navigator: navigator
         ) { result in
             completion(self.mapper(result))
         }

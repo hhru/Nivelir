@@ -17,25 +17,20 @@ extension Screen {
     public func decorated<Decorator: ScreenDecorator>(
         by decorator: Decorator
     ) -> AnyScreen<Decorator.Output> where Container == Decorator.Container {
-        AnyScreen(
-            name: { self.name },
-            traits: { self.traits },
-            description: { "\(self.description) decorated by \(decorator)" },
-            build: { navigator in
-                var container = decorator.build(
-                    screen: self,
-                    navigator: navigator
+        AnyScreen(self) { screen, navigator in
+            var container = decorator.build(
+                screen: screen,
+                navigator: navigator
+            )
+
+            if let payload = decorator.payload {
+                container.screenPayload = ScreenDecoratorPayload(
+                    wrapped: container.screenPayload,
+                    value: payload
                 )
-
-                if let payload = decorator.payload {
-                    container.screenPayload = ScreenDecoratorPayload(
-                        wrapped: container.screenPayload,
-                        value: payload
-                    )
-                }
-
-                return container
             }
-        )
+
+            return container
+        }
     }
 }

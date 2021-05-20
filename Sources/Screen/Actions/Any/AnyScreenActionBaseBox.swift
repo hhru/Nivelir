@@ -5,9 +5,7 @@ internal class AnyScreenActionBaseBox<Container: ScreenContainer, Output>: Scree
     internal typealias Output = Output
 
     // swiftlint:disable:next unavailable_function
-    internal func cast<Action: ScreenAction>(
-        to type: Action.Type
-    ) -> Action? where Action.Container == Container {
+    internal func cast<T>(to type: T.Type) -> T? {
         fatalError("\(#function) has not been implemented")
     }
 
@@ -21,7 +19,7 @@ internal class AnyScreenActionBaseBox<Container: ScreenContainer, Output>: Scree
     // swiftlint:disable:next unavailable_function
     internal func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         fatalError("\(#function) has not been implemented")

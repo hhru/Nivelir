@@ -8,12 +8,9 @@ extension AnyStackScreen {
     public init<Wrapped: Screen>(
         _ wrapped: Wrapped
     ) where Wrapped.Container: UINavigationController {
-        self.init(
-            name: { wrapped.name },
-            traits: { wrapped.traits },
-            description: { wrapped.description },
-            build: wrapped.build
-        )
+        self.init(wrapped) { screen, navigator in
+            screen.build(navigator: navigator)
+        }
     }
 }
 

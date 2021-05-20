@@ -10,7 +10,7 @@ public struct ScreenPresentedAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let presented = container.presented else {

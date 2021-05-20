@@ -10,7 +10,7 @@ public struct ScreenStackTopAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let stackTop = container.stackTop else {

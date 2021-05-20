@@ -8,7 +8,7 @@ public struct ScreenRefreshAction<Container: ScreenContainer>: ScreenAction {
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let refreshableContainer = container as? ScreenRefreshableContainer else {

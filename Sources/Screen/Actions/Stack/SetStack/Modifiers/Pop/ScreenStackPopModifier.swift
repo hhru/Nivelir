@@ -15,16 +15,14 @@ public struct ScreenStackPopModifier: ScreenStackModifier {
 
     public func perform(
         in stack: [UIViewController],
-        navigation: ScreenNavigation
-    ) throws -> [UIViewController] {
+        navigator: ScreenNavigator,
+        completion: @escaping Completion
+    ) {
         guard let stackIndex = predicate.containerIndex(in: stack) else {
-            throw ScreenContainerNotFoundError(
-                type: UIViewController.self,
-                for: self
-            )
+            return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
-        return Array(stack.prefix(through: stackIndex))
+        completion(.success(Array(stack.prefix(through: stackIndex))))
     }
 }
 

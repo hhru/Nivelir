@@ -16,17 +16,24 @@ public struct ScreenSetupTabAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info("Setting up new tab in \(type(of: container)) with \(screen)")
+        navigator.logInfo("Setting up new tab in \(type(of: container)) with \(screen)")
 
-        let tabs = container.viewControllers ?? []
-        let output = screen.build(navigator: navigation.navigator)
+        navigator.buildScreen(screen) { result in
+            switch result {
+            case let .success(output):
+                let tabs = container.viewControllers ?? []
 
-        container.viewControllers = tabs.appending(output)
+                container.viewControllers = tabs.appending(output)
 
-        completion(.success(output))
+                completion(.success(output))
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 }
 

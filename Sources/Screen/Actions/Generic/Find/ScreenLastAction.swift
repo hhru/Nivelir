@@ -13,12 +13,12 @@ public struct ScreenLastAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping (Result<Output, Error>) -> Void
     ) {
-        navigation.logger?.info("Searching for a last container of \(Output.self) type in \(type(of: container))")
+        navigator.logInfo("Searching for a last container of \(Output.self) type in \(type(of: container))")
 
-        let last = navigation.iterator.last(in: container) { container in
+        let last = navigator.lastContainer(in: container) { container in
             self.predicate.checkContainer(container)
         }
 

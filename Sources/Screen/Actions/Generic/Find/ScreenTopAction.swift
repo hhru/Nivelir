@@ -13,12 +13,12 @@ public struct ScreenTopAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping (Result<Output, Error>) -> Void
     ) {
-        navigation.logger?.info("Searching for a top container of \(Output.self) type in \(type(of: container))")
+        navigator.logInfo("Searching for a top container of \(Output.self) type in \(type(of: container))")
 
-        let top = navigation.iterator.top(in: container) { container in
+        let top = navigator.topContainer(in: container) { container in
             self.predicate.checkContainer(container)
         }
 

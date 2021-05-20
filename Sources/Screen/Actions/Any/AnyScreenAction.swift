@@ -7,14 +7,12 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>: ScreenAction 
     private let box: AnyScreenActionBaseBox<Container, Output>
 
     public init<Wrapped: ScreenAction>(
-        wrapped: Wrapped
+        _ wrapped: Wrapped
     ) where Wrapped.Container == Container, Wrapped.Output == Output {
-        box = AnyScreenActionBox(wrapped: wrapped) { $0 }
+        box = AnyScreenActionBox(wrapped) { $0 }
     }
 
-    public func cast<Action: ScreenAction>(
-        to type: Action.Type
-    ) -> Action? where Action.Container == Container, Action.Output == Output {
+    public func cast<T>(to type: T.Type) -> T? {
         box.cast(to: type)
     }
 
@@ -26,12 +24,12 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>: ScreenAction 
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         box.perform(
             container: container,
-            navigation: navigation,
+            navigator: navigator,
             completion: completion
         )
     }
@@ -40,9 +38,9 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>: ScreenAction 
 extension AnyScreenAction where Output == Void {
 
     public init<Wrapped: ScreenAction>(
-        wrapped: Wrapped
+        _ wrapped: Wrapped
     ) where Wrapped.Container == Container {
-        box = AnyScreenActionBox(wrapped: wrapped) { result in
+        box = AnyScreenActionBox(wrapped) { result in
             result.ignoringValue()
         }
     }
@@ -51,10 +49,10 @@ extension AnyScreenAction where Output == Void {
 extension ScreenAction {
 
     public func eraseToAnyAction() -> AnyScreenAction<Container, Output> {
-        AnyScreenAction(wrapped: self)
+        AnyScreenAction(self)
     }
 
     public func eraseToAnyVoidAction() -> AnyScreenAction<Container, Void> {
-        AnyScreenAction(wrapped: self)
+        AnyScreenAction(self)
     }
 }

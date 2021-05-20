@@ -22,21 +22,21 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         _ actions: [AnyScreenAction<Container, Void>],
         from index: Int = .zero,
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping (Result<Void, Error>) -> Void
     ) {
         guard index < actions.count else {
             return completion(.success)
         }
 
-        actions[index].perform(container: container, navigation: navigation) { result in
+        actions[index].perform(container: container, navigator: navigator) { result in
             switch result {
             case .success:
                 self.performResolutionActions(
                     actions,
                     from: index + 1,
                     container: container,
-                    navigation: navigation,
+                    navigator: navigator,
                     completion: completion
                 )
 
@@ -48,13 +48,13 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
 
     private func performEnsureActions(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping (Result<Void, Error>) -> Void
     ) {
         performResolutionActions(
             resolution.ensureActions,
             container: container,
-            navigation: navigation,
+            navigator: navigator,
             completion: completion
         )
     }
@@ -63,7 +63,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         ensureResult: Result<Void, Error>,
         actionResult: Result<Action.Output, Error>,
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         let actions: [AnyScreenAction<Container, Void>]
@@ -76,7 +76,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
             return completion(.failure(error))
 
         case (.success, let .failure(error)):
-            navigation.logger?.info("Catching error: \(error)")
+            navigator.logInfo("Catching error: \(error)")
 
             actions = resolution
                 .catchActions
@@ -91,7 +91,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         performResolutionActions(
             actions,
             container: container,
-            navigation: navigation,
+            navigator: navigator,
             completion: completion
         )
     }
@@ -99,15 +99,15 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
     private func performResolution(
         actionResult: Result<Action.Output, Error>,
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        performEnsureActions(container: container, navigation: navigation) { ensureResult in
+        performEnsureActions(container: container, navigator: navigator) { ensureResult in
             self.performResultActions(
                 ensureResult: ensureResult,
                 actionResult: actionResult,
                 container: container,
-                navigation: navigation,
+                navigator: navigator,
                 completion: completion
             )
         }
@@ -115,16 +115,16 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logger?.info("Trying to perform \(action)")
+        navigator.logInfo("Trying to perform \(action)")
 
-        action.perform(container: container, navigation: navigation) { result in
+        action.perform(container: container, navigator: navigator) { result in
             self.performResolution(
                 actionResult: result,
                 container: container,
-                navigation: navigation,
+                navigator: navigator,
                 completion: completion
             )
         }

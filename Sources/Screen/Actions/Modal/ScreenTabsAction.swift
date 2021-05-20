@@ -10,7 +10,7 @@ public struct ScreenTabsAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let tabs = container.tabs else {

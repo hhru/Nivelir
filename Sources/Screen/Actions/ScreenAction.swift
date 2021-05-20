@@ -6,9 +6,7 @@ public protocol ScreenAction {
 
     typealias Completion = (Result<Output, Error>) -> Void
 
-    func cast<Action: ScreenAction>(
-        to type: Action.Type
-    ) -> Action? where Action.Container == Container
+    func cast<T>(to type: T.Type) -> T?
 
     func combine<Action: ScreenAction>(
         with other: Action
@@ -16,17 +14,15 @@ public protocol ScreenAction {
 
     func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     )
 }
 
 extension ScreenAction {
 
-    public func cast<Action: ScreenAction>(
-        to type: Action.Type
-    ) -> Action? where Action.Container == Container {
-        self as? Action
+    public func cast<T>(to type: T.Type) -> T? {
+        self as? T
     }
 
     public func combine<Action: ScreenAction>(

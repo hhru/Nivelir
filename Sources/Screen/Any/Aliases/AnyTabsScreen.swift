@@ -8,12 +8,9 @@ extension AnyTabsScreen where Container == UITabBarController {
     public init<Wrapped: Screen>(
         _ wrapped: Wrapped
     ) where Wrapped.Container: UITabBarController {
-        self.init(
-            name: { wrapped.name },
-            traits: { wrapped.traits },
-            description: { wrapped.description },
-            build: wrapped.build
-        )
+        self.init(wrapped) { screen, navigator in
+            screen.build(navigator: navigator)
+        }
     }
 }
 
