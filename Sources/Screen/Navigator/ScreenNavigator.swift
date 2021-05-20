@@ -44,9 +44,9 @@ public final class ScreenNavigator {
     }
     #else
     public init(
-        builder: ScreenBuilder = DefaultScreenBuilder(),
-        iterator: ScreenIterator = DefaultScreenIterator(),
-        logger: ScreenLogger? = DefaultScreenLogger()
+        builder: ScreenBuilder,
+        iterator: ScreenIterator,
+        logger: ScreenLogger?
     ) {
         self.builder = builder
         self.iterator = iterator
