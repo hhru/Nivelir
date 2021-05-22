@@ -10,7 +10,7 @@ public struct ScreenStackVisibleAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let stackVisible = container.stackVisible else {

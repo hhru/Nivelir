@@ -10,7 +10,7 @@ public struct ScreenSelectedTabAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         guard let selectedTab = container.selectedTab else {

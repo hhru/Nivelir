@@ -13,10 +13,10 @@ public struct ScreenFromAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
-        completion: @escaping (Result<Output, Error>) -> Void
+        navigator: ScreenNavigator,
+        completion: @escaping Completion
     ) {
-        navigation.logInfo("Resolving container of \(Output.self) type")
+        navigator.logInfo("Resolving container of \(Output.self) type")
 
         guard let output = output else {
             return completion(.containerNotFound(type: Container.self, for: self))

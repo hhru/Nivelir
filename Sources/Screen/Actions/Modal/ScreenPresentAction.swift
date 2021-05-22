@@ -18,12 +18,12 @@ public struct ScreenPresentAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logInfo("Presenting \(screen) on \(type(of: container))")
+        navigator.logInfo("Presenting \(screen) on \(type(of: container))")
 
-        navigation.buildScreen(screen) { result in
+        navigator.buildScreen(screen) { result in
             switch result {
             case let .success(output):
                 container.present(output, animated: animated) {

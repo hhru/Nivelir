@@ -18,15 +18,15 @@ public struct ScreenNestAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        action.perform(container: container, navigation: navigation) { result in
+        action.perform(container: container, navigator: navigator) { result in
             switch result {
             case let .success(container):
                 self.nested.perform(
                     container: container,
-                    navigation: navigation,
+                    navigator: navigator,
                     completion: completion
                 )
 

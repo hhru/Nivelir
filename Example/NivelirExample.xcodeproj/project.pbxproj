@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3364730C705918530E030D /* Pods_NivelirExample.framework */; };
+		C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
+		C017D13925FBAD0F008B90C0 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */; };
+		C017D14025FBAD11008B90C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017D13F25FBAD11008B90C0 /* Assets.xcassets */; };
+		C017D14325FBAD11008B90C0 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017D14125FBAD11008B90C0 /* Launch.storyboard */; };
+		C0268C20265909E400380F76 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0268C1F265909E400380F76 /* ChatListCell.swift */; };
+		C07888E126590BE100F09955 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
+		C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
+		C07888E5265910AE00F09955 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E4265910AE00F09955 /* Colors.swift */; };
+		C07888E72659133500F09955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
+		C07888E9265940C600F09955 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
+		C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C0DA318725FBB530009A9CB8 /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */; };
+		C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */; };
+		C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */; };
+		C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */; };
+		C0E9D2A625FC9ABB00ABDBE5 /* ChatSreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */; };
+		C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */; };
+		C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */; };
+		C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */; };
+		C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */; };
+		C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		158CE3A46AAC4C130EC752B9 /* Pods-NivelirDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirDemo.debug.xcconfig"; path = "Target Support Files/Pods-NivelirDemo/Pods-NivelirDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3D95991134D269121A8392FE /* Pods-Nivelir Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.release.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.release.xcconfig"; sourceTree = "<group>"; };
+		514ABFD7FB6F793EC33CD317 /* Pods-NivelirExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample.debug.xcconfig"; path = "Target Support Files/Pods-NivelirExample/Pods-NivelirExample.debug.xcconfig"; sourceTree = "<group>"; };
+		6D3364730C705918530E030D /* Pods_NivelirExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		929116B8E1608A63B0CA832A /* Pods-Nivelir Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.debug.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		A948E4633FBDF925C60B9BED /* Pods-NivelirDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirDemo.release.xcconfig"; path = "Target Support Files/Pods-NivelirDemo/Pods-NivelirDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C017D13325FBAD0F008B90C0 /* NivelirExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NivelirExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C017D13625FBAD0F008B90C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
+		C017D13F25FBAD11008B90C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C017D14225FBAD11008B90C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
+		C017D14425FBAD11008B90C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0268C1F265909E400380F76 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		C07888E026590BE100F09955 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		C07888E226590C1800F09955 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		C07888E4265910AE00F09955 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C07888E62659133500F09955 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		C07888E8265940C600F09955 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
+		C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneRouter.swift; sourceTree = "<group>"; };
+		C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSreen.swift; sourceTree = "<group>"; };
+		C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListScreen.swift; sourceTree = "<group>"; };
+		C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarItem.swift; sourceTree = "<group>"; };
+		CE8530BA8AC70AE0CDA58AA9 /* Pods-NivelirExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample.release.xcconfig"; path = "Target Support Files/Pods-NivelirExample/Pods-NivelirExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C017D13025FBAD0F008B90C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02195B38B968E1610A7B3F07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				929116B8E1608A63B0CA832A /* Pods-Nivelir Demo.debug.xcconfig */,
+				3D95991134D269121A8392FE /* Pods-Nivelir Demo.release.xcconfig */,
+				158CE3A46AAC4C130EC752B9 /* Pods-NivelirDemo.debug.xcconfig */,
+				A948E4633FBDF925C60B9BED /* Pods-NivelirDemo.release.xcconfig */,
+				514ABFD7FB6F793EC33CD317 /* Pods-NivelirExample.debug.xcconfig */,
+				CE8530BA8AC70AE0CDA58AA9 /* Pods-NivelirExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2A7DE3228D44B4ECD25E5F17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D3364730C705918530E030D /* Pods_NivelirExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C017D12A25FBAD0F008B90C0 = {
+			isa = PBXGroup;
+			children = (
+				C017D13525FBAD0F008B90C0 /* NivelirExample */,
+				C017D13425FBAD0F008B90C0 /* Products */,
+				02195B38B968E1610A7B3F07 /* Pods */,
+				2A7DE3228D44B4ECD25E5F17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C017D13425FBAD0F008B90C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C017D13325FBAD0F008B90C0 /* NivelirExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C017D13525FBAD0F008B90C0 /* NivelirExample */ = {
+			isa = PBXGroup;
+			children = (
+				C0E9D2BA25FCA3E800ABDBE5 /* Helpers */,
+				C0DA318225FBB219009A9CB8 /* Modules */,
+				C0DA318025FBB1E1009A9CB8 /* Resources */,
+				C0DA318A25FBB537009A9CB8 /* Scenes */,
+				C017D13625FBAD0F008B90C0 /* AppDelegate.swift */,
+				C017D14425FBAD11008B90C0 /* Info.plist */,
+			);
+			path = NivelirExample;
+			sourceTree = "<group>";
+		};
+		C06B606725FCAC0300F0DC12 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */,
+				C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C07888DF26590BD500F09955 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				C07888E026590BE100F09955 /* Reusable.swift */,
+				C07888E226590C1800F09955 /* UITableView+Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		C0DA318025FBB1E1009A9CB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C017D13F25FBAD11008B90C0 /* Assets.xcassets */,
+				C017D14125FBAD11008B90C0 /* Launch.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C0DA318225FBB219009A9CB8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C0E9D29925FC0D3200ABDBE5 /* Chat */,
+				C0E9D2A825FC9C5000ABDBE5 /* ChatList */,
+				C0DA318C25FBC355009A9CB8 /* Home */,
+				C0E9D29A25FC0D6500ABDBE5 /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C0DA318A25FBB537009A9CB8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C06B606725FCAC0300F0DC12 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C0DA318C25FBC355009A9CB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */,
+				C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */,
+				C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C0E9D29925FC0D3200ABDBE5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */,
+				C07888EC2659579700F09955 /* ChatEmptyView.swift */,
+				C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C0E9D29A25FC0D6500ABDBE5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */,
+				C07888E8265940C600F09955 /* ProfileView.swift */,
+				C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C0E9D2A825FC9C5000ABDBE5 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				C0268C1F265909E400380F76 /* ChatListCell.swift */,
+				C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */,
+				C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		C0E9D2BA25FCA3E800ABDBE5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C07888DF26590BD500F09955 /* Reusable */,
+				C07888E4265910AE00F09955 /* Colors.swift */,
+				C07888E62659133500F09955 /* Images.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C017D13225FBAD0F008B90C0 /* NivelirExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C017D14725FBAD11008B90C0 /* Build configuration list for PBXNativeTarget "NivelirExample" */;
+			buildPhases = (
+				BAA64B09CFA32C6A3C6A0330 /* [CP] Check Pods Manifest.lock */,
+				C017D12F25FBAD0F008B90C0 /* Sources */,
+				C017D13025FBAD0F008B90C0 /* Frameworks */,
+				C017D13125FBAD0F008B90C0 /* Resources */,
+				B38B7ACC96AA3EB6496A66D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NivelirExample;
+			productName = "Nivelir Demo";
+			productReference = C017D13325FBAD0F008B90C0 /* NivelirExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C017D12B25FBAD0F008B90C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					C017D13225FBAD0F008B90C0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = C017D12E25FBAD0F008B90C0 /* Build configuration list for PBXProject "NivelirExample" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C017D12A25FBAD0F008B90C0;
+			productRefGroup = C017D13425FBAD0F008B90C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C017D13225FBAD0F008B90C0 /* NivelirExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C017D13125FBAD0F008B90C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C017D14325FBAD11008B90C0 /* Launch.storyboard in Resources */,
+				C017D14025FBAD11008B90C0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B38B7ACC96AA3EB6496A66D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NivelirExample/Pods-NivelirExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NivelirExample/Pods-NivelirExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NivelirExample/Pods-NivelirExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA64B09CFA32C6A3C6A0330 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NivelirExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C017D12F25FBAD0F008B90C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */,
+				C0E9D2A625FC9ABB00ABDBE5 /* ChatSreen.swift in Sources */,
+				C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */,
+				C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */,
+				C07888E5265910AE00F09955 /* Colors.swift in Sources */,
+				C0268C20265909E400380F76 /* ChatListCell.swift in Sources */,
+				C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */,
+				C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */,
+				C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */,
+				C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */,
+				C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */,
+				C07888E9265940C600F09955 /* ProfileView.swift in Sources */,
+				C07888E126590BE100F09955 /* Reusable.swift in Sources */,
+				C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */,
+				C07888E72659133500F09955 /* Images.swift in Sources */,
+				C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */,
+				C017D13925FBAD0F008B90C0 /* MainSceneDelegate.swift in Sources */,
+				C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */,
+				C0DA318725FBB530009A9CB8 /* MainSceneRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C017D14125FBAD11008B90C0 /* Launch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C017D14225FBAD11008B90C0 /* Base */,
+			);
+			name = Launch.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C017D14525FBAD11008B90C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C017D14625FBAD11008B90C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C017D14825FBAD11008B90C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 514ABFD7FB6F793EC33CD317 /* Pods-NivelirExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NivelirExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C017D14925FBAD11008B90C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8530BA8AC70AE0CDA58AA9 /* Pods-NivelirExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NivelirExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C017D12E25FBAD0F008B90C0 /* Build configuration list for PBXProject "NivelirExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017D14525FBAD11008B90C0 /* Debug */,
+				C017D14625FBAD11008B90C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C017D14725FBAD11008B90C0 /* Build configuration list for PBXNativeTarget "NivelirExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C017D14825FBAD11008B90C0 /* Debug */,
+				C017D14925FBAD11008B90C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C017D12B25FBAD0F008B90C0 /* Project object */;
+}

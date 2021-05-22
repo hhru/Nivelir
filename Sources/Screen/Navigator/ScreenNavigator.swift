@@ -18,7 +18,7 @@ public final class ScreenNavigator {
 
     #if canImport(UIKit)
     public init(
-        windowProvider: ScreenWindowProvider,
+        windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
         builder: ScreenBuilder = DefaultScreenBuilder(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
@@ -63,16 +63,9 @@ public final class ScreenNavigator {
             return completion(.containerNotFound(type: UIWindow.self, for: self))
         }
 
-        let navigation = ScreenNavigation(
-            navigator: self,
-            builder: builder,
-            iterator: iterator,
-            logger: logger
-        )
-
         action.perform(
             container: window,
-            navigation: navigation,
+            navigator: self,
             completion: completion
         )
     }
@@ -93,4 +86,51 @@ public final class ScreenNavigator {
         }
     }
     #endif
+
+    public func buildScreen<New: Screen>(
+        _ screen: New,
+        completion: @escaping (_ result: Result<New.Container, Error>) -> Void
+    ) {
+        builder.buildScreen(
+            screen,
+            navigator: self,
+            completion: completion
+        )
+    }
+
+    public func iterate(
+        from container: ScreenContainer,
+        while predicate: ScreenIterationPredicate
+    ) -> ScreenContainer? {
+        iterator.iterate(from: container, while: predicate)
+    }
+
+    public func firstContainer(
+        in container: ScreenContainer,
+        where predicate: @escaping (_ container: ScreenContainer) -> Bool
+    ) -> ScreenContainer? {
+        iterator.firstContainer(in: container, where: predicate)
+    }
+
+    public func lastContainer(
+        in container: ScreenContainer,
+        where predicate: @escaping (_ container: ScreenContainer) -> Bool
+    ) -> ScreenContainer? {
+        iterator.lastContainer(in: container, where: predicate)
+    }
+
+    public func topContainer(
+        in container: ScreenContainer,
+        where predicate: @escaping (_ container: ScreenContainer) -> Bool
+    ) -> ScreenContainer? {
+        iterator.topContainer(in: container, where: predicate)
+    }
+
+    public func logInfo(_ info: @autoclosure () -> String) {
+        logger?.info(info())
+    }
+
+    public func logError(_ error: @autoclosure () -> Error) {
+        logger?.error(error())
+    }
 }

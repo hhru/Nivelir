@@ -15,13 +15,13 @@ public final class DefaultScreenLogger: ScreenLogger {
 
     public func info(_ info: @autoclosure () -> String) {
         if isInfoEnabled {
-            print("Nivelir info: \(info())")
+            print("Info: \(info())")
         }
     }
 
     public func error(_ error: @autoclosure () -> Error) {
         if isErrorsEnabled {
-            print("Nivelir error: \(error())")
+            print("Error: \(error())")
         }
     }
 }
