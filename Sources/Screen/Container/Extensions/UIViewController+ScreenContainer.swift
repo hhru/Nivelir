@@ -4,7 +4,7 @@ import UIKit
 extension UIViewController: ScreenContainer {
 
     public var isVisible: Bool {
-        viewIfLoaded?.window != nil
+        viewIfLoaded.map { $0.window != nil && !$0.isHidden } ?? false
     }
 }
 #endif

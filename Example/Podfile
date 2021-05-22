@@ -1,0 +1,8 @@
+platform :ios, '13.0'
+
+target 'NivelirExample' do
+  use_frameworks!
+
+  pod 'Nivelir', :path => ".."
+  pod 'SnapKit'
+end

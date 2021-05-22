@@ -20,10 +20,7 @@ public struct ScreenContainerNotFoundError: ScreenError {
 
 extension Result where Failure == Error {
 
-    internal static func containerNotFound(
-        type: Any.Type,
-        for trigger: Any
-    ) -> Self {
+    internal static func containerNotFound(type: Any.Type, for trigger: Any) -> Self {
         .failure(
             ScreenContainerNotFoundError(
                 type: type,

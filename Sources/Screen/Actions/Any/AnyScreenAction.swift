@@ -24,12 +24,12 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>: ScreenAction 
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         box.perform(
             container: container,
-            navigation: navigation,
+            navigator: navigator,
             completion: completion
         )
     }

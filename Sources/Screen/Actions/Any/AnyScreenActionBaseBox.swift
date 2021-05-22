@@ -19,7 +19,7 @@ internal class AnyScreenActionBaseBox<Container: ScreenContainer, Output>: Scree
     // swiftlint:disable:next unavailable_function
     internal func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
         fatalError("\(#function) has not been implemented")

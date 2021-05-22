@@ -19,6 +19,7 @@ Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainabl
     - [Swift Package Manager](#swift-package-manager)
 - [Usage](#usage)
     - [Quick Start](#quick-start)
+    - [Example App](#example-app)
 - [Communication](#communication)
 - [License](#license)
 
@@ -127,7 +128,7 @@ class SomeViewController: UIViewController {
 Next, we need to implement a builder that creates our controller:
 
 ``` swift
-struct SomeScreen: Screen, ScreenPayloadAssociating {
+struct SomeScreen: Screen {
 
     let color: UIColor
 
@@ -140,7 +141,7 @@ struct SomeScreen: Screen, ScreenPayloadAssociating {
 Now we can use this screen in navigation:
 
 ``` swift
-let navigator = DefaultScreenNavigator()
+let navigator = ScreenNavigator()
 
 navigator.navigate(fromTop: .stackContainer) { route in
     route
@@ -159,6 +160,18 @@ This navigation performs the following steps:
 - Adding a green screen to the stack
 - Presenting a blue screen on the green screen modally
 
+### Example App
+[Example app](Example) is a sample which demonstrates that Nivelir works in practice.
+It's also a good place to start playing with the framework.
+
+To install it, run these commands in a terminal:
+
+``` sh
+$ git clone https://github.com/hhru/Nivelir.git
+$ cd Nivelir/Example
+$ pod install
+$ open NivelirExample.xcworkspace
+```
 
 ## Communication
 - If you need help, open an issue.

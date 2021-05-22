@@ -13,12 +13,12 @@ public struct ScreenFirstAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
-        completion: @escaping (Result<Output, Error>) -> Void
+        navigator: ScreenNavigator,
+        completion: @escaping Completion
     ) {
-        navigation.logInfo("Searching for a first container of \(Output.self) type in \(type(of: container))")
+        navigator.logInfo("Searching for a first container of \(Output.self) type in \(type(of: container))")
 
-        let first = navigation.firstContainer(in: container) { container in
+        let first = navigator.firstContainer(in: container) { container in
             self.predicate.checkContainer(container)
         }
 

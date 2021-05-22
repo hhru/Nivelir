@@ -16,12 +16,12 @@ public struct ScreenSetupTabAction<
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logInfo("Setting up new tab in \(type(of: container)) with \(screen)")
+        navigator.logInfo("Setting up new tab in \(type(of: container)) with \(screen)")
 
-        navigation.buildScreen(screen) { result in
+        navigator.buildScreen(screen) { result in
             switch result {
             case let .success(output):
                 let tabs = container.viewControllers ?? []
@@ -51,7 +51,7 @@ extension ScreenThenable where Then: UITabBarController {
 
     public func setupTab<New: Screen>(
         with screen: New,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container>
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
     ) -> Self where New.Container: UIViewController {
         setupTab(with: screen, route: route(.initial))
     }

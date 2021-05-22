@@ -34,20 +34,20 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
     private func performModifiers(
         from index: Int = .zero,
         in stack: [UIViewController],
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping ScreenStackModifier.Completion
     ) {
         guard index < modifiers.count else {
             return completion(.success(stack))
         }
 
-        modifiers[index].perform(in: stack, navigation: navigation) { result in
+        modifiers[index].perform(in: stack, navigator: navigator) { result in
             switch result {
             case let .success(stack):
                 performModifiers(
                     from: index + 1,
                     in: stack,
-                    navigation: navigation,
+                    navigator: navigator,
                     completion: completion
                 )
 
@@ -103,17 +103,17 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
 
     public func perform(
         container: Container,
-        navigation: ScreenNavigation,
+        navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigation.logInfo(
+        navigator.logInfo(
             """
             Setting stack of \(container) with modifiers:
             \(modifiers.map { "  - \($0)" }.joined(separator: "\n"))
             """
         )
 
-        performModifiers(in: container.viewControllers, navigation: navigation) { result in
+        performModifiers(in: container.viewControllers, navigator: navigator) { result in
             switch result {
             case let .success(stack):
                 let isAnimated = self.animation == nil
