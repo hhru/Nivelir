@@ -7,7 +7,6 @@ public protocol Screen: CustomStringConvertible {
     var traits: Set<AnyHashable> { get }
 
     func cast<T>(to type: T.Type) -> T?
-
     func build(navigator: ScreenNavigator) -> Container
 }
 

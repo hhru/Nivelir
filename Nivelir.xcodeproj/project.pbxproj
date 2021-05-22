@@ -315,7 +315,6 @@
 		C06B5857262CA2F300BE4762 /* ScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
 		C06B615A262C0C040022678C /* ScreenTryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTryAction.swift; sourceTree = "<group>"; };
 		C06B6161262C0E930022678C /* ScreenTryResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTryResolution.swift; sourceTree = "<group>"; };
-		C07889092659733400F09955 /* Demo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demo; sourceTree = "<group>"; };
 		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
 		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -338,6 +337,7 @@
 		C0AADA2F25EED85C0087439E /* ScreenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenError.swift; sourceTree = "<group>"; };
 		C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyedContainer.swift; sourceTree = "<group>"; };
 		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		C0BF2F112659B9CC00419426 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
 		C0C9FE8B2655DECE0074D669 /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mintfile; sourceTree = "<group>"; };
 		C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 				C057F01023CB8EEB00C2D895 /* Sources */,
 				C057F01B23CB8EEB00C2D895 /* Tests */,
 				C057F00F23CB8EEB00C2D895 /* Products */,
-				C07889092659733400F09955 /* Demo */,
+				C0BF2F112659B9CC00419426 /* Example */,
 				C0A01A6323CB9B0A00AC2C3A /* Scripts */,
 				C0A01A1A23CB901C00AC2C3A /* .gitignore */,
 				C0A01A1D23CB901C00AC2C3A /* .ruby-version */,
