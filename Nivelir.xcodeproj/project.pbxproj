@@ -1458,7 +1458,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0-alpha.2";
+				MARKETING_VERSION = "1.0.0-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
@@ -1487,7 +1487,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0-alpha.2";
+				MARKETING_VERSION = "1.0.0-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
@@ -1557,7 +1557,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0-alpha.2";
+				MARKETING_VERSION = "1.0.0-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;
@@ -1587,7 +1587,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0-alpha.2";
+				MARKETING_VERSION = "1.0.0-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;
