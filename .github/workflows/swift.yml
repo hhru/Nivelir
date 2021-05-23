@@ -3,10 +3,10 @@ name: "CI"
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 env:
   LC_CTYPE: en_US.UTF-8
