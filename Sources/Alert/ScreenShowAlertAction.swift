@@ -23,46 +23,70 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
         }
     }
 
-    private func showAlertUsingPopover(
-        _ alertContainer: UIAlertController,
-        style: AlertPopoverStyle,
-        on container: Container,
-        completion: @escaping Completion
-    ) {
-        guard let popoverPresentationController = alertContainer.popoverPresentationController else {
-            return showAlert(
-                alertContainer,
-                on: container,
-                completion: completion
-            )
+    private func addTextField(
+        _ textField: AlertTextField,
+        to alertContainer: UIAlertController
+    ) -> UITextField? {
+        var alertTextField: UITextField?
+
+        alertContainer.addTextField { newTextField in
+            alertTextField = newTextField
+
+            switch textField {
+            case let .standard(text, placeholder):
+                newTextField.text = text
+                newTextField.placeholder = placeholder
+
+            case let .custom(configuration):
+                configuration(newTextField)
+            }
         }
 
-        if let permittedArrowDirections = style.permittedArrowDirections {
-            popoverPresentationController.permittedArrowDirections = permittedArrowDirections
-        }
+        return alertTextField
+    }
 
-        switch style.source {
-        case .center:
-            popoverPresentationController.sourceRect = CGRect(
-                origin: container.view.center,
-                size: .zero
-            )
-
-            popoverPresentationController.sourceView = container.view
-
-        case let .barButtonItem(barButtonItem):
-            popoverPresentationController.barButtonItem = barButtonItem
-
-        case let .rect(rect, view):
-            popoverPresentationController.sourceRect = rect
-            popoverPresentationController.sourceView = view ?? container.view
-        }
-
-        showAlert(
-            alertContainer,
-            on: container,
-            completion: completion
+    private func makeAlertContainer() -> UIAlertController {
+        let alertContainer = UIAlertController(
+            title: alert.title,
+            message: alert.message,
+            preferredStyle: .alert
         )
+
+        if let tintColor = alert.tintColor {
+            alertContainer.view.tintColor = tintColor
+        }
+
+        if let accessibilityIdentifier = alert.accessibilityIdentifier {
+            alertContainer.view.accessibilityIdentifier = accessibilityIdentifier
+        }
+
+        let textFields = alert
+            .textFields
+            .map { addTextField($0, to: alertContainer) }
+
+        let actions = alert
+            .actions
+            .map { action in
+                UIAlertAction(title: action.title, style: action.style) { _ in
+                    action.handler?(textFields.map { $0?.text ?? "" })
+                }
+            }
+
+        let textFieldsManager = AlertTextFieldsManager(textFields: textFields) { texts in
+            actions
+                .enumerated()
+                .forEach { index, action in
+                    action.isEnabled = alert.actions[index].enabler?(texts) ?? true
+                }
+        }
+
+        alertContainer.screenPayload.store(textFieldsManager)
+
+        actions.forEach {
+            alertContainer.addAction($0)
+        }
+
+        return alertContainer
     }
 
     public func perform(
@@ -72,24 +96,10 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
     ) {
         navigator.logInfo("Presenting \(alert) on \(type(of: container))")
 
-        let alertContainer = UIAlertController(alert: alert)
+        let alertContainer = makeAlertContainer()
 
-        switch alert.type {
-        case let .actionSheet(popoverStyle)
-        where UIDevice.current.userInterfaceIdiom.prefersToPresentUsingPopover:
-            showAlertUsingPopover(
-                alertContainer,
-                style: popoverStyle,
-                on: container,
-                completion: completion
-            )
-
-        case .alert, .actionSheet:
-            showAlert(
-                alertContainer,
-                on: container,
-                completion: completion
-            )
+        container.present(alertContainer, animated: animated) {
+            completion(.success(alertContainer))
         }
     }
 }

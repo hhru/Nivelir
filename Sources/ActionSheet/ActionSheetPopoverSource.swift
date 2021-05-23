@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public enum AlertPopoverSource {
+public enum ActionSheetPopoverSource {
 
     case center
     case barButtonItem(UIBarButtonItem)

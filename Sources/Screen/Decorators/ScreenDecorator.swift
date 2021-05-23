@@ -2,7 +2,7 @@ import Foundation
 
 public protocol ScreenDecorator: CustomStringConvertible {
     associatedtype Container: ScreenContainer
-    associatedtype Output: ScreenDecorableContainer
+    associatedtype Output: ScreenPayloadContainer
 
     var payload: Any? { get }
 
@@ -18,16 +18,13 @@ extension Screen {
         by decorator: Decorator
     ) -> AnyScreen<Decorator.Output> where Container == Decorator.Container {
         AnyScreen(self) { screen, navigator in
-            var container = decorator.build(
+            let container = decorator.build(
                 screen: screen,
                 navigator: navigator
             )
 
             if let payload = decorator.payload {
-                container.screenPayload = ScreenDecoratorPayload(
-                    wrapped: container.screenPayload,
-                    value: payload
-                )
+                container.screenPayload.store(payload)
             }
 
             return container
