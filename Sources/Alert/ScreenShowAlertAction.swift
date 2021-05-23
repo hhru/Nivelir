@@ -29,8 +29,6 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
         on container: Container,
         completion: @escaping Completion
     ) {
-        alertContainer.modalPresentationStyle = .popover
-
         guard let popoverPresentationController = alertContainer.popoverPresentationController else {
             return showAlert(
                 alertContainer,
