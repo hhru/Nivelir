@@ -13,16 +13,6 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
         self.animated = animated
     }
 
-    private func showAlert(
-        _ alertContainer: UIAlertController,
-        on container: Container,
-        completion: @escaping Completion
-    ) {
-        container.present(alertContainer, animated: animated) {
-            completion(.success(alertContainer))
-        }
-    }
-
     private func addTextField(
         _ textField: AlertTextField,
         to alertContainer: UIAlertController
