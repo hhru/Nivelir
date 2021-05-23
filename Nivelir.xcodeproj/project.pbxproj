@@ -22,6 +22,7 @@
 		C015F491265A8966003ECCB0 /* ScreenShowActionSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F48F265A8966003ECCB0 /* ScreenShowActionSheetAction.swift */; };
 		C015F493265A9175003ECCB0 /* AlertTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F492265A9175003ECCB0 /* AlertTextFieldsManager.swift */; };
 		C015F494265A9175003ECCB0 /* AlertTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F492265A9175003ECCB0 /* AlertTextFieldsManager.swift */; };
+		C015F495265AC00F003ECCB0 /* AlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F472265A8113003ECCB0 /* AlertTextField.swift */; };
 		C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
 		C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
 		C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */; };
@@ -1308,6 +1309,7 @@
 				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C05E98C82602D13800A4C8B8 /* ScreenStackAnimation.swift in Sources */,
 				C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */,
+				C015F495265AC00F003ECCB0 /* AlertTextField.swift in Sources */,
 				C05E98FE2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift in Sources */,
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0BF2F21265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift in Sources */,

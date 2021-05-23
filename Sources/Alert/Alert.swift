@@ -53,7 +53,7 @@ public struct Alert: CustomStringConvertible {
         message: String?,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
-        textFields: AlertTextField...,
+        textField: AlertTextField,
         actions: AlertAction...
     ) {
         self.init(
@@ -61,7 +61,7 @@ public struct Alert: CustomStringConvertible {
             message: message,
             tintColor: tintColor,
             accessibilityIdentifier: accessibilityIdentifier,
-            textFields: textFields,
+            textFields: [textField],
             actions: actions
         )
     }
