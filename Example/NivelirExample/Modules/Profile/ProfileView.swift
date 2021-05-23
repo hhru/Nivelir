@@ -11,7 +11,7 @@ final class ProfileView: UIView {
         set { photoButton.setImage(newValue, for: .normal) }
     }
 
-    var onPhotoTapped: (() -> Void)?
+    var onPhotoTapped: ((_ sender: UIView ) -> Void)?
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -28,7 +28,7 @@ final class ProfileView: UIView {
     }
 
     @objc private func onPhotoButtonTouchUpInside() {
-        onPhotoTapped?()
+        onPhotoTapped?(photoButton)
     }
 
     private func setupPhotoButton() {

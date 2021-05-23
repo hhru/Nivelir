@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51C6E20272A5CB88DD6B2AD5 /* Pods_NivelirExample_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */; };
 		992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3364730C705918530E030D /* Pods_NivelirExample.framework */; };
 		C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
 		C017D13925FBAD0F008B90C0 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */; };
 		C017D14025FBAD11008B90C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017D13F25FBAD11008B90C0 /* Assets.xcassets */; };
 		C017D14325FBAD11008B90C0 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017D14125FBAD11008B90C0 /* Launch.storyboard */; };
 		C0268C20265909E400380F76 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0268C1F265909E400380F76 /* ChatListCell.swift */; };
+		C06E9A61265A74060087A913 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06E9A60265A74060087A913 /* Launch.storyboard */; };
 		C07888E126590BE100F09955 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
 		C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
 		C07888E5265910AE00F09955 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E4265910AE00F09955 /* Colors.swift */; };
 		C07888E72659133500F09955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
 		C07888E9265940C600F09955 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
 		C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
+		C0BF2F59265A709700419426 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
+		C0BF2F5A265A709700419426 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E4265910AE00F09955 /* Colors.swift */; };
+		C0BF2F5B265A709700419426 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
+		C0BF2F5C265A709F00419426 /* ChatSreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */; };
+		C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C0BF2F5E265A709F00419426 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */; };
+		C0BF2F5F265A70A600419426 /* ChatListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */; };
+		C0BF2F60265A70A600419426 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */; };
+		C0BF2F61265A70A600419426 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0268C1F265909E400380F76 /* ChatListCell.swift */; };
+		C0BF2F62265A70AA00419426 /* HomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */; };
+		C0BF2F63265A70AA00419426 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */; };
+		C0BF2F64265A70AA00419426 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */; };
+		C0BF2F65265A70AE00419426 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */; };
+		C0BF2F66265A70AE00419426 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
+		C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */; };
+		C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
+		C0BF2F69265A70C400419426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017D13F25FBAD11008B90C0 /* Assets.xcassets */; };
+		C0BF2F6B265A70CC00419426 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */; };
+		C0BF2F6C265A70CC00419426 /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */; };
 		C0DA318725FBB530009A9CB8 /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */; };
 		C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */; };
 		C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */; };
@@ -32,12 +54,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08DF1F1824BB2C48E0FB213B /* Pods-NivelirExample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-NivelirExample-tvOS/Pods-NivelirExample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		158CE3A46AAC4C130EC752B9 /* Pods-NivelirDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirDemo.debug.xcconfig"; path = "Target Support Files/Pods-NivelirDemo/Pods-NivelirDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3D95991134D269121A8392FE /* Pods-Nivelir Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.release.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.release.xcconfig"; sourceTree = "<group>"; };
 		514ABFD7FB6F793EC33CD317 /* Pods-NivelirExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample.debug.xcconfig"; path = "Target Support Files/Pods-NivelirExample/Pods-NivelirExample.debug.xcconfig"; sourceTree = "<group>"; };
 		6D3364730C705918530E030D /* Pods_NivelirExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		929116B8E1608A63B0CA832A /* Pods-Nivelir Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.debug.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A948E4633FBDF925C60B9BED /* Pods-NivelirDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirDemo.release.xcconfig"; path = "Target Support Files/Pods-NivelirDemo/Pods-NivelirDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017D13325FBAD0F008B90C0 /* NivelirExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NivelirExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017D13625FBAD0F008B90C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,12 +69,14 @@
 		C017D14225FBAD11008B90C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		C017D14425FBAD11008B90C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0268C1F265909E400380F76 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		C06E9A60265A74060087A913 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		C07888E026590BE100F09955 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		C07888E226590C1800F09955 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		C07888E4265910AE00F09955 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C07888E62659133500F09955 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C07888E8265940C600F09955 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
+		C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NivelirExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneRouter.swift; sourceTree = "<group>"; };
 		C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -62,6 +88,7 @@
 		C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListScreen.swift; sourceTree = "<group>"; };
 		C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarItem.swift; sourceTree = "<group>"; };
 		CE8530BA8AC70AE0CDA58AA9 /* Pods-NivelirExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample.release.xcconfig"; path = "Target Support Files/Pods-NivelirExample/Pods-NivelirExample.release.xcconfig"; sourceTree = "<group>"; };
+		EF395F56008252324C82C9BF /* Pods-NivelirExample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-NivelirExample-tvOS/Pods-NivelirExample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +97,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0BF2F42265A704400419426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51C6E20272A5CB88DD6B2AD5 /* Pods_NivelirExample_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +120,8 @@
 				A948E4633FBDF925C60B9BED /* Pods-NivelirDemo.release.xcconfig */,
 				514ABFD7FB6F793EC33CD317 /* Pods-NivelirExample.debug.xcconfig */,
 				CE8530BA8AC70AE0CDA58AA9 /* Pods-NivelirExample.release.xcconfig */,
+				EF395F56008252324C82C9BF /* Pods-NivelirExample-tvOS.debug.xcconfig */,
+				08DF1F1824BB2C48E0FB213B /* Pods-NivelirExample-tvOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -93,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				6D3364730C705918530E030D /* Pods_NivelirExample.framework */,
+				B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				C017D13325FBAD0F008B90C0 /* NivelirExample.app */,
+				C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +176,22 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		C06E9A5E265A73EC0087A913 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C017D14125FBAD11008B90C0 /* Launch.storyboard */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		C06E9A5F265A73F60087A913 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C06E9A60265A74060087A913 /* Launch.storyboard */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 		C07888DF26590BD500F09955 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +204,9 @@
 		C0DA318025FBB1E1009A9CB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C06E9A5F265A73F60087A913 /* tvOS */,
+				C06E9A5E265A73EC0087A913 /* iOS */,
 				C017D13F25FBAD11008B90C0 /* Assets.xcassets */,
-				C017D14125FBAD11008B90C0 /* Launch.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -246,17 +302,39 @@
 			productReference = C017D13325FBAD0F008B90C0 /* NivelirExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C0BF2F44265A704400419426 /* NivelirExample-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0BF2F56265A704500419426 /* Build configuration list for PBXNativeTarget "NivelirExample-tvOS" */;
+			buildPhases = (
+				7A80D5E6624194E18328354C /* [CP] Check Pods Manifest.lock */,
+				C0BF2F41265A704400419426 /* Sources */,
+				C0BF2F42265A704400419426 /* Frameworks */,
+				C0BF2F43265A704400419426 /* Resources */,
+				5D6E696FD3B44A035AFB1456 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NivelirExample-tvOS";
+			productName = "NivelirExample-tvOS";
+			productReference = C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C017D12B25FBAD0F008B90C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					C017D13225FBAD0F008B90C0 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					C0BF2F44265A704400419426 = {
+						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
@@ -274,6 +352,7 @@
 			projectRoot = "";
 			targets = (
 				C017D13225FBAD0F008B90C0 /* NivelirExample */,
+				C0BF2F44265A704400419426 /* NivelirExample-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -288,9 +367,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0BF2F43265A704400419426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0BF2F69265A70C400419426 /* Assets.xcassets in Resources */,
+				C06E9A61265A74060087A913 /* Launch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5D6E696FD3B44A035AFB1456 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NivelirExample-tvOS/Pods-NivelirExample-tvOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NivelirExample-tvOS/Pods-NivelirExample-tvOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NivelirExample-tvOS/Pods-NivelirExample-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A80D5E6624194E18328354C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NivelirExample-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B38B7ACC96AA3EB6496A66D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +483,32 @@
 				C017D13925FBAD0F008B90C0 /* MainSceneDelegate.swift in Sources */,
 				C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */,
 				C0DA318725FBB530009A9CB8 /* MainSceneRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0BF2F41265A704400419426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */,
+				C0BF2F5C265A709F00419426 /* ChatSreen.swift in Sources */,
+				C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */,
+				C0BF2F63265A70AA00419426 /* HomeTabBarController.swift in Sources */,
+				C0BF2F6B265A70CC00419426 /* MainSceneDelegate.swift in Sources */,
+				C0BF2F59265A709700419426 /* Reusable.swift in Sources */,
+				C0BF2F5F265A70A600419426 /* ChatListScreen.swift in Sources */,
+				C0BF2F60265A70A600419426 /* ChatListViewController.swift in Sources */,
+				C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */,
+				C0BF2F5B265A709700419426 /* Images.swift in Sources */,
+				C0BF2F5A265A709700419426 /* Colors.swift in Sources */,
+				C0BF2F62265A70AA00419426 /* HomeTabBarItem.swift in Sources */,
+				C0BF2F66265A70AE00419426 /* ProfileView.swift in Sources */,
+				C0BF2F6C265A70CC00419426 /* MainSceneRouter.swift in Sources */,
+				C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */,
+				C0BF2F64265A70AA00419426 /* HomeScreen.swift in Sources */,
+				C0BF2F61265A70A600419426 /* ChatListCell.swift in Sources */,
+				C0BF2F5E265A709F00419426 /* ChatViewController.swift in Sources */,
+				C0BF2F65265A70AE00419426 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +678,48 @@
 			};
 			name = Release;
 		};
+		C0BF2F54265A704500419426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF395F56008252324C82C9BF /* Pods-NivelirExample-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NivelirExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		C0BF2F55265A704500419426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08DF1F1824BB2C48E0FB213B /* Pods-NivelirExample-tvOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NivelirExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,6 +737,15 @@
 			buildConfigurations = (
 				C017D14825FBAD11008B90C0 /* Debug */,
 				C017D14925FBAD11008B90C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0BF2F56265A704500419426 /* Build configuration list for PBXNativeTarget "NivelirExample-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0BF2F54265A704500419426 /* Debug */,
+				C0BF2F55265A704500419426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

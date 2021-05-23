@@ -6,7 +6,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupNavigationBarAppearance() {
         let appearance = UINavigationBar.appearance()
 
+        #if os(iOS)
         appearance.prefersLargeTitles = true
+        #endif
+
         appearance.tintColor = Colors.important
     }
 
