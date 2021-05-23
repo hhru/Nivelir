@@ -25,7 +25,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
 
     private func showAlertContainerUsingPopover(
         _ alertContainer: UIAlertController,
-        style: ActionSheetPopoverStyle,
+        from source: ActionSheetSource,
         on container: Container,
         completion: @escaping Completion
     ) {
@@ -37,26 +37,13 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
             )
         }
 
-        if let permittedArrowDirections = style.permittedArrowDirections {
+        if let permittedArrowDirections = source.permittedArrowDirections {
             popoverPresentationController.permittedArrowDirections = permittedArrowDirections
         }
 
-        switch style.source {
-        case .center:
-            popoverPresentationController.sourceRect = CGRect(
-                origin: container.view.center,
-                size: .zero
-            )
-
-            popoverPresentationController.sourceView = container.view
-
-        case let .barButtonItem(barButtonItem):
-            popoverPresentationController.barButtonItem = barButtonItem
-
-        case let .rect(rect, view):
-            popoverPresentationController.sourceRect = rect
-            popoverPresentationController.sourceView = view ?? container.view
-        }
+        popoverPresentationController.sourceRect = source.rect ?? .zero
+        popoverPresentationController.sourceView = source.view ?? container.view
+        popoverPresentationController.barButtonItem = source.barButtonItem
 
         showAlertContainer(
             alertContainer,
@@ -106,7 +93,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
         case .pad, .mac:
             showAlertContainerUsingPopover(
                 alertContainer,
-                style: actionSheet.popoverStyle,
+                from: actionSheet.source,
                 on: container,
                 completion: completion
             )

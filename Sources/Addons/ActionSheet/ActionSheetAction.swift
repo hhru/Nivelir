@@ -1,26 +1,29 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct AlertAction {
+public struct ActionSheetAction {
 
-    public typealias Enabler = (_ texts: [String]) -> Bool
-    public typealias Handler = (_ texts: [String]) -> Void
+    public typealias Handler = () -> Void
 
     public let title: String
     public let style: UIAlertAction.Style
-    public let enabler: Enabler?
     public let handler: Handler?
 
     public init(
         title: String,
-        style: UIAlertAction.Style,
-        enabler: Enabler? = nil,
+        style: UIAlertAction.Style = .default,
         handler: Handler? = nil
     ) {
         self.title = title
         self.style = style
-        self.enabler = enabler
         self.handler = handler
+    }
+}
+
+extension ActionSheetAction {
+
+    public static func cancel(title: String) -> Self {
+        Self(title: title, style: .cancel)
     }
 }
 #endif

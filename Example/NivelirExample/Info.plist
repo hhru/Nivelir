@@ -60,5 +60,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The app requires access to your photos library to change profile images</string>
+    <key>NSCameraUsageDescription</key>
+    <string>The app requires access to your camera to change profile images</string>
 </dict>
 </plist>
