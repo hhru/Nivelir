@@ -1,3 +1,4 @@
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 public struct MediaPickerCameraSettings {
@@ -16,3 +17,4 @@ public struct MediaPickerCameraSettings {
         self.flashMode = flashMode
     }
 }
+#endif

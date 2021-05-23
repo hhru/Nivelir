@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 
 public struct MediaPickerSourceAccessDeniedError: ScreenError {
@@ -22,3 +23,4 @@ extension Result where Failure == Error {
         .failure(MediaPickerSourceAccessDeniedError(for: trigger))
     }
 }
+#endif

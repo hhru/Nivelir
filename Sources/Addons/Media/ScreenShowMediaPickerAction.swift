@@ -1,4 +1,4 @@
-#if canImport(UIKit) && canImport(Photos) && canImport(AVFoundation)
+#if canImport(UIKit) && canImport(Photos) && canImport(AVFoundation) && os(iOS)
 import UIKit
 import Photos
 import AVFoundation

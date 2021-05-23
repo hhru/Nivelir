@@ -1,4 +1,4 @@
-#if canImport(UIKit) && canImport(Photos)
+#if canImport(UIKit) && canImport(Photos) && os(iOS)
 import UIKit
 import Photos
 

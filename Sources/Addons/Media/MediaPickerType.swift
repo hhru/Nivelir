@@ -1,4 +1,4 @@
-#if canImport(MobileCoreServices)
+#if canImport(MobileCoreServices) && os(iOS)
 import Foundation
 import MobileCoreServices
 

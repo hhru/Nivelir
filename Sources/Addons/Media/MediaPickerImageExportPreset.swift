@@ -1,3 +1,4 @@
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 public enum MediaPickerImageExportPreset {
@@ -7,3 +8,4 @@ public enum MediaPickerImageExportPreset {
 
     case compatible
 }
+#endif

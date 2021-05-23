@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 
 public struct UnavailableMediaPickerTypesError: ScreenError {
@@ -22,3 +23,4 @@ extension Result where Failure == Error {
         .failure(UnavailableMediaPickerTypesError(for: trigger))
     }
 }
+#endif

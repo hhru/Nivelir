@@ -1,4 +1,4 @@
-#if canImport(UIKit)
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 internal final class MediaPickerManager: NSObject, UINavigationControllerDelegate {
