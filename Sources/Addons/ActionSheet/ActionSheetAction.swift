@@ -11,12 +11,19 @@ public struct ActionSheetAction {
 
     public init(
         title: String,
-        style: UIAlertAction.Style,
+        style: UIAlertAction.Style = .default,
         handler: Handler? = nil
     ) {
         self.title = title
         self.style = style
         self.handler = handler
+    }
+}
+
+extension ActionSheetAction {
+
+    public static func cancel(title: String) -> Self {
+        Self(title: title, style: .cancel)
     }
 }
 #endif

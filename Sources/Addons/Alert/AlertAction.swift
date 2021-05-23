@@ -13,7 +13,7 @@ public struct AlertAction {
 
     public init(
         title: String,
-        style: UIAlertAction.Style,
+        style: UIAlertAction.Style = .default,
         enabler: Enabler? = nil,
         handler: Handler? = nil
     ) {
@@ -21,6 +21,13 @@ public struct AlertAction {
         self.style = style
         self.enabler = enabler
         self.handler = handler
+    }
+}
+
+extension AlertAction {
+
+    public static func cancel(title: String) -> Self {
+        Self(title: title, style: .cancel)
     }
 }
 #endif

@@ -96,6 +96,8 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
 
         mediaPickerContainer.screenPayload.store(mediaPickerManager)
 
+        mediaPickerContainer.delegate = mediaPickerManager
+
         switch mediaPicker.source {
         case let .camera(settings: cameraSettings):
             mediaPickerContainer.sourceType = .camera
@@ -138,6 +140,8 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
+        navigator.logInfo("Presenting \(mediaPicker) on \(type(of: container))")
+
         requestAccessIfNeeded { authorized in
             guard authorized else {
                 return completion(.mediaPickerSourceAccessDenied(for: self))

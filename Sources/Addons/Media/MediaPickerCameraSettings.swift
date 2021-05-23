@@ -3,6 +3,8 @@ import UIKit
 
 public struct MediaPickerCameraSettings {
 
+    public static let `default` = Self()
+
     public let device: UIImagePickerController.CameraDevice
     public let captureMode: UIImagePickerController.CameraCaptureMode
     public let flashMode: UIImagePickerController.CameraFlashMode

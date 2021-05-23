@@ -1,7 +1,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-public struct MediaPicker {
+public struct MediaPicker: CustomStringConvertible {
 
     public typealias Handler = (_ result: MediaPickerResult?) -> Void
 
@@ -13,6 +13,10 @@ public struct MediaPicker {
     public let videoMaximumDuration: TimeInterval
     public let videoQuality: UIImagePickerController.QualityType
     public let handler: Handler
+
+    public var description: String {
+        "ImagePicker(from: \"\(source)\")"
+    }
 
     @available(iOS 11, *)
     public init(

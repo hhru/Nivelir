@@ -11,12 +11,16 @@ public struct Alert: CustomStringConvertible {
     public let actions: [AlertAction]
 
     public var description: String {
-        "Alert(\"\(title ?? message ?? "")\")"
+        if let description = title ?? message {
+            return "Alert(\"\(description)\")"
+        } else {
+            return "Alert"
+        }
     }
 
     public init(
         title: String?,
-        message: String?,
+        message: String? = nil,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
         textFields: [AlertTextField] = [],
@@ -31,8 +35,8 @@ public struct Alert: CustomStringConvertible {
     }
 
     public init(
-        title: String?,
-        message: String?,
+        title: String? ,
+        message: String? = nil,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
         textFields: [AlertTextField] = [],
@@ -50,7 +54,7 @@ public struct Alert: CustomStringConvertible {
 
     public init(
         title: String?,
-        message: String?,
+        message: String? = nil,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
         textField: AlertTextField,

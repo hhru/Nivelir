@@ -215,16 +215,14 @@
 		C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
 		C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
 		C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
-		C0BF2F35265A6D1F00419426 /* ActionSheetPopoverStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F2F265A6D1F00419426 /* ActionSheetPopoverStyle.swift */; };
-		C0BF2F36265A6D1F00419426 /* ActionSheetPopoverStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F2F265A6D1F00419426 /* ActionSheetPopoverStyle.swift */; };
 		C0BF2F37265A6D1F00419426 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F30265A6D1F00419426 /* Alert.swift */; };
 		C0BF2F38265A6D1F00419426 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F30265A6D1F00419426 /* Alert.swift */; };
 		C0BF2F39265A6D1F00419426 /* ScreenShowAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */; };
 		C0BF2F3A265A6D1F00419426 /* ScreenShowAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */; };
 		C0BF2F3D265A6D1F00419426 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F33265A6D1F00419426 /* AlertAction.swift */; };
 		C0BF2F3E265A6D1F00419426 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F33265A6D1F00419426 /* AlertAction.swift */; };
-		C0BF2F3F265A6D1F00419426 /* ActionSheetPopoverSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F34265A6D1F00419426 /* ActionSheetPopoverSource.swift */; };
-		C0BF2F40265A6D1F00419426 /* ActionSheetPopoverSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F34265A6D1F00419426 /* ActionSheetPopoverSource.swift */; };
+		C0BF2F3F265A6D1F00419426 /* ActionSheetSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F34265A6D1F00419426 /* ActionSheetSource.swift */; };
+		C0BF2F40265A6D1F00419426 /* ActionSheetSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F34265A6D1F00419426 /* ActionSheetSource.swift */; };
 		C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */; };
@@ -398,11 +396,10 @@
 		C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyedContainer.swift; sourceTree = "<group>"; };
 		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		C0BF2F112659B9CC00419426 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
-		C0BF2F2F265A6D1F00419426 /* ActionSheetPopoverStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetPopoverStyle.swift; sourceTree = "<group>"; };
 		C0BF2F30265A6D1F00419426 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShowAlertAction.swift; sourceTree = "<group>"; };
 		C0BF2F33265A6D1F00419426 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
-		C0BF2F34265A6D1F00419426 /* ActionSheetPopoverSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetPopoverSource.swift; sourceTree = "<group>"; };
+		C0BF2F34265A6D1F00419426 /* ActionSheetSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetSource.swift; sourceTree = "<group>"; };
 		C0C9FE8B2655DECE0074D669 /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mintfile; sourceTree = "<group>"; };
 		C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
@@ -459,8 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				C015F489265A8838003ECCB0 /* ActionSheet.swift */,
-				C0BF2F34265A6D1F00419426 /* ActionSheetPopoverSource.swift */,
-				C0BF2F2F265A6D1F00419426 /* ActionSheetPopoverStyle.swift */,
+				C0BF2F34265A6D1F00419426 /* ActionSheetSource.swift */,
 				C015F48C265A8854003ECCB0 /* ActionSheetAction.swift */,
 				C015F48F265A8966003ECCB0 /* ScreenShowActionSheetAction.swift */,
 			);
@@ -1221,12 +1217,11 @@
 				C06287132600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C05E98952602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
 				C015F483265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */,
-				C0BF2F3F265A6D1F00419426 /* ActionSheetPopoverSource.swift in Sources */,
+				C0BF2F3F265A6D1F00419426 /* ActionSheetSource.swift in Sources */,
 				C06B6162262C0E930022678C /* ScreenTryResolution.swift in Sources */,
 				C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C05E99052602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */,
 				C05E987E2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */,
-				C0BF2F35265A6D1F00419426 /* ActionSheetPopoverStyle.swift in Sources */,
 				C05E98BE2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */,
 				C015F4B3265AC071003ECCB0 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C015F4B1265AC071003ECCB0 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
@@ -1358,12 +1353,11 @@
 				C06287142600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
-				C0BF2F40265A6D1F00419426 /* ActionSheetPopoverSource.swift in Sources */,
+				C0BF2F40265A6D1F00419426 /* ActionSheetSource.swift in Sources */,
 				C05E98962602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
 				C06B6163262C0E930022678C /* ScreenTryResolution.swift in Sources */,
 				C0AADB6425EF900B0087439E /* UIWindow+ScreenContainer.swift in Sources */,
 				C05E99062602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */,
-				C0BF2F36265A6D1F00419426 /* ActionSheetPopoverStyle.swift in Sources */,
 				C015F4B4265AC071003ECCB0 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C015F4B2265AC071003ECCB0 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
 				C05E987F2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */,
