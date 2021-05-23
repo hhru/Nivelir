@@ -1,13 +1,13 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct AlertPopoverStyle {
+public struct ActionSheetPopoverStyle {
 
-    public let source: AlertPopoverSource
+    public let source: ActionSheetPopoverSource
     public let permittedArrowDirections: UIPopoverArrowDirection?
 
     public init(
-        source: AlertPopoverSource,
+        source: ActionSheetPopoverSource,
         permittedArrowDirections: UIPopoverArrowDirection? = nil
     ) {
         self.source = source
@@ -15,7 +15,7 @@ public struct AlertPopoverStyle {
     }
 }
 
-extension AlertPopoverStyle {
+extension ActionSheetPopoverStyle {
 
     public static func fromCenter(permittedArrowDirections: UIPopoverArrowDirection? = nil) -> Self {
         Self(

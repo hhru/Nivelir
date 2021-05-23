@@ -1,67 +1,49 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct Alert: CustomStringConvertible {
+public struct ActionSheet: CustomStringConvertible {
 
     public let title: String?
     public let message: String?
+    public let popoverStyle: ActionSheetPopoverStyle
     public let tintColor: UIColor?
     public let accessibilityIdentifier: String?
-    public let textFields: [AlertTextField]
-    public let actions: [AlertAction]
+    public let actions: [ActionSheetAction]
 
     public var description: String {
-        "Alert(\"\(title ?? message ?? "")\")"
+        "ActionSheet(\"\(title ?? message ?? "")\")"
     }
 
     public init(
         title: String?,
         message: String?,
+        popoverStyle: ActionSheetPopoverStyle,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
-        textFields: [AlertTextField] = [],
-        actions: [AlertAction] = []
+        actions: [ActionSheetAction] = []
     ) {
         self.title = title
         self.message = message
+        self.popoverStyle = popoverStyle
         self.tintColor = tintColor
         self.accessibilityIdentifier = accessibilityIdentifier
-        self.textFields = textFields
         self.actions = actions
     }
 
     public init(
         title: String?,
         message: String?,
+        popoverStyle: ActionSheetPopoverStyle,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
-        textFields: [AlertTextField] = [],
-        actions: AlertAction...
+        actions: ActionSheetAction...
     ) {
         self.init(
             title: title,
             message: message,
+            popoverStyle: popoverStyle,
             tintColor: tintColor,
             accessibilityIdentifier: accessibilityIdentifier,
-            textFields: textFields,
-            actions: actions
-        )
-    }
-
-    public init(
-        title: String?,
-        message: String?,
-        tintColor: UIColor? = nil,
-        accessibilityIdentifier: String? = nil,
-        textFields: AlertTextField...,
-        actions: AlertAction...
-    ) {
-        self.init(
-            title: title,
-            message: message,
-            tintColor: tintColor,
-            accessibilityIdentifier: accessibilityIdentifier,
-            textFields: textFields,
             actions: actions
         )
     }
