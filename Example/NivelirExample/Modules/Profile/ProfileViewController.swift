@@ -21,7 +21,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func pickPhotoImage() { }
+    private func pickPhotoImage(sender: UIView) { }
 
     override func loadView() {
         view = ProfileView()
@@ -30,26 +30,8 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        profileView.onPhotoTapped = { [unowned self] in
-            self.pickPhotoImage()
-        }
-    }
-}
-
-extension ProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
-    func imagePickerController(
-        _ picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
-    ) {
-        guard let photoImage = (info[.editedImage] ?? info[.originalImage]) as? UIImage else {
-            return
-        }
-
-        profileView.photoImage = photoImage
-
-        screenNavigator.navigate(from: picker) { route in
-            route.presenting.dismiss()
+        profileView.onPhotoTapped = { [unowned self] sender in
+            self.pickPhotoImage(sender: sender)
         }
     }
 }

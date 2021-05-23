@@ -16,7 +16,9 @@ final class ChatViewController: UIViewController, ScreenKeyedContainer {
 
         super.init(nibName: nil, bundle: nil)
 
+        #if os(iOS)
         hidesBottomBarWhenPushed = true
+        #endif
     }
 
     required init?(coder: NSCoder) {

@@ -1,6 +1,15 @@
-platform :ios, '13.0'
+inhibit_all_warnings!
 
 target 'NivelirExample' do
+  platform :ios, '13.0'
+  use_frameworks!
+
+  pod 'Nivelir', :path => ".."
+  pod 'SnapKit'
+end
+
+target 'NivelirExample-tvOS' do
+  platform :tvos, '13.0'
   use_frameworks!
 
   pod 'Nivelir', :path => ".."

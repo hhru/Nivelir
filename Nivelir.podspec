@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage = "https://github.com/hhru/Nivelir"
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
   spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
-  spec.source = { :git => "https://github.com/hhru/Nivelir", :tag => "#{spec.version}" }
+  spec.source = { :git => "https://github.com/hhru/Nivelir.git", :tag => "#{spec.version}" }
 
   spec.swift_version = '5.1'
   spec.requires_arc = true

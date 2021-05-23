@@ -31,7 +31,10 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
         super.viewDidLoad()
 
         view.backgroundColor = Colors.background
+
+        #if os(iOS)
         tableView.separatorStyle = .none
+        #endif
 
         tableView.registerReusableCell(of: ChatListCell.self)
     }
