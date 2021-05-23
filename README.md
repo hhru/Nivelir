@@ -10,6 +10,16 @@
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
 
+``` swift
+navigator.navigate(fromTop: .stackContainer) { route in
+    route
+        .popToRoot()
+        .push(SomeScreen(color: .red))
+        .push(SomeScreen(color: .green)) { route in
+            route.present(SomeScreen(color: .blue))
+        }
+}
+```
 
 ## Contents
 - [Requirements](#requirements)
@@ -161,7 +171,7 @@ This navigation performs the following steps:
 - Presenting a blue screen on the green screen modally
 
 ### Example App
-[Example app](Example) is a sample which demonstrates that Nivelir works in practice.
+[Example app](Example) is a simple iOS and tvOS app that demonstrates how Nivelir works in practice.
 It's also a good place to start playing with the framework.
 
 To install it, run these commands in a terminal:
