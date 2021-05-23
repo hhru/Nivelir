@@ -1,4 +1,5 @@
 platform :ios, '13.0'
+inhibit_all_warnings!
 
 target 'NivelirExample' do
   use_frameworks!

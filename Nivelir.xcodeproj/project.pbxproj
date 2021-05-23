@@ -179,6 +179,20 @@
 		C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
 		C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
 		C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
+		C0BF2F20265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F1F265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift */; };
+		C0BF2F21265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F1F265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift */; };
+		C0BF2F35265A6D1F00419426 /* AlertPopoverStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F2F265A6D1F00419426 /* AlertPopoverStyle.swift */; };
+		C0BF2F36265A6D1F00419426 /* AlertPopoverStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F2F265A6D1F00419426 /* AlertPopoverStyle.swift */; };
+		C0BF2F37265A6D1F00419426 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F30265A6D1F00419426 /* Alert.swift */; };
+		C0BF2F38265A6D1F00419426 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F30265A6D1F00419426 /* Alert.swift */; };
+		C0BF2F39265A6D1F00419426 /* ScreenShowAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */; };
+		C0BF2F3A265A6D1F00419426 /* ScreenShowAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */; };
+		C0BF2F3B265A6D1F00419426 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F32265A6D1F00419426 /* AlertType.swift */; };
+		C0BF2F3C265A6D1F00419426 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F32265A6D1F00419426 /* AlertType.swift */; };
+		C0BF2F3D265A6D1F00419426 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F33265A6D1F00419426 /* AlertAction.swift */; };
+		C0BF2F3E265A6D1F00419426 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F33265A6D1F00419426 /* AlertAction.swift */; };
+		C0BF2F3F265A6D1F00419426 /* AlertPopoverSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F34265A6D1F00419426 /* AlertPopoverSource.swift */; };
+		C0BF2F40265A6D1F00419426 /* AlertPopoverSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF2F34265A6D1F00419426 /* AlertPopoverSource.swift */; };
 		C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */; };
@@ -338,6 +352,13 @@
 		C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyedContainer.swift; sourceTree = "<group>"; };
 		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		C0BF2F112659B9CC00419426 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
+		C0BF2F1F265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIUserInterfaceIdiom+Extensions.swift"; sourceTree = "<group>"; };
+		C0BF2F2F265A6D1F00419426 /* AlertPopoverStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPopoverStyle.swift; sourceTree = "<group>"; };
+		C0BF2F30265A6D1F00419426 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShowAlertAction.swift; sourceTree = "<group>"; };
+		C0BF2F32265A6D1F00419426 /* AlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		C0BF2F33265A6D1F00419426 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		C0BF2F34265A6D1F00419426 /* AlertPopoverSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPopoverSource.swift; sourceTree = "<group>"; };
 		C0C9FE8B2655DECE0074D669 /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mintfile; sourceTree = "<group>"; };
 		C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
@@ -427,6 +448,7 @@
 		C0270F3425F4A89300ECC57C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C0BF2F1F265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift */,
 				C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */,
 				C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */,
 				C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */,
@@ -482,6 +504,7 @@
 		C057F01023CB8EEB00C2D895 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C0BF2F12265A498800419426 /* Alert */,
 				C08F982125EEB9910077AE40 /* Extensions */,
 				C08F980E25EEB5A60077AE40 /* Screen */,
 				C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */,
@@ -802,6 +825,19 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		C0BF2F12265A498800419426 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C0BF2F30265A6D1F00419426 /* Alert.swift */,
+				C0BF2F33265A6D1F00419426 /* AlertAction.swift */,
+				C0BF2F34265A6D1F00419426 /* AlertPopoverSource.swift */,
+				C0BF2F2F265A6D1F00419426 /* AlertPopoverStyle.swift */,
+				C0BF2F32265A6D1F00419426 /* AlertType.swift */,
+				C0BF2F31265A6D1F00419426 /* ScreenShowAlertAction.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		C0C9FE902655E4480074D669 /* WindowProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -1087,10 +1123,12 @@
 				C062881D2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */,
 				C06287132600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C05E98952602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
+				C0BF2F3F265A6D1F00419426 /* AlertPopoverSource.swift in Sources */,
 				C06B6162262C0E930022678C /* ScreenTryResolution.swift in Sources */,
 				C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C05E99052602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */,
 				C05E987E2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */,
+				C0BF2F35265A6D1F00419426 /* AlertPopoverStyle.swift in Sources */,
 				C05E98BE2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */,
 				C0270CA525F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
 				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
@@ -1114,6 +1152,8 @@
 				C0E93305262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C062878B2600FDFC005BC0E8 /* ScreenThenable.swift in Sources */,
 				C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
+				C0BF2F37265A6D1F00419426 /* Alert.swift in Sources */,
+				C0BF2F3B265A6D1F00419426 /* AlertType.swift in Sources */,
 				C05E97FE2602BAF700A4C8B8 /* ScreenPresentedAction.swift in Sources */,
 				C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
 				C05E98EF2602D48000A4C8B8 /* ScreenStackClearModifier.swift in Sources */,
@@ -1126,11 +1166,13 @@
 				C0C9FE982655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
 				C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C0AAD9A925EEC2790087439E /* Screen.swift in Sources */,
+				C0BF2F39265A6D1F00419426 /* ScreenShowAlertAction.swift in Sources */,
 				C05E99202602D7DD00A4C8B8 /* ScreenStackPopModifier.swift in Sources */,
 				C0AAD97125EEC0160087439E /* UIViewController+ScreenContainer.swift in Sources */,
 				C05E98E42602D18B00A4C8B8 /* ScreenSetStackAction.swift in Sources */,
 				C05E98512602C72700A4C8B8 /* ScreenSetRootAction.swift in Sources */,
 				C0E932FD262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
+				C0BF2F3D265A6D1F00419426 /* AlertAction.swift in Sources */,
 				C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */,
 				C05E98602602C91500A4C8B8 /* ScreenSetupTabAction.swift in Sources */,
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
@@ -1144,6 +1186,7 @@
 				C05E984A2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C0AAD99325EEC1A50087439E /* UIWindow+ScreenContainer.swift in Sources */,
 				C0E932D7262B11200041C564 /* UIViewController+ScreenDecorableContainer.swift in Sources */,
+				C0BF2F20265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift in Sources */,
 				C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C05E98592602C84A00A4C8B8 /* ScreenSelectedTabAction.swift in Sources */,
 				C05E98132602C23900A4C8B8 /* ScreenTabsAction.swift in Sources */,
@@ -1202,10 +1245,12 @@
 				C06287142600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
+				C0BF2F40265A6D1F00419426 /* AlertPopoverSource.swift in Sources */,
 				C05E98962602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
 				C06B6163262C0E930022678C /* ScreenTryResolution.swift in Sources */,
 				C0AADB6425EF900B0087439E /* UIWindow+ScreenContainer.swift in Sources */,
 				C05E99062602D65400A4C8B8 /* ScreenStackPopPredicate.swift in Sources */,
+				C0BF2F36265A6D1F00419426 /* AlertPopoverStyle.swift in Sources */,
 				C05E987F2602CA5800A4C8B8 /* ScreenTabPredicate.swift in Sources */,
 				C05E98BF2602D05D00A4C8B8 /* ScreenStackRootAction.swift in Sources */,
 				C027107C25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
@@ -1227,7 +1272,10 @@
 				C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */,
 				C05E98FE2602D5E100A4C8B8 /* ScreenStackReplaceModifier.swift in Sources */,
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
+				C0BF2F21265A598800419426 /* UIUserInterfaceIdiom+Extensions.swift in Sources */,
 				C05E988A2602CAA500A4C8B8 /* ScreenSelectTabAction.swift in Sources */,
+				C0BF2F38265A6D1F00419426 /* Alert.swift in Sources */,
+				C0BF2F3C265A6D1F00419426 /* AlertType.swift in Sources */,
 				C062878C2600FDFC005BC0E8 /* ScreenThenable.swift in Sources */,
 				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
@@ -1240,11 +1288,13 @@
 				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C06B5825262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
+				C0BF2F3A265A6D1F00419426 /* ScreenShowAlertAction.swift in Sources */,
 				C0C9FE992655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
 				C05E994D2602E36600A4C8B8 /* ScreenLastAction.swift in Sources */,
 				C05E99212602D7DD00A4C8B8 /* ScreenStackPopModifier.swift in Sources */,
 				C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C05E98E52602D18B00A4C8B8 /* ScreenSetStackAction.swift in Sources */,
+				C0BF2F3E265A6D1F00419426 /* AlertAction.swift in Sources */,
 				C05E98522602C72700A4C8B8 /* ScreenSetRootAction.swift in Sources */,
 				C05E98612602C91500A4C8B8 /* ScreenSetupTabAction.swift in Sources */,
 				C0C9FE962655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */,
