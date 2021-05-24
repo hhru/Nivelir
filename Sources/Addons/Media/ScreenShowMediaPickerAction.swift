@@ -147,7 +147,7 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
                 return completion(.mediaPickerSourceAccessDenied(for: self))
             }
 
-            guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            guard mediaPicker.source.isAvailable else {
                 return completion(.unavailableMediaPickerSource(for: self))
             }
 
