@@ -17,6 +17,10 @@ public final class ScreenNavigator {
     private let logger: ScreenLogger?
 
     #if canImport(UIKit)
+    public var window: UIWindow? {
+        windowProvider.window
+    }
+
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
         builder: ScreenBuilder = DefaultScreenBuilder(),

@@ -481,7 +481,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C015F496265AC071003ECCB0 /* Media */ = {
+		C015F496265AC071003ECCB0 /* MediaPicker */ = {
 			isa = PBXGroup;
 			children = (
 				C015F49D265AC071003ECCB0 /* Errors */,
@@ -494,7 +494,7 @@
 				C015F49A265AC071003ECCB0 /* MediaPickerType.swift */,
 				C015F497265AC071003ECCB0 /* ScreenShowMediaPickerAction.swift */,
 			);
-			path = Media;
+			path = MediaPicker;
 			sourceTree = "<group>";
 		};
 		C015F49D265AC071003ECCB0 /* Errors */ = {
@@ -510,7 +510,7 @@
 		C015F4B9265AC07A003ECCB0 /* Addons */ = {
 			isa = PBXGroup;
 			children = (
-				C015F496265AC071003ECCB0 /* Media */,
+				C015F496265AC071003ECCB0 /* MediaPicker */,
 				C015F474265A81F9003ECCB0 /* ActionSheet */,
 				C0BF2F12265A498800419426 /* Alert */,
 			);
