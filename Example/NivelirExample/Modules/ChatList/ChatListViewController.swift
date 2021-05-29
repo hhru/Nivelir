@@ -22,8 +22,8 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
     }
 
     private func showChat(id: Int) {
-        screenNavigator.navigate(from: self) { route in
-            route.stack.push(ChatScreen(chatID: id))
+        screenNavigator.navigate(from: stack) { route in
+            route.push(ChatScreen(chatID: id))
         }
     }
 

@@ -30,20 +30,34 @@ extension ScreenThenable where Then: UINavigationController {
 
     public func pop(
         to predicate: ScreenStackPopPredicate,
-        animation: ScreenStackAnimation? = .default
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false
     ) -> Self {
         setStack(
             modifier: ScreenStackPopModifier(predicate: predicate),
-            animation: animation
+            animation: animation,
+            separated: separated
         )
     }
 
-    public func pop(animation: ScreenStackAnimation? = .default) -> Self {
-        pop(to: .previous)
+    public func pop(
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false
+    ) -> Self {
+        pop(
+            to: .previous,
+            separated: separated
+        )
     }
 
-    public func popToRoot(animation: ScreenStackAnimation? = .default) -> Self {
-        pop(to: .root)
+    public func popToRoot(
+        animation: ScreenStackAnimation? = .default,
+        separated: Bool = false
+    ) -> Self {
+        pop(
+            to: .root,
+            separated: separated
+        )
     }
 }
 

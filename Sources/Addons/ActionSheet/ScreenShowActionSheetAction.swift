@@ -15,7 +15,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
 
     private func showAlertContainer(
         _ alertContainer: UIAlertController,
-        on container: Container,
+        in container: Container,
         completion: @escaping Completion
     ) {
         container.present(alertContainer, animated: animated) {
@@ -26,13 +26,13 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
     private func showAlertContainerUsingPopover(
         _ alertContainer: UIAlertController,
         from source: ActionSheetSource,
-        on container: Container,
+        in container: Container,
         completion: @escaping Completion
     ) {
         guard let popoverPresentationController = alertContainer.popoverPresentationController else {
             return showAlertContainer(
                 alertContainer,
-                on: container,
+                in: container,
                 completion: completion
             )
         }
@@ -47,7 +47,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
 
         showAlertContainer(
             alertContainer,
-            on: container,
+            in: container,
             completion: completion
         )
     }
@@ -94,21 +94,21 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
             showAlertContainerUsingPopover(
                 alertContainer,
                 from: actionSheet.source,
-                on: container,
+                in: container,
                 completion: completion
             )
 
         case .phone, .tv, .carPlay, .unspecified:
             showAlertContainer(
                 alertContainer,
-                on: container,
+                in: container,
                 completion: completion
             )
 
         @unknown default:
             showAlertContainer(
                 alertContainer,
-                on: container,
+                in: container,
                 completion: completion
             )
         }

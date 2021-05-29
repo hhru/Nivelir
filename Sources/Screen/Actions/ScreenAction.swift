@@ -10,7 +10,7 @@ public protocol ScreenAction {
 
     func combine<Action: ScreenAction>(
         with other: Action
-    ) -> Action? where Action.Container == Container
+    ) -> AnyScreenAction<Container, Void>?
 
     func perform(
         container: Container,
@@ -27,7 +27,7 @@ extension ScreenAction {
 
     public func combine<Action: ScreenAction>(
         with other: Action
-    ) -> Action? where Action.Container == Container {
+    ) -> AnyScreenAction<Container, Void>? {
         nil
     }
 }

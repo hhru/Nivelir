@@ -21,7 +21,7 @@ internal final class AnyScreenActionBox<
 
     internal override func combine<Action: ScreenAction>(
         with other: Action
-    ) -> Action? where Action.Container == Container {
+    ) -> AnyScreenAction<Container, Void>? {
         wrapped.combine(with: other)
     }
 
