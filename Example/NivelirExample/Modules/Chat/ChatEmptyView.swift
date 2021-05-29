@@ -10,6 +10,7 @@ final class ChatEmptyView: UIView {
         get { titleLabel.text }
         set { titleLabel.text = newValue }
     }
+
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
 
@@ -20,6 +21,7 @@ final class ChatEmptyView: UIView {
         setupSubtitleLabel()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

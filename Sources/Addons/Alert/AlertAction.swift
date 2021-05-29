@@ -22,6 +22,17 @@ public struct AlertAction {
         self.enabler = enabler
         self.handler = handler
     }
+
+    public init(
+        title: String,
+        style: UIAlertAction.Style = .default,
+        enabler: Enabler? = nil,
+        handler: (() -> Void)?
+    ) {
+        self.init(title: title, style: style, enabler: enabler) { _ in
+            handler?()
+        }
+    }
 }
 
 extension AlertAction {

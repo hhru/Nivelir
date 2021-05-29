@@ -12,7 +12,7 @@ internal class AnyScreenActionBaseBox<Container: ScreenContainer, Output>: Scree
     // swiftlint:disable:next unavailable_function
     internal func combine<Action: ScreenAction>(
         with other: Action
-    ) -> Action? where Action.Container == Container {
+    ) -> AnyScreenAction<Container, Void>? {
         fatalError("\(#function) has not been implemented")
     }
 

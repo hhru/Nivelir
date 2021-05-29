@@ -17,6 +17,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         super.init(nibName: nil, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -145,14 +146,11 @@ extension Alert {
             """,
         actions: [
             AlertAction(title: "Not Now"),
-            AlertAction(
-                title: "Open Settings",
-                handler: { _ in
-                    if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(settingsURL)
-                    }
+            AlertAction(title: "Open Settings") {
+                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsURL)
                 }
-            )
+            }
         ]
     )
 
@@ -164,14 +162,11 @@ extension Alert {
             """,
         actions: [
             AlertAction(title: "Not Now"),
-            AlertAction(
-                title: "Open Settings",
-                handler: { _ in
-                    if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(settingsURL)
-                    }
+            AlertAction(title: "Open Settings") {
+                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsURL)
                 }
-            )
+            }
         ]
     )
 }

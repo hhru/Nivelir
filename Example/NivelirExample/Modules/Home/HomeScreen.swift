@@ -14,19 +14,16 @@ struct HomeScreen: Screen {
                 .setupTab(
                     with: ChatListScreen()
                         .withStackContainer()
-                        .withTabBarItem(.chats),
-                    route: { $0 }
+                        .withTabBarItem(.chats)
                 )
                 .setupTab(
                     with: ProfileScreen()
                         .withStackContainer()
-                        .withTabBarItem(.profile),
-                    route: { $0 }
+                        .withTabBarItem(.profile)
                 )
-                .selectTab(with: .index(0), route: { $0 })
+                .selectTab(with: .index(0))
         }
 
         return view
     }
 }
-

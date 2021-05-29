@@ -17,4 +17,3 @@ struct ChatScreen: Screen {
         )
     }
 }
-

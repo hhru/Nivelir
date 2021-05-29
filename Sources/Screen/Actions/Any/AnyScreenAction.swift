@@ -18,7 +18,7 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>: ScreenAction 
 
     public func combine<Action: ScreenAction>(
         with other: Action
-    ) -> Action? where Action.Container == Container {
+    ) -> AnyScreenAction<Container, Void>? {
         box.combine(with: other)
     }
 

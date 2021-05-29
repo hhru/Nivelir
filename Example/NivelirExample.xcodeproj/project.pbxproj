@@ -21,11 +21,11 @@
 		C07888E72659133500F09955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
 		C07888E9265940C600F09955 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
 		C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B5A45226625DC100D7521C /* ChatScreen.swift */; };
 		C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
 		C0BF2F59265A709700419426 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
 		C0BF2F5A265A709700419426 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E4265910AE00F09955 /* Colors.swift */; };
 		C0BF2F5B265A709700419426 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
-		C0BF2F5C265A709F00419426 /* ChatSreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */; };
 		C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
 		C0BF2F5E265A709F00419426 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */; };
 		C0BF2F5F265A70A600419426 /* ChatListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */; };
@@ -45,7 +45,6 @@
 		C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */; };
 		C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */; };
 		C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */; };
-		C0E9D2A625FC9ABB00ABDBE5 /* ChatSreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */; };
 		C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */; };
 		C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */; };
 		C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */; };
@@ -76,12 +75,12 @@
 		C07888E62659133500F09955 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C07888E8265940C600F09955 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
+		C0B5A45226625DC100D7521C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NivelirExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneRouter.swift; sourceTree = "<group>"; };
 		C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSreen.swift; sourceTree = "<group>"; };
 		C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
@@ -243,7 +242,7 @@
 		C0E9D29925FC0D3200ABDBE5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C0E9D2A525FC9ABB00ABDBE5 /* ChatSreen.swift */,
+				C0B5A45226625DC100D7521C /* ChatScreen.swift */,
 				C07888EC2659579700F09955 /* ChatEmptyView.swift */,
 				C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */,
 			);
@@ -287,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C017D14725FBAD11008B90C0 /* Build configuration list for PBXNativeTarget "NivelirExample" */;
 			buildPhases = (
+				C0B5A45126625B8900D7521C /* SwiftLint */,
 				BAA64B09CFA32C6A3C6A0330 /* [CP] Check Pods Manifest.lock */,
 				C017D12F25FBAD0F008B90C0 /* Sources */,
 				C017D13025FBAD0F008B90C0 /* Frameworks */,
@@ -457,6 +457,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0B5A45126625B8900D7521C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh ../Scripts/swiftlint.sh\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -464,8 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */,
 				C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */,
-				C0E9D2A625FC9ABB00ABDBE5 /* ChatSreen.swift in Sources */,
 				C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */,
 				C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */,
 				C07888E5265910AE00F09955 /* Colors.swift in Sources */,
@@ -491,7 +509,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */,
-				C0BF2F5C265A709F00419426 /* ChatSreen.swift in Sources */,
 				C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */,
 				C0BF2F63265A70AA00419426 /* HomeTabBarController.swift in Sources */,
 				C0BF2F6B265A70CC00419426 /* MainSceneDelegate.swift in Sources */,
