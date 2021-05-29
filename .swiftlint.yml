@@ -1,6 +1,10 @@
 included:
+  - Example
   - Sources
   - Tests
+
+excluded:
+  - "*/Pods"
 
 whitelist_rules:
   - anyobject_protocol

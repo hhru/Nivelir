@@ -17,6 +17,7 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
         title = "Chats"
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -38,6 +39,9 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
 
         tableView.registerReusableCell(of: ChatListCell.self)
     }
+}
+
+extension ChatListViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         chatCount
