@@ -23,7 +23,7 @@ public struct ScreenPopoverPresentationAnchor {
 
 extension ScreenPopoverPresentationAnchor {
 
-    public static let center = center(permittedArrowDirections: nil)
+    public static let center = Self.center(permittedArrowDirections: nil)
 
     public static func center(permittedArrowDirections: UIPopoverArrowDirection?) -> Self {
         Self(permittedArrowDirections: permittedArrowDirections)

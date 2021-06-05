@@ -1,4 +1,4 @@
-#if canImport(Nivelir)
+#if canImport(UIKit)
 import UIKit
 
 public struct ScreenPopoverPresentationDecorator<Container: UIViewController>: ScreenDecorator {

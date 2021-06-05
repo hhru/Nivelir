@@ -16,7 +16,7 @@ public struct ScreenCallAction<Container: ScreenContainer>: ScreenAction {
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        let phoneNumber = phoneNumber
+        let phoneNumber = self.phoneNumber
             .removingPercentEncoding?
             .components(separatedBy: CharacterSet(charactersIn: "+0123456789").inverted)
             .joined() ?? ""
