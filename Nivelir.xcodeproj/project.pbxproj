@@ -86,7 +86,7 @@
 		C05E19AE26699E4B00255A69 /* InvalidOpenSettingsURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19AD26699E4B00255A69 /* InvalidOpenSettingsURLError.swift */; };
 		C05E19B026699F3900255A69 /* ScreenShowDocumentPreviewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19AF26699F3900255A69 /* ScreenShowDocumentPreviewAction.swift */; };
 		C05E19B22669A28F00255A69 /* DocumentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B12669A28F00255A69 /* DocumentPreview.swift */; };
-		C05E19B42669A95100255A69 /* NSObject+ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* NSObject+ScreenPayload.swift */; };
+		C05E19B42669A95100255A69 /* ScreenPayloadContainer+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */; };
 		C05E19B72669AA1600255A69 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B62669AA1600255A69 /* UIDocumentInteractionController+ScreenPayloadContainer.swift */; };
 		C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C05E19BD266A2B9D00255A69 /* DocumentPreviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BC266A2B9D00255A69 /* DocumentPreviewManager.swift */; };
@@ -213,7 +213,7 @@
 		C06A4C89266AA61D008A7DF3 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C06A4C8A266AA632008A7DF3 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
 		C06A4C8B266AA632008A7DF3 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
-		C06A4C8C266AA641008A7DF3 /* NSObject+ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* NSObject+ScreenPayload.swift */; };
+		C06A4C8C266AA641008A7DF3 /* ScreenPayloadContainer+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */; };
 		C06A4C8F266AA729008A7DF3 /* ScreenOpenStoreAppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A4C8E266AA729008A7DF3 /* ScreenOpenStoreAppAction.swift */; };
 		C06A4C91266AAA62008A7DF3 /* InvalidStoreAppIDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A4C90266AAA62008A7DF3 /* InvalidStoreAppIDError.swift */; };
 		C06A4C93266AB918008A7DF3 /* ScreenShowStoreProductAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A4C92266AB918008A7DF3 /* ScreenShowStoreProductAction.swift */; };
@@ -368,7 +368,7 @@
 		C05E19AD26699E4B00255A69 /* InvalidOpenSettingsURLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidOpenSettingsURLError.swift; sourceTree = "<group>"; };
 		C05E19AF26699F3900255A69 /* ScreenShowDocumentPreviewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShowDocumentPreviewAction.swift; sourceTree = "<group>"; };
 		C05E19B12669A28F00255A69 /* DocumentPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreview.swift; sourceTree = "<group>"; };
-		C05E19B32669A95100255A69 /* NSObject+ScreenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ScreenPayload.swift"; sourceTree = "<group>"; };
+		C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenPayloadContainer+NSObject.swift"; sourceTree = "<group>"; };
 		C05E19B62669AA1600255A69 /* UIDocumentInteractionController+ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDocumentInteractionController+ScreenPayloadContainer.swift"; sourceTree = "<group>"; };
 		C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenVisibleContainer.swift; sourceTree = "<group>"; };
 		C05E19BC266A2B9D00255A69 /* DocumentPreviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewManager.swift; sourceTree = "<group>"; };
@@ -542,8 +542,8 @@
 		C015F485265A84B3003ECCB0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */,
 				C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */,
-				C05E19B32669A95100255A69 /* NSObject+ScreenPayload.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1382,7 +1382,7 @@
 				C06B581D262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C05E98DD2602D17200A4C8B8 /* ScreenStackModifier.swift in Sources */,
 				C05E19812669718400255A69 /* FailedOpenURLError.swift in Sources */,
-				C05E19B42669A95100255A69 /* NSObject+ScreenPayload.swift in Sources */,
+				C05E19B42669A95100255A69 /* ScreenPayloadContainer+NSObject.swift in Sources */,
 				C015F4B7265AC071003ECCB0 /* MediaPickerCameraSettings.swift in Sources */,
 				C06287FC26029CD3005BC0E8 /* ScreenNavigateAction.swift in Sources */,
 				C05E98AC2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */,
@@ -1626,7 +1626,7 @@
 				C015F4AA265AC071003ECCB0 /* MediaPickerType.swift in Sources */,
 				C062871B2600B7EA005BC0E8 /* AnyScreenAction.swift in Sources */,
 				C015F4BC265AC126003ECCB0 /* MediaPicker.swift in Sources */,
-				C06A4C8C266AA641008A7DF3 /* NSObject+ScreenPayload.swift in Sources */,
+				C06A4C8C266AA641008A7DF3 /* ScreenPayloadContainer+NSObject.swift in Sources */,
 				C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
 				C05E97ED2602B53900A4C8B8 /* ScreenDismissAction.swift in Sources */,
 				C05E984B2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */,
