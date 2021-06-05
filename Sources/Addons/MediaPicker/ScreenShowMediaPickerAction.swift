@@ -95,7 +95,6 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         let mediaPickerManager = MediaPickerManager(mediaPicker: mediaPicker)
 
         mediaPickerContainer.screenPayload.store(mediaPickerManager)
-
         mediaPickerContainer.delegate = mediaPickerManager
 
         switch mediaPicker.source {
@@ -188,7 +187,9 @@ extension ScreenThenable where Then: UIViewController {
     public func showMediaPicker(
         _ mediaPicker: MediaPicker,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<UIImagePickerController>) -> ScreenRoute<UIImagePickerController> = { $0 }
+        route: (
+            _ route: ScreenRoute<UIImagePickerController>
+        ) -> ScreenRoute<UIImagePickerController> = { $0 }
     ) -> Self {
         showMediaPicker(
             mediaPicker,
@@ -200,7 +201,9 @@ extension ScreenThenable where Then: UIViewController {
     public func showMediaPicker<Next: ScreenContainer>(
         _ mediaPicker: MediaPicker,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<UIImagePickerController>) -> ScreenChildRoute<UIImagePickerController, Next>
+        route: (
+            _ route: ScreenRoute<UIImagePickerController>
+        ) -> ScreenChildRoute<UIImagePickerController, Next>
     ) -> Self {
         showMediaPicker(
             mediaPicker,

@@ -113,7 +113,9 @@ extension ScreenThenable where Then: UIViewController {
     public func showAlert(
         _ alert: Alert,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<UIAlertController>) -> ScreenRoute<UIAlertController> = { $0 }
+        route: (
+            _ route: ScreenRoute<UIAlertController>
+        ) -> ScreenRoute<UIAlertController> = { $0 }
     ) -> Self {
         showAlert(
             alert,
@@ -125,7 +127,9 @@ extension ScreenThenable where Then: UIViewController {
     public func showAlert<Next: ScreenContainer>(
         _ alert: Alert,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<UIAlertController>) -> ScreenChildRoute<UIAlertController, Next>
+        route: (
+            _ route: ScreenRoute<UIAlertController>
+        ) -> ScreenChildRoute<UIAlertController, Next>
     ) -> Self {
         showAlert(
             alert,

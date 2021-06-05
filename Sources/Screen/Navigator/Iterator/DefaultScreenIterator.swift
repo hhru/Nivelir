@@ -205,7 +205,7 @@ public final class DefaultScreenIterator: ScreenIterator {
         iterate(
             from: container,
             while: ScreenIterationPredicate { container in
-                if container.isVisible {
+                if let container = container as? ScreenVisibleContainer, container.isVisible {
                     return .shouldContinue(suitableContainer: predicate(container) ? container : nil)
                 } else {
                     return .shouldContinue(suitableContainer: nil)

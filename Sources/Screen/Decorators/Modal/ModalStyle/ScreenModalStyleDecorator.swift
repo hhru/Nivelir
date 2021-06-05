@@ -54,15 +54,15 @@ extension Screen where Container: UIViewController {
         decorated(by: ScreenModalStyleDecorator(style: style))
     }
 
-    public func withPresentationStyle(_ style: UIModalPresentationStyle) -> AnyScreen<Container> {
+    public func withModalPresentationStyle(_ style: UIModalPresentationStyle) -> AnyScreen<Container> {
         withModalStyle(.default(presentation: style))
     }
 
-    public func withTransitionStyle(_ style: UIModalTransitionStyle) -> AnyScreen<Container> {
+    public func withModalTransitionStyle(_ style: UIModalTransitionStyle) -> AnyScreen<Container> {
         withModalStyle(.default(transition: style))
     }
 
-    public func withTransitionDelegate(
+    public func withModalTransitioningDelegate(
         _ delegate: UIViewControllerTransitioningDelegate
     ) -> AnyScreen<Container> {
         withModalStyle(.custom(delegate: delegate))

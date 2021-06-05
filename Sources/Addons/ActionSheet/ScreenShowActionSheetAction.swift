@@ -25,7 +25,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
 
     private func showAlertContainerUsingPopover(
         _ alertContainer: UIAlertController,
-        from source: ActionSheetSource,
+        from source: ScreenPopoverPresentationAnchor,
         in container: Container,
         completion: @escaping Completion
     ) {
@@ -41,7 +41,13 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
             popoverPresentationController.permittedArrowDirections = permittedArrowDirections
         }
 
-        popoverPresentationController.sourceRect = source.rect ?? .zero
+        popoverPresentationController.sourceRect = source.rect ?? CGRect(
+            x: container.view.bounds.midX,
+            y: container.view.bounds.midY,
+            width: .zero,
+            height: .zero
+        )
+
         popoverPresentationController.sourceView = source.view ?? container.view
         popoverPresentationController.barButtonItem = source.barButtonItem
 
@@ -93,7 +99,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
         case .pad, .mac:
             showAlertContainerUsingPopover(
                 alertContainer,
-                from: actionSheet.source,
+                from: actionSheet.anchor,
                 in: container,
                 completion: completion
             )
@@ -134,7 +140,9 @@ extension ScreenThenable where Then: UIViewController {
     public func showActionSheet(
         _ actionSheet: ActionSheet,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<UIAlertController>) -> ScreenRoute<UIAlertController> = { $0 }
+        route: (
+            _ route: ScreenRoute<UIAlertController>
+        ) -> ScreenRoute<UIAlertController> = { $0 }
     ) -> Self {
         showActionSheet(
             actionSheet,
@@ -146,7 +154,9 @@ extension ScreenThenable where Then: UIViewController {
     public func showActionSheet<Next: ScreenContainer>(
         _ actionSheet: ActionSheet,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<UIAlertController>) -> ScreenChildRoute<UIAlertController, Next>
+        route: (
+            _ route: ScreenRoute<UIAlertController>
+        ) -> ScreenChildRoute<UIAlertController, Next>
     ) -> Self {
         showActionSheet(
             actionSheet,

@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIWindow: ScreenContainer {
+extension UIWindow: ScreenVisibleContainer {
 
     public var isVisible: Bool {
         !isHidden
