@@ -2,6 +2,22 @@ import Foundation
 
 extension RangeReplaceableCollection {
 
+    internal mutating func prepend<T: Collection>(contentsOf collection: T) where Self.Element == T.Element {
+        insert(contentsOf: collection, at: startIndex)
+    }
+
+    internal mutating func prepend(_ element: Element) {
+        insert(element, at: startIndex)
+    }
+
+    internal func prepending<T: Collection>(contentsOf collection: T) -> Self where Self.Element == T.Element {
+        collection + self
+    }
+
+    internal func prepending(_ element: Element) -> Self {
+        prepending(contentsOf: [element])
+    }
+
     internal func appending<T: Collection>(
         contentsOf collection: T
     ) -> Self where Self.Element == T.Element {

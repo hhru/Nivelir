@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct ActionSheetSource {
+public struct ScreenPopoverPresentationAnchor {
 
     public let rect: CGRect?
     public let view: UIView?
@@ -21,9 +21,11 @@ public struct ActionSheetSource {
     }
 }
 
-extension ActionSheetSource {
+extension ScreenPopoverPresentationAnchor {
 
-    public static func center(permittedArrowDirections: UIPopoverArrowDirection? = nil) -> Self {
+    public static let center = Self.center(permittedArrowDirections: nil)
+
+    public static func center(permittedArrowDirections: UIPopoverArrowDirection?) -> Self {
         Self(permittedArrowDirections: permittedArrowDirections)
     }
 
@@ -32,7 +34,13 @@ extension ActionSheetSource {
         permittedArrowDirections: UIPopoverArrowDirection? = nil
     ) -> Self {
         Self(
-            rect: CGRect(origin: view.center, size: .zero),
+            rect: CGRect(
+                origin: CGPoint(
+                    x: view.bounds.midX,
+                    y: view.bounds.midY
+                ),
+                size: .zero
+            ),
             view: view,
             permittedArrowDirections: permittedArrowDirections
         )

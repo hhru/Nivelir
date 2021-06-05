@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol ScreenContainer {
-    var isVisible: Bool { get }
+//    var isVisible: Bool { get }
 }

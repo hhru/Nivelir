@@ -79,7 +79,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private func pickPhotoImage(sender: UIView) {
         let actionSheet = ActionSheet(
-            source: .center(of: sender),
+            anchor: .center(of: sender),
             actions: [
                 ActionSheetAction(title: "Take Photo") {
                     self.pickPhotoImageFromCamera()

@@ -194,7 +194,7 @@ collection_alignment:
   align_colons: false
 
 colon:
-  flexible_right_spacing: false
+  flexible_right_spacing: true
   apply_to_dictionaries: true
 
 conditional_returns_on_newline:
@@ -373,6 +373,7 @@ type_contents_order:
     - ib_inspectable
     - instance_property
     - initializer
+    - deinitializer
     - ib_action
     - other_method
     - view_life_cycle_method

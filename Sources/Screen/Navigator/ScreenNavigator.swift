@@ -21,6 +21,24 @@ public final class ScreenNavigator {
         windowProvider.window
     }
 
+    public var topContainer: UIViewController? {
+        window.flatMap { window in
+            topContainer(in: window) { $0 is UIViewController } as? UIViewController
+        }
+    }
+
+    public var topStackContainer: UINavigationController? {
+        window.flatMap { window in
+            topContainer(in: window) { $0 is UINavigationController } as? UINavigationController
+        }
+    }
+
+    public var topTabsContainer: UITabBarController? {
+        window.flatMap { window in
+            topContainer(in: window) { $0 is UITabBarController } as? UITabBarController
+        }
+    }
+
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
         builder: ScreenBuilder = DefaultScreenBuilder(),
