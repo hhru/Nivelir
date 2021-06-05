@@ -286,8 +286,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C017D14725FBAD11008B90C0 /* Build configuration list for PBXNativeTarget "NivelirExample" */;
 			buildPhases = (
-				C0B5A45126625B8900D7521C /* SwiftLint */,
 				BAA64B09CFA32C6A3C6A0330 /* [CP] Check Pods Manifest.lock */,
+				C0B5A45126625B8900D7521C /* SwiftLint */,
 				C017D12F25FBAD0F008B90C0 /* Sources */,
 				C017D13025FBAD0F008B90C0 /* Frameworks */,
 				C017D13125FBAD0F008B90C0 /* Resources */,
