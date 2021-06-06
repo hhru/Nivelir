@@ -56,16 +56,16 @@ public struct ScreenSelectTabAction<
             return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
+        guard let output = newSelectedTab as? Output else {
+            return completion(.containerTypeMismatch(newSelectedTab, type: Output.self, for: self))
+        }
+
         animateIfNeeded(
             container: container,
             from: selectedTab,
             to: newSelectedTab
         ) {
             container.selectedIndex = newSelectedTabIndex
-
-            guard let output = newSelectedTab as? Output else {
-                return completion(.invalidContainer(newSelectedTab, type: Output.self, for: self))
-            }
 
             completion(.success(output))
         }

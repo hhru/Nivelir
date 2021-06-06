@@ -18,7 +18,7 @@ public struct ScreenStackRootAction<
         }
 
         guard let output = stackRoot as? Output else {
-            return completion(.invalidContainer(stackRoot, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(stackRoot, type: Output.self, for: self))
         }
 
         completion(.success(output))

@@ -18,7 +18,7 @@ public struct ScreenStackTopAction<
         }
 
         guard let output = stackTop as? Output else {
-            return completion(.invalidContainer(stackTop, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(stackTop, type: Output.self, for: self))
         }
 
         completion(.success(output))

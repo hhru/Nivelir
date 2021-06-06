@@ -18,7 +18,7 @@ public struct ScreenRootAction<
         }
 
         guard let output = root as? Output else {
-            return completion(.invalidContainer(root, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(root, type: Output.self, for: self))
         }
 
         completion(.success(output))

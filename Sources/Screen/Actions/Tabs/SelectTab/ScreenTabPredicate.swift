@@ -30,7 +30,7 @@ extension ScreenTabPredicate {
         Self { tabs in
             tabs
                 .map { $0 as? ScreenKeyedContainer }
-                .firstIndex { $0?.screenName == name }
+                .firstIndex { $0?.screenKey.name == name }
         }
     }
 

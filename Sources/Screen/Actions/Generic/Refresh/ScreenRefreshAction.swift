@@ -12,7 +12,7 @@ public struct ScreenRefreshAction<Container: ScreenContainer>: ScreenAction {
         completion: @escaping Completion
     ) {
         guard let refreshableContainer = container as? ScreenRefreshableContainer else {
-            return completion(.invalidContainer(container, type: ScreenRefreshableContainer.self, for: self))
+            return completion(.containerTypeMismatch(container, type: ScreenRefreshableContainer.self, for: self))
         }
 
         refreshableContainer.refresh { completion(.success) }

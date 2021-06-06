@@ -18,7 +18,7 @@ public struct ScreenSelectedTabAction<
         }
 
         guard let output = selectedTab as? Output else {
-            return completion(.invalidContainer(selectedTab, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(selectedTab, type: Output.self, for: self))
         }
 
         completion(.success(output))

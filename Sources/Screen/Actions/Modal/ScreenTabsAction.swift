@@ -18,7 +18,7 @@ public struct ScreenTabsAction<
         }
 
         guard let output = tabs as? Output else {
-            return completion(.invalidContainer(tabs, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(tabs, type: Output.self, for: self))
         }
 
         completion(.success(output))

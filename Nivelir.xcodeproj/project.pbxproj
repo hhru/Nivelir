@@ -293,8 +293,8 @@
 		C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */; };
 		C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */; };
 		C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */; };
-		C0F9A47525FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */; };
-		C0F9A47625FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */; };
+		C0F9A47525FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */; };
+		C0F9A47625FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */; };
 		C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */; };
 		C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */; };
 /* End PBXBuildFile section */
@@ -481,7 +481,7 @@
 		C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyleDecorator.swift; sourceTree = "<group>"; };
 		C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLeftBarButtonDecorator.swift; sourceTree = "<group>"; };
 		C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
-		C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenInvalidContainerError.swift; sourceTree = "<group>"; };
+		C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerTypeMismatchError.swift; sourceTree = "<group>"; };
 		C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotFoundError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1090,7 +1090,7 @@
 			children = (
 				C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */,
 				C0AADA2F25EED85C0087439E /* ScreenError.swift */,
-				C0F9A47325FD61EB00DAE060 /* ScreenInvalidContainerError.swift */,
+				C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -1489,7 +1489,7 @@
 				C05E19B026699F3900255A69 /* ScreenShowDocumentPreviewAction.swift in Sources */,
 				C06B5804262C330500BE4762 /* DefaultScreenBuilder.swift in Sources */,
 				C015F480265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
-				C0F9A47525FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */,
+				C0F9A47525FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
 				C06287042600B66D005BC0E8 /* AnyScreenActionBaseBox.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
 				C06287F426029C85005BC0E8 /* ScreenRoute.swift in Sources */,
@@ -1631,7 +1631,7 @@
 				C05E97ED2602B53900A4C8B8 /* ScreenDismissAction.swift in Sources */,
 				C05E984B2602C70100A4C8B8 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C0C9FE9C2655E5700074D669 /* ScreenNavigator.swift in Sources */,
-				C0F9A47625FD61EB00DAE060 /* ScreenInvalidContainerError.swift in Sources */,
+				C0F9A47625FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
 				C06A4CA2266B838B008A7DF3 /* InvalidStoreProductIDError.swift in Sources */,
 				C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
@@ -1840,7 +1840,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
@@ -1869,7 +1869,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
@@ -1939,7 +1939,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;
@@ -1969,7 +1969,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0";
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;

@@ -1,9 +1,17 @@
 import Foundation
 
+/// A protocol representing the navigation action that is performed in the screen container.
 public protocol ScreenAction {
+
+    /// A type of container that the action uses for navigation.
+    ///
+    /// - SeeAlso: `ScreenContainer`
     associatedtype Container: ScreenContainer
+
+    /// The type of value returned by the action.
     associatedtype Output
 
+    /// Alias for the closure that is called after the action is completed.
     typealias Completion = (Result<Output, Error>) -> Void
 
     func cast<T>(to type: T.Type) -> T?

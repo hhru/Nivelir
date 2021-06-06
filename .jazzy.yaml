@@ -1,0 +1,9 @@
+author: Almaz Ibragimov
+author_url: https://hh.ru
+github_url: https://github.com/hhru/Nivelir
+module: Nivelir
+output: docs
+theme: fullwidth
+clean: true
+podspec: Nivelir.podspec
+xcodebuild_arguments: [-workspace, 'Nivelir.xcworkspace', -scheme, 'Nivelir iOS']

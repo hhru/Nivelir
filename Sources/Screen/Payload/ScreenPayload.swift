@@ -1,14 +1,22 @@
 import Foundation
 
+/// Payload associated with the screen container.
+///
+/// This is a helper class that is used to store navigation data
+/// that should be in memory until the screen container itself is released.
+///
+/// - SeeAlso: `ScreenPayloadContainer`
 public final class ScreenPayload {
 
-    private var bag: [Any] = []
+    private var storage: [Any] = []
 
-    public func store(_ item: Any) {
-        bag.append(item)
-    }
+    /// Creates an empty payload.
+    public init() { }
 
-    public func clear() {
-        bag.removeAll()
+    /// Stores navigation data.
+    ///
+    /// - Parameter data: Navigation data.
+    public func store(_ data: Any) {
+        storage.append(data)
     }
 }

@@ -18,7 +18,7 @@ public struct ScreenStackVisibleAction<
         }
 
         guard let output = stackVisible as? Output else {
-            return completion(.invalidContainer(stackVisible, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(stackVisible, type: Output.self, for: self))
         }
 
         completion(.success(output))

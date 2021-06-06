@@ -18,7 +18,7 @@ public struct ScreenPresentingAction<
         }
 
         guard let output = presenting as? Output else {
-            return completion(.invalidContainer(presenting, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(presenting, type: Output.self, for: self))
         }
 
         completion(.success(output))
