@@ -32,11 +32,6 @@ final class ChatViewController: UIViewController, ScreenKeyedContainer {
         chatEmptyView.title = "Chat \(chatID)"
 
         view = chatEmptyView
-
-        let firstScreen = ChatScreen(chatID: 1)
-        let secondScreen = ChatScreen(chatID: 1)
-
-        print(firstScreen.key == secondScreen.key) // Prints: "false"
     }
 }
 

@@ -9,5 +9,3 @@ gem 'xcpretty-json-formatter'
 gem "danger"
 gem 'danger-xcode_summary'
 gem 'danger-swiftlint'
-
-gem 'jazzy'
