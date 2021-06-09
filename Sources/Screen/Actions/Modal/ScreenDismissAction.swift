@@ -28,10 +28,10 @@ public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
     }
 }
 
-extension ScreenThenable where Then: UIViewController {
+extension ScreenRoute where Current: UIViewController {
 
     public func dismiss(animated: Bool = true) -> Self {
-        then(ScreenDismissAction<Then>(animated: animated))
+        then(ScreenDismissAction<Current>(animated: animated))
     }
 }
 #endif

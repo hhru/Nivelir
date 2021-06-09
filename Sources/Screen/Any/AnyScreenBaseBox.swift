@@ -15,11 +15,6 @@ internal class AnyScreenBaseBox<Container: ScreenContainer>: Screen {
     }
 
     // swiftlint:disable:next unavailable_function
-    internal func cast<T>(to type: T.Type) -> T? {
-        fatalError("\(#function) has not been implemented")
-    }
-
-    // swiftlint:disable:next unavailable_function
     internal func build(navigator: ScreenNavigator) -> Container {
         fatalError("\(#function) has not been implemented")
     }

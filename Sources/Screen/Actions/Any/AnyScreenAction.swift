@@ -1,10 +1,16 @@
 import Foundation
 
-public struct AnyScreenAction<Container: ScreenContainer, Output>: ScreenAction {
+public struct AnyScreenAction<Container: ScreenContainer, Output>:
+    ScreenAction,
+    CustomStringConvertible {
 
     public typealias Output = Output
 
     private let box: AnyScreenActionBaseBox<Container, Output>
+
+    public var description: String {
+        box.description
+    }
 
     public init<Wrapped: ScreenAction>(
         _ wrapped: Wrapped

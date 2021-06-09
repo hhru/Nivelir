@@ -19,7 +19,7 @@ public struct ScreenRefreshAction<Container: ScreenContainer>: ScreenAction {
     }
 }
 
-extension ScreenThenable {
+extension ScreenRoute {
 
     public func refresh() -> Self {
         then(ScreenRefreshAction())

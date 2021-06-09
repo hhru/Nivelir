@@ -94,47 +94,17 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
     }
 }
 
-extension ScreenThenable where Then: UIViewController {
-
-    public func showAlert<Route: ScreenThenable>(
-        _ alert: Alert,
-        animated: Bool = true,
-        route: Route
-    ) -> Self where Route.Root == UIAlertController {
-        nest(
-            action: ScreenShowAlertAction<Then>(
-                alert: alert,
-                animated: animated
-            ),
-            nested: route
-        )
-    }
+extension ScreenRoute where Current: UIViewController {
 
     public func showAlert(
         _ alert: Alert,
-        animated: Bool = true,
-        route: (
-            _ route: ScreenRoute<UIAlertController>
-        ) -> ScreenRoute<UIAlertController> = { $0 }
+        animated: Bool = true
     ) -> Self {
-        showAlert(
-            alert,
-            animated: animated,
-            route: route(.initial)
-        )
-    }
-
-    public func showAlert<Next: ScreenContainer>(
-        _ alert: Alert,
-        animated: Bool = true,
-        route: (
-            _ route: ScreenRoute<UIAlertController>
-        ) -> ScreenChildRoute<UIAlertController, Next>
-    ) -> Self {
-        showAlert(
-            alert,
-            animated: animated,
-            route: route(.initial)
+        then(
+            ScreenShowAlertAction<Current>(
+                alert: alert,
+                animated: animated
+            )
         )
     }
 }

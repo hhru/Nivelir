@@ -13,15 +13,19 @@ import Foundation
 /// To make the constructions as compact as possible,
 /// you can use aliases for `AnyScreen` with a specific type of its container:
 ///
-///     typealias AnyModalScreen = AnyScreen<UIViewController>
-///     typealias AnyStackScreen = AnyScreen<UINavigationController>
-///     typealias AnyTabsScreen = AnyScreen<UITabBarController>
+/// ``` swift
+/// typealias AnyModalScreen = AnyScreen<UIViewController>
+/// typealias AnyStackScreen = AnyScreen<UINavigationController>
+/// typealias AnyTabsScreen = AnyScreen<UITabBarController>
+/// ```
 ///
 /// You can use `eraseToAnyScreen()` method to wrap a screen with `AnyScreen`:
 ///
-///     func chatScreen(chatID: Int) -> AnyModalScreen {
-///         ChatScreen(chatID: chatID).eraseToAnyScreen()
-///     }
+/// ``` swift
+/// func chatScreen(chatID: Int) -> AnyModalScreen {
+///     ChatScreen(chatID: chatID).eraseToAnyScreen()
+/// }
+/// ```
 ///
 /// - SeeAlso: `Screen`
 public struct AnyScreen<Container: ScreenContainer>: Screen {
@@ -59,10 +63,6 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
         self.init(wrapped) { screen, navigator in
             screen.build(navigator: navigator)
         }
-    }
-
-    public func cast<T>(to type: T.Type) -> T? {
-        box.cast(to: type)
     }
 
     public func build(navigator: ScreenNavigator) -> Container {

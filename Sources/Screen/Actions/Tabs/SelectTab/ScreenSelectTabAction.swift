@@ -72,15 +72,16 @@ public struct ScreenSelectTabAction<
     }
 }
 
-extension ScreenThenable where Then: UITabBarController {
+extension ScreenRoute where Current: UITabBarController {
 
-    public func selectTab<Route: ScreenThenable>(
+    public func selectTab<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
         with predicate: ScreenTabPredicate,
         animation: ScreenTabAnimation? = nil,
-        route: Route
-    ) -> Self where Route.Root: UIViewController {
-        nest(
-            action: ScreenSelectTabAction<Then, Route.Root>(
+        route: ScreenRoute<Output, Next>
+    ) -> Self {
+        fold(
+            action: ScreenSelectTabAction<Current, Output>(
                 predicate: predicate,
                 animation: animation
             ),
@@ -92,25 +93,13 @@ extension ScreenThenable where Then: UITabBarController {
         of type: Output.Type = Output.self,
         with predicate: ScreenTabPredicate,
         animation: ScreenTabAnimation? = nil,
-        route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output> = { $0 }
+        route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible = { $0 }
     ) -> Self {
         selectTab(
+            of: type,
             with: predicate,
             animation: animation,
-            route: route(.initial)
-        )
-    }
-
-    public func selectTab<Output: UIViewController, Next: ScreenContainer>(
-        of type: Output.Type = Output.self,
-        with predicate: ScreenTabPredicate,
-        animation: ScreenTabAnimation? = nil,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
-    ) -> Self {
-        selectTab(
-            with: predicate,
-            animation: animation,
-            route: route(.initial)
+            route: route(.initial).route()
         )
     }
 }

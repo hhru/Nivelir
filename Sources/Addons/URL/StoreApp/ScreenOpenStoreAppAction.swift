@@ -34,7 +34,7 @@ public struct ScreenOpenStoreAppAction<Container: ScreenContainer>: ScreenAction
     }
 }
 
-extension ScreenThenable {
+extension ScreenRoute {
 
     public func openStoreApp(id: String, forReview: Bool = false) -> Self {
         then(

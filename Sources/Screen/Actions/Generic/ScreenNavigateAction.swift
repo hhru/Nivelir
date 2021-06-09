@@ -1,17 +1,16 @@
 import Foundation
 
-public struct ScreenNavigateAction<Route: ScreenThenable>: ScreenAction {
+public struct ScreenNavigateAction<Container: ScreenContainer>: ScreenAction {
 
-    public typealias Container = Route.Root
     public typealias Output = Void
 
-    public let route: Route
+    public let actions: [AnyScreenAction<Container, Void>]
 
-    public init(route: Route) {
-        self.route = route
+    public init(actions: [AnyScreenAction<Container, Void>]) {
+        self.actions = actions
     }
 
-    private func performRouteActions(
+    private func performActions(
         _ actions: [AnyScreenAction<Container, Void>],
         from index: Int = .zero,
         container: Container,
@@ -22,10 +21,10 @@ public struct ScreenNavigateAction<Route: ScreenThenable>: ScreenAction {
             return completion(.success)
         }
 
-        route.actions[index].perform(container: container, navigator: navigator) { result in
+        actions[index].perform(container: container, navigator: navigator) { result in
             switch result {
             case .success:
-                self.performRouteActions(
+                self.performActions(
                     actions,
                     from: index + 1,
                     container: container,
@@ -44,8 +43,8 @@ public struct ScreenNavigateAction<Route: ScreenThenable>: ScreenAction {
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        performRouteActions(
-            route.actions,
+        performActions(
+            actions,
             from: .zero,
             container: container,
             navigator: navigator,
@@ -57,32 +56,22 @@ public struct ScreenNavigateAction<Route: ScreenThenable>: ScreenAction {
 #if canImport(UIKit)
 extension ScreenNavigator {
 
-    public func navigate<Route: ScreenThenable>(
-        to route: Route,
+    public func navigate<New: ScreenContainer>(
+        to route: ScreenRoute<UIWindow, New>,
         completion: Completion? = nil
-    ) where Route.Root == UIWindow {
+    ) {
         perform(
-            action: ScreenNavigateAction(route: route),
+            action: ScreenNavigateAction(actions: route.actions),
             completion: completion
         )
     }
 
     public func navigate(
-        to route: (ScreenWindowRoute) -> ScreenWindowRoute,
+        to route: (_ route: ScreenWindowRoute) -> ScreenRouteConvertible,
         completion: Completion? = nil
     ) {
         navigate(
-            to: route(.initial),
-            completion: completion
-        )
-    }
-
-    public func navigate<Next: ScreenContainer>(
-        to route: (ScreenWindowRoute) -> ScreenChildRoute<UIWindow, Next>,
-        completion: Completion? = nil
-    ) {
-        navigate(
-            to: route(.initial),
+            to: route(.initial).route(),
             completion: completion
         )
     }

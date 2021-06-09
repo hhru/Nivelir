@@ -2,7 +2,7 @@ import Foundation
 
 /// А screen key that can be used to search for a container in the container hierarchy.
 ///
-/// Usually You don't need to create an instance of this type.
+/// Usually you don't need to create an instance of this type.
 /// It can be obtained from the `key` property of the `Screen` protocol.
 ///
 /// - SeeAlso: `Screen`.

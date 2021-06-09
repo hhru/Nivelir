@@ -25,39 +25,36 @@ public struct ScreenStackAction<
     }
 }
 
-extension ScreenThenable where Then: UIViewController {
+extension ScreenRoute where Current: UIViewController {
 
-    public var stack: ScreenChildRoute<Root, UINavigationController> {
+    public var stack: ScreenRoute<Root, UINavigationController> {
         stack(of: UINavigationController.self)
     }
 
     public func stack<Output: UINavigationController>(
         of type: Output.Type
-    ) -> ScreenChildRoute<Root, Output> {
-        nest(action: ScreenStackAction<Then, Output>())
+    ) -> ScreenRoute<Root, Output> {
+        fold(action: ScreenStackAction<Current, Output>())
     }
 
-    public func stack<Route: ScreenThenable>(
-        route: Route
-    ) -> Self where Route.Root: UINavigationController {
-        nest(
-            action: ScreenStackAction<Then, Route.Root>(),
+    public func stack<Output: UINavigationController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: ScreenRoute<Output, Next>
+    ) -> Self {
+        fold(
+            action: ScreenStackAction<Current, Output>(),
             nested: route
         )
     }
 
     public func stack<Output: UINavigationController>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
+        route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
     ) -> Self {
-        stack(route: route(.initial))
-    }
-
-    public func stack<Output: UINavigationController, Next: ScreenContainer>(
-        of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
-    ) -> Self {
-        stack(route: route(.initial))
+        stack(
+            of: type,
+            route: route(.initial).route()
+        )
     }
 }
 #endif

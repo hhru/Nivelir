@@ -21,46 +21,32 @@ public struct ScreenSetupTabAction<
     ) {
         navigator.logInfo("Setting up new tab in \(type(of: container)) with \(screen)")
 
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(output):
-                let tabs = container.viewControllers ?? []
+        let newTab = screen.build(navigator: navigator)
+        let tabs = container.viewControllers ?? []
 
-                container.viewControllers = tabs.appending(output)
+        container.viewControllers = tabs.appending(newTab)
 
-                completion(.success(output))
-
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
+        completion(.success(newTab))
     }
 }
 
-extension ScreenThenable where Then: UITabBarController {
+extension ScreenRoute where Current: UITabBarController {
 
-    public func setupTab<New: Screen, Route: ScreenThenable>(
+    public func setupTab<New: Screen, Next: ScreenContainer>(
         with screen: New,
-        route: Route
-    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
-        nest(
-            action: ScreenSetupTabAction<New, Then>(screen: screen),
+        route: ScreenRoute<New.Container, Next>
+    ) -> Self where New.Container: UIViewController {
+        fold(
+            action: ScreenSetupTabAction<New, Current>(screen: screen),
             nested: route
         )
     }
 
     public func setupTab<New: Screen>(
         with screen: New,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
+        route: (_ route: ScreenRootRoute<New.Container>) -> ScreenRouteConvertible = { $0 }
     ) -> Self where New.Container: UIViewController {
-        setupTab(with: screen, route: route(.initial))
-    }
-
-    public func setupTab<New: Screen, Next: ScreenContainer>(
-        with screen: New,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
-    ) -> Self where New.Container: UIViewController {
-        setupTab(with: screen, route: route(.initial))
+        setupTab(with: screen, route: route(.initial).route())
     }
 }
 #endif

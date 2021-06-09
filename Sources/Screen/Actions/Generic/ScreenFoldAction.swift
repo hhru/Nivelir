@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ScreenNestAction<
+public struct ScreenFoldAction<
     Action: ScreenAction,
     Nested: ScreenAction
 >: ScreenAction where Action.Output == Nested.Container {
@@ -37,58 +37,58 @@ public struct ScreenNestAction<
     }
 }
 
-extension ScreenThenable {
+extension ScreenRoute {
 
-    public func nest<Action: ScreenAction>(
+    public func fold<Action: ScreenAction>(
         action: Action
-    ) -> ScreenChildRoute<Root, Action.Output> where Action.Container == Then {
-        ScreenChildRoute { nested in
-            nest(
+    ) -> ScreenRoute<Root, Action.Output> where Action.Container == Current {
+        ScreenRoute<Root, Action.Output> { nested in
+            fold(
                 action: action,
                 nested: nested
             ).actions
         }
     }
 
-    public func nest<Action: ScreenAction, Nested: ScreenAction>(
+    public func fold<Action: ScreenAction, Nested: ScreenAction>(
         action: Action,
         nested: Nested
-    ) -> Self where Action.Container == Then, Action.Output == Nested.Container {
+    ) -> Self where Action.Container == Current, Action.Output == Nested.Container {
         then(
-            ScreenNestAction(
+            ScreenFoldAction(
                 action: action,
                 nested: nested
             )
         )
     }
 
-    public func nest<Action: ScreenAction, Nested: ScreenThenable>(
+    public func fold<Action: ScreenAction>(
         action: Action,
-        nested: Nested
-    ) -> Self where Action.Container == Then, Action.Output == Nested.Root {
-        nest(
+        nested: [AnyScreenAction<Action.Output, Void>]
+    ) -> Self where Action.Container == Current, Action.Output: ScreenContainer {
+        fold(
             action: action,
-            nested: ScreenNavigateAction(route: nested)
+            nested: ScreenNavigateAction(actions: nested)
         )
     }
 
-    public func nest<Action: ScreenAction>(
+    public func fold<Action: ScreenAction, Next: ScreenContainer>(
         action: Action,
-        nested: (ScreenRoute<Action.Output>) -> ScreenRoute<Action.Output>
-    ) -> Self where Action.Container == Then {
-        nest(
+        nested: ScreenRoute<Action.Output, Next>
+    ) -> Self where Action.Container == Current {
+        fold(
             action: action,
-            nested: nested(.initial)
+            nested: nested.actions
         )
     }
 
-    public func nest<Action: ScreenAction, Next: ScreenContainer>(
+    public func fold<Action: ScreenAction>(
         action: Action,
-        nested: (ScreenRoute<Action.Output>) -> ScreenChildRoute<Action.Output, Next>
-    ) -> Self where Action.Container == Then {
-        nest(
+        nested: (_ route: ScreenRootRoute<Action.Output>) -> ScreenRouteConvertible
+    ) -> Self where Action.Container == Current {
+        fold(
             action: action,
-            nested: nested(.initial)
+            nested: nested(.initial).route()
         )
     }
 }

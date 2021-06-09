@@ -12,7 +12,6 @@ public final class ScreenNavigator {
     private let windowProvider: ScreenWindowProvider
     #endif
 
-    private let builder: ScreenBuilder
     private let iterator: ScreenIterator
     private let logger: ScreenLogger?
 
@@ -41,36 +40,18 @@ public final class ScreenNavigator {
 
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
-        builder: ScreenBuilder = DefaultScreenBuilder(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = windowProvider
-        self.builder = builder
         self.iterator = iterator
         self.logger = logger
     }
-
-    public convenience init(
-        window: UIWindow,
-        interceptors: [ScreenInterceptor],
-        iterator: ScreenIterator = DefaultScreenIterator(),
-        logger: ScreenLogger? = DefaultScreenLogger()
-    ) {
-        self.init(
-            windowProvider: ScreenCustomWindowProvider(window: window),
-            builder: DefaultScreenBuilder(interceptors: interceptors),
-            iterator: iterator,
-            logger: logger
-        )
-    }
     #else
     public init(
-        builder: ScreenBuilder,
         iterator: ScreenIterator,
         logger: ScreenLogger?
     ) {
-        self.builder = builder
         self.iterator = iterator
         self.logger = logger
     }
@@ -108,17 +89,6 @@ public final class ScreenNavigator {
         }
     }
     #endif
-
-    public func buildScreen<New: Screen>(
-        _ screen: New,
-        completion: @escaping (_ result: Result<New.Container, Error>) -> Void
-    ) {
-        builder.buildScreen(
-            screen,
-            navigator: self,
-            completion: completion
-        )
-    }
 
     public func iterate(
         from container: ScreenContainer,

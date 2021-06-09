@@ -118,8 +118,6 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigator.logInfo("Trying to perform \(action)")
-
         action.perform(container: container, navigator: navigator) { result in
             self.performResolution(
                 actionResult: result,
@@ -131,12 +129,12 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
     }
 }
 
-extension ScreenThenable {
+extension ScreenRoute {
 
     public func `try`<Action: ScreenAction>(
         action: Action,
-        resolution: ScreenTryResolution<Then, Action.Output>
-    ) -> Self where Action.Container == Then {
+        resolution: ScreenTryResolution<Current, Action.Output>
+    ) -> Self where Action.Container == Current {
         then(
             ScreenTryAction(
                 action: action,
@@ -148,19 +146,19 @@ extension ScreenThenable {
     public func `try`<Action: ScreenAction>(
         action: Action,
         resolution: (
-            _ resolution: ScreenTryResolution<Then, Action.Output>
-        ) -> ScreenTryResolution<Then, Action.Output>
-    ) -> Self where Action.Container == Then {
+            _ resolution: ScreenTryResolution<Current, Action.Output>
+        ) -> ScreenTryResolution<Current, Action.Output>
+    ) -> Self where Action.Container == Current {
         `try`(
             action: action,
             resolution: resolution(.initial)
         )
     }
 
-    public func `try`<Action: ScreenAction, Done: ScreenThenable>(
+    public func `try`<Action: ScreenAction, Next: ScreenContainer>(
         action: Action,
-        done: @escaping (_ value: Action.Output) -> Done
-    ) -> Self where Action.Container == Then, Done.Root == Then {
+        done: @escaping (_ value: Action.Output) -> ScreenRoute<Current, Next>
+    ) -> Self where Action.Container == Current {
         `try`(action: action) { resolution in
             resolution.done(with: done)
         }
@@ -170,102 +168,48 @@ extension ScreenThenable {
         action: Action,
         done: @escaping (
             _ value: Action.Output,
-            _ route: ScreenRoute<Then>
-        ) -> ScreenRoute<Then>
-    ) -> Self where Action.Container == Then {
+            _ route: ScreenRootRoute<Current>
+        ) -> ScreenRouteConvertible
+    ) -> Self where Action.Container == Current {
         `try`(action: action) { resolution in
             resolution.done(with: done)
         }
     }
 
-    public func `try`<Action: ScreenAction, Next: ScreenContainer>(
-        action: Action,
-        done: @escaping (
-            _ value: Action.Output,
-            _ route: ScreenRoute<Then>
-        ) -> ScreenChildRoute<Then, Next>
-    ) -> Self where Action.Container == Then {
-        `try`(action: action) { resolution in
-            resolution.done(with: done)
-        }
-    }
-
-    public func `catch`<Failure: Error, Route: ScreenThenable>(
-        _ errorType: Failure.Type,
-        route: @escaping (_ error: Failure) -> Route
-    ) -> ScreenRoute<Root> where Route.Root == Root {
-        ScreenRoute(
+    public func `catch`<Next: ScreenContainer>(
+        route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
+    ) -> ScreenRootRoute<Root> {
+        ScreenRootRoute(
             action: ScreenTryAction(
-                action: ScreenNavigateAction(route: self),
-                resolution: ScreenTryResolution.initial.catch(errorType, with: route)
+                action: ScreenNavigateAction(actions: actions),
+                resolution: .initial.catch(with: route)
             )
         )
-    }
-
-    public func `catch`<Failure: Error>(
-        _ errorType: Failure.Type,
-        route: @escaping (
-            _ error: Failure,
-            _ route: ScreenRoute<Root>
-        ) -> ScreenRoute<Root>
-    ) -> ScreenRoute<Root> {
-        `catch`(errorType) { route($0, .initial) }
-    }
-
-    public func `catch`<Failure: Error, Next: ScreenContainer>(
-        _ errorType: Failure.Type,
-        route: @escaping (
-            _ error: Failure,
-            _ route: ScreenRoute<Root>
-        ) -> ScreenChildRoute<Root, Next>
-    ) -> ScreenRoute<Root> {
-        `catch`(errorType) { route($0, .initial) }
-    }
-
-    public func `catch`<Route: ScreenThenable>(
-        route: @escaping (_ error: Error) -> Route
-    ) -> ScreenRoute<Root> where Route.Root == Root {
-        `catch`(Error.self, route: route)
     }
 
     public func `catch`(
         route: @escaping (
             _ error: Error,
-            _ route: ScreenRoute<Root>
-        ) -> ScreenRoute<Root>
-    ) -> ScreenRoute<Root> {
-        `catch`(Error.self, route: route)
+            _ route: ScreenRootRoute<Root>
+        ) -> ScreenRouteConvertible
+    ) -> ScreenRootRoute<Root> {
+        `catch` { route($0, .initial).route() }
     }
 
-    public func `catch`<Next: ScreenContainer>(
-        route: @escaping (
-            _ error: Error,
-            _ route: ScreenRoute<Root>
-        ) -> ScreenChildRoute<Root, Next>
-    ) -> ScreenRoute<Root> {
-        `catch`(Error.self, route: route)
-    }
-
-    public func ensure<Route: ScreenThenable>(
-        route: Route
-    ) -> ScreenRoute<Root> where Route.Root == Root {
-        ScreenRoute(
+    public func ensure<Next: ScreenContainer>(
+        route: ScreenRoute<Root, Next>
+    ) -> ScreenRootRoute<Root> {
+        ScreenRootRoute(
             action: ScreenTryAction(
-                action: ScreenNavigateAction(route: self),
-                resolution: ScreenTryResolution.initial.ensure(with: route)
+                action: ScreenNavigateAction(actions: actions),
+                resolution: .initial.ensure(with: route)
             )
         )
     }
 
     public func ensure(
-        route: (_ route: ScreenRoute<Root>) -> ScreenRoute<Root>
-    ) -> ScreenRoute<Root> {
-        ensure(route: route(.initial))
-    }
-
-    public func ensure<Next: ScreenContainer>(
-        route: (_ route: ScreenRoute<Root>) -> ScreenChildRoute<Root, Next>
-    ) -> ScreenRoute<Root> {
-        ensure(route: route(.initial))
+        route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
+    ) -> ScreenRootRoute<Root> {
+        ensure(route: route(.initial).route())
     }
 }

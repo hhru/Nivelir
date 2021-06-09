@@ -25,39 +25,36 @@ public struct ScreenSelectedTabAction<
     }
 }
 
-extension ScreenThenable where Then: UITabBarController {
+extension ScreenRoute where Current: UITabBarController {
 
-    public var selectedTab: ScreenChildRoute<Root, UIViewController> {
+    public var selectedTab: ScreenRoute<Root, UIViewController> {
         selectedTab(of: UIViewController.self)
     }
 
     public func selectedTab<Output: UIViewController>(
         of type: Output.Type
-    ) -> ScreenChildRoute<Root, Output> {
-        nest(action: ScreenSelectedTabAction<Then, Output>())
+    ) -> ScreenRoute<Root, Output> {
+        fold(action: ScreenSelectedTabAction<Current, Output>())
     }
 
-    public func selectedTab<Route: ScreenThenable>(
-        route: Route
-    ) -> Self where Route.Root: UIViewController {
-        nest(
-            action: ScreenSelectedTabAction<Then, Route.Root>(),
+    public func selectedTab<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: ScreenRoute<Output, Next>
+    ) -> Self {
+        fold(
+            action: ScreenSelectedTabAction<Current, Output>(),
             nested: route
         )
     }
 
     public func selectedTab<Output: UIViewController>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
+        route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
     ) -> Self {
-        selectedTab(route: route(.initial))
-    }
-
-    public func selectedTab<Output: UIViewController, Next: ScreenContainer>(
-        of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
-    ) -> Self {
-        selectedTab(route: route(.initial))
+        selectedTab(
+            of: type,
+            route: route(.initial).route()
+        )
     }
 }
 #endif

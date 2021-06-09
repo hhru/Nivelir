@@ -121,47 +121,17 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
     }
 }
 
-extension ScreenThenable where Then: UIViewController {
-
-    public func showActionSheet<Route: ScreenThenable>(
-        _ actionSheet: ActionSheet,
-        animated: Bool = true,
-        route: Route
-    ) -> Self where Route.Root == UIAlertController {
-        nest(
-            action: ScreenShowActionSheetAction<Then>(
-                actionSheet: actionSheet,
-                animated: animated
-            ),
-            nested: route
-        )
-    }
+extension ScreenRoute where Current: UIViewController {
 
     public func showActionSheet(
         _ actionSheet: ActionSheet,
-        animated: Bool = true,
-        route: (
-            _ route: ScreenRoute<UIAlertController>
-        ) -> ScreenRoute<UIAlertController> = { $0 }
+        animated: Bool = true
     ) -> Self {
-        showActionSheet(
-            actionSheet,
-            animated: animated,
-            route: route(.initial)
-        )
-    }
-
-    public func showActionSheet<Next: ScreenContainer>(
-        _ actionSheet: ActionSheet,
-        animated: Bool = true,
-        route: (
-            _ route: ScreenRoute<UIAlertController>
-        ) -> ScreenChildRoute<UIAlertController, Next>
-    ) -> Self {
-        showActionSheet(
-            actionSheet,
-            animated: animated,
-            route: route(.initial)
+        then(
+            ScreenShowActionSheetAction<Current>(
+                actionSheet: actionSheet,
+                animated: animated
+            )
         )
     }
 }
