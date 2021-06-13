@@ -20,6 +20,9 @@ if [[ " ${ruby_versions[@]} " =~ " ${ruby_required_version} " ]]; then
   echo "  Required Ruby version ($ruby_required_version) already installed."
 else
   echo "  Required Ruby version ($ruby_required_version) not found. Installing..."
+
+  export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+
   assert_failure '(cd "${root_path}" && RUBY_CFLAGS="${ruby_install_flags}" rbenv install $ruby_required_version)'
   assert_warning '(cd "${root_path}" && rbenv rehash)'
 fi

@@ -11,6 +11,8 @@ fi
 
 eval "$(rbenv init -)"
 
+export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+
 if [[ " ${arguments[*]} " == *" ${update_flag} "* ]]; then
   echo "Updating ${ruby_style}Ruby gems${default_style} specified in Gemfile..."
   assert_failure '(cd "${root_path}" && bundle update)'
