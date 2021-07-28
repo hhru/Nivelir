@@ -23,24 +23,17 @@ public struct ScreenSetRootAction<
     ) {
         navigator.logInfo("Setting root of \(type(of: container)) to \(screen)")
 
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(newRoot):
-                let root = container.root
+        let newRoot = screen.build(navigator: navigator)
+        let root = container.root
 
-                container.rootViewController = newRoot
+        container.rootViewController = newRoot
 
-                guard let animation = self.animation else {
-                    return completion(.success(newRoot))
-                }
+        guard let animation = self.animation else {
+            return completion(.success(newRoot))
+        }
 
-                animation.animate(container: container, from: root, to: newRoot) {
-                    completion(.success(newRoot))
-                }
-
-            case let .failure(error):
-                completion(.failure(error))
-            }
+        animation.animate(container: container, from: root, to: newRoot) {
+            completion(.success(newRoot))
         }
     }
 }

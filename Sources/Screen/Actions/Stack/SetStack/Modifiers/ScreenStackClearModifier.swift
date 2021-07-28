@@ -11,10 +11,9 @@ public struct ScreenStackClearModifier: ScreenStackModifier {
 
     public func perform(
         in stack: [UIViewController],
-        navigator: ScreenNavigator,
-        completion: @escaping Completion
-    ) {
-        completion(.success([]))
+        navigator: ScreenNavigator
+    ) -> [UIViewController] {
+        []
     }
 }
 

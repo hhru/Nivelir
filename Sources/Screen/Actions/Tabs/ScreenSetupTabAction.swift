@@ -21,19 +21,12 @@ public struct ScreenSetupTabAction<
     ) {
         navigator.logInfo("Setting up new tab in \(type(of: container)) with \(screen)")
 
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(output):
-                let tabs = container.viewControllers ?? []
+        let newTab = screen.build(navigator: navigator)
+        let tabs = container.viewControllers ?? []
 
-                container.viewControllers = tabs.appending(output)
+        container.viewControllers = tabs.appending(newTab)
 
-                completion(.success(output))
-
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
+        completion(.success(newTab))
     }
 }
 

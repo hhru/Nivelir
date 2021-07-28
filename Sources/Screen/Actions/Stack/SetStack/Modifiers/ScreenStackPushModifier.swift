@@ -17,18 +17,9 @@ public struct ScreenStackPushModifier<
 
     public func perform(
         in stack: [UIViewController],
-        navigator: ScreenNavigator,
-        completion: @escaping Completion
-    ) {
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(output):
-                completion(.success(stack.appending(output)))
-
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
+        navigator: ScreenNavigator
+    ) -> [UIViewController] {
+        stack.appending(screen.build(navigator: navigator))
     }
 }
 

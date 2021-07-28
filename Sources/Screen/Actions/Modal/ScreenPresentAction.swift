@@ -23,16 +23,10 @@ public struct ScreenPresentAction<
     ) {
         navigator.logInfo("Presenting \(screen) on \(type(of: container))")
 
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(output):
-                container.present(output, animated: animated) {
-                    completion(.success(output))
-                }
+        let presented = screen.build(navigator: navigator)
 
-            case let .failure(error):
-                completion(.failure(error))
-            }
+        container.present(presented, animated: animated) {
+            completion(.success(presented))
         }
     }
 }
