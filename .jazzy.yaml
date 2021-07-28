@@ -20,6 +20,14 @@ custom_categories:
       - ScreenKeyedContainer
       - ScreenPayload
       - ScreenPayloadContainer
+      - AnyScreen
+      - AnyModalScreen
+      - AnyStackScreen
+      - AnyTabsScreen
+
+  - name: Actions
+    children:
+      - ScreenAction
 
   - name: Errors
     children:
@@ -66,11 +74,24 @@ custom_categories:
       - DocumentPreviewAnchor
       - ScreenShowDocumentPreviewAction
 
+  - name: MediaPicker
+    children:
+      - MediaPicker
+      - MediaPickerSource
+      - MediaPickerType
+      - MediaPickerCameraSettings
+      - MediaPickerImageExportPreset
+      - MediaPickerResult
+      - ScreenShowMediaPickerAction
+      - MediaPickerSourceAccessDeniedError
+      - UnavailableMediaPickerSourceError
+      - UnavailableMediaPickerTypesError
+
   - name: StoreProduct
     children:
-      - InvalidStoreProductIDError
-      - ScreenShowStoreProductAction
       - StoreProduct
+      - ScreenShowStoreProductAction
+      - InvalidStoreProductIDError
 
   - name: StoreReview
     children:
@@ -78,25 +99,25 @@ custom_categories:
 
   - name: URL
     children:
-      - FailedToOpenURLError
       - ScreenOpenURLAction
+      - FailedToOpenURLError
 
   - name: Call
     children:
-      - InvalidCallParametersError
       - ScreenCallAction
+      - InvalidCallParametersError
 
   - name: Mail
     children:
-      - InvalidMailParametersError
       - ScreenMailAction
+      - InvalidMailParametersError
 
   - name: OpenSettings
     children:
-      - InvalidOpenSettingsURLError
       - ScreenOpenSettingsAction
+      - InvalidOpenSettingsURLError
 
   - name: OpenStoreApp
     children:
-      - InvalidStoreAppIDError
       - ScreenOpenStoreAppAction
+      - InvalidStoreAppIDError

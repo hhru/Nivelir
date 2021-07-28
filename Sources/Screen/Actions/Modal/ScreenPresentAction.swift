@@ -1,16 +1,29 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Presents a screen modally.
 public struct ScreenPresentAction<
     New: Screen,
     Container: UIViewController
 >: ScreenAction where New.Container: UIViewController {
 
+    /// The type of value returned by the action.
     public typealias Output = New.Container
 
+    /// The screen to display over the current container’s content.
+    ///
+    /// - SeeAlso: `Screen`
     public let screen: New
+
+    /// A Boolean value indicating whether the transition will be animated.
     public let animated: Bool
 
+    /// Creates action.
+    ///
+    /// - Parameters:
+    ///   - screen: The screen to display over the current container’s content.
+    ///   - animated: A Boolean value indicating whether the transition will be animated.
+    ///               The default value is `false`.
     public init(screen: New, animated: Bool = true) {
         self.screen = screen
         self.animated = animated

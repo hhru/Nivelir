@@ -1,12 +1,20 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Dismisses the screen container that was presented modally by the container
+/// in which the action is performed.
 public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
 
+    /// The type of value returned by the action.
     public typealias Output = Void
 
+    /// A Boolean value indicating whether the transition will be animated.
     public let animated: Bool
 
+    /// Creates action.
+    ///
+    /// - Parameter animated: A Boolean value indicating whether the transition will be animated.
+    ///                       The default value is `false`.
     public init(animated: Bool = true) {
         self.animated = animated
     }
@@ -30,6 +38,12 @@ public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
 
 extension ScreenThenable where Then: UIViewController {
 
+    /// Dismisses the screen container that was presented modally by the container
+    /// in which the action is performed.
+    ///
+    /// - Parameter animated: Pass `true` to animate the transition or `false`
+    ///                       if you do not want the transition to be animated.
+    ///                       The default value is `false`.
     public func dismiss(animated: Bool = true) -> Self {
         then(ScreenDismissAction<Then>(animated: animated))
     }
