@@ -79,7 +79,7 @@ extension ScreenThenable where Then: UIViewController {
         animated: Bool = true,
         route: (
             _ route: ScreenRoute<UIDocumentInteractionController>
-        ) -> ScreenChildRoute<UIDocumentInteractionController, Next>
+        ) -> ScreenSubroute<UIDocumentInteractionController, Next>
     ) -> Self {
         showDocumentPreview(
             documentPreview,

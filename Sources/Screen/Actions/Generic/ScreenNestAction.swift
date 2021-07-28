@@ -41,8 +41,8 @@ extension ScreenThenable {
 
     public func nest<Action: ScreenAction>(
         action: Action
-    ) -> ScreenChildRoute<Root, Action.Output> where Action.Container == Then {
-        ScreenChildRoute { nested in
+    ) -> ScreenSubroute<Root, Action.Output> where Action.Container == Then {
+        ScreenSubroute { nested in
             nest(
                 action: action,
                 nested: nested
@@ -84,7 +84,7 @@ extension ScreenThenable {
 
     public func nest<Action: ScreenAction, Next: ScreenContainer>(
         action: Action,
-        nested: (ScreenRoute<Action.Output>) -> ScreenChildRoute<Action.Output, Next>
+        nested: (ScreenRoute<Action.Output>) -> ScreenSubroute<Action.Output, Next>
     ) -> Self where Action.Container == Then {
         nest(
             action: action,

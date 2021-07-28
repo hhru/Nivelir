@@ -191,8 +191,8 @@
 		C062880D26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */; };
 		C062880E26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880726029D76005BC0E8 /* ScreenStackRoute.swift */; };
 		C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880726029D76005BC0E8 /* ScreenStackRoute.swift */; };
-		C062881D2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */; };
-		C062881E2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */; };
+		C062881D2602A017005BC0E8 /* ScreenSubroute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062881C2602A017005BC0E8 /* ScreenSubroute.swift */; };
+		C062881E2602A017005BC0E8 /* ScreenSubroute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062881C2602A017005BC0E8 /* ScreenSubroute.swift */; };
 		C06288282602A315005BC0E8 /* ScreenNestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06288272602A315005BC0E8 /* ScreenNestAction.swift */; };
 		C06288292602A315005BC0E8 /* ScreenNestAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06288272602A315005BC0E8 /* ScreenNestAction.swift */; };
 		C06A4C76266A8DDE008A7DF3 /* ScreenRequestStoreReviewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A4C75266A8DDE008A7DF3 /* ScreenRequestStoreReviewAction.swift */; };
@@ -424,7 +424,7 @@
 		C062880526029D76005BC0E8 /* ScreenModalRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
 		C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
 		C062880726029D76005BC0E8 /* ScreenStackRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
-		C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenChildRoute.swift; sourceTree = "<group>"; };
+		C062881C2602A017005BC0E8 /* ScreenSubroute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSubroute.swift; sourceTree = "<group>"; };
 		C06288272602A315005BC0E8 /* ScreenNestAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNestAction.swift; sourceTree = "<group>"; };
 		C06A4C75266A8DDE008A7DF3 /* ScreenRequestStoreReviewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRequestStoreReviewAction.swift; sourceTree = "<group>"; };
 		C06A4C8E266AA729008A7DF3 /* ScreenOpenStoreAppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenOpenStoreAppAction.swift; sourceTree = "<group>"; };
@@ -926,7 +926,7 @@
 			children = (
 				C062880326029D59005BC0E8 /* Aliases */,
 				C06287F326029C85005BC0E8 /* ScreenRoute.swift */,
-				C062881C2602A017005BC0E8 /* ScreenChildRoute.swift */,
+				C062881C2602A017005BC0E8 /* ScreenSubroute.swift */,
 				C062878A2600FDFC005BC0E8 /* ScreenThenable.swift */,
 			);
 			path = Thenable;
@@ -1386,7 +1386,7 @@
 				C015F4B7265AC071003ECCB0 /* MediaPickerCameraSettings.swift in Sources */,
 				C06287FC26029CD3005BC0E8 /* ScreenNavigateAction.swift in Sources */,
 				C05E98AC2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */,
-				C062881D2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */,
+				C062881D2602A017005BC0E8 /* ScreenSubroute.swift in Sources */,
 				C06287132600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C05E98952602CDC400A4C8B8 /* ScreenRefreshableContainer.swift in Sources */,
 				C05E19A726699D9500255A69 /* ScreenMailAction.swift in Sources */,
@@ -1545,7 +1545,7 @@
 				C05E98AD2602CFB200A4C8B8 /* ScreenStackTopAction.swift in Sources */,
 				C06A4C7E266AA602008A7DF3 /* FailedToOpenURLError.swift in Sources */,
 				C015F48E265A8854003ECCB0 /* ActionSheetAction.swift in Sources */,
-				C062881E2602A017005BC0E8 /* ScreenChildRoute.swift in Sources */,
+				C062881E2602A017005BC0E8 /* ScreenSubroute.swift in Sources */,
 				C06287142600B6A8005BC0E8 /* AnyScreenActionBox.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,

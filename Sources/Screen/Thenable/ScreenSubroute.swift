@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ScreenChildRoute<
+public struct ScreenSubroute<
     Root: ScreenContainer,
     Then: ScreenContainer
 >: ScreenThenable {

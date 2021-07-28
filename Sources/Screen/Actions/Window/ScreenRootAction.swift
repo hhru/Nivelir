@@ -27,13 +27,13 @@ public struct ScreenRootAction<
 
 extension ScreenThenable where Then: UIWindow {
 
-    public var root: ScreenChildRoute<Root, UIViewController> {
+    public var root: ScreenSubroute<Root, UIViewController> {
         root(of: UIViewController.self)
     }
 
     public func root<Output: UIViewController>(
         of type: Output.Type = Output.self
-    ) -> ScreenChildRoute<Root, Output> {
+    ) -> ScreenSubroute<Root, Output> {
         nest(action: ScreenRootAction<Then, Output>())
     }
 
@@ -55,7 +55,7 @@ extension ScreenThenable where Then: UIWindow {
 
     public func root<Output: UIViewController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+        route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
         root(route: route(.initial))
     }

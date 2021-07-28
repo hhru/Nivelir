@@ -203,7 +203,7 @@ extension ScreenThenable where Then: UIViewController {
         animated: Bool = true,
         route: (
             _ route: ScreenRoute<UIImagePickerController>
-        ) -> ScreenChildRoute<UIImagePickerController, Next>
+        ) -> ScreenSubroute<UIImagePickerController, Next>
     ) -> Self {
         showMediaPicker(
             mediaPicker,

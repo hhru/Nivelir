@@ -183,7 +183,7 @@ extension ScreenThenable {
         done: @escaping (
             _ value: Action.Output,
             _ route: ScreenRoute<Then>
-        ) -> ScreenChildRoute<Then, Next>
+        ) -> ScreenSubroute<Then, Next>
     ) -> Self where Action.Container == Then {
         `try`(action: action) { resolution in
             resolution.done(with: done)
@@ -217,7 +217,7 @@ extension ScreenThenable {
         route: @escaping (
             _ error: Failure,
             _ route: ScreenRoute<Root>
-        ) -> ScreenChildRoute<Root, Next>
+        ) -> ScreenSubroute<Root, Next>
     ) -> ScreenRoute<Root> {
         `catch`(errorType) { route($0, .initial) }
     }
@@ -241,7 +241,7 @@ extension ScreenThenable {
         route: @escaping (
             _ error: Error,
             _ route: ScreenRoute<Root>
-        ) -> ScreenChildRoute<Root, Next>
+        ) -> ScreenSubroute<Root, Next>
     ) -> ScreenRoute<Root> {
         `catch`(Error.self, route: route)
     }
@@ -264,7 +264,7 @@ extension ScreenThenable {
     }
 
     public func ensure<Next: ScreenContainer>(
-        route: (_ route: ScreenRoute<Root>) -> ScreenChildRoute<Root, Next>
+        route: (_ route: ScreenRoute<Root>) -> ScreenSubroute<Root, Next>
     ) -> ScreenRoute<Root> {
         ensure(route: route(.initial))
     }

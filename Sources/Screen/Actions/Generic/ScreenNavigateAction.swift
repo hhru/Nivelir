@@ -78,7 +78,7 @@ extension ScreenNavigator {
     }
 
     public func navigate<Next: ScreenContainer>(
-        to route: (ScreenWindowRoute) -> ScreenChildRoute<UIWindow, Next>,
+        to route: (ScreenWindowRoute) -> ScreenSubroute<UIWindow, Next>,
         completion: Completion? = nil
     ) {
         navigate(

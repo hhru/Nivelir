@@ -79,7 +79,7 @@ extension ScreenThenable where Then: UINavigationController {
         with screen: New,
         animation: ScreenStackAnimation? = .default,
         separated: Bool = false,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenSubroute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         replace(
             with: screen,

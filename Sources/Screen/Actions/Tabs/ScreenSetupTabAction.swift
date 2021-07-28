@@ -58,7 +58,7 @@ extension ScreenThenable where Then: UITabBarController {
 
     public func setupTab<New: Screen, Next: ScreenContainer>(
         with screen: New,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenSubroute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         setupTab(with: screen, route: route(.initial))
     }

@@ -34,7 +34,7 @@ extension ScreenThenable {
 
     public func last<Output: ScreenContainer>(
         _ predicate: ScreenPredicate<Output>
-    ) -> ScreenChildRoute<Root, Output> {
+    ) -> ScreenSubroute<Root, Output> {
         nest(action: ScreenLastAction<Then, Output>(predicate: predicate))
     }
 
@@ -57,7 +57,7 @@ extension ScreenThenable {
 
     public func last<Output: ScreenContainer, Next: ScreenContainer>(
         _ predicate: ScreenPredicate<Output>,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+        route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
         last(predicate, route: route(.initial))
     }
@@ -91,7 +91,7 @@ extension ScreenNavigator {
 
     public func navigate<Container: ScreenContainer, Next: ScreenContainer>(
         fromLast predicate: ScreenPredicate<Container>,
-        to route: (ScreenRoute<Container>) -> ScreenChildRoute<Container, Next>,
+        to route: (ScreenRoute<Container>) -> ScreenSubroute<Container, Next>,
         completion: Completion? = nil
     ) {
         navigate(

@@ -129,7 +129,7 @@ extension ScreenThenable where Then: UIViewController {
         animated: Bool = true,
         route: (
             _ route: ScreenRoute<UIAlertController>
-        ) -> ScreenChildRoute<UIAlertController, Next>
+        ) -> ScreenSubroute<UIAlertController, Next>
     ) -> Self {
         showAlert(
             alert,

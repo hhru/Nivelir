@@ -76,7 +76,7 @@ extension ScreenThenable where Then: UIWindow {
     public func setRoot<New: Screen, Next: ScreenContainer>(
         to screen: New,
         animation: ScreenRootAnimation? = nil,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenSubroute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         setRoot(
             to: screen,

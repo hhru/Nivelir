@@ -27,13 +27,13 @@ public struct ScreenStackVisibleAction<
 
 extension ScreenThenable where Then: UINavigationController {
 
-    public var stackVisible: ScreenChildRoute<Root, UIViewController> {
+    public var stackVisible: ScreenSubroute<Root, UIViewController> {
         stackVisible(of: UIViewController.self)
     }
 
     public func stackVisible<Output: UIViewController>(
         of type: Output.Type
-    ) -> ScreenChildRoute<Root, Output> {
+    ) -> ScreenSubroute<Root, Output> {
         nest(action: ScreenStackVisibleAction<Then, Output>())
     }
 
@@ -55,7 +55,7 @@ extension ScreenThenable where Then: UINavigationController {
 
     public func stackVisible<Output: UIViewController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+        route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
         stackVisible(route: route(.initial))
     }

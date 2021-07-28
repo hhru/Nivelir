@@ -68,7 +68,7 @@ extension ScreenThenable where Then: UIViewController {
     public func present<New: Screen, Next: ScreenContainer>(
         _ screen: New,
         animated: Bool = true,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
+        route: (_ route: ScreenRoute<New.Container>) -> ScreenSubroute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         present(
             screen,

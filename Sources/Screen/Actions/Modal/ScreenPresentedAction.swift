@@ -27,13 +27,13 @@ public struct ScreenPresentedAction<
 
 extension ScreenThenable where Then: UIViewController {
 
-    public var presented: ScreenChildRoute<Root, UIViewController> {
+    public var presented: ScreenSubroute<Root, UIViewController> {
         presented(of: UIViewController.self)
     }
 
     public func presented<Output: UIViewController>(
         of type: Output.Type
-    ) -> ScreenChildRoute<Root, Output> {
+    ) -> ScreenSubroute<Root, Output> {
         nest(action: ScreenPresentedAction<Then, Output>())
     }
 
@@ -55,7 +55,7 @@ extension ScreenThenable where Then: UIViewController {
 
     public func presented<Output: UIViewController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+        route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
         presented(route: route(.initial))
     }

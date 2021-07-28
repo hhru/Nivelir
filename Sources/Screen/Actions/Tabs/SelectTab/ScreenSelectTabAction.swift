@@ -105,7 +105,7 @@ extension ScreenThenable where Then: UITabBarController {
         of type: Output.Type = Output.self,
         with predicate: ScreenTabPredicate,
         animation: ScreenTabAnimation? = nil,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+        route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
         selectTab(
             with: predicate,

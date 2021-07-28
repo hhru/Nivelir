@@ -40,7 +40,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
     }
 
     public func ensure<Next: ScreenContainer>(
-        with route: (_ route: ScreenRoute<Container>) -> ScreenChildRoute<Container, Next>
+        with route: (_ route: ScreenRoute<Container>) -> ScreenSubroute<Container, Next>
     ) -> Self {
         ensure(with: route(.initial))
     }
@@ -72,7 +72,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         with route: @escaping (
             _ value: Output,
             _ route: ScreenRoute<Container>
-        ) -> ScreenChildRoute<Container, Next>
+        ) -> ScreenSubroute<Container, Next>
     ) -> Self {
         done { route($0, .initial) }
     }
@@ -113,7 +113,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         with route: @escaping (
             _ error: Failure,
             _ route: ScreenRoute<Container>
-        ) -> ScreenChildRoute<Container, Next>
+        ) -> ScreenSubroute<Container, Next>
     ) -> Self {
         `catch`(errorType) { route($0, .initial) }
     }
@@ -137,7 +137,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         with route: @escaping (
             _ error: Error,
             _ route: ScreenRoute<Container>
-        ) -> ScreenChildRoute<Container, Next>
+        ) -> ScreenSubroute<Container, Next>
     ) -> Self {
         `catch`(Error.self, with: route)
     }

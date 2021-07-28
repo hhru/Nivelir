@@ -27,13 +27,13 @@ public struct ScreenTabsAction<
 
 extension ScreenThenable where Then: UIViewController {
 
-    public var tabs: ScreenChildRoute<Root, UITabBarController> {
+    public var tabs: ScreenSubroute<Root, UITabBarController> {
         tabs(of: UITabBarController.self)
     }
 
     public func tabs<Output: UITabBarController>(
         of type: Output.Type
-    ) -> ScreenChildRoute<Root, Output> {
+    ) -> ScreenSubroute<Root, Output> {
         nest(action: ScreenTabsAction<Then, Output>())
     }
 
@@ -55,7 +55,7 @@ extension ScreenThenable where Then: UIViewController {
 
     public func tabs<Output: UITabBarController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
+        route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
         tabs(route: route(.initial))
     }

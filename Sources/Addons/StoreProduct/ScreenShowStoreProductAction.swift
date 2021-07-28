@@ -81,7 +81,7 @@ extension ScreenThenable where Then: UIViewController {
         animated: Bool = true,
         route: (
             _ route: ScreenRoute<SKStoreProductViewController>
-        ) -> ScreenChildRoute<SKStoreProductViewController, Next>
+        ) -> ScreenSubroute<SKStoreProductViewController, Next>
     ) -> Self {
         showStoreProduct(
             storeProduct,
