@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Nivelir 1.0.0 Docs
         </a>
-         (17% documented)
+         (22% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -717,13 +717,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Casts the instance to the specified type if it&rsquo;s possible to do so.</p>
+
+<p>This method is useful for casting instances of the <code><a href="../Structs/AnyScreenAction.html">AnyScreenAction</a></code> type,
+because the standard <code>as</code> and <code>is</code> operators are unusable for them.
+For example, you can&rsquo;t do something like this:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">anyAction</span> <span class="o">=</span> <span class="kt">ScreenDismissAction</span><span class="o">&lt;</span><span class="kt">UIViewController</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="nf">eraseToAnyScreen</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">dismissAction</span> <span class="o">=</span> <span class="n">anyAction</span> <span class="k">as?</span> <span class="kt">ScreenDismissAction</span><span class="o">&lt;</span><span class="kt">UIViewController</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">dismissAction</span><span class="o">.</span><span class="n">animated</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The compiler will issue the following warning:</p>
+<pre class="highlight swift"><code><span class="kt">Cast</span> <span class="n">from</span> <span class="err">'</span><span class="kt">AnyScreenAction</span><span class="o">&lt;</span><span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span><span class="err">'</span>
+<span class="n">to</span> <span class="n">unrelated</span> <span class="n">type</span> <span class="err">'</span><span class="kt">ScreenDismissAction</span><span class="o">&lt;</span><span class="kt">UIViewController</span><span class="o">&gt;</span><span class="p">()</span><span class="err">'</span> <span class="n">always</span> <span class="n">fails</span>
+</code></pre>
+
+<p>In this case, you can use the <code>cast(to:)</code> method instead:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">dismissAction</span> <span class="o">=</span> <span class="n">anyAction</span><span class="o">.</span><span class="nf">cast</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">ScreenDismissAction</span><span class="o">&lt;</span><span class="kt">UIViewController</span><span class="o">&gt;.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">dismissAction</span><span class="o">.</span><span class="n">animated</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Default implementation uses standard type casting.
+You don&rsquo;t need to implement this method yourself.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -732,6 +755,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">cast</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to which the instance will be cast.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional value of the type you are trying to cast to.</p>
                       </div>
                     </section>
                   </div>
@@ -752,13 +798,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Сombines this action with another.</p>
+
+<p>Some navigation actions can be combined with others to form a single new action that does the same thing.
+For example, you need to push two view controllers into the navigation stack,
+this can be done by two calls to the <code>pushViewController(_:animated:)</code> method:</p>
+<pre class="highlight swift"><code><span class="n">navigationController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">firstViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">navigationController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">secondViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+<p>But such a transition will be ugly.
+It is better to combine two push actions into single call to the <code>setViewControllers(_:animated:)</code> method:</p>
+<pre class="highlight swift"><code><span class="n">navigationController</span><span class="o">.</span><span class="nf">setViewControllers</span><span class="p">([</span><span class="n">firstViewController</span><span class="p">,</span> <span class="n">secondViewController</span><span class="p">],</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+<p>You can implement combining such navigation actions in this method.
+Use the <code><a href="../Protocols/ScreenAction.html#/s:7Nivelir12ScreenActionP4cast2toqd__Sgqd__m_tlF">cast(to:)</a></code> method to check the type of navigation action from the  <code>other</code> parameter
+and return <code>nil</code> if the actions cannot be combined:</p>
+<pre class="highlight swift"><code><span class="k">guard</span> <span class="k">let</span> <span class="nv">other</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="nf">cast</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">SomeAction</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">nil</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Default implementation returns <code>nil</code>.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Protocols/ScreenAction.html#/s:7Nivelir12ScreenActionP4cast2toqd__Sgqd__m_tlF">cast(to:)</a></code></p>
+
+</div>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -769,6 +841,30 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreenAction.html">AnyScreenAction</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/ScreenAction.html#/s:7Nivelir12ScreenActionP9ContainerQa">Container</a></span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Navigation action for combining.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new navigation action that is a combination of the source actions
+       or <code>nil</code> if the combination is not possible.</p>
                       </div>
                     </section>
                   </div>
@@ -786,7 +882,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Performs action in the screen container.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -800,6 +901,50 @@
 <span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>container</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The screen container in which the navigation action is performed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>navigator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>UIViewController</code> instance to start from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called after the action is completed.
+        This closure has no return value and takes the result of the navigation action.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -872,7 +1017,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>© 2021 <a class="link" href="https://dev.hh.ru" target="_blank" rel="external">HeadHunter</a> under MIT.</p>
+      <p>© 2021 <a class="link" href="https://tech.hh.ru" target="_blank" rel="external">HeadHunter</a> under the MIT license.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -1,14 +1,14 @@
 author: Almaz Ibragimov
-author_url: https://hh.ru
+author_url: https://tech.hh.ru
 github_url: https://github.com/hhru/Nivelir
+copyright: '© 2021 [HeadHunter](https://tech.hh.ru) under the MIT license.'
 module: Nivelir
-output: Documentation
+output: docs
 theme: fullwidth
 clean: true
 podspec: Nivelir.podspec
 xcodebuild_arguments: [-workspace, 'Nivelir.xcworkspace', -scheme, 'Nivelir iOS']
 hide_unlisted_documentation: true
-copyright: '© 2021 [HeadHunter](https://dev.hh.ru) under MIT.'
 
 custom_categories:
   - name: Screen

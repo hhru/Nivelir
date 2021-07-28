@@ -296,20 +296,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/ActionSheet/ScreenShowActionSheetAction.swift",
-      "line": 89,
-      "symbol": "ScreenShowActionSheetAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/ActionSheet/ScreenShowActionSheetAction.swift",
-      "line": 89,
-      "symbol": "ScreenShowActionSheetAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/ActionSheet/ScreenShowActionSheetAction.swift",
       "line": 126,
       "symbol": "ScreenThenable.showActionSheet(_:animated:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -767,20 +753,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/Alert/ScreenShowAlertAction.swift",
       "line": 11,
       "symbol": "ScreenShowAlertAction.init(alert:animated:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/Alert/ScreenShowAlertAction.swift",
-      "line": 82,
-      "symbol": "ScreenShowAlertAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/Alert/ScreenShowAlertAction.swift",
-      "line": 82,
-      "symbol": "ScreenShowAlertAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -977,13 +949,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/DocumentPreview/ScreenShowDocumentPreviewAction.swift",
       "line": 11,
       "symbol": "ScreenShowDocumentPreviewAction.init(documentPreview:animated:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/DocumentPreview/ScreenShowDocumentPreviewAction.swift",
-      "line": 16,
-      "symbol": "ScreenShowDocumentPreviewAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1409,13 +1374,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/MediaPicker/ScreenShowMediaPickerAction.swift",
-      "line": 137,
-      "symbol": "ScreenShowMediaPickerAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/MediaPicker/ScreenShowMediaPickerAction.swift",
       "line": 173,
       "symbol": "ScreenThenable.showMediaPicker(_:animated:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -1481,13 +1439,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/StoreProduct/ScreenShowStoreProductAction.swift",
       "line": 12,
       "symbol": "ScreenShowStoreProductAction.init(storeProduct:animated:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/StoreProduct/ScreenShowStoreProductAction.swift",
-      "line": 20,
-      "symbol": "ScreenShowStoreProductAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1563,13 +1514,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/StoreReview/ScreenRequestStoreReviewAction.swift",
-      "line": 12,
-      "symbol": "ScreenRequestStoreReviewAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/StoreReview/ScreenRequestStoreReviewAction.swift",
       "line": 38,
       "symbol": "ScreenThenable.requestStoreReview()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -1614,13 +1558,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Call/ScreenCallAction.swift",
       "line": 10,
       "symbol": "ScreenCallAction.init(phoneNumber:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Call/ScreenCallAction.swift",
-      "line": 14,
-      "symbol": "ScreenCallAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1787,20 +1724,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Mail/ScreenMailAction.swift",
-      "line": 22,
-      "symbol": "ScreenMailAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Mail/ScreenMailAction.swift",
-      "line": 22,
-      "symbol": "ScreenMailAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Mail/ScreenMailAction.swift",
       "line": 54,
       "symbol": "ScreenThenable.mail(to:subject:body:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -1885,20 +1808,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/ScreenOpenURLAction.swift",
-      "line": 22,
-      "symbol": "ScreenOpenURLAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/ScreenOpenURLAction.swift",
-      "line": 22,
-      "symbol": "ScreenOpenURLAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/ScreenOpenURLAction.swift",
       "line": 41,
       "symbol": "ScreenThenable.openURL(_:fallbackURLs:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -1978,20 +1887,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Settings/ScreenOpenSettingsAction.swift",
       "line": 8,
       "symbol": "ScreenOpenSettingsAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Settings/ScreenOpenSettingsAction.swift",
-      "line": 10,
-      "symbol": "ScreenOpenSettingsAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/Settings/ScreenOpenSettingsAction.swift",
-      "line": 10,
-      "symbol": "ScreenOpenSettingsAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2109,20 +2004,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/StoreApp/ScreenOpenStoreAppAction.swift",
-      "line": 16,
-      "symbol": "ScreenOpenStoreAppAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/StoreApp/ScreenOpenStoreAppAction.swift",
-      "line": 16,
-      "symbol": "ScreenOpenStoreAppAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Addons/URL/StoreApp/ScreenOpenStoreAppAction.swift",
       "line": 39,
       "symbol": "ScreenThenable.openStoreApp(id:forReview:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -2160,48 +2041,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
       "line": 9,
       "symbol": "AnyScreenAction.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
-      "line": 15,
-      "symbol": "AnyScreenAction.cast(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
-      "line": 15,
-      "symbol": "AnyScreenAction.cast(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
-      "line": 19,
-      "symbol": "AnyScreenAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
-      "line": 19,
-      "symbol": "AnyScreenAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
-      "line": 25,
-      "symbol": "AnyScreenAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Any/AnyScreenAction.swift",
-      "line": 25,
-      "symbol": "AnyScreenAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2300,20 +2139,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenFirstAction.swift",
       "line": 10,
       "symbol": "ScreenFirstAction.init(predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenFirstAction.swift",
-      "line": 14,
-      "symbol": "ScreenFirstAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenFirstAction.swift",
-      "line": 14,
-      "symbol": "ScreenFirstAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2454,20 +2279,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenLastAction.swift",
       "line": 10,
       "symbol": "ScreenLastAction.init(predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenLastAction.swift",
-      "line": 14,
-      "symbol": "ScreenLastAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenLastAction.swift",
-      "line": 14,
-      "symbol": "ScreenLastAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2865,20 +2676,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenTopAction.swift",
-      "line": 14,
-      "symbol": "ScreenTopAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenTopAction.swift",
-      "line": 14,
-      "symbol": "ScreenTopAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Find/ScreenTopAction.swift",
       "line": 35,
       "symbol": "ScreenThenable.top(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -3005,20 +2802,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Refresh/ScreenRefreshAction.swift",
-      "line": 9,
-      "symbol": "ScreenRefreshAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Refresh/ScreenRefreshAction.swift",
-      "line": 9,
-      "symbol": "ScreenRefreshAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Refresh/ScreenRefreshAction.swift",
       "line": 24,
       "symbol": "ScreenThenable.refresh()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -3098,20 +2881,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenFromAction.swift",
       "line": 10,
       "symbol": "ScreenFromAction.init(output:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenFromAction.swift",
-      "line": 14,
-      "symbol": "ScreenFromAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenFromAction.swift",
-      "line": 14,
-      "symbol": "ScreenFromAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -3257,20 +3026,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenNavigateAction.swift",
-      "line": 42,
-      "symbol": "ScreenNavigateAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenNavigateAction.swift",
-      "line": 42,
-      "symbol": "ScreenNavigateAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenNavigateAction.swift",
       "line": 60,
       "symbol": "ScreenNavigator.navigate(to:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -3364,20 +3119,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenNestAction.swift",
       "line": 14,
       "symbol": "ScreenNestAction.init(action:nested:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenNestAction.swift",
-      "line": 19,
-      "symbol": "ScreenNestAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/ScreenNestAction.swift",
-      "line": 19,
-      "symbol": "ScreenNestAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -3518,20 +3259,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 16,
       "symbol": "ScreenTryAction.init(action:resolution:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
-      "line": 116,
-      "symbol": "ScreenTryAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
-      "line": 116,
-      "symbol": "ScreenTryAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4097,20 +3824,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenDismissAction.swift",
-      "line": 14,
-      "symbol": "ScreenDismissAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenDismissAction.swift",
-      "line": 14,
-      "symbol": "ScreenDismissAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenDismissAction.swift",
       "line": 33,
       "symbol": "ScreenThenable.dismiss(animated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -4181,20 +3894,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 19,
-      "symbol": "ScreenPresentAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 19,
-      "symbol": "ScreenPresentAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
       "line": 36,
       "symbol": "ScreenThenable.present(_:animated:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -4260,20 +3959,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
       "line": 9,
       "symbol": "ScreenPresentedAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 11,
-      "symbol": "ScreenPresentedAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 11,
-      "symbol": "ScreenPresentedAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4377,20 +4062,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
-      "line": 11,
-      "symbol": "ScreenPresentingAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
-      "line": 11,
-      "symbol": "ScreenPresentingAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
       "line": 30,
       "symbol": "ScreenThenable.presenting",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -4484,20 +4155,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenStackAction.swift",
       "line": 9,
       "symbol": "ScreenStackAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenStackAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenStackAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4601,20 +4258,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenTabsAction.swift",
-      "line": 11,
-      "symbol": "ScreenTabsAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenTabsAction.swift",
-      "line": 11,
-      "symbol": "ScreenTabsAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenTabsAction.swift",
       "line": 30,
       "symbol": "ScreenThenable.tabs",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -4684,76 +4327,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 17,
-      "symbol": "ScreenAction.cast(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 17,
-      "symbol": "ScreenAction.cast(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 19,
-      "symbol": "ScreenAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 19,
-      "symbol": "ScreenAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 23,
-      "symbol": "ScreenAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 23,
-      "symbol": "ScreenAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 32,
-      "symbol": "ScreenAction.cast(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 32,
-      "symbol": "ScreenAction.cast(to:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 36,
-      "symbol": "ScreenAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/ScreenAction.swift",
-      "line": 36,
-      "symbol": "ScreenAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackRootAction.swift",
       "line": 4,
       "symbol": "ScreenStackRootAction",
@@ -4778,20 +4351,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackRootAction.swift",
       "line": 9,
       "symbol": "ScreenStackRootAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackRootAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackRootAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackRootAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackRootAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4895,20 +4454,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackTopAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackTopAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackTopAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackTopAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackTopAction.swift",
       "line": 30,
       "symbol": "ScreenThenable.stackTop",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -5002,20 +4547,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackVisibleAction.swift",
       "line": 9,
       "symbol": "ScreenStackVisibleAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackVisibleAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackVisibleAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/ScreenStackVisibleAction.swift",
-      "line": 11,
-      "symbol": "ScreenStackVisibleAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -5973,34 +5504,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/ScreenSetStackAction.swift",
-      "line": 96,
-      "symbol": "ScreenSetStackAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/ScreenSetStackAction.swift",
-      "line": 96,
-      "symbol": "ScreenSetStackAction.combine(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/ScreenSetStackAction.swift",
-      "line": 119,
-      "symbol": "ScreenSetStackAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/ScreenSetStackAction.swift",
-      "line": 119,
-      "symbol": "ScreenSetStackAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/ScreenSetStackAction.swift",
       "line": 152,
       "symbol": "ScreenThenable.setStack(modifiers:animation:separated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -6052,20 +5555,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/ScreenSelectedTabAction.swift",
       "line": 9,
       "symbol": "ScreenSelectedTabAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/ScreenSelectedTabAction.swift",
-      "line": 11,
-      "symbol": "ScreenSelectedTabAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/ScreenSelectedTabAction.swift",
-      "line": 11,
-      "symbol": "ScreenSelectedTabAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6178,20 +5667,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/ScreenSetupTabAction.swift",
       "line": 13,
       "symbol": "ScreenSetupTabAction.init(screen:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/ScreenSetupTabAction.swift",
-      "line": 17,
-      "symbol": "ScreenSetupTabAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/ScreenSetupTabAction.swift",
-      "line": 17,
-      "symbol": "ScreenSetupTabAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -6491,20 +5966,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/SelectTab/ScreenSelectTabAction.swift",
-      "line": 42,
-      "symbol": "ScreenSelectTabAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/SelectTab/ScreenSelectTabAction.swift",
-      "line": 42,
-      "symbol": "ScreenSelectTabAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Tabs/SelectTab/ScreenSelectTabAction.swift",
       "line": 77,
       "symbol": "ScreenThenable.selectTab(with:animation:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -6682,20 +6143,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Window/ScreenRootAction.swift",
       "line": 9,
       "symbol": "ScreenRootAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Window/ScreenRootAction.swift",
-      "line": 11,
-      "symbol": "ScreenRootAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Window/ScreenRootAction.swift",
-      "line": 11,
-      "symbol": "ScreenRootAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -7018,20 +6465,6 @@
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Window/SetRoot/ScreenSetRootAction.swift",
       "line": 14,
       "symbol": "ScreenSetRootAction.init(screen:animation:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Window/SetRoot/ScreenSetRootAction.swift",
-      "line": 19,
-      "symbol": "ScreenSetRootAction.perform(container:navigator:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Window/SetRoot/ScreenSetRootAction.swift",
-      "line": 19,
-      "symbol": "ScreenSetRootAction.perform(container:navigator:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

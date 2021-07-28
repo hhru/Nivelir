@@ -165,6 +165,7 @@ public protocol Screen: CustomStringConvertible {
     ///     print(chatScreen.chatID)
     /// }
     /// ```
+    ///
     /// Default implementation uses standard type casting.
     /// You don't need to implement this method yourself.
     ///
