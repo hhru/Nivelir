@@ -2,8 +2,101 @@ author: Almaz Ibragimov
 author_url: https://hh.ru
 github_url: https://github.com/hhru/Nivelir
 module: Nivelir
-output: docs
+output: Documentation
 theme: fullwidth
 clean: true
 podspec: Nivelir.podspec
 xcodebuild_arguments: [-workspace, 'Nivelir.xcworkspace', -scheme, 'Nivelir iOS']
+hide_unlisted_documentation: true
+copyright: '© 2021 [HeadHunter](https://dev.hh.ru) under MIT.'
+
+custom_categories:
+  - name: Screen
+    children:
+      - Screen
+      - ScreenContainer
+      - ScreenVisibleContainer
+      - ScreenKey
+      - ScreenKeyedContainer
+      - ScreenPayload
+      - ScreenPayloadContainer
+
+  - name: Errors
+    children:
+      - ScreenError
+      - ScreenContainerNotFoundError
+      - ScreenContainerTypeMismatchError
+
+  - name: Navigator
+    children:
+      - ScreenNavigator
+      - ScreenLogger
+      - DefaultScreenLogger
+      - ScreenIterator
+      - DefaultScreenIterator
+      - ScreenIterationResult
+      - ScreenIterationPredicate
+      - ScreenWindowProvider
+      - ScreenKeyWindowProvider
+      - ScreenCustomWindowProvider
+
+  - name: Extensions
+    children:
+      - UIViewController
+      - UINavigationController
+      - UITabBarController
+      - UIWindow
+
+  - name: ActionSheet
+    children:
+      - ActionSheet
+      - ActionSheetAction
+      - ScreenShowActionSheetAction
+
+  - name: Alert
+    children:
+      - Alert
+      - AlertAction
+      - AlertTextField
+      - ScreenShowAlertAction
+
+  - name: DocumentPreview
+    children:
+      - DocumentPreview
+      - DocumentPreviewAnchor
+      - ScreenShowDocumentPreviewAction
+
+  - name: StoreProduct
+    children:
+      - InvalidStoreProductIDError
+      - ScreenShowStoreProductAction
+      - StoreProduct
+
+  - name: StoreReview
+    children:
+      - ScreenRequestStoreReviewAction
+
+  - name: URL
+    children:
+      - FailedToOpenURLError
+      - ScreenOpenURLAction
+
+  - name: Call
+    children:
+      - InvalidCallParametersError
+      - ScreenCallAction
+
+  - name: Mail
+    children:
+      - InvalidMailParametersError
+      - ScreenMailAction
+
+  - name: OpenSettings
+    children:
+      - InvalidOpenSettingsURLError
+      - ScreenOpenSettingsAction
+
+  - name: OpenStoreApp
+    children:
+      - InvalidStoreAppIDError
+      - ScreenOpenStoreAppAction
