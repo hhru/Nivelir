@@ -5,7 +5,7 @@ import UIKit
 /// in which the action is performed.
 ///
 /// - Note: Unlike the `dismiss(animated:completion:)` method of `UIViewController`,
-///         this navigation action hides only the presented container.
+///         this navigation action dismisses only the presented container.
 public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
 
     /// The type of value returned by the action.
@@ -45,7 +45,7 @@ extension ScreenThenable where Then: UIViewController {
     /// in which the action is performed.
     ///
     /// - Note: Unlike the `dismiss(animated:completion:)` method of `UIViewController`,
-    ///         this navigation action hides only the presented container.
+    ///         this navigation action dismisses only the presented container.
     ///
     /// Usage examples
     /// ==============
