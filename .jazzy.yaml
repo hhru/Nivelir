@@ -28,6 +28,23 @@ custom_categories:
   - name: Actions
     children:
       - ScreenAction
+      - AnyScreenAction
+      - ScreenDismissAction
+      - ScreenPresentAction
+      - ScreenPresentedAction
+      - ScreenPresentingAction
+      - ScreenStackAction
+      - ScreenTabsAction
+
+  - name: Routes
+    children:
+      - ScreenThenable
+      - ScreenRoute
+      - ScreenSubroute
+      - ScreenModalRoute
+      - ScreenStackRoute
+      - ScreenTabsRoute
+      - ScreenWindowRoute
 
   - name: Errors
     children:

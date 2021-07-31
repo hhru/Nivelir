@@ -3,6 +3,9 @@ import UIKit
 
 /// Dismisses the screen container that was presented modally by the container
 /// in which the action is performed.
+///
+/// - Note: Unlike the `dismiss(animated:completion:)` method of `UIViewController`,
+///         this navigation action hides only the presented container.
 public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
 
     /// The type of value returned by the action.
@@ -41,9 +44,20 @@ extension ScreenThenable where Then: UIViewController {
     /// Dismisses the screen container that was presented modally by the container
     /// in which the action is performed.
     ///
+    /// - Note: Unlike the `dismiss(animated:completion:)` method of `UIViewController`,
+    ///         this navigation action hides only the presented container.
+    ///
+    /// Usage examples
+    /// ==============
+    ///
+    /// ``` swift
+    /// navigator.navigate(from: container) { $0.dismiss() }
+    /// ```
+    ///
     /// - Parameter animated: Pass `true` to animate the transition or `false`
     ///                       if you do not want the transition to be animated.
     ///                       The default value is `false`.
+    /// - Returns: An instance containing the new navigation action.
     public func dismiss(animated: Bool = true) -> Self {
         then(ScreenDismissAction<Then>(animated: animated))
     }

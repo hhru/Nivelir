@@ -3781,146 +3781,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 49,
-      "symbol": "ScreenThenable.present(_:animated:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 49,
-      "symbol": "ScreenThenable.present(_:animated:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 63,
-      "symbol": "ScreenThenable.present(_:animated:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 63,
-      "symbol": "ScreenThenable.present(_:animated:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 75,
-      "symbol": "ScreenThenable.present(_:animated:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentAction.swift",
-      "line": 75,
-      "symbol": "ScreenThenable.present(_:animated:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 4,
-      "symbol": "ScreenPresentedAction",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 4,
-      "symbol": "ScreenPresentedAction",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 9,
-      "symbol": "ScreenPresentedAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 9,
-      "symbol": "ScreenPresentedAction.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 30,
-      "symbol": "ScreenThenable.presented",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 30,
-      "symbol": "ScreenThenable.presented",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 34,
-      "symbol": "ScreenThenable.presented(of:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 34,
-      "symbol": "ScreenThenable.presented(of:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 40,
-      "symbol": "ScreenThenable.presented(route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 40,
-      "symbol": "ScreenThenable.presented(route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 49,
-      "symbol": "ScreenThenable.presented(of:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 49,
-      "symbol": "ScreenThenable.presented(of:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 56,
-      "symbol": "ScreenThenable.presented(of:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentedAction.swift",
-      "line": 56,
-      "symbol": "ScreenThenable.presented(of:route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
       "line": 4,
       "symbol": "ScreenPresentingAction",
@@ -3979,41 +3839,41 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
       "line": 40,
-      "symbol": "ScreenThenable.presenting(route:)",
+      "symbol": "ScreenThenable.presenting(of:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
       "line": 40,
-      "symbol": "ScreenThenable.presenting(route:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
-      "line": 49,
       "symbol": "ScreenThenable.presenting(of:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
-      "line": 49,
+      "line": 50,
       "symbol": "ScreenThenable.presenting(of:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
-      "line": 56,
+      "line": 50,
       "symbol": "ScreenThenable.presenting(of:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
-      "line": 56,
+      "line": 57,
+      "symbol": "ScreenThenable.presenting(of:route:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Modal/ScreenPresentingAction.swift",
+      "line": 57,
       "symbol": "ScreenThenable.presenting(of:route:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -8766,20 +8626,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
-      "line": 28,
-      "symbol": "ScreenThenable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
-      "line": 28,
-      "symbol": "ScreenThenable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
       "line": 29,
       "symbol": "ScreenThenable",
       "symbol_kind": "source.lang.swift.decl.extension",
@@ -8788,6 +8634,20 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
       "line": 29,
+      "symbol": "ScreenThenable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
+      "line": 31,
+      "symbol": "ScreenThenable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
+      "line": 31,
       "symbol": "ScreenThenable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -8885,20 +8745,6 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
-      "line": 39,
-      "symbol": "ScreenThenable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
-      "line": 39,
-      "symbol": "ScreenThenable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
       "line": 40,
       "symbol": "ScreenThenable",
       "symbol_kind": "source.lang.swift.decl.extension",
@@ -8928,6 +8774,20 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
       "line": 41,
+      "symbol": "ScreenThenable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
+      "line": 42,
+      "symbol": "ScreenThenable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Thenable/ScreenThenable.swift",
+      "line": 42,
       "symbol": "ScreenThenable",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"

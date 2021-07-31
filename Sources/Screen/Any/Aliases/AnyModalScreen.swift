@@ -6,7 +6,7 @@ import UIKit
 /// - SeeAlso: `AnyScreen`
 public typealias AnyModalScreen = AnyScreen<UIViewController>
 
-extension AnyModalScreen {
+extension AnyScreen where Container == UIViewController {
 
     /// Creates a type-erasing screen to wrap the provided screen.
     ///

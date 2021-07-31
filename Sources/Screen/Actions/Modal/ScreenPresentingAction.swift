@@ -37,7 +37,8 @@ extension ScreenThenable where Then: UIViewController {
         nest(action: ScreenPresentingAction<Then, Output>())
     }
 
-    public func presenting<Route: ScreenThenable>(
+    public func presenting<Output: UIViewController, Route: ScreenThenable>(
+        of type: Output.Type = Output.self,
         route: Route
     ) -> Self where Route.Root: UIViewController {
         nest(
@@ -50,14 +51,14 @@ extension ScreenThenable where Then: UIViewController {
         of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
     ) -> Self {
-        presenting(route: route(.initial))
+        presenting(of: type, route: route(.initial))
     }
 
     public func presenting<Output: UIViewController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
         route: (_ route: ScreenRoute<Output>) -> ScreenSubroute<Output, Next>
     ) -> Self {
-        presenting(route: route(.initial))
+        presenting(of: type, route: route(.initial))
     }
 }
 #endif
