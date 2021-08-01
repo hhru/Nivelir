@@ -1,0 +1,157 @@
+author: Almaz Ibragimov
+author_url: https://tech.hh.ru
+github_url: https://github.com/hhru/Nivelir
+copyright: '© 2021 [HeadHunter](https://tech.hh.ru) under the MIT license.'
+module: Nivelir
+output: docs
+theme: fullwidth
+clean: true
+podspec: Nivelir.podspec
+xcodebuild_arguments: [-workspace, 'Nivelir.xcworkspace', -scheme, 'Nivelir iOS']
+hide_unlisted_documentation: true
+
+custom_categories:
+  - name: Screen
+    children:
+      - Screen
+      - ScreenContainer
+      - ScreenVisibleContainer
+      - ScreenKey
+      - ScreenKeyedContainer
+      - ScreenPayload
+      - ScreenPayloadContainer
+      - AnyScreen
+      - AnyModalScreen
+      - AnyStackScreen
+      - AnyTabsScreen
+
+  - name: Actions
+    children:
+      - ScreenAction
+      - AnyScreenAction
+
+      - ScreenFoldAction
+      - ScreenFromAction
+      - ScreenNavigateAction
+      - ScreenWaitAction
+
+      - ScreenPredicate
+      - ScreenFirstAction
+      - ScreenLastAction
+      - ScreenTopAction
+
+      - ScreenRefreshAction
+      - ScreenRefreshableContainer
+
+      - ScreenTryAction
+      - ScreenTryResolution
+
+      - ScreenDismissAction
+      - ScreenPresentAction
+      - ScreenPresentedAction
+      - ScreenPresentingAction
+      - ScreenStackAction
+      - ScreenTabsAction
+
+  - name: Routes
+    children:
+      - ScreenRoute
+      - ScreenRouteConvertible
+      - ScreenRootRoute
+      - ScreenModalRoute
+      - ScreenStackRoute
+      - ScreenTabsRoute
+      - ScreenWindowRoute
+
+  - name: Errors
+    children:
+      - ScreenError
+      - ScreenContainerNotFoundError
+      - ScreenContainerTypeMismatchError
+
+  - name: Navigator
+    children:
+      - ScreenNavigator
+      - ScreenLogger
+      - DefaultScreenLogger
+      - ScreenIterator
+      - DefaultScreenIterator
+      - ScreenIterationResult
+      - ScreenIterationPredicate
+      - ScreenWindowProvider
+      - ScreenKeyWindowProvider
+      - ScreenCustomWindowProvider
+
+  - name: Extensions
+    children:
+      - UIViewController
+      - UINavigationController
+      - UITabBarController
+      - UIWindow
+
+  - name: ActionSheet
+    children:
+      - ActionSheet
+      - ActionSheetAction
+      - ScreenShowActionSheetAction
+
+  - name: Alert
+    children:
+      - Alert
+      - AlertAction
+      - AlertTextField
+      - ScreenShowAlertAction
+
+  - name: DocumentPreview
+    children:
+      - DocumentPreview
+      - DocumentPreviewAnchor
+      - ScreenShowDocumentPreviewAction
+
+  - name: MediaPicker
+    children:
+      - MediaPicker
+      - MediaPickerSource
+      - MediaPickerType
+      - MediaPickerCameraSettings
+      - MediaPickerImageExportPreset
+      - MediaPickerResult
+      - ScreenShowMediaPickerAction
+      - MediaPickerSourceAccessDeniedError
+      - UnavailableMediaPickerSourceError
+      - UnavailableMediaPickerTypesError
+
+  - name: StoreProduct
+    children:
+      - StoreProduct
+      - ScreenShowStoreProductAction
+      - InvalidStoreProductIDError
+
+  - name: StoreReview
+    children:
+      - ScreenRequestStoreReviewAction
+
+  - name: URL
+    children:
+      - ScreenOpenURLAction
+      - FailedToOpenURLError
+
+  - name: Call
+    children:
+      - ScreenCallAction
+      - InvalidCallParametersError
+
+  - name: Mail
+    children:
+      - ScreenMailAction
+      - InvalidMailParametersError
+
+  - name: OpenSettings
+    children:
+      - ScreenOpenSettingsAction
+      - InvalidOpenSettingsURLError
+
+  - name: OpenStoreApp
+    children:
+      - ScreenOpenStoreAppAction
+      - InvalidStoreAppIDError

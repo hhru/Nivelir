@@ -30,19 +30,19 @@ public struct ScreenFirstAction<
     }
 }
 
-extension ScreenThenable {
+extension ScreenRoute {
 
     public func first<Output: ScreenContainer>(
         _ predicate: ScreenPredicate<Output>
-    ) -> ScreenChildRoute<Root, Output> {
-        nest(action: ScreenFirstAction<Then, Output>(predicate: predicate))
+    ) -> ScreenRoute<Root, Output> {
+        fold(action: ScreenFirstAction<Current, Output>(predicate: predicate))
     }
 
-    public func first<Output, Route: ScreenThenable>(
+    public func first<Output: ScreenContainer, Next: ScreenContainer>(
         _ predicate: ScreenPredicate<Output>,
-        route: Route
-    ) -> Self where Route.Root == Output {
-        nest(
+        route: ScreenRoute<Output, Next>
+    ) -> Self {
+        fold(
             action: ScreenFirstAction(predicate: predicate),
             nested: route
         )
@@ -50,55 +50,8 @@ extension ScreenThenable {
 
     public func first<Output: ScreenContainer>(
         _ predicate: ScreenPredicate<Output>,
-        route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
+        route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
     ) -> Self {
-        first(predicate, route: route(.initial))
-    }
-
-    public func first<Output: ScreenContainer, Next: ScreenContainer>(
-        _ predicate: ScreenPredicate<Output>,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
-    ) -> Self {
-        first(predicate, route: route(.initial))
+        first(predicate, route: route(.initial).route())
     }
 }
-
-#if canImport(UIKit)
-extension ScreenNavigator {
-
-    public func navigate<Container, Route: ScreenThenable>(
-        fromFirst predicate: ScreenPredicate<Container>,
-        to route: Route,
-        completion: Completion? = nil
-    ) where Route.Root == Container {
-        navigate(
-            to: { $0.first(predicate, route: route) },
-            completion: completion
-        )
-    }
-
-    public func navigate<Container: ScreenContainer>(
-        fromFirst predicate: ScreenPredicate<Container>,
-        to route: (ScreenRoute<Container>) -> ScreenRoute<Container>,
-        completion: Completion? = nil
-    ) {
-        navigate(
-            fromFirst: predicate,
-            to: route(.initial),
-            completion: completion
-        )
-    }
-
-    public func navigate<Container: ScreenContainer, Next: ScreenContainer>(
-        fromFirst predicate: ScreenPredicate<Container>,
-        to route: (ScreenRoute<Container>) -> ScreenChildRoute<Container, Next>,
-        completion: Completion? = nil
-    ) {
-        navigate(
-            fromFirst: predicate,
-            to: route(.initial),
-            completion: completion
-        )
-    }
-}
-#endif

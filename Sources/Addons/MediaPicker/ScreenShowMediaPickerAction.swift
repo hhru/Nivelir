@@ -168,15 +168,15 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
     }
 }
 
-extension ScreenThenable where Then: UIViewController {
+extension ScreenRoute where Current: UIViewController {
 
-    public func showMediaPicker<Route: ScreenThenable>(
+    public func showMediaPicker<Next: ScreenContainer>(
         _ mediaPicker: MediaPicker,
         animated: Bool = true,
-        route: Route
-    ) -> Self where Route.Root == UIImagePickerController {
-        nest(
-            action: ScreenShowMediaPickerAction<Then>(
+        route: ScreenRoute<UIImagePickerController, Next>
+    ) -> Self {
+        fold(
+            action: ScreenShowMediaPickerAction<Current>(
                 mediaPicker: mediaPicker,
                 animated: animated
             ),
@@ -188,27 +188,13 @@ extension ScreenThenable where Then: UIViewController {
         _ mediaPicker: MediaPicker,
         animated: Bool = true,
         route: (
-            _ route: ScreenRoute<UIImagePickerController>
-        ) -> ScreenRoute<UIImagePickerController> = { $0 }
+            _ route: ScreenRootRoute<UIImagePickerController>
+        ) -> ScreenRouteConvertible = { $0 }
     ) -> Self {
         showMediaPicker(
             mediaPicker,
             animated: animated,
-            route: route(.initial)
-        )
-    }
-
-    public func showMediaPicker<Next: ScreenContainer>(
-        _ mediaPicker: MediaPicker,
-        animated: Bool = true,
-        route: (
-            _ route: ScreenRoute<UIImagePickerController>
-        ) -> ScreenChildRoute<UIImagePickerController, Next>
-    ) -> Self {
-        showMediaPicker(
-            mediaPicker,
-            animated: animated,
-            route: route(.initial)
+            route: route(.initial).route()
         )
     }
 }

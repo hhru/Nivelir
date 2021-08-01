@@ -65,14 +65,20 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         screenNavigator.navigate(from: self) { route in
             route
                 .showMediaPicker(mediaPicker)
-                .catch(MediaPickerSourceAccessDeniedError.self) { _, route in
-                    route.showAlert(.photoLibraryPermissionRequired)
-                }
-                .catch(UnavailableMediaPickerSourceError.self) { _, route in
-                    route.showAlert(.unavailableMediaSource)
-                }
-                .catch(UnavailableMediaPickerTypesError.self) { _, route in
-                    route.showAlert(.unavailableMediaTypes)
+                .catch { error, route in
+                    switch error {
+                    case is MediaPickerSourceAccessDeniedError:
+                        return route.showAlert(.photoLibraryPermissionRequired)
+
+                    case is UnavailableMediaPickerSourceError:
+                        return route.showAlert(.unavailableMediaSource)
+
+                    case is UnavailableMediaPickerTypesError:
+                        return route.showAlert(.unavailableMediaTypes)
+
+                    default:
+                        return route
+                    }
                 }
         }
     }

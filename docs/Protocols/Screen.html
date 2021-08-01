@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Screen Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/Screen" class="dashAnchor"></a>
+
+    <a title="Screen Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Nivelir 1.0.0 Docs
+        </a>
+         (30% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/hhru/Nivelir">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Nivelir Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      Screen Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Screen.html">Screen</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Screen.html">Screen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenVisibleContainer.html">ScreenVisibleContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenKey.html">ScreenKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenKeyedContainer.html">ScreenKeyedContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScreenPayload.html">ScreenPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenPayloadContainer.html">ScreenPayloadContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AnyScreen.html">AnyScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/AnyModalScreen.html">AnyModalScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/AnyStackScreen.html">AnyStackScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Screen.html#/s:7Nivelir13AnyTabsScreena">AnyTabsScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/AnyTabsScreen.html">AnyTabsScreen</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Actions.html">Actions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenAction.html">ScreenAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AnyScreenAction.html">AnyScreenAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenFoldAction.html">ScreenFoldAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenFromAction.html">ScreenFromAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenNavigateAction.html">ScreenNavigateAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenWaitAction.html">ScreenWaitAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenPredicate.html">ScreenPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenFirstAction.html">ScreenFirstAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenLastAction.html">ScreenLastAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTopAction.html">ScreenTopAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenRefreshAction.html">ScreenRefreshAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenRefreshableContainer.html">ScreenRefreshableContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTryAction.html">ScreenTryAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTryResolution.html">ScreenTryResolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenDismissAction.html">ScreenDismissAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenPresentAction.html">ScreenPresentAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenPresentedAction.html">ScreenPresentedAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenPresentingAction.html">ScreenPresentingAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackAction.html">ScreenStackAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTabsAction.html">ScreenTabsAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Routes.html">Routes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenRoute.html">ScreenRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ScreenRoute.html">ScreenRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Routes.html#/s:7Nivelir16ScreenModalRouteAA0bD0VySo16UIViewControllerCAFGvp">ScreenModalRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Routes.html#/s:7Nivelir16ScreenStackRouteAA0bD0VySo22UINavigationControllerCAFGvp">ScreenStackRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Routes.html#/s:7Nivelir15ScreenTabsRouteAA0bD0VySo18UITabBarControllerCAFGvp">ScreenTabsRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Routes.html#/s:7Nivelir17ScreenWindowRouteAA0bD0VySo8UIWindowCAFGvp">ScreenWindowRoute</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Errors.html">Errors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Errors.html#/s:7Nivelir11ScreenErrorP">ScreenError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenContainerNotFoundError.html">ScreenContainerNotFoundError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenContainerTypeMismatchError.html">ScreenContainerTypeMismatchError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Navigator.html">Navigator</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScreenNavigator.html">ScreenNavigator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenLogger.html">ScreenLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DefaultScreenLogger.html">DefaultScreenLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenIterator.html">ScreenIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DefaultScreenIterator.html">DefaultScreenIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenIterationResult.html">ScreenIterationResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenIterationPredicate.html">ScreenIterationPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenWindowProvider.html">ScreenWindowProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenKeyWindowProvider.html">ScreenKeyWindowProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenCustomWindowProvider.html">ScreenCustomWindowProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UITabBarController.html">UITabBarController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../ActionSheet.html">ActionSheet</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ActionSheet.html">ActionSheet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ActionSheetAction.html">ActionSheetAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowActionSheetAction.html">ScreenShowActionSheetAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Alert.html">Alert</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Alert.html">Alert</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AlertTextField.html">AlertTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowAlertAction.html">ScreenShowAlertAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../DocumentPreview.html">DocumentPreview</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DocumentPreview.html">DocumentPreview</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DocumentPreview.html">DocumentPreview</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DocumentPreviewAnchor.html">DocumentPreviewAnchor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DocumentPreviewAnchor.html">DocumentPreviewAnchor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowDocumentPreviewAction.html">ScreenShowDocumentPreviewAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowDocumentPreviewAction.html">ScreenShowDocumentPreviewAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../MediaPicker.html">MediaPicker</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPicker.html">MediaPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPicker.html">MediaPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MediaPickerSource.html">MediaPickerSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MediaPickerSource.html">MediaPickerSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MediaPickerType.html">MediaPickerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MediaPickerType.html">MediaPickerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPickerCameraSettings.html">MediaPickerCameraSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPickerCameraSettings.html">MediaPickerCameraSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MediaPickerImageExportPreset.html">MediaPickerImageExportPreset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MediaPickerImageExportPreset.html">MediaPickerImageExportPreset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPickerResult.html">MediaPickerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPickerResult.html">MediaPickerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowMediaPickerAction.html">ScreenShowMediaPickerAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowMediaPickerAction.html">ScreenShowMediaPickerAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPickerSourceAccessDeniedError.html">MediaPickerSourceAccessDeniedError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MediaPickerSourceAccessDeniedError.html">MediaPickerSourceAccessDeniedError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UnavailableMediaPickerSourceError.html">UnavailableMediaPickerSourceError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UnavailableMediaPickerSourceError.html">UnavailableMediaPickerSourceError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UnavailableMediaPickerTypesError.html">UnavailableMediaPickerTypesError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UnavailableMediaPickerTypesError.html">UnavailableMediaPickerTypesError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../StoreProduct.html">StoreProduct</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/StoreProduct.html">StoreProduct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/StoreProduct.html">StoreProduct</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowStoreProductAction.html">ScreenShowStoreProductAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenShowStoreProductAction.html">ScreenShowStoreProductAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidStoreProductIDError.html">InvalidStoreProductIDError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidStoreProductIDError.html">InvalidStoreProductIDError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../StoreReview.html">StoreReview</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenRequestStoreReviewAction.html">ScreenRequestStoreReviewAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../URL.html">URL</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenOpenURLAction.html">ScreenOpenURLAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Call.html">Call</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenCallAction.html">ScreenCallAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenCallAction.html">ScreenCallAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidCallParametersError.html">InvalidCallParametersError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidCallParametersError.html">InvalidCallParametersError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Mail.html">Mail</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenMailAction.html">ScreenMailAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidMailParametersError.html">InvalidMailParametersError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../OpenSettings.html">OpenSettings</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenOpenSettingsAction.html">ScreenOpenSettingsAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidOpenSettingsURLError.html">InvalidOpenSettingsURLError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../OpenStoreApp.html">OpenStoreApp</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenOpenStoreAppAction.html">ScreenOpenStoreAppAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/InvalidStoreAppIDError.html">InvalidStoreAppIDError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenModalStyle.html">ScreenModalStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenRootAnimation.html">ScreenRootAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenStackAnimation.html">ScreenStackAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenTabAnimation.html">ScreenTabAnimation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Extensions.html#/MediaPickerManager">MediaPickerManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Extensions.html#/UIDocumentInteractionController">UIDocumentInteractionController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other%20Extensions.html#/c:objc(cs)UIDocumentInteractionController">UIDocumentInteractionController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenDecorator.html">ScreenDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenRootCustomAnimation.html">ScreenRootCustomAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenStackCustomAnimation.html">ScreenStackCustomAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenStackModifier.html">ScreenStackModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenTabCustomAnimation.html">ScreenTabCustomAnimation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FailedOpenURLError.html">FailedOpenURLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenLeftBarButtonDecorator.html">ScreenLeftBarButtonDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenModalStyleDecorator.html">ScreenModalStyleDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenPopoverPresentationAnchor.html">ScreenPopoverPresentationAnchor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenPopoverPresentationDecorator.html">ScreenPopoverPresentationDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenRightBarButtonDecorator.html">ScreenRightBarButtonDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenRootAction.html">ScreenRootAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenRootTransitionAnimation.html">ScreenRootTransitionAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenSelectTabAction.html">ScreenSelectTabAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenSelectedTabAction.html">ScreenSelectedTabAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenSetRootAction.html">ScreenSetRootAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenSetStackAction.html">ScreenSetStackAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenSetupTabAction.html">ScreenSetupTabAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackClearModifier.html">ScreenStackClearModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackContainerDecorator.html">ScreenStackContainerDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackDecorator.html">ScreenStackDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackPopModifier.html">ScreenStackPopModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackPopPredicate.html">ScreenStackPopPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackPushModifier.html">ScreenStackPushModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackReplaceModifier.html">ScreenStackReplaceModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackRootAction.html">ScreenStackRootAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackTopAction.html">ScreenStackTopAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackTransitionAnimation.html">ScreenStackTransitionAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenStackVisibleAction.html">ScreenStackVisibleAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTabBarItemDecorator.html">ScreenTabBarItemDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTabPredicate.html">ScreenTabPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTabTransitionAnimation.html">ScreenTabTransitionAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenTabsDecorator.html">ScreenTabsDecorator</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>Screen</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Screen</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>A protocol for a factory that builds a screen module and returns its container.</p>
+
+<p>This protocol provides a universal interface for building a screen module,
+independent of its architectural pattern: MVC, VIPER, MVVM, etc.</p>
+
+<p>Since the factory is the external entry point to the screen,
+the factory is called the <code>Screen</code> for convenience.</p>
+<h1 id='external-parameters' class='heading'>External Parameters</h1>
+
+<p>Most screens require some external parameters for their configuration.
+All such parameters should be declared as properties of the implementation of this protocol.</p>
+
+<p>For example, a chat screen requires a chat ID:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ChatViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">chatID</span><span class="p">:</span> <span class="kt">Int</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">chatID</span> <span class="o">=</span> <span class="n">chatID</span>
+
+        <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">nibName</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Then the implementation of its factory might look like this:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ChatScreen</span><span class="p">:</span> <span class="kt">Screen</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">chatID</span><span class="p">:</span> <span class="kt">Int</span>
+
+    <span class="kd">func</span> <span class="nf">build</span><span class="p">(</span><span class="nv">navigator</span><span class="p">:</span> <span class="kt">ScreenNavigator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+        <span class="kt">ChatViewController</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="n">chatID</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>To create this chat screen, you will need to pass the ID to the initializer:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chatScreen</span> <span class="o">=</span> <span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="mi">123</span><span class="p">)</span>
+
+<span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">fromTop</span><span class="p">:</span> <span class="o">.</span><span class="n">stack</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span><span class="o">.</span><span class="nf">push</span><span class="p">(</span><span class="n">chatScreen</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h1 id='screen-key' class='heading'>Screen Key</h1>
+
+<p>Each screen has the <code>name</code> and <code>traits</code> properties, which are used to create a screen key.
+You can use this key to create a container that can be found in the hierarchy.
+Just conform your view controller to the <code><a href="../Protocols/ScreenKeyedContainer.html">ScreenKeyedContainer</a></code> protocol and initialize it with this key.
+See the <code><a href="../Protocols/ScreenKeyedContainer.html">ScreenKeyedContainer</a></code> protocol for an example of this approach.</p>
+
+<p>Default implementation of the <code>name</code> property returns type name:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chatScreen</span> <span class="o">=</span> <span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="mi">123</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">chatScreen</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Prints: "ChatScreen"</span>
+</code></pre>
+
+<p>Usually you don&rsquo;t need to implement the <code>name</code> property yourself.
+If you want to distinguish between screens of the same type, implement the <code>traits</code>property.
+For example, chat screens may be different if they have different chat IDs.
+In this case, the <code>traits</code> property must include the chat ID:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ChatScreen</span><span class="p">:</span> <span class="kt">Screen</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">chatID</span><span class="p">:</span> <span class="kt">Int</span>
+
+    <span class="k">var</span> <span class="nv">traits</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">AnyHashable</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">chatID</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">build</span><span class="p">(</span><span class="nv">navigator</span><span class="p">:</span> <span class="kt">ScreenNavigator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+        <span class="kt">ChatViewController</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="n">chatID</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Then the keys for 2 screens with different chat ID will not be equal:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">firstScreen</span> <span class="o">=</span> <span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">secondScreen</span> <span class="o">=</span> <span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">firstScreen</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">secondScreen</span><span class="o">.</span><span class="n">key</span><span class="p">)</span> <span class="c1">// Prints: "false"</span>
+</code></pre>
+<h1 id='simple-screens' class='heading'>Simple Screens</h1>
+
+<p>If your screen consists only of a view controller, implementing a factory can be an extra complication.
+In this case, you can conform your view controller to the <code>Screen</code> protocol:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SimpleViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">Screen</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre>
+
+<p>The default implementation will return <code>self</code> in the <code>build(navigator:)</code> method,
+and an instance of this controller can be used as a factory in navigation:</p>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">fromTop</span><span class="p">:</span> <span class="o">.</span><span class="n">stack</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span><span class="o">.</span><span class="nf">push</span><span class="p">(</span><span class="kt">SimpleViewController</span><span class="p">())</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/ScreenKey.html">ScreenKey</a></code>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></code>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/AnyScreen.html">AnyScreen</a></code>
+
+</div>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenP9ContainerQa"></a>
+                    <a name="//apple_ref/swift/Alias/Container" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenP9ContainerQa">Container</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A type of container that the screen uses for navigation.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenP4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenP4nameSSvp">name</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Screen name.</p>
+
+<p>Default implementation returns type name.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenP6traitsShys11AnyHashableVGvp"></a>
+                    <a name="//apple_ref/swift/Property/traits" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenP6traitsShys11AnyHashableVGvp">traits</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Screen traits that are used to distinguish screens with the same name.</p>
+
+<p>Default implementation returns empty set.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">traits</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">AnyHashable</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenP5build9navigator9ContainerQzAA0B9NavigatorC_tF"></a>
+                    <a name="//apple_ref/swift/Method/build(navigator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenP5build9navigator9ContainerQzAA0B9NavigatorC_tF">build(navigator:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Builds the screen module and returns its container.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">build</span><span class="p">(</span><span class="nv">navigator</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>navigator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The navigator instance that the screen should use for its own navigation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Container instance.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAAE010eraseToAnyB0AA0eB0Vy9ContainerQzGyF"></a>
+                    <a name="//apple_ref/swift/Method/eraseToAnyScreen()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAAE010eraseToAnyB0AA0eB0Vy9ContainerQzGyF">eraseToAnyScreen()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps this screen with a type eraser.</p>
+
+<p>Use <code>eraseToAnyScreen()</code> to expose an instance of <code><a href="../Structs/AnyScreen.html">AnyScreen</a></code>, rather than this screen’s actual type.
+This form of type erasure preserves abstraction across API boundaries, such as different modules.
+When you expose your screens as the <code><a href="../Structs/AnyScreen.html">AnyScreen</a></code> type,
+you can change the underlying implementation over time without affecting existing clients.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Structs/AnyScreen.html">AnyScreen</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">eraseToAnyScreen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Structs/AnyScreen.html">AnyScreen</a></code> wrapping this screen.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAAE9decorated2byAA03AnyB0Vy6OutputQyd__Gqd___tAA0B9DecoratorRd__9ContainerQyd__ALRtzlF"></a>
+                    <a name="//apple_ref/swift/Method/decorated(by:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAAE9decorated2byAA03AnyB0Vy6OutputQyd__Gqd___tAA0B9DecoratorRd__9ContainerQyd__ALRtzlF">decorated(by:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">decorated</span><span class="o">&lt;</span><span class="kt">Decorator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenDecorator.html">ScreenDecorator</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">by</span> <span class="nv">decorator</span><span class="p">:</span> <span class="kt">Decorator</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt">Decorator</span><span class="o">.</span><span class="kt">Output</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span> <span class="o">==</span> <span class="kt">Decorator</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAAE3keyAA0B3KeyVvp"></a>
+                    <a name="//apple_ref/swift/Property/key" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAAE3keyAA0B3KeyVvp">key</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Screen key that can be used to search for a container in the container hierarchy.</p>
+
+<p>This key can be used to create a container of the <code><a href="../Protocols/ScreenKeyedContainer.html">ScreenKeyedContainer</a></code> type.
+Default implementation creates key using the values of the <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP4nameSSvp">name</a></code> and <code>key</code> properties.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Protocols/ScreenKeyedContainer.html">ScreenKeyedContainer</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScreenKey.html">ScreenKey</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Container%60%3A%20%60UIViewController%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Container`: `UIViewController`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UIViewController%60"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UIViewController</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE015eraseToAnyModalB0AA0hB0VyAEGyF"></a>
+                    <a name="//apple_ref/swift/Method/eraseToAnyModalScreen()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE015eraseToAnyModalB0AA0hB0VyAEGyF">eraseToAnyModalScreen()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps this screen with a type eraser.</p>
+
+<p>Use <code>eraseToAnyModalScreen()</code> to expose an instance of <code><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></code>, rather than this screen’s actual type.
+This form of type erasure preserves abstraction across API boundaries, such as different modules.
+When you expose your screens as the <code><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></code> type,
+you can change the underlying implementation over time without affecting existing clients.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></code></p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Structs/AnyScreen.html">AnyScreen</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">eraseToAnyModalScreen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></code> wrapping this screen.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Container%60%3A%20%60UINavigationController%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Container`: `UINavigationController`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UINavigationController%60"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UINavigationController</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE015eraseToAnyStackB0AA0hB0VyAEGyF"></a>
+                    <a name="//apple_ref/swift/Method/eraseToAnyStackScreen()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE015eraseToAnyStackB0AA0hB0VyAEGyF">eraseToAnyStackScreen()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps this screen with a type eraser.</p>
+
+<p>Use <code>eraseToAnyStackScreen()</code> to expose an instance of <code><a href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a></code>, rather than this screen’s actual type.
+This form of type erasure preserves abstraction across API boundaries, such as different modules.
+When you expose your screens as the <code><a href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a></code> type,
+you can change the underlying implementation over time without affecting existing clients.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a></code></p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Structs/AnyScreen.html">AnyScreen</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">eraseToAnyStackScreen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a></code> wrapping this screen.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Container%60%3A%20%60UITabBarController%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Container`: `UITabBarController`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UITabBarController%60"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UITabBarController</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE014eraseToAnyTabsB0AA0iB0VyAEGyF"></a>
+                    <a name="//apple_ref/swift/Method/eraseToAnyTabsScreen()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE014eraseToAnyTabsB0AA0iB0VyAEGyF">eraseToAnyTabsScreen()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps this screen with a type eraser.</p>
+
+<p>Use <code>eraseToAnyTabsScreen()</code> to expose an instance of <code><a href="../Screen.html#/s:7Nivelir13AnyTabsScreena">AnyTabsScreen</a></code>, rather than this screen’s actual type.
+This form of type erasure preserves abstraction across API boundaries, such as different modules.
+When you expose your screens as the <code><a href="../Screen.html#/s:7Nivelir13AnyTabsScreena">AnyTabsScreen</a></code> type,
+you can change the underlying implementation over time without affecting existing clients.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Screen.html#/s:7Nivelir13AnyTabsScreena">AnyTabsScreen</a></code></p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Structs/AnyScreen.html">AnyScreen</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">eraseToAnyTabsScreen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir13AnyTabsScreena">AnyTabsScreen</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Screen.html#/s:7Nivelir13AnyTabsScreena">AnyTabsScreen</a></code> wrapping this screen.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Container%60%3A%20%60UIViewController%602"></a>
+                <a name="//apple_ref/swift/Section/Available where `Container`: `UIViewController`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UIViewController%602"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UIViewController</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE14withModalStyleyAA03AnyB0VyAGGAA0bgH0OF"></a>
+                    <a name="//apple_ref/swift/Method/withModalStyle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE14withModalStyleyAA03AnyB0VyAGGAA0bgH0OF">withModalStyle(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withModalStyle</span><span class="p">(</span><span class="n">_</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScreenModalStyle.html">ScreenModalStyle</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE26withModalPresentationStyleyAA03AnyB0VyAGGSo07UIModalhI0VF"></a>
+                    <a name="//apple_ref/swift/Method/withModalPresentationStyle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE26withModalPresentationStyleyAA03AnyB0VyAGGSo07UIModalhI0VF">withModalPresentationStyle(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withModalPresentationStyle</span><span class="p">(</span><span class="n">_</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIModalPresentationStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE24withModalTransitionStyleyAA03AnyB0VyAGGSo07UIModalhI0VF"></a>
+                    <a name="//apple_ref/swift/Method/withModalTransitionStyle(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE24withModalTransitionStyleyAA03AnyB0VyAGGSo07UIModalhI0VF">withModalTransitionStyle(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withModalTransitionStyle</span><span class="p">(</span><span class="n">_</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIModalTransitionStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE30withModalTransitioningDelegateyAA03AnyB0VyAGGSo0cdhI0_pF"></a>
+                    <a name="//apple_ref/swift/Method/withModalTransitioningDelegate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE30withModalTransitioningDelegateyAA03AnyB0VyAGGSo0cdhI0_pF">withModalTransitioningDelegate(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withModalTransitioningDelegate</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">UIViewControllerTransitioningDelegate</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE23withPopoverPresentation6anchorAA03AnyB0VyAGGAA0bgH6AnchorV_tF"></a>
+                    <a name="//apple_ref/swift/Method/withPopoverPresentation(anchor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE23withPopoverPresentation6anchorAA03AnyB0VyAGGAA0bgH6AnchorV_tF">withPopoverPresentation(anchor:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withPopoverPresentation</span><span class="p">(</span><span class="nv">anchor</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScreenPopoverPresentationAnchor.html">ScreenPopoverPresentationAnchor</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE17withLeftBarButtonyAA03AnyB0VyAGGSo05UIBarI4ItemCF"></a>
+                    <a name="//apple_ref/swift/Method/withLeftBarButton(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE17withLeftBarButtonyAA03AnyB0VyAGGSo05UIBarI4ItemCF">withLeftBarButton(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withLeftBarButton</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE18withRightBarButtonyAA03AnyB0VyAGGSo05UIBarI4ItemCF"></a>
+                    <a name="//apple_ref/swift/Method/withRightBarButton(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE18withRightBarButtonyAA03AnyB0VyAGGSo05UIBarI4ItemCF">withRightBarButton(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withRightBarButton</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE09withStackE02ofAA03AnyB0Vyqd__Gqd__m_tSo012UINavigationD0CRbd__lF"></a>
+                    <a name="//apple_ref/swift/Method/withStackContainer(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE09withStackE02ofAA03AnyB0Vyqd__Gqd__m_tSo012UINavigationD0CRbd__lF">withStackContainer(of:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStackContainer</span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Output</span><span class="o">.</span><span class="k">Type</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE09withStackE0AA03AnyB0VySo012UINavigationD0CGyF"></a>
+                    <a name="//apple_ref/swift/Method/withStackContainer()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE09withStackE0AA03AnyB0VySo012UINavigationD0CGyF">withStackContainer()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withStackContainer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyStackScreena">AnyStackScreen</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE14withTabBarItemyAA03AnyB0VyAGGSo05UITabhI0CF"></a>
+                    <a name="//apple_ref/swift/Method/withTabBarItem(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo16UIViewControllerC9ContainerRczrlE14withTabBarItemyAA03AnyB0VyAGGSo05UITabhI0CF">withTabBarItem(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withTabBarItem</span><span class="p">(</span><span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">UITabBarItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Container%60%3A%20%60UINavigationController%602"></a>
+                <a name="//apple_ref/swift/Section/Available where `Container`: `UINavigationController`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UINavigationController%602"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UINavigationController</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGSayAJySo06UIViewD0CGGF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGSayAJySo06UIViewD0CGGF">withStack(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withStack</span><span class="p">(</span><span class="n">_</span> <span class="nv">stack</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGAJySo06UIViewD0CGd_tF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGAJySo06UIViewD0CGd_tF">withStack(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withStack</span><span class="p">(</span><span class="n">_</span> <span class="nv">stack</span><span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd__AaBRd__So06UIViewD0CAFRcd__lF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd__AaBRd__So06UIViewD0CAFRcd__lF">withStack(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStack</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">T</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_tAaBRd__AaBRd_0_So06UIViewD0CAFRcd__AmFRcd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_tAaBRd__AaBRd_0_So06UIViewD0CAFRcd__AmFRcd_0_r0_lF">withStack(_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStack</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_qd_1_tAaBRd__AaBRd_0_AaBRd_1_So06UIViewD0CAFRcd__AmFRcd_0_AmFRcd_1_r1_lF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_qd_1_tAaBRd__AaBRd_0_AaBRd_1_So06UIViewD0CAFRcd__AmFRcd_0_AmFRcd_1_r1_lF">withStack(_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStack</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T2</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen2</span><span class="p">:</span> <span class="kt">T2</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T2</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_So06UIViewD0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_r2_lF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_So06UIViewD0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_r2_lF">withStack(_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStack</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T2</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T3</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen2</span><span class="p">:</span> <span class="kt">T2</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen3</span><span class="p">:</span> <span class="kt">T3</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T2</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T3</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_qd_3_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_AaBRd_3_So06UIViewD0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_AmFRcd_3_r3_lF"></a>
+                    <a name="//apple_ref/swift/Method/withStack(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo22UINavigationControllerC9ContainerRczrlE9withStackyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_qd_3_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_AaBRd_3_So06UIViewD0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_AmFRcd_3_r3_lF">withStack(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStack</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T2</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T3</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T4</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen2</span><span class="p">:</span> <span class="kt">T2</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen3</span><span class="p">:</span> <span class="kt">T3</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen4</span><span class="p">:</span> <span class="kt">T4</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T2</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T3</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T4</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Container%60%3A%20%60UITabBarController%602"></a>
+                <a name="//apple_ref/swift/Section/Available where `Container`: `UITabBarController`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UITabBarController%602"></a>
+                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UITabBarController</code></p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGSayAJySo06UIViewE0CGGF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGSayAJySo06UIViewE0CGGF">withTabs(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withTabs</span><span class="p">(</span><span class="n">_</span> <span class="nv">tabs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGAJySo06UIViewE0CGd_tF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGAJySo06UIViewE0CGd_tF">withTabs(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withTabs</span><span class="p">(</span><span class="n">_</span> <span class="nv">tabs</span><span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir14AnyModalScreena">AnyModalScreen</a></span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd__AaBRd__So06UIViewE0CAFRcd__lF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd__AaBRd__So06UIViewE0CAFRcd__lF">withTabs(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withTabs</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">T</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_tAaBRd__AaBRd_0_So06UIViewE0CAFRcd__AmFRcd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_tAaBRd__AaBRd_0_So06UIViewE0CAFRcd__AmFRcd_0_r0_lF">withTabs(_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withTabs</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_qd_1_tAaBRd__AaBRd_0_AaBRd_1_So06UIViewE0CAFRcd__AmFRcd_0_AmFRcd_1_r1_lF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_qd_1_tAaBRd__AaBRd_0_AaBRd_1_So06UIViewE0CAFRcd__AmFRcd_0_AmFRcd_1_r1_lF">withTabs(_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withTabs</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T2</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen2</span><span class="p">:</span> <span class="kt">T2</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T2</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_So06UIViewE0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_r2_lF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_So06UIViewE0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_r2_lF">withTabs(_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withTabs</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T2</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T3</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen2</span><span class="p">:</span> <span class="kt">T2</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen3</span><span class="p">:</span> <span class="kt">T3</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T2</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T3</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_qd_3_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_AaBRd_3_So06UIViewE0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_AmFRcd_3_r3_lF"></a>
+                    <a name="//apple_ref/swift/Method/withTabs(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenPAASo18UITabBarControllerC9ContainerRczrlE8withTabsyAA03AnyB0VyAGGqd___qd_0_qd_1_qd_2_qd_3_tAaBRd__AaBRd_0_AaBRd_1_AaBRd_2_AaBRd_3_So06UIViewE0CAFRcd__AmFRcd_0_AmFRcd_1_AmFRcd_2_AmFRcd_3_r3_lF">withTabs(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withTabs</span><span class="o">&lt;</span><span class="kt">T0</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T1</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T2</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T3</span><span class="p">:</span> <span class="kt">Screen</span><span class="p">,</span> <span class="kt">T4</span><span class="p">:</span> <span class="kt">Screen</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">screen0</span><span class="p">:</span> <span class="kt">T0</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen1</span><span class="p">:</span> <span class="kt">T1</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen2</span><span class="p">:</span> <span class="kt">T2</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen3</span><span class="p">:</span> <span class="kt">T3</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">screen4</span><span class="p">:</span> <span class="kt">T4</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AnyScreen.html">AnyScreen</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="o">&gt;</span> <span class="k">where</span>
+    <span class="kt">T0</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T1</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T2</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T3</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+    <span class="kt">T4</span><span class="o">.</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2021 <a class="link" href="https://tech.hh.ru" target="_blank" rel="external">HeadHunter</a> under the MIT license.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -42,7 +42,7 @@ extension ScreenStackPopPredicate {
         Self(description: "to \(name)") { stack in
             stack
                 .map { $0 as? ScreenKeyedContainer }
-                .lastIndex { $0?.screenName == name }
+                .lastIndex { $0?.screenKey.name == name }
         }
     }
 

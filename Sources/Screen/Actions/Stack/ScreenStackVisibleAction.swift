@@ -18,46 +18,43 @@ public struct ScreenStackVisibleAction<
         }
 
         guard let output = stackVisible as? Output else {
-            return completion(.invalidContainer(stackVisible, type: Output.self, for: self))
+            return completion(.containerTypeMismatch(stackVisible, type: Output.self, for: self))
         }
 
         completion(.success(output))
     }
 }
 
-extension ScreenThenable where Then: UINavigationController {
+extension ScreenRoute where Current: UINavigationController {
 
-    public var stackVisible: ScreenChildRoute<Root, UIViewController> {
+    public var stackVisible: ScreenRoute<Root, UIViewController> {
         stackVisible(of: UIViewController.self)
     }
 
     public func stackVisible<Output: UIViewController>(
         of type: Output.Type
-    ) -> ScreenChildRoute<Root, Output> {
-        nest(action: ScreenStackVisibleAction<Then, Output>())
+    ) -> ScreenRoute<Root, Output> {
+        fold(action: ScreenStackVisibleAction<Current, Output>())
     }
 
-    public func stackVisible<Route: ScreenThenable>(
-        route: Route
-    ) -> Self where Route.Root: UIViewController {
-        nest(
-            action: ScreenStackVisibleAction<Then, Route.Root>(),
+    public func stackVisible<Output: UIViewController, Next: ScreenContainer>(
+        of type: Output.Type = Output.self,
+        route: ScreenRoute<Output, Next>
+    ) -> Self {
+        fold(
+            action: ScreenStackVisibleAction<Current, Output>(),
             nested: route
         )
     }
 
     public func stackVisible<Output: UIViewController>(
         of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
+        route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
     ) -> Self {
-        stackVisible(route: route(.initial))
-    }
-
-    public func stackVisible<Output: UIViewController, Next: ScreenContainer>(
-        of type: Output.Type = Output.self,
-        route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
-    ) -> Self {
-        stackVisible(route: route(.initial))
+        stackVisible(
+            of: type,
+            route: route(.initial).route()
+        )
     }
 }
 #endif

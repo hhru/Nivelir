@@ -33,7 +33,7 @@ extension ScreenPredicate {
                 return false
             }
 
-            return container.screenName == name
+            return container.screenKey.name == name
         }
     }
 
@@ -51,45 +51,45 @@ extension ScreenPredicate {
 #if canImport(UIKit)
 extension ScreenPredicate where Container == UIViewController {
 
-    public static var modalContainer: Self {
+    public static var container: Self {
         container(of: Container.self)
     }
 
-    public static func modalContainer(name: String) -> Self {
+    public static func container(name: String) -> Self {
         container(of: Container.self, name: name)
     }
 
-    public static func modalContainer(key: ScreenKey) -> Self {
+    public static func container(key: ScreenKey) -> Self {
         container(of: Container.self, key: key)
     }
 }
 
 extension ScreenPredicate where Container == UINavigationController {
 
-    public static var stackContainer: Self {
+    public static var stack: Self {
         container(of: Container.self)
     }
 
-    public static func stackContainer(name: String) -> Self {
+    public static func stack(name: String) -> Self {
         container(of: Container.self, name: name)
     }
 
-    public static func stackContainer(key: ScreenKey) -> Self {
+    public static func stack(key: ScreenKey) -> Self {
         container(of: Container.self, key: key)
     }
 }
 
 extension ScreenPredicate where Container == UITabBarController {
 
-    public static var tabsContainer: Self {
+    public static var tabs: Self {
         container(of: Container.self)
     }
 
-    public static func tabsContainer(name: String) -> Self {
+    public static func tabs(name: String) -> Self {
         container(of: Container.self, name: name)
     }
 
-    public static func tabsContainer(key: ScreenKey) -> Self {
+    public static func tabs(key: ScreenKey) -> Self {
         container(of: Container.self, key: key)
     }
 }

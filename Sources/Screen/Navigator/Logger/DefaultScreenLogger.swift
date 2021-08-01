@@ -1,5 +1,6 @@
 import Foundation
 
+/// Default Logger implementation.
 public final class DefaultScreenLogger: ScreenLogger {
 
     public let isInfoEnabled: Bool

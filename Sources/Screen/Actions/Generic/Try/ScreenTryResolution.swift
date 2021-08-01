@@ -23,122 +23,87 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         self.catchActions = catchActions
     }
 
-    public func ensure(with action: AnyScreenAction<Container, Void>) -> Self {
+    public func ensure<Action: ScreenAction>(
+        with action: Action
+    ) -> Self where Action.Container == Container {
         Self(
-            ensureActions: ensureActions.appending(action),
+            ensureActions: ensureActions.appending(action.eraseToAnyVoidAction()),
             doneActions: doneActions,
             catchActions: catchActions
         )
     }
 
-    public func ensure<Route: ScreenThenable>(with route: Route) -> Self where Route.Root == Container {
-        ensure(with: ScreenNavigateAction(route: route).eraseToAnyVoidAction())
-    }
-
-    public func ensure(with route: (_ route: ScreenRoute<Container>) -> ScreenRoute<Container>) -> Self {
-        ensure(with: route(.initial))
-    }
-
     public func ensure<Next: ScreenContainer>(
-        with route: (_ route: ScreenRoute<Container>) -> ScreenChildRoute<Container, Next>
+        with route: ScreenRoute<Container, Next>
     ) -> Self {
-        ensure(with: route(.initial))
+        ensure(with: ScreenNavigateAction(actions: route.actions))
     }
 
-    public func done(with action: @escaping DoneAction) -> Self {
-        Self(
+    public func ensure(
+        with route: (_ route: ScreenRootRoute<Container>) -> ScreenRouteConvertible
+    ) -> Self {
+        ensure(with: route(.initial).route())
+    }
+
+    public func done<Action: ScreenAction>(
+        with action: @escaping (_ value: Output) -> Action
+    ) -> Self where Action.Container == Container {
+        let action = { action($0).eraseToAnyVoidAction() }
+
+        return Self(
             ensureActions: ensureActions,
             doneActions: doneActions.appending(action),
             catchActions: catchActions
         )
     }
 
-    public func done<Route: ScreenThenable>(
-        with route: @escaping (_ value: Output) -> Route
-    ) -> Self where Route.Root == Container {
-        done { ScreenNavigateAction(route: route($0)).eraseToAnyVoidAction() }
+    public func done<Next: ScreenContainer>(
+        with route: @escaping (_ value: Output) -> ScreenRoute<Container, Next>
+    ) -> Self {
+        done { value in
+            ScreenNavigateAction(
+                actions: route(value).actions
+            ).eraseToAnyVoidAction()
+        }
     }
 
     public func done(
         with route: @escaping (
             _ value: Output,
-            _ route: ScreenRoute<Container>
-        ) -> ScreenRoute<Container>
+            _ route: ScreenRootRoute<Container>
+        ) -> ScreenRouteConvertible
     ) -> Self {
-        done { route($0, .initial) }
+        done { route($0, .initial).route() }
     }
 
-    public func done<Next: ScreenContainer>(
-        with route: @escaping (
-            _ value: Output,
-            _ route: ScreenRoute<Container>
-        ) -> ScreenChildRoute<Container, Next>
-    ) -> Self {
-        done { route($0, .initial) }
-    }
+    public func `catch`<Action: ScreenAction>(
+        with action: @escaping (_ error: Error) -> Action?
+    ) -> Self where Action.Container == Container {
+        let action = { action($0)?.eraseToAnyVoidAction() }
 
-    public func `catch`(with action: @escaping CatchAction) -> Self {
-        Self(
+        return Self(
             ensureActions: ensureActions,
             doneActions: doneActions,
             catchActions: catchActions.appending(action)
         )
     }
 
-    public func `catch`<Failure: Error, Route: ScreenThenable>(
-        _ errorType: Failure.Type,
-        with route: @escaping (_ error: Failure) -> Route
-    ) -> Self where Route.Root == Container {
+    public func `catch`<Next: ScreenContainer>(
+        with route: @escaping (_ error: Error) -> ScreenRoute<Container, Next>
+    ) -> Self {
         `catch` { error in
-            if let error = error as? Failure {
-                return ScreenNavigateAction(route: route(error)).eraseToAnyVoidAction()
-            } else {
-                return nil
-            }
+            ScreenNavigateAction(
+                actions: route(error).actions
+            ).eraseToAnyVoidAction()
         }
-    }
-
-    public func `catch`<Failure: Error>(
-        _ errorType: Failure.Type,
-        with route: @escaping (
-            _ error: Failure,
-            _ route: ScreenRoute<Container>
-        ) -> ScreenRoute<Container>
-    ) -> Self {
-        `catch`(errorType) { route($0, .initial) }
-    }
-
-    public func `catch`<Failure: Error, Next: ScreenContainer>(
-        _ errorType: Failure.Type,
-        with route: @escaping (
-            _ error: Failure,
-            _ route: ScreenRoute<Container>
-        ) -> ScreenChildRoute<Container, Next>
-    ) -> Self {
-        `catch`(errorType) { route($0, .initial) }
-    }
-
-    public func `catch`<Route: ScreenThenable>(
-        with route: @escaping (_ error: Error) -> Route
-    ) -> Self where Route.Root == Container {
-        `catch`(Error.self, with: route)
     }
 
     public func `catch`(
         with route: @escaping (
             _ error: Error,
-            _ route: ScreenRoute<Container>
-        ) -> ScreenRoute<Container>
+            _ route: ScreenRootRoute<Container>
+        ) -> ScreenRouteConvertible
     ) -> Self {
-        `catch`(Error.self, with: route)
-    }
-
-    public func `catch`<Next: ScreenContainer>(
-        with route: @escaping (
-            _ error: Error,
-            _ route: ScreenRoute<Container>
-        ) -> ScreenChildRoute<Container, Next>
-    ) -> Self {
-        `catch`(Error.self, with: route)
+        `catch` { route($0, .initial).route() }
     }
 }

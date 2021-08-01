@@ -23,37 +23,30 @@ public struct ScreenSetRootAction<
     ) {
         navigator.logInfo("Setting root of \(type(of: container)) to \(screen)")
 
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(newRoot):
-                let root = container.root
+        let newRoot = screen.build(navigator: navigator)
+        let root = container.root
 
-                container.rootViewController = newRoot
+        container.rootViewController = newRoot
 
-                guard let animation = self.animation else {
-                    return completion(.success(newRoot))
-                }
+        guard let animation = self.animation else {
+            return completion(.success(newRoot))
+        }
 
-                animation.animate(container: container, from: root, to: newRoot) {
-                    completion(.success(newRoot))
-                }
-
-            case let .failure(error):
-                completion(.failure(error))
-            }
+        animation.animate(container: container, from: root, to: newRoot) {
+            completion(.success(newRoot))
         }
     }
 }
 
-extension ScreenThenable where Then: UIWindow {
+extension ScreenRoute where Current: UIWindow {
 
-    public func setRoot<New: Screen, Route: ScreenThenable>(
+    public func setRoot<New: Screen, Next: ScreenContainer>(
         to screen: New,
         animation: ScreenRootAnimation? = nil,
-        route: Route
-    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
-        nest(
-            action: ScreenSetRootAction<New, Then>(
+        route: ScreenRoute<New.Container, Next>
+    ) -> Self where New.Container: UIViewController {
+        fold(
+            action: ScreenSetRootAction<New, Current>(
                 screen: screen,
                 animation: animation
             ),
@@ -61,10 +54,10 @@ extension ScreenThenable where Then: UIWindow {
         )
     }
 
-    public func setRoot<New: Screen>(
+    public func setRoot<New: Screen, Next: ScreenContainer>(
         to screen: New,
         animation: ScreenRootAnimation? = nil,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container> = { $0 }
+        route: (_ route: ScreenRootRoute<New.Container>) -> ScreenRoute<New.Container, Next>
     ) -> Self where New.Container: UIViewController {
         setRoot(
             to: screen,
@@ -73,16 +66,11 @@ extension ScreenThenable where Then: UIWindow {
         )
     }
 
-    public func setRoot<New: Screen, Next: ScreenContainer>(
+    public func setRoot<New: Screen>(
         to screen: New,
-        animation: ScreenRootAnimation? = nil,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
+        animation: ScreenRootAnimation? = nil
     ) -> Self where New.Container: UIViewController {
-        setRoot(
-            to: screen,
-            animation: animation,
-            route: route(.initial)
-        )
+        setRoot(to: screen, animation: animation) { $0 }
     }
 }
 #endif

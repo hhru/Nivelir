@@ -26,19 +26,19 @@ public struct ScreenFromAction<
     }
 }
 
-extension ScreenThenable {
+extension ScreenRoute {
 
     public func from<Output: ScreenContainer>(
         _ container: Output?
-    ) -> ScreenChildRoute<Root, Output> {
-        nest(action: ScreenFromAction<Then, Output>(output: container))
+    ) -> ScreenRoute<Root, Output> {
+        fold(action: ScreenFromAction(output: container))
     }
 
-    public func from<Route: ScreenThenable>(
-        _ container: Route.Root?,
-        to route: Route
+    public func from<Output: ScreenContainer, Next: ScreenContainer>(
+        _ container: Output?,
+        to route: ScreenRoute<Output, Next>
     ) -> Self {
-        nest(
+        fold(
             action: ScreenFromAction(output: container),
             nested: route
         )
@@ -46,53 +46,34 @@ extension ScreenThenable {
 
     public func from<Output: ScreenContainer>(
         _ container: Output?,
-        _ route: (_ route: ScreenRoute<Output>) -> ScreenRoute<Output>
+        _ route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
     ) -> Self {
-        from(container, to: route(.initial))
-    }
-
-    public func from<Output: ScreenContainer, Next: ScreenContainer>(
-        _ container: Output?,
-        _ route: (_ route: ScreenRoute<Output>) -> ScreenChildRoute<Output, Next>
-    ) -> Self {
-        from(container, to: route(.initial))
+        from(container, to: route(.initial).route())
     }
 }
 
 #if canImport(UIKit)
 extension ScreenNavigator {
 
-    public func navigate<Container, Route: ScreenThenable>(
-        from container: Container?,
-        to route: Route,
+    public func navigate<Output: ScreenContainer, Next: ScreenContainer>(
+        from container: Output?,
+        to route: ScreenRoute<Output, Next>,
         completion: Completion? = nil
-    ) where Route.Root == Container {
+    ) {
         navigate(
             to: { $0.from(container, to: route) },
             completion: completion
         )
     }
 
-    public func navigate<Container: ScreenContainer>(
-        from container: Container?,
-        to route: (ScreenRoute<Container>) -> ScreenRoute<Container>,
+    public func navigate<Output: ScreenContainer>(
+        from container: Output?,
+        to route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible,
         completion: Completion? = nil
     ) {
         navigate(
             from: container,
-            to: route(.initial),
-            completion: completion
-        )
-    }
-
-    public func navigate<Container: ScreenContainer, Next: ScreenContainer>(
-        from container: Container?,
-        to route: (ScreenRoute<Container>) -> ScreenChildRoute<Container, Next>,
-        completion: Completion? = nil
-    ) {
-        navigate(
-            from: container,
-            to: route(.initial),
+            to: route(.initial).route(),
             completion: completion
         )
     }

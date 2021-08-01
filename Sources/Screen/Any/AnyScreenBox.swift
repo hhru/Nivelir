@@ -30,10 +30,6 @@ internal final class AnyScreenBox<
         self.builder = builder
     }
 
-    internal override func cast<T>(to type: T.Type) -> T? {
-        wrapped.cast(to: type)
-    }
-
     internal override func build(navigator: ScreenNavigator) -> Container {
         builder(wrapped, navigator)
     }

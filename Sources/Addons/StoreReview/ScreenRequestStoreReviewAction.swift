@@ -33,7 +33,7 @@ public struct ScreenRequestStoreReviewAction<Container: ScreenVisibleContainer>:
 }
 
 @available(iOS 10.3, *)
-extension ScreenThenable where Then: ScreenVisibleContainer {
+extension ScreenRoute where Current: ScreenVisibleContainer {
 
     public func requestStoreReview() -> Self {
         then(ScreenRequestStoreReviewAction())

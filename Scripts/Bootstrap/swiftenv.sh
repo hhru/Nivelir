@@ -21,7 +21,7 @@ setup_shell() {
 
 echo "Checking ${swiftenv_style}swiftenv${default_style} installation:"
 
-brew_install_if_needed swiftenv "$arguments"
+brew_install_if_needed kylef/formulae/swiftenv "$arguments"
 setup_shell "${HOME}/.zshrc"
 
 if [[ -f "${HOME}/.bash_profile" ]]; then

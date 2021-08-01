@@ -10,17 +10,6 @@
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
 
-``` swift
-navigator.navigate(fromTop: .stackContainer) { route in
-    route
-        .popToRoot()
-        .push(SomeScreen(color: .red))
-        .push(SomeScreen(color: .green)) { route in
-            route.present(SomeScreen(color: .blue))
-        }
-}
-```
-
 ## Contents
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -43,7 +32,7 @@ navigator.navigate(fromTop: .stackContainer) { route in
 ## Installation
 ### CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
-```bash
+``` bash
 $ gem install cocoapods
 ```
 
@@ -58,7 +47,7 @@ end
 ```
 
 Finally run the following command:
-```bash
+``` bash
 $ pod install
 ```
 
@@ -89,7 +78,7 @@ Then specify `"Nivelir"` as a dependency of the Target in which you wish to use 
 
 Here's an example `Package.swift`:
 ``` swift
-// swift-tools-version:5.0
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(

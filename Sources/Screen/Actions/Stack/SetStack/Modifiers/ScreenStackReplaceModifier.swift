@@ -17,22 +17,13 @@ public struct ScreenStackReplaceModifier<
 
     public func perform(
         in stack: [UIViewController],
-        navigator: ScreenNavigator,
-        completion: @escaping Completion
-    ) {
-        navigator.buildScreen(screen) { result in
-            switch result {
-            case let .success(output):
-                completion(.success(stack.dropLast().appending(output)))
-
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
+        navigator: ScreenNavigator
+    ) -> [UIViewController] {
+        stack.dropLast().appending(screen.build(navigator: navigator))
     }
 }
 
-extension ScreenThenable where Then: UINavigationController {
+extension ScreenRoute where Current: UINavigationController {
 
     public func replace<New: Screen>(
         with screen: New,
@@ -46,12 +37,12 @@ extension ScreenThenable where Then: UINavigationController {
         )
     }
 
-    public func replace<New: Screen, Route: ScreenThenable>(
+    public func replace<New: Screen, Next: ScreenContainer>(
         with screen: New,
         animation: ScreenStackAnimation? = .default,
         separated: Bool = false,
-        route: Route
-    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
+        route: ScreenRoute<New.Container, Next>
+    ) -> Self where New.Container: UIViewController {
         replace(
             with: screen,
             animation: animation,
@@ -65,27 +56,13 @@ extension ScreenThenable where Then: UINavigationController {
         with screen: New,
         animation: ScreenStackAnimation? = .default,
         separated: Bool = false,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenRoute<New.Container>
+        route: (_ route: ScreenRootRoute<New.Container>) -> ScreenRouteConvertible
     ) -> Self where New.Container: UIViewController {
         replace(
             with: screen,
             animation: animation,
             separated: separated,
-            route: route(.initial)
-        )
-    }
-
-    public func replace<New: Screen, Next: ScreenContainer>(
-        with screen: New,
-        animation: ScreenStackAnimation? = .default,
-        separated: Bool = false,
-        route: (_ route: ScreenRoute<New.Container>) -> ScreenChildRoute<New.Container, Next>
-    ) -> Self where New.Container: UIViewController {
-        replace(
-            with: screen,
-            animation: animation,
-            separated: separated,
-            route: route(.initial)
+            route: route(.initial).route()
         )
     }
 }
