@@ -1,6 +1,6 @@
 import Foundation
 
-/// Performs a nested action with the container that will be obtained as a result of performing another action.
+/// Performs a nested action in the container that will be retrieved by performing another action.
 public struct ScreenFoldAction<
     Action: ScreenAction,
     Nested: ScreenAction
@@ -14,17 +14,17 @@ public struct ScreenFoldAction<
     /// The type of value returned by the action.
     public typealias Output = Nested.Output
 
-    /// Action to obtain the container.
+    /// Action to retrieve the container.
     public let action: Action
 
-    /// Nested action to be performed in the obtained container.
+    /// Nested action to be performed in the retrieved container.
     public let nested: Nested
 
     /// Creates action.
     ///
     /// - Parameters:
-    ///   - action: Action to obtain the container.
-    ///   - nested: Nested action to be performed in the obtained container.
+    ///   - action: Action to retrieve the container.
+    ///   - nested: Nested action to be performed in the retrieved container.
     public init(action: Action, nested: Nested) {
         self.action = action
         self.nested = nested
@@ -53,9 +53,9 @@ public struct ScreenFoldAction<
 
 extension ScreenRoute {
 
-    /// Performs action to obtain the container that will be used to perform further actions of the route.
+    /// Performs action to retrieve the container that will be used to perform further actions of the route.
     ///
-    /// - Parameter action: Action to obtain the container.
+    /// - Parameter action: Action to retrieve the container.
     /// - Returns: An instance containing the new action.
     public func fold<Action: ScreenAction>(
         action: Action
@@ -68,11 +68,11 @@ extension ScreenRoute {
         }
     }
 
-    /// Performs a nested action with the container that will be obtained as a result of performing another action.
+    /// Performs a nested action in the container that will be retrieved by performing another action.
     ///
     /// - Parameters:
-    ///   - action: Action to obtain the container.
-    ///   - nested: Nested action to be performed in the obtained container.
+    ///   - action: Action to retrieve the container.
+    ///   - nested: Nested action to be performed in the retrieved container.
     /// - Returns: An instance containing the new action.
     public func fold<Action: ScreenAction, Nested: ScreenAction>(
         action: Action,
@@ -86,11 +86,11 @@ extension ScreenRoute {
         )
     }
 
-    /// Performs nested actions with the container that will be obtained as a result of performing another action.
+    /// Performs nested actions in the container that will be retrieved by performing another action.
     ///
     /// - Parameters:
-    ///   - action: Action to obtain the container.
-    ///   - nested: Nested actions to be performed in the obtained container.
+    ///   - action: Action to retrieve the container.
+    ///   - nested: Nested actions to be performed in the retrieved container.
     /// - Returns: An instance containing the new action.
     public func fold<Action: ScreenAction>(
         action: Action,
@@ -102,11 +102,11 @@ extension ScreenRoute {
         )
     }
 
-    /// Performs a nested route with the container that will be obtained as a result of performing another action.
+    /// Performs a nested rout in the container that will be retrieved by performing another action.
     ///
     /// - Parameters:
-    ///   - action: Action to obtain the container.
-    ///   - nested: Nested route to be performed in the obtained container.
+    ///   - action: Action to retrieve the container.
+    ///   - nested: Nested route to be performed in the retrieved container.
     /// - Returns: An instance containing the new action.
     public func fold<Action: ScreenAction, Next: ScreenContainer>(
         action: Action,
@@ -118,12 +118,12 @@ extension ScreenRoute {
         )
     }
 
-    /// Performs a nested route with the container that will be obtained as a result of performing another action.
+    /// Performs a nested rout in the container that will be retrieved by performing another action.
     ///
     /// - Parameters:
-    ///   - action: Action to obtain the container.
+    ///   - action: Action to retrieve the container.
     ///   - nested: The closure that should return the modified route
-    ///             that will be performed in the obtained container.
+    ///             that will be performed in the retrieved container.
     /// - Returns: An instance containing the new action.
     public func fold<Action: ScreenAction>(
         action: Action,

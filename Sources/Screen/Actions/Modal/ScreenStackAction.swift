@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// Obtains the nearest ancestor in the container hierarchy that is a stack container.
+/// Retrieves the nearest ancestor in the container hierarchy that is a stack container.
 public struct ScreenStackAction<
     Container: UIViewController,
     Output: UINavigationController
@@ -29,7 +29,7 @@ public struct ScreenStackAction<
 
 extension ScreenRoute where Current: UIViewController {
 
-    /// Obtains the nearest ancestor in the container hierarchy that is a stack container.
+    /// Retrieves the nearest ancestor in the container hierarchy that is a stack container.
     ///
     /// Usage examples
     /// ==============
@@ -49,7 +49,7 @@ extension ScreenRoute where Current: UIViewController {
         stack(of: UINavigationController.self)
     }
 
-    /// Obtains the nearest ancestor in the container hierarchy that is a stack container.
+    /// Retrieves the nearest ancestor in the container hierarchy that is a stack container.
     ///
     /// Usage examples
     /// ==============
@@ -89,7 +89,7 @@ extension ScreenRoute where Current: UIViewController {
     ///
     /// - Parameters:
     ///   - type: The type to which the container will be cast.
-    ///   - route: The route that will be performed in the obtained screen container.
+    ///   - route: The route that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
     public func stack<Output: UINavigationController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
@@ -117,7 +117,7 @@ extension ScreenRoute where Current: UIViewController {
     /// - Parameters:
     ///   - type: The type to which the container will be cast.
     ///   - route: The closure that should return the modified route
-    ///            that will be performed in the obtained screen container.
+    ///            that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
     public func stack<Output: UINavigationController>(
         of type: Output.Type = Output.self,

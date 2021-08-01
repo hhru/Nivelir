@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// Obtains the screen container that presented the current container.
+/// Retrieves the screen container that presented the current container.
 public struct ScreenPresentingAction<
     Container: UIViewController,
     Output: UIViewController
@@ -29,7 +29,7 @@ public struct ScreenPresentingAction<
 
 extension ScreenRoute where Current: UIViewController {
 
-    /// Obtains the modal container that presented the current container.
+    /// Retrieves the modal container that presented the current container.
     ///
     /// Usage examples
     /// ==============
@@ -49,7 +49,7 @@ extension ScreenRoute where Current: UIViewController {
         presenting(of: UIViewController.self)
     }
 
-    /// Obtains the screen container that presented the current container.
+    /// Retrieves the screen container that presented the current container.
     ///
     /// Usage examples
     /// ==============
@@ -99,7 +99,7 @@ extension ScreenRoute where Current: UIViewController {
     ///
     /// - Parameters:
     ///   - type: The type to which the container will be cast.
-    ///   - route: The route that will be performed in the obtained screen container.
+    ///   - route: The route that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
     public func presenting<Output: UIViewController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
@@ -135,7 +135,7 @@ extension ScreenRoute where Current: UIViewController {
     /// - Parameters:
     ///   - type: The type to which the container will be cast.
     ///   - route: The closure that should return the modified route
-    ///            that will be performed in the obtained screen container.
+    ///            that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
     public func presenting<Output: UIViewController>(
         of type: Output.Type = Output.self,

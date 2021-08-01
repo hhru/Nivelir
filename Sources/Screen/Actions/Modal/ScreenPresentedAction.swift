@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// Obtains the screen container that is presented by the current container,
+/// Retrieves the screen container that is presented by the current container,
 /// or one of its ancestors in the container hierarchy.
 public struct ScreenPresentedAction<
     Container: UIViewController,
@@ -30,7 +30,7 @@ public struct ScreenPresentedAction<
 
 extension ScreenRoute where Current: UIViewController {
 
-    /// Obtains the modal container that is presented by the current container,
+    /// Retrieves the modal container that is presented by the current container,
     /// or one of its ancestors in the container hierarchy.
     ///
     /// Usage examples
@@ -51,7 +51,7 @@ extension ScreenRoute where Current: UIViewController {
         presented(of: UIViewController.self)
     }
 
-    /// Obtains the screen container that is presented by the current container,
+    /// Retrieves the screen container that is presented by the current container,
     /// or one of its ancestors in the container hierarchy.
     ///
     /// Usage examples
@@ -103,7 +103,7 @@ extension ScreenRoute where Current: UIViewController {
     ///
     /// - Parameters:
     ///   - type: The type to which the container will be cast.
-    ///   - route: The route that will be performed in the obtained screen container.
+    ///   - route: The route that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
     public func presented<Output: UIViewController, Next: ScreenContainer>(
         of type: Output.Type = Output.self,
@@ -140,7 +140,7 @@ extension ScreenRoute where Current: UIViewController {
     /// - Parameters:
     ///   - type: The type to which the container will be cast.
     ///   - route: The closure that should return the modified route
-    ///            that will be performed in the obtained screen container.
+    ///            that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
     public func presented<Output: UIViewController>(
         of type: Output.Type = Output.self,
