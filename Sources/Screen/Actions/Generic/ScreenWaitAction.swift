@@ -34,7 +34,7 @@ extension ScreenRoute {
     /// ==============
     ///
     /// - Shows an error message and dismisses it after 3 seconds:
-    /// 
+    ///
     /// ``` swift
     /// screenNavigator.navigate(from: self) { route in
     ///     route
