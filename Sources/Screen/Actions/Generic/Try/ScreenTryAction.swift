@@ -182,7 +182,7 @@ extension ScreenRoute {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: .initial.catch(with: route)
+                resolution: ScreenTryResolution.initial.catch(with: route)
             )
         )
     }
@@ -202,7 +202,7 @@ extension ScreenRoute {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: .initial.ensure(with: route)
+                resolution: ScreenTryResolution.initial.ensure(with: route)
             )
         )
     }
