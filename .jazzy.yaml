@@ -29,6 +29,23 @@ custom_categories:
     children:
       - ScreenAction
       - AnyScreenAction
+
+      - ScreenFoldAction
+      - ScreenFromAction
+      - ScreenNavigateAction
+      - ScreenWaitAction
+
+      - ScreenPredicate
+      - ScreenFirstAction
+      - ScreenLastAction
+      - ScreenTopAction
+
+      - ScreenRefreshAction
+      - ScreenRefreshableContainer
+
+      - ScreenTryAction
+      - ScreenTryResolution
+
       - ScreenDismissAction
       - ScreenPresentAction
       - ScreenPresentedAction
@@ -38,9 +55,9 @@ custom_categories:
 
   - name: Routes
     children:
-      - ScreenThenable
       - ScreenRoute
-      - ScreenSubroute
+      - ScreenRouteConvertible
+      - ScreenRootRoute
       - ScreenModalRoute
       - ScreenStackRoute
       - ScreenTabsRoute

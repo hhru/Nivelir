@@ -1,5 +1,6 @@
 #if canImport(UIKit)
 import UIKit
 
-public typealias ScreenWindowRoute = ScreenRootRoute<UIWindow>
+// swiftlint:disable:next identifier_name
+public let ScreenWindowRoute = ScreenRootRoute<UIWindow>()
 #endif

@@ -1,11 +1,17 @@
 import Foundation
 
+/// Performs a set of actions.
 public struct ScreenNavigateAction<Container: ScreenContainer>: ScreenAction {
 
+    /// The type of value returned by the action.
     public typealias Output = Void
 
+    /// Actions to be performed.
     public let actions: [AnyScreenAction<Container, Void>]
 
+    /// Creates action.
+    ///
+    /// - Parameter action: Actions to be performed.
     public init(actions: [AnyScreenAction<Container, Void>]) {
         self.actions = actions
     }
@@ -67,7 +73,7 @@ extension ScreenNavigator {
     }
 
     public func navigate(
-        to route: (_ route: ScreenWindowRoute) -> ScreenRouteConvertible,
+        to route: (_ route: ScreenRootRoute<UIWindow>) -> ScreenRouteConvertible,
         completion: Completion? = nil
     ) {
         navigate(

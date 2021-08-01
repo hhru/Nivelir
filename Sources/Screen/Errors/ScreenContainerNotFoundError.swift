@@ -2,7 +2,7 @@ import Foundation
 
 /// No container found.
 ///
-/// This error occurs whenever any navigation action fails to find the container.
+/// This error occurs whenever any action fails to find the container.
 public struct ScreenContainerNotFoundError: ScreenError {
 
     public var description: String {

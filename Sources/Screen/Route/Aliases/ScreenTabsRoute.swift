@@ -1,5 +1,6 @@
 #if canImport(UIKit)
 import UIKit
 
-public typealias ScreenTabsRoute = ScreenRootRoute<UITabBarController>
+// swiftlint:disable:next identifier_name
+public let ScreenTabsRoute = ScreenRootRoute<UITabBarController>()
 #endif

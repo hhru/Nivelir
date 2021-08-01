@@ -1,13 +1,16 @@
 import Foundation
 
+/// Waits for a given time interval.
 public struct ScreenWaitAction<Container: ScreenContainer>: ScreenAction {
 
+    /// The type of value returned by the action.
     public typealias Output = Void
 
-    public let timeout: TimeInterval
+    /// Waiting time in seconds.
+    public let duration: TimeInterval
 
-    public init(timeout: TimeInterval) {
-        self.timeout = timeout
+    public init(duration: TimeInterval) {
+        self.duration = duration
     }
 
     public func perform(
@@ -15,7 +18,9 @@ public struct ScreenWaitAction<Container: ScreenContainer>: ScreenAction {
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {
+        navigator.logInfo("Waiting for \(duration) seconds")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             completion(.success)
         }
     }
@@ -23,7 +28,25 @@ public struct ScreenWaitAction<Container: ScreenContainer>: ScreenAction {
 
 extension ScreenRoute {
 
-    public func wait(timeout: TimeInterval) -> Self {
-        then(ScreenWaitAction(timeout: timeout))
+    /// Waits for a given time interval.
+    ///
+    /// Usage examples
+    /// ==============
+    ///
+    /// - Shows an error message and dismisses it after 3 seconds:
+    /// 
+    /// ``` swift
+    /// screenNavigator.navigate(from: self) { route in
+    ///     route
+    ///         .showAlert(.somethingWentWrong)
+    ///         .wait(for: 3.0)
+    ///         .dismiss()
+    /// }
+    /// ```
+    ///
+    /// - Parameter duration: Waiting time in seconds.
+    /// - Returns: An instance containing the new action.
+    public func wait(for duration: TimeInterval) -> Self {
+        then(ScreenWaitAction(duration: duration))
     }
 }

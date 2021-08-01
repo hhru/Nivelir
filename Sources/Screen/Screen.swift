@@ -110,7 +110,7 @@ import Foundation
 /// ```
 ///
 /// The default implementation will return `self` in the `build(navigator:)` method,
-/// and an instance of this controller can be used as a factory in navigation actions:
+/// and an instance of this controller can be used as a factory in navigation:
 ///
 /// ``` swift
 /// navigator.navigate(fromTop: .stack) { route in
