@@ -106,4 +106,8 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
     ) -> Self {
         `catch` { route($0, .initial).route() }
     }
+
+    public func cauterize() -> Self {
+        `catch` { $1 }
+    }
 }

@@ -176,6 +176,23 @@ extension ScreenRoute {
         }
     }
 
+    public func ensure<Next: ScreenContainer>(
+        route: ScreenRoute<Root, Next>
+    ) -> ScreenRootRoute<Root> {
+        ScreenRootRoute(
+            action: ScreenTryAction(
+                action: ScreenNavigateAction(actions: actions),
+                resolution: ScreenTryResolution.initial.ensure(with: route)
+            )
+        )
+    }
+
+    public func ensure(
+        route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
+    ) -> ScreenRootRoute<Root> {
+        ensure(route: route(.initial).route())
+    }
+
     public func `catch`<Next: ScreenContainer>(
         route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
     ) -> ScreenRootRoute<Root> {
@@ -196,20 +213,12 @@ extension ScreenRoute {
         `catch` { route($0, .initial).route() }
     }
 
-    public func ensure<Next: ScreenContainer>(
-        route: ScreenRoute<Root, Next>
-    ) -> ScreenRootRoute<Root> {
+    public func cauterize() -> ScreenRootRoute<Root> {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: ScreenTryResolution.initial.ensure(with: route)
+                resolution: ScreenTryResolution.initial.cauterize()
             )
         )
-    }
-
-    public func ensure(
-        route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
-    ) -> ScreenRootRoute<Root> {
-        ensure(route: route(.initial).route())
     }
 }
