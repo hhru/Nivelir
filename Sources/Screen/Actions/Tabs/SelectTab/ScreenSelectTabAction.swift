@@ -44,7 +44,7 @@ public struct ScreenSelectTabAction<
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigator.logInfo("Selecting tab of \(Output.self) type in \(type(of: container))")
+        navigator.logInfo("Selecting tab of \(Output.self) type in \(type(of: container)) with \(predicate)")
 
         let selectedTab = container.selectedTab
 
@@ -67,7 +67,9 @@ public struct ScreenSelectTabAction<
         ) {
             container.selectedIndex = newSelectedTabIndex
 
-            completion(.success(output))
+            DispatchQueue.main.async {
+                completion(.success(output))
+            }
         }
     }
 }

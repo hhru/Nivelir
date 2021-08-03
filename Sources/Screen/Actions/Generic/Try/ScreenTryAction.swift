@@ -177,35 +177,39 @@ extension ScreenRoute {
     }
 
     public func ensure<Next: ScreenContainer>(
-        route: ScreenRoute<Root, Next>
+        with route: ScreenRoute<Root, Next>
     ) -> ScreenRootRoute<Root> {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: ScreenTryResolution.initial.ensure(with: route)
+                resolution: ScreenTryResolution
+                    .initial
+                    .ensure(with: route)
             )
         )
     }
 
     public func ensure(
-        route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
+        with route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
     ) -> ScreenRootRoute<Root> {
-        ensure(route: route(.initial).route())
+        ensure(with: route(.initial).route())
     }
 
     public func `catch`<Next: ScreenContainer>(
-        route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
+        with route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
     ) -> ScreenRootRoute<Root> {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: ScreenTryResolution.initial.catch(with: route)
+                resolution: ScreenTryResolution
+                    .initial
+                    .catch(with: route)
             )
         )
     }
 
     public func `catch`(
-        route: @escaping (
+        with route: @escaping (
             _ error: Error,
             _ route: ScreenRootRoute<Root>
         ) -> ScreenRouteConvertible
@@ -213,11 +217,19 @@ extension ScreenRoute {
         `catch` { route($0, .initial).route() }
     }
 
+    public func `catch`<Next: ScreenContainer>(
+        with route: ScreenRoute<Root, Next>
+    ) -> ScreenRootRoute<Root> {
+        `catch` { _ in route }
+    }
+
     public func cauterize() -> ScreenRootRoute<Root> {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: ScreenTryResolution.initial.cauterize()
+                resolution: ScreenTryResolution
+                    .initial
+                    .cauterize()
             )
         )
     }

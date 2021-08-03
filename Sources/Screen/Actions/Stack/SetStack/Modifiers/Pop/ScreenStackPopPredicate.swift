@@ -33,13 +33,13 @@ extension ScreenStackPopPredicate {
     }
 
     public static func container(_ container: UIViewController) -> Self {
-        Self(description: "to container") { stack in
+        Self(description: "to given container") { stack in
             stack.lastIndex { $0 === container }
         }
     }
 
     public static func container(name: String) -> Self {
-        Self(description: "to \(name)") { stack in
+        Self(description: "to \(name) container") { stack in
             stack
                 .map { $0 as? ScreenKeyedContainer }
                 .lastIndex { $0?.screenKey.name == name }
@@ -47,7 +47,7 @@ extension ScreenStackPopPredicate {
     }
 
     public static func container(key: ScreenKey) -> Self {
-        Self(description: "to \(key)") { stack in
+        Self(description: "to \(key) container") { stack in
             stack
                 .map { $0 as? ScreenKeyedContainer }
                 .lastIndex { $0?.screenKey == key }

@@ -163,7 +163,7 @@ extension Screen {
     }
 
     public var description: String {
-        key.name
+        "\(key)"
     }
 
     /// Screen key that can be used to search for a container in the container hierarchy.
