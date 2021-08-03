@@ -16,7 +16,7 @@ public struct ScreenKey: Equatable, CustomStringConvertible {
     public let traits: Set<AnyHashable>
 
     public var description: String {
-        let traits = traits.map { $0.base }
+        let traits = self.traits.map { $0.base }
 
         return traits.isEmpty
             ? name
