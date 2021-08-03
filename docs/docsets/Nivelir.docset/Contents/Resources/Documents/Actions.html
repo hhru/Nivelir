@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           Nivelir 1.0.0 Docs
         </a>
-         (30% documented)
+         (31% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -523,7 +523,13 @@
                 <a class="nav-group-task-link" href="Structs/FailedOpenURLError.html">FailedOpenURLError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ScreenContainerNotSupportedError.html">ScreenContainerNotSupportedError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ScreenLeftBarButtonDecorator.html">ScreenLeftBarButtonDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ScreenMakeVisibleAction.html">ScreenMakeVisibleAction</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ScreenModalStyleDecorator.html">ScreenModalStyleDecorator</a>
@@ -707,7 +713,7 @@ to wrap an action with <code>AnyScreenAction</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs a nested action with the container that will be obtained as a result of performing another action.</p>
+                        <p>Performs a nested action in the container that will be retrieved by performing another action.</p>
 
                         <a href="Structs/ScreenFoldAction.html" class="slightly-smaller">See more</a>
                       </div>
@@ -833,7 +839,7 @@ to wrap an action with <code>AnyScreenAction</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenPredicate</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenPredicate</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1124,7 +1130,7 @@ in which the action is performed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the screen container that is presented by the current container,
+                        <p>Retrieves the screen container that is presented by the current container,
 or one of its ancestors in the container hierarchy.</p>
 
                         <a href="Structs/ScreenPresentedAction.html" class="slightly-smaller">See more</a>
@@ -1156,7 +1162,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the screen container that presented the current container.</p>
+                        <p>Retrieves the screen container that presented the current container.</p>
 
                         <a href="Structs/ScreenPresentingAction.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1187,7 +1193,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a stack container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a stack container.</p>
 
                         <a href="Structs/ScreenStackAction.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1218,7 +1224,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a tabs container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a tabs container.</p>
 
                         <a href="Structs/ScreenTabsAction.html" class="slightly-smaller">See more</a>
                       </div>

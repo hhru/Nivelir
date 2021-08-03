@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           Nivelir 1.0.0 Docs
         </a>
-         (30% documented)
+         (31% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -523,7 +523,13 @@
                 <a class="nav-group-task-link" href="Structs/FailedOpenURLError.html">FailedOpenURLError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ScreenContainerNotSupportedError.html">ScreenContainerNotSupportedError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ScreenLeftBarButtonDecorator.html">ScreenLeftBarButtonDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ScreenMakeVisibleAction.html">ScreenMakeVisibleAction</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ScreenModalStyleDecorator.html">ScreenModalStyleDecorator</a>
@@ -643,6 +649,34 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FailedOpenURLError</span> <span class="p">:</span> <span class="kt"><a href="Errors.html#/s:7Nivelir11ScreenErrorP">ScreenError</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir23ScreenMakeVisibleActionV"></a>
+                    <a name="//apple_ref/swift/Struct/ScreenMakeVisibleAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir23ScreenMakeVisibleActionV">ScreenMakeVisibleAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ScreenMakeVisibleAction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenMakeVisibleAction</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ScreenAction.html">ScreenAction</a></span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -1084,7 +1118,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenTabPredicate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenTabPredicate</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -1430,6 +1464,36 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenTabsDecorator</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ScreenDecorator.html">ScreenDecorator</a></span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt">UITabBarController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir32ScreenContainerNotSupportedErrorV"></a>
+                    <a name="//apple_ref/swift/Struct/ScreenContainerNotSupportedError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir32ScreenContainerNotSupportedErrorV">ScreenContainerNotSupportedError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The container type is not supported.</p>
+
+<p>This error occurs whenever any action handles an unsupported container type.</p>
+
+                        <a href="Structs/ScreenContainerNotSupportedError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenContainerNotSupportedError</span> <span class="p">:</span> <span class="kt"><a href="Errors.html#/s:7Nivelir11ScreenErrorP">ScreenError</a></span></code></pre>
 
                         </div>
                       </div>
