@@ -16,7 +16,11 @@ public struct ScreenKey: Equatable, CustomStringConvertible {
     public let traits: Set<AnyHashable>
 
     public var description: String {
-        traits.isEmpty ? name : "\(name) \(traits)"
+        let traits = self.traits.map { $0.base }
+
+        return traits.isEmpty
+            ? name
+            : "\(name)(\(traits))"
     }
 
     /// Creates screen key.

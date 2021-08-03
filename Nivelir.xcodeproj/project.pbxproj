@@ -244,6 +244,10 @@
 		C088604826B6C60B00CA0A77 /* InvalidStoreProductIDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FFA26B6C60B00CA0A77 /* InvalidStoreProductIDError.swift */; };
 		C088604A26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */; };
 		C088604B26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */; };
+		C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */; };
+		C088605526B9294E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */; };
+		C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */; };
+		C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */; };
 		C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
 		C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */; };
 		C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -440,6 +444,8 @@
 		C0885FF926B6C60B00CA0A77 /* ScreenShowStoreProductAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShowStoreProductAction.swift; sourceTree = "<group>"; };
 		C0885FFA26B6C60B00CA0A77 /* InvalidStoreProductIDError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidStoreProductIDError.swift; sourceTree = "<group>"; };
 		C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWaitAction.swift; sourceTree = "<group>"; };
+		C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMakeVisibleAction.swift; sourceTree = "<group>"; };
+		C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotSupportedError.swift; sourceTree = "<group>"; };
 		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
 		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -731,11 +737,13 @@
 		C0885F4226B6BA0000CA0A77 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				C088605226B9001D00CA0A77 /* Show */,
 				C0885F4B26B6BA0000CA0A77 /* Find */,
 				C0885F4326B6BA0000CA0A77 /* Refresh */,
 				C0885F4826B6BA0000CA0A77 /* Try */,
 				C0885F5026B6BA0000CA0A77 /* ScreenFoldAction.swift */,
 				C0885F4726B6BA0000CA0A77 /* ScreenFromAction.swift */,
+				C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */,
 				C0885F4626B6BA0000CA0A77 /* ScreenNavigateAction.swift */,
 				C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */,
 			);
@@ -1014,6 +1022,13 @@
 			path = StoreProduct;
 			sourceTree = "<group>";
 		};
+		C088605226B9001D00CA0A77 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
 		C08F980E25EEB5A60077AE40 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1088,8 +1103,9 @@
 			isa = PBXGroup;
 			children = (
 				C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */,
-				C0AADA2F25EED85C0087439E /* ScreenError.swift */,
+				C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */,
 				C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */,
+				C0AADA2F25EED85C0087439E /* ScreenError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -1372,6 +1388,7 @@
 				C0885FC226B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0242E7A266F7101002893FB /* ScreenRootRoute.swift in Sources */,
 				C05E19B42669A95100255A69 /* ScreenPayloadContainer+NSObject.swift in Sources */,
+				C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8426B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
 				C015F483265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */,
 				C0885FFF26B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
@@ -1457,6 +1474,7 @@
 				C0885F8C26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601926B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
 				C088600B26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
+				C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C088602F26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
 				C062880826029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */,
 				C0885FFB26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
@@ -1528,6 +1546,7 @@
 				C0885FC326B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
+				C088605526B9294E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8526B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
 				C0AADB6425EF900B0087439E /* UIWindow+ScreenContainer.swift in Sources */,
 				C088600026B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
@@ -1613,6 +1632,7 @@
 				C0885F8D26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601A26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
 				C088600C26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
+				C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C088603026B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
 				C062880926029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */,
 				C0885FFC26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Nivelir 1.0.0 Docs
         </a>
-         (30% documented)
+         (31% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -523,7 +523,13 @@
                 <a class="nav-group-task-link" href="../Structs/FailedOpenURLError.html">FailedOpenURLError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenContainerNotSupportedError.html">ScreenContainerNotSupportedError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenLeftBarButtonDecorator.html">ScreenLeftBarButtonDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenMakeVisibleAction.html">ScreenMakeVisibleAction</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenModalStyleDecorator.html">ScreenModalStyleDecorator</a>
@@ -681,6 +687,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">actions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/AnyScreenAction.html">AnyScreenAction</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir11ScreenRouteV4thenyACyxq_GSayAA03AnyB6ActionVyq_ytGGF"></a>
+                    <a name="//apple_ref/swift/Method/then(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV4thenyACyxq_GSayAA03AnyB6ActionVyq_ytGGF">then(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">then</span><span class="p">(</span><span class="n">_</span> <span class="nv">actions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/AnyScreenAction.html">AnyScreenAction</a></span><span class="o">&lt;</span><span class="kt">Current</span><span class="p">,</span> <span class="kt">Void</span><span class="o">&gt;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">ScreenRoute</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Current</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1222,7 +1255,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs action to obtain the container that will be used to perform further actions of the route.</p>
+                        <p>Performs action to retrieve the container that will be used to perform further actions of the route.</p>
 
                       </div>
                       <div class="declaration">
@@ -1247,7 +1280,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Action to obtain the container.</p>
+                                  <p>Action to retrieve the container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1274,7 +1307,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs a nested action with the container that will be obtained as a result of performing another action.</p>
+                        <p>Performs a nested action in the container that will be retrieved by performing another action.</p>
 
                       </div>
                       <div class="declaration">
@@ -1300,7 +1333,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Action to obtain the container.</p>
+                                  <p>Action to retrieve the container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1312,7 +1345,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Nested action to be performed in the obtained container.</p>
+                                  <p>Nested action to be performed in the retrieved container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1339,7 +1372,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs nested actions with the container that will be obtained as a result of performing another action.</p>
+                        <p>Performs nested actions in the container that will be retrieved by performing another action.</p>
 
                       </div>
                       <div class="declaration">
@@ -1365,7 +1398,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Action to obtain the container.</p>
+                                  <p>Action to retrieve the container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1377,7 +1410,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Nested actions to be performed in the obtained container.</p>
+                                  <p>Nested actions to be performed in the retrieved container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1404,7 +1437,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs a nested route with the container that will be obtained as a result of performing another action.</p>
+                        <p>Performs a nested rout in the container that will be retrieved by performing another action.</p>
 
                       </div>
                       <div class="declaration">
@@ -1430,7 +1463,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Action to obtain the container.</p>
+                                  <p>Action to retrieve the container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1442,7 +1475,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Nested route to be performed in the obtained container.</p>
+                                  <p>Nested route to be performed in the retrieved container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1469,7 +1502,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs a nested route with the container that will be obtained as a result of performing another action.</p>
+                        <p>Performs a nested rout in the container that will be retrieved by performing another action.</p>
 
                       </div>
                       <div class="declaration">
@@ -1495,7 +1528,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Action to obtain the container.</p>
+                                  <p>Action to retrieve the container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1508,7 +1541,7 @@
                               <td>
                                 <div>
                                   <p>The closure that should return the modified route
-    that will be performed in the obtained container.</p>
+    that will be performed in the retrieved container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1801,70 +1834,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir11ScreenRouteV5catch5routeACyxxGACyxqd__Gs5Error_pc_tAA0B9ContainerRd__lF"></a>
-                    <a name="//apple_ref/swift/Method/catch(route:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir11ScreenRouteV5catch5routeACyxxGACyxqd__Gs5Error_pc_tAA0B9ContainerRd__lF">catch(route:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="err">`</span><span class="k">catch</span><span class="err">`</span><span class="o">&lt;</span><span class="kt">Next</span><span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="nv">route</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ScreenRoute</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Next</span><span class="o">&gt;</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Nivelir11ScreenRouteV5catch5routeACyxxGAA0bC11Convertible_ps5Error_p_AFtc_tF"></a>
-                    <a name="//apple_ref/swift/Method/catch(route:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir11ScreenRouteV5catch5routeACyxxGAA0bC11Convertible_ps5Error_p_AFtc_tF">catch(route:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="err">`</span><span class="k">catch</span><span class="err">`</span><span class="p">(</span>
-    <span class="nv">route</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span>
-        <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">,</span>
-        <span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a></span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Nivelir11ScreenRouteV6ensure5routeACyxxGACyxqd__G_tAA0B9ContainerRd__lF"></a>
-                    <a name="//apple_ref/swift/Method/ensure(route:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir11ScreenRouteV6ensure5routeACyxxGACyxqd__G_tAA0B9ContainerRd__lF">ensure(route:<wbr>)</a>
+                    <a name="/s:7Nivelir11ScreenRouteV6ensure4withACyxxGACyxqd__G_tAA0B9ContainerRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/ensure(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV6ensure4withACyxxGACyxqd__G_tAA0B9ContainerRd__lF">ensure(with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1880,7 +1852,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">ensure</span><span class="o">&lt;</span><span class="kt">Next</span><span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="nv">route</span><span class="p">:</span> <span class="kt">ScreenRoute</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Next</span><span class="o">&gt;</span>
+    <span class="n">with</span> <span class="nv">route</span><span class="p">:</span> <span class="kt">ScreenRoute</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Next</span><span class="o">&gt;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -1891,9 +1863,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir11ScreenRouteV6ensure5routeACyxxGAA0bC11Convertible_pAFXE_tF"></a>
-                    <a name="//apple_ref/swift/Method/ensure(route:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir11ScreenRouteV6ensure5routeACyxxGAA0bC11Convertible_pAFXE_tF">ensure(route:<wbr>)</a>
+                    <a name="/s:7Nivelir11ScreenRouteV6ensure4withACyxxGAA0bC11Convertible_pAFXE_tF"></a>
+                    <a name="//apple_ref/swift/Method/ensure(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV6ensure4withACyxxGAA0bC11Convertible_pAFXE_tF">ensure(with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1909,8 +1881,125 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ensure</span><span class="p">(</span>
-    <span class="nv">route</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a></span>
+    <span class="n">with</span> <span class="nv">route</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a></span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir11ScreenRouteV5catch4withACyxxGACyxqd__Gs5Error_pc_tAA0B9ContainerRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/catch(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV5catch4withACyxxGACyxqd__Gs5Error_pc_tAA0B9ContainerRd__lF">catch(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="err">`</span><span class="k">catch</span><span class="err">`</span><span class="o">&lt;</span><span class="kt">Next</span><span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">with</span> <span class="nv">route</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ScreenRoute</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Next</span><span class="o">&gt;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir11ScreenRouteV5catch4withACyxxGAA0bC11Convertible_ps5Error_p_AFtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/catch(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV5catch4withACyxxGAA0bC11Convertible_ps5Error_p_AFtc_tF">catch(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="err">`</span><span class="k">catch</span><span class="err">`</span><span class="p">(</span>
+    <span class="n">with</span> <span class="nv">route</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span>
+        <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">,</span>
+        <span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir11ScreenRouteV5catch4withACyxxGACyxqd__G_tAA0B9ContainerRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/catch(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV5catch4withACyxxGACyxqd__G_tAA0B9ContainerRd__lF">catch(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="err">`</span><span class="k">catch</span><span class="err">`</span><span class="o">&lt;</span><span class="kt">Next</span><span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">with</span> <span class="nv">route</span><span class="p">:</span> <span class="kt">ScreenRoute</span><span class="o">&lt;</span><span class="kt">Root</span><span class="p">,</span> <span class="kt">Next</span><span class="o">&gt;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir11ScreenRouteV9cauterizeACyxxGyF"></a>
+                    <a name="//apple_ref/swift/Method/cauterize()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteV9cauterizeACyxxGyF">cauterize()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cauterize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Routes.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Root</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2238,6 +2327,36 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Nivelir11ScreenRouteVAASo16UIViewControllerCRb_rlE11makeVisible14stackAnimation04tabsI0ACyxq_GAA0b5StackI0OSg_AA0b3TabI0OSgtF"></a>
+                    <a name="//apple_ref/swift/Method/makeVisible(stackAnimation:tabsAnimation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir11ScreenRouteVAASo16UIViewControllerCRb_rlE11makeVisible14stackAnimation04tabsI0ACyxq_GAA0b5StackI0OSg_AA0b3TabI0OSgtF">makeVisible(stackAnimation:<wbr>tabsAnimation:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeVisible</span><span class="p">(</span>
+    <span class="nv">stackAnimation</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScreenStackAnimation.html">ScreenStackAnimation</a></span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span>
+    <span class="nv">tabsAnimation</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScreenTabAnimation.html">ScreenTabAnimation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Nivelir11ScreenRouteVAASo16UIViewControllerCRb_rlE7dismiss8animatedACyxq_GSb_tF"></a>
                     <a name="//apple_ref/swift/Method/dismiss(animated:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Nivelir11ScreenRouteVAASo16UIViewControllerCRb_rlE7dismiss8animatedACyxq_GSb_tF">dismiss(animated:<wbr>)</a>
@@ -2512,7 +2631,7 @@ in which the action is performed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the modal container that is presented by the current container,
+                        <p>Retrieves the modal container that is presented by the current container,
 or one of its ancestors in the container hierarchy.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
@@ -2555,7 +2674,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the screen container that is presented by the current container,
+                        <p>Retrieves the screen container that is presented by the current container,
 or one of its ancestors in the container hierarchy.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
@@ -2679,7 +2798,7 @@ or one of its ancestors in the container hierarchy.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The route that will be performed in the obtained screen container.</p>
+                                  <p>The route that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2763,7 +2882,7 @@ or one of its ancestors in the container hierarchy.</p>
                               <td>
                                 <div>
                                   <p>The closure that should return the modified route
-   that will be performed in the obtained screen container.</p>
+   that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2790,7 +2909,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the modal container that presented the current container.</p>
+                        <p>Retrieves the modal container that presented the current container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -2832,7 +2951,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the screen container that presented the current container.</p>
+                        <p>Retrieves the screen container that presented the current container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -2954,7 +3073,7 @@ or one of its ancestors in the container hierarchy.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The route that will be performed in the obtained screen container.</p>
+                                  <p>The route that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -3037,7 +3156,7 @@ or one of its ancestors in the container hierarchy.</p>
                               <td>
                                 <div>
                                   <p>The closure that should return the modified route
-   that will be performed in the obtained screen container.</p>
+   that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -3064,7 +3183,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a stack container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a stack container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -3106,7 +3225,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a stack container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a stack container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -3218,7 +3337,7 @@ or one of its ancestors in the container hierarchy.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The route that will be performed in the obtained screen container.</p>
+                                  <p>The route that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -3293,7 +3412,7 @@ or one of its ancestors in the container hierarchy.</p>
                               <td>
                                 <div>
                                   <p>The closure that should return the modified route
-   that will be performed in the obtained screen container.</p>
+   that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -3320,7 +3439,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a tabs container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a tabs container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -3362,7 +3481,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a tabs container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a tabs container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -3425,7 +3544,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a tabs container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a tabs container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -3474,7 +3593,7 @@ or one of its ancestors in the container hierarchy.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The route that will be performed in the obtained screen container.</p>
+                                  <p>The route that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>
@@ -3501,7 +3620,7 @@ or one of its ancestors in the container hierarchy.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains the nearest ancestor in the container hierarchy that is a tabs container.</p>
+                        <p>Retrieves the nearest ancestor in the container hierarchy that is a tabs container.</p>
 <h1 id='usage-examples' class='heading'>Usage examples</h1>
 
 <ul>
@@ -3549,7 +3668,7 @@ or one of its ancestors in the container hierarchy.</p>
                               <td>
                                 <div>
                                   <p>The closure that should return the modified route
-   that will be performed in the obtained screen container.</p>
+   that will be performed in the retrieved screen container.</p>
                                 </div>
                               </td>
                             </tr>

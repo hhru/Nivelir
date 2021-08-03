@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Nivelir 1.0.0 Docs
         </a>
-         (30% documented)
+         (31% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -523,7 +523,13 @@
                 <a class="nav-group-task-link" href="../Structs/FailedOpenURLError.html">FailedOpenURLError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenContainerNotSupportedError.html">ScreenContainerNotSupportedError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenLeftBarButtonDecorator.html">ScreenLeftBarButtonDecorator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenMakeVisibleAction.html">ScreenMakeVisibleAction</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenModalStyleDecorator.html">ScreenModalStyleDecorator</a>
@@ -615,7 +621,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenPredicate</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenPredicate</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
 
                 </div>
               </div>
@@ -631,9 +637,35 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir15ScreenPredicateVyACyxGSbxccfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir15ScreenPredicateVyACyxGSbxccfc">init(_:<wbr>)</a>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenPredicateV11description_ACyxGSS_Sbxctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(description:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenPredicateV11description_ACyxGSS_Sbxctcfc">init(description:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -648,7 +680,10 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">box</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">box</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+<span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -730,6 +765,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">container</span><span class="p">(</span><span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Container</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScreenKey.html">ScreenKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ScreenPredicate</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenPredicateV9container2ofACyxGqd___t9ContainerQyd__RszAA0B0Rd__lFZ"></a>
+                    <a name="//apple_ref/swift/Method/container(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenPredicateV9container2ofACyxGqd___t9ContainerQyd__RszAA0B0Rd__lFZ">container(of:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n"><a href="../Structs/ScreenPredicate.html#/s:7Nivelir15ScreenPredicateVAASo16UIViewControllerCRszrlE9containerACyAEGvpZ">container</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">of</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ScreenPredicate</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Container</span> <span class="o">==</span> <span class="kt">T</span><span class="o">.</span><span class="kt">Container</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Screen.html">Screen</a></span></code></pre>
 
                         </div>
                       </div>

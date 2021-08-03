@@ -176,19 +176,40 @@ extension ScreenRoute {
         }
     }
 
-    public func `catch`<Next: ScreenContainer>(
-        route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
+    public func ensure<Next: ScreenContainer>(
+        with route: ScreenRoute<Root, Next>
     ) -> ScreenRootRoute<Root> {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: ScreenTryResolution.initial.catch(with: route)
+                resolution: ScreenTryResolution
+                    .initial
+                    .ensure(with: route)
+            )
+        )
+    }
+
+    public func ensure(
+        with route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
+    ) -> ScreenRootRoute<Root> {
+        ensure(with: route(.initial).route())
+    }
+
+    public func `catch`<Next: ScreenContainer>(
+        with route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
+    ) -> ScreenRootRoute<Root> {
+        ScreenRootRoute(
+            action: ScreenTryAction(
+                action: ScreenNavigateAction(actions: actions),
+                resolution: ScreenTryResolution
+                    .initial
+                    .catch(with: route)
             )
         )
     }
 
     public func `catch`(
-        route: @escaping (
+        with route: @escaping (
             _ error: Error,
             _ route: ScreenRootRoute<Root>
         ) -> ScreenRouteConvertible
@@ -196,20 +217,20 @@ extension ScreenRoute {
         `catch` { route($0, .initial).route() }
     }
 
-    public func ensure<Next: ScreenContainer>(
-        route: ScreenRoute<Root, Next>
+    public func `catch`<Next: ScreenContainer>(
+        with route: ScreenRoute<Root, Next>
     ) -> ScreenRootRoute<Root> {
+        `catch` { _ in route }
+    }
+
+    public func cauterize() -> ScreenRootRoute<Root> {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
-                resolution: ScreenTryResolution.initial.ensure(with: route)
+                resolution: ScreenTryResolution
+                    .initial
+                    .cauterize()
             )
         )
-    }
-
-    public func ensure(
-        route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible
-    ) -> ScreenRootRoute<Root> {
-        ensure(route: route(.initial).route())
     }
 }

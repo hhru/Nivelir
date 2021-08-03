@@ -16,8 +16,6 @@ public struct ScreenFromAction<
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        navigator.logInfo("Resolving container of \(Output.self) type")
-
         guard let output = output else {
             return completion(.containerNotFound(type: Container.self, for: self))
         }

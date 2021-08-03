@@ -60,11 +60,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
     public func done<Next: ScreenContainer>(
         with route: @escaping (_ value: Output) -> ScreenRoute<Container, Next>
     ) -> Self {
-        done { value in
-            ScreenNavigateAction(
-                actions: route(value).actions
-            ).eraseToAnyVoidAction()
-        }
+        done { ScreenNavigateAction(actions: route($0).actions) }
     }
 
     public func done(
@@ -91,11 +87,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
     public func `catch`<Next: ScreenContainer>(
         with route: @escaping (_ error: Error) -> ScreenRoute<Container, Next>
     ) -> Self {
-        `catch` { error in
-            ScreenNavigateAction(
-                actions: route(error).actions
-            ).eraseToAnyVoidAction()
-        }
+        `catch` { ScreenNavigateAction(actions: route($0).actions) }
     }
 
     public func `catch`(
@@ -105,5 +97,15 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         ) -> ScreenRouteConvertible
     ) -> Self {
         `catch` { route($0, .initial).route() }
+    }
+
+    public func `catch`<Next: ScreenContainer>(
+        with route: ScreenRoute<Container, Next>
+    ) -> Self {
+        `catch` { _ in route }
+    }
+
+    public func cauterize() -> Self {
+        `catch` { $1 }
     }
 }
