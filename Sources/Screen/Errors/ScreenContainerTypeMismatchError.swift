@@ -1,18 +1,18 @@
 import Foundation
 
-/// The type of the container does not match the expected type.
+/// The container does not match the expected type.
 ///
-/// This error occurs whenever any action fails to cast the container to the expected type.
+/// This error occurs whenever any action fails to cast the container to the specified type.
 public struct ScreenContainerTypeMismatchError: ScreenError {
 
     public var description: String {
         """
-        The type of the container \(container) does not match the expected type \(type) for:
+        Could not cast container \(container) to \(type) for:
           \(trigger)
         """
     }
 
-    /// Container that does not match the expected type.
+    /// Container that does not match the expected type
     public let container: ScreenContainer
 
     /// Expected container type
