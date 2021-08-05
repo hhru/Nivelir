@@ -1,7 +1,7 @@
 #if os(iOS) || os(tvOS)
 import Foundation
 
-public struct FailedOpenURLError: ScreenError {
+public struct FailedToOpenURLError: ScreenError {
 
     public var description: String {
         """
@@ -20,7 +20,7 @@ public struct FailedOpenURLError: ScreenError {
 extension Result where Failure == Error {
 
     internal static func failedToOpenURL(for trigger: Any) -> Self {
-        .failure(FailedOpenURLError(for: trigger))
+        .failure(FailedToOpenURLError(for: trigger))
     }
 }
 #endif

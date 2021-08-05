@@ -176,8 +176,8 @@
 		C088601426B6C60B00CA0A77 /* DocumentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FD826B6C60B00CA0A77 /* DocumentPreview.swift */; };
 		C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FD926B6C60B00CA0A77 /* DocumentPreviewManager.swift */; };
 		C088601626B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FD926B6C60B00CA0A77 /* DocumentPreviewManager.swift */; };
-		C088601726B6C60B00CA0A77 /* FailedOpenURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDB26B6C60B00CA0A77 /* FailedOpenURLError.swift */; };
-		C088601826B6C60B00CA0A77 /* FailedOpenURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDB26B6C60B00CA0A77 /* FailedOpenURLError.swift */; };
+		C088601726B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDB26B6C60B00CA0A77 /* FailedToOpenURLError.swift */; };
+		C088601826B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDB26B6C60B00CA0A77 /* FailedToOpenURLError.swift */; };
 		C088601926B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDD26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift */; };
 		C088601A26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDD26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift */; };
 		C088601B26B6C60B00CA0A77 /* ScreenOpenSettingsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885FDE26B6C60B00CA0A77 /* ScreenOpenSettingsAction.swift */; };
@@ -412,7 +412,7 @@
 		C0885FD726B6C60B00CA0A77 /* ScreenShowDocumentPreviewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShowDocumentPreviewAction.swift; sourceTree = "<group>"; };
 		C0885FD826B6C60B00CA0A77 /* DocumentPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPreview.swift; sourceTree = "<group>"; };
 		C0885FD926B6C60B00CA0A77 /* DocumentPreviewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPreviewManager.swift; sourceTree = "<group>"; };
-		C0885FDB26B6C60B00CA0A77 /* FailedOpenURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailedOpenURLError.swift; sourceTree = "<group>"; };
+		C0885FDB26B6C60B00CA0A77 /* FailedToOpenURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailedToOpenURLError.swift; sourceTree = "<group>"; };
 		C0885FDD26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidOpenSettingsURLError.swift; sourceTree = "<group>"; };
 		C0885FDE26B6C60B00CA0A77 /* ScreenOpenSettingsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOpenSettingsAction.swift; sourceTree = "<group>"; };
 		C0885FDF26B6C60B00CA0A77 /* ScreenOpenURLAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenOpenURLAction.swift; sourceTree = "<group>"; };
@@ -923,7 +923,7 @@
 				C0885FE026B6C60B00CA0A77 /* Mail */,
 				C0885FDC26B6C60B00CA0A77 /* Settings */,
 				C0885FE326B6C60B00CA0A77 /* StoreApp */,
-				C0885FDB26B6C60B00CA0A77 /* FailedOpenURLError.swift */,
+				C0885FDB26B6C60B00CA0A77 /* FailedToOpenURLError.swift */,
 				C0885FDF26B6C60B00CA0A77 /* ScreenOpenURLAction.swift */,
 			);
 			path = URL;
@@ -1422,7 +1422,7 @@
 				C0E93307262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C088604126B6C60B00CA0A77 /* StoreProductManager.swift in Sources */,
 				C0885F7A26B6BA0100CA0A77 /* ScreenPredicate.swift in Sources */,
-				C088601726B6C60B00CA0A77 /* FailedOpenURLError.swift in Sources */,
+				C088601726B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C088603126B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
 				C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
@@ -1581,7 +1581,7 @@
 				C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C088604226B6C60B00CA0A77 /* StoreProductManager.swift in Sources */,
 				C0885F7B26B6BA0100CA0A77 /* ScreenPredicate.swift in Sources */,
-				C088601826B6C60B00CA0A77 /* FailedOpenURLError.swift in Sources */,
+				C088601826B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */,
 				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C088603226B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
