@@ -24,7 +24,7 @@ public struct ScreenOpenSettingsAction<Container: ScreenContainer>: ScreenAction
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func openAppSettings() -> Self {
         then(ScreenOpenSettingsAction())

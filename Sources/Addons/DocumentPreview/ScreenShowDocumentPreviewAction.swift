@@ -44,13 +44,13 @@ public struct ScreenShowDocumentPreviewAction<Container: UIViewController>: Scre
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
-    public func showDocumentPreview<Next: ScreenContainer>(
+    public func showDocumentPreview<Route: ScreenThenable>(
         _ documentPreview: DocumentPreview,
         animated: Bool = true,
-        route: ScreenRoute<UIDocumentInteractionController, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == UIDocumentInteractionController {
         fold(
             action: ScreenShowDocumentPreviewAction<Current>(
                 documentPreview: documentPreview,

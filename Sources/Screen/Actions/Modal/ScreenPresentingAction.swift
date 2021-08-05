@@ -27,7 +27,7 @@ public struct ScreenPresentingAction<
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     /// Retrieves the modal container that presented the current container.
     ///

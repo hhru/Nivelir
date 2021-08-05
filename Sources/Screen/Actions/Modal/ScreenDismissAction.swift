@@ -39,7 +39,7 @@ public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     /// Dismisses the screen container that was presented modally by the container
     /// in which the action is performed.

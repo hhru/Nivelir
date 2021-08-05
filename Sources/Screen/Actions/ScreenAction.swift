@@ -48,7 +48,7 @@ public protocol ScreenAction {
     ///
     /// - Parameter type: The type to which the instance will be cast.
     /// - Returns: An optional value of the type you are trying to cast to.
-    func cast<T>(to type: T.Type) -> T?
+    func cast<Action: ScreenAction>(to type: Action.Type) -> Action?
 
     /// Сombines this action with another.
     ///
@@ -107,8 +107,8 @@ public protocol ScreenAction {
 
 extension ScreenAction {
 
-    public func cast<T>(to type: T.Type) -> T? {
-        self as? T
+    public func cast<Action: ScreenAction>(to type: Action.Type) -> Action? {
+        self as? Action
     }
 
     public func combine<Action: ScreenAction>(

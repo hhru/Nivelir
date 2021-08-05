@@ -30,12 +30,12 @@ public struct ScreenSetupTabAction<
     }
 }
 
-extension ScreenRoute where Current: UITabBarController {
+extension ScreenThenable where Current: UITabBarController {
 
-    public func setupTab<New: Screen, Next: ScreenContainer>(
+    public func setupTab<New: Screen, Route: ScreenThenable>(
         with screen: New,
-        route: ScreenRoute<New.Container, Next>
-    ) -> Self where New.Container: UIViewController {
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
         fold(
             action: ScreenSetupTabAction<New, Current>(screen: screen),
             nested: route

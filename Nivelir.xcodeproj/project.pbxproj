@@ -13,10 +13,6 @@
 		C015F484265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadContainer.swift */; };
 		C015F487265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
 		C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
-		C0242E77266F38E7002893FB /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0242E76266F38E7002893FB /* ScreenRoute.swift */; };
-		C0242E78266F38E7002893FB /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0242E76266F38E7002893FB /* ScreenRoute.swift */; };
-		C0242E7A266F7101002893FB /* ScreenRootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0242E79266F7101002893FB /* ScreenRootRoute.swift */; };
-		C0242E7B266F7101002893FB /* ScreenRootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0242E79266F7101002893FB /* ScreenRootRoute.swift */; };
 		C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
 		C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
 		C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */; };
@@ -52,8 +48,6 @@
 		C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C05E19C0266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
 		C05E19C2266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
-		C05F483926B68AC90002DF52 /* ScreenRouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F483826B68AC90002DF52 /* ScreenRouteConvertible.swift */; };
-		C05F483A26B68AC90002DF52 /* ScreenRouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F483826B68AC90002DF52 /* ScreenRouteConvertible.swift */; };
 		C05F488926B68B7F0002DF52 /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F484726B68B7F0002DF52 /* AnyScreenAction.swift */; };
 		C05F488A26B68B7F0002DF52 /* AnyScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F484726B68B7F0002DF52 /* AnyScreenAction.swift */; };
 		C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F484826B68B7F0002DF52 /* AnyScreenActionBaseBox.swift */; };
@@ -62,14 +56,6 @@
 		C05F488E26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F484926B68B7F0002DF52 /* AnyScreenActionBox.swift */; };
 		C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F487A26B68B7F0002DF52 /* ScreenAction.swift */; };
 		C05F48D626B68B7F0002DF52 /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F487A26B68B7F0002DF52 /* ScreenAction.swift */; };
-		C062880826029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */; };
-		C062880926029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */; };
-		C062880A26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880526029D76005BC0E8 /* ScreenModalRoute.swift */; };
-		C062880B26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880526029D76005BC0E8 /* ScreenModalRoute.swift */; };
-		C062880C26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */; };
-		C062880D26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */; };
-		C062880E26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880726029D76005BC0E8 /* ScreenStackRoute.swift */; };
-		C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062880726029D76005BC0E8 /* ScreenStackRoute.swift */; };
 		C06A4C89266AA61D008A7DF3 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C06A4C8A266AA632008A7DF3 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
 		C06A4C8B266AA632008A7DF3 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
@@ -98,8 +84,6 @@
 		C0885F6F26B6BA0100CA0A77 /* ScreenRefreshAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4426B6BA0000CA0A77 /* ScreenRefreshAction.swift */; };
 		C0885F7026B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4526B6BA0000CA0A77 /* ScreenRefreshableContainer.swift */; };
 		C0885F7126B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4526B6BA0000CA0A77 /* ScreenRefreshableContainer.swift */; };
-		C0885F7226B6BA0100CA0A77 /* ScreenNavigateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4626B6BA0000CA0A77 /* ScreenNavigateAction.swift */; };
-		C0885F7326B6BA0100CA0A77 /* ScreenNavigateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4626B6BA0000CA0A77 /* ScreenNavigateAction.swift */; };
 		C0885F7426B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4726B6BA0000CA0A77 /* ScreenFromAction.swift */; };
 		C0885F7526B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4726B6BA0000CA0A77 /* ScreenFromAction.swift */; };
 		C0885F7626B6BA0100CA0A77 /* ScreenTryResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F4926B6BA0000CA0A77 /* ScreenTryResolution.swift */; };
@@ -249,6 +233,10 @@
 		C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */; };
 		C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */; };
 		C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
+		C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8E926BC647A008C274A /* ScreenRoute.swift */; };
+		C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8E926BC647A008C274A /* ScreenRoute.swift */; };
+		C08FA8F126BC68F8008C274A /* ScreenRootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8F026BC68F8008C274A /* ScreenRootRoute.swift */; };
+		C08FA8F226BC68F8008C274A /* ScreenRootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8F026BC68F8008C274A /* ScreenRootRoute.swift */; };
 		C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */; };
 		C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A01A6023CB92FB00AC2C3A /* NivelirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */; };
@@ -269,6 +257,18 @@
 		C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
 		C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
 		C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
+		C0C3426426BC4511007A45E9 /* ScreenThenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */; };
+		C0C3426526BC4511007A45E9 /* ScreenThenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */; };
+		C0C3426C26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426026BC4511007A45E9 /* ScreenModalRoute.swift */; };
+		C0C3426D26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426026BC4511007A45E9 /* ScreenModalRoute.swift */; };
+		C0C3426E26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426126BC4511007A45E9 /* ScreenTabsRoute.swift */; };
+		C0C3426F26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426126BC4511007A45E9 /* ScreenTabsRoute.swift */; };
+		C0C3427026BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426226BC4511007A45E9 /* ScreenWindowRoute.swift */; };
+		C0C3427126BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426226BC4511007A45E9 /* ScreenWindowRoute.swift */; };
+		C0C3427226BC4511007A45E9 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426326BC4511007A45E9 /* ScreenStackRoute.swift */; };
+		C0C3427326BC4511007A45E9 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426326BC4511007A45E9 /* ScreenStackRoute.swift */; };
+		C0C3428026BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */; };
+		C0C3428126BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */; };
 		C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */; };
@@ -293,6 +293,8 @@
 		C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */; };
 		C0E93307262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */; };
 		C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */; };
+		C0E9EF2426BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9EF2326BC3094005A20E3 /* ScreenNavigateAction.swift */; };
+		C0E9EF2526BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9EF2326BC3094005A20E3 /* ScreenNavigateAction.swift */; };
 		C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */; };
 		C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */; };
 		C0F9A47525FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */; };
@@ -324,8 +326,6 @@
 		C015F47F265A8370003ECCB0 /* ScreenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayload.swift; sourceTree = "<group>"; };
 		C015F482265A8466003ECCB0 /* ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadContainer.swift; sourceTree = "<group>"; };
 		C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenPayloadContainer.swift"; sourceTree = "<group>"; };
-		C0242E76266F38E7002893FB /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
-		C0242E79266F7101002893FB /* ScreenRootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootRoute.swift; sourceTree = "<group>"; };
 		C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
@@ -350,15 +350,10 @@
 		C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenVisibleContainer.swift; sourceTree = "<group>"; };
 		C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPopoverPresentationAnchor.swift; sourceTree = "<group>"; };
 		C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPopoverPresentationDecorator.swift; sourceTree = "<group>"; };
-		C05F483826B68AC90002DF52 /* ScreenRouteConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRouteConvertible.swift; sourceTree = "<group>"; };
 		C05F484726B68B7F0002DF52 /* AnyScreenAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyScreenAction.swift; sourceTree = "<group>"; };
 		C05F484826B68B7F0002DF52 /* AnyScreenActionBaseBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyScreenActionBaseBox.swift; sourceTree = "<group>"; };
 		C05F484926B68B7F0002DF52 /* AnyScreenActionBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyScreenActionBox.swift; sourceTree = "<group>"; };
 		C05F487A26B68B7F0002DF52 /* ScreenAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
-		C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenWindowRoute.swift; sourceTree = "<group>"; };
-		C062880526029D76005BC0E8 /* ScreenModalRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
-		C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
-		C062880726029D76005BC0E8 /* ScreenStackRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
 		C06B5815262C610000BE4762 /* AnyScreenBaseBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBaseBox.swift; sourceTree = "<group>"; };
 		C06B581C262C619100BE4762 /* AnyScreenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBox.swift; sourceTree = "<group>"; };
 		C06B5823262C625A00BE4762 /* AnyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreen.swift; sourceTree = "<group>"; };
@@ -371,7 +366,6 @@
 		C0885F4126B6BA0000CA0A77 /* ScreenSelectTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectTabAction.swift; sourceTree = "<group>"; };
 		C0885F4426B6BA0000CA0A77 /* ScreenRefreshAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRefreshAction.swift; sourceTree = "<group>"; };
 		C0885F4526B6BA0000CA0A77 /* ScreenRefreshableContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRefreshableContainer.swift; sourceTree = "<group>"; };
-		C0885F4626B6BA0000CA0A77 /* ScreenNavigateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenNavigateAction.swift; sourceTree = "<group>"; };
 		C0885F4726B6BA0000CA0A77 /* ScreenFromAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenFromAction.swift; sourceTree = "<group>"; };
 		C0885F4926B6BA0000CA0A77 /* ScreenTryResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTryResolution.swift; sourceTree = "<group>"; };
 		C0885F4A26B6BA0000CA0A77 /* ScreenTryAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTryAction.swift; sourceTree = "<group>"; };
@@ -447,6 +441,8 @@
 		C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMakeVisibleAction.swift; sourceTree = "<group>"; };
 		C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotSupportedError.swift; sourceTree = "<group>"; };
 		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
+		C08FA8E926BC647A008C274A /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
+		C08FA8F026BC68F8008C274A /* ScreenRootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootRoute.swift; sourceTree = "<group>"; };
 		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1723CB900900AC2C3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -469,6 +465,12 @@
 		C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyedContainer.swift; sourceTree = "<group>"; };
 		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		C0BF2F112659B9CC00419426 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
+		C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenThenable.swift; sourceTree = "<group>"; };
+		C0C3426026BC4511007A45E9 /* ScreenModalRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
+		C0C3426126BC4511007A45E9 /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
+		C0C3426226BC4511007A45E9 /* ScreenWindowRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenWindowRoute.swift; sourceTree = "<group>"; };
+		C0C3426326BC4511007A45E9 /* ScreenStackRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
+		C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouteConvertible.swift; sourceTree = "<group>"; };
 		C0C9FE8B2655DECE0074D669 /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mintfile; sourceTree = "<group>"; };
 		C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 		C0E932FA262B16B80041C564 /* ScreenModalStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyle.swift; sourceTree = "<group>"; };
 		C0E932FB262B16B80041C564 /* ScreenModalStyleDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalStyleDecorator.swift; sourceTree = "<group>"; };
 		C0E932FC262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenLeftBarButtonDecorator.swift; sourceTree = "<group>"; };
+		C0E9EF2326BC3094005A20E3 /* ScreenNavigateAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenNavigateAction.swift; sourceTree = "<group>"; };
 		C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
 		C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerTypeMismatchError.swift; sourceTree = "<group>"; };
 		C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotFoundError.swift; sourceTree = "<group>"; };
@@ -672,28 +675,6 @@
 			path = Any;
 			sourceTree = "<group>";
 		};
-		C06286AC260007C2005BC0E8 /* Route */ = {
-			isa = PBXGroup;
-			children = (
-				C062880326029D59005BC0E8 /* Aliases */,
-				C0242E76266F38E7002893FB /* ScreenRoute.swift */,
-				C05F483826B68AC90002DF52 /* ScreenRouteConvertible.swift */,
-			);
-			path = Route;
-			sourceTree = "<group>";
-		};
-		C062880326029D59005BC0E8 /* Aliases */ = {
-			isa = PBXGroup;
-			children = (
-				C062880526029D76005BC0E8 /* ScreenModalRoute.swift */,
-				C0242E79266F7101002893FB /* ScreenRootRoute.swift */,
-				C062880726029D76005BC0E8 /* ScreenStackRoute.swift */,
-				C062880626029D76005BC0E8 /* ScreenTabsRoute.swift */,
-				C062880426029D76005BC0E8 /* ScreenWindowRoute.swift */,
-			);
-			path = Aliases;
-			sourceTree = "<group>";
-		};
 		C066836D25FD04BB0025FA93 /* Aliases */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,14 +718,13 @@
 		C0885F4226B6BA0000CA0A77 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
-				C088605226B9001D00CA0A77 /* Show */,
 				C0885F4B26B6BA0000CA0A77 /* Find */,
 				C0885F4326B6BA0000CA0A77 /* Refresh */,
 				C0885F4826B6BA0000CA0A77 /* Try */,
 				C0885F5026B6BA0000CA0A77 /* ScreenFoldAction.swift */,
 				C0885F4726B6BA0000CA0A77 /* ScreenFromAction.swift */,
 				C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */,
-				C0885F4626B6BA0000CA0A77 /* ScreenNavigateAction.swift */,
+				C0E9EF2326BC3094005A20E3 /* ScreenNavigateAction.swift */,
 				C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */,
 			);
 			path = Generic;
@@ -1022,13 +1002,6 @@
 			path = StoreProduct;
 			sourceTree = "<group>";
 		};
-		C088605226B9001D00CA0A77 /* Show */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Show;
-			sourceTree = "<group>";
-		};
 		C08F980E25EEB5A60077AE40 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,7 +1012,7 @@
 				C0AADA2E25EED8470087439E /* Errors */,
 				C0AAD9AE25EEC33D0087439E /* Navigator */,
 				C015F47E265A8360003ECCB0 /* Payload */,
-				C06286AC260007C2005BC0E8 /* Route */,
+				C0C3425A26BC4511007A45E9 /* Thenable */,
 				C0AAD9A825EEC2790087439E /* Screen.swift */,
 				C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */,
 			);
@@ -1108,6 +1081,29 @@
 				C0AADA2F25EED85C0087439E /* ScreenError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		C0C3425A26BC4511007A45E9 /* Thenable */ = {
+			isa = PBXGroup;
+			children = (
+				C0C3425E26BC4511007A45E9 /* Aliases */,
+				C08FA8E926BC647A008C274A /* ScreenRoute.swift */,
+				C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */,
+				C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */,
+			);
+			path = Thenable;
+			sourceTree = "<group>";
+		};
+		C0C3425E26BC4511007A45E9 /* Aliases */ = {
+			isa = PBXGroup;
+			children = (
+				C0C3426026BC4511007A45E9 /* ScreenModalRoute.swift */,
+				C08FA8F026BC68F8008C274A /* ScreenRootRoute.swift */,
+				C0C3426326BC4511007A45E9 /* ScreenStackRoute.swift */,
+				C0C3426126BC4511007A45E9 /* ScreenTabsRoute.swift */,
+				C0C3426226BC4511007A45E9 /* ScreenWindowRoute.swift */,
+			);
+			path = Aliases;
 			sourceTree = "<group>";
 		};
 		C0C9FE902655E4480074D669 /* WindowProvider */ = {
@@ -1261,7 +1257,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = HeadHunter;
 				TargetAttributes = {
 					C057F00D23CB8EEB00C2D895 = {
@@ -1379,14 +1375,13 @@
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */,
 				C088602126B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
-				C062880A26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */,
 				C0885F7C26B6BA0100CA0A77 /* ScreenFirstAction.swift in Sources */,
 				C0885F9626B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
 				C06B581D262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C0885FC026B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
 				C088600D26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0885FC226B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
-				C0242E7A266F7101002893FB /* ScreenRootRoute.swift in Sources */,
+				C0C3426426BC4511007A45E9 /* ScreenThenable.swift in Sources */,
 				C05E19B42669A95100255A69 /* ScreenPayloadContainer+NSObject.swift in Sources */,
 				C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8426B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
@@ -1414,23 +1409,23 @@
 				C0885FB026B6C0A500CA0A77 /* ScreenStackPopPredicate.swift in Sources */,
 				C0885F7026B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,
 				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
+				C08FA8F126BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
 				C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
+				C0C3427226BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
 				C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
 				C0885F6C26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
 				C0885FB826B6C0A500CA0A77 /* ScreenStackReplaceModifier.swift in Sources */,
+				C0C3426C26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */,
 				C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */,
 				C0E93307262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C088604126B6C60B00CA0A77 /* StoreProductManager.swift in Sources */,
 				C0885F7A26B6BA0100CA0A77 /* ScreenPredicate.swift in Sources */,
 				C088601726B6C60B00CA0A77 /* FailedOpenURLError.swift in Sources */,
-				C0242E77266F38E7002893FB /* ScreenRoute.swift in Sources */,
 				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C088603126B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
-				C0885F7226B6BA0100CA0A77 /* ScreenNavigateAction.swift in Sources */,
 				C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
-				C062880E26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */,
 				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0E93305262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C088604326B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
@@ -1439,6 +1434,7 @@
 				C088602926B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
 				C088603B26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
 				C0885F7426B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
+				C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
 				C0885F8226B6BA0100CA0A77 /* ScreenFoldAction.swift in Sources */,
 				C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
@@ -1447,13 +1443,11 @@
 				C0885FBA26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
 				C088600126B6C60B00CA0A77 /* AlertAction.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
-				C062880C26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */,
 				C088600526B6C60B00CA0A77 /* ScreenShowAlertAction.swift in Sources */,
 				C088603F26B6C60B00CA0A77 /* MediaPickerManager.swift in Sources */,
 				C06B5824262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0C9FE982655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
-				C05F483926B68AC90002DF52 /* ScreenRouteConvertible.swift in Sources */,
 				C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C0AAD9A925EEC2790087439E /* Screen.swift in Sources */,
 				C088602D26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
@@ -1474,14 +1468,16 @@
 				C0885F8C26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601926B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
 				C088600B26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
+				C0E9EF2426BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
+				C0C3427026BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
 				C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C088602F26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
-				C062880826029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */,
 				C0885FFB26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
 				C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C088600926B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C0885FBC26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
 				C0E932EF262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
+				C0C3426E26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603926B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C088601326B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
 				C0C9FE9B2655E5700074D669 /* ScreenNavigator.swift in Sources */,
@@ -1503,6 +1499,7 @@
 				C0885F6226B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */,
 				C05F488926B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0AADA4D25EEE1F10087439E /* ScreenKeyedContainer.swift in Sources */,
+				C0C3428026BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C088604726B6C60B00CA0A77 /* InvalidStoreProductIDError.swift in Sources */,
 				C088600F26B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
 				C0885F9426B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,
@@ -1535,16 +1532,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C05F488C26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
-				C062880B26029D76005BC0E8 /* ScreenModalRoute.swift in Sources */,
 				C088602226B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
 				C0885F7D26B6BA0100CA0A77 /* ScreenFirstAction.swift in Sources */,
 				C0885F9726B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
 				C06B581E262C619100BE4762 /* AnyScreenBox.swift in Sources */,
-				C0242E7B266F7101002893FB /* ScreenRootRoute.swift in Sources */,
 				C0885FC126B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
 				C088600E26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0885FC326B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
+				C0C3426526BC4511007A45E9 /* ScreenThenable.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
 				C088605526B9294E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8526B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
@@ -1572,12 +1568,15 @@
 				C0885FB126B6C0A500CA0A77 /* ScreenStackPopPredicate.swift in Sources */,
 				C0885F7126B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,
 				C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
+				C08FA8F226BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
 				C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */,
+				C0C3427326BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
 				C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
 				C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */,
 				C0AADB6525EF900B0087439E /* UIViewController+ScreenContainer.swift in Sources */,
 				C0885F6D26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
 				C0885FB926B6C0A500CA0A77 /* ScreenStackReplaceModifier.swift in Sources */,
+				C0C3426D26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */,
 				C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */,
 				C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C088604226B6C60B00CA0A77 /* StoreProductManager.swift in Sources */,
@@ -1586,9 +1585,7 @@
 				C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */,
 				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C088603226B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
-				C0885F7326B6BA0100CA0A77 /* ScreenNavigateAction.swift in Sources */,
 				C088601626B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
-				C062880F26029D76005BC0E8 /* ScreenStackRoute.swift in Sources */,
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C088604426B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
@@ -1596,6 +1593,7 @@
 				C088600426B6C60B00CA0A77 /* Alert.swift in Sources */,
 				C088602A26B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
 				C088603C26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
+				C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C0885F7526B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
 				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0885F8326B6BA0100CA0A77 /* ScreenFoldAction.swift in Sources */,
@@ -1605,13 +1603,10 @@
 				C0885FBB26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
 				C088600226B6C60B00CA0A77 /* AlertAction.swift in Sources */,
 				C088603826B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
-				C0242E78266F38E7002893FB /* ScreenRoute.swift in Sources */,
 				C088600626B6C60B00CA0A77 /* ScreenShowAlertAction.swift in Sources */,
 				C088604026B6C60B00CA0A77 /* MediaPickerManager.swift in Sources */,
 				C0AADB5825EF8FFB0087439E /* ScreenKeyedContainer.swift in Sources */,
-				C062880D26029D76005BC0E8 /* ScreenTabsRoute.swift in Sources */,
 				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
-				C05F483A26B68AC90002DF52 /* ScreenRouteConvertible.swift in Sources */,
 				C06B5825262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
 				C088602E26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
@@ -1632,14 +1627,16 @@
 				C0885F8D26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601A26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
 				C088600C26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
+				C0E9EF2526BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
+				C0C3427126BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
 				C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C088603026B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
-				C062880926029D76005BC0E8 /* ScreenWindowRoute.swift in Sources */,
 				C0885FFC26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
 				C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C088600A26B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C0885FBD26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
 				C06A4C8C266AA641008A7DF3 /* ScreenPayloadContainer+NSObject.swift in Sources */,
+				C0C3426F26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603A26B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C088601426B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
 				C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
@@ -1661,6 +1658,7 @@
 				C05F488A26B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
 				C088604826B6C60B00CA0A77 /* InvalidStoreProductIDError.swift in Sources */,
+				C0C3428126BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */,
 				C088601026B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
 				C0885F9526B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,

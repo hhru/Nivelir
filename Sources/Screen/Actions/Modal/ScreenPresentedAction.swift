@@ -28,7 +28,7 @@ public struct ScreenPresentedAction<
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     /// Retrieves the modal container that is presented by the current container,
     /// or one of its ancestors in the container hierarchy.
@@ -105,10 +105,10 @@ extension ScreenRoute where Current: UIViewController {
     ///   - type: The type to which the container will be cast.
     ///   - route: The route that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
-    public func presented<Output: UIViewController, Next: ScreenContainer>(
+    public func presented<Output: UIViewController, Route: ScreenThenable>(
         of type: Output.Type = Output.self,
-        route: ScreenRoute<Output, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == Output {
         fold(
             action: ScreenPresentedAction<Current, Output>(),
             nested: route

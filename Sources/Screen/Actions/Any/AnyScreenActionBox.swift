@@ -19,7 +19,7 @@ internal final class AnyScreenActionBox<
         self.mapper = mapper
     }
 
-    internal override func cast<T>(to type: T.Type) -> T? {
+    internal override func cast<Action: ScreenAction>(to type: Action.Type) -> Action? {
         wrapped.cast(to: type)
     }
 

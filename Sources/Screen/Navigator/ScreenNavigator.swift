@@ -47,6 +47,16 @@ public final class ScreenNavigator {
         self.iterator = iterator
         self.logger = logger
     }
+
+    public init(
+        window: UIWindow,
+        iterator: ScreenIterator = DefaultScreenIterator(),
+        logger: ScreenLogger? = DefaultScreenLogger()
+    ) {
+        self.windowProvider = ScreenCustomWindowProvider(window: window)
+        self.iterator = iterator
+        self.logger = logger
+    }
     #else
     public init(
         iterator: ScreenIterator,

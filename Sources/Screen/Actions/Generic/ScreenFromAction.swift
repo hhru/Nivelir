@@ -24,7 +24,7 @@ public struct ScreenFromAction<
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func from<Output: ScreenContainer>(
         _ container: Output?
@@ -32,10 +32,10 @@ extension ScreenRoute {
         fold(action: ScreenFromAction(output: container))
     }
 
-    public func from<Output: ScreenContainer, Next: ScreenContainer>(
+    public func from<Output, Route: ScreenThenable>(
         _ container: Output?,
-        to route: ScreenRoute<Output, Next>
-    ) -> Self {
+        to route: Route
+    ) -> Self where Route.Root == Output {
         fold(
             action: ScreenFromAction(output: container),
             nested: route
@@ -53,11 +53,11 @@ extension ScreenRoute {
 #if canImport(UIKit)
 extension ScreenNavigator {
 
-    public func navigate<Output: ScreenContainer, Next: ScreenContainer>(
+    public func navigate<Output, Route: ScreenThenable>(
         from container: Output?,
-        to route: ScreenRoute<Output, Next>,
+        to route: Route,
         completion: Completion? = nil
-    ) {
+    ) where Route.Root == Output {
         navigate(
             to: { $0.from(container, to: route) },
             completion: completion

@@ -51,7 +51,7 @@ public struct ScreenFoldAction<
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     /// Performs action to retrieve the container that will be used to perform further actions of the route.
     ///
@@ -108,13 +108,13 @@ extension ScreenRoute {
     ///   - action: Action to retrieve the container.
     ///   - nested: Nested route to be performed in the retrieved container.
     /// - Returns: An instance containing the new action.
-    public func fold<Action: ScreenAction, Next: ScreenContainer>(
+    public func fold<Action: ScreenAction, Route: ScreenThenable>(
         action: Action,
-        nested: ScreenRoute<Action.Output, Next>
-    ) -> Self where Action.Container == Current {
+        nested: Route
+    ) -> Self where Action.Container == Current, Action.Output == Route.Root {
         fold(
             action: action,
-            nested: nested.actions
+            nested: ScreenNavigateAction(actions: nested.actions)
         )
     }
 

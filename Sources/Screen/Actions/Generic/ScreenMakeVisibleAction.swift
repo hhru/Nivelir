@@ -7,13 +7,16 @@ public struct ScreenMakeVisibleAction<Container: UIViewController>: ScreenAction
 
     public let stackAnimation: ScreenStackAnimation?
     public let tabsAnimation: ScreenTabAnimation?
+    public let dissmissAnimated: Bool
 
     public init(
         stackAnimation: ScreenStackAnimation? = .default,
-        tabsAnimation: ScreenTabAnimation? = nil
+        tabsAnimation: ScreenTabAnimation? = nil,
+        dissmissAnimated: Bool = true
     ) {
         self.stackAnimation = stackAnimation
         self.tabsAnimation = tabsAnimation
+        self.dissmissAnimated = dissmissAnimated
     }
 
     private func showContainer(_ container: UIViewController) throws -> ScreenRootRoute<Container> {
@@ -47,7 +50,7 @@ public struct ScreenMakeVisibleAction<Container: UIViewController>: ScreenAction
         do {
             let route = ScreenModalRoute
                 .from(container)
-                .dismiss()
+                .dismiss(animated: dissmissAnimated)
                 .then(try showContainer(container))
 
             ScreenNavigateAction(actions: route.actions).perform(
@@ -61,16 +64,18 @@ public struct ScreenMakeVisibleAction<Container: UIViewController>: ScreenAction
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     public func makeVisible(
         stackAnimation: ScreenStackAnimation? = .default,
-        tabsAnimation: ScreenTabAnimation? = nil
+        tabsAnimation: ScreenTabAnimation? = nil,
+        dissmissAnimated: Bool = true
     ) -> Self {
         then(
             ScreenMakeVisibleAction<Current>(
                 stackAnimation: stackAnimation,
-                tabsAnimation: tabsAnimation
+                tabsAnimation: tabsAnimation,
+                dissmissAnimated: dissmissAnimated
             )
         )
     }

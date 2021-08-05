@@ -46,13 +46,13 @@ public struct ScreenShowStoreProductAction<Container: UIViewController>: ScreenA
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
-    public func showStoreProduct<Next: ScreenContainer>(
+    public func showStoreProduct<Route: ScreenThenable>(
         _ storeProduct: StoreProduct,
         animated: Bool = true,
-        route: ScreenRoute<SKStoreProductViewController, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == SKStoreProductViewController {
         fold(
             action: ScreenShowStoreProductAction<Current>(
                 storeProduct: storeProduct,

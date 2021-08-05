@@ -38,7 +38,7 @@ public struct ScreenCallAction<Container: ScreenContainer>: ScreenAction {
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func call(to phoneNumber: String) -> Self {
         then(ScreenCallAction(phoneNumber: phoneNumber))

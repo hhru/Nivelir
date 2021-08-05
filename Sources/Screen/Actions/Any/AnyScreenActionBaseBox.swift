@@ -11,7 +11,7 @@ internal class AnyScreenActionBaseBox<Container: ScreenContainer, Output>:
     }
 
     // swiftlint:disable:next unavailable_function
-    internal func cast<T>(to type: T.Type) -> T? {
+    internal func cast<Action: ScreenAction>(to type: Action.Type) -> Action? {
         fatalError("\(#function) has not been implemented")
     }
 

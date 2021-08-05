@@ -11,7 +11,7 @@ public struct ScreenNavigateAction<Container: ScreenContainer>: ScreenAction {
 
     /// Creates action.
     ///
-    /// - Parameter action: Actions to be performed.
+    /// - Parameter actions: Actions to be performed.
     public init(actions: [AnyScreenAction<Container, Void>]) {
         self.actions = actions
     }

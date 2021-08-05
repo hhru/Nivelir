@@ -3,9 +3,9 @@ import Foundation
 public struct ScreenRoute<
     Root: ScreenContainer,
     Current: ScreenContainer
->: ScreenRouteConvertible {
+>: ScreenThenable {
 
-    public typealias Resolver = (
+    internal typealias Resolver = (
         _ actions: [AnyScreenAction<Current, Void>]
     ) -> [AnyScreenAction<Root, Void>]
 
@@ -46,13 +46,9 @@ public struct ScreenRoute<
         then([action.eraseToAnyVoidAction()])
     }
 
-    public func then<Next: ScreenContainer>(
-        _ other: ScreenRoute<Current, Next>
-    ) -> Self {
+    public func then<Route: ScreenThenable>(
+        _ other: Route
+    ) -> Self where Route.Root == Current {
         then(other.actions)
-    }
-
-    public func route<Container: ScreenContainer>() -> ScreenRootRoute<Container> {
-        ScreenRootRoute(actions: actions as? [AnyScreenAction<Container, Void>] ?? [])
     }
 }

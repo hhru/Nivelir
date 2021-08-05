@@ -15,11 +15,11 @@ extension ScreenRoute where Root == Current {
         )
     }
 
-    internal init<Action: ScreenAction>(action: Action) where Action.Container == Current {
+    public init<Action: ScreenAction>(action: Action) where Action.Container == Current {
         self.init(actions: [action.eraseToAnyVoidAction()])
     }
 
-    public init(route: (_ route: Self) -> Self) {
-        self.init(actions: route(.initial).actions)
+    public init(_ route: (_ route: ScreenRootRoute<Root>) -> ScreenRouteConvertible) {
+        self.init(actions: route(.initial).route().actions)
     }
 }
