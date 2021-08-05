@@ -1,6 +1,6 @@
 import Foundation
 
-/// A route for describing navigation.
+/// A route that describes navigation as a set of actions.
 public struct ScreenRoute<
     Root: ScreenContainer,
     Current: ScreenContainer
@@ -51,5 +51,12 @@ public struct ScreenRoute<
         _ other: Route
     ) -> Self where Route.Root == Current {
         then(other.actions)
+    }
+
+    /// Returns the root route with the actions of the current instance.
+    ///
+    /// - Returns: An instance containing all the actions.
+    public func resolve() -> ScreenRootRoute<Root> {
+        ScreenRootRoute(actions: actions)
     }
 }
