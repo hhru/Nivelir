@@ -7,7 +7,7 @@ public struct ScreenTabsAction<
     Output: UITabBarController
 >: ScreenAction {
 
-    /// Creates action.
+    /// Creates an action.
     public init() { }
 
     public func perform(

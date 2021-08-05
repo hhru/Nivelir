@@ -23,7 +23,7 @@ public struct ScreenKey: Equatable, CustomStringConvertible {
             : "\(name)(\(traits))"
     }
 
-    /// Creates screen key.
+    /// Creates a screen key.
     ///
     /// - Parameters:
     ///   - name: Screen name.

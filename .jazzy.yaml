@@ -15,15 +15,26 @@ custom_categories:
     children:
       - Screen
       - ScreenContainer
-      - ScreenVisibleContainer
       - ScreenKey
       - ScreenKeyedContainer
+      - ScreenVisibleContainer
       - ScreenPayload
-      - ScreenPayloadContainer
+      - ScreenPayloadedContainer
       - AnyScreen
       - AnyModalScreen
       - AnyStackScreen
       - AnyTabsScreen
+
+  - name: Route
+    children:
+      - ScreenThenable
+      - ScreenRoute
+      - ScreenRouteConvertible
+      - ScreenRootRoute
+      - ScreenModalRoute
+      - ScreenStackRoute
+      - ScreenTabsRoute
+      - ScreenWindowRoute
 
   - name: Actions
     children:
@@ -32,6 +43,7 @@ custom_categories:
 
       - ScreenFoldAction
       - ScreenFromAction
+      - ScreenMakeVisibleAction
       - ScreenNavigateAction
       - ScreenWaitAction
 
@@ -53,20 +65,39 @@ custom_categories:
       - ScreenStackAction
       - ScreenTabsAction
 
-  - name: Routes
-    children:
-      - ScreenRoute
-      - ScreenRouteConvertible
-      - ScreenRootRoute
-      - ScreenModalRoute
-      - ScreenStackRoute
-      - ScreenTabsRoute
-      - ScreenWindowRoute
+      - ScreenSetStackAction
+      - ScreenStackModifier
+      - ScreenStackClearModifier
+      - ScreenStackPushModifier
+      - ScreenStackReplaceModifier
+      - ScreenStackPopModifier
+      - ScreenStackPopPredicate
+      - ScreenStackAnimation
+      - ScreenStackCustomAnimation
+      - ScreenStackTransitionAnimation
+      - ScreenStackRootAction
+      - ScreenStackVisibleAction
+      - ScreenStackTopAction
+
+      - ScreenSelectTabAction
+      - ScreenTabAnimation
+      - ScreenTabCustomAnimation
+      - ScreenTabTransitionAnimation
+      - ScreenTabPredicate
+      - ScreenSelectedTabAction
+      - ScreenSetupTabAction
+
+      - ScreenSetRootAction
+      - ScreenRootAnimation
+      - ScreenRootCustomAnimation
+      - ScreenRootTransitionAnimation
+      - ScreenRootAction
 
   - name: Errors
     children:
       - ScreenError
       - ScreenContainerNotFoundError
+      - ScreenContainerNotSupportedError
       - ScreenContainerTypeMismatchError
 
   - name: Navigator

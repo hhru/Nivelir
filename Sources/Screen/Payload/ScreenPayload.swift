@@ -5,7 +5,7 @@ import Foundation
 /// This is a helper class that is used to store navigation data
 /// that should be in memory until the screen container itself is released.
 ///
-/// - SeeAlso: `ScreenPayloadContainer`
+/// - SeeAlso: `ScreenPayloadedContainer`
 public final class ScreenPayload {
 
     private var storage: [Any] = []

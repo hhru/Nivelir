@@ -48,10 +48,12 @@ public struct ScreenMakeVisibleAction<Container: UIViewController>: ScreenAction
         completion: @escaping Completion
     ) {
         do {
-            let route = ScreenModalRoute
-                .from(container)
-                .dismiss(animated: dissmissAnimated)
-                .then(try showContainer(container))
+            let route = try ScreenModalRoute { route in
+                route
+                    .from(container)
+                    .dismiss(animated: dissmissAnimated)
+                    .then(try showContainer(container))
+            }
 
             ScreenNavigateAction(actions: route.actions).perform(
                 container: container,

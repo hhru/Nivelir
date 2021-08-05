@@ -7,7 +7,7 @@ public struct ScreenStackAction<
     Output: UINavigationController
 >: ScreenAction {
 
-    /// Creates action.
+    /// Creates an action.
     public init() { }
 
     public func perform(

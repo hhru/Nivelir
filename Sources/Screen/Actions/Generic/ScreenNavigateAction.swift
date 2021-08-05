@@ -9,7 +9,7 @@ public struct ScreenNavigateAction<Container: ScreenContainer>: ScreenAction {
     /// Actions to be performed.
     public let actions: [AnyScreenAction<Container, Void>]
 
-    /// Creates action.
+    /// Creates an action.
     ///
     /// - Parameter actions: Actions to be performed.
     public init(actions: [AnyScreenAction<Container, Void>]) {

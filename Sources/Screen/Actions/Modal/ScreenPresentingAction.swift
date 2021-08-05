@@ -7,7 +7,7 @@ public struct ScreenPresentingAction<
     Output: UIViewController
 >: ScreenAction {
 
-    /// Creates action.
+    /// Creates an action.
     public init() { }
 
     public func perform(

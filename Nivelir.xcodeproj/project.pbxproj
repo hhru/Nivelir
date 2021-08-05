@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		C015F480265A8370003ECCB0 /* ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F47F265A8370003ECCB0 /* ScreenPayload.swift */; };
 		C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F47F265A8370003ECCB0 /* ScreenPayload.swift */; };
-		C015F483265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadContainer.swift */; };
-		C015F484265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadContainer.swift */; };
+		C015F483265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */; };
+		C015F484265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */; };
 		C015F487265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
 		C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
 		C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
@@ -44,7 +44,7 @@
 		C057F01823CB8EEB00C2D895 /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C057F00E23CB8EEB00C2D895 /* Nivelir.framework */; };
 		C057F01D23CB8EEB00C2D895 /* NivelirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */; };
 		C057F01F23CB8EEB00C2D895 /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C05E19B42669A95100255A69 /* ScreenPayloadContainer+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */; };
+		C05E19B42669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift */; };
 		C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C05E19C0266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
 		C05E19C2266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
@@ -59,7 +59,7 @@
 		C06A4C89266AA61D008A7DF3 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C06A4C8A266AA632008A7DF3 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
 		C06A4C8B266AA632008A7DF3 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
-		C06A4C8C266AA641008A7DF3 /* ScreenPayloadContainer+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */; };
+		C06A4C8C266AA641008A7DF3 /* ScreenPayloadedContainer+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19B32669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift */; };
 		C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B5815262C610000BE4762 /* AnyScreenBaseBox.swift */; };
 		C06B5817262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B5815262C610000BE4762 /* AnyScreenBaseBox.swift */; };
 		C06B581D262C619100BE4762 /* AnyScreenBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B581C262C619100BE4762 /* AnyScreenBox.swift */; };
@@ -324,7 +324,7 @@
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C015F47F265A8370003ECCB0 /* ScreenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayload.swift; sourceTree = "<group>"; };
-		C015F482265A8466003ECCB0 /* ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadContainer.swift; sourceTree = "<group>"; };
+		C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadedContainer.swift; sourceTree = "<group>"; };
 		C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenPayloadContainer.swift"; sourceTree = "<group>"; };
 		C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 		C057F01723CB8EEB00C2D895 /* Nivelir Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nivelir Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C057F01C23CB8EEB00C2D895 /* NivelirTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NivelirTests.swift; sourceTree = "<group>"; };
 		C057F01E23CB8EEB00C2D895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenPayloadContainer+NSObject.swift"; sourceTree = "<group>"; };
+		C05E19B32669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenPayloadedContainer+NSObject.swift"; sourceTree = "<group>"; };
 		C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenVisibleContainer.swift; sourceTree = "<group>"; };
 		C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPopoverPresentationAnchor.swift; sourceTree = "<group>"; };
 		C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPopoverPresentationDecorator.swift; sourceTree = "<group>"; };
@@ -529,7 +529,7 @@
 			children = (
 				C015F485265A84B3003ECCB0 /* Extensions */,
 				C015F47F265A8370003ECCB0 /* ScreenPayload.swift */,
-				C015F482265A8466003ECCB0 /* ScreenPayloadContainer.swift */,
+				C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */,
 			);
 			path = Payload;
 			sourceTree = "<group>";
@@ -537,7 +537,7 @@
 		C015F485265A84B3003ECCB0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C05E19B32669A95100255A69 /* ScreenPayloadContainer+NSObject.swift */,
+				C05E19B32669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift */,
 				C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */,
 			);
 			path = Extensions;
@@ -1012,7 +1012,7 @@
 				C0AADA2E25EED8470087439E /* Errors */,
 				C0AAD9AE25EEC33D0087439E /* Navigator */,
 				C015F47E265A8360003ECCB0 /* Payload */,
-				C0C3425A26BC4511007A45E9 /* ScreenRoute */,
+				C0C3425A26BC4511007A45E9 /* Route */,
 				C0AAD9A825EEC2790087439E /* Screen.swift */,
 				C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */,
 			);
@@ -1083,7 +1083,7 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		C0C3425A26BC4511007A45E9 /* ScreenRoute */ = {
+		C0C3425A26BC4511007A45E9 /* Route */ = {
 			isa = PBXGroup;
 			children = (
 				C0C3425E26BC4511007A45E9 /* Aliases */,
@@ -1091,7 +1091,7 @@
 				C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */,
 				C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */,
 			);
-			path = ScreenRoute;
+			path = Route;
 			sourceTree = "<group>";
 		};
 		C0C3425E26BC4511007A45E9 /* Aliases */ = {
@@ -1382,10 +1382,10 @@
 				C088600D26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0885FC226B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0C3426426BC4511007A45E9 /* ScreenThenable.swift in Sources */,
-				C05E19B42669A95100255A69 /* ScreenPayloadContainer+NSObject.swift in Sources */,
+				C05E19B42669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift in Sources */,
 				C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8426B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
-				C015F483265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */,
+				C015F483265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
 				C0885FFF26B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
 				C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6626B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
@@ -1589,7 +1589,7 @@
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C088604426B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
-				C015F484265A8466003ECCB0 /* ScreenPayloadContainer.swift in Sources */,
+				C015F484265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
 				C088600426B6C60B00CA0A77 /* Alert.swift in Sources */,
 				C088602A26B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
 				C088603C26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
@@ -1635,7 +1635,7 @@
 				C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C088600A26B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C0885FBD26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
-				C06A4C8C266AA641008A7DF3 /* ScreenPayloadContainer+NSObject.swift in Sources */,
+				C06A4C8C266AA641008A7DF3 /* ScreenPayloadedContainer+NSObject.swift in Sources */,
 				C0C3426F26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603A26B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C088601426B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,

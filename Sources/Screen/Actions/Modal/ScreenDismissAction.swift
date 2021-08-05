@@ -14,7 +14,7 @@ public struct ScreenDismissAction<Container: UIViewController>: ScreenAction {
     /// A Boolean value indicating whether the transition will be animated.
     public let animated: Bool
 
-    /// Creates action.
+    /// Creates an action.
     ///
     /// - Parameter animated: A Boolean value indicating whether the transition will be animated.
     ///                       The default value is `true`.

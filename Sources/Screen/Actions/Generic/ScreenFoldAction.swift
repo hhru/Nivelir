@@ -20,7 +20,7 @@ public struct ScreenFoldAction<
     /// Nested action to be performed in the retrieved container.
     public let nested: Nested
 
-    /// Creates action.
+    /// Creates an action.
     ///
     /// - Parameters:
     ///   - action: Action to retrieve the container.

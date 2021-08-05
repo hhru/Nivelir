@@ -18,7 +18,7 @@ public struct ScreenPresentAction<
     /// A Boolean value indicating whether the transition will be animated.
     public let animated: Bool
 
-    /// Creates action.
+    /// Creates an action.
     ///
     /// - Parameters:
     ///   - screen: The screen to display over the current container’s content.
