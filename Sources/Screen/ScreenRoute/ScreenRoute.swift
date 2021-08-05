@@ -1,5 +1,6 @@
 import Foundation
 
+/// A route for describing navigation.
 public struct ScreenRoute<
     Root: ScreenContainer,
     Current: ScreenContainer

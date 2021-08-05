@@ -1012,7 +1012,7 @@
 				C0AADA2E25EED8470087439E /* Errors */,
 				C0AAD9AE25EEC33D0087439E /* Navigator */,
 				C015F47E265A8360003ECCB0 /* Payload */,
-				C0C3425A26BC4511007A45E9 /* Thenable */,
+				C0C3425A26BC4511007A45E9 /* ScreenRoute */,
 				C0AAD9A825EEC2790087439E /* Screen.swift */,
 				C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */,
 			);
@@ -1083,7 +1083,7 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		C0C3425A26BC4511007A45E9 /* Thenable */ = {
+		C0C3425A26BC4511007A45E9 /* ScreenRoute */ = {
 			isa = PBXGroup;
 			children = (
 				C0C3425E26BC4511007A45E9 /* Aliases */,
@@ -1091,7 +1091,7 @@
 				C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */,
 				C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */,
 			);
-			path = Thenable;
+			path = ScreenRoute;
 			sourceTree = "<group>";
 		};
 		C0C3425E26BC4511007A45E9 /* Aliases */ = {
