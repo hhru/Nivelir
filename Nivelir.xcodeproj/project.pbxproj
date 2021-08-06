@@ -301,6 +301,8 @@
 		C0F9A47625FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */; };
 		C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */; };
 		C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */; };
+		C0FF99D226BCB28A00961A70 /* ScreenFailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF99D126BCB28A00961A70 /* ScreenFailAction.swift */; };
+		C0FF99D326BCB28A00961A70 /* ScreenFailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF99D126BCB28A00961A70 /* ScreenFailAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -488,6 +490,7 @@
 		C0F9A45325FD5B5B00DAE060 /* ScreenKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenKey.swift; sourceTree = "<group>"; };
 		C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerTypeMismatchError.swift; sourceTree = "<group>"; };
 		C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotFoundError.swift; sourceTree = "<group>"; };
+		C0FF99D126BCB28A00961A70 /* ScreenFailAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFailAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -726,6 +729,7 @@
 				C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */,
 				C0E9EF2326BC3094005A20E3 /* ScreenNavigateAction.swift */,
 				C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */,
+				C0FF99D126BCB28A00961A70 /* ScreenFailAction.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -1438,6 +1442,7 @@
 				C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
 				C0885F8226B6BA0100CA0A77 /* ScreenFoldAction.swift in Sources */,
 				C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
+				C0FF99D226BCB28A00961A70 /* ScreenFailAction.swift in Sources */,
 				C088603D26B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift in Sources */,
 				C0885F8626B6BA0100CA0A77 /* ScreenRootCustomAnimation.swift in Sources */,
 				C0885FBA26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
@@ -1597,6 +1602,7 @@
 				C0885F7526B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
 				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0885F8326B6BA0100CA0A77 /* ScreenFoldAction.swift in Sources */,
+				C0FF99D326BCB28A00961A70 /* ScreenFailAction.swift in Sources */,
 				C06B5817262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
 				C088603E26B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift in Sources */,
 				C0885F8726B6BA0100CA0A77 /* ScreenRootCustomAnimation.swift in Sources */,
