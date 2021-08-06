@@ -36,7 +36,7 @@ public struct ScreenOpenURLAction<Container: ScreenContainer>: ScreenAction {
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func openURL(
         _ url: URL,

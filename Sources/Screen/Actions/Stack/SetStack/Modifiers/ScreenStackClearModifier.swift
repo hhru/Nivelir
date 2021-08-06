@@ -17,7 +17,7 @@ public struct ScreenStackClearModifier: ScreenStackModifier {
     }
 }
 
-extension ScreenRoute where Current: UINavigationController {
+extension ScreenThenable where Current: UINavigationController {
 
     public func clear(animation: ScreenStackAnimation? = .default) -> Self {
         setStack(

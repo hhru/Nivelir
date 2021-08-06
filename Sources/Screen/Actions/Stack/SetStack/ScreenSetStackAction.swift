@@ -147,7 +147,7 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
     }
 }
 
-extension ScreenRoute where Current: UINavigationController {
+extension ScreenThenable where Current: UINavigationController {
 
     public func setStack(
         modifiers: [ScreenStackModifier],

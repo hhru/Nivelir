@@ -49,7 +49,7 @@ public struct ScreenMailAction<Container: ScreenContainer>: ScreenAction {
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func mail(
         to emailAddress: String,

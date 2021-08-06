@@ -1,5 +1,5 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIViewController: ScreenPayloadContainer { }
+extension UIViewController: ScreenPayloadedContainer { }
 #endif

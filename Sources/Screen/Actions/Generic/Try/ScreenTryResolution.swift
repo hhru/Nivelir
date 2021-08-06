@@ -33,9 +33,9 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         )
     }
 
-    public func ensure<Next: ScreenContainer>(
-        with route: ScreenRoute<Container, Next>
-    ) -> Self {
+    public func ensure<Route: ScreenThenable>(
+        with route: Route
+    ) -> Self where Route.Root == Container {
         ensure(with: ScreenNavigateAction(actions: route.actions))
     }
 
@@ -57,9 +57,9 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         )
     }
 
-    public func done<Next: ScreenContainer>(
-        with route: @escaping (_ value: Output) -> ScreenRoute<Container, Next>
-    ) -> Self {
+    public func done<Route: ScreenThenable>(
+        with route: @escaping (_ value: Output) -> Route
+    ) -> Self where Route.Root == Container {
         done { ScreenNavigateAction(actions: route($0).actions) }
     }
 
@@ -84,9 +84,9 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         )
     }
 
-    public func `catch`<Next: ScreenContainer>(
-        with route: @escaping (_ error: Error) -> ScreenRoute<Container, Next>
-    ) -> Self {
+    public func `catch`<Route: ScreenThenable>(
+        with route: @escaping (_ error: Error) -> Route
+    ) -> Self where Route.Root == Container {
         `catch` { ScreenNavigateAction(actions: route($0).actions) }
     }
 
@@ -99,9 +99,9 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         `catch` { route($0, .initial).route() }
     }
 
-    public func `catch`<Next: ScreenContainer>(
-        with route: ScreenRoute<Container, Next>
-    ) -> Self {
+    public func `catch`<Route: ScreenThenable>(
+        with route: Route
+    ) -> Self where Route.Root == Container {
         `catch` { _ in route }
     }
 

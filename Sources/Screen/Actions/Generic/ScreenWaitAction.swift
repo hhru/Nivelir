@@ -26,7 +26,7 @@ public struct ScreenWaitAction<Container: ScreenContainer>: ScreenAction {
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     /// Waits for a given time interval.
     ///

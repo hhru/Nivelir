@@ -25,7 +25,7 @@ public struct ScreenSelectedTabAction<
     }
 }
 
-extension ScreenRoute where Current: UITabBarController {
+extension ScreenThenable where Current: UITabBarController {
 
     public var selectedTab: ScreenRoute<Root, UIViewController> {
         selectedTab(of: UIViewController.self)
@@ -37,10 +37,10 @@ extension ScreenRoute where Current: UITabBarController {
         fold(action: ScreenSelectedTabAction<Current, Output>())
     }
 
-    public func selectedTab<Output: UIViewController, Next: ScreenContainer>(
+    public func selectedTab<Output: UIViewController, Route: ScreenThenable>(
         of type: Output.Type = Output.self,
-        route: ScreenRoute<Output, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == Output {
         fold(
             action: ScreenSelectedTabAction<Current, Output>(),
             nested: route

@@ -1,6 +1,9 @@
 #if canImport(UIKit)
 import UIKit
 
-// swiftlint:disable:next identifier_name
-public let ScreenStackRoute = ScreenRootRoute<UINavigationController>()
+/// Alias for the root route whose container type is `UINavigationController`.
+///
+/// - SeeAlso: `ScreenRoute`
+/// - SeeAlso: `ScreenRootRoute`
+public typealias ScreenStackRoute = ScreenRootRoute<UINavigationController>
 #endif

@@ -7,7 +7,7 @@ public struct ScreenPresentingAction<
     Output: UIViewController
 >: ScreenAction {
 
-    /// Creates action.
+    /// Creates an action.
     public init() { }
 
     public func perform(
@@ -27,7 +27,7 @@ public struct ScreenPresentingAction<
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     /// Retrieves the modal container that presented the current container.
     ///

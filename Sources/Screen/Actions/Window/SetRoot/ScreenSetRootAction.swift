@@ -38,13 +38,13 @@ public struct ScreenSetRootAction<
     }
 }
 
-extension ScreenRoute where Current: UIWindow {
+extension ScreenThenable where Current: UIWindow {
 
-    public func setRoot<New: Screen, Next: ScreenContainer>(
+    public func setRoot<New: Screen, Route: ScreenThenable>(
         to screen: New,
         animation: ScreenRootAnimation? = nil,
-        route: ScreenRoute<New.Container, Next>
-    ) -> Self where New.Container: UIViewController {
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
         fold(
             action: ScreenSetRootAction<New, Current>(
                 screen: screen,
@@ -54,23 +54,16 @@ extension ScreenRoute where Current: UIWindow {
         )
     }
 
-    public func setRoot<New: Screen, Next: ScreenContainer>(
+    public func setRoot<New: Screen>(
         to screen: New,
         animation: ScreenRootAnimation? = nil,
-        route: (_ route: ScreenRootRoute<New.Container>) -> ScreenRoute<New.Container, Next>
+        route: (_ route: ScreenRootRoute<New.Container>) -> ScreenRouteConvertible = { $0 }
     ) -> Self where New.Container: UIViewController {
         setRoot(
             to: screen,
             animation: animation,
-            route: route(.initial)
+            route: route(.initial).route()
         )
-    }
-
-    public func setRoot<New: Screen>(
-        to screen: New,
-        animation: ScreenRootAnimation? = nil
-    ) -> Self where New.Container: UIViewController {
-        setRoot(to: screen, animation: animation) { $0 }
     }
 }
 #endif

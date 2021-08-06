@@ -35,7 +35,7 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>:
         box = AnyScreenActionBox(wrapped) { $0 }
     }
 
-    public func cast<T>(to type: T.Type) -> T? {
+    public func cast<Action: ScreenAction>(to type: Action.Type) -> Action? {
         box.cast(to: type)
     }
 

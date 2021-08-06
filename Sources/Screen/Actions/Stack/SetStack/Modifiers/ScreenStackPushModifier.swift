@@ -23,7 +23,7 @@ public struct ScreenStackPushModifier<
     }
 }
 
-extension ScreenRoute where Current: UINavigationController {
+extension ScreenThenable where Current: UINavigationController {
 
     public func push<New: Screen>(
         _ screen: New,
@@ -37,12 +37,12 @@ extension ScreenRoute where Current: UINavigationController {
         )
     }
 
-    public func push<New: Screen, Next: ScreenContainer>(
+    public func push<New: Screen, Route: ScreenThenable>(
         _ screen: New,
         animation: ScreenStackAnimation? = .default,
         separated: Bool = false,
-        route: ScreenRoute<New.Container, Next>
-    ) -> Self where New.Container: UIViewController {
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
         push(
             screen,
             animation: animation,

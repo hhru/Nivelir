@@ -94,7 +94,7 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     public func showAlert(
         _ alert: Alert,

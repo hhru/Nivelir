@@ -7,7 +7,7 @@ public struct ScreenStackAction<
     Output: UINavigationController
 >: ScreenAction {
 
-    /// Creates action.
+    /// Creates an action.
     public init() { }
 
     public func perform(
@@ -27,7 +27,7 @@ public struct ScreenStackAction<
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     /// Retrieves the nearest ancestor in the container hierarchy that is a stack container.
     ///
@@ -91,10 +91,10 @@ extension ScreenRoute where Current: UIViewController {
     ///   - type: The type to which the container will be cast.
     ///   - route: The route that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
-    public func stack<Output: UINavigationController, Next: ScreenContainer>(
+    public func stack<Output: UINavigationController, Route: ScreenThenable>(
         of type: Output.Type = Output.self,
-        route: ScreenRoute<Output, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == Output {
         fold(
             action: ScreenStackAction<Current, Output>(),
             nested: route

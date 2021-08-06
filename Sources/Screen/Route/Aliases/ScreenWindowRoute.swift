@@ -1,6 +1,9 @@
 #if canImport(UIKit)
 import UIKit
 
-// swiftlint:disable:next identifier_name
-public let ScreenWindowRoute = ScreenRootRoute<UIWindow>()
+/// Alias for the root route whose container type is `UIWindow`.
+///
+/// - SeeAlso: `ScreenRoute`
+/// - SeeAlso: `ScreenRootRoute`
+public typealias ScreenWindowRoute = ScreenRootRoute<UIWindow>
 #endif

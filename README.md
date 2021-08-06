@@ -97,6 +97,9 @@ let package = Package(
 
 
 ## Usage
+
+[API Documentation](http://tech.hh.ru/Nivelir/)
+
 ### Quick Start
 
 Let's implement a simple view controller that can set the background color:
@@ -137,13 +140,14 @@ struct SomeScreen: Screen {
 }
 ```
 
-Now we can use this screen in navigation:
+Now we can use this screen for navigation:
 
 ``` swift
 let navigator = ScreenNavigator()
 
-navigator.navigate(fromTop: .stackContainer) { route in
+navigator.navigate { route in
     route
+        .top(.stack)
         .popToRoot()
         .push(SomeScreen(color: .red))
         .push(SomeScreen(color: .green)) { route in
@@ -153,11 +157,12 @@ navigator.navigate(fromTop: .stackContainer) { route in
 ```
 
 This navigation performs the following steps:
-- Search for the topmost container of the stack (UINavigationController)
+- Search for the topmost container of the stack (`UINavigationController`)
 - Resetting its stack to the first screen
 - Adding a red screen to the stack
 - Adding a green screen to the stack
 - Presenting a blue screen on the green screen modally
+
 
 ### Example App
 [Example app](Example) is a simple iOS and tvOS app that demonstrates how Nivelir works in practice.

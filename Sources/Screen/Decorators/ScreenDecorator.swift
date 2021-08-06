@@ -2,7 +2,7 @@ import Foundation
 
 public protocol ScreenDecorator: CustomStringConvertible {
     associatedtype Container: ScreenContainer
-    associatedtype Output: ScreenPayloadContainer
+    associatedtype Output: ScreenPayloadedContainer
 
     var payload: Any? { get }
 

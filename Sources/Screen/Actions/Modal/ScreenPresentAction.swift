@@ -18,7 +18,7 @@ public struct ScreenPresentAction<
     /// A Boolean value indicating whether the transition will be animated.
     public let animated: Bool
 
-    /// Creates action.
+    /// Creates an action.
     ///
     /// - Parameters:
     ///   - screen: The screen to display over the current container’s content.
@@ -44,7 +44,7 @@ public struct ScreenPresentAction<
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     /// Presents a screen modally and performs a route on the screen container.
     ///
@@ -70,11 +70,11 @@ extension ScreenRoute where Current: UIViewController {
     /// - Returns: An instance containing the new action.
     ///
     /// - SeeAlso: `Screen`
-    public func present<New: Screen, Next: ScreenContainer>(
+    public func present<New: Screen, Route: ScreenThenable>(
         _ screen: New,
         animated: Bool = true,
-        route: ScreenRoute<New.Container, Next>
-    ) -> Self where New.Container: UIViewController {
+        route: Route
+    ) -> Self where New.Container: UIViewController, Route.Root == New.Container {
         fold(
             action: ScreenPresentAction<New, Current>(
                 screen: screen,

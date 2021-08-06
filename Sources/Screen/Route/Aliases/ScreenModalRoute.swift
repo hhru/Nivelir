@@ -1,6 +1,9 @@
 #if canImport(UIKit)
 import UIKit
 
-// swiftlint:disable:next identifier_name
-public let ScreenModalRoute = ScreenRootRoute<UIViewController>()
+/// Alias for the root route whose container type is `UIViewController`.
+///
+/// - SeeAlso: `ScreenRoute`
+/// - SeeAlso: `ScreenRootRoute`
+public typealias ScreenModalRoute = ScreenRootRoute<UIViewController>
 #endif

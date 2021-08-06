@@ -1,5 +1,5 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-extension UIDocumentInteractionController: ScreenPayloadContainer { }
+extension UIDocumentInteractionController: ScreenPayloadedContainer { }
 #endif

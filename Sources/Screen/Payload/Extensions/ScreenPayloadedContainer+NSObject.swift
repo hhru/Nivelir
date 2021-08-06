@@ -3,7 +3,7 @@ import ObjectiveC
 
 private var screenPayloadAssociatedKey: UInt8 = 0
 
-extension ScreenPayloadContainer where Self: NSObject {
+extension ScreenPayloadedContainer where Self: NSObject {
 
     public var screenPayload: ScreenPayload {
         let payload = objc_getAssociatedObject(

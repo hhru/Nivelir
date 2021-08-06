@@ -121,7 +121,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
     }
 }
 
-extension ScreenRoute where Current: UIViewController {
+extension ScreenThenable where Current: UIViewController {
 
     public func showActionSheet(
         _ actionSheet: ActionSheet,

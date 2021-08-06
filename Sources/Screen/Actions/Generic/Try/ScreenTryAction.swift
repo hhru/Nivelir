@@ -129,7 +129,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func `try`<Action: ScreenAction>(
         action: Action,
@@ -155,10 +155,10 @@ extension ScreenRoute {
         )
     }
 
-    public func `try`<Action: ScreenAction, Next: ScreenContainer>(
+    public func `try`<Action: ScreenAction, Route: ScreenThenable>(
         action: Action,
-        done: @escaping (_ value: Action.Output) -> ScreenRoute<Current, Next>
-    ) -> Self where Action.Container == Current {
+        done: @escaping (_ value: Action.Output) -> Route
+    ) -> Self where Action.Container == Current, Route.Root == Current {
         `try`(action: action) { resolution in
             resolution.done(with: done)
         }
@@ -176,9 +176,9 @@ extension ScreenRoute {
         }
     }
 
-    public func ensure<Next: ScreenContainer>(
-        with route: ScreenRoute<Root, Next>
-    ) -> ScreenRootRoute<Root> {
+    public func ensure<Route: ScreenThenable>(
+        with route: Route
+    ) -> ScreenRootRoute<Root> where Route.Root == Root {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
@@ -195,9 +195,9 @@ extension ScreenRoute {
         ensure(with: route(.initial).route())
     }
 
-    public func `catch`<Next: ScreenContainer>(
-        with route: @escaping (_ error: Error) -> ScreenRoute<Root, Next>
-    ) -> ScreenRootRoute<Root> {
+    public func `catch`<Route: ScreenThenable>(
+        with route: @escaping (_ error: Error) -> Route
+    ) -> ScreenRootRoute<Root> where Route.Root == Root {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
@@ -217,9 +217,9 @@ extension ScreenRoute {
         `catch` { route($0, .initial).route() }
     }
 
-    public func `catch`<Next: ScreenContainer>(
-        with route: ScreenRoute<Root, Next>
-    ) -> ScreenRootRoute<Root> {
+    public func `catch`<Route: ScreenThenable>(
+        with route: Route
+    ) -> ScreenRootRoute<Root> where Route.Root == Root {
         `catch` { _ in route }
     }
 

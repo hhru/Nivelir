@@ -30,7 +30,7 @@ public struct ScreenLastAction<
     }
 }
 
-extension ScreenRoute {
+extension ScreenThenable {
 
     public func last<Output: ScreenContainer>(
         _ predicate: ScreenPredicate<Output>
@@ -38,10 +38,10 @@ extension ScreenRoute {
         fold(action: ScreenLastAction<Current, Output>(predicate: predicate))
     }
 
-    public func last<Output: ScreenContainer, Next: ScreenContainer>(
+    public func last<Output, Route: ScreenThenable>(
         _ predicate: ScreenPredicate<Output>,
-        route: ScreenRoute<Output, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == Output {
         fold(
             action: ScreenLastAction(predicate: predicate),
             nested: route
