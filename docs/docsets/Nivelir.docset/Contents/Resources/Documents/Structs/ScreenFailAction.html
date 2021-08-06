@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AnyScreen Structure Reference</title>
+    <title>ScreenFailAction Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Struct/AnyScreen" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/ScreenFailAction" class="dashAnchor"></a>
 
-    <a title="AnyScreen Structure Reference"></a>
+    <a title="ScreenFailAction Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Nivelir Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AnyScreen Structure Reference
+      ScreenFailAction Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -623,41 +623,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AnyScreen</h1>
+            <h1>ScreenFailAction</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AnyScreen</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Screen.html">Screen</a></span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScreenFailAction</span><span class="o">&lt;</span><span class="kt">Container</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenAction.html">ScreenAction</a></span> <span class="k">where</span> <span class="kt">Container</span> <span class="p">:</span> <span class="kt"><a href="../Screen.html#/s:7Nivelir15ScreenContainerP">ScreenContainer</a></span></code></pre>
 
                 </div>
               </div>
-            <p>A screen that performs type erasure by wrapping another screen.</p>
-
-<p><code>AnyScreen</code> is a concrete implementation of <code><a href="../Protocols/Screen.html">Screen</a></code> that has no significant properties of its own,
-and passes through elements from its wrapped screen.</p>
-
-<p>Use <code>AnyScreen</code> to wrap a screen whose type has details you don’t want to expose across API boundaries,
-such as different modules.
-When you use type erasure this way,
-you can change the underlying screen implementation over time without affecting existing clients.</p>
-
-<p>To make the constructions as compact as possible,
-you can use aliases for <code>AnyScreen</code> with a specific type of its container:</p>
-<pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">AnyModalScreen</span> <span class="o">=</span> <span class="kt">AnyScreen</span><span class="o">&lt;</span><span class="kt">UIViewController</span><span class="o">&gt;</span>
-<span class="kd">typealias</span> <span class="kt">AnyStackScreen</span> <span class="o">=</span> <span class="kt">AnyScreen</span><span class="o">&lt;</span><span class="kt">UINavigationController</span><span class="o">&gt;</span>
-<span class="kd">typealias</span> <span class="kt">AnyTabsScreen</span> <span class="o">=</span> <span class="kt">AnyScreen</span><span class="o">&lt;</span><span class="kt">UITabBarController</span><span class="o">&gt;</span>
-</code></pre>
-
-<p>You can use <code>eraseToAnyScreen()</code> method to wrap a screen with <code>AnyScreen</code>:</p>
-<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">chatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyModalScreen</span> <span class="p">{</span>
-    <span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="n">chatID</span><span class="p">)</span><span class="o">.</span><span class="nf">eraseToAnyScreen</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="../Protocols/Screen.html">Screen</a></code>
-
-</div>
+            <p>Undocumented</p>
 
           </div>
         </section>
@@ -669,9 +643,9 @@ you can use aliases for <code>AnyScreen</code> with a specific type of its conta
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir6ScreenP4nameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir6ScreenP4nameSSvp">name</a>
+                    <a name="/s:7Nivelir12ScreenActionP6OutputQa"></a>
+                    <a name="//apple_ref/swift/Alias/Output" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir12ScreenActionP6OutputQa">Output</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -685,7 +659,7 @@ you can use aliases for <code>AnyScreen</code> with a specific type of its conta
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Output</span> <span class="o">=</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -695,9 +669,63 @@ you can use aliases for <code>AnyScreen</code> with a specific type of its conta
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir6ScreenP6traitsShys11AnyHashableVGvp"></a>
-                    <a name="//apple_ref/swift/Property/traits" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir6ScreenP6traitsShys11AnyHashableVGvp">traits</a>
+                    <a name="/s:7Nivelir16ScreenFailActionV5errors5Error_pvp"></a>
+                    <a name="//apple_ref/swift/Property/error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir16ScreenFailActionV5errors5Error_pvp">error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir16ScreenFailActionV5errorACyxGs5Error_p_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir16ScreenFailActionV5errorACyxGs5Error_p_tcfc">init(error:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir12ScreenActionP7perform9container9navigator10completiony9ContainerQz_AA0B9NavigatorCys6ResultOy6OutputQzs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/perform(container:navigator:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir12ScreenActionP7perform9container9navigator10completiony9ContainerQz_AA0B9NavigatorCys6ResultOy6OutputQzs5Error_pGctF">perform(container:<wbr>navigator:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -711,107 +739,11 @@ you can use aliases for <code>AnyScreen</code> with a specific type of its conta
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">traits</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">AnyHashable</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Nivelir9AnyScreenVyACyxGqd__c9ContainerQyd__RszAA0C0Rd__lufc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir9AnyScreenVyACyxGqd__c9ContainerQyd__RszAA0C0Rd__lufc">init(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a type-erasing screen to wrap the provided screen.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Screen.html">Screen</a></span><span class="o">&gt;</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">wrapped</span><span class="p">:</span> <span class="kt">Wrapped</span>
-<span class="p">)</span> <span class="k">where</span> <span class="kt">Wrapped</span><span class="o">.</span><span class="kt">Container</span> <span class="o">==</span> <span class="kt">Container</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>wrapped</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A screen to wrap with a type-eraser.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Nivelir6ScreenP5build9navigator9ContainerQzAA0B9NavigatorC_tF"></a>
-                    <a name="//apple_ref/swift/Method/build(navigator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir6ScreenP5build9navigator9ContainerQzAA0B9NavigatorC_tF">build(navigator:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">build</span><span class="p">(</span><span class="nv">navigator</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Container</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">perform</span><span class="p">(</span>
+    <span class="nv">container</span><span class="p">:</span> <span class="kt">Container</span><span class="p">,</span>
+    <span class="nv">navigator</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Completion</span>
+<span class="p">)</span></code></pre>
 
                         </div>
                       </div>

@@ -2542,6 +2542,62 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 3,
+      "symbol": "ScreenFailAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 3,
+      "symbol": "ScreenFailAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 7,
+      "symbol": "ScreenFailAction.error",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 7,
+      "symbol": "ScreenFailAction.error",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 9,
+      "symbol": "ScreenFailAction.init(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 9,
+      "symbol": "ScreenFailAction.init(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 24,
+      "symbol": "ScreenThenable.fail(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFailAction.swift",
+      "line": 24,
+      "symbol": "ScreenThenable.fail(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/ScreenFromAction.swift",
       "line": 3,
       "symbol": "ScreenFromAction",
