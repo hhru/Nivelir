@@ -16,9 +16,9 @@ class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         let window = UIWindow(windowScene: windowScene)
-        let screenNavigator = ScreenNavigator(window: window)
+        let navigator = ScreenNavigator(window: window)
 
-        let router = MainSceneRouter(navigator: screenNavigator)
+        let router = MainSceneRouter(navigator: navigator)
 
         self.window = window
         self.router = router

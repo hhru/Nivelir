@@ -3,7 +3,7 @@ import UIKit
 
 public protocol ScreenStackModifier: CustomStringConvertible {
     func perform(
-        in stack: [UIViewController],
+        stack: [UIViewController],
         navigator: ScreenNavigator
     ) throws -> [UIViewController]
 }

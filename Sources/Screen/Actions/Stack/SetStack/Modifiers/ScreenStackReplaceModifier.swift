@@ -16,7 +16,7 @@ public struct ScreenStackReplaceModifier<
     }
 
     public func perform(
-        in stack: [UIViewController],
+        stack: [UIViewController],
         navigator: ScreenNavigator
     ) -> [UIViewController] {
         stack.dropLast().appending(screen.build(navigator: navigator))

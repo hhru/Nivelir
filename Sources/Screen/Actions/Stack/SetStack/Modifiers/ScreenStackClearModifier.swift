@@ -10,7 +10,7 @@ public struct ScreenStackClearModifier: ScreenStackModifier {
     public init() { }
 
     public func perform(
-        in stack: [UIViewController],
+        stack: [UIViewController],
         navigator: ScreenNavigator
     ) -> [UIViewController] {
         []
