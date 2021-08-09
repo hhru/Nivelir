@@ -131,7 +131,7 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
         do {
             let newStack = try modifiers.reduce(container.viewControllers) { stack, modifier in
                 try modifier.perform(
-                    in: stack,
+                    stack: stack,
                     navigator: navigator
                 )
             }

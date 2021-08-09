@@ -16,7 +16,7 @@ public struct ScreenStackPushModifier<
     }
 
     public func perform(
-        in stack: [UIViewController],
+        stack: [UIViewController],
         navigator: ScreenNavigator
     ) -> [UIViewController] {
         stack.appending(screen.build(navigator: navigator))

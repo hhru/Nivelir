@@ -3,7 +3,7 @@ import Foundation
 public struct ScreenTryResolution<Container: ScreenContainer, Output> {
 
     public typealias DoneAction = (_ value: Output) -> AnyScreenAction<Container, Void>
-    public typealias CatchAction = (_ error: Error) -> AnyScreenAction<Container, Void>?
+    public typealias FallbackAction = (_ error: Error) -> AnyScreenAction<Container, Void>?
 
     public static var initial: Self {
         Self()
@@ -11,16 +11,16 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
 
     public let ensureActions: [AnyScreenAction<Container, Void>]
     public let doneActions: [DoneAction]
-    public let catchActions: [CatchAction]
+    public let fallbackActions: [FallbackAction]
 
     public init(
         ensureActions: [AnyScreenAction<Container, Void>] = [],
         doneActions: [DoneAction] = [],
-        catchActions: [CatchAction] = []
+        fallbackActions: [FallbackAction] = []
     ) {
         self.ensureActions = ensureActions
         self.doneActions = doneActions
-        self.catchActions = catchActions
+        self.fallbackActions = fallbackActions
     }
 
     public func ensure<Action: ScreenAction>(
@@ -29,7 +29,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         Self(
             ensureActions: ensureActions.appending(action.eraseToAnyVoidAction()),
             doneActions: doneActions,
-            catchActions: catchActions
+            fallbackActions: fallbackActions
         )
     }
 
@@ -53,7 +53,7 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         return Self(
             ensureActions: ensureActions,
             doneActions: doneActions.appending(action),
-            catchActions: catchActions
+            fallbackActions: fallbackActions
         )
     }
 
@@ -72,40 +72,40 @@ public struct ScreenTryResolution<Container: ScreenContainer, Output> {
         done { route($0, .initial).route() }
     }
 
-    public func `catch`<Action: ScreenAction>(
-        with action: @escaping (_ error: Error) -> Action?
+    public func fallback<Action: ScreenAction>(
+        to action: @escaping (_ error: Error) -> Action?
     ) -> Self where Action.Container == Container {
         let action = { action($0)?.eraseToAnyVoidAction() }
 
         return Self(
             ensureActions: ensureActions,
             doneActions: doneActions,
-            catchActions: catchActions.appending(action)
+            fallbackActions: fallbackActions.appending(action)
         )
     }
 
-    public func `catch`<Route: ScreenThenable>(
-        with route: @escaping (_ error: Error) -> Route
+    public func fallback<Route: ScreenThenable>(
+        to route: @escaping (_ error: Error) -> Route
     ) -> Self where Route.Root == Container {
-        `catch` { ScreenNavigateAction(actions: route($0).actions) }
+        fallback { ScreenNavigateAction(actions: route($0).actions) }
     }
 
-    public func `catch`(
-        with route: @escaping (
+    public func fallback(
+        to route: @escaping (
             _ error: Error,
             _ route: ScreenRootRoute<Container>
         ) -> ScreenRouteConvertible
     ) -> Self {
-        `catch` { route($0, .initial).route() }
+        fallback { route($0, .initial).route() }
     }
 
-    public func `catch`<Route: ScreenThenable>(
+    public func fallback<Route: ScreenThenable>(
         with route: Route
     ) -> Self where Route.Root == Container {
-        `catch` { _ in route }
+        fallback { _ in route }
     }
 
     public func cauterize() -> Self {
-        `catch` { $1 }
+        fallback { $1 }
     }
 }

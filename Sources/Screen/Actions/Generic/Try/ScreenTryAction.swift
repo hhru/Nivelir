@@ -72,14 +72,14 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         case (.failure, _):
             return completion(ensureResult)
 
-        case (.success, let .failure(error)) where resolution.catchActions.isEmpty:
+        case (.success, let .failure(error)) where resolution.fallbackActions.isEmpty:
             return completion(.failure(error))
 
         case (.success, let .failure(error)):
             navigator.logInfo("Catching error: \(error)")
 
             actions = resolution
-                .catchActions
+                .fallbackActions
                 .compactMap { $0(error) }
 
         case (.success, let .success(value)):
@@ -195,32 +195,32 @@ extension ScreenThenable {
         ensure(with: route(.initial).route())
     }
 
-    public func `catch`<Route: ScreenThenable>(
-        with route: @escaping (_ error: Error) -> Route
+    public func fallback<Route: ScreenThenable>(
+        to route: @escaping (_ error: Error) -> Route
     ) -> ScreenRootRoute<Root> where Route.Root == Root {
         ScreenRootRoute(
             action: ScreenTryAction(
                 action: ScreenNavigateAction(actions: actions),
                 resolution: ScreenTryResolution
                     .initial
-                    .catch(with: route)
+                    .fallback(to: route)
             )
         )
     }
 
-    public func `catch`(
-        with route: @escaping (
+    public func fallback(
+        to route: @escaping (
             _ error: Error,
             _ route: ScreenRootRoute<Root>
         ) -> ScreenRouteConvertible
     ) -> ScreenRootRoute<Root> {
-        `catch` { route($0, .initial).route() }
+        fallback { route($0, .initial).route() }
     }
 
-    public func `catch`<Route: ScreenThenable>(
-        with route: Route
+    public func fallback<Route: ScreenThenable>(
+        to route: Route
     ) -> ScreenRootRoute<Root> where Route.Root == Root {
-        `catch` { _ in route }
+        fallback { _ in route }
     }
 
     public func cauterize() -> ScreenRootRoute<Root> {

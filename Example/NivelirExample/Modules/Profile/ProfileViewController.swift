@@ -35,7 +35,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         screenNavigator.navigate(from: self) { route in
             route
                 .showMediaPicker(mediaPicker)
-                .catch { error, route in
+                .fallback { error, route in
                     switch error {
                     case is MediaPickerSourceAccessDeniedError:
                         return route.showAlert(.cameraPermissionRequired)
@@ -65,7 +65,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         screenNavigator.navigate(from: self) { route in
             route
                 .showMediaPicker(mediaPicker)
-                .catch { error, route in
+                .fallback { error, route in
                     switch error {
                     case is MediaPickerSourceAccessDeniedError:
                         return route.showAlert(.photoLibraryPermissionRequired)
