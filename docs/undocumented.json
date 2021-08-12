@@ -2992,42 +2992,42 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 198,
-      "symbol": "ScreenThenable.catch(with:)",
+      "symbol": "ScreenThenable.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 198,
-      "symbol": "ScreenThenable.catch(with:)",
+      "symbol": "ScreenThenable.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 211,
-      "symbol": "ScreenThenable.catch(with:)",
+      "symbol": "ScreenThenable.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 211,
-      "symbol": "ScreenThenable.catch(with:)",
+      "symbol": "ScreenThenable.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 220,
-      "symbol": "ScreenThenable.catch(with:)",
+      "symbol": "ScreenThenable.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryAction.swift",
       "line": 220,
-      "symbol": "ScreenThenable.catch(with:)",
+      "symbol": "ScreenThenable.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -3076,14 +3076,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 6,
-      "symbol": "ScreenTryResolution.CatchAction",
+      "symbol": "ScreenTryResolution.FallbackAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 6,
-      "symbol": "ScreenTryResolution.CatchAction",
+      "symbol": "ScreenTryResolution.FallbackAction",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
@@ -3132,28 +3132,28 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 14,
-      "symbol": "ScreenTryResolution.catchActions",
+      "symbol": "ScreenTryResolution.fallbackActions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 14,
-      "symbol": "ScreenTryResolution.catchActions",
+      "symbol": "ScreenTryResolution.fallbackActions",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 16,
-      "symbol": "ScreenTryResolution.init(ensureActions:doneActions:catchActions:)",
+      "symbol": "ScreenTryResolution.init(ensureActions:doneActions:fallbackActions:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 16,
-      "symbol": "ScreenTryResolution.init(ensureActions:doneActions:catchActions:)",
+      "symbol": "ScreenTryResolution.init(ensureActions:doneActions:fallbackActions:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -3244,56 +3244,56 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 75,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 75,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 87,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 87,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 93,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 93,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 102,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Generic/Try/ScreenTryResolution.swift",
       "line": 102,
-      "symbol": "ScreenTryResolution.catch(with:)",
+      "symbol": "ScreenTryResolution.fallback(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -3888,14 +3888,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/Pop/ScreenStackPopModifier.swift",
       "line": 16,
-      "symbol": "ScreenStackPopModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackPopModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/Pop/ScreenStackPopModifier.swift",
       "line": 16,
-      "symbol": "ScreenStackPopModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackPopModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4084,14 +4084,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackClearModifier.swift",
       "line": 12,
-      "symbol": "ScreenStackClearModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackClearModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackClearModifier.swift",
       "line": 12,
-      "symbol": "ScreenStackClearModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackClearModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4126,14 +4126,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackModifier.swift",
       "line": 5,
-      "symbol": "ScreenStackModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackModifier.swift",
       "line": 5,
-      "symbol": "ScreenStackModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4182,14 +4182,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackPushModifier.swift",
       "line": 18,
-      "symbol": "ScreenStackPushModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackPushModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackPushModifier.swift",
       "line": 18,
-      "symbol": "ScreenStackPushModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackPushModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -4280,14 +4280,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackReplaceModifier.swift",
       "line": 18,
-      "symbol": "ScreenStackReplaceModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackReplaceModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir2/Sources/Screen/Actions/Stack/SetStack/Modifiers/ScreenStackReplaceModifier.swift",
       "line": 18,
-      "symbol": "ScreenStackReplaceModifier.perform(in:navigator:)",
+      "symbol": "ScreenStackReplaceModifier.perform(stack:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
