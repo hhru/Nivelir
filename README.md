@@ -184,11 +184,14 @@ $ open NivelirExample.xcworkspace
 Russian:
 - [Nivelir: Удобный DSL для навигации](https://habr.com/ru/company/hh/blog/572488/)
 
+
 ## Communication
 - If you need help, open an issue.
 - If you found a bug, open an issue.
 - If you have a feature request, open an issue.
 - If you want to contribute, submit a pull request.
+
+📬 You can also write to us in telegram, we will help you: https://t.me/hh_tech
 
 
 ## License
