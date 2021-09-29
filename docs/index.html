@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Nivelir 1.1.0 Docs
+          Nivelir 1.1.1 Docs
         </a>
          (38% documented)
       </p>
@@ -652,6 +652,7 @@
 <li><a href="#quick-start">Quick Start</a></li>
 <li><a href="#example-app">Example App</a></li>
 </ul></li>
+<li><a href="#articles">Articles</a></li>
 <li><a href="#communication">Communication</a></li>
 <li><a href="#license">License</a></li>
 </ul>
@@ -674,7 +675,7 @@
 <span class="n">use_frameworks!</span>
 
 <span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'Nivelir'</span><span class="p">,</span> <span class="s1">'~&gt; 1.1.0'</span>
+    <span class="n">pod</span> <span class="s1">'Nivelir'</span><span class="p">,</span> <span class="s1">'~&gt; 1.1.1'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -689,7 +690,7 @@
 </code></pre>
 
 <p>To integrate Nivelir into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "hhru/Nivelir" ~&gt; 1.1.0
+<pre class="highlight plaintext"><code>github "hhru/Nivelir" ~&gt; 1.1.1
 </code></pre>
 
 <p>Finally run <code>carthage update</code> to build the framework and drag the built <code>Nivelir.framework</code> into your Xcode project.</p>
@@ -699,7 +700,7 @@
 
 <p>To integrate Nivelir into your Xcode project using Swift Package Manager,
 add the following as a dependency to your <code>Package.swift</code>:</p>
-<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/hhru/Nivelir.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.1.0"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/hhru/Nivelir.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.1.1"</span><span class="p">)</span>
 </code></pre>
 
 <p>Then specify <code>&quot;Nivelir&quot;</code> as a dependency of the Target in which you wish to use Nivelir.</p>
@@ -714,7 +715,7 @@ add the following as a dependency to your <code>Package.swift</code>:</p>
         <span class="o">.</span><span class="nf">library</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"MyPackage"</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="s">"MyPackage"</span><span class="p">])</span>
     <span class="p">],</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/hhru/Nivelir.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.1.0"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/hhru/Nivelir.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.1.1"</span><span class="p">)</span>
     <span class="p">],</span>
     <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
         <span class="o">.</span><span class="nf">target</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"MyPackage"</span><span class="p">,</span> <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">"Nivelir"</span><span class="p">])</span>
@@ -794,6 +795,13 @@ It&rsquo;s also a good place to start playing with the framework.</p>
 <span class="gp">$ </span>pod install
 <span class="gp">$ </span>open NivelirExample.xcworkspace
 </code></pre>
+<h2 id='articles' class='heading'>Articles</h2>
+
+<p>Russian:</p>
+
+<ul>
+<li><a href="https://habr.com/ru/company/hh/blog/572488/">Nivelir: Удобный DSL для навигации</a></li>
+</ul>
 <h2 id='communication' class='heading'>Communication</h2>
 
 <ul>
@@ -802,6 +810,8 @@ It&rsquo;s also a good place to start playing with the framework.</p>
 <li>If you have a feature request, open an issue.</li>
 <li>If you want to contribute, submit a pull request.</li>
 </ul>
+
+<p>📬 You can also write to us in telegram, we will help you: <a href="https://t.me/hh_tech">https://t.me/hh_tech</a></p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>Nivelir is available under the MIT license. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
@@ -813,8 +823,8 @@ It&rsquo;s also a good place to start playing with the framework.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2021 <a class="link" href="https://tech.hh.ru" target="_blank" rel="external">HeadHunter</a> under the MIT license.</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>© 2021 <a class="link" href="https://tech.hh.ru" target="_blank" rel="noopener" rel="external">HeadHunter</a> under the MIT license.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
