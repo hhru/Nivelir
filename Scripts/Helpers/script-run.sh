@@ -19,7 +19,6 @@ run() {
   if which mint >/dev/null; then
     (cd "${root_path}" && mint run "$@")
   else
-    echo "error: Mint does not exist"
-    exit 1
+    echo "warning: Mint does not exist"
   fi
 }
