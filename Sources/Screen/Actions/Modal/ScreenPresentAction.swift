@@ -54,7 +54,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Presents a chat screen modally, then shows an error message on its container:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenModalRoute.showAlert(.somethingWentWrong)
+    /// let nestedRoute = ScreenModalRoute().showAlert(.somethingWentWrong)
     ///
     /// navigator.navigate(from: container) { route in
     ///     route.present(ChatScreen(chatID: chatID), route: nestedRoute)
@@ -100,7 +100,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Presents a chat screen modally, then shows an error message on its container:
     ///
     /// ``` swift
-    /// navigator.navigate(from: self) { route in
+    /// navigator.navigate(from: container) { route in
     ///     route.present(ChatScreen(chatID: chatID)) { route in
     ///         route.showAlert(.somethingWentWrong)
     ///     }

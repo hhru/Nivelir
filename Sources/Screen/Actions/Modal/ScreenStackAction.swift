@@ -80,7 +80,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Pops the top screen container from the stack of the current container:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenStackRoute.pop()
+    /// let nestedRoute = ScreenStackRoute().pop()
     ///
     /// navigator.navigate(from: container) { route in
     ///     route.stack(route: nestedRoute)

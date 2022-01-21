@@ -36,7 +36,7 @@ extension ScreenThenable {
     /// - Shows an error message and dismisses it after 3 seconds:
     ///
     /// ``` swift
-    /// screenNavigator.navigate(from: self) { route in
+    /// screenNavigator.navigate(from: container) { route in
     ///     route
     ///         .showAlert(.somethingWentWrong)
     ///         .wait(for: 3.0)

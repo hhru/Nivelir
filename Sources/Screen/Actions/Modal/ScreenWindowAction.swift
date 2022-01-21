@@ -1,10 +1,10 @@
 #if canImport(UIKit)
 import UIKit
 
-/// Retrieves the screen container that presented the current container.
-public struct ScreenPresentingAction<
+/// Retrieves the window container of the current container.
+public struct ScreenWindowAction<
     Container: UIViewController,
-    Output: UIViewController
+    Output: UIWindow
 >: ScreenAction {
 
     /// Creates an action.
@@ -15,12 +15,12 @@ public struct ScreenPresentingAction<
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        guard let presenting = container.presenting else {
+        guard let window = container.window else {
             return completion(.containerNotFound(type: UIViewController.self, for: self))
         }
 
-        guard let output = presenting as? Output else {
-            return completion(.containerTypeMismatch(presenting, type: Output.self, for: self))
+        guard let output = window as? Output else {
+            return completion(.containerTypeMismatch(window, type: Output.self, for: self))
         }
 
         completion(.success(output))
@@ -29,71 +29,74 @@ public struct ScreenPresentingAction<
 
 extension ScreenThenable where Current: UIViewController {
 
-    /// Retrieves the modal container that presented the current container.
+    /// Retrieves the window container of the current container.
     ///
     /// Usage examples
     /// ==============
     ///
-    /// - Dismisses the current container:
+    /// - Dismisses the screen container represented by the root container of the window:
     ///
     /// ``` swift
     /// navigator.navigate(from: container) { route in
     ///     route
-    ///         .presenting
+    ///         .window
+    ///         .root
     ///         .dismiss()
     /// }
     /// ```
     ///
     /// - Returns: An instance containing the new action.
-    public var presenting: ScreenRoute<Root, UIViewController> {
-        presenting(of: UIViewController.self)
+    public var window: ScreenRoute<Root, UIWindow> {
+        window(of: UIWindow.self)
     }
 
-    /// Retrieves the screen container that presented the current container.
+    /// Retrieves the window container of the current container.
     ///
     /// Usage examples
     /// ==============
     ///
-    /// - Pops the top screen container from the stack that presented the current container:
+    /// - Shows the window container of the current container and makes it the key window:
     ///
     /// ``` swift
     /// navigator.navigate(from: container) { route in
     ///     route
-    ///         .presenting(of: UINavigationController.self)
-    ///         .pop()
+    ///         .window(of: UIWindow.self)
+    ///         .makeKeyAndVisible()
     /// }
     /// ```
     ///
     /// - Parameter type: The type to which the container will be cast.
     /// - Returns: An instance containing the new action.
-    public func presenting<Output: UIViewController>(
+    public func window<Output: UIWindow>(
         of type: Output.Type
     ) -> ScreenRoute<Root, Output> {
-        fold(action: ScreenPresentingAction<Current, Output>())
+        fold(action: ScreenWindowAction<Current, Output>())
     }
 
-    /// Performs a route on the screen container that presented the current container.
+    /// Performs a route on the window container of the current container.
     ///
     /// Usage examples
     /// ==============
     ///
-    /// - Pops the top screen container from the stack that presented the current container:
+    /// - Dismisses the screen container represented by the root container of the window:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenStackRoute().pop()
+    /// let nestedRoute = ScreenWindowRoute()
+    ///     .root
+    ///     .dismiss()
     ///
     /// navigator.navigate(from: container) { route in
-    ///     route.presenting(of: UINavigationController.self, route: nestedRoute)
+    ///     route.window(of: UIWindow.self, route: nestedRoute)
     /// }
     /// ```
     ///
-    /// - Dismisses the current container:
+    /// - Shows the window container of the current container and makes it the key window:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenModalRoute().dismiss()
-    ///
     /// navigator.navigate(from: container) { route in
-    ///     route.presenting(route: nestedRoute)
+    ///     route
+    ///         .window(of: UIWindow.self)
+    ///         .makeKeyAndVisible()
     /// }
     /// ```
     ///
@@ -101,34 +104,34 @@ extension ScreenThenable where Current: UIViewController {
     ///   - type: The type to which the container will be cast.
     ///   - route: The route that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
-    public func presenting<Output: UIViewController, Next: ScreenContainer>(
+    public func window<Output: UIWindow, Route: ScreenThenable>(
         of type: Output.Type = Output.self,
-        route: ScreenRoute<Output, Next>
-    ) -> Self {
+        route: Route
+    ) -> Self where Route.Root == Output {
         fold(
-            action: ScreenPresentingAction<Current, Output>(),
+            action: ScreenWindowAction<Current, Output>(),
             nested: route
         )
     }
 
-    /// Performs a route on the screen container that presented the current container.
+    /// Performs a route on the window container of the current container.
     ///
     /// Usage examples
     /// ==============
     ///
-    /// - Pops the top screen container from the stack that presented the current container:
+    /// - Dismisses the screen container represented by the root container of the window:
     ///
     /// ``` swift
     /// navigator.navigate(from: container) { route in
-    ///     route.presenting(of: UINavigationController.self) { $0.pop() }
+    ///     route.window { $0.root.dismiss() }
     /// }
     /// ```
     ///
-    /// - Dismisses the current container:
+    /// - Shows the window container of the current container and makes it the key window:
     ///
     /// ``` swift
     /// navigator.navigate(from: container) { route in
-    ///     route.presenting { $0.dismiss() }
+    ///     route.window(of: UIWindow.self) { $0.makeKeyAndVisible() }
     /// }
     /// ```
     ///
@@ -137,11 +140,11 @@ extension ScreenThenable where Current: UIViewController {
     ///   - route: The closure that should return the modified route
     ///            that will be performed in the retrieved screen container.
     /// - Returns: An instance containing the new action.
-    public func presenting<Output: UIViewController>(
+    public func window<Output: UIWindow>(
         of type: Output.Type = Output.self,
         route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
     ) -> Self {
-        presenting(
+        window(
             of: type,
             route: route(.initial).route()
         )
