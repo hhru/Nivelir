@@ -1956,14 +1956,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/AnyDeeplink.swift",
       "line": 5,
-      "symbol": "AnyDeeplink.navigateIfPossible(using:)",
+      "symbol": "AnyDeeplink.navigateIfPossible(using:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/AnyDeeplink.swift",
       "line": 5,
-      "symbol": "AnyDeeplink.navigateIfPossible(using:)",
+      "symbol": "AnyDeeplink.navigateIfPossible(using:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2012,28 +2012,28 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/Deeplink.swift",
       "line": 7,
-      "symbol": "Deeplink.navigate(using:)",
+      "symbol": "Deeplink.navigate(using:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/Deeplink.swift",
       "line": 7,
-      "symbol": "Deeplink.navigate(using:)",
+      "symbol": "Deeplink.navigate(using:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/Deeplink.swift",
-      "line": 12,
-      "symbol": "Deeplink.navigateIfPossible(using:)",
+      "line": 15,
+      "symbol": "Deeplink.navigateIfPossible(using:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/Deeplink.swift",
-      "line": 12,
-      "symbol": "Deeplink.navigateIfPossible(using:)",
+      "line": 15,
+      "symbol": "Deeplink.navigateIfPossible(using:navigator:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
