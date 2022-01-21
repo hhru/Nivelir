@@ -8,21 +8,4 @@ public protocol AnyShortcutDeeplink: AnyDeeplink {
         userInfoDecoder: ShortcutDeeplinkUserInfoDecoder
     ) -> AnyShortcutDeeplink?
 }
-
-internal struct Routes { }
-
-internal struct SomeDeeplink: ShortcutDeeplink, NotificationDeeplink {
-
-    static func notification(userInfo: Void) -> SomeDeeplink? {
-        nil
-    }
-
-    internal static func shortcut(type: String, userInfo: Void?) -> Self? {
-        nil
-    }
-
-    internal func navigate(using routes: Routes) {
-
-    }
-}
 #endif
