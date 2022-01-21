@@ -5,3 +5,4 @@ disabled_rules:
   - function_body_length
   - trailing_closure
   - type_body_length
+  - nesting
