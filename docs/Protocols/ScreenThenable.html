@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Nivelir 1.1.1 Docs
         </a>
-         (38% documented)
+         (37% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -196,6 +196,9 @@
                 <a class="nav-group-task-link" href="../Structs/ScreenTabsAction.html">ScreenTabsAction</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenWindowAction.html">ScreenWindowAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenSetStackAction.html">ScreenSetStackAction</a>
               </li>
               <li class="nav-group-task">
@@ -254,6 +257,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenSetupTabAction.html">ScreenSetupTabAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenMakeKeyAction.html">ScreenMakeKeyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenMakeKeyAndVisibleAction.html">ScreenMakeKeyAndVisibleAction</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenSetRootAction.html">ScreenSetRootAction</a>
@@ -321,6 +330,53 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenCustomWindowProvider.html">ScreenCustomWindowProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Deeplink.html">Deeplink</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Deeplink.html">Deeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyDeeplink.html">AnyDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NotificationDeeplink.html">NotificationDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NotificationDeeplinkUserInfoDecoder.html">NotificationDeeplinkUserInfoDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyNotificationDeeplink.html">AnyNotificationDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ShortcutDeeplink.html">ShortcutDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ShortcutDeeplink.html">ShortcutDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ShortcutDeeplinkUserInfoDecoder.html">ShortcutDeeplinkUserInfoDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ShortcutDeeplinkUserInfoDecoder.html">ShortcutDeeplinkUserInfoDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyShortcutDeeplink.html">AnyShortcutDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyShortcutDeeplink.html">AnyShortcutDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/URLDeeplink.html">URLDeeplink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/URLDeeplinkQueryDecoder.html">URLDeeplinkQueryDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyURLDeeplink.html">AnyURLDeeplink</a>
               </li>
             </ul>
           </li>
@@ -1845,7 +1901,7 @@
 <ul>
 <li>Shows an error message and dismisses it after 3 seconds:</li>
 </ul>
-<pre class="highlight swift"><code><span class="n">screenNavigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">screenNavigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span>
         <span class="o">.</span><span class="nf">showAlert</span><span class="p">(</span><span class="o">.</span><span class="n">somethingWentWrong</span><span class="p">)</span>
         <span class="o">.</span><span class="nf">wait</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">)</span>
@@ -2684,7 +2740,7 @@ in which the action is performed.</p>
 <ul>
 <li>Presents a chat screen modally, then shows an error message on its container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenModalRoute</span><span class="o">.</span><span class="nf">showAlert</span><span class="p">(</span><span class="o">.</span><span class="n">somethingWentWrong</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenModalRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">showAlert</span><span class="p">(</span><span class="o">.</span><span class="n">somethingWentWrong</span><span class="p">)</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="n">chatID</span><span class="p">),</span> <span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -2791,7 +2847,7 @@ in which the action is performed.</p>
 <ul>
 <li>Presents a chat screen modally, then shows an error message on its container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="kt">ChatScreen</span><span class="p">(</span><span class="nv">chatID</span><span class="p">:</span> <span class="n">chatID</span><span class="p">))</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
         <span class="n">route</span><span class="o">.</span><span class="nf">showAlert</span><span class="p">(</span><span class="o">.</span><span class="n">somethingWentWrong</span><span class="p">)</span>
     <span class="p">}</span>
@@ -3006,7 +3062,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Pops the top screen container from the stack that is presented by the container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenStackRoute</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenStackRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">presented</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -3016,7 +3072,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Dismisses the screen container that is presented by the presented container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenModalRoute</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenModalRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">presented</span><span class="p">(</span><span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -3104,7 +3160,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Dismisses the container that is presented by the presented container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="n">presented</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -3293,7 +3349,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Pops the top screen container from the stack that presented the current container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenStackRoute</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenStackRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">presenting</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -3303,7 +3359,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Dismisses the current container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenModalRoute</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenModalRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">presenting</span><span class="p">(</span><span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -3390,7 +3446,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Dismisses the current container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="n">presenting</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -3579,7 +3635,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Pops the top screen container from the stack of the current container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenStackRoute</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenStackRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">stack</span><span class="p">(</span><span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -3847,7 +3903,7 @@ or one of its ancestors in the container hierarchy.</p>
 <ul>
 <li>Selects tab from the tab container of the current container:</li>
 </ul>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenTabsRoute</span><span class="o">.</span><span class="nf">selectTab</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenTabsRoute</span><span class="p">()</span><span class="o">.</span><span class="nf">selectTab</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
 <span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
     <span class="n">route</span><span class="o">.</span><span class="nf">tabs</span><span class="p">(</span><span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
@@ -3937,6 +3993,295 @@ or one of its ancestors in the container hierarchy.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE4tabsAA0B5RouteVy4RootQzSo08UITabBarE0CGvp">tabs</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">:</span> <span class="kt">UITabBarController</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Output</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Output</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+    <span class="nv">route</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Route.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to which the container will be cast.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that should return the modified route
+   that will be performed in the retrieved screen container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance containing the new action.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6windowAA0B5RouteVy4RootQzSo8UIWindowCGvp"></a>
+                    <a name="//apple_ref/swift/Property/window" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6windowAA0B5RouteVy4RootQzSo8UIWindowCGvp">window</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves the window container of the current container.</p>
+<h1 id='usage-examples' class='heading'>Usage examples</h1>
+
+<ul>
+<li>Dismisses the screen container represented by the root container of the window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span>
+        <span class="o">.</span><span class="n">window</span>
+        <span class="o">.</span><span class="n">root</span>
+        <span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">window</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScreenRoute.html">ScreenRoute</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenableP4RootQa">Root</a></span><span class="p">,</span> <span class="kt">UIWindow</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance containing the new action.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6window2ofAA0B5RouteVy4RootQzqd__Gqd__m_tSo8UIWindowCRbd__lF"></a>
+                    <a name="//apple_ref/swift/Method/window(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6window2ofAA0B5RouteVy4RootQzqd__Gqd__m_tSo8UIWindowCRbd__lF">window(of:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves the window container of the current container.</p>
+<h1 id='usage-examples' class='heading'>Usage examples</h1>
+
+<ul>
+<li>Shows the window container of the current container and makes it the key window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span>
+        <span class="o">.</span><span class="nf">window</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">makeKeyAndVisible</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6windowAA0B5RouteVy4RootQzSo8UIWindowCGvp">window</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Output</span><span class="o">.</span><span class="k">Type</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ScreenRoute.html">ScreenRoute</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenableP4RootQa">Root</a></span><span class="p">,</span> <span class="kt">Output</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to which the container will be cast.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance containing the new action.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6window2of5routexqd__m_qd_0_tSo8UIWindowCRbd__4RootQyd_0_Rsd__AaBRd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/window(of:route:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6window2of5routexqd__m_qd_0_tSo8UIWindowCRbd__4RootQyd_0_Rsd__AaBRd_0_r0_lF">window(of:<wbr>route:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a route on the window container of the current container.</p>
+<h1 id='usage-examples' class='heading'>Usage examples</h1>
+
+<ul>
+<li>Dismisses the screen container represented by the root container of the window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">nestedRoute</span> <span class="o">=</span> <span class="kt">ScreenWindowRoute</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">root</span>
+    <span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span>
+
+<span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span><span class="o">.</span><span class="nf">window</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">route</span><span class="p">:</span> <span class="n">nestedRoute</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<ul>
+<li>Shows the window container of the current container and makes it the key window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span>
+        <span class="o">.</span><span class="nf">window</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">makeKeyAndVisible</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6windowAA0B5RouteVy4RootQzSo8UIWindowCGvp">window</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">,</span> <span class="kt">Route</span><span class="p">:</span> <span class="kt">ScreenThenable</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Output</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Output</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+    <span class="nv">route</span><span class="p">:</span> <span class="kt">Route</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Route</span><span class="o">.</span><span class="kt"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenableP4RootQa">Root</a></span> <span class="o">==</span> <span class="kt">Output</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to which the container will be cast.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The route that will be performed in the retrieved screen container.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance containing the new action.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6window2of5routexqd__m_AA0B16RouteConvertible_pAA0bJ0Vyqd__qd__GXEtSo8UIWindowCRbd__lF"></a>
+                    <a name="//apple_ref/swift/Method/window(of:route:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6window2of5routexqd__m_AA0B16RouteConvertible_pAA0bJ0Vyqd__qd__GXEtSo8UIWindowCRbd__lF">window(of:<wbr>route:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a route on the window container of the current container.</p>
+<h1 id='usage-examples' class='heading'>Usage examples</h1>
+
+<ul>
+<li>Dismisses the screen container represented by the root container of the window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span><span class="o">.</span><span class="n">window</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">()</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<ul>
+<li>Shows the window container of the current container and makes it the key window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span><span class="o">.</span><span class="nf">window</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">makeKeyAndVisible</span><span class="p">()</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n"><a href="../Protocols/ScreenThenable.html#/s:7Nivelir14ScreenThenablePAASo16UIViewControllerC7CurrentRczrlE6windowAA0B5RouteVy4RootQzSo8UIWindowCGvp">window</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Output</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Output</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
     <span class="nv">route</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Route.html#/s:7Nivelir15ScreenRootRoutea">ScreenRootRoute</a></span><span class="o">&lt;</span><span class="kt">Output</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/ScreenRouteConvertible.html">ScreenRouteConvertible</a></span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
@@ -5078,6 +5423,96 @@ or one of its ancestors in the container hierarchy.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Nivelir14ScreenThenablePAASo8UIWindowC7CurrentRczrlE7makeKeyxyF"></a>
+                    <a name="//apple_ref/swift/Method/makeKey()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo8UIWindowC7CurrentRczrlE7makeKeyxyF">makeKey()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Makes the receiver the key window.</p>
+<h1 id='usage-examples' class='heading'>Usage examples</h1>
+
+<ul>
+<li>Makes the window container of the current container the key window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span>
+        <span class="o">.</span><span class="n">window</span>
+        <span class="o">.</span><span class="nf">makeKey</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance containing the new action.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir14ScreenThenablePAASo8UIWindowC7CurrentRczrlE17makeKeyAndVisiblexyF"></a>
+                    <a name="//apple_ref/swift/Method/makeKeyAndVisible()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo8UIWindowC7CurrentRczrlE17makeKeyAndVisiblexyF">makeKeyAndVisible()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shows the window container and makes it the key window.</p>
+<h1 id='usage-examples' class='heading'>Usage examples</h1>
+
+<ul>
+<li>Shows the window container of the current container and makes it the key window:</li>
+</ul>
+<pre class="highlight swift"><code><span class="n">navigator</span><span class="o">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">container</span><span class="p">)</span> <span class="p">{</span> <span class="n">route</span> <span class="k">in</span>
+    <span class="n">route</span>
+        <span class="o">.</span><span class="n">window</span>
+        <span class="o">.</span><span class="nf">makeKeyAndVisible</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeKeyAndVisible</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance containing the new action.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Nivelir14ScreenThenablePAASo8UIWindowC7CurrentRczrlE4rootAA0B5RouteVy4RootQzSo16UIViewControllerCGvp"></a>
                     <a name="//apple_ref/swift/Property/root" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Nivelir14ScreenThenablePAASo8UIWindowC7CurrentRczrlE4rootAA0B5RouteVy4RootQzSo16UIViewControllerCGvp">root</a>
@@ -5279,7 +5714,7 @@ or one of its ancestors in the container hierarchy.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2021 <a class="link" href="https://tech.hh.ru" target="_blank" rel="noopener" rel="external">HeadHunter</a> under the MIT license.</p>
+      <p>© 2022 <a class="link" href="https://tech.hh.ru" target="_blank" rel="noopener" rel="external">HeadHunter</a> under the MIT license.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
     </section>
   </body>
