@@ -55,6 +55,16 @@
 		C05F488E26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F484926B68B7F0002DF52 /* AnyScreenActionBox.swift */; };
 		C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F487A26B68B7F0002DF52 /* ScreenAction.swift */; };
 		C05F48D626B68B7F0002DF52 /* ScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F487A26B68B7F0002DF52 /* ScreenAction.swift */; };
+		C0681E4427A3A44A00F5DB62 /* DictionaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E3E27A3A44A00F5DB62 /* DictionaryDecodingOptions.swift */; };
+		C0681E4527A3A44A00F5DB62 /* DictionaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E3E27A3A44A00F5DB62 /* DictionaryDecodingOptions.swift */; };
+		C0681E4627A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4027A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift */; };
+		C0681E4727A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4027A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift */; };
+		C0681E4827A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4127A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift */; };
+		C0681E4927A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4127A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift */; };
+		C0681E4A27A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4227A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift */; };
+		C0681E4B27A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4227A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift */; };
+		C0681E4C27A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4327A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift */; };
+		C0681E4D27A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E4327A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift */; };
 		C06A4C89266AA61D008A7DF3 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C06A4C8A266AA632008A7DF3 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
 		C06A4C8B266AA632008A7DF3 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
@@ -270,16 +280,6 @@
 		C0A728A2279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728A0279ACBEC000BFBF9 /* AnyCodingKey.swift */; };
 		C0A728A4279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728A3279ACC15000BFBF9 /* Optional+Extensions.swift */; };
 		C0A728A5279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728A3279ACC15000BFBF9 /* Optional+Extensions.swift */; };
-		C0A728A8279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728A7279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift */; };
-		C0A728A9279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728A7279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift */; };
-		C0A728AB279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728AA279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift */; };
-		C0A728AC279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728AA279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift */; };
-		C0A728AE279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728AD279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift */; };
-		C0A728AF279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728AD279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift */; };
-		C0A728B1279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B0279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift */; };
-		C0A728B2279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B0279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift */; };
-		C0A728B4279ACF04000BFBF9 /* DictionaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B3279ACF04000BFBF9 /* DictionaryDecodingOptions.swift */; };
-		C0A728B5279ACF04000BFBF9 /* DictionaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B3279ACF04000BFBF9 /* DictionaryDecodingOptions.swift */; };
 		C0A728B7279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B6279AD53B000BFBF9 /* DictionaryComponentDecoder.swift */; };
 		C0A728B8279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B6279AD53B000BFBF9 /* DictionaryComponentDecoder.swift */; };
 		C0A728BA279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728B9279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift */; };
@@ -447,6 +447,11 @@
 		C05F484826B68B7F0002DF52 /* AnyScreenActionBaseBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyScreenActionBaseBox.swift; sourceTree = "<group>"; };
 		C05F484926B68B7F0002DF52 /* AnyScreenActionBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyScreenActionBox.swift; sourceTree = "<group>"; };
 		C05F487A26B68B7F0002DF52 /* ScreenAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAction.swift; sourceTree = "<group>"; };
+		C0681E3E27A3A44A00F5DB62 /* DictionaryDecodingOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDecodingOptions.swift; sourceTree = "<group>"; };
+		C0681E4027A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryKeyDecodingStrategy.swift; sourceTree = "<group>"; };
+		C0681E4127A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDateDecodingStrategy.swift; sourceTree = "<group>"; };
+		C0681E4227A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDataDecodingStrategy.swift; sourceTree = "<group>"; };
+		C0681E4327A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryNonConformingFloatDecodingStrategy.swift; sourceTree = "<group>"; };
 		C06B5815262C610000BE4762 /* AnyScreenBaseBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBaseBox.swift; sourceTree = "<group>"; };
 		C06B581C262C619100BE4762 /* AnyScreenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBox.swift; sourceTree = "<group>"; };
 		C06B5823262C625A00BE4762 /* AnyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreen.swift; sourceTree = "<group>"; };
@@ -565,11 +570,6 @@
 		C0A728782799A5CF000BFBF9 /* ShortcutDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDeeplink.swift; sourceTree = "<group>"; };
 		C0A728A0279ACBEC000BFBF9 /* AnyCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodingKey.swift; sourceTree = "<group>"; };
 		C0A728A3279ACC15000BFBF9 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
-		C0A728A7279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataDecodingStrategy.swift; sourceTree = "<group>"; };
-		C0A728AA279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDateDecodingStrategy.swift; sourceTree = "<group>"; };
-		C0A728AD279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryKeyDecodingStrategy.swift; sourceTree = "<group>"; };
-		C0A728B0279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryNonConformingFloatDecodingStrategy.swift; sourceTree = "<group>"; };
-		C0A728B3279ACF04000BFBF9 /* DictionaryDecodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDecodingOptions.swift; sourceTree = "<group>"; };
 		C0A728B6279AD53B000BFBF9 /* DictionaryComponentDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryComponentDecoder.swift; sourceTree = "<group>"; };
 		C0A728B9279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryKeyedDecodingContainer.swift; sourceTree = "<group>"; };
 		C0A728BC279AD5A1000BFBF9 /* DictionarySingleValueDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySingleValueDecodingContainer.swift; sourceTree = "<group>"; };
@@ -825,6 +825,17 @@
 				C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */,
 			);
 			path = Aliases;
+			sourceTree = "<group>";
+		};
+		C0681E3F27A3A44A00F5DB62 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				C0681E4227A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift */,
+				C0681E4127A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift */,
+				C0681E4027A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift */,
+				C0681E4327A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift */,
+			);
+			path = Strategies;
 			sourceTree = "<group>";
 		};
 		C06DFA08276EB08400D751C4 /* Deeplink */ = {
@@ -1247,26 +1258,15 @@
 		C0A7289F279ACBD5000BFBF9 /* DictionaryDecoder */ = {
 			isa = PBXGroup;
 			children = (
-				C0A728A6279ACE7B000BFBF9 /* Options */,
+				C0681E3F27A3A44A00F5DB62 /* Strategies */,
 				C0A728B6279AD53B000BFBF9 /* DictionaryComponentDecoder.swift */,
 				C0A728C2279AD909000BFBF9 /* DictionaryDecoder.swift */,
+				C0681E3E27A3A44A00F5DB62 /* DictionaryDecodingOptions.swift */,
 				C0A728B9279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift */,
 				C0A728BC279AD5A1000BFBF9 /* DictionarySingleValueDecodingContainer.swift */,
 				C0A728BF279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift */,
 			);
 			path = DictionaryDecoder;
-			sourceTree = "<group>";
-		};
-		C0A728A6279ACE7B000BFBF9 /* Options */ = {
-			isa = PBXGroup;
-			children = (
-				C0A728A7279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift */,
-				C0A728AA279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift */,
-				C0A728B3279ACF04000BFBF9 /* DictionaryDecodingOptions.swift */,
-				C0A728AD279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift */,
-				C0A728B0279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift */,
-			);
-			path = Options;
 			sourceTree = "<group>";
 		};
 		C0A728C9279ADB36000BFBF9 /* Tools */ = {
@@ -1656,6 +1656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0681E4C27A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C0A728632799487B000BFBF9 /* AnyDeeplink.swift in Sources */,
 				C0A728C0279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
@@ -1667,6 +1668,7 @@
 				C0D5797D27A0609000084220 /* URLQueryDeserializer.swift in Sources */,
 				C06B581D262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C0885FC026B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
+				C0681E4827A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C088600D26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0A728A1279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */,
 				C0885FC226B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
@@ -1675,7 +1677,6 @@
 				C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8426B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
 				C015F483265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
-				C0A728AB279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C0885FFF26B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
 				C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6626B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
@@ -1753,6 +1754,7 @@
 				C0AAD9A925EEC2790087439E /* Screen.swift in Sources */,
 				C088602D26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
 				C0885F8E26B6BA0100CA0A77 /* ScreenTabsAction.swift in Sources */,
+				C0681E4627A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C0885F7826B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
 				C0D5799427A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
 				C088601F26B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
@@ -1780,9 +1782,7 @@
 				C0E9EF2426BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
 				C0D5796927A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
 				C0C3427026BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
-				C0A728B4279ACF04000BFBF9 /* DictionaryDecodingOptions.swift in Sources */,
 				C0D5798B27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
-				C0A728AE279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C0A728A4279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088602F26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
@@ -1801,21 +1801,21 @@
 				C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C05E19C0266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift in Sources */,
 				C0885F6026B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */,
-				C0A728B1279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C015F480265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
 				C0F9A47525FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
 				C0885FC426B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
 				C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */,
 				C0A728762799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
-				C0A728A8279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */,
 				C0A728C3279AD909000BFBF9 /* DictionaryDecoder.swift in Sources */,
 				C0885FBE26B6C0A500CA0A77 /* ScreenStackCustomAnimation.swift in Sources */,
 				C0E93303262B16B80041C564 /* ScreenModalStyle.swift in Sources */,
 				C088603526B6C60B00CA0A77 /* ScreenShowMediaPickerAction.swift in Sources */,
 				C088602326B6C60B00CA0A77 /* ScreenOpenStoreAppAction.swift in Sources */,
+				C0681E4A27A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C0A728B7279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */,
+				C0681E4427A3A44A00F5DB62 /* DictionaryDecodingOptions.swift in Sources */,
 				C0885F6226B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */,
 				C05F488926B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0AADA4D25EEE1F10087439E /* ScreenKeyedContainer.swift in Sources */,
@@ -1862,6 +1862,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0681E4D27A3A44A00F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C05F488C26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C088602226B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
 				C0A728C1279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
@@ -1873,6 +1874,7 @@
 				C0D5797E27A0609000084220 /* URLQueryDeserializer.swift in Sources */,
 				C088600E26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0885FC326B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
+				C0681E4927A3A44A00F5DB62 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0A728A2279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */,
 				C0C3426526BC4511007A45E9 /* ScreenThenable.swift in Sources */,
@@ -1881,7 +1883,6 @@
 				C0885F8526B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
 				C0AADB6425EF900B0087439E /* UIWindow+ScreenContainer.swift in Sources */,
 				C088600026B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
-				C0A728AC279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C08995F927968C82007D9D17 /* URLDeeplink.swift in Sources */,
 				C05F48D626B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6726B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
@@ -1959,6 +1960,7 @@
 				C0A7287B279A7853000BFBF9 /* Deeplink.swift in Sources */,
 				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C06B5825262C625A00BE4762 /* AnyScreen.swift in Sources */,
+				C0681E4727A3A44A00F5DB62 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
 				C0D5799527A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
 				C088602E26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
@@ -1986,9 +1988,7 @@
 				C088600C26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
 				C0D5796A27A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
 				C0E9EF2526BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
-				C0A728B5279ACF04000BFBF9 /* DictionaryDecodingOptions.swift in Sources */,
 				C0D5798C27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
-				C0A728AF279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C0C3427126BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
 				C0A728A5279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
@@ -2007,21 +2007,21 @@
 				C088603426B6C60B00CA0A77 /* MediaPickerType.swift in Sources */,
 				C0C9FE9C2655E5700074D669 /* ScreenNavigator.swift in Sources */,
 				C0F9A47625FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
-				C0A728B2279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C0885F6126B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */,
 				C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
 				C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */,
 				C0885FC526B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C02710A025F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
-				C0A728A9279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C0AADA1525EED7740087439E /* Screen.swift in Sources */,
 				C0A728C4279AD909000BFBF9 /* DictionaryDecoder.swift in Sources */,
 				C0E93304262B16B80041C564 /* ScreenModalStyle.swift in Sources */,
 				C0885FBF26B6C0A500CA0A77 /* ScreenStackCustomAnimation.swift in Sources */,
 				C088603626B6C60B00CA0A77 /* ScreenShowMediaPickerAction.swift in Sources */,
 				C088602426B6C60B00CA0A77 /* ScreenOpenStoreAppAction.swift in Sources */,
+				C0681E4B27A3A44A00F5DB62 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C0A728B8279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */,
+				C0681E4527A3A44A00F5DB62 /* DictionaryDecodingOptions.swift in Sources */,
 				C0885F6326B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */,
 				C05F488A26B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
