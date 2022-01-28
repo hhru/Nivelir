@@ -65,6 +65,8 @@
 		C0681E5B27A3A49700F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E5227A3A49700F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift */; };
 		C0681E5C27A3A49700F5DB62 /* DictionaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E5327A3A49700F5DB62 /* DictionaryDecodingOptions.swift */; };
 		C0681E5D27A3A49700F5DB62 /* DictionaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E5327A3A49700F5DB62 /* DictionaryDecodingOptions.swift */; };
+		C0681E6027A3AC8300F5DB62 /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E5F27A3AC8300F5DB62 /* DeeplinkManager.swift */; };
+		C0681E6127A3AC8300F5DB62 /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0681E5F27A3AC8300F5DB62 /* DeeplinkManager.swift */; };
 		C06A4C89266AA61D008A7DF3 /* ScreenVisibleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BA266A264900255A69 /* ScreenVisibleContainer.swift */; };
 		C06A4C8A266AA632008A7DF3 /* ScreenPopoverPresentationDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19C1266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift */; };
 		C06A4C8B266AA632008A7DF3 /* ScreenPopoverPresentationAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05E19BF266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift */; };
@@ -452,6 +454,7 @@
 		C0681E5127A3A49700F5DB62 /* DictionaryDataDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDataDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0681E5227A3A49700F5DB62 /* DictionaryNonConformingFloatDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryNonConformingFloatDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0681E5327A3A49700F5DB62 /* DictionaryDecodingOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDecodingOptions.swift; sourceTree = "<group>"; };
+		C0681E5F27A3AC8300F5DB62 /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
 		C06B5815262C610000BE4762 /* AnyScreenBaseBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBaseBox.swift; sourceTree = "<group>"; };
 		C06B581C262C619100BE4762 /* AnyScreenBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreenBox.swift; sourceTree = "<group>"; };
 		C06B5823262C625A00BE4762 /* AnyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyScreen.swift; sourceTree = "<group>"; };
@@ -847,6 +850,7 @@
 				C06DFA11276EBB2A00D751C4 /* URL */,
 				C0A728622799487B000BFBF9 /* AnyDeeplink.swift */,
 				C06DFA0B276EB20200D751C4 /* Deeplink.swift */,
+				C0681E5F27A3AC8300F5DB62 /* DeeplinkManager.swift */,
 			);
 			path = Deeplink;
 			sourceTree = "<group>";
@@ -1776,6 +1780,7 @@
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
 				C0A728F1279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0885F6426B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
+				C0681E6027A3AC8300F5DB62 /* DeeplinkManager.swift in Sources */,
 				C0D5797B27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F8C26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601926B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
@@ -1982,6 +1987,7 @@
 				C0885F8126B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0A728F2279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0E932FE262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
+				C0681E6127A3AC8300F5DB62 /* DeeplinkManager.swift in Sources */,
 				C0D5797A27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F6526B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
 				C0885F8D26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,

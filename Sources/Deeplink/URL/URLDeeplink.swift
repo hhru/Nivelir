@@ -10,11 +10,13 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
         path: [String],
         query: URLQuery?
     ) -> Self?
+
+    static func url(_ url: URL, query: URLQuery?) -> Self?
 }
 
 extension URLDeeplink {
 
-    internal static func url(_ url: URL, query: URLQuery?) -> Self? {
+    public static func url(_ url: URL, query: URLQuery?) -> Self? {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             return nil
         }
