@@ -7,3 +7,5 @@ public protocol URLDeeplinkQueryDecoder {
         from query: String
     ) throws -> T
 }
+
+extension URLQueryDecoder: URLDeeplinkQueryDecoder { }

@@ -296,6 +296,14 @@
 		C0A728D7279ADC4B000BFBF9 /* DictionaryDecoderStrategiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728CC279ADC05000BFBF9 /* DictionaryDecoderStrategiesTests.swift */; };
 		C0A728D8279ADC4B000BFBF9 /* DictionaryDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728CD279ADC05000BFBF9 /* DictionaryDecoderTests.swift */; };
 		C0A728D9279ADC4B000BFBF9 /* DictionaryDecoderTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728CB279ADC05000BFBF9 /* DictionaryDecoderTesting.swift */; };
+		C0A728E8279EEF1B000BFBF9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728E7279EEF1B000BFBF9 /* String+Extensions.swift */; };
+		C0A728E9279EEF1B000BFBF9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728E7279EEF1B000BFBF9 /* String+Extensions.swift */; };
+		C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728ED279EF148000BFBF9 /* Character+Extensions.swift */; };
+		C0A728EF279EF148000BFBF9 /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728ED279EF148000BFBF9 /* Character+Extensions.swift */; };
+		C0A728F1279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728F0279F06BF000BFBF9 /* Dictionary+Extensions.swift */; };
+		C0A728F2279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728F0279F06BF000BFBF9 /* Dictionary+Extensions.swift */; };
+		C0A728F4279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728F3279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift */; };
+		C0A728F5279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728F3279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift */; };
 		C0AAD97125EEC0160087439E /* UIViewController+ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD97025EEC0160087439E /* UIViewController+ScreenContainer.swift */; };
 		C0AAD99325EEC1A50087439E /* UIWindow+ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD99225EEC1A50087439E /* UIWindow+ScreenContainer.swift */; };
 		C0AAD9A925EEC2790087439E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9A825EEC2790087439E /* Screen.swift */; };
@@ -333,6 +341,34 @@
 		C0C9FE992655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE972655E5340074D669 /* ScreenKeyWindowProvider.swift */; };
 		C0C9FE9B2655E5700074D669 /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */; };
 		C0C9FE9C2655E5700074D669 /* ScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */; };
+		C0D5794D279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5794C279FD69900084220 /* URLQueryDecodingOptions.swift */; };
+		C0D5794E279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5794C279FD69900084220 /* URLQueryDecodingOptions.swift */; };
+		C0D57963279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D57962279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift */; };
+		C0D57964279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D57962279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift */; };
+		C0D5796627A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5796527A0048100084220 /* URLQueryKeyDecodingStrategy.swift */; };
+		C0D5796727A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5796527A0048100084220 /* URLQueryKeyDecodingStrategy.swift */; };
+		C0D5796927A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5796827A0088000084220 /* URLQueryDataDecodingStrategy.swift */; };
+		C0D5796A27A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5796827A0088000084220 /* URLQueryDataDecodingStrategy.swift */; };
+		C0D5796F27A05E5600084220 /* URLQueryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5796E27A05E5600084220 /* URLQueryComponent.swift */; };
+		C0D5797027A05E5600084220 /* URLQueryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5796E27A05E5600084220 /* URLQueryComponent.swift */; };
+		C0D5797A27A0606200084220 /* URLQueryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728DB279ADEF9000BFBF9 /* URLQueryDecoder.swift */; };
+		C0D5797B27A0606200084220 /* URLQueryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728DB279ADEF9000BFBF9 /* URLQueryDecoder.swift */; };
+		C0D5797D27A0609000084220 /* URLQueryDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5797C27A0609000084220 /* URLQueryDeserializer.swift */; };
+		C0D5797E27A0609000084220 /* URLQueryDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5797C27A0609000084220 /* URLQueryDeserializer.swift */; };
+		C0D5798B27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5795E279FE89500084220 /* URLQueryComponentDecoder.swift */; };
+		C0D5798C27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5795E279FE89500084220 /* URLQueryComponentDecoder.swift */; };
+		C0D5798E27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5798D27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift */; };
+		C0D5798F27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5798D27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift */; };
+		C0D5799127A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799027A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift */; };
+		C0D5799227A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799027A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift */; };
+		C0D5799427A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799327A1948300084220 /* URLQueryKeyedDecodingContainer.swift */; };
+		C0D5799527A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799327A1948300084220 /* URLQueryKeyedDecodingContainer.swift */; };
+		C0D5799A27A1A07F00084220 /* URLQueryDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799727A1A07B00084220 /* URLQueryDecoderTests.swift */; };
+		C0D5799B27A1A07F00084220 /* URLQueryDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799727A1A07B00084220 /* URLQueryDecoderTests.swift */; };
+		C0D5799F27A1B44000084220 /* URLQueryDecoderTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799C27A1A3ED00084220 /* URLQueryDecoderTesting.swift */; };
+		C0D579A027A1B44100084220 /* URLQueryDecoderTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5799C27A1A3ED00084220 /* URLQueryDecoderTesting.swift */; };
+		C0D579A427A2BE5000084220 /* URLQueryDecoderStrategiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D579A127A2BE4C00084220 /* URLQueryDecoderStrategiesTests.swift */; };
+		C0D579A527A2BE5000084220 /* URLQueryDecoderStrategiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D579A127A2BE4C00084220 /* URLQueryDecoderStrategiesTests.swift */; };
 		C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */; };
 		C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */; };
 		C0E932EF262B16910041C564 /* ScreenTabsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E932EE262B16910041C564 /* ScreenTabsDecorator.swift */; };
@@ -542,6 +578,11 @@
 		C0A728CB279ADC05000BFBF9 /* DictionaryDecoderTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDecoderTesting.swift; sourceTree = "<group>"; };
 		C0A728CC279ADC05000BFBF9 /* DictionaryDecoderStrategiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDecoderStrategiesTests.swift; sourceTree = "<group>"; };
 		C0A728CD279ADC05000BFBF9 /* DictionaryDecoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDecoderTests.swift; sourceTree = "<group>"; };
+		C0A728DB279ADEF9000BFBF9 /* URLQueryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDecoder.swift; sourceTree = "<group>"; };
+		C0A728E7279EEF1B000BFBF9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C0A728ED279EF148000BFBF9 /* Character+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extensions.swift"; sourceTree = "<group>"; };
+		C0A728F0279F06BF000BFBF9 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		C0A728F3279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDateDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0AAD97025EEC0160087439E /* UIViewController+ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenContainer.swift"; sourceTree = "<group>"; };
 		C0AAD99225EEC1A50087439E /* UIWindow+ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+ScreenContainer.swift"; sourceTree = "<group>"; };
 		C0AAD9A825EEC2790087439E /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
@@ -562,6 +603,19 @@
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE972655E5340074D669 /* ScreenKeyWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE9A2655E5700074D669 /* ScreenNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigator.swift; sourceTree = "<group>"; };
+		C0D5794C279FD69900084220 /* URLQueryDecodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDecodingOptions.swift; sourceTree = "<group>"; };
+		C0D5795E279FE89500084220 /* URLQueryComponentDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLQueryComponentDecoder.swift; sourceTree = "<group>"; };
+		C0D57962279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryNonConformingFloatDecodingStrategy.swift; sourceTree = "<group>"; };
+		C0D5796527A0048100084220 /* URLQueryKeyDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryKeyDecodingStrategy.swift; sourceTree = "<group>"; };
+		C0D5796827A0088000084220 /* URLQueryDataDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDataDecodingStrategy.swift; sourceTree = "<group>"; };
+		C0D5796E27A05E5600084220 /* URLQueryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryComponent.swift; sourceTree = "<group>"; };
+		C0D5797C27A0609000084220 /* URLQueryDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDeserializer.swift; sourceTree = "<group>"; };
+		C0D5798D27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQuerySingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		C0D5799027A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		C0D5799327A1948300084220 /* URLQueryKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		C0D5799727A1A07B00084220 /* URLQueryDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDecoderTests.swift; sourceTree = "<group>"; };
+		C0D5799C27A1A3ED00084220 /* URLQueryDecoderTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDecoderTesting.swift; sourceTree = "<group>"; };
+		C0D579A127A2BE4C00084220 /* URLQueryDecoderStrategiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryDecoderStrategiesTests.swift; sourceTree = "<group>"; };
 		C0E932E6262B166D0041C564 /* ScreenStackDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackDecorator.swift; sourceTree = "<group>"; };
 		C0E932EE262B16910041C564 /* ScreenTabsDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsDecorator.swift; sourceTree = "<group>"; };
 		C0E932F6262B16B80041C564 /* ScreenTabBarItemDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabBarItemDecorator.swift; sourceTree = "<group>"; };
@@ -1147,10 +1201,13 @@
 			isa = PBXGroup;
 			children = (
 				C0270F3425F4A89300ECC57C /* UIKit */,
+				C0A728ED279EF148000BFBF9 /* Character+Extensions.swift */,
 				C0AADC8225EFB5360087439E /* Collection+Extensions.swift */,
+				C0A728F0279F06BF000BFBF9 /* Dictionary+Extensions.swift */,
 				C0A728A3279ACC15000BFBF9 /* Optional+Extensions.swift */,
 				C0AAD9C925EEC9100087439E /* RangeReplaceableCollection+Extensions.swift */,
 				C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */,
+				C0A728E7279EEF1B000BFBF9 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1181,6 +1238,7 @@
 			children = (
 				C0A7289F279ACBD5000BFBF9 /* DictionaryDecoder */,
 				C08F982125EEB9910077AE40 /* Extensions */,
+				C0A728DA279ADE28000BFBF9 /* URLQueryDecoder */,
 				C0A728A0279ACBEC000BFBF9 /* AnyCodingKey.swift */,
 			);
 			path = Tools;
@@ -1189,10 +1247,9 @@
 		C0A7289F279ACBD5000BFBF9 /* DictionaryDecoder */ = {
 			isa = PBXGroup;
 			children = (
-				C0A728A6279ACE7B000BFBF9 /* Strategies */,
+				C0A728A6279ACE7B000BFBF9 /* Options */,
 				C0A728B6279AD53B000BFBF9 /* DictionaryComponentDecoder.swift */,
 				C0A728C2279AD909000BFBF9 /* DictionaryDecoder.swift */,
-				C0A728B3279ACF04000BFBF9 /* DictionaryDecodingOptions.swift */,
 				C0A728B9279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift */,
 				C0A728BC279AD5A1000BFBF9 /* DictionarySingleValueDecodingContainer.swift */,
 				C0A728BF279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift */,
@@ -1200,21 +1257,23 @@
 			path = DictionaryDecoder;
 			sourceTree = "<group>";
 		};
-		C0A728A6279ACE7B000BFBF9 /* Strategies */ = {
+		C0A728A6279ACE7B000BFBF9 /* Options */ = {
 			isa = PBXGroup;
 			children = (
 				C0A728A7279ACE8E000BFBF9 /* DictionaryDataDecodingStrategy.swift */,
 				C0A728AA279ACEA9000BFBF9 /* DictionaryDateDecodingStrategy.swift */,
+				C0A728B3279ACF04000BFBF9 /* DictionaryDecodingOptions.swift */,
 				C0A728AD279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift */,
 				C0A728B0279ACED1000BFBF9 /* DictionaryNonConformingFloatDecodingStrategy.swift */,
 			);
-			path = Strategies;
+			path = Options;
 			sourceTree = "<group>";
 		};
 		C0A728C9279ADB36000BFBF9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				C0A728CA279ADC05000BFBF9 /* DictionaryDecoder */,
+				C0D5799627A1A06300084220 /* URLQueryDecoder */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1227,6 +1286,21 @@
 				C0A728CD279ADC05000BFBF9 /* DictionaryDecoderTests.swift */,
 			);
 			path = DictionaryDecoder;
+			sourceTree = "<group>";
+		};
+		C0A728DA279ADE28000BFBF9 /* URLQueryDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				C0D57961279FEE5B00084220 /* Options */,
+				C0D5796E27A05E5600084220 /* URLQueryComponent.swift */,
+				C0D5795E279FE89500084220 /* URLQueryComponentDecoder.swift */,
+				C0A728DB279ADEF9000BFBF9 /* URLQueryDecoder.swift */,
+				C0D5797C27A0609000084220 /* URLQueryDeserializer.swift */,
+				C0D5799327A1948300084220 /* URLQueryKeyedDecodingContainer.swift */,
+				C0D5798D27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift */,
+				C0D5799027A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift */,
+			);
+			path = URLQueryDecoder;
 			sourceTree = "<group>";
 		};
 		C0AAD96F25EEBFBD0087439E /* Extensions */ = {
@@ -1302,6 +1376,28 @@
 				C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */,
 			);
 			path = WindowProvider;
+			sourceTree = "<group>";
+		};
+		C0D57961279FEE5B00084220 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				C0D5796827A0088000084220 /* URLQueryDataDecodingStrategy.swift */,
+				C0A728F3279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift */,
+				C0D5794C279FD69900084220 /* URLQueryDecodingOptions.swift */,
+				C0D5796527A0048100084220 /* URLQueryKeyDecodingStrategy.swift */,
+				C0D57962279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		C0D5799627A1A06300084220 /* URLQueryDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				C0D579A127A2BE4C00084220 /* URLQueryDecoderStrategiesTests.swift */,
+				C0D5799C27A1A3ED00084220 /* URLQueryDecoderTesting.swift */,
+				C0D5799727A1A07B00084220 /* URLQueryDecoderTests.swift */,
+			);
+			path = URLQueryDecoder;
 			sourceTree = "<group>";
 		};
 		C0E932E5262B166D0041C564 /* Stack */ = {
@@ -1564,9 +1660,11 @@
 				C0A728632799487B000BFBF9 /* AnyDeeplink.swift in Sources */,
 				C0A728C0279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */,
+				C0D5796627A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */,
 				C088602126B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
 				C0885F7C26B6BA0100CA0A77 /* ScreenFirstAction.swift in Sources */,
 				C0885F9626B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
+				C0D5797D27A0609000084220 /* URLQueryDeserializer.swift in Sources */,
 				C06B581D262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C0885FC026B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
 				C088600D26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
@@ -1623,6 +1721,7 @@
 				C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
 				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0E93305262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
+				C0D57963279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C088604326B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
 				C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
 				C06DFA10276EB80600D751C4 /* URLDeeplink.swift in Sources */,
@@ -1631,6 +1730,7 @@
 				C0A7286F27996E4A000BFBF9 /* AnyNotificationDeeplink.swift in Sources */,
 				C088603B26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
 				C0885F7426B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
+				C0D5794D279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */,
 				C06DFA13276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift in Sources */,
 				C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
@@ -1641,6 +1741,7 @@
 				C0885F8626B6BA0100CA0A77 /* ScreenRootCustomAnimation.swift in Sources */,
 				C0885FBA26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
 				C088600126B6C60B00CA0A77 /* AlertAction.swift in Sources */,
+				C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
 				C088600526B6C60B00CA0A77 /* ScreenShowAlertAction.swift in Sources */,
 				C088603F26B6C60B00CA0A77 /* MediaPickerManager.swift in Sources */,
@@ -1653,12 +1754,15 @@
 				C088602D26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
 				C0885F8E26B6BA0100CA0A77 /* ScreenTabsAction.swift in Sources */,
 				C0885F7826B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
+				C0D5799427A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
 				C088601F26B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
 				C0A72874279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
 				C093BA7F2798172B0093F29B /* ScreenMakeKeyAndVisibleAction.swift in Sources */,
 				C0AAD97125EEC0160087439E /* UIViewController+ScreenContainer.swift in Sources */,
+				C0D5799127A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */,
 				C0E932FD262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
 				C088602B26B6C60B00CA0A77 /* MediaPickerResult.swift in Sources */,
+				C0A728E8279EEF1B000BFBF9 /* String+Extensions.swift in Sources */,
 				C088604526B6C60B00CA0A77 /* ScreenShowStoreProductAction.swift in Sources */,
 				C06DFA15276EBDF900D751C4 /* AnyURLDeeplink.swift in Sources */,
 				C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */,
@@ -1667,13 +1771,17 @@
 				C0885F9026B6BA0100CA0A77 /* ScreenPresentedAction.swift in Sources */,
 				C0885F8026B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
+				C0A728F1279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0885F6426B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
+				C0D5797B27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F8C26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601926B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
 				C088600B26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
 				C0E9EF2426BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
+				C0D5796927A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
 				C0C3427026BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
 				C0A728B4279ACF04000BFBF9 /* DictionaryDecodingOptions.swift in Sources */,
+				C0D5798B27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
 				C0A728AE279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C0A728A4279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
@@ -1686,6 +1794,7 @@
 				C0C3426E26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603926B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C088601326B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
+				C0A728F4279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */,
 				C0C9FE9B2655E5700074D669 /* ScreenNavigator.swift in Sources */,
 				C088603326B6C60B00CA0A77 /* MediaPickerType.swift in Sources */,
 				C0AAD99325EEC1A50087439E /* UIWindow+ScreenContainer.swift in Sources */,
@@ -1721,6 +1830,7 @@
 				C088601D26B6C60B00CA0A77 /* ScreenOpenURLAction.swift in Sources */,
 				C027109F25F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
 				C0885FB426B6C0A500CA0A77 /* ScreenStackModifier.swift in Sources */,
+				C0D5796F27A05E5600084220 /* URLQueryComponent.swift in Sources */,
 				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
 				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
 				C0885F6E26B6BA0100CA0A77 /* ScreenRefreshAction.swift in Sources */,
@@ -1729,6 +1839,7 @@
 				C0885FAE26B6C0A500CA0A77 /* ScreenStackPushModifier.swift in Sources */,
 				C0270CA725F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
 				C0885FFD26B6C60B00CA0A77 /* ActionSheetAction.swift in Sources */,
+				C0D5798E27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */,
 				C0A728792799A5CF000BFBF9 /* ShortcutDeeplink.swift in Sources */,
 				C0A728BA279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift in Sources */,
 			);
@@ -1738,7 +1849,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D579A427A2BE5000084220 /* URLQueryDecoderStrategiesTests.swift in Sources */,
+				C0D5799A27A1A07F00084220 /* URLQueryDecoderTests.swift in Sources */,
 				C0A728D9279ADC4B000BFBF9 /* DictionaryDecoderTesting.swift in Sources */,
+				C0D5799F27A1B44000084220 /* URLQueryDecoderTesting.swift in Sources */,
 				C0A728D8279ADC4B000BFBF9 /* DictionaryDecoderTests.swift in Sources */,
 				C0A728D7279ADC4B000BFBF9 /* DictionaryDecoderStrategiesTests.swift in Sources */,
 			);
@@ -1752,9 +1866,11 @@
 				C088602226B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
 				C0A728C1279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C0885F7D26B6BA0100CA0A77 /* ScreenFirstAction.swift in Sources */,
+				C0D5796727A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */,
 				C0885F9726B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
 				C06B581E262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C0885FC126B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
+				C0D5797E27A0609000084220 /* URLQueryDeserializer.swift in Sources */,
 				C088600E26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0885FC326B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
@@ -1811,6 +1927,7 @@
 				C088601826B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0A7287227996E6F000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
 				C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */,
+				C0D57964279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C088603226B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
 				C088601626B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
@@ -1819,6 +1936,7 @@
 				C088604426B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
 				C015F484265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
 				C088600426B6C60B00CA0A77 /* Alert.swift in Sources */,
+				C0D5794E279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */,
 				C093BA7D2797F33E0093F29B /* ScreenWindowAction.swift in Sources */,
 				C088602A26B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
 				C088603C26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
@@ -1829,6 +1947,7 @@
 				C0FF99D326BCB28A00961A70 /* ScreenFailAction.swift in Sources */,
 				C0A7287A2799A5CF000BFBF9 /* ShortcutDeeplink.swift in Sources */,
 				C06B5817262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
+				C0A728EF279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
 				C088603E26B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift in Sources */,
 				C0885F8726B6BA0100CA0A77 /* ScreenRootCustomAnimation.swift in Sources */,
 				C0885FBB26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
@@ -1841,12 +1960,15 @@
 				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C06B5825262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
+				C0D5799527A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
 				C088602E26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
 				C0A728772799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
 				C0885F8F26B6BA0100CA0A77 /* ScreenTabsAction.swift in Sources */,
 				C0885F7926B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
+				C0D5799227A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */,
 				C088602026B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
 				C0C9FE992655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
+				C0A728E9279EEF1B000BFBF9 /* String+Extensions.swift in Sources */,
 				C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C088602C26B6C60B00CA0A77 /* MediaPickerResult.swift in Sources */,
 				C088604626B6C60B00CA0A77 /* ScreenShowStoreProductAction.swift in Sources */,
@@ -1855,13 +1977,17 @@
 				C0885F7F26B6BA0100CA0A77 /* ScreenTopAction.swift in Sources */,
 				C0885F9126B6BA0100CA0A77 /* ScreenPresentedAction.swift in Sources */,
 				C0885F8126B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
+				C0A728F2279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0E932FE262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
+				C0D5797A27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F6526B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
 				C0885F8D26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601A26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
 				C088600C26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
+				C0D5796A27A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
 				C0E9EF2526BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
 				C0A728B5279ACF04000BFBF9 /* DictionaryDecodingOptions.swift in Sources */,
+				C0D5798C27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
 				C0A728AF279ACEC0000BFBF9 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C0C3427126BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
 				C0A728A5279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
@@ -1874,6 +2000,7 @@
 				C0885FBD26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
 				C06A4C8C266AA641008A7DF3 /* ScreenPayloadedContainer+NSObject.swift in Sources */,
 				C0C3426F26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
+				C0A728F5279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */,
 				C088603A26B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C088601426B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
 				C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
@@ -1909,6 +2036,7 @@
 				C088602826B6C60B00CA0A77 /* ScreenCallAction.swift in Sources */,
 				C088601E26B6C60B00CA0A77 /* ScreenOpenURLAction.swift in Sources */,
 				C06A4C89266AA61D008A7DF3 /* ScreenVisibleContainer.swift in Sources */,
+				C0D5797027A05E5600084220 /* URLQueryComponent.swift in Sources */,
 				C0885FB526B6C0A500CA0A77 /* ScreenStackModifier.swift in Sources */,
 				C027108C25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
 				C0270CA625F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
@@ -1917,6 +2045,7 @@
 				C06A4C8A266AA632008A7DF3 /* ScreenPopoverPresentationDecorator.swift in Sources */,
 				C0885FAF26B6C0A500CA0A77 /* ScreenStackPushModifier.swift in Sources */,
 				C0AADB8225EF901F0087439E /* ScreenError.swift in Sources */,
+				C0D5798F27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */,
 				C0885FFE26B6C60B00CA0A77 /* ActionSheetAction.swift in Sources */,
 				C0A728BB279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift in Sources */,
 			);
@@ -1926,7 +2055,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D579A527A2BE5000084220 /* URLQueryDecoderStrategiesTests.swift in Sources */,
+				C0D5799B27A1A07F00084220 /* URLQueryDecoderTests.swift in Sources */,
 				C0A728D6279ADC4A000BFBF9 /* DictionaryDecoderTesting.swift in Sources */,
+				C0D579A027A1B44100084220 /* URLQueryDecoderTesting.swift in Sources */,
 				C0A728D5279ADC4A000BFBF9 /* DictionaryDecoderTests.swift in Sources */,
 				C0A728D4279ADC4A000BFBF9 /* DictionaryDecoderStrategiesTests.swift in Sources */,
 			);
