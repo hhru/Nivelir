@@ -1,6 +1,6 @@
 import Foundation
 
-internal final class DictionaryDecoder {
+internal struct DictionaryDecoder {
 
     internal static let `default` = DictionaryDecoder()
 
