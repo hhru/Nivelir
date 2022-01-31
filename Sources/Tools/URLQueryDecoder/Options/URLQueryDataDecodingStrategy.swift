@@ -1,7 +1,7 @@
 import Foundation
 
 /// The strategies for decoding raw data.
-internal enum URLQueryDataDecodingStrategy {
+public enum URLQueryDataDecodingStrategy {
 
     /// The strategy that encodes data using the encoding specified by the data instance itself.
     case deferredToData

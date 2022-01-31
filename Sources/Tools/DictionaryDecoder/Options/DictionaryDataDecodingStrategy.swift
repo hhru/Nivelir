@@ -1,7 +1,7 @@
 import Foundation
 
 /// The strategies for decoding raw data.
-internal enum DictionaryDataDecodingStrategy {
+public enum DictionaryDataDecodingStrategy {
 
     /// The strategy that encodes data using the encoding specified by the data instance itself.
     case deferredToData

@@ -2,7 +2,7 @@ import Foundation
 
 /// The strategies for encoding nonconforming floating-point numbers,
 /// also known as IEEE 754 exceptional values.
-internal enum DictionaryNonConformingFloatDecodingStrategy {
+public enum DictionaryNonConformingFloatDecodingStrategy {
 
     /// The strategy that throws an error upon decoding an exceptional floating-point value.
     case `throw`

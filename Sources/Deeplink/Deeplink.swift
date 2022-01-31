@@ -2,24 +2,35 @@ import Foundation
 
 public protocol Deeplink: AnyDeeplink {
 
+    associatedtype Context
     associatedtype Routes
 
-    func navigate(
-        using routes: Routes,
-        navigator: ScreenNavigator
-    )
+    func navigate(routes: Routes?, handler: DeeplinkHandler) throws
 }
 
 extension Deeplink {
 
-    public func navigateIfPossible(using routes: Any, navigator: ScreenNavigator) {
-        guard let routes = routes as? Routes else {
-            return
+    internal static func resolveContext(_ context: Any?) throws -> Context? {
+        guard let context = context else {
+            return nil
         }
 
-        navigate(
-            using: routes,
-            navigator: navigator
-        )
+        guard let context = context as? Context else {
+            throw DeeplinkInvalidContextError(context: context, type: Context.self, for: self)
+        }
+
+        return context
+    }
+
+    public func navigateIfPossible(routes: Any?, handler: DeeplinkHandler) throws {
+        guard let routes = routes else {
+            return try navigate(routes: nil, handler: handler)
+        }
+
+        guard let routes = routes as? Routes else {
+            throw DeeplinkInvalidRoutesError(routes: routes, type: Routes.self, for: self)
+        }
+
+        try navigate(routes: routes, handler: handler)
     }
 }

@@ -1,16 +1,12 @@
 #if canImport(UIKit)
 import UIKit
 
-public final class DeeplinkManager {
+public final class DeeplinkManager: DeeplinkHandler {
 
     public let deeplinkTypes: [AnyDeeplink.Type]
-
-    public let routes: Any
     public let navigator: ScreenNavigator
 
-    public let urlQueryDecoder: URLDeeplinkQueryDecoder
-    public let notificationUserInfoDecoder: NotificationDeeplinkUserInfoDecoder
-    public let shortcutUserInfoDecoder: ShortcutDeeplinkUserInfoDecoder
+    public private(set) var routes: Any?
 
     public var isActive: Bool {
         applicationStateSubscription != nil
@@ -26,28 +22,10 @@ public final class DeeplinkManager {
 
     public init(
         deeplinkTypes: [AnyDeeplink.Type],
-        routes: Any,
-        navigator: ScreenNavigator,
-        urlQueryDecoder: URLDeeplinkQueryDecoder,
-        notificationUserInfoDecoder: NotificationDeeplinkUserInfoDecoder,
-        shortcutUserInfoDecoder: ShortcutDeeplinkUserInfoDecoder
+        navigator: ScreenNavigator
     ) {
         self.deeplinkTypes = deeplinkTypes
-
-        self.routes = routes
         self.navigator = navigator
-
-        self.urlQueryDecoder = urlQueryDecoder
-        self.notificationUserInfoDecoder = notificationUserInfoDecoder
-        self.shortcutUserInfoDecoder = shortcutUserInfoDecoder
-    }
-
-    private func handleDeeplinkIfNeeded(_ deeplink: AnyDeeplink?) -> Bool {
-        if let deeplink = deeplink {
-            pendingDeeplink = deeplink
-        }
-
-        return deeplink != nil
     }
 
     private func navigateIfPossible() {
@@ -61,63 +39,173 @@ public final class DeeplinkManager {
 
         pendingDeeplink = nil
 
-        deeplink.navigateIfPossible(
-            using: routes,
-            navigator: navigator
+        do {
+            try deeplink.navigateIfPossible(
+                routes: routes,
+                handler: self
+            )
+        } catch {
+            navigator.logError(error)
+        }
+    }
+
+    private func handleDeeplinkError(_ error: Error) throws {
+        guard let error = error as? DeeplinkDecodingError else {
+            throw error
+        }
+
+        navigator.logInfo("\(error)")
+    }
+
+    private func makeURLDeeplinkIfPossible(
+        of deeplinkType: AnyURLDeeplink.Type,
+        url: URL,
+        context: Any?
+    ) throws -> AnyURLDeeplink? {
+        let queryOptions = try deeplinkType.urlQueryOptions(context: context)
+
+        let queryDecoder = URLQueryDecoder(
+            dateDecodingStrategy: queryOptions.dateDecodingStrategy,
+            dataDecodingStrategy: queryOptions.dataDecodingStrategy,
+            nonConformingFloatDecodingStrategy: queryOptions.nonConformingFloatDecodingStrategy,
+            keyDecodingStrategy: queryOptions.keyDecodingStrategy,
+            userInfo: queryOptions.userInfo
         )
+
+        do {
+            return try deeplinkType.url(
+                url,
+                queryDecoder: queryDecoder,
+                context: context
+            )
+        } catch {
+            try handleDeeplinkError(error)
+        }
+
+        return nil
+    }
+
+    private func makeNotificationDeeplinkIfPossible(
+        of deeplinkType: AnyNotificationDeeplink.Type,
+        userInfo: [String: Any],
+        context: Any?
+    ) throws -> AnyNotificationDeeplink? {
+        let userInfoOptions = try deeplinkType.notificationUserInfoOptions(context: context)
+
+        let userInfoDecoder = DictionaryDecoder(
+            dateDecodingStrategy: userInfoOptions.dateDecodingStrategy,
+            dataDecodingStrategy: userInfoOptions.dataDecodingStrategy,
+            nonConformingFloatDecodingStrategy: userInfoOptions.nonConformingFloatDecodingStrategy,
+            keyDecodingStrategy: userInfoOptions.keyDecodingStrategy,
+            userInfo: userInfoOptions.userInfo
+        )
+
+        do {
+            return try deeplinkType.notification(
+                userInfo: userInfo,
+                userInfoDecoder: userInfoDecoder,
+                context: context
+            )
+        } catch {
+            try handleDeeplinkError(error)
+        }
+
+        return nil
+    }
+
+    #if os(iOS)
+    private func makeShortcutDeeplinkIfPossible(
+        of deeplinkType: AnyShortcutDeeplink.Type,
+        shortcut: UIApplicationShortcutItem,
+        context: Any?
+    ) throws -> AnyShortcutDeeplink? {
+        let userInfoOptions = try deeplinkType.shortcutUserInfoOptions(context: context)
+
+        let userInfoDecoder = DictionaryDecoder(
+            dateDecodingStrategy: userInfoOptions.dateDecodingStrategy,
+            dataDecodingStrategy: userInfoOptions.dataDecodingStrategy,
+            nonConformingFloatDecodingStrategy: userInfoOptions.nonConformingFloatDecodingStrategy,
+            keyDecodingStrategy: userInfoOptions.keyDecodingStrategy,
+            userInfo: userInfoOptions.userInfo
+        )
+
+        do {
+            return try deeplinkType.shortcut(
+                shortcut,
+                userInfoDecoder: userInfoDecoder,
+                context: context
+            )
+        } catch {
+            try handleDeeplinkError(error)
+        }
+
+        return nil
+    }
+    #endif
+    private func handleDeeplinkIfPossible(_ deeplink: AnyDeeplink?) -> Bool {
+        if let deeplink = deeplink {
+            pendingDeeplink = deeplink
+        }
+
+        return deeplink != nil
     }
 
     @discardableResult
-    public func handleURL(_ url: URL) -> Bool {
-        let deeplink = deeplinkTypes
+    public func handleURL(_ url: URL, context: Any?) throws -> Bool {
+        let deeplink = try deeplinkTypes
             .lazy
             .compactMap { $0 as? AnyURLDeeplink.Type }
             .compactMap { deeplinkType in
-                deeplinkType.url(
-                    url,
-                    queryDecoder: self.urlQueryDecoder
+                try self.makeURLDeeplinkIfPossible(
+                    of: deeplinkType,
+                    url: url,
+                    context: context
                 )
             }
             .first { _ in true }
 
-        return handleDeeplinkIfNeeded(deeplink)
+        return handleDeeplinkIfPossible(deeplink)
     }
 
     @discardableResult
-    public func handleNotification(userInfo: [String: Any]) -> Bool {
-        let deeplink = deeplinkTypes
+    public func handleNotification(userInfo: [String: Any], context: Any?) throws -> Bool {
+        let deeplink = try deeplinkTypes
             .lazy
             .compactMap { $0 as? AnyNotificationDeeplink.Type }
             .compactMap { deeplinkType in
-                deeplinkType.notification(
+                try makeNotificationDeeplinkIfPossible(
+                    of: deeplinkType,
                     userInfo: userInfo,
-                    userInfoDecoder: self.notificationUserInfoDecoder
+                    context: context
                 )
             }
             .first { _ in true }
 
-        return handleDeeplinkIfNeeded(deeplink)
+        return handleDeeplinkIfPossible(deeplink)
     }
 
     #if os(iOS)
     @discardableResult
-    public func handleShortcut(_ shortcut: UIApplicationShortcutItem) -> Bool {
-        let deeplink = deeplinkTypes
+    public func handleShortcut(_ shortcut: UIApplicationShortcutItem, context: Any?) throws -> Bool {
+        let deeplink = try deeplinkTypes
             .lazy
             .compactMap { $0 as? AnyShortcutDeeplink.Type }
             .compactMap { deeplinkType in
-                deeplinkType.shortcut(
-                    shortcut,
-                    userInfoDecoder: self.shortcutUserInfoDecoder
+                try makeShortcutDeeplinkIfPossible(
+                    of: deeplinkType,
+                    shortcut: shortcut,
+                    context: context
                 )
             }
             .first { _ in true }
 
-        return handleDeeplinkIfNeeded(deeplink)
+        return handleDeeplinkIfPossible(deeplink)
     }
     #endif
 
-    public func activate() {
+    public func activate(routes: Any?) {
+        self.routes = routes
+
         guard applicationStateSubscription == nil else {
             return
         }
