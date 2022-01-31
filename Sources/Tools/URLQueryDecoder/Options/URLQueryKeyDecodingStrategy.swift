@@ -1,7 +1,7 @@
 import Foundation
 
 /// The values that determine how to decode a type’s coding keys from URL query keys.
-internal enum URLQueryKeyDecodingStrategy {
+public enum URLQueryKeyDecodingStrategy {
 
     /// A key decoding strategy that doesn’t change key names during decoding.
     case useDefaultKeys

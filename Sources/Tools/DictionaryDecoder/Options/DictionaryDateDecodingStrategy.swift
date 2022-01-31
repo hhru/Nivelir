@@ -1,7 +1,7 @@
 import Foundation
 
 /// The strategies available for formatting dates when decoding them from Dictionary.
-internal enum DictionaryDateDecodingStrategy {
+public enum DictionaryDateDecodingStrategy {
 
     /// The strategy that uses formatting from the Date structure.
     case deferredToDate

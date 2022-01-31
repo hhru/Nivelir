@@ -5,8 +5,7 @@ internal final class DictionaryKeyedDecodingContainer<Key: CodingKey>: Dictionar
     internal let components: [String: Any]
     internal let options: DictionaryDecodingOptions
     internal let userInfo: [CodingUserInfoKey: Any]
-
-    internal private(set) var codingPath: [CodingKey]
+    internal let codingPath: [CodingKey]
 
     internal init(
         components: [String: Any],

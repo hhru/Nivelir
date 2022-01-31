@@ -2,8 +2,5 @@ import Foundation
 
 public protocol AnyDeeplink {
 
-    func navigateIfPossible(
-        using routes: Any,
-        navigator: ScreenNavigator
-    )
+    func navigateIfPossible(routes: Any?, handler: DeeplinkHandler) throws
 }

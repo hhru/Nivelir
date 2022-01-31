@@ -2,7 +2,7 @@ import Foundation
 
 /// The strategies for encoding nonconforming floating-point numbers,
 /// also known as IEEE 754 exceptional values.
-internal enum URLQueryNonConformingFloatDecodingStrategy {
+public enum URLQueryNonConformingFloatDecodingStrategy {
 
     /// The strategy that throws an error upon decoding an exceptional floating-point value.
     case `throw`

@@ -3,69 +3,130 @@ import Foundation
 public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
 
     associatedtype URLQuery
+    associatedtype Context
+
+    static func urlQueryOptions(
+        context: Context?
+    ) -> URLDeeplinkQueryOptions
 
     static func url(
         scheme: String,
         host: String,
         path: [String],
-        query: URLQuery?
-    ) -> Self?
+        query: URLQuery?,
+        context: Context?
+    ) throws -> Self?
+
+    static func url(
+        _ url: URL,
+        query: URLQuery?,
+        context: Context?
+    ) throws -> Self?
 }
 
 extension URLDeeplink {
 
-    internal static func url(_ url: URL, query: URLQuery?) -> Self? {
+    public static func urlQueryOptions(
+        context: Context?
+    ) -> URLDeeplinkQueryOptions {
+        URLDeeplinkQueryOptions()
+    }
+
+    public static func urlQueryOptions(
+        context: Any?
+    ) throws -> URLDeeplinkQueryOptions {
+        urlQueryOptions(context: try resolveContext(context))
+    }
+
+    public static func url(
+        _ url: URL,
+        query: URLQuery?,
+        context: Context?
+    ) throws -> Self? {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
-            return nil
+            throw URLDeeplinkInvalidComponentsError(url: url, for: self)
         }
 
         guard let scheme = components.scheme else {
-            return nil
+            throw URLDeeplinkInvalidSchemeError(url: url, for: self)
         }
 
         guard let host = components.host else {
-            return nil
+            throw URLDeeplinkInvalidHostError(url: url, for: self)
         }
 
         let path = components
             .path
-            .components(separatedBy: "/")
+            .components(separatedBy: String.urlPathSeparator)
             .dropFirst()
 
-        return .url(
+        return try Self.url(
             scheme: scheme,
             host: host,
             path: Array(path),
-            query: query
+            query: query,
+            context: context
         )
     }
 }
 
 extension URLDeeplink where URLQuery == Void {
 
-    public static func url(_ url: URL, queryDecoder: URLDeeplinkQueryDecoder) -> AnyURLDeeplink? {
-        Self.url(url, query: Void())
+    public static func url(
+        _ url: URL,
+        queryDecoder: URLDeeplinkQueryDecoder,
+        context: Any?
+    ) throws -> AnyURLDeeplink? {
+        try Self.url(
+            url,
+            query: Void(),
+            context: resolveContext(context)
+        )
     }
 }
 
 extension URLDeeplink where URLQuery == String {
 
-    public static func url(_ url: URL, queryDecoder: URLDeeplinkQueryDecoder) -> AnyURLDeeplink? {
-        Self.url(url, query: url.query)
+    public static func url(
+        _ url: URL,
+        queryDecoder: URLDeeplinkQueryDecoder,
+        context: Any?
+    ) throws -> AnyURLDeeplink? {
+        try Self.url(
+            url,
+            query: url.query,
+            context: resolveContext(context)
+        )
     }
 }
 
 extension URLDeeplink where URLQuery: Decodable {
 
-    public static func url(_ url: URL, queryDecoder: URLDeeplinkQueryDecoder) -> AnyURLDeeplink? {
-        do {
-            let query = try url.query.map { query in
-                try queryDecoder.decode(URLQuery.self, from: query)
-            }
+    public static func url(
+        _ url: URL,
+        queryDecoder: URLDeeplinkQueryDecoder,
+        context: Any?
+    ) throws -> AnyURLDeeplink? {
+        let decodedQuery: URLQuery?
 
-            return Self.url(url, query: query)
+        do {
+            decodedQuery = try url.query.map { query in
+                try queryDecoder.decode(
+                    URLQuery.self,
+                    from: query
+                )
+            }
         } catch {
-            return nil
+            throw DeeplinkDecodingError(
+                underlyingError: error,
+                trigger: self
+            )
         }
+
+        return try Self.url(
+            url,
+            query: decodedQuery,
+            context: resolveContext(context)
+        )
     }
 }

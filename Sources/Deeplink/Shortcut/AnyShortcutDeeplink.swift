@@ -3,9 +3,14 @@ import UIKit
 
 public protocol AnyShortcutDeeplink: AnyDeeplink {
 
+    static func shortcutUserInfoOptions(
+        context: Any?
+    ) throws -> ShortcutDeeplinkUserInfoOptions
+
     static func shortcut(
         _ shortcut: UIApplicationShortcutItem,
-        userInfoDecoder: ShortcutDeeplinkUserInfoDecoder
-    ) -> AnyShortcutDeeplink?
+        userInfoDecoder: ShortcutDeeplinkUserInfoDecoder,
+        context: Any?
+    ) throws -> AnyShortcutDeeplink?
 }
 #endif

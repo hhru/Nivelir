@@ -1,7 +1,7 @@
 import Foundation
 
 /// The strategies available for formatting dates when decoding them from URL.
-internal enum URLQueryDateDecodingStrategy {
+public enum URLQueryDateDecodingStrategy {
 
     /// The strategy that uses formatting from the Date structure.
     case deferredToDate
