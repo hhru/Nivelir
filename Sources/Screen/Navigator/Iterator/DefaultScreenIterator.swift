@@ -6,7 +6,7 @@ public final class DefaultScreenIterator: ScreenIterator {
     public init() { }
 
     private func iterateLocally(
-        in containers: [UIViewController],
+        in containers: [ScreenContainer],
         while predicate: ScreenIterationPredicate,
         fallingBackTo fallbackContainer: ScreenContainer?
     ) -> ScreenIterationResult {
@@ -40,26 +40,15 @@ public final class DefaultScreenIterator: ScreenIterator {
     }
 
     private func iterateLocally(
-        in container: UIViewController,
+        in container: ScreenContainer,
         while predicate: ScreenIterationPredicate,
         fallingBackTo fallbackContainer: ScreenContainer?
     ) -> ScreenIterationResult {
-        let localContainers: [UIViewController]
+        let localContainers: [ScreenContainer]
 
-        switch container {
-        case let stackContainer as UINavigationController:
-            localContainers = stackContainer.viewControllers
-
-        case let tabsContainer as UITabBarController:
-            let tabContainers = tabsContainer.viewControllers ?? []
-
-            localContainers = tabsContainer.selectedViewController.map { selectedContainer in
-                tabContainers
-                    .removingAll { $0 === selectedContainer }
-                    .appending(selectedContainer)
-            } ?? tabContainers
-
-        default:
+        if let container = container as? ScreenIterableContainer {
+            localContainers = container.nestedContainers
+        } else {
             localContainers = []
         }
 
