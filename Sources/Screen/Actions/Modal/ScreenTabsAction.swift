@@ -80,7 +80,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Selects tab from the tab container of the current container:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenTabsRoute.selectTab(with: .index(1))
+    /// let nestedRoute = ScreenTabsRoute().selectTab(with: .index(1))
     ///
     /// navigator.navigate(from: container) { route in
     ///     route.tabs(route: nestedRoute)

@@ -80,7 +80,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Pops the top screen container from the stack that presented the current container:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenStackRoute.pop()
+    /// let nestedRoute = ScreenStackRoute().pop()
     ///
     /// navigator.navigate(from: container) { route in
     ///     route.presenting(of: UINavigationController.self, route: nestedRoute)
@@ -90,7 +90,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Dismisses the current container:
     ///
     /// ``` swift
-    /// let nestedRoute = ScreenModalRoute.dismiss()
+    /// let nestedRoute = ScreenModalRoute().dismiss()
     ///
     /// navigator.navigate(from: container) { route in
     ///     route.presenting(route: nestedRoute)
@@ -127,7 +127,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Dismisses the current container:
     ///
     /// ``` swift
-    /// navigator.navigate(from: self) { route in
+    /// navigator.navigate(from: container) { route in
     ///     route.presenting { $0.dismiss() }
     /// }
     /// ```

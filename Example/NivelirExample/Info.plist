@@ -22,6 +22,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The app requires access to your camera to change profile images</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app requires access to your photos library to change profile images</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -34,7 +38,7 @@
 					<key>UISceneConfigurationName</key>
 					<string>Main</string>
 					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).MainSceneDelegate</string>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 				</dict>
 			</array>
 		</dict>
@@ -58,9 +62,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The app requires access to your photos library to change profile images</string>
-    <key>NSCameraUsageDescription</key>
-    <string>The app requires access to your camera to change profile images</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>ru.hh.Nivelir-Example</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>nivelir</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>

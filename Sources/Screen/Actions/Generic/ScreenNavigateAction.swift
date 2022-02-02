@@ -75,7 +75,7 @@ extension ScreenNavigator {
     }
 
     public func navigate(
-        to route: (_ route: ScreenRootRoute<UIWindow>) -> ScreenRouteConvertible,
+        to route: (_ route: ScreenWindowRoute) -> ScreenRouteConvertible,
         completion: Completion? = nil
     ) {
         navigate(

@@ -6,4 +6,5 @@ enum Colors {
     static let unimportant = UIColor(named: "Unimportant")!
     static let important = UIColor(named: "Important")!
     static let title = UIColor(named: "Title")!
+    static let icon = UIColor(named: "Title")!
 }

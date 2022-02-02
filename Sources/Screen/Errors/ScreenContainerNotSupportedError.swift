@@ -2,7 +2,7 @@ import Foundation
 
 /// The container type is not supported.
 ///
-/// This error occurs whenever any action handles an unsupported container type.
+/// This error occurs whenever an action handles an unsupported container type.
 public struct ScreenContainerNotSupportedError: ScreenError {
 
     public var description: String {
