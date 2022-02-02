@@ -3,10 +3,13 @@ import Nivelir
 
 struct HomeScreen: Screen {
 
+    let services: Services
     let screens: Screens
 
     func build(navigator: ScreenNavigator) -> UITabBarController {
         let view = HomeTabBarController(
+            deeplinkManager: services.deeplinkManager(),
+            screens: screens,
             screenKey: key,
             screenNavigator: navigator
         )

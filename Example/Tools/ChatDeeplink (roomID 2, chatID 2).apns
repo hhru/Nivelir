@@ -1,0 +1,11 @@
+{
+    "Simulator Target Bundle": "ru.hh.Nivelir-Example",
+    "aps": {
+        "alert": {
+            "body": "User sent a new message in Room #2 – Chat 2",
+            "title": "New message"
+        }
+    },
+    "room_id": 2,
+    "chat_id": 2
+}

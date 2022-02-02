@@ -8,7 +8,10 @@ struct Screens {
     // MARK: - Screens
 
     func homeScreen() -> AnyTabsScreen {
-        HomeScreen(screens: self).eraseToAnyScreen()
+        HomeScreen(
+            services: services,
+            screens: self
+        ).eraseToAnyScreen()
     }
 
     func roomListScreen() -> AnyModalScreen {

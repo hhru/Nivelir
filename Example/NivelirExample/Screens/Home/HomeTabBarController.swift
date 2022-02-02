@@ -3,13 +3,19 @@ import Nivelir
 
 final class HomeTabBarController: UITabBarController, ScreenKeyedContainer {
 
+    let deeplinkManager: DeeplinkManager
+    let screens: Screens
     let screenKey: ScreenKey
     let screenNavigator: ScreenNavigator
 
     init(
+        deeplinkManager: DeeplinkManager,
+        screens: Screens,
         screenKey: ScreenKey,
         screenNavigator: ScreenNavigator
     ) {
+        self.deeplinkManager = deeplinkManager
+        self.screens = screens
         self.screenKey = screenKey
         self.screenNavigator = screenNavigator
 
@@ -26,5 +32,11 @@ final class HomeTabBarController: UITabBarController, ScreenKeyedContainer {
 
         tabBar.tintColor = Colors.important
         tabBar.unselectedItemTintColor = Colors.unimportant
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        deeplinkManager.activate(screens: screens)
     }
 }

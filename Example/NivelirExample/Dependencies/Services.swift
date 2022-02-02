@@ -13,6 +13,17 @@ struct Services {
         }
     }
 
+    func deeplinkManager() -> DeeplinkManager {
+        container.shared {
+            DeeplinkManager(
+                deeplinkTypes: [
+                    ChatDeeplink.self
+                ],
+                navigator: screenNavigator()
+            )
+        }
+    }
+
     func authorizationService() -> AuthorizationService {
         container.shared {
             DefaultAuthorizationService()

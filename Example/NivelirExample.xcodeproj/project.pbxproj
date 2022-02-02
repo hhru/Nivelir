@@ -81,6 +81,8 @@
 		C0C06E0227AA61D3002B7F03 /* ScreenAuthorizeActionScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2F27A948ED00148E91 /* ScreenAuthorizeActionScreens.swift */; };
 		C0C06E0327AA61DB002B7F03 /* ScreenAuthorizeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2A27A9456B00148E91 /* ScreenAuthorizeAction.swift */; };
 		C0C06E0427AA61DB002B7F03 /* ScreenAuthorizeActionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3127A9492400148E91 /* ScreenAuthorizeActionServices.swift */; };
+		C0D562FE27AA9CE0000027CF /* ChatDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */; };
+		C0D562FF27AA9CE0000027CF /* ChatDeeplinkPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */; };
 		C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */; };
 		C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */; };
 		C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */; };
@@ -136,6 +138,8 @@
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
 		C0B5A45226625DC100D7521C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NivelirExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeeplink.swift; sourceTree = "<group>"; };
+		C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeeplinkPayload.swift; sourceTree = "<group>"; };
 		C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		C0238F2927A9455400148E91 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				C0D562FB27AA9CE0000027CF /* Deeplinks */,
 				C0238F3E27A9599000148E91 /* Authorization */,
 			);
 			path = Routing;
@@ -343,6 +348,15 @@
 				C07888E226590C1800F09955 /* UITableView+Reusable.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		C0D562FB27AA9CE0000027CF /* Deeplinks */ = {
+			isa = PBXGroup;
+			children = (
+				C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */,
+				C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */,
+			);
+			path = Deeplinks;
 			sourceTree = "<group>";
 		};
 		C0DA318025FBB1E1009A9CB8 /* Resources */ = {
@@ -641,6 +655,7 @@
 				C0238F3227A9492400148E91 /* ScreenAuthorizeActionServices.swift in Sources */,
 				C0268C20265909E400380F76 /* ChatListCell.swift in Sources */,
 				C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */,
+				C0D562FF27AA9CE0000027CF /* ChatDeeplinkPayload.swift in Sources */,
 				C0238F2B27A9456B00148E91 /* ScreenAuthorizeAction.swift in Sources */,
 				C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */,
 				C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */,
@@ -650,6 +665,7 @@
 				C0238F3927A94C5C00148E91 /* AuthorizationScreen.swift in Sources */,
 				C0238F2827A93DAE00148E91 /* Services.swift in Sources */,
 				C07888E9265940C600F09955 /* ProfileView.swift in Sources */,
+				C0D562FE27AA9CE0000027CF /* ChatDeeplink.swift in Sources */,
 				C07888E126590BE100F09955 /* Reusable.swift in Sources */,
 				C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */,
 				C07888E72659133500F09955 /* Images.swift in Sources */,
