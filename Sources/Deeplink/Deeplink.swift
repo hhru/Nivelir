@@ -20,7 +20,7 @@ extension Deeplink where Screens: Nullable {
             return .none
         }
 
-        guard let screens = screens as? Screens else {
+        guard let deeplinkScreens = screens as? Screens else {
             throw DeeplinkInvalidScreensError(
                 screens: screens,
                 type: Screens.self,
@@ -28,14 +28,14 @@ extension Deeplink where Screens: Nullable {
             )
         }
 
-        return screens
+        return deeplinkScreens
     }
 }
 
 extension Deeplink {
 
     private func resolveScreens(_ screens: Any?) throws -> Screens {
-        guard let screens = screens as? Screens else {
+        guard let deeplinkScreens = screens as? Screens else {
             throw DeeplinkInvalidScreensError(
                 screens: screens,
                 type: Screens.self,
@@ -43,7 +43,7 @@ extension Deeplink {
             )
         }
 
-        return screens
+        return deeplinkScreens
     }
 }
 

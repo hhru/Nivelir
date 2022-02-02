@@ -33,7 +33,7 @@ extension URLDeeplink where URLContext: Nullable {
             return .none
         }
 
-        guard let context = context as? URLContext else {
+        guard let urlContext = context as? URLContext else {
             throw DeeplinkInvalidContextError(
                 context: context,
                 type: URLContext.self,
@@ -41,14 +41,14 @@ extension URLDeeplink where URLContext: Nullable {
             )
         }
 
-        return context
+        return urlContext
     }
 }
 
 extension URLDeeplink {
 
     private static func resolveContext(_ context: Any?) throws -> URLContext {
-        guard let context = context as? URLContext else {
+        guard let urlContext = context as? URLContext else {
             throw DeeplinkInvalidContextError(
                 context: context,
                 type: URLContext.self,
@@ -56,7 +56,7 @@ extension URLDeeplink {
             )
         }
 
-        return context
+        return urlContext
     }
 }
 

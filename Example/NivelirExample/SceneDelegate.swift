@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func setupShortcuts() {
+        #if os(iOS)
         let firstChatInFirstRoomShortcut = UIApplicationShortcutItem(
             type: "FirstChatInFirstRoom",
             localizedTitle: "Room #1 – Chat 1",
@@ -60,6 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             secondChatInFirstRoomShortcut,
             secondChatInSecondRoomShortcut
         ]
+        #endif
     }
 
     private func setupWindow(scene: UIScene) {
@@ -127,6 +129,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .handleURLIfPossible(url, context: services)
     }
 
+    #if os(iOS)
     func windowScene(
         _ windowScene: UIWindowScene,
         performActionFor shortcutItem: UIApplicationShortcutItem,
@@ -138,6 +141,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         completionHandler(isHandled)
     }
+    #endif
 }
 
 #if os(iOS)

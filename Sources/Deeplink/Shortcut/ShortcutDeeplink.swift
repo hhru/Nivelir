@@ -26,7 +26,7 @@ extension ShortcutDeeplink where ShortcutContext: Nullable {
             return .none
         }
 
-        guard let context = context as? ShortcutContext else {
+        guard let shortcutContext = context as? ShortcutContext else {
             throw DeeplinkInvalidContextError(
                 context: context,
                 type: ShortcutContext.self,
@@ -34,14 +34,14 @@ extension ShortcutDeeplink where ShortcutContext: Nullable {
             )
         }
 
-        return context
+        return shortcutContext
     }
 }
 
 extension ShortcutDeeplink {
 
     private static func resolveContext(_ context: Any?) throws -> ShortcutContext {
-        guard let context = context as? ShortcutContext else {
+        guard let shortcutContext = context as? ShortcutContext else {
             throw DeeplinkInvalidContextError(
                 context: context,
                 type: ShortcutContext.self,
@@ -49,7 +49,7 @@ extension ShortcutDeeplink {
             )
         }
 
-        return context
+        return shortcutContext
     }
 }
 

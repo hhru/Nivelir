@@ -37,7 +37,7 @@ internal final class URLQueryDeserializer {
         _ value: Substring,
         path: [String]
     ) throws -> URLQueryComponent {
-        guard let value = value.removingPercentEncoding else {
+        guard let decodedValue = value.removingPercentEncoding else {
             throw DecodingError.dataCorrupted(
                 DecodingError.Context(
                     codingPath: [],
@@ -46,7 +46,7 @@ internal final class URLQueryDeserializer {
             )
         }
 
-        return .string(String(value))
+        return .string(String(decodedValue))
     }
 
     private func deserializeArrayValue(

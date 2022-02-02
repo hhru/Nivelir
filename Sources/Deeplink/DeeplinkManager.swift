@@ -59,11 +59,11 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
 
     private func handleErrorIfPossible(_ error: Error) throws {
-        guard let error = error as? DeeplinkDecodingError else {
+        guard let decodingError = error as? DeeplinkDecodingError else {
             throw error
         }
 
-        navigator.logInfo("\(error)")
+        navigator.logInfo("\(decodingError)")
     }
 
     private func makeURLDeeplinkIfPossible(

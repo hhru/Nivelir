@@ -24,7 +24,7 @@ extension NotificationDeeplink where NotificationContext: Nullable {
             return .none
         }
 
-        guard let context = context as? NotificationContext else {
+        guard let notificationContext = context as? NotificationContext else {
             throw DeeplinkInvalidContextError(
                 context: context,
                 type: NotificationContext.self,
@@ -32,14 +32,14 @@ extension NotificationDeeplink where NotificationContext: Nullable {
             )
         }
 
-        return context
+        return notificationContext
     }
 }
 
 extension NotificationDeeplink {
 
     private static func resolveContext(_ context: Any?) throws -> NotificationContext {
-        guard let context = context as? NotificationContext else {
+        guard let notificationContext = context as? NotificationContext else {
             throw DeeplinkInvalidContextError(
                 context: context,
                 type: NotificationContext.self,
@@ -47,7 +47,7 @@ extension NotificationDeeplink {
             )
         }
 
-        return context
+        return notificationContext
     }
 }
 

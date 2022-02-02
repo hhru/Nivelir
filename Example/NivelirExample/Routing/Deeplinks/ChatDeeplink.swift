@@ -44,6 +44,7 @@ extension ChatDeeplink: URLDeeplink {
     }
 }
 
+#if os(iOS)
 extension ChatDeeplink: ShortcutDeeplink {
 
     static func shortcut(
@@ -66,3 +67,4 @@ extension ChatDeeplink: ShortcutDeeplink {
         }
     }
 }
+#endif

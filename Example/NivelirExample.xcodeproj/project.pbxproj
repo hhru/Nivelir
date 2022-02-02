@@ -34,6 +34,8 @@
 		C057512827A9AE5400396BB7 /* ServiceSharedScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512727A9AE5400396BB7 /* ServiceSharedScope.swift */; };
 		C057512D27A9AE9600396BB7 /* ServiceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512C27A9AE9600396BB7 /* ServiceStorage.swift */; };
 		C057512F27A9AEA200396BB7 /* ServiceSharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512E27A9AEA200396BB7 /* ServiceSharedStorage.swift */; };
+		C05C623227AAD34A0054F0BC /* ChatDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */; };
+		C05C623327AAD3520054F0BC /* ChatDeeplinkPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */; };
 		C06E9A61265A74060087A913 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06E9A60265A74060087A913 /* Launch.storyboard */; };
 		C07888E126590BE100F09955 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
 		C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
@@ -702,6 +704,7 @@
 				C0BF2F60265A70A600419426 /* ChatListViewController.swift in Sources */,
 				C0C06DF027AA617F002B7F03 /* Services.swift in Sources */,
 				C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */,
+				C05C623327AAD3520054F0BC /* ChatDeeplinkPayload.swift in Sources */,
 				C0BF2F5B265A709700419426 /* Images.swift in Sources */,
 				C0C06E0427AA61DB002B7F03 /* ScreenAuthorizeActionServices.swift in Sources */,
 				C0C06DF727AA618F002B7F03 /* RoomListCell.swift in Sources */,
@@ -711,6 +714,7 @@
 				C0BF2F66265A70AE00419426 /* ProfileView.swift in Sources */,
 				C0C06DFE27AA61B5002B7F03 /* ServiceStorage.swift in Sources */,
 				C0C06DFD27AA61B2002B7F03 /* ServiceScope.swift in Sources */,
+				C05C623227AAD34A0054F0BC /* ChatDeeplink.swift in Sources */,
 				C0C06DFC27AA61B2002B7F03 /* ServiceSharedScope.swift in Sources */,
 				C0C06DFB27AA61AF002B7F03 /* ServiceKey.swift in Sources */,
 				C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */,
