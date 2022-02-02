@@ -3,22 +3,60 @@ import Foundation
 public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
 
     associatedtype NotificationUserInfo
-    associatedtype Context
+    associatedtype NotificationContext
 
     static func notificationUserInfoOptions(
-        context: Context?
+        context: NotificationContext
     ) -> NotificationDeeplinkUserInfoOptions
 
     static func notification(
         userInfo: NotificationUserInfo,
-        context: Context?
+        context: NotificationContext
     ) throws -> Self?
+}
+
+// MARK: - Helpers
+
+extension NotificationDeeplink where NotificationContext: Nullable {
+
+    private static func resolveContext(_ context: Any?) throws -> NotificationContext {
+        guard let context = context else {
+            return .none
+        }
+
+        guard let context = context as? NotificationContext else {
+            throw DeeplinkInvalidContextError(
+                context: context,
+                type: NotificationContext.self,
+                for: self
+            )
+        }
+
+        return context
+    }
 }
 
 extension NotificationDeeplink {
 
+    private static func resolveContext(_ context: Any?) throws -> NotificationContext {
+        guard let context = context as? NotificationContext else {
+            throw DeeplinkInvalidContextError(
+                context: context,
+                type: NotificationContext.self,
+                for: self
+            )
+        }
+
+        return context
+    }
+}
+
+// MARK: - Default implementation
+
+extension NotificationDeeplink {
+
     public static func notificationUserInfoOptions(
-        context: Context?
+        context: NotificationContext
     ) -> NotificationDeeplinkUserInfoOptions {
         NotificationDeeplinkUserInfoOptions()
     }

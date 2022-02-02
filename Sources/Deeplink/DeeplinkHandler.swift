@@ -6,8 +6,6 @@ import UIKit
 
 public protocol DeeplinkHandler {
 
-    var navigator: ScreenNavigator { get }
-
     @discardableResult
     func handleURL(_ url: URL, context: Any?) throws -> Bool
 

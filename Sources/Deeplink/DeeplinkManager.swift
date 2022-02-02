@@ -6,7 +6,7 @@ public final class DeeplinkManager: DeeplinkHandler {
     public let deeplinkTypes: [AnyDeeplink.Type]
     public let navigator: ScreenNavigator
 
-    public private(set) var routes: Any?
+    public private(set) var screens: Any?
 
     public var isActive: Bool {
         applicationStateSubscription != nil
@@ -41,7 +41,8 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         do {
             try deeplink.navigateIfPossible(
-                routes: routes,
+                screens: screens,
+                navigator: navigator,
                 handler: self
             )
         } catch {
@@ -49,7 +50,15 @@ public final class DeeplinkManager: DeeplinkHandler {
         }
     }
 
-    private func handleDeeplinkError(_ error: Error) throws {
+    private func handleDeeplinkIfPossible(_ deeplink: AnyDeeplink?) -> Bool {
+        if let deeplink = deeplink {
+            pendingDeeplink = deeplink
+        }
+
+        return deeplink != nil
+    }
+
+    private func handleErrorIfPossible(_ error: Error) throws {
         guard let error = error as? DeeplinkDecodingError else {
             throw error
         }
@@ -79,7 +88,7 @@ public final class DeeplinkManager: DeeplinkHandler {
                 context: context
             )
         } catch {
-            try handleDeeplinkError(error)
+            try handleErrorIfPossible(error)
         }
 
         return nil
@@ -107,7 +116,7 @@ public final class DeeplinkManager: DeeplinkHandler {
                 context: context
             )
         } catch {
-            try handleDeeplinkError(error)
+            try handleErrorIfPossible(error)
         }
 
         return nil
@@ -136,19 +145,12 @@ public final class DeeplinkManager: DeeplinkHandler {
                 context: context
             )
         } catch {
-            try handleDeeplinkError(error)
+            try handleErrorIfPossible(error)
         }
 
         return nil
     }
     #endif
-    private func handleDeeplinkIfPossible(_ deeplink: AnyDeeplink?) -> Bool {
-        if let deeplink = deeplink {
-            pendingDeeplink = deeplink
-        }
-
-        return deeplink != nil
-    }
 
     @discardableResult
     public func handleURL(_ url: URL, context: Any?) throws -> Bool {
@@ -168,6 +170,17 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
 
     @discardableResult
+    public func handleURLIfPossible(_ url: URL, context: Any?) -> Bool {
+        do {
+            return try handleURL(url, context: context)
+        } catch {
+            navigator.logError(error)
+        }
+
+        return false
+    }
+
+    @discardableResult
     public func handleNotification(userInfo: [String: Any], context: Any?) throws -> Bool {
         let deeplink = try deeplinkTypes
             .lazy
@@ -182,6 +195,17 @@ public final class DeeplinkManager: DeeplinkHandler {
             .first { _ in true }
 
         return handleDeeplinkIfPossible(deeplink)
+    }
+
+    @discardableResult
+    public func handleNotificationIfPossible(userInfo: [String: Any], context: Any?) -> Bool {
+        do {
+            return try handleNotification(userInfo: userInfo, context: context)
+        } catch {
+            navigator.logError(error)
+        }
+
+        return false
     }
 
     #if os(iOS)
@@ -201,10 +225,21 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         return handleDeeplinkIfPossible(deeplink)
     }
+
+    @discardableResult
+    public func handleShortcutIfPossible(_ shortcut: UIApplicationShortcutItem, context: Any?) -> Bool {
+        do {
+            return try handleShortcut(shortcut, context: context)
+        } catch {
+            navigator.logError(error)
+        }
+
+        return false
+    }
     #endif
 
-    public func activate(routes: Any?) {
-        self.routes = routes
+    public func activate(screens: Any?) {
+        self.screens = screens
 
         guard applicationStateSubscription == nil else {
             return

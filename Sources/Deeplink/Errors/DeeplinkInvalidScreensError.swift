@@ -1,19 +1,19 @@
 import Foundation
 
-/// The `Routes` instance is not supported by the deeplink type.
-public struct DeeplinkInvalidRoutesError: DeeplinkError {
+/// The `Screens` instance is not supported by the deeplink type.
+public struct DeeplinkInvalidScreensError: DeeplinkError {
 
     public var description: String {
         """
-        The type of the routes \(routes) does not match the expected type \(type) for:
+        The type of the screens \(screens ?? "nil") does not match the expected type \(type) for:
           \(trigger)
         """
     }
 
-    /// Routes instance.
-    public let routes: Any
+    /// Screens instance.
+    public let screens: Any?
 
-    /// Expected routes type.
+    /// Expected screens type.
     public let type: Any.Type
 
     /// The deeplink that caused the error.
@@ -22,15 +22,15 @@ public struct DeeplinkInvalidRoutesError: DeeplinkError {
     /// Creates an error.
     ///
     /// - Parameters:
-    ///   - routes: Routes instance.
-    ///   - type: Expected routes type.
+    ///   - screens: Screens instance.
+    ///   - type: Expected screens type.
     ///   - trigger: The deeplink that caused the error.
     public init(
-        routes: Any,
+        screens: Any?,
         type: Any.Type,
         for trigger: Any
     ) {
-        self.routes = routes
+        self.screens = screens
         self.type = type
         self.trigger = trigger
     }
