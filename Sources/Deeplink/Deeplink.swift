@@ -2,35 +2,64 @@ import Foundation
 
 public protocol Deeplink: AnyDeeplink {
 
-    associatedtype Context
-    associatedtype Routes
+    associatedtype Screens
 
-    func navigate(routes: Routes?, handler: DeeplinkHandler) throws
+    func navigate(
+        screens: Screens,
+        navigator: ScreenNavigator,
+        handler: DeeplinkHandler
+    ) throws
+}
+
+// MARK: - Screens resolving
+
+extension Deeplink where Screens: Nullable {
+
+    private func resolveScreens(_ screens: Any?) throws -> Screens {
+        guard let screens = screens else {
+            return .none
+        }
+
+        guard let screens = screens as? Screens else {
+            throw DeeplinkInvalidScreensError(
+                screens: screens,
+                type: Screens.self,
+                for: self
+            )
+        }
+
+        return screens
+    }
 }
 
 extension Deeplink {
 
-    internal static func resolveContext(_ context: Any?) throws -> Context? {
-        guard let context = context else {
-            return nil
+    private func resolveScreens(_ screens: Any?) throws -> Screens {
+        guard let screens = screens as? Screens else {
+            throw DeeplinkInvalidScreensError(
+                screens: screens,
+                type: Screens.self,
+                for: self
+            )
         }
 
-        guard let context = context as? Context else {
-            throw DeeplinkInvalidContextError(context: context, type: Context.self, for: self)
-        }
-
-        return context
+        return screens
     }
+}
 
-    public func navigateIfPossible(routes: Any?, handler: DeeplinkHandler) throws {
-        guard let routes = routes else {
-            return try navigate(routes: nil, handler: handler)
-        }
+// MARK: - Default implementation
 
-        guard let routes = routes as? Routes else {
-            throw DeeplinkInvalidRoutesError(routes: routes, type: Routes.self, for: self)
-        }
+extension Deeplink {
 
-        try navigate(routes: routes, handler: handler)
+    public func navigateIfPossible(
+        screens: Any?,
+        navigator: ScreenNavigator,
+        handler: DeeplinkHandler
+    ) throws {
+        try navigate(
+            screens: resolveScreens(screens),
+            navigator: navigator,
+            handler: handler
+        )
     }
 }

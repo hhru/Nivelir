@@ -29,8 +29,8 @@
 		C0238EE227A411D100148E91 /* DeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EE027A411D100148E91 /* DeeplinkHandler.swift */; };
 		C0238EE427A7DA8600148E91 /* DeeplinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EE327A7DA8600148E91 /* DeeplinkError.swift */; };
 		C0238EE527A7DA8600148E91 /* DeeplinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EE327A7DA8600148E91 /* DeeplinkError.swift */; };
-		C0238EEB27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EEA27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift */; };
-		C0238EEC27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EEA27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift */; };
+		C0238EEB27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EEA27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift */; };
+		C0238EEC27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EEA27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift */; };
 		C0238EEE27A7DD9200148E91 /* DeeplinkInvalidContextError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EED27A7DD9200148E91 /* DeeplinkInvalidContextError.swift */; };
 		C0238EEF27A7DD9200148E91 /* DeeplinkInvalidContextError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EED27A7DD9200148E91 /* DeeplinkInvalidContextError.swift */; };
 		C0238EF427A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EF327A7E71000148E91 /* DeeplinkDecodingError.swift */; };
@@ -53,6 +53,8 @@
 		C0238F1627A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1427A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift */; };
 		C0238F1827A8443700148E91 /* UINavigationController+ScreenIterableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1727A8443600148E91 /* UINavigationController+ScreenIterableContainer.swift */; };
 		C0238F1927A8443700148E91 /* UINavigationController+ScreenIterableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1727A8443600148E91 /* UINavigationController+ScreenIterableContainer.swift */; };
+		C0238F2D27A9477000148E91 /* ScreenCanceledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2C27A9477000148E91 /* ScreenCanceledError.swift */; };
+		C0238F2E27A9477000148E91 /* ScreenCanceledError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2C27A9477000148E91 /* ScreenCanceledError.swift */; };
 		C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
 		C0270CA225F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */; };
 		C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */; };
@@ -351,6 +353,8 @@
 		C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AAD9C325EEC8F50087439E /* Result+Extensions.swift */; };
 		C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
 		C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AADC8225EFB5360087439E /* Collection+Extensions.swift */; };
+		C0C06E0827AA78F4002B7F03 /* Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C06E0727AA78F4002B7F03 /* Nullable.swift */; };
+		C0C06E0927AA78F4002B7F03 /* Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C06E0727AA78F4002B7F03 /* Nullable.swift */; };
 		C0C3426426BC4511007A45E9 /* ScreenThenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */; };
 		C0C3426526BC4511007A45E9 /* ScreenThenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */; };
 		C0C3426C26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426026BC4511007A45E9 /* ScreenModalRoute.swift */; };
@@ -458,7 +462,7 @@
 		C0238ED427A40FE500148E91 /* DeeplinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
 		C0238EE027A411D100148E91 /* DeeplinkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkHandler.swift; sourceTree = "<group>"; };
 		C0238EE327A7DA8600148E91 /* DeeplinkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkError.swift; sourceTree = "<group>"; };
-		C0238EEA27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkInvalidRoutesError.swift; sourceTree = "<group>"; };
+		C0238EEA27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkInvalidScreensError.swift; sourceTree = "<group>"; };
 		C0238EED27A7DD9200148E91 /* DeeplinkInvalidContextError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkInvalidContextError.swift; sourceTree = "<group>"; };
 		C0238EF327A7E71000148E91 /* DeeplinkDecodingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkDecodingError.swift; sourceTree = "<group>"; };
 		C0238EF627A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLDeeplinkInvalidComponentsError.swift; path = Sources/Deeplink/URL/Errors/URLDeeplinkInvalidComponentsError.swift; sourceTree = SOURCE_ROOT; };
@@ -470,6 +474,7 @@
 		C0238F1127A840E400148E91 /* ScreenIterableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterableContainer.swift; sourceTree = "<group>"; };
 		C0238F1427A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+ScreenIterableContainer.swift"; sourceTree = "<group>"; };
 		C0238F1727A8443600148E91 /* UINavigationController+ScreenIterableContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ScreenIterableContainer.swift"; sourceTree = "<group>"; };
+		C0238F2C27A9477000148E91 /* ScreenCanceledError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCanceledError.swift; sourceTree = "<group>"; };
 		C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
@@ -637,6 +642,7 @@
 		C0AADA4C25EEE1F10087439E /* ScreenKeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKeyedContainer.swift; sourceTree = "<group>"; };
 		C0AADC8225EFB5360087439E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		C0BF2F112659B9CC00419426 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
+		C0C06E0727AA78F4002B7F03 /* Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nullable.swift; sourceTree = "<group>"; };
 		C0C3425B26BC4511007A45E9 /* ScreenThenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenThenable.swift; sourceTree = "<group>"; };
 		C0C3426026BC4511007A45E9 /* ScreenModalRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenModalRoute.swift; sourceTree = "<group>"; };
 		C0C3426126BC4511007A45E9 /* ScreenTabsRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabsRoute.swift; sourceTree = "<group>"; };
@@ -747,7 +753,7 @@
 				C0238EF327A7E71000148E91 /* DeeplinkDecodingError.swift */,
 				C0238EE327A7DA8600148E91 /* DeeplinkError.swift */,
 				C0238EED27A7DD9200148E91 /* DeeplinkInvalidContextError.swift */,
-				C0238EEA27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift */,
+				C0238EEA27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -1326,6 +1332,7 @@
 				C08F982125EEB9910077AE40 /* Extensions */,
 				C0A728DA279ADE28000BFBF9 /* URLQueryDecoder */,
 				C0A728A0279ACBEC000BFBF9 /* AnyCodingKey.swift */,
+				C0C06E0727AA78F4002B7F03 /* Nullable.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1413,6 +1420,7 @@
 		C0AADA2E25EED8470087439E /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				C0238F2C27A9477000148E91 /* ScreenCanceledError.swift */,
 				C0F9A47425FD61EB00DAE060 /* ScreenContainerNotFoundError.swift */,
 				C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */,
 				C0F9A47325FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift */,
@@ -1894,6 +1902,7 @@
 				C0885FC426B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C0238F1527A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
+				C0238F2D27A9477000148E91 /* ScreenCanceledError.swift in Sources */,
 				C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */,
 				C0A728762799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
 				C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */,
@@ -1910,8 +1919,9 @@
 				C088604726B6C60B00CA0A77 /* InvalidStoreProductIDError.swift in Sources */,
 				C088600F26B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
 				C0A7287127996E6E000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
+				C0C06E0827AA78F4002B7F03 /* Nullable.swift in Sources */,
 				C0A72860279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */,
-				C0238EEB27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift in Sources */,
+				C0238EEB27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */,
 				C0885F9426B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,
 				C0238EE427A7DA8600148E91 /* DeeplinkError.swift in Sources */,
 				C0E932FF262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
@@ -2115,6 +2125,7 @@
 				C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
 				C0238F1627A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */,
 				C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */,
+				C0238F2E27A9477000148E91 /* ScreenCanceledError.swift in Sources */,
 				C0885FC526B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C02710A025F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
 				C0AADA1525EED7740087439E /* Screen.swift in Sources */,
@@ -2131,8 +2142,9 @@
 				C0C3428126BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C0A72861279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */,
 				C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */,
+				C0C06E0927AA78F4002B7F03 /* Nullable.swift in Sources */,
 				C088601026B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
-				C0238EEC27A7DBA100148E91 /* DeeplinkInvalidRoutesError.swift in Sources */,
+				C0238EEC27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */,
 				C0885F9526B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,
 				C0238EE527A7DA8600148E91 /* DeeplinkError.swift in Sources */,
 				C0A728642799487B000BFBF9 /* AnyDeeplink.swift in Sources */,

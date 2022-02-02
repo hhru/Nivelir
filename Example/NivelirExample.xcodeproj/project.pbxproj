@@ -10,10 +10,30 @@
 		51C6E20272A5CB88DD6B2AD5 /* Pods_NivelirExample_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */; };
 		992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3364730C705918530E030D /* Pods_NivelirExample.framework */; };
 		C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
-		C017D13925FBAD0F008B90C0 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */; };
+		C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */; };
 		C017D14025FBAD11008B90C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017D13F25FBAD11008B90C0 /* Assets.xcassets */; };
 		C017D14325FBAD11008B90C0 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C017D14125FBAD11008B90C0 /* Launch.storyboard */; };
+		C0238F1C27A933A400148E91 /* RoomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1B27A933A400148E91 /* RoomListCell.swift */; };
+		C0238F1E27A93D1000148E91 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1D27A93D1000148E91 /* RoomListViewController.swift */; };
+		C0238F2227A93D3E00148E91 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2127A93D3E00148E91 /* AuthorizationService.swift */; };
+		C0238F2427A93D7C00148E91 /* DefaultAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2327A93D7C00148E91 /* DefaultAuthorizationService.swift */; };
+		C0238F2827A93DAE00148E91 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2727A93DAE00148E91 /* Services.swift */; };
+		C0238F2B27A9456B00148E91 /* ScreenAuthorizeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2A27A9456B00148E91 /* ScreenAuthorizeAction.swift */; };
+		C0238F3027A948ED00148E91 /* ScreenAuthorizeActionScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2F27A948ED00148E91 /* ScreenAuthorizeActionScreens.swift */; };
+		C0238F3227A9492400148E91 /* ScreenAuthorizeActionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3127A9492400148E91 /* ScreenAuthorizeActionServices.swift */; };
+		C0238F3427A9493C00148E91 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3327A9493C00148E91 /* Screens.swift */; };
+		C0238F3727A94ADC00148E91 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3627A94ADC00148E91 /* AuthorizationView.swift */; };
+		C0238F3927A94C5C00148E91 /* AuthorizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3827A94C5C00148E91 /* AuthorizationScreen.swift */; };
+		C0238F3B27A94C7200148E91 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3A27A94C7200148E91 /* AuthorizationViewController.swift */; };
+		C0238F3D27A9544300148E91 /* RoomListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3C27A9544300148E91 /* RoomListScreen.swift */; };
+		C0238F4427A96A7A00148E91 /* ProfileUnauthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F4327A96A7A00148E91 /* ProfileUnauthorizedView.swift */; };
 		C0268C20265909E400380F76 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0268C1F265909E400380F76 /* ChatListCell.swift */; };
+		C057512127A9AD9E00396BB7 /* ServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512027A9AD9E00396BB7 /* ServiceKey.swift */; };
+		C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512227A9ADFA00396BB7 /* ServiceContainer.swift */; };
+		C057512627A9AE4800396BB7 /* ServiceScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512527A9AE4800396BB7 /* ServiceScope.swift */; };
+		C057512827A9AE5400396BB7 /* ServiceSharedScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512727A9AE5400396BB7 /* ServiceSharedScope.swift */; };
+		C057512D27A9AE9600396BB7 /* ServiceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512C27A9AE9600396BB7 /* ServiceStorage.swift */; };
+		C057512F27A9AEA200396BB7 /* ServiceSharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512E27A9AEA200396BB7 /* ServiceSharedStorage.swift */; };
 		C06E9A61265A74060087A913 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06E9A60265A74060087A913 /* Launch.storyboard */; };
 		C07888E126590BE100F09955 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
 		C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
@@ -39,9 +59,30 @@
 		C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */; };
 		C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
 		C0BF2F69265A70C400419426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017D13F25FBAD11008B90C0 /* Assets.xcassets */; };
-		C0BF2F6B265A70CC00419426 /* MainSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */; };
-		C0BF2F6C265A70CC00419426 /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */; };
-		C0DA318725FBB530009A9CB8 /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */; };
+		C0BF2F6B265A70CC00419426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */; };
+		C0C06DF027AA617F002B7F03 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2727A93DAE00148E91 /* Services.swift */; };
+		C0C06DF127AA6182002B7F03 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3327A9493C00148E91 /* Screens.swift */; };
+		C0C06DF227AA618A002B7F03 /* AuthorizationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3827A94C5C00148E91 /* AuthorizationScreen.swift */; };
+		C0C06DF327AA618A002B7F03 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3627A94ADC00148E91 /* AuthorizationView.swift */; };
+		C0C06DF427AA618A002B7F03 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3A27A94C7200148E91 /* AuthorizationViewController.swift */; };
+		C0C06DF527AA618F002B7F03 /* RoomListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3C27A9544300148E91 /* RoomListScreen.swift */; };
+		C0C06DF627AA618F002B7F03 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1D27A93D1000148E91 /* RoomListViewController.swift */; };
+		C0C06DF727AA618F002B7F03 /* RoomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F1B27A933A400148E91 /* RoomListCell.swift */; };
+		C0C06DF827AA6193002B7F03 /* ProfileUnauthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F4327A96A7A00148E91 /* ProfileUnauthorizedView.swift */; };
+		C0C06DF927AA619D002B7F03 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B5A45226625DC100D7521C /* ChatScreen.swift */; };
+		C0C06DFA27AA61AF002B7F03 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512227A9ADFA00396BB7 /* ServiceContainer.swift */; };
+		C0C06DFB27AA61AF002B7F03 /* ServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512027A9AD9E00396BB7 /* ServiceKey.swift */; };
+		C0C06DFC27AA61B2002B7F03 /* ServiceSharedScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512727A9AE5400396BB7 /* ServiceSharedScope.swift */; };
+		C0C06DFD27AA61B2002B7F03 /* ServiceScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512527A9AE4800396BB7 /* ServiceScope.swift */; };
+		C0C06DFE27AA61B5002B7F03 /* ServiceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512C27A9AE9600396BB7 /* ServiceStorage.swift */; };
+		C0C06DFF27AA61B5002B7F03 /* ServiceSharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512E27A9AEA200396BB7 /* ServiceSharedStorage.swift */; };
+		C0C06E0027AA61CB002B7F03 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2127A93D3E00148E91 /* AuthorizationService.swift */; };
+		C0C06E0127AA61CB002B7F03 /* DefaultAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2327A93D7C00148E91 /* DefaultAuthorizationService.swift */; };
+		C0C06E0227AA61D3002B7F03 /* ScreenAuthorizeActionScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2F27A948ED00148E91 /* ScreenAuthorizeActionScreens.swift */; };
+		C0C06E0327AA61DB002B7F03 /* ScreenAuthorizeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F2A27A9456B00148E91 /* ScreenAuthorizeAction.swift */; };
+		C0C06E0427AA61DB002B7F03 /* ScreenAuthorizeActionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3127A9492400148E91 /* ScreenAuthorizeActionServices.swift */; };
+		C0D562FE27AA9CE0000027CF /* ChatDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */; };
+		C0D562FF27AA9CE0000027CF /* ChatDeeplinkPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */; };
 		C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */; };
 		C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */; };
 		C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */; };
@@ -63,11 +104,31 @@
 		B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017D13325FBAD0F008B90C0 /* NivelirExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NivelirExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017D13625FBAD0F008B90C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDelegate.swift; sourceTree = "<group>"; };
+		C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C017D13F25FBAD11008B90C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C017D14225FBAD11008B90C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		C017D14425FBAD11008B90C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0238F1B27A933A400148E91 /* RoomListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListCell.swift; sourceTree = "<group>"; };
+		C0238F1D27A93D1000148E91 /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
+		C0238F2127A93D3E00148E91 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		C0238F2327A93D7C00148E91 /* DefaultAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthorizationService.swift; sourceTree = "<group>"; };
+		C0238F2727A93DAE00148E91 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		C0238F2A27A9456B00148E91 /* ScreenAuthorizeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAuthorizeAction.swift; sourceTree = "<group>"; };
+		C0238F2F27A948ED00148E91 /* ScreenAuthorizeActionScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAuthorizeActionScreens.swift; sourceTree = "<group>"; };
+		C0238F3127A9492400148E91 /* ScreenAuthorizeActionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAuthorizeActionServices.swift; sourceTree = "<group>"; };
+		C0238F3327A9493C00148E91 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		C0238F3627A94ADC00148E91 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		C0238F3827A94C5C00148E91 /* AuthorizationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationScreen.swift; sourceTree = "<group>"; };
+		C0238F3A27A94C7200148E91 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		C0238F3C27A9544300148E91 /* RoomListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListScreen.swift; sourceTree = "<group>"; };
+		C0238F4327A96A7A00148E91 /* ProfileUnauthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUnauthorizedView.swift; sourceTree = "<group>"; };
 		C0268C1F265909E400380F76 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		C057512027A9AD9E00396BB7 /* ServiceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceKey.swift; sourceTree = "<group>"; };
+		C057512227A9ADFA00396BB7 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		C057512527A9AE4800396BB7 /* ServiceScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceScope.swift; sourceTree = "<group>"; };
+		C057512727A9AE5400396BB7 /* ServiceSharedScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSharedScope.swift; sourceTree = "<group>"; };
+		C057512C27A9AE9600396BB7 /* ServiceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStorage.swift; sourceTree = "<group>"; };
+		C057512E27A9AEA200396BB7 /* ServiceSharedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSharedStorage.swift; sourceTree = "<group>"; };
 		C06E9A60265A74060087A913 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		C07888E026590BE100F09955 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		C07888E226590C1800F09955 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
@@ -77,7 +138,8 @@
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
 		C0B5A45226625DC100D7521C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NivelirExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneRouter.swift; sourceTree = "<group>"; };
+		C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeeplink.swift; sourceTree = "<group>"; };
+		C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeeplinkPayload.swift; sourceTree = "<group>"; };
 		C0E9D29525FC0B9B00ABDBE5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C0E9D29B25FC93CA00ABDBE5 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		C0E9D2A225FC9A8600ABDBE5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -156,23 +218,111 @@
 		C017D13525FBAD0F008B90C0 /* NivelirExample */ = {
 			isa = PBXGroup;
 			children = (
+				C0238F2527A93DA200148E91 /* Dependencies */,
 				C0E9D2BA25FCA3E800ABDBE5 /* Helpers */,
-				C0DA318225FBB219009A9CB8 /* Modules */,
 				C0DA318025FBB1E1009A9CB8 /* Resources */,
-				C0DA318A25FBB537009A9CB8 /* Scenes */,
+				C0238F2927A9455400148E91 /* Routing */,
+				C0DA318225FBB219009A9CB8 /* Screens */,
+				C0238F1F27A93D2000148E91 /* Services */,
 				C017D13625FBAD0F008B90C0 /* AppDelegate.swift */,
+				C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */,
 				C017D14425FBAD11008B90C0 /* Info.plist */,
 			);
 			path = NivelirExample;
 			sourceTree = "<group>";
 		};
-		C06B606725FCAC0300F0DC12 /* Main */ = {
+		C0238F1A27A928CB00148E91 /* RoomList */ = {
 			isa = PBXGroup;
 			children = (
-				C017D13825FBAD0F008B90C0 /* MainSceneDelegate.swift */,
-				C0DA318625FBB530009A9CB8 /* MainSceneRouter.swift */,
+				C0238F1B27A933A400148E91 /* RoomListCell.swift */,
+				C0238F3C27A9544300148E91 /* RoomListScreen.swift */,
+				C0238F1D27A93D1000148E91 /* RoomListViewController.swift */,
 			);
-			path = Main;
+			path = RoomList;
+			sourceTree = "<group>";
+		};
+		C0238F1F27A93D2000148E91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C0238F2027A93D2D00148E91 /* Authorization */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C0238F2027A93D2D00148E91 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				C0238F2127A93D3E00148E91 /* AuthorizationService.swift */,
+				C0238F2327A93D7C00148E91 /* DefaultAuthorizationService.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		C0238F2527A93DA200148E91 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C0238F2727A93DAE00148E91 /* Services.swift */,
+				C0238F3327A9493C00148E91 /* Screens.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		C0238F2927A9455400148E91 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				C0D562FB27AA9CE0000027CF /* Deeplinks */,
+				C0238F3E27A9599000148E91 /* Authorization */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		C0238F3527A94AC400148E91 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				C0238F3827A94C5C00148E91 /* AuthorizationScreen.swift */,
+				C0238F3627A94ADC00148E91 /* AuthorizationView.swift */,
+				C0238F3A27A94C7200148E91 /* AuthorizationViewController.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		C0238F3E27A9599000148E91 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				C0238F2A27A9456B00148E91 /* ScreenAuthorizeAction.swift */,
+				C0238F2F27A948ED00148E91 /* ScreenAuthorizeActionScreens.swift */,
+				C0238F3127A9492400148E91 /* ScreenAuthorizeActionServices.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		C057511F27A9AD5E00396BB7 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C057512B27A9AE8400396BB7 /* Storage */,
+				C057512427A9AE3F00396BB7 /* Scope */,
+				C057512227A9ADFA00396BB7 /* ServiceContainer.swift */,
+				C057512027A9AD9E00396BB7 /* ServiceKey.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C057512427A9AE3F00396BB7 /* Scope */ = {
+			isa = PBXGroup;
+			children = (
+				C057512527A9AE4800396BB7 /* ServiceScope.swift */,
+				C057512727A9AE5400396BB7 /* ServiceSharedScope.swift */,
+			);
+			path = Scope;
+			sourceTree = "<group>";
+		};
+		C057512B27A9AE8400396BB7 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C057512E27A9AEA200396BB7 /* ServiceSharedStorage.swift */,
+				C057512C27A9AE9600396BB7 /* ServiceStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		C06E9A5E265A73EC0087A913 /* iOS */ = {
@@ -200,6 +350,15 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		C0D562FB27AA9CE0000027CF /* Deeplinks */ = {
+			isa = PBXGroup;
+			children = (
+				C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */,
+				C0D562FD27AA9CE0000027CF /* ChatDeeplinkPayload.swift */,
+			);
+			path = Deeplinks;
+			sourceTree = "<group>";
+		};
 		C0DA318025FBB1E1009A9CB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,23 +369,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C0DA318225FBB219009A9CB8 /* Modules */ = {
+		C0DA318225FBB219009A9CB8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C0238F3527A94AC400148E91 /* Authorization */,
 				C0E9D29925FC0D3200ABDBE5 /* Chat */,
 				C0E9D2A825FC9C5000ABDBE5 /* ChatList */,
 				C0DA318C25FBC355009A9CB8 /* Home */,
 				C0E9D29A25FC0D6500ABDBE5 /* Profile */,
+				C0238F1A27A928CB00148E91 /* RoomList */,
 			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		C0DA318A25FBB537009A9CB8 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				C06B606725FCAC0300F0DC12 /* Main */,
-			);
-			path = Scenes;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		C0DA318C25FBC355009A9CB8 /* Home */ = {
@@ -253,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E9D2AE25FC9ECF00ABDBE5 /* ProfileScreen.swift */,
+				C0238F4327A96A7A00148E91 /* ProfileUnauthorizedView.swift */,
 				C07888E8265940C600F09955 /* ProfileView.swift */,
 				C0E9D2AA25FC9CD900ABDBE5 /* ProfileViewController.swift */,
 			);
@@ -272,6 +426,7 @@
 		C0E9D2BA25FCA3E800ABDBE5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C057511F27A9AD5E00396BB7 /* DI */,
 				C07888DF26590BD500F09955 /* Reusable */,
 				C07888E4265910AE00F09955 /* Colors.swift */,
 				C07888E62659133500F09955 /* Images.swift */,
@@ -483,24 +638,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */,
+				C0238F3427A9493C00148E91 /* Screens.swift in Sources */,
+				C057512F27A9AEA200396BB7 /* ServiceSharedStorage.swift in Sources */,
+				C0238F3B27A94C7200148E91 /* AuthorizationViewController.swift in Sources */,
+				C0238F2227A93D3E00148E91 /* AuthorizationService.swift in Sources */,
 				C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */,
+				C057512D27A9AE9600396BB7 /* ServiceStorage.swift in Sources */,
 				C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */,
+				C0238F4427A96A7A00148E91 /* ProfileUnauthorizedView.swift in Sources */,
+				C0238F3727A94ADC00148E91 /* AuthorizationView.swift in Sources */,
+				C0238F2427A93D7C00148E91 /* DefaultAuthorizationService.swift in Sources */,
+				C0238F3D27A9544300148E91 /* RoomListScreen.swift in Sources */,
 				C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */,
 				C07888E5265910AE00F09955 /* Colors.swift in Sources */,
+				C057512627A9AE4800396BB7 /* ServiceScope.swift in Sources */,
+				C0238F3227A9492400148E91 /* ScreenAuthorizeActionServices.swift in Sources */,
 				C0268C20265909E400380F76 /* ChatListCell.swift in Sources */,
 				C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */,
+				C0D562FF27AA9CE0000027CF /* ChatDeeplinkPayload.swift in Sources */,
+				C0238F2B27A9456B00148E91 /* ScreenAuthorizeAction.swift in Sources */,
 				C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */,
+				C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */,
 				C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */,
 				C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */,
 				C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */,
+				C0238F3927A94C5C00148E91 /* AuthorizationScreen.swift in Sources */,
+				C0238F2827A93DAE00148E91 /* Services.swift in Sources */,
 				C07888E9265940C600F09955 /* ProfileView.swift in Sources */,
+				C0D562FE27AA9CE0000027CF /* ChatDeeplink.swift in Sources */,
 				C07888E126590BE100F09955 /* Reusable.swift in Sources */,
 				C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */,
 				C07888E72659133500F09955 /* Images.swift in Sources */,
 				C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */,
-				C017D13925FBAD0F008B90C0 /* MainSceneDelegate.swift in Sources */,
+				C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */,
 				C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */,
-				C0DA318725FBB530009A9CB8 /* MainSceneRouter.swift in Sources */,
+				C0238F1E27A93D1000148E91 /* RoomListViewController.swift in Sources */,
+				C0238F1C27A933A400148E91 /* RoomListCell.swift in Sources */,
+				C057512827A9AE5400396BB7 /* ServiceSharedScope.swift in Sources */,
+				C0238F3027A948ED00148E91 /* ScreenAuthorizeActionScreens.swift in Sources */,
+				C057512127A9AD9E00396BB7 /* ServiceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,22 +684,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C06DF827AA6193002B7F03 /* ProfileUnauthorizedView.swift in Sources */,
+				C0C06DF427AA618A002B7F03 /* AuthorizationViewController.swift in Sources */,
 				C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */,
 				C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */,
 				C0BF2F63265A70AA00419426 /* HomeTabBarController.swift in Sources */,
-				C0BF2F6B265A70CC00419426 /* MainSceneDelegate.swift in Sources */,
+				C0BF2F6B265A70CC00419426 /* SceneDelegate.swift in Sources */,
 				C0BF2F59265A709700419426 /* Reusable.swift in Sources */,
+				C0C06DF927AA619D002B7F03 /* ChatScreen.swift in Sources */,
+				C0C06DF327AA618A002B7F03 /* AuthorizationView.swift in Sources */,
+				C0C06E0027AA61CB002B7F03 /* AuthorizationService.swift in Sources */,
+				C0C06DFA27AA61AF002B7F03 /* ServiceContainer.swift in Sources */,
+				C0C06E0127AA61CB002B7F03 /* DefaultAuthorizationService.swift in Sources */,
 				C0BF2F5F265A70A600419426 /* ChatListScreen.swift in Sources */,
+				C0C06E0227AA61D3002B7F03 /* ScreenAuthorizeActionScreens.swift in Sources */,
+				C0C06DF127AA6182002B7F03 /* Screens.swift in Sources */,
 				C0BF2F60265A70A600419426 /* ChatListViewController.swift in Sources */,
+				C0C06DF027AA617F002B7F03 /* Services.swift in Sources */,
 				C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */,
 				C0BF2F5B265A709700419426 /* Images.swift in Sources */,
+				C0C06E0427AA61DB002B7F03 /* ScreenAuthorizeActionServices.swift in Sources */,
+				C0C06DF727AA618F002B7F03 /* RoomListCell.swift in Sources */,
 				C0BF2F5A265A709700419426 /* Colors.swift in Sources */,
 				C0BF2F62265A70AA00419426 /* HomeTabBarItem.swift in Sources */,
+				C0C06DF627AA618F002B7F03 /* RoomListViewController.swift in Sources */,
 				C0BF2F66265A70AE00419426 /* ProfileView.swift in Sources */,
-				C0BF2F6C265A70CC00419426 /* MainSceneRouter.swift in Sources */,
+				C0C06DFE27AA61B5002B7F03 /* ServiceStorage.swift in Sources */,
+				C0C06DFD27AA61B2002B7F03 /* ServiceScope.swift in Sources */,
+				C0C06DFC27AA61B2002B7F03 /* ServiceSharedScope.swift in Sources */,
+				C0C06DFB27AA61AF002B7F03 /* ServiceKey.swift in Sources */,
 				C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */,
 				C0BF2F64265A70AA00419426 /* HomeScreen.swift in Sources */,
 				C0BF2F61265A70A600419426 /* ChatListCell.swift in Sources */,
+				C0C06E0327AA61DB002B7F03 /* ScreenAuthorizeAction.swift in Sources */,
+				C0C06DF227AA618A002B7F03 /* AuthorizationScreen.swift in Sources */,
+				C0C06DFF27AA61B5002B7F03 /* ServiceSharedStorage.swift in Sources */,
+				C0C06DF527AA618F002B7F03 /* RoomListScreen.swift in Sources */,
 				C0BF2F5E265A709F00419426 /* ChatViewController.swift in Sources */,
 				C0BF2F65265A70AE00419426 /* ProfileScreen.swift in Sources */,
 			);
@@ -665,6 +861,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,6 +880,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,7 +905,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -728,7 +926,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;

@@ -4,23 +4,61 @@ import UIKit
 public protocol ShortcutDeeplink: Deeplink, AnyShortcutDeeplink {
 
     associatedtype ShortcutUserInfo
-    associatedtype Context
+    associatedtype ShortcutContext
 
     static func shortcutUserInfoOptions(
-        context: Context?
+        context: ShortcutContext
     ) -> ShortcutDeeplinkUserInfoOptions
 
     static func shortcut(
         type: String,
         userInfo: ShortcutUserInfo?,
-        context: Context?
+        context: ShortcutContext
     ) throws -> Self?
+}
+
+// MARK: - Context resolving
+
+extension ShortcutDeeplink where ShortcutContext: Nullable {
+
+    private static func resolveContext(_ context: Any?) throws -> ShortcutContext {
+        guard let context = context else {
+            return .none
+        }
+
+        guard let context = context as? ShortcutContext else {
+            throw DeeplinkInvalidContextError(
+                context: context,
+                type: ShortcutContext.self,
+                for: self
+            )
+        }
+
+        return context
+    }
 }
 
 extension ShortcutDeeplink {
 
+    private static func resolveContext(_ context: Any?) throws -> ShortcutContext {
+        guard let context = context as? ShortcutContext else {
+            throw DeeplinkInvalidContextError(
+                context: context,
+                type: ShortcutContext.self,
+                for: self
+            )
+        }
+
+        return context
+    }
+}
+
+// MARK: - Default implementation
+
+extension ShortcutDeeplink {
+
     public static func shortcutUserInfoOptions(
-        context: Context?
+        context: ShortcutContext
     ) -> ShortcutDeeplinkUserInfoOptions {
         ShortcutDeeplinkUserInfoOptions()
     }
@@ -56,7 +94,7 @@ extension ShortcutDeeplink where ShortcutUserInfo == [String: Any] {
     ) throws -> AnyShortcutDeeplink? {
         try Self.shortcut(
             type: shortcut.type,
-            userInfo: shortcut.userInfo,
+            userInfo: shortcut.userInfo ?? [:],
             context: resolveContext(context)
         )
     }

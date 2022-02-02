@@ -3,10 +3,10 @@ import Foundation
 public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
 
     associatedtype URLQuery
-    associatedtype Context
+    associatedtype URLContext
 
     static func urlQueryOptions(
-        context: Context?
+        context: URLContext
     ) -> URLDeeplinkQueryOptions
 
     static func url(
@@ -14,20 +14,58 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
         host: String,
         path: [String],
         query: URLQuery?,
-        context: Context?
+        context: URLContext
     ) throws -> Self?
 
     static func url(
         _ url: URL,
         query: URLQuery?,
-        context: Context?
+        context: URLContext
     ) throws -> Self?
+}
+
+// MARK: - Context resolving
+
+extension URLDeeplink where URLContext: Nullable {
+
+    private static func resolveContext(_ context: Any?) throws -> URLContext {
+        guard let context = context else {
+            return .none
+        }
+
+        guard let context = context as? URLContext else {
+            throw DeeplinkInvalidContextError(
+                context: context,
+                type: URLContext.self,
+                for: self
+            )
+        }
+
+        return context
+    }
 }
 
 extension URLDeeplink {
 
+    private static func resolveContext(_ context: Any?) throws -> URLContext {
+        guard let context = context as? URLContext else {
+            throw DeeplinkInvalidContextError(
+                context: context,
+                type: URLContext.self,
+                for: self
+            )
+        }
+
+        return context
+    }
+}
+
+// MARK: - Default implementation
+
+extension URLDeeplink {
+
     public static func urlQueryOptions(
-        context: Context?
+        context: URLContext
     ) -> URLDeeplinkQueryOptions {
         URLDeeplinkQueryOptions()
     }
@@ -41,7 +79,7 @@ extension URLDeeplink {
     public static func url(
         _ url: URL,
         query: URLQuery?,
-        context: Context?
+        context: URLContext
     ) throws -> Self? {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
             throw URLDeeplinkInvalidComponentsError(url: url, for: self)
