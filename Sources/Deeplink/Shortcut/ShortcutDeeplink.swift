@@ -70,7 +70,7 @@ extension ShortcutDeeplink {
     }
 }
 
-extension ShortcutDeeplink where ShortcutUserInfo == Void {
+extension ShortcutDeeplink where ShortcutUserInfo == Any {
 
     public static func shortcut(
         _ shortcut: UIApplicationShortcutItem,
@@ -79,7 +79,7 @@ extension ShortcutDeeplink where ShortcutUserInfo == Void {
     ) throws -> AnyShortcutDeeplink? {
         try Self.shortcut(
             type: shortcut.type,
-            userInfo: Void(),
+            userInfo: shortcut.userInfo,
             context: resolveContext(context)
         )
     }

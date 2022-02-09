@@ -9,16 +9,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private var screens: Screens?
 
     private func setupNotifications() {
-        let center = UNUserNotificationCenter.current()
-
         #if os(iOS)
-        center.delegate = self
-        #endif
+        let notificationCenter = UNUserNotificationCenter.current()
 
-        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
-            print("requestAuthorization() -> granted: \(granted)")
-            print("requestAuthorization() -> error: \(error as Any)")
+        notificationCenter.delegate = self
+
+        notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if let error = error {
+                print("requestAuthorization() -> error: \(error)")
+            } else {
+                print("requestAuthorization() -> granted: \(granted)")
+            }
         }
+        #endif
     }
 
     private func setupShortcuts() {
@@ -152,14 +155,10 @@ extension SceneDelegate: UNUserNotificationCenterDelegate {
         didReceive response: UNNotificationResponse,
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
-        guard let userInfo = response.notification.request.content.userInfo as? [String: Any] else {
-            return completionHandler()
-        }
-
         services?
             .deeplinkManager()
             .handleNotificationIfPossible(
-                userInfo: userInfo,
+                response: response,
                 context: services
             )
 

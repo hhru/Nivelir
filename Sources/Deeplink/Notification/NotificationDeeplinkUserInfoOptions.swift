@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 
 public struct NotificationDeeplinkUserInfoOptions {
@@ -22,3 +23,4 @@ public struct NotificationDeeplinkUserInfoOptions {
         self.userInfo = userInfo
     }
 }
+#endif
