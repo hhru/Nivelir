@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 
 public protocol NotificationDeeplinkUserInfoDecoder {
@@ -6,3 +7,4 @@ public protocol NotificationDeeplinkUserInfoDecoder {
 }
 
 extension DictionaryDecoder: NotificationDeeplinkUserInfoDecoder { }
+#endif

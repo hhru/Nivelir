@@ -127,8 +127,6 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     private func setupProfileUnauthorizedView() {
         let profileUnauthorizedView = ProfileUnauthorizedView()
 
-        profileUnauthorizedView.isHidden = authorizationService.isAuthorized
-
         profileUnauthorizedView.onLoginTapped = { [unowned self] in
             self.showAuthorization()
         }
@@ -162,6 +160,12 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
         setupProfileView()
         setupProfileUnauthorizedView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        profileUnauthorizedView?.isHidden = authorizationService.isAuthorized
     }
 }
 

@@ -1,6 +1,10 @@
 #if canImport(UIKit)
 import UIKit
 
+#if canImport(UserNotifications)
+import UserNotifications
+#endif
+
 public final class DeeplinkManager: DeeplinkHandler {
 
     public let deeplinkTypes: [AnyDeeplink.Type]
@@ -94,9 +98,10 @@ public final class DeeplinkManager: DeeplinkHandler {
         return nil
     }
 
+    #if canImport(UserNotifications) && os(iOS)
     private func makeNotificationDeeplinkIfPossible(
         of deeplinkType: AnyNotificationDeeplink.Type,
-        userInfo: [String: Any],
+        response: UNNotificationResponse,
         context: Any?
     ) throws -> AnyNotificationDeeplink? {
         let userInfoOptions = try deeplinkType.notificationUserInfoOptions(context: context)
@@ -111,7 +116,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         do {
             return try deeplinkType.notification(
-                userInfo: userInfo,
+                response: response,
                 userInfoDecoder: userInfoDecoder,
                 context: context
             )
@@ -121,8 +126,9 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         return nil
     }
+    #endif
 
-    #if os(iOS)
+    #if canImport(UIKit) && os(iOS)
     private func makeShortcutDeeplinkIfPossible(
         of deeplinkType: AnyShortcutDeeplink.Type,
         shortcut: UIApplicationShortcutItem,
@@ -180,15 +186,16 @@ public final class DeeplinkManager: DeeplinkHandler {
         return false
     }
 
+    #if canImport(UserNotifications) && os(iOS)
     @discardableResult
-    public func handleNotification(userInfo: [String: Any], context: Any?) throws -> Bool {
+    public func handleNotification(response: UNNotificationResponse, context: Any?) throws -> Bool {
         let deeplink = try deeplinkTypes
             .lazy
             .compactMap { $0 as? AnyNotificationDeeplink.Type }
             .compactMap { deeplinkType in
                 try makeNotificationDeeplinkIfPossible(
                     of: deeplinkType,
-                    userInfo: userInfo,
+                    response: response,
                     context: context
                 )
             }
@@ -198,17 +205,18 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
 
     @discardableResult
-    public func handleNotificationIfPossible(userInfo: [String: Any], context: Any?) -> Bool {
+    public func handleNotificationIfPossible(response: UNNotificationResponse, context: Any?) -> Bool {
         do {
-            return try handleNotification(userInfo: userInfo, context: context)
+            return try handleNotification(response: response, context: context)
         } catch {
             navigator.logError(error)
         }
 
         return false
     }
+    #endif
 
-    #if os(iOS)
+    #if canImport(UIKit) && os(iOS)
     @discardableResult
     public func handleShortcut(_ shortcut: UIApplicationShortcutItem, context: Any?) throws -> Bool {
         let deeplink = try deeplinkTypes

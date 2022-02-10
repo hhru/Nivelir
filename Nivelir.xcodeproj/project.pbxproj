@@ -13,6 +13,8 @@
 		C015F484265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */; };
 		C015F487265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
 		C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
+		C01B01C927B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */; };
+		C01B01CA27B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */; };
 		C0238ECA27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EC527A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift */; };
 		C0238ECB27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EC527A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift */; };
 		C0238ECC27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EC627A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift */; };
@@ -454,6 +456,7 @@
 		C015F47F265A8370003ECCB0 /* ScreenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayload.swift; sourceTree = "<group>"; };
 		C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadedContainer.swift; sourceTree = "<group>"; };
 		C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenPayloadContainer.swift"; sourceTree = "<group>"; };
+		C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDeeplinkInvalidUserInfoError.swift; sourceTree = "<group>"; };
 		C0238EC527A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryKeyDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0238EC627A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDateDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0238EC727A40F6C00148E91 /* DictionaryDataDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDataDecodingStrategy.swift; sourceTree = "<group>"; };
@@ -735,6 +738,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C01B01C727B3D83D00DF0BB1 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		C0238EC427A40F6C00148E91 /* Options */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +952,7 @@
 		C06DFA16276EBF8700D751C4 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				C01B01C727B3D83D00DF0BB1 /* Errors */,
 				C06DFA1E276F283F00D751C4 /* AnyNotificationDeeplink.swift */,
 				C06DFA17276EBFA100D751C4 /* NotificationDeeplink.swift */,
 				C06DFA1C276F27F500D751C4 /* NotificationDeeplinkUserInfoDecoder.swift */,
@@ -1912,6 +1924,7 @@
 				C088603526B6C60B00CA0A77 /* ScreenShowMediaPickerAction.swift in Sources */,
 				C088602326B6C60B00CA0A77 /* ScreenOpenStoreAppAction.swift in Sources */,
 				C0A728B7279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */,
+				C01B01C927B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */,
 				C0885F6226B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */,
 				C05F488926B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0AADA4D25EEE1F10087439E /* ScreenKeyedContainer.swift in Sources */,
@@ -2135,6 +2148,7 @@
 				C088603626B6C60B00CA0A77 /* ScreenShowMediaPickerAction.swift in Sources */,
 				C088602426B6C60B00CA0A77 /* ScreenOpenStoreAppAction.swift in Sources */,
 				C0A728B8279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */,
+				C01B01CA27B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */,
 				C0885F6326B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */,
 				C05F488A26B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,

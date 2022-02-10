@@ -47,7 +47,7 @@ final class ProfileView: UIView {
         photoButton.imageView?.contentMode = .scaleAspectFill
 
         photoButton.clipsToBounds = true
-        photoButton.layer.cornerRadius = 70.0
+        photoButton.layer.cornerRadius = 60.0
 
         photoButton.addTarget(
             self,

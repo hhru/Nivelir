@@ -1,4 +1,6 @@
+#if canImport(UserNotifications) && os(iOS)
 import Foundation
+import UserNotifications
 
 public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
 
@@ -10,12 +12,21 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
     ) -> NotificationDeeplinkUserInfoOptions
 
     static func notification(
+        requestIdentifier: String,
+        categoryIdentifier: String,
+        actionIdentifier: String,
+        userInfo: NotificationUserInfo,
+        context: NotificationContext
+    ) throws -> Self?
+
+    static func notification(
+        response: UNNotificationResponse,
         userInfo: NotificationUserInfo,
         context: NotificationContext
     ) throws -> Self?
 }
 
-// MARK: - Helpers
+// MARK: - Context resolving
 
 extension NotificationDeeplink where NotificationContext: Nullable {
 
@@ -66,17 +77,34 @@ extension NotificationDeeplink {
     ) throws -> NotificationDeeplinkUserInfoOptions {
         notificationUserInfoOptions(context: try resolveContext(context))
     }
-}
-
-extension NotificationDeeplink where NotificationUserInfo == Void {
 
     public static func notification(
-        userInfo: [String: Any],
+        response: UNNotificationResponse,
+        userInfo: NotificationUserInfo,
+        context: NotificationContext
+    ) throws -> Self? {
+        let request = response.notification.request
+
+        return try notification(
+            requestIdentifier: request.identifier,
+            categoryIdentifier: request.content.categoryIdentifier,
+            actionIdentifier: response.actionIdentifier,
+            userInfo: userInfo,
+            context: context
+        )
+    }
+}
+
+extension NotificationDeeplink where NotificationUserInfo == Any {
+
+    public static func notification(
+        response: UNNotificationResponse,
         userInfoDecoder: NotificationDeeplinkUserInfoDecoder,
         context: Any?
     ) throws -> AnyNotificationDeeplink? {
         try notification(
-            userInfo: Void(),
+            response: response,
+            userInfo: response.notification.request.content.userInfo,
             context: resolveContext(context)
         )
     }
@@ -85,11 +113,16 @@ extension NotificationDeeplink where NotificationUserInfo == Void {
 extension NotificationDeeplink where NotificationUserInfo == [String: Any] {
 
     public static func notification(
-        userInfo: [String: Any],
+        response: UNNotificationResponse,
         userInfoDecoder: NotificationDeeplinkUserInfoDecoder,
         context: Any?
     ) throws -> AnyNotificationDeeplink? {
-        try notification(
+        guard let userInfo = response.notification.request.content.userInfo as? [String: Any] else {
+            throw NotificationDeeplinkInvalidUserInfoError(response: response, for: self)
+        }
+
+        return try notification(
+            response: response,
             userInfo: userInfo,
             context: resolveContext(context)
         )
@@ -99,10 +132,14 @@ extension NotificationDeeplink where NotificationUserInfo == [String: Any] {
 extension NotificationDeeplink where NotificationUserInfo: Decodable {
 
     public static func notification(
-        userInfo: [String: Any],
+        response: UNNotificationResponse,
         userInfoDecoder: NotificationDeeplinkUserInfoDecoder,
         context: Any?
     ) throws -> AnyNotificationDeeplink? {
+        guard let userInfo = response.notification.request.content.userInfo as? [String: Any] else {
+            throw NotificationDeeplinkInvalidUserInfoError(response: response, for: self)
+        }
+
         let decodedUserInfo: NotificationUserInfo
 
         do {
@@ -118,8 +155,10 @@ extension NotificationDeeplink where NotificationUserInfo: Decodable {
         }
 
         return try notification(
+            response: response,
             userInfo: decodedUserInfo,
             context: resolveContext(context)
         )
     }
 }
+#endif

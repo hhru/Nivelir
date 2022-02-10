@@ -4,15 +4,21 @@ import Foundation
 import UIKit
 #endif
 
+#if canImport(UserNotifications)
+import UserNotifications
+#endif
+
 public protocol DeeplinkHandler {
 
     @discardableResult
     func handleURL(_ url: URL, context: Any?) throws -> Bool
 
+    #if canImport(UserNotifications) && os(iOS)
     @discardableResult
-    func handleNotification(userInfo: [String: Any], context: Any?) throws -> Bool
+    func handleNotification(response: UNNotificationResponse, context: Any?) throws -> Bool
+    #endif
 
-    #if os(iOS)
+    #if canImport(UIKit) && os(iOS)
     @discardableResult
     func handleShortcut(_ shortcut: UIApplicationShortcutItem, context: Any?) throws -> Bool
     #endif

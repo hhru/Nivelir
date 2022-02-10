@@ -131,6 +131,7 @@ custom_categories:
       - NotificationDeeplinkUserInfoDecoder
       - NotificationDeeplinkUserInfoOptions
       - AnyNotificationDeeplink
+      - NotificationDeeplinkInvalidUserInfoError
       - ShortcutDeeplink
       - ShortcutDeeplinkUserInfoDecoder
       - ShortcutDeeplinkUserInfoOptions

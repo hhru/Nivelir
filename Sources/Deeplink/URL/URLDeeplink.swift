@@ -108,7 +108,7 @@ extension URLDeeplink {
     }
 }
 
-extension URLDeeplink where URLQuery == Void {
+extension URLDeeplink where URLQuery == Any {
 
     public static func url(
         _ url: URL,
@@ -117,7 +117,7 @@ extension URLDeeplink where URLQuery == Void {
     ) throws -> AnyURLDeeplink? {
         try Self.url(
             url,
-            query: Void(),
+            query: url.query,
             context: resolveContext(context)
         )
     }

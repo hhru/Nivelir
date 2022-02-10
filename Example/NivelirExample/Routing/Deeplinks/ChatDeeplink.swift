@@ -20,13 +20,6 @@ struct ChatDeeplink {
     }
 }
 
-extension ChatDeeplink: NotificationDeeplink {
-
-    static func notification(userInfo: ChatDeeplinkPayload, context: Services) throws -> Self? {
-        Self(roomID: userInfo.roomID, chatID: userInfo.chatID)
-    }
-}
-
 extension ChatDeeplink: URLDeeplink {
 
     static func url(
@@ -45,6 +38,19 @@ extension ChatDeeplink: URLDeeplink {
 }
 
 #if os(iOS)
+extension ChatDeeplink: NotificationDeeplink {
+
+    static func notification(
+        requestIdentifier: String,
+        categoryIdentifier: String,
+        actionIdentifier: String,
+        userInfo: NotificationUserInfo,
+        context: NotificationContext
+    ) throws -> Self? {
+        Self(roomID: userInfo.roomID, chatID: userInfo.chatID)
+    }
+}
+
 extension ChatDeeplink: ShortcutDeeplink {
 
     static func shortcut(
