@@ -10,8 +10,8 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
     ) -> URLDeeplinkQueryOptions
 
     static func url(
-        scheme: String,
-        host: String,
+        scheme: String?,
+        host: String?,
         path: [String],
         query: URLQuery?,
         context: URLContext
@@ -85,22 +85,14 @@ extension URLDeeplink {
             throw URLDeeplinkInvalidComponentsError(url: url, for: self)
         }
 
-        guard let scheme = components.scheme else {
-            throw URLDeeplinkInvalidSchemeError(url: url, for: self)
-        }
-
-        guard let host = components.host else {
-            throw URLDeeplinkInvalidHostError(url: url, for: self)
-        }
-
         let path = components
             .path
             .components(separatedBy: String.urlPathSeparator)
             .dropFirst()
 
         return try Self.url(
-            scheme: scheme,
-            host: host,
+            scheme: components.scheme,
+            host: components.host,
             path: Array(path),
             query: query,
             context: context
