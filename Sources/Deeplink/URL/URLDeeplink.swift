@@ -85,15 +85,22 @@ extension URLDeeplink {
             throw URLDeeplinkInvalidComponentsError(url: url, for: self)
         }
 
-        let path = components
-            .path
-            .components(separatedBy: String.urlPathSeparator)
-            .dropFirst()
+        var rawPath = components.path
+
+        if rawPath.hasPrefix(String.urlPathSeparator) {
+            rawPath.removeFirst(String.urlPathSeparator.count)
+        }
+
+        if rawPath.hasSuffix(String.urlPathSeparator) {
+            rawPath.removeLast(String.urlPathSeparator.count)
+        }
+
+        let path = rawPath.components(separatedBy: String.urlPathSeparator)
 
         return try Self.url(
             scheme: components.scheme,
             host: components.host,
-            path: Array(path),
+            path: path,
             query: query,
             context: context
         )
