@@ -23,8 +23,8 @@ struct ChatDeeplink {
 extension ChatDeeplink: URLDeeplink {
 
     static func url(
-        scheme: String,
-        host: String,
+        scheme: String?,
+        host: String?,
         path: [String],
         query: ChatDeeplinkPayload?,
         context: Services
@@ -44,8 +44,8 @@ extension ChatDeeplink: NotificationDeeplink {
         requestIdentifier: String,
         categoryIdentifier: String,
         actionIdentifier: String,
-        userInfo: NotificationUserInfo,
-        context: NotificationContext
+        userInfo: ChatDeeplinkPayload,
+        context: Services
     ) throws -> Self? {
         Self(roomID: userInfo.roomID, chatID: userInfo.chatID)
     }

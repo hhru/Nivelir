@@ -39,10 +39,6 @@
 		C0238EF527A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EF327A7E71000148E91 /* DeeplinkDecodingError.swift */; };
 		C0238EF727A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EF627A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift */; };
 		C0238EF827A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EF627A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift */; };
-		C0238EFB27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EFA27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift */; };
-		C0238EFC27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EFA27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift */; };
-		C0238EFE27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EFD27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift */; };
-		C0238EFF27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EFD27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift */; };
 		C0238F0127A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F0027A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift */; };
 		C0238F0227A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F0027A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift */; };
 		C0238F0427A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F0327A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift */; };
@@ -469,8 +465,6 @@
 		C0238EED27A7DD9200148E91 /* DeeplinkInvalidContextError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkInvalidContextError.swift; sourceTree = "<group>"; };
 		C0238EF327A7E71000148E91 /* DeeplinkDecodingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkDecodingError.swift; sourceTree = "<group>"; };
 		C0238EF627A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLDeeplinkInvalidComponentsError.swift; path = Sources/Deeplink/URL/Errors/URLDeeplinkInvalidComponentsError.swift; sourceTree = SOURCE_ROOT; };
-		C0238EFA27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDeeplinkInvalidSchemeError.swift; sourceTree = "<group>"; };
-		C0238EFD27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDeeplinkInvalidHostError.swift; sourceTree = "<group>"; };
 		C0238F0027A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDeeplinkUserInfoOptions.swift; sourceTree = "<group>"; };
 		C0238F0327A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDeeplinkUserInfoOptions.swift; sourceTree = "<group>"; };
 		C0238F0627A7F87300148E91 /* URLDeeplinkQueryOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDeeplinkQueryOptions.swift; sourceTree = "<group>"; };
@@ -773,8 +767,6 @@
 			isa = PBXGroup;
 			children = (
 				C0238EF627A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift */,
-				C0238EFD27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift */,
-				C0238EFA27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -1758,7 +1750,6 @@
 				C0A728C0279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */,
 				C0D5796627A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */,
-				C0238EFB27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift in Sources */,
 				C088602126B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
 				C0885F7C26B6BA0100CA0A77 /* ScreenFirstAction.swift in Sources */,
 				C0885F9626B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
@@ -1800,7 +1791,6 @@
 				C0885F7626B6BA0100CA0A77 /* ScreenTryResolution.swift in Sources */,
 				C0885FB026B6C0A500CA0A77 /* ScreenStackPopPredicate.swift in Sources */,
 				C0885F7026B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,
-				C0238EFE27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift in Sources */,
 				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
 				C08FA8F126BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
 				C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
@@ -1982,7 +1972,6 @@
 				C0A728C1279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C0885F7D26B6BA0100CA0A77 /* ScreenFirstAction.swift in Sources */,
 				C0D5796727A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */,
-				C0238EFC27A7E9D700148E91 /* URLDeeplinkInvalidSchemeError.swift in Sources */,
 				C0885F9726B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
 				C06B581E262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C0885FC126B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
@@ -2024,7 +2013,6 @@
 				C088602626B6C60B00CA0A77 /* InvalidStoreAppIDError.swift in Sources */,
 				C0885F9926B6BA0100CA0A77 /* ScreenPresentingAction.swift in Sources */,
 				C0885F7726B6BA0100CA0A77 /* ScreenTryResolution.swift in Sources */,
-				C0238EFF27A7EA2200148E91 /* URLDeeplinkInvalidHostError.swift in Sources */,
 				C0A72875279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
 				C0885FB126B6C0A500CA0A77 /* ScreenStackPopPredicate.swift in Sources */,
 				C0885F7126B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,

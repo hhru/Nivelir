@@ -141,8 +141,6 @@ custom_categories:
       - URLDeeplinkQueryOptions
       - AnyURLDeeplink
       - URLDeeplinkInvalidComponentsError
-      - URLDeeplinkInvalidHostError
-      - URLDeeplinkInvalidSchemeError
 
   - name: Extensions
     children:
