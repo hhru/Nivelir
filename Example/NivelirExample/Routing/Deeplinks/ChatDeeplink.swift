@@ -27,7 +27,7 @@ extension ChatDeeplink: URLDeeplink {
         host: String?,
         path: [String],
         query: ChatDeeplinkPayload?,
-        context: Services
+        context: Any
     ) throws -> ChatDeeplink? {
         guard let payload = query, scheme == "nivelir", host == "chat" else {
             return nil
@@ -45,7 +45,7 @@ extension ChatDeeplink: NotificationDeeplink {
         categoryIdentifier: String,
         actionIdentifier: String,
         userInfo: ChatDeeplinkPayload,
-        context: Services
+        context: Any
     ) throws -> Self? {
         Self(roomID: userInfo.roomID, chatID: userInfo.chatID)
     }
@@ -56,7 +56,7 @@ extension ChatDeeplink: ShortcutDeeplink {
     static func shortcut(
         type: String,
         userInfo: ChatDeeplinkPayload?,
-        context: Services
+        context: Any
     ) throws -> ChatDeeplink? {
         guard let payload = userInfo else {
             return nil
