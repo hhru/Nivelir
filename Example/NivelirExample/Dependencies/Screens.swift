@@ -51,6 +51,10 @@ struct Screens {
         ).eraseToAnyScreen()
     }
 
+    func moreExampleListScreen() -> AnyModalScreen {
+        MoreExampleListScreen().eraseToAnyScreen()
+    }
+
     // MARK: - Routes
 
     func showHomeRoute() -> ScreenWindowRoute {
