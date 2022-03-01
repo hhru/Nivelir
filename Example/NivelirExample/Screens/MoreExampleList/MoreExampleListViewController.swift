@@ -24,9 +24,24 @@ final class MoreExampleListViewController: UITableViewController, ScreenKeyedCon
         fatalError("init(coder:) has not been implemented")
     }
 
+    @objc private func onLandmarkRightBarButtonTap() {
+        screenNavigator.navigate(from: self) { $0.dismiss() }
+    }
+
     private func showLandmarkScreen() {
-        screenNavigator.navigate(from: stack) { route in
-            route.push(screens.landmarkScreen())
+        screenNavigator.navigate(from: self) { route in
+            route.present(
+                screens
+                    .landmarkScreen()
+                    .withRightBarButton(
+                        UIBarButtonItem(
+                            barButtonSystemItem: .close,
+                            target: self,
+                            action: #selector(onLandmarkRightBarButtonTap)
+                        )
+                    )
+                    .withStackContainer()
+            )
         }
     }
 
