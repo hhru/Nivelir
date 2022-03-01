@@ -5,10 +5,12 @@ final class MoreExampleListViewController: UITableViewController, ScreenKeyedCon
 
     private var models: [MoreExampleListModel] = []
 
+    let screens: Screens
     let screenKey: ScreenKey
     let screenNavigator: ScreenNavigator
 
-    init(screenKey: ScreenKey, screenNavigator: ScreenNavigator) {
+    init(screens: Screens, screenKey: ScreenKey, screenNavigator: ScreenNavigator) {
+        self.screens = screens
         self.screenKey = screenKey
         self.screenNavigator = screenNavigator
 
@@ -22,14 +24,16 @@ final class MoreExampleListViewController: UITableViewController, ScreenKeyedCon
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func showSwiftUIExample() {
-        // Handle
+    private func showLandmarkScreen() {
+        screenNavigator.navigate(from: stack) { route in
+            route.push(screens.landmarkScreen())
+        }
     }
 
     private func setupModels() {
         models = [
-            MoreExampleListModel(title: "SwiftUI Example") { [unowned self] in
-                self.showSwiftUIExample()
+            MoreExampleListModel(title: "SwiftUI Screen") { [unowned self] in
+                self.showLandmarkScreen()
             }
         ]
     }

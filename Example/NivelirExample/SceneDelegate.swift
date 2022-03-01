@@ -170,7 +170,7 @@ extension SceneDelegate: UNUserNotificationCenterDelegate {
         willPresent notification: UNNotification,
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
     ) {
-        completionHandler([.alert, .badge, .sound])
+        completionHandler([.list, .banner, .badge, .sound])
     }
 }
 #endif

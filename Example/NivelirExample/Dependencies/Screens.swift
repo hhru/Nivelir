@@ -52,7 +52,13 @@ struct Screens {
     }
 
     func moreExampleListScreen() -> AnyModalScreen {
-        MoreExampleListScreen().eraseToAnyScreen()
+        MoreExampleListScreen(
+            screens: self
+        ).eraseToAnyScreen()
+    }
+
+    func landmarkScreen() -> AnyModalScreen {
+        LandmarkScreen().eraseToAnyScreen()
     }
 
     // MARK: - Routes
