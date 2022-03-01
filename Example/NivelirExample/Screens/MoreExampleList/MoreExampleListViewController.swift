@@ -45,10 +45,32 @@ final class MoreExampleListViewController: UITableViewController, ScreenKeyedCon
         }
     }
 
+    private func showChainStackModification() {
+        screenNavigator.navigate(from: stack) { route in
+            route
+                .push(screens.chatScreen(roomID: 1, chatID: 1))
+                .pop()
+                .push(screens.chatScreen(roomID: 1, chatID: 2))
+                .push(screens.chatScreen(roomID: 1, chatID: 3))
+        }
+    }
+
+    private func showCustomStackAnimation() {
+        screenNavigator.navigate(from: stack) { route in
+            route.push(screens.chatScreen(roomID: 1, chatID: 1), animation: .crossDissolve)
+        }
+    }
+
     private func setupModels() {
         models = [
             MoreExampleListModel(title: "SwiftUI Screen") { [unowned self] in
                 self.showLandmarkScreen()
+            },
+            MoreExampleListModel(title: "Chain Stack Modification") { [unowned self] in
+                self.showChainStackModification()
+            },
+            MoreExampleListModel(title: "Custom Stack Animation") { [unowned self] in
+                self.showCustomStackAnimation()
             }
         ]
     }
