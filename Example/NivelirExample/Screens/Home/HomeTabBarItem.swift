@@ -51,4 +51,10 @@ extension UITabBarItem {
         image: Images.profileTab,
         tag: 2
     )
+
+    static let moreExampleList = HomeTabBarItem(
+        title: "More",
+        image: Images.moreTab,
+        tag: 3
+    )
 }

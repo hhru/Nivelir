@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		51C6E20272A5CB88DD6B2AD5 /* Pods_NivelirExample_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */; };
+		8EBD6C4D27CD0A6A00C441B3 /* MoreExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C4C27CD0A6A00C441B3 /* MoreExampleListViewController.swift */; };
+		8EBD6C4F27CD0B6E00C441B3 /* MoreExampleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C4E27CD0B6E00C441B3 /* MoreExampleListCell.swift */; };
+		8EBD6C5127CD131500C441B3 /* MoreExampleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5027CD131500C441B3 /* MoreExampleListModel.swift */; };
+		8EBD6C5327CD14A400C441B3 /* MoreExampleListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5227CD14A400C441B3 /* MoreExampleListScreen.swift */; };
+		8EBD6C5627CD1FC600C441B3 /* LandmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5527CD1FC600C441B3 /* LandmarkView.swift */; };
+		8EBD6C5827CD1FE000C441B3 /* LandmarkMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5727CD1FE000C441B3 /* LandmarkMapView.swift */; };
+		8EBD6C5A27CD206D00C441B3 /* LandmarkCircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5927CD206D00C441B3 /* LandmarkCircleImage.swift */; };
+		8EBD6C5C27CD20FE00C441B3 /* LandmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5B27CD20FE00C441B3 /* LandmarkScreen.swift */; };
 		992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3364730C705918530E030D /* Pods_NivelirExample.framework */; };
 		C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
 		C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */; };
@@ -101,6 +109,14 @@
 		3D95991134D269121A8392FE /* Pods-Nivelir Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.release.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.release.xcconfig"; sourceTree = "<group>"; };
 		514ABFD7FB6F793EC33CD317 /* Pods-NivelirExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample.debug.xcconfig"; path = "Target Support Files/Pods-NivelirExample/Pods-NivelirExample.debug.xcconfig"; sourceTree = "<group>"; };
 		6D3364730C705918530E030D /* Pods_NivelirExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBD6C4C27CD0A6A00C441B3 /* MoreExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreExampleListViewController.swift; sourceTree = "<group>"; };
+		8EBD6C4E27CD0B6E00C441B3 /* MoreExampleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreExampleListCell.swift; sourceTree = "<group>"; };
+		8EBD6C5027CD131500C441B3 /* MoreExampleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreExampleListModel.swift; sourceTree = "<group>"; };
+		8EBD6C5227CD14A400C441B3 /* MoreExampleListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreExampleListScreen.swift; sourceTree = "<group>"; };
+		8EBD6C5527CD1FC600C441B3 /* LandmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkView.swift; sourceTree = "<group>"; };
+		8EBD6C5727CD1FE000C441B3 /* LandmarkMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkMapView.swift; sourceTree = "<group>"; };
+		8EBD6C5927CD206D00C441B3 /* LandmarkCircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkCircleImage.swift; sourceTree = "<group>"; };
+		8EBD6C5B27CD20FE00C441B3 /* LandmarkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkScreen.swift; sourceTree = "<group>"; };
 		929116B8E1608A63B0CA832A /* Pods-Nivelir Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.debug.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A948E4633FBDF925C60B9BED /* Pods-NivelirDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirDemo.release.xcconfig"; path = "Target Support Files/Pods-NivelirDemo/Pods-NivelirDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +212,28 @@
 				B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EBD6C4B27CD09DA00C441B3 /* MoreExampleList */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD6C4E27CD0B6E00C441B3 /* MoreExampleListCell.swift */,
+				8EBD6C5027CD131500C441B3 /* MoreExampleListModel.swift */,
+				8EBD6C5227CD14A400C441B3 /* MoreExampleListScreen.swift */,
+				8EBD6C4C27CD0A6A00C441B3 /* MoreExampleListViewController.swift */,
+			);
+			path = MoreExampleList;
+			sourceTree = "<group>";
+		};
+		8EBD6C5427CD1FA300C441B3 /* Landmark */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD6C5927CD206D00C441B3 /* LandmarkCircleImage.swift */,
+				8EBD6C5727CD1FE000C441B3 /* LandmarkMapView.swift */,
+				8EBD6C5B27CD20FE00C441B3 /* LandmarkScreen.swift */,
+				8EBD6C5527CD1FC600C441B3 /* LandmarkView.swift */,
+			);
+			path = Landmark;
 			sourceTree = "<group>";
 		};
 		C017D12A25FBAD0F008B90C0 = {
@@ -378,6 +416,8 @@
 				C0E9D29925FC0D3200ABDBE5 /* Chat */,
 				C0E9D2A825FC9C5000ABDBE5 /* ChatList */,
 				C0DA318C25FBC355009A9CB8 /* Home */,
+				8EBD6C5427CD1FA300C441B3 /* Landmark */,
+				8EBD6C4B27CD09DA00C441B3 /* MoreExampleList */,
 				C0E9D29A25FC0D6500ABDBE5 /* Profile */,
 				C0238F1A27A928CB00148E91 /* RoomList */,
 			);
@@ -641,6 +681,7 @@
 			files = (
 				C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */,
 				C0238F3427A9493C00148E91 /* Screens.swift in Sources */,
+				8EBD6C5627CD1FC600C441B3 /* LandmarkView.swift in Sources */,
 				C057512F27A9AEA200396BB7 /* ServiceSharedStorage.swift in Sources */,
 				C0238F3B27A94C7200148E91 /* AuthorizationViewController.swift in Sources */,
 				C0238F2227A93D3E00148E91 /* AuthorizationService.swift in Sources */,
@@ -657,15 +698,20 @@
 				C0238F3227A9492400148E91 /* ScreenAuthorizeActionServices.swift in Sources */,
 				C0268C20265909E400380F76 /* ChatListCell.swift in Sources */,
 				C07888E326590C1800F09955 /* UITableView+Reusable.swift in Sources */,
+				8EBD6C5827CD1FE000C441B3 /* LandmarkMapView.swift in Sources */,
 				C0D562FF27AA9CE0000027CF /* ChatDeeplinkPayload.swift in Sources */,
 				C0238F2B27A9456B00148E91 /* ScreenAuthorizeAction.swift in Sources */,
 				C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */,
+				8EBD6C5327CD14A400C441B3 /* MoreExampleListScreen.swift in Sources */,
 				C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */,
+				8EBD6C5C27CD20FE00C441B3 /* LandmarkScreen.swift in Sources */,
 				C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */,
 				C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */,
 				C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */,
+				8EBD6C5127CD131500C441B3 /* MoreExampleListModel.swift in Sources */,
 				C0238F3927A94C5C00148E91 /* AuthorizationScreen.swift in Sources */,
 				C0238F2827A93DAE00148E91 /* Services.swift in Sources */,
+				8EBD6C4D27CD0A6A00C441B3 /* MoreExampleListViewController.swift in Sources */,
 				C07888E9265940C600F09955 /* ProfileView.swift in Sources */,
 				C0D562FE27AA9CE0000027CF /* ChatDeeplink.swift in Sources */,
 				C07888E126590BE100F09955 /* Reusable.swift in Sources */,
@@ -675,9 +721,11 @@
 				C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */,
 				C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */,
 				C0238F1E27A93D1000148E91 /* RoomListViewController.swift in Sources */,
+				8EBD6C4F27CD0B6E00C441B3 /* MoreExampleListCell.swift in Sources */,
 				C0238F1C27A933A400148E91 /* RoomListCell.swift in Sources */,
 				C057512827A9AE5400396BB7 /* ServiceSharedScope.swift in Sources */,
 				C0238F3027A948ED00148E91 /* ScreenAuthorizeActionScreens.swift in Sources */,
+				8EBD6C5A27CD206D00C441B3 /* LandmarkCircleImage.swift in Sources */,
 				C057512127A9AD9E00396BB7 /* ServiceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,7 +842,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -849,7 +897,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -867,6 +915,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -886,6 +935,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
