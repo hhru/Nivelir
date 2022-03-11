@@ -20,7 +20,7 @@ Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainabl
 - [Usage](#usage)
     - [Quick Start](#quick-start)
     - [Example App](#example-app)
-- [Articles](#articles)
+- [Articles and Videos](#articles-and-videos)
 - [Communication](#communication)
 - [License](#license)
 
@@ -180,9 +180,12 @@ $ open NivelirExample.xcworkspace
 ```
 
 
-## Articles
-Russian:
-- [Nivelir: Удобный DSL для навигации](https://habr.com/ru/company/hh/blog/572488/)
+## Articles and Videos
+### Articles
+- [RU] [Nivelir: Удобный DSL для навигации](https://habr.com/ru/company/hh/blog/572488/)
+### Videos
+- [RU] [Обзор решений для навигации в iOS. Предпосылки Nivelir](https://youtu.be/FjAwpocB6rA)
+- [RU] [Гибкая навигации в iOS. Nivelir](https://youtu.be/GcPTi8-WIn8)
 
 
 ## Communication
