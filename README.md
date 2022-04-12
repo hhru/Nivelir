@@ -182,7 +182,9 @@ $ open NivelirExample.xcworkspace
 
 ## Articles and Videos
 ### Articles
+- [EN] [Nivelir: a convenient DSL for navigation](https://medium.com/hh-ru/nivelir-b6c550332971)
 - [RU] [Nivelir: Удобный DSL для навигации](https://habr.com/ru/company/hh/blog/572488/)
+
 ### Videos
 - [RU] [Обзор решений для навигации в iOS. Предпосылки Nivelir](https://youtu.be/FjAwpocB6rA)
 - [RU] [Гибкая навигации в iOS. Nivelir](https://youtu.be/GcPTi8-WIn8)
