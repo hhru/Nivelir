@@ -12,6 +12,7 @@ public final class ScreenNavigator {
     private let windowProvider: ScreenWindowProvider
     #endif
 
+    private let contextManager: ScreenContextManager
     private let iterator: ScreenIterator
     private let logger: ScreenLogger?
 
@@ -40,32 +41,40 @@ public final class ScreenNavigator {
 
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
+        contextManager: ScreenContextManager = DefaultScreenContextManager(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = windowProvider
+        self.contextManager = contextManager
         self.iterator = iterator
         self.logger = logger
     }
 
     public init(
         window: UIWindow,
+        contextManager: ScreenContextManager = DefaultScreenContextManager(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = ScreenCustomWindowProvider(window: window)
+        self.contextManager = contextManager
         self.iterator = iterator
         self.logger = logger
     }
     #else
     public init(
+        contextManager: ScreenContextManager,
         iterator: ScreenIterator,
         logger: ScreenLogger?
     ) {
+        self.contextManager = contextManager
         self.iterator = iterator
         self.logger = logger
     }
     #endif
+
+    // MARK: - Actions
 
     #if canImport(UIKit)
     private func perform<Action: ScreenAction>(
@@ -100,6 +109,58 @@ public final class ScreenNavigator {
     }
     #endif
 
+    // MARK: - Context
+
+    public func registerWeakContext(_ context: AnyObject, for key: ScreenKey) {
+        contextManager.registerWeakContext(context, for: key)
+    }
+
+    public func registerWeakContext<T: Screen>(_ context: AnyObject, for screen: T) {
+        contextManager.registerWeakContext(context, for: screen)
+    }
+
+    public func registerWeakContext(_ context: AnyObject) {
+        contextManager.registerWeakContext(context)
+    }
+
+    public func registerContext(_ context: AnyObject, for key: ScreenKey) {
+        contextManager.registerContext(context, for: key)
+    }
+
+    public func registerContext<T: Screen>(_ context: AnyObject, for screen: T) {
+        contextManager.registerContext(context, for: screen)
+    }
+
+    public func registerContext(_ context: AnyObject) {
+        contextManager.registerContext(context)
+    }
+
+    public func unregisterContext(_ context: AnyObject, for key: ScreenKey) {
+        contextManager.unregisterContext(context, for: key)
+    }
+
+    public func unregisterContext<T: Screen>(_ context: AnyObject, for screen: T) {
+        contextManager.unregisterContext(context, for: screen)
+    }
+
+    public func unregisterContext(_ context: AnyObject) {
+        contextManager.unregisterContext(context)
+    }
+
+    public func context<Context>(of type: Context.Type, for key: ScreenKey) -> ScreenContext<Context> {
+        contextManager.context(of: type, for: key)
+    }
+
+    public func context<T: Screen>(for screen: T) -> ScreenContext<T.Context> {
+        contextManager.context(for: screen)
+    }
+
+    public func context<Context>(of type: Context.Type) -> ScreenContext<Context> {
+        contextManager.context(of: type)
+    }
+
+    // MARK: - Iterator
+
     public func iterate(
         from container: ScreenContainer,
         while predicate: ScreenIterationPredicate
@@ -127,6 +188,8 @@ public final class ScreenNavigator {
     ) -> ScreenContainer? {
         iterator.topContainer(in: container, where: predicate)
     }
+
+    // MARK: - Logger
 
     public func logInfo(_ info: @autoclosure () -> String) {
         logger?.info(info())

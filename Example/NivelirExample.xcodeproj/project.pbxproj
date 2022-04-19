@@ -17,6 +17,7 @@
 		8EBD6C5A27CD206D00C441B3 /* LandmarkCircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5927CD206D00C441B3 /* LandmarkCircleImage.swift */; };
 		8EBD6C5C27CD20FE00C441B3 /* LandmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD6C5B27CD20FE00C441B3 /* LandmarkScreen.swift */; };
 		992B43A48757AF488526D1BA /* Pods_NivelirExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3364730C705918530E030D /* Pods_NivelirExample.framework */; };
+		C000DAB9280DB390009414FA /* ScreenAuthorizeActionBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000DAB8280DB390009414FA /* ScreenAuthorizeActionBus.swift */; };
 		C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13625FBAD0F008B90C0 /* AppDelegate.swift */; };
 		C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */; };
 		C017D14025FBAD11008B90C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C017D13F25FBAD11008B90C0 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		C07888E72659133500F09955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
 		C07888E9265940C600F09955 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
 		C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C0B4EDF2280ACBB7009BC54E /* AuthorizationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4EDF1280ACBB7009BC54E /* AuthorizationContext.swift */; };
 		C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B5A45226625DC100D7521C /* ChatScreen.swift */; };
 		C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
 		C0BF2F59265A709700419426 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E026590BE100F09955 /* Reusable.swift */; };
@@ -120,6 +122,7 @@
 		929116B8E1608A63B0CA832A /* Pods-Nivelir Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nivelir Demo.debug.xcconfig"; path = "Target Support Files/Pods-Nivelir Demo/Pods-Nivelir Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A948E4633FBDF925C60B9BED /* Pods-NivelirDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirDemo.release.xcconfig"; path = "Target Support Files/Pods-NivelirDemo/Pods-NivelirDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B88C84FBF639BACEE91B4133 /* Pods_NivelirExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NivelirExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C000DAB8280DB390009414FA /* ScreenAuthorizeActionBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAuthorizeActionBus.swift; sourceTree = "<group>"; };
 		C017D13325FBAD0F008B90C0 /* NivelirExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NivelirExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C017D13625FBAD0F008B90C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C017D13825FBAD0F008B90C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		C07888E62659133500F09955 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C07888E8265940C600F09955 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
+		C0B4EDF1280ACBB7009BC54E /* AuthorizationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationContext.swift; sourceTree = "<group>"; };
 		C0B5A45226625DC100D7521C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NivelirExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D562FC27AA9CE0000027CF /* ChatDeeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeeplink.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 		C0238F3527A94AC400148E91 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				C0B4EDF1280ACBB7009BC54E /* AuthorizationContext.swift */,
 				C0238F3827A94C5C00148E91 /* AuthorizationScreen.swift */,
 				C0238F3627A94ADC00148E91 /* AuthorizationView.swift */,
 				C0238F3A27A94C7200148E91 /* AuthorizationViewController.swift */,
@@ -330,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				C0238F2A27A9456B00148E91 /* ScreenAuthorizeAction.swift */,
+				C000DAB8280DB390009414FA /* ScreenAuthorizeActionBus.swift */,
 				C0238F2F27A948ED00148E91 /* ScreenAuthorizeActionScreens.swift */,
 				C0238F3127A9492400148E91 /* ScreenAuthorizeActionServices.swift */,
 			);
@@ -689,6 +695,7 @@
 				C057512D27A9AE9600396BB7 /* ServiceStorage.swift in Sources */,
 				C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */,
 				C0238F4427A96A7A00148E91 /* ProfileUnauthorizedView.swift in Sources */,
+				C000DAB9280DB390009414FA /* ScreenAuthorizeActionBus.swift in Sources */,
 				C0238F3727A94ADC00148E91 /* AuthorizationView.swift in Sources */,
 				C0238F2427A93D7C00148E91 /* DefaultAuthorizationService.swift in Sources */,
 				C0238F3D27A9544300148E91 /* RoomListScreen.swift in Sources */,
@@ -701,6 +708,7 @@
 				8EBD6C5827CD1FE000C441B3 /* LandmarkMapView.swift in Sources */,
 				C0D562FF27AA9CE0000027CF /* ChatDeeplinkPayload.swift in Sources */,
 				C0238F2B27A9456B00148E91 /* ScreenAuthorizeAction.swift in Sources */,
+				C0B4EDF2280ACBB7009BC54E /* AuthorizationContext.swift in Sources */,
 				C0E9D2AB25FC9CD900ABDBE5 /* ProfileViewController.swift in Sources */,
 				8EBD6C5327CD14A400C441B3 /* MoreExampleListScreen.swift in Sources */,
 				C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */,

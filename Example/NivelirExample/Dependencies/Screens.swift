@@ -42,11 +42,8 @@ struct Screens {
         ).eraseToAnyScreen()
     }
 
-    func authorizationScreen(
-        completion: @escaping (_ isAuthorized: Bool) -> Void
-    ) -> AnyModalScreen {
+    func authorizationScreen() -> AnyModalScreen {
         AuthorizationScreen(
-            completion: completion,
             services: services
         ).eraseToAnyScreen()
     }
@@ -111,12 +108,10 @@ struct Screens {
             )
     }
 
-    func showAuthorizationRoute(
-        completion: @escaping (_ isAuthorized: Bool) -> Void
-    ) -> ScreenWindowRoute {
+    func showAuthorizationRoute() -> ScreenWindowRoute {
         ScreenWindowRoute()
             .top(.container)
-            .present(authorizationScreen(completion: completion).withStackContainer())
+            .present(authorizationScreen().withStackContainer())
             .resolve()
     }
 }
