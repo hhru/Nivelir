@@ -18,6 +18,7 @@ struct ScreenAuthorizeAction<Container: UIViewController>: ScreenAction {
     func perform(
         container: Container,
         navigator: ScreenNavigator,
+        storage: ScreenActionStorage<Any>,
         completion: @escaping Completion
     ) {
         navigator.logInfo("Checking authorization")
@@ -26,7 +27,7 @@ struct ScreenAuthorizeAction<Container: UIViewController>: ScreenAction {
             return completion(.success(container))
         }
 
-        let bus = ScreenAuthorizeActionBus { isAuthorized in
+        let observer = ScreenAuthorizeActionObserver { isAuthorized in
             if isAuthorized {
                 completion(.success(container))
             } else {
@@ -34,7 +35,9 @@ struct ScreenAuthorizeAction<Container: UIViewController>: ScreenAction {
             }
         }
 
-        navigator.registerContext(bus)
+        storage.storeState(observer)
+
+        navigator.registerObserver(observer, for: .any)
         navigator.navigate(to: screens.showAuthorizationRoute())
     }
 }

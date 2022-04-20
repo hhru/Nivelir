@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol AuthorizationContext: AnyObject {
+public protocol AuthorizationObserver: AnyObject {
 
     func didFinishAuthorization(isAuthorized: Bool)
 }

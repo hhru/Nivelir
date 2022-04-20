@@ -1,6 +1,6 @@
 import Foundation
 
-final class ScreenAuthorizeActionBus: AuthorizationContext {
+final class ScreenAuthorizeActionObserver: AuthorizationObserver {
 
     private var didFinishAuthorizationBox: ((_ isAuthorized: Bool) -> Void)
 

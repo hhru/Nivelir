@@ -12,7 +12,7 @@ public final class ScreenNavigator {
     private let windowProvider: ScreenWindowProvider
     #endif
 
-    private let contextManager: ScreenContextManager
+    private let registry: ScreenRegistry
     private let iterator: ScreenIterator
     private let logger: ScreenLogger?
 
@@ -41,34 +41,34 @@ public final class ScreenNavigator {
 
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
-        contextManager: ScreenContextManager = DefaultScreenContextManager(),
+        registry: ScreenRegistry,
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = windowProvider
-        self.contextManager = contextManager
+        self.registry = registry
         self.iterator = iterator
         self.logger = logger
     }
 
     public init(
         window: UIWindow,
-        contextManager: ScreenContextManager = DefaultScreenContextManager(),
+        registry: ScreenRegistry = DefaultScreenRegistry(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = ScreenCustomWindowProvider(window: window)
-        self.contextManager = contextManager
+        self.registry = registry
         self.iterator = iterator
         self.logger = logger
     }
     #else
     public init(
-        contextManager: ScreenContextManager,
+        registry: ScreenRegistry,
         iterator: ScreenIterator,
         logger: ScreenLogger?
     ) {
-        self.contextManager = contextManager
+        self.registry = registry
         self.iterator = iterator
         self.logger = logger
     }
@@ -109,54 +109,49 @@ public final class ScreenNavigator {
     }
     #endif
 
-    // MARK: - Context
+    // MARK: - Registry
 
-    public func registerWeakContext(_ context: AnyObject, for key: ScreenKey) {
-        contextManager.registerWeakContext(context, for: key)
+    public func registerObserver(
+        _ observer: AnyObject,
+        for target: ScreenObservationTarget
+    ) {
+        registry.registerObserver(observer, for: target)
     }
 
-    public func registerWeakContext<T: Screen>(_ context: AnyObject, for screen: T) {
-        contextManager.registerWeakContext(context, for: screen)
+    public func registerObserver<T: Screen>(
+        _ observer: T.Observer,
+        for screen: T
+    ) where T.Observer: AnyObject {
+        registry.registerObserver(observer, for: screen)
     }
 
-    public func registerWeakContext(_ context: AnyObject) {
-        contextManager.registerWeakContext(context)
+    public func unregisterObserver(_ observer: AnyObject) {
+        registry.unregisterObserver(observer)
     }
 
-    public func registerContext(_ context: AnyObject, for key: ScreenKey) {
-        contextManager.registerContext(context, for: key)
+    public func unregisterObserver(
+        _ observer: AnyObject,
+        for target: ScreenObservationTarget
+    ) {
+        registry.unregisterObserver(observer, for: target)
     }
 
-    public func registerContext<T: Screen>(_ context: AnyObject, for screen: T) {
-        contextManager.registerContext(context, for: screen)
+    public func unregisterObserver<T: Screen>(
+        _ observer: T.Observer,
+        for screen: T
+    ) where T.Observer: AnyObject {
+        registry.unregisterObserver(observer, for: screen)
     }
 
-    public func registerContext(_ context: AnyObject) {
-        contextManager.registerContext(context)
+    public func observation<Observer>(
+        of type: Observer.Type,
+        for target: ScreenObservationTarget
+    ) -> ScreenObservation<Observer> {
+        registry.observation(of: type, for: target)
     }
 
-    public func unregisterContext(_ context: AnyObject, for key: ScreenKey) {
-        contextManager.unregisterContext(context, for: key)
-    }
-
-    public func unregisterContext<T: Screen>(_ context: AnyObject, for screen: T) {
-        contextManager.unregisterContext(context, for: screen)
-    }
-
-    public func unregisterContext(_ context: AnyObject) {
-        contextManager.unregisterContext(context)
-    }
-
-    public func context<Context>(of type: Context.Type, for key: ScreenKey) -> ScreenContext<Context> {
-        contextManager.context(of: type, for: key)
-    }
-
-    public func context<T: Screen>(for screen: T) -> ScreenContext<T.Context> {
-        contextManager.context(for: screen)
-    }
-
-    public func context<Context>(of type: Context.Type) -> ScreenContext<Context> {
-        contextManager.context(of: type)
+    public func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer> {
+        registry.observation(for: screen)
     }
 
     // MARK: - Iterator

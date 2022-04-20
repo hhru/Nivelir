@@ -5,10 +5,13 @@ struct AuthorizationScreen: Screen {
 
     let services: Services
 
-    func build(navigator: ScreenNavigator, context: ScreenContext<AuthorizationContext>) -> UIViewController {
+    func build(
+        navigator: ScreenNavigator,
+        observation: ScreenObservation<AuthorizationObserver>
+    ) -> UIViewController {
         AuthorizationViewController(
             authorizationService: services.authorizationService(),
-            screenContext: context,
+            screenObservation: observation,
             screenKey: key,
             screenNavigator: navigator
         )

@@ -4,7 +4,7 @@ import Nivelir
 final class AuthorizationViewController: UIViewController, ScreenKeyedContainer {
 
     let authorizationService: AuthorizationService
-    let screenContext: ScreenContext<AuthorizationContext>
+    let screenObservation: ScreenObservation<AuthorizationObserver>
     let screenKey: ScreenKey
     let screenNavigator: ScreenNavigator
 
@@ -14,12 +14,12 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 
     init(
         authorizationService: AuthorizationService,
-        screenContext: ScreenContext<AuthorizationContext>,
+        screenObservation: ScreenObservation<AuthorizationObserver>,
         screenKey: ScreenKey,
         screenNavigator: ScreenNavigator
     ) {
         self.authorizationService = authorizationService
-        self.screenContext = screenContext
+        self.screenObservation = screenObservation
         self.screenKey = screenKey
         self.screenNavigator = screenNavigator
 
@@ -40,7 +40,9 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
                 route.dismiss()
             },
             completion: { _ in
-                self.screenContext.perform { $0.didFinishAuthorization(isAuthorized: false) }
+                self.screenObservation.post { observer in
+                    observer.didFinishAuthorization(isAuthorized: false)
+                }
             }
         )
     }
@@ -70,9 +72,9 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
                 from: self.presenting,
                 to: { $0.dismiss() },
                 completion: { _ in
-                    self
-                        .screenContext
-                        .perform { $0.didFinishAuthorization(isAuthorized: true) }
+                    self.screenObservation.post { observer in
+                        observer.didFinishAuthorization(isAuthorized: true)
+                    }
                 }
             )
         }
@@ -95,6 +97,8 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 extension AuthorizationViewController: UIAdaptivePresentationControllerDelegate {
 
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        screenContext.perform { $0.didFinishAuthorization(isAuthorized: false) }
+        screenObservation.post { observer in
+            observer.didFinishAuthorization(isAuthorized: false)
+        }
     }
 }

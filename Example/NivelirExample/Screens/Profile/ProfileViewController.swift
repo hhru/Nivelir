@@ -154,7 +154,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        screenNavigator.registerContext(self)
+        screenNavigator.registerObserver(self, for: .any)
 
         setupProfileView()
         setupProfileUnauthorizedView()
@@ -167,7 +167,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     }
 }
 
-extension ProfileViewController: AuthorizationContext {
+extension ProfileViewController: AuthorizationObserver {
 
     func didFinishAuthorization(isAuthorized: Bool) {
         profileUnauthorizedView?.isHidden = isAuthorized
