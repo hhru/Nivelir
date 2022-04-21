@@ -18,14 +18,14 @@ jobs:
     name: Build & Tests
     runs-on: macOS-latest
     env:
-      DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_13.2.app/Contents/Developer
       XCODE_PROJECT: Nivelir.xcodeproj
       IOS_SCHEME: Nivelir iOS
-      IOS_DESTINATION: OS=14.4,name=iPhone 12
-      IOS_BUILD_LOG_PATH: xcodebuild-ios.json
+      IOS_DESTINATION: OS=15.2,name=iPhone 13
+      IOS_RESULT_PATH: xcodebuild-ios.xcresult
       TVOS_SCHEME: Nivelir tvOS
-      TVOS_DESTINATION: OS=14.3,name=Apple TV 4K
-      TVOS_BUILD_LOG_PATH: xcodebuild-tvos.json
+      TVOS_DESTINATION: OS=15.2,name=Apple TV 4K
+      TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
     steps:
@@ -44,11 +44,11 @@ jobs:
           swift --version
       - name: Test iOS
         run: |
-          xcodebuild clean build test -project "$XCODE_PROJECT" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$IOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+          xcodebuild clean build test -project "$XCODE_PROJECT" -scheme "$IOS_SCHEME" -destination "$IOS_DESTINATION" -resultBundlePath "$IOS_RESULT_PATH" | xcpretty -f `xcpretty-json-formatter`
           bash <(curl -s https://codecov.io/bash) -cF ios -J 'Nivelir'
       - name: Test tvOS
         run: |
-          xcodebuild clean build test -project "$XCODE_PROJECT" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="$TVOS_BUILD_LOG_PATH" xcpretty -f `xcpretty-json-formatter`
+          xcodebuild clean build test -project "$XCODE_PROJECT" -scheme "$TVOS_SCHEME" -destination "$TVOS_DESTINATION" -resultBundlePath "$TVOS_RESULT_PATH" | xcpretty -f `xcpretty-json-formatter`
           bash <(curl -s https://codecov.io/bash) -cF tvos -J 'Nivelir'
       - name: Danger
         run: bundle exec danger --remove-previous-comments
