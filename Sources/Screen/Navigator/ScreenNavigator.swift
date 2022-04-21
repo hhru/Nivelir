@@ -113,7 +113,7 @@ public final class ScreenNavigator {
 
     public func registerObserver(
         _ observer: AnyObject,
-        for target: ScreenObservationTarget
+        for target: ScreenObserverTarget
     ) {
         registry.registerObserver(observer, for: target)
     }
@@ -131,7 +131,7 @@ public final class ScreenNavigator {
 
     public func unregisterObserver(
         _ observer: AnyObject,
-        for target: ScreenObservationTarget
+        for target: ScreenObserverTarget
     ) {
         registry.unregisterObserver(observer, for: target)
     }
@@ -143,15 +143,15 @@ public final class ScreenNavigator {
         registry.unregisterObserver(observer, for: screen)
     }
 
-    public func observation<Observer>(
+    public func observer<Observer>(
         of type: Observer.Type,
-        for target: ScreenObservationTarget
-    ) -> ScreenObservation<Observer> {
-        registry.observation(of: type, for: target)
+        for target: ScreenObserverTarget
+    ) -> ScreenObserver<Observer> {
+        registry.observer(of: type, for: target)
     }
 
-    public func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer> {
-        registry.observation(for: screen)
+    public func observer<T: Screen>(for screen: T) -> ScreenObserver<T.Observer> {
+        registry.observer(for: screen)
     }
 
     // MARK: - Iterator

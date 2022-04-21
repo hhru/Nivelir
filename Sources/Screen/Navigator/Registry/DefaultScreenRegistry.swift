@@ -2,19 +2,19 @@ import Foundation
 
 public final class DefaultScreenRegistry: ScreenRegistry {
 
-    private var observers: [ScreenObservationTarget: Set<ScreenObservationStorage>] = [:]
+    private var observers: [ScreenObserverTarget: Set<ScreenObserverStorage>] = [:]
 
     public init() { }
 
-    private func resolveObservers(for target: ScreenObservationTarget) -> Set<ScreenObservationStorage> {
+    private func resolveObservers(for target: ScreenObserverTarget) -> Set<ScreenObserverStorage> {
         observers[target]?.filter { $0.observer != nil } ?? []
     }
 
     public func registerObserver(
         _ observer: AnyObject,
-        for target: ScreenObservationTarget
+        for target: ScreenObserverTarget
     ) {
-        observers[target] = resolveObservers(for: target).union([ScreenObservationStorage(observer)])
+        observers[target] = resolveObservers(for: target).union([ScreenObserverStorage(observer)])
     }
 
     public func registerObserver<T: Screen>(
@@ -32,7 +32,7 @@ public final class DefaultScreenRegistry: ScreenRegistry {
 
     public func unregisterObserver(
         _ observer: AnyObject,
-        for target: ScreenObservationTarget
+        for target: ScreenObserverTarget
     ) {
         observers[target] = resolveObservers(for: target).filter { $0.observer !== observer }
     }
@@ -44,11 +44,11 @@ public final class DefaultScreenRegistry: ScreenRegistry {
         unregisterObserver(observer, for: .screen(key: screen.key))
     }
 
-    public func observation<Observer>(
+    public func observer<Observer>(
         of type: Observer.Type,
-        for target: ScreenObservationTarget
-    ) -> ScreenObservation<Observer> {
-        ScreenObservation {
+        for target: ScreenObserverTarget
+    ) -> ScreenObserver<Observer> {
+        ScreenObserver(target: target) {
             let keyedObservers = self.resolveObservers(for: target)
             let unkeyedObservers = self.resolveObservers(for: .any)
 
@@ -58,7 +58,7 @@ public final class DefaultScreenRegistry: ScreenRegistry {
         }
     }
 
-    public func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer> {
-        observation(of: T.Observer.self, for: .screen(key: screen.key))
+    public func observer<T: Screen>(for screen: T) -> ScreenObserver<T.Observer> {
+        observer(of: T.Observer.self, for: .screen(key: screen.key))
     }
 }

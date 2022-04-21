@@ -1,10 +1,15 @@
 import Foundation
 
-public struct ScreenObservation<Observer> {
+public struct ScreenObserver<Observer> {
 
+    public let target: ScreenObserverTarget
     private let observers: () -> [Observer]
 
-    internal init(observers: @escaping () -> [Observer]) {
+    internal init(
+        target: ScreenObserverTarget,
+        observers: @escaping () -> [Observer]
+    ) {
+        self.target = target
         self.observers = observers
     }
 

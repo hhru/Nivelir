@@ -130,7 +130,7 @@ public protocol Screen: CustomStringConvertible {
 
     /// A type of observer that the screen uses to send events.
     ///
-    /// - SeeAlso: `ScreenObservation`
+    /// - SeeAlso: `ScreenObserver`
     associatedtype Observer
 
     /// Screen name.
@@ -147,15 +147,20 @@ public protocol Screen: CustomStringConvertible {
     ///
     /// - Parameter navigator: The navigator instance that the screen should use for its own navigation.
     /// - Returns: Container instance.
+    ///
+    /// - SeeAlso: `ScreenNavigator`
     func build(navigator: ScreenNavigator) -> Container
 
     /// Builds the screen module and returns its container.
     ///
     /// - Parameters:
     ///   - navigator: The navigator instance that the screen should use for its own navigation.
-    ///   - observation: An instance of the observation that the screen should use to send events.
+    ///   - observer: An instance of the observer that the screen should use to send events.
     /// - Returns: Container instance.
-    func build(navigator: ScreenNavigator, observation: ScreenObservation<Observer>) -> Container
+    ///
+    /// - SeeAlso: `ScreenNavigator`
+    /// - SeeAlso: `ScreenObserver`
+    func build(navigator: ScreenNavigator, observer: ScreenObserver<Observer>) -> Container
 }
 
 extension Screen where Self: ScreenContainer, Observer == Void {
@@ -167,7 +172,7 @@ extension Screen where Self: ScreenContainer, Observer == Void {
 
 extension Screen where Observer == Void {
 
-    public func build(navigator: ScreenNavigator, observation: ScreenObservation<Void>) -> Container {
+    public func build(navigator: ScreenNavigator, observer: ScreenObserver<Void>) -> Container {
         build(navigator: navigator)
     }
 }
@@ -199,7 +204,7 @@ extension Screen {
     public func build(navigator: ScreenNavigator) -> Container {
         build(
             navigator: navigator,
-            observation: navigator.observation(for: self)
+            observer: navigator.observer(for: self)
         )
     }
 }

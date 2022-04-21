@@ -4,7 +4,7 @@ public protocol ScreenRegistry {
 
     func registerObserver(
         _ observer: AnyObject,
-        for target: ScreenObservationTarget
+        for target: ScreenObserverTarget
     )
 
     func registerObserver<T: Screen>(
@@ -16,7 +16,7 @@ public protocol ScreenRegistry {
 
     func unregisterObserver(
         _ observer: AnyObject,
-        for target: ScreenObservationTarget
+        for target: ScreenObserverTarget
     )
 
     func unregisterObserver<T: Screen>(
@@ -24,10 +24,10 @@ public protocol ScreenRegistry {
         for screen: T
     ) where T.Observer: AnyObject
 
-    func observation<Observer>(
+    func observer<Observer>(
         of type: Observer.Type,
-        for target: ScreenObservationTarget
-    ) -> ScreenObservation<Observer>
+        for target: ScreenObserverTarget
+    ) -> ScreenObserver<Observer>
 
-    func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer>
+    func observer<T: Screen>(for screen: T) -> ScreenObserver<T.Observer>
 }

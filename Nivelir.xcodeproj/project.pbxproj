@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		C0115CC8281003FE0039BA13 /* ScreenActionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0115CC7281003FE0039BA13 /* ScreenActionStorage.swift */; };
 		C0115CC9281003FE0039BA13 /* ScreenActionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0115CC7281003FE0039BA13 /* ScreenActionStorage.swift */; };
-		C0115CCE2810084F0039BA13 /* ScreenObservationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0115CCD2810084F0039BA13 /* ScreenObservationTarget.swift */; };
-		C0115CCF2810084F0039BA13 /* ScreenObservationTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0115CCD2810084F0039BA13 /* ScreenObservationTarget.swift */; };
+		C0115CCE2810084F0039BA13 /* ScreenObserverTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0115CCD2810084F0039BA13 /* ScreenObserverTarget.swift */; };
+		C0115CCF2810084F0039BA13 /* ScreenObserverTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0115CCD2810084F0039BA13 /* ScreenObserverTarget.swift */; };
 		C015F480265A8370003ECCB0 /* ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F47F265A8370003ECCB0 /* ScreenPayload.swift */; };
 		C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F47F265A8370003ECCB0 /* ScreenPayload.swift */; };
 		C015F483265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */; };
@@ -19,8 +19,8 @@
 		C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */; };
 		C01B01C927B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */; };
 		C01B01CA27B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */; };
-		C01C0C6E280DCD2200EC6C83 /* ScreenObservationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0C6D280DCD2200EC6C83 /* ScreenObservationStorage.swift */; };
-		C01C0C6F280DCD2200EC6C83 /* ScreenObservationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0C6D280DCD2200EC6C83 /* ScreenObservationStorage.swift */; };
+		C01C0C6E280DCD2200EC6C83 /* ScreenObserverStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0C6D280DCD2200EC6C83 /* ScreenObserverStorage.swift */; };
+		C01C0C6F280DCD2200EC6C83 /* ScreenObserverStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C0C6D280DCD2200EC6C83 /* ScreenObserverStorage.swift */; };
 		C0238ECA27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EC527A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift */; };
 		C0238ECB27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EC527A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift */; };
 		C0238ECC27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238EC627A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift */; };
@@ -87,8 +87,8 @@
 		C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */; };
 		C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
 		C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
-		C0535EC2280C1FD500E25FAB /* ScreenObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535EC1280C1FD500E25FAB /* ScreenObservation.swift */; };
-		C0535EC3280C1FD500E25FAB /* ScreenObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535EC1280C1FD500E25FAB /* ScreenObservation.swift */; };
+		C0535EC2280C1FD500E25FAB /* ScreenObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535EC1280C1FD500E25FAB /* ScreenObserver.swift */; };
+		C0535EC3280C1FD500E25FAB /* ScreenObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535EC1280C1FD500E25FAB /* ScreenObserver.swift */; };
 		C0535ECC280C286F00E25FAB /* ScreenRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535ECB280C286F00E25FAB /* ScreenRegistry.swift */; };
 		C0535ECD280C286F00E25FAB /* ScreenRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535ECB280C286F00E25FAB /* ScreenRegistry.swift */; };
 		C0535ECF280C290300E25FAB /* DefaultScreenRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0535ECE280C290300E25FAB /* DefaultScreenRegistry.swift */; };
@@ -462,12 +462,12 @@
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C0115CC7281003FE0039BA13 /* ScreenActionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenActionStorage.swift; sourceTree = "<group>"; };
-		C0115CCD2810084F0039BA13 /* ScreenObservationTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObservationTarget.swift; sourceTree = "<group>"; };
+		C0115CCD2810084F0039BA13 /* ScreenObserverTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObserverTarget.swift; sourceTree = "<group>"; };
 		C015F47F265A8370003ECCB0 /* ScreenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayload.swift; sourceTree = "<group>"; };
 		C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadedContainer.swift; sourceTree = "<group>"; };
 		C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenPayloadContainer.swift"; sourceTree = "<group>"; };
 		C01B01C827B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDeeplinkInvalidUserInfoError.swift; sourceTree = "<group>"; };
-		C01C0C6D280DCD2200EC6C83 /* ScreenObservationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObservationStorage.swift; sourceTree = "<group>"; };
+		C01C0C6D280DCD2200EC6C83 /* ScreenObserverStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObserverStorage.swift; sourceTree = "<group>"; };
 		C0238EC527A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryKeyDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0238EC627A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDateDecodingStrategy.swift; sourceTree = "<group>"; };
 		C0238EC727A40F6C00148E91 /* DictionaryDataDecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryDataDecodingStrategy.swift; sourceTree = "<group>"; };
@@ -501,7 +501,7 @@
 		C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenIterator.swift; sourceTree = "<group>"; };
 		C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationPredicate.swift; sourceTree = "<group>"; };
 		C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationResult.swift; sourceTree = "<group>"; };
-		C0535EC1280C1FD500E25FAB /* ScreenObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObservation.swift; sourceTree = "<group>"; };
+		C0535EC1280C1FD500E25FAB /* ScreenObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObserver.swift; sourceTree = "<group>"; };
 		C0535ECB280C286F00E25FAB /* ScreenRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRegistry.swift; sourceTree = "<group>"; };
 		C0535ECE280C290300E25FAB /* DefaultScreenRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenRegistry.swift; sourceTree = "<group>"; };
 		C057F00E23CB8EEB00C2D895 /* Nivelir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nivelir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -731,14 +731,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C0115CD02810092D0039BA13 /* Observation */ = {
+		C0115CD02810092D0039BA13 /* Observer */ = {
 			isa = PBXGroup;
 			children = (
-				C0535EC1280C1FD500E25FAB /* ScreenObservation.swift */,
-				C01C0C6D280DCD2200EC6C83 /* ScreenObservationStorage.swift */,
-				C0115CCD2810084F0039BA13 /* ScreenObservationTarget.swift */,
+				C0535EC1280C1FD500E25FAB /* ScreenObserver.swift */,
+				C01C0C6D280DCD2200EC6C83 /* ScreenObserverStorage.swift */,
+				C0115CCD2810084F0039BA13 /* ScreenObserverTarget.swift */,
 			);
-			path = Observation;
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		C015F47E265A8360003ECCB0 /* Payload */ = {
@@ -1315,13 +1315,13 @@
 		C08F980E25EEB5A60077AE40 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C0115CD02810092D0039BA13 /* Observation */,
 				C05F483B26B68B7F0002DF52 /* Actions */,
 				C0AAD9E025EED5320087439E /* Any */,
 				C08F982225EEB99B0077AE40 /* Container */,
 				C0270E6C25F4245800ECC57C /* Decorators */,
 				C0AADA2E25EED8470087439E /* Errors */,
 				C0AAD9AE25EEC33D0087439E /* Navigator */,
+				C0115CD02810092D0039BA13 /* Observer */,
 				C015F47E265A8360003ECCB0 /* Payload */,
 				C0C3425A26BC4511007A45E9 /* Route */,
 				C0AAD9A825EEC2790087439E /* Screen.swift */,
@@ -1807,7 +1807,7 @@
 				C0885FFF26B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
 				C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6626B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
-				C01C0C6E280DCD2200EC6C83 /* ScreenObservationStorage.swift in Sources */,
+				C01C0C6E280DCD2200EC6C83 /* ScreenObserverStorage.swift in Sources */,
 				C0885FB626B6C0A500CA0A77 /* ScreenStackClearModifier.swift in Sources */,
 				C0885F8826B6BA0100CA0A77 /* ScreenRootAnimation.swift in Sources */,
 				C088604A26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */,
@@ -1846,7 +1846,7 @@
 				C0AADC8325EFB5360087439E /* Collection+Extensions.swift in Sources */,
 				C0E93307262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C088604126B6C60B00CA0A77 /* StoreProductManager.swift in Sources */,
-				C0535EC2280C1FD500E25FAB /* ScreenObservation.swift in Sources */,
+				C0535EC2280C1FD500E25FAB /* ScreenObserver.swift in Sources */,
 				C0885F7A26B6BA0100CA0A77 /* ScreenPredicate.swift in Sources */,
 				C088601726B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
@@ -1927,7 +1927,7 @@
 				C0A728A4279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088602F26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
 				C0885FFB26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
-				C0115CCE2810084F0039BA13 /* ScreenObservationTarget.swift in Sources */,
+				C0115CCE2810084F0039BA13 /* ScreenObserverTarget.swift in Sources */,
 				C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C088600926B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C0885FBC26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
@@ -2035,7 +2035,7 @@
 				C08995F927968C82007D9D17 /* URLDeeplink.swift in Sources */,
 				C05F48D626B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6726B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
-				C01C0C6F280DCD2200EC6C83 /* ScreenObservationStorage.swift in Sources */,
+				C01C0C6F280DCD2200EC6C83 /* ScreenObserverStorage.swift in Sources */,
 				C0885FB726B6C0A500CA0A77 /* ScreenStackClearModifier.swift in Sources */,
 				C08995F827968C7E007D9D17 /* URLDeeplinkQueryDecoder.swift in Sources */,
 				C0885F8926B6BA0100CA0A77 /* ScreenRootAnimation.swift in Sources */,
@@ -2074,7 +2074,7 @@
 				C0885F6D26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
 				C0885FB926B6C0A500CA0A77 /* ScreenStackReplaceModifier.swift in Sources */,
 				C0C3426D26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */,
-				C0535EC3280C1FD500E25FAB /* ScreenObservation.swift in Sources */,
+				C0535EC3280C1FD500E25FAB /* ScreenObserver.swift in Sources */,
 				C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */,
 				C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C088604226B6C60B00CA0A77 /* StoreProductManager.swift in Sources */,
@@ -2155,7 +2155,7 @@
 				C0A728A5279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C088603026B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
-				C0115CCF2810084F0039BA13 /* ScreenObservationTarget.swift in Sources */,
+				C0115CCF2810084F0039BA13 /* ScreenObserverTarget.swift in Sources */,
 				C093BA802798172B0093F29B /* ScreenMakeKeyAndVisibleAction.swift in Sources */,
 				C0885FFC26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
 				C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,

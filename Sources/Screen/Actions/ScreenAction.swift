@@ -11,9 +11,9 @@ public protocol ScreenAction {
     /// The type of value returned by the action.
     associatedtype Output
 
-    /// The type of action state that is created when performing
+    /// The type of action state that must exist in memory until the action completes.
     ///
-    /// - SeeAlso: `ScreenActionBag`
+    /// - SeeAlso: `ScreenActionStorage`
     associatedtype State
 
     /// Alias for the closure that is called after the action is completed.
@@ -98,7 +98,7 @@ public protocol ScreenAction {
     ///
     /// - Parameters:
     ///   - container: The screen container in which the navigation action is performed.
-    ///   - navigator: The navigator that can be used to perform an action.
+    ///   - navigator: The navigator that can be used to perform the action.
     ///   - completion: The closure that is called after the action is completed.
     ///                 This closure has no return value and takes the result of the navigation action.
     ///
@@ -113,12 +113,13 @@ public protocol ScreenAction {
     ///
     /// - Parameters:
     ///   - container: The screen container in which the navigation action is performed.
-    ///   - navigator: The navigator that can be used to perform an action.
+    ///   - navigator: The navigator that can be used to perform the action.
     ///   - storage: The storage for storing the state of the action until it completes.
     ///   - completion: The closure that is called after the action is completed.
     ///                 This closure has no return value and takes the result of the navigation action.
     ///
     /// - SeeAlso: `ScreenNavigator`
+    /// - SeeAlso: `ScreenActionStorage`
     func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -168,6 +169,7 @@ extension ScreenAction {
             storage: storage
         ) { result in
             storage.clear()
+
             completion(result)
         }
     }

@@ -4,7 +4,7 @@ import Nivelir
 final class AuthorizationViewController: UIViewController, ScreenKeyedContainer {
 
     let authorizationService: AuthorizationService
-    let screenObservation: ScreenObservation<AuthorizationObserver>
+    let screenObserver: ScreenObserver<AuthorizationObserver>
     let screenKey: ScreenKey
     let screenNavigator: ScreenNavigator
 
@@ -14,12 +14,12 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 
     init(
         authorizationService: AuthorizationService,
-        screenObservation: ScreenObservation<AuthorizationObserver>,
+        screenObserver: ScreenObserver<AuthorizationObserver>,
         screenKey: ScreenKey,
         screenNavigator: ScreenNavigator
     ) {
         self.authorizationService = authorizationService
-        self.screenObservation = screenObservation
+        self.screenObserver = screenObserver
         self.screenKey = screenKey
         self.screenNavigator = screenNavigator
 
@@ -40,7 +40,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
                 route.dismiss()
             },
             completion: { _ in
-                self.screenObservation.post { observer in
+                self.screenObserver.post { observer in
                     observer.didFinishAuthorization(isAuthorized: false)
                 }
             }
@@ -72,7 +72,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
                 from: self.presenting,
                 to: { $0.dismiss() },
                 completion: { _ in
-                    self.screenObservation.post { observer in
+                    self.screenObserver.post { observer in
                         observer.didFinishAuthorization(isAuthorized: true)
                     }
                 }
@@ -97,7 +97,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 extension AuthorizationViewController: UIAdaptivePresentationControllerDelegate {
 
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        screenObservation.post { observer in
+        screenObserver.post { observer in
             observer.didFinishAuthorization(isAuthorized: false)
         }
     }

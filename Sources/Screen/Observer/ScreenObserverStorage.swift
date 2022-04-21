@@ -1,6 +1,6 @@
 import Foundation
 
-internal struct ScreenObservationStorage: Hashable {
+internal struct ScreenObserverStorage: Hashable {
 
     private weak var value: AnyObject?
 
@@ -17,9 +17,9 @@ internal struct ScreenObservationStorage: Hashable {
     }
 }
 
-extension ScreenObservationStorage {
+extension ScreenObserverStorage {
 
     internal static func == (lhs: Self, rhs: Self) -> Bool {
-        type(of: lhs.value) == type(of: rhs.value) && lhs.value === rhs.value
+        lhs.value === rhs.value
     }
 }
