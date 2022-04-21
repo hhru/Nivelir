@@ -25,7 +25,7 @@ jobs:
       IOS_RESULT_PATH: xcodebuild-ios.xcresult
       TVOS_SCHEME: Nivelir tvOS
       TVOS_DESTINATION: OS=15.2,name=Apple TV 4K
-      TVOS_BUILD_LOG_PATH: xcodebuild-tvos.json
+      TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
     steps:
