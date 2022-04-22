@@ -23,18 +23,18 @@
         <a class="header-link" href="../index.html">
           Nivelir 1.2.2 Docs
         </a>
-         (39% documented)
+         (38% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="../search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
         <p class="header-col header-col--secondary">
           <a class="header-link" href="https://github.com/hhru/Nivelir">
-            <img class="header-icon" src="../img/gh.png"/>
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
             View on GitHub
           </a>
         </p>
@@ -43,7 +43,7 @@
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Nivelir Reference</a>
-      <img class="carat" src="../img/carat.png" />
+      <img class="carat" src="../img/carat.png" alt=""/>
       Screen Protocol Reference
     </p>
 
@@ -137,6 +137,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ScreenAction.html">ScreenAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScreenActionStorage.html">ScreenActionStorage</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/AnyScreenAction.html">AnyScreenAction</a>
@@ -305,6 +308,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Observer.html">Observer</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenObserver.html">ScreenObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenObserverTarget.html">ScreenObserverTarget</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Navigator.html">Navigator</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -336,6 +350,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenCustomWindowProvider.html">ScreenCustomWindowProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenRegistry.html">ScreenRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DefaultScreenRegistry.html">DefaultScreenRegistry</a>
               </li>
             </ul>
           </li>
@@ -914,6 +934,38 @@ and an instance of this controller can be used as a factory in navigation:</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Nivelir6ScreenP8ObserverQa"></a>
+                    <a name="//apple_ref/swift/Alias/Observer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenP8ObserverQa">Observer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A type of observer that the screen uses to send events.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/ScreenObserver.html">ScreenObserver</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Observer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Nivelir6ScreenP4nameSSvp"></a>
                     <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Nivelir6ScreenP4nameSSvp">name</a>
@@ -990,6 +1042,9 @@ and an instance of this controller can be used as a factory in navigation:</p>
                     <a name="//apple_ref/swift/Method/build(navigator:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Nivelir6ScreenP5build9navigator9ContainerQzAA0B9NavigatorC_tF">build(navigator:<wbr>)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -997,7 +1052,16 @@ and an instance of this controller can be used as a factory in navigation:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Builds the screen module and returns its container.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></code></p>
 
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1020,6 +1084,77 @@ and an instance of this controller can be used as a factory in navigation:</p>
                               <td>
                                 <div>
                                   <p>The navigator instance that the screen should use for its own navigation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Container instance.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir6ScreenP5build9navigator8observer9ContainerQzAA0B9NavigatorC_AA0B8ObserverVy0H0QzGtF"></a>
+                    <a name="//apple_ref/swift/Method/build(navigator:observer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir6ScreenP5build9navigator8observer9ContainerQzAA0B9NavigatorC_AA0B8ObserverVy0H0QzGtF">build(navigator:<wbr>observer:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Builds the screen module and returns its container.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></code></p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Structs/ScreenObserver.html">ScreenObserver</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">build</span><span class="p">(</span><span class="nv">navigator</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></span><span class="p">,</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt"><a href="../Structs/ScreenObserver.html">ScreenObserver</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP8ObserverQa">Observer</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>navigator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The navigator instance that the screen should use for its own navigation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>observer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An instance of the observer that the screen should use to send events.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1184,7 +1319,7 @@ Default implementation creates key using the values of the <code><a href="../Pro
                 <a name="//apple_ref/swift/Section/Available where `Container`: `UIViewController`" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UIViewController%60"></a>
-                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UIViewController</code></p>
+                  <h3 class="section-name"><span>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UIViewController</code></span>
 </h3>
                 </div>
               </div>
@@ -1245,7 +1380,7 @@ you can change the underlying implementation over time without affecting existin
                 <a name="//apple_ref/swift/Section/Available where `Container`: `UINavigationController`" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UINavigationController%60"></a>
-                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UINavigationController</code></p>
+                  <h3 class="section-name"><span>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UINavigationController</code></span>
 </h3>
                 </div>
               </div>
@@ -1306,7 +1441,7 @@ you can change the underlying implementation over time without affecting existin
                 <a name="//apple_ref/swift/Section/Available where `Container`: `UITabBarController`" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UITabBarController%60"></a>
-                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UITabBarController</code></p>
+                  <h3 class="section-name"><span>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UITabBarController</code></span>
 </h3>
                 </div>
               </div>
@@ -1367,7 +1502,7 @@ you can change the underlying implementation over time without affecting existin
                 <a name="//apple_ref/swift/Section/Available where `Container`: `UIViewController`" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UIViewController%602"></a>
-                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UIViewController</code></p>
+                  <h3 class="section-name"><span>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UIViewController</code></span>
 </h3>
                 </div>
               </div>
@@ -1684,7 +1819,7 @@ you can change the underlying implementation over time without affecting existin
                 <a name="//apple_ref/swift/Section/Available where `Container`: `UINavigationController`" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UINavigationController%602"></a>
-                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UINavigationController</code></p>
+                  <h3 class="section-name"><span>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UINavigationController</code></span>
 </h3>
                 </div>
               </div>
@@ -1941,7 +2076,7 @@ you can change the underlying implementation over time without affecting existin
                 <a name="//apple_ref/swift/Section/Available where `Container`: `UITabBarController`" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Available%20where%20%60Container%60%3A%20%60UITabBarController%602"></a>
-                  <h3 class="section-name"><p>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UITabBarController</code></p>
+                  <h3 class="section-name"><span>Available where <code><a href="../Protocols/Screen.html#/s:7Nivelir6ScreenP9ContainerQa">Container</a></code>: <code>UITabBarController</code></span>
 </h3>
                 </div>
               </div>
@@ -2198,9 +2333,8 @@ you can change the underlying implementation over time without affecting existin
       </article>
     </div>
     <section class="footer">
-      <p>© 2022 <a class="link" href="https://tech.hh.ru" target="_blank" rel="noopener" rel="external">HeadHunter</a> under the MIT license.</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
+      <p>© 2022 <a class="link" href="https://tech.hh.ru" target="_blank" rel="external noopener">HeadHunter</a> under the MIT license.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>
