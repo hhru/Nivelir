@@ -11,6 +11,11 @@ public protocol ScreenAction {
     /// The type of value returned by the action.
     associatedtype Output
 
+    /// The type of action state that must exist in memory until the action completes.
+    ///
+    /// - SeeAlso: `ScreenActionStorage`
+    associatedtype State
+
     /// Alias for the closure that is called after the action is completed.
     typealias Completion = (Result<Output, Error>) -> Void
 
@@ -93,7 +98,7 @@ public protocol ScreenAction {
     ///
     /// - Parameters:
     ///   - container: The screen container in which the navigation action is performed.
-    ///   - navigator: The navigator that can be used to perform an action.
+    ///   - navigator: The navigator that can be used to perform the action.
     ///   - completion: The closure that is called after the action is completed.
     ///                 This closure has no return value and takes the result of the navigation action.
     ///
@@ -103,6 +108,40 @@ public protocol ScreenAction {
         navigator: ScreenNavigator,
         completion: @escaping Completion
     )
+
+    /// Performs action in the screen container.
+    ///
+    /// - Parameters:
+    ///   - container: The screen container in which the navigation action is performed.
+    ///   - navigator: The navigator that can be used to perform the action.
+    ///   - storage: The storage for storing the state of the action until it completes.
+    ///   - completion: The closure that is called after the action is completed.
+    ///                 This closure has no return value and takes the result of the navigation action.
+    ///
+    /// - SeeAlso: `ScreenNavigator`
+    /// - SeeAlso: `ScreenActionStorage`
+    func perform(
+        container: Container,
+        navigator: ScreenNavigator,
+        storage: ScreenActionStorage<State>,
+        completion: @escaping Completion
+    )
+}
+
+extension ScreenAction where State == Void {
+
+    public func perform(
+        container: Container,
+        navigator: ScreenNavigator,
+        storage: ScreenActionStorage<Void>,
+        completion: @escaping Completion
+    ) {
+        perform(
+            container: container,
+            navigator: navigator,
+            completion: completion
+        )
+    }
 }
 
 extension ScreenAction {
@@ -115,5 +154,23 @@ extension ScreenAction {
         with other: Action
     ) -> AnyScreenAction<Container, Void>? {
         nil
+    }
+
+    public func perform(
+        container: Container,
+        navigator: ScreenNavigator,
+        completion: @escaping Completion
+    ) {
+        let storage = ScreenActionStorage<State>()
+
+        perform(
+            container: container,
+            navigator: navigator,
+            storage: storage
+        ) { result in
+            storage.clear()
+
+            completion(result)
+        }
     }
 }

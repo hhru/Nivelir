@@ -3,23 +3,23 @@ import Nivelir
 
 final class AuthorizationViewController: UIViewController, ScreenKeyedContainer {
 
-    let authorizationCompletion: (_ isAuthorized: Bool) -> Void
     let authorizationService: AuthorizationService
+    let screenObserver: ScreenObserver<AuthorizationObserver>
     let screenKey: ScreenKey
     let screenNavigator: ScreenNavigator
 
-    private var authorizationView: AuthorizationView {
-        view as! AuthorizationView
+    private var authorizationView: AuthorizationView? {
+        viewIfLoaded as? AuthorizationView
     }
 
     init(
-        authorizationCompletion: @escaping (_ isAuthorized: Bool) -> Void,
         authorizationService: AuthorizationService,
+        screenObserver: ScreenObserver<AuthorizationObserver>,
         screenKey: ScreenKey,
         screenNavigator: ScreenNavigator
     ) {
-        self.authorizationCompletion = authorizationCompletion
         self.authorizationService = authorizationService
+        self.screenObserver = screenObserver
         self.screenKey = screenKey
         self.screenNavigator = screenNavigator
 
@@ -34,9 +34,17 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
     }
 
     @objc private func onCloseBarBattonTouchUpInside() {
-        screenNavigator.navigate(from: presenting) { route in
-            route.dismiss()
-        }
+        screenNavigator.navigate(
+            from: presenting,
+            to: { route in
+                route.dismiss()
+            },
+            completion: { _ in
+                self.screenObserver.post { observer in
+                    observer.didFinishAuthorization(isAuthorized: false)
+                }
+            }
+        )
     }
 
     private func setupCloseBarButton() {
@@ -53,7 +61,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
     }
 
     private func setupAuthorizationView() {
-        authorizationView.onLoginTapped = { [weak self] phoneNumber in
+        authorizationView?.onLoginTapped = { [weak self] phoneNumber in
             guard let self = self else {
                 return
             }
@@ -64,7 +72,9 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
                 from: self.presenting,
                 to: { $0.dismiss() },
                 completion: { _ in
-                    self.authorizationCompletion(true)
+                    self.screenObserver.post { observer in
+                        observer.didFinishAuthorization(isAuthorized: true)
+                    }
                 }
             )
         }
@@ -87,6 +97,8 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 extension AuthorizationViewController: UIAdaptivePresentationControllerDelegate {
 
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        authorizationCompletion(false)
+        screenObserver.post { observer in
+            observer.didFinishAuthorization(isAuthorized: false)
+        }
     }
 }

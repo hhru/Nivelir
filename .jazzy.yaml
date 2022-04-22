@@ -40,6 +40,7 @@ custom_categories:
   - name: Actions
     children:
       - ScreenAction
+      - ScreenActionStorage
       - AnyScreenAction
 
       - ScreenFoldAction
@@ -105,6 +106,11 @@ custom_categories:
       - ScreenContainerNotSupportedError
       - ScreenContainerTypeMismatchError
 
+  - name: Observer
+    children:
+      - ScreenObserver
+      - ScreenObserverTarget
+
   - name: Navigator
     children:
       - ScreenNavigator
@@ -117,6 +123,8 @@ custom_categories:
       - ScreenWindowProvider
       - ScreenKeyWindowProvider
       - ScreenCustomWindowProvider
+      - ScreenRegistry
+      - DefaultScreenRegistry
 
   - name: Deeplink
     children:

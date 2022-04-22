@@ -128,6 +128,11 @@ public protocol Screen: CustomStringConvertible {
     /// - SeeAlso: `ScreenContainer`
     associatedtype Container: ScreenContainer
 
+    /// A type of observer that the screen uses to send events.
+    ///
+    /// - SeeAlso: `ScreenObserver`
+    associatedtype Observer
+
     /// Screen name.
     ///
     /// Default implementation returns type name.
@@ -142,13 +147,33 @@ public protocol Screen: CustomStringConvertible {
     ///
     /// - Parameter navigator: The navigator instance that the screen should use for its own navigation.
     /// - Returns: Container instance.
+    ///
+    /// - SeeAlso: `ScreenNavigator`
     func build(navigator: ScreenNavigator) -> Container
+
+    /// Builds the screen module and returns its container.
+    ///
+    /// - Parameters:
+    ///   - navigator: The navigator instance that the screen should use for its own navigation.
+    ///   - observer: An instance of the observer that the screen should use to send events.
+    /// - Returns: Container instance.
+    ///
+    /// - SeeAlso: `ScreenNavigator`
+    /// - SeeAlso: `ScreenObserver`
+    func build(navigator: ScreenNavigator, observer: ScreenObserver<Observer>) -> Container
 }
 
-extension Screen where Self: ScreenContainer {
+extension Screen where Self: ScreenContainer, Observer == Void {
 
     public func build(navigator: ScreenNavigator) -> Self {
         self
+    }
+}
+
+extension Screen where Observer == Void {
+
+    public func build(navigator: ScreenNavigator, observer: ScreenObserver<Void>) -> Container {
+        build(navigator: navigator)
     }
 }
 
@@ -174,5 +199,12 @@ extension Screen {
     /// - SeeAlso: `ScreenKeyedContainer`
     public var key: ScreenKey {
         ScreenKey(name: name, traits: traits)
+    }
+
+    public func build(navigator: ScreenNavigator) -> Container {
+        build(
+            navigator: navigator,
+            observer: navigator.observer(for: self)
+        )
     }
 }
