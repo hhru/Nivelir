@@ -2,15 +2,15 @@ import Foundation
 
 public final class ScreenActionStorage<State> {
 
-    public private(set) var state: State?
+    public private(set) var state: [State] = []
 
     internal init() { }
 
     public func storeState(_ state: State) {
-        self.state = state
+        self.state.append(state)
     }
 
     public func clear() {
-        state = nil
+        state.removeAll()
     }
 }

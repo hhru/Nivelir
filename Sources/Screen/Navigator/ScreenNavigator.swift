@@ -41,7 +41,7 @@ public final class ScreenNavigator {
 
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
-        registry: ScreenRegistry,
+        registry: ScreenRegistry = DefaultScreenRegistry(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
