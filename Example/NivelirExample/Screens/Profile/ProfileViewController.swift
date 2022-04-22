@@ -10,8 +10,8 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private weak var profileUnauthorizedView: UIView?
 
-    private var profileView: ProfileView {
-        view as! ProfileView
+    private var profileView: ProfileView? {
+        viewIfLoaded as? ProfileView
     }
 
     init(
@@ -39,7 +39,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
             self.screenNavigator.navigate(from: self) { $0.dismiss() }
 
             if let result = result {
-                self.profileView.photoImage = result.editedImage ?? result.originalImage
+                self.profileView?.photoImage = result.editedImage ?? result.originalImage
             }
         }
 
@@ -69,7 +69,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
             self.screenNavigator.navigate(from: self) { $0.dismiss() }
 
             if let result = result {
-                self.profileView.photoImage = result.editedImage ?? result.originalImage
+                self.profileView?.photoImage = result.editedImage ?? result.originalImage
             }
         }
 
@@ -117,11 +117,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     #endif
 
     private func showAuthorization() {
-        screenNavigator.navigate(
-            to: screens.showAuthorizationRoute { isAuthorized in
-                self.profileUnauthorizedView?.isHidden = isAuthorized
-            }
-        )
+        screenNavigator.navigate(to: screens.showAuthorizationRoute())
     }
 
     private func setupProfileUnauthorizedView() {
@@ -131,7 +127,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
             self.showAuthorization()
         }
 
-        profileView.addSubview(profileUnauthorizedView)
+        profileView?.addSubview(profileUnauthorizedView)
 
         profileUnauthorizedView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -141,11 +137,11 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     }
 
     private func setupProfileView() {
-        profileView.onPhotoTapped = { [unowned self] sender in
+        profileView?.onPhotoTapped = { [unowned self] sender in
             self.pickPhotoImage(sender: sender)
         }
 
-        profileView.onLogoutTapped = { [unowned self] in
+        profileView?.onLogoutTapped = { [unowned self] in
             self.authorizationService.logout()
             self.profileUnauthorizedView?.isHidden = false
         }
@@ -158,6 +154,8 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        screenNavigator.registerObserver(self, for: .any)
+
         setupProfileView()
         setupProfileUnauthorizedView()
     }
@@ -166,6 +164,13 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         super.viewWillAppear(animated)
 
         profileUnauthorizedView?.isHidden = authorizationService.isAuthorized
+    }
+}
+
+extension ProfileViewController: AuthorizationObserver {
+
+    func authorizationFinished(isAuthorized: Bool) {
+        profileUnauthorizedView?.isHidden = isAuthorized
     }
 }
 

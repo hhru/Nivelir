@@ -12,6 +12,7 @@ public final class ScreenNavigator {
     private let windowProvider: ScreenWindowProvider
     #endif
 
+    private let observatory: ScreenObservatory
     private let iterator: ScreenIterator
     private let logger: ScreenLogger?
 
@@ -40,32 +41,40 @@ public final class ScreenNavigator {
 
     public init(
         windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
+        observatory: ScreenObservatory = DefaultScreenObservatory(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = windowProvider
+        self.observatory = observatory
         self.iterator = iterator
         self.logger = logger
     }
 
     public init(
         window: UIWindow,
+        observatory: ScreenObservatory = DefaultScreenObservatory(),
         iterator: ScreenIterator = DefaultScreenIterator(),
         logger: ScreenLogger? = DefaultScreenLogger()
     ) {
         self.windowProvider = ScreenCustomWindowProvider(window: window)
+        self.observatory = observatory
         self.iterator = iterator
         self.logger = logger
     }
     #else
     public init(
+        observatory: ScreenObservatory,
         iterator: ScreenIterator,
         logger: ScreenLogger?
     ) {
+        self.observatory = observatory
         self.iterator = iterator
         self.logger = logger
     }
     #endif
+
+    // MARK: - Actions
 
     #if canImport(UIKit)
     private func perform<Action: ScreenAction>(
@@ -100,6 +109,53 @@ public final class ScreenNavigator {
     }
     #endif
 
+    // MARK: - Observatory
+
+    public func registerObserver(
+        _ observer: AnyObject,
+        for target: ScreenObservationTarget
+    ) {
+        observatory.registerObserver(observer, for: target)
+    }
+
+    public func registerObserver<T: Screen>(
+        _ observer: T.Observer,
+        for screen: T
+    ) where T.Observer: AnyObject {
+        observatory.registerObserver(observer, for: screen)
+    }
+
+    public func unregisterObserver(
+        _ observer: AnyObject,
+        for target: ScreenObservationTarget
+    ) {
+        observatory.unregisterObserver(observer, for: target)
+    }
+
+    public func unregisterObserver<T: Screen>(
+        _ observer: T.Observer,
+        for screen: T
+    ) where T.Observer: AnyObject {
+        observatory.unregisterObserver(observer, for: screen)
+    }
+
+    public func unregisterObserver(_ observer: AnyObject) {
+        observatory.unregisterObserver(observer)
+    }
+
+    public func observation<Observer>(
+        of type: Observer.Type,
+        for target: ScreenObservationTarget
+    ) -> ScreenObservation<Observer> {
+        observatory.observation(of: type, for: target)
+    }
+
+    public func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer> {
+        observatory.observation(for: screen)
+    }
+
+    // MARK: - Iterator
+
     public func iterate(
         from container: ScreenContainer,
         while predicate: ScreenIterationPredicate
@@ -127,6 +183,8 @@ public final class ScreenNavigator {
     ) -> ScreenContainer? {
         iterator.topContainer(in: container, where: predicate)
     }
+
+    // MARK: - Logger
 
     public func logInfo(_ info: @autoclosure () -> String) {
         logger?.info(info())

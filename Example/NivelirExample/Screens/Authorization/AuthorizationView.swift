@@ -56,6 +56,8 @@ final class AuthorizationView: UIView {
             make.top.equalTo(messageLabel.snp.bottom).offset(32.0)
             make.left.right.equalToSuperview().inset(24.0)
         }
+
+        phoneNumberTextField.becomeFirstResponder()
     }
 
     private func setupLoginButton() {

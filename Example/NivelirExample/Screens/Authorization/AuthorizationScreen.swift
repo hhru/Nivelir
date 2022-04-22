@@ -3,13 +3,15 @@ import Nivelir
 
 struct AuthorizationScreen: Screen {
 
-    let completion: (_ isAuthorized: Bool) -> Void
     let services: Services
 
-    func build(navigator: ScreenNavigator) -> UIViewController {
+    func build(
+        navigator: ScreenNavigator,
+        observation: ScreenObservation<AuthorizationObserver>
+    ) -> UIViewController {
         AuthorizationViewController(
-            authorizationCompletion: completion,
             authorizationService: services.authorizationService(),
+            screenObservation: observation,
             screenKey: key,
             screenNavigator: navigator
         )

@@ -23,18 +23,18 @@
         <a class="header-link" href="../index.html">
           Nivelir 1.2.2 Docs
         </a>
-         (39% documented)
+         (38% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="../search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
         <p class="header-col header-col--secondary">
           <a class="header-link" href="https://github.com/hhru/Nivelir">
-            <img class="header-icon" src="../img/gh.png"/>
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
             View on GitHub
           </a>
         </p>
@@ -43,7 +43,7 @@
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Nivelir Reference</a>
-      <img class="carat" src="../img/carat.png" />
+      <img class="carat" src="../img/carat.png" alt=""/>
       ScreenNavigator Class Reference
     </p>
 
@@ -137,6 +137,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ScreenAction.html">ScreenAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ScreenActionStorage.html">ScreenActionStorage</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/AnyScreenAction.html">AnyScreenAction</a>
@@ -305,6 +308,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Observer.html">Observer</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ScreenObserver.html">ScreenObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ScreenObserverTarget.html">ScreenObserverTarget</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Navigator.html">Navigator</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -336,6 +350,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ScreenCustomWindowProvider.html">ScreenCustomWindowProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ScreenRegistry.html">ScreenRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DefaultScreenRegistry.html">DefaultScreenRegistry</a>
               </li>
             </ul>
           </li>
@@ -912,9 +932,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir15ScreenNavigatorC14windowProvider8iterator6loggerAcA0b6WindowE0_p_AA0B8Iterator_pAA0B6Logger_pSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(windowProvider:iterator:logger:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC14windowProvider8iterator6loggerAcA0b6WindowE0_p_AA0B8Iterator_pAA0B6Logger_pSgtcfc">init(windowProvider:<wbr>iterator:<wbr>logger:<wbr>)</a>
+                    <a name="/s:7Nivelir15ScreenNavigatorC14windowProvider8registry8iterator6loggerAcA0b6WindowE0_p_AA0B8Registry_pAA0B8Iterator_pAA0B6Logger_pSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(windowProvider:registry:iterator:logger:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC14windowProvider8registry8iterator6loggerAcA0b6WindowE0_p_AA0B8Registry_pAA0B8Iterator_pAA0B6Logger_pSgtcfc">init(windowProvider:<wbr>registry:<wbr>iterator:<wbr>logger:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -931,6 +951,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
     <span class="nv">windowProvider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenWindowProvider.html">ScreenWindowProvider</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/ScreenKeyWindowProvider.html">ScreenKeyWindowProvider</a></span><span class="p">(),</span>
+    <span class="nv">registry</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenRegistry.html">ScreenRegistry</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/DefaultScreenRegistry.html">DefaultScreenRegistry</a></span><span class="p">(),</span>
     <span class="nv">iterator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenIterator.html">ScreenIterator</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/DefaultScreenIterator.html">DefaultScreenIterator</a></span><span class="p">(),</span>
     <span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenLogger.html">ScreenLogger</a></span><span class="p">?</span> <span class="o">=</span> <span class="kt"><a href="../Classes/DefaultScreenLogger.html">DefaultScreenLogger</a></span><span class="p">()</span>
 <span class="p">)</span></code></pre>
@@ -943,9 +964,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir15ScreenNavigatorC6window8iterator6loggerACSo8UIWindowC_AA0B8Iterator_pAA0B6Logger_pSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(window:iterator:logger:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC6window8iterator6loggerACSo8UIWindowC_AA0B8Iterator_pAA0B6Logger_pSgtcfc">init(window:<wbr>iterator:<wbr>logger:<wbr>)</a>
+                    <a name="/s:7Nivelir15ScreenNavigatorC6window8registry8iterator6loggerACSo8UIWindowC_AA0B8Registry_pAA0B8Iterator_pAA0B6Logger_pSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(window:registry:iterator:logger:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC6window8registry8iterator6loggerACSo8UIWindowC_AA0B8Registry_pAA0B8Iterator_pAA0B6Logger_pSgtcfc">init(window:<wbr>registry:<wbr>iterator:<wbr>logger:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -962,6 +983,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
     <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">,</span>
+    <span class="nv">registry</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenRegistry.html">ScreenRegistry</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/DefaultScreenRegistry.html">DefaultScreenRegistry</a></span><span class="p">(),</span>
     <span class="nv">iterator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenIterator.html">ScreenIterator</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/DefaultScreenIterator.html">DefaultScreenIterator</a></span><span class="p">(),</span>
     <span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScreenLogger.html">ScreenLogger</a></span><span class="p">?</span> <span class="o">=</span> <span class="kt"><a href="../Classes/DefaultScreenLogger.html">DefaultScreenLogger</a></span><span class="p">()</span>
 <span class="p">)</span></code></pre>
@@ -975,8 +997,8 @@
                   <div>
                     <code>
                     <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/init(iterator:logger:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">init(iterator:<wbr>logger:<wbr>)</a>
+                    <a name="//apple_ref/swift/Method/init(registry:iterator:logger:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(registry:<wbr>iterator:<wbr>logger:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -989,6 +1011,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Actions"></a>
+                <a name="//apple_ref/swift/Section/Actions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Actions"></a>
+                  <h3 class="section-name"><span>Actions</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1019,6 +1054,236 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Registry"></a>
+                <a name="//apple_ref/swift/Section/Registry" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Registry"></a>
+                  <h3 class="section-name"><span>Registry</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC16registerObserver_3foryyXl_AA0bE6TargetOtF"></a>
+                    <a name="//apple_ref/swift/Method/registerObserver(_:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC16registerObserver_3foryyXl_AA0bE6TargetOtF">registerObserver(_:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerObserver</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">,</span>
+    <span class="k">for</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScreenObserverTarget.html">ScreenObserverTarget</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC16registerObserver_3fory0E0Qz_xtAA0B0RzAGRLClF"></a>
+                    <a name="//apple_ref/swift/Method/registerObserver(_:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC16registerObserver_3fory0E0Qz_xtAA0B0RzAGRLClF">registerObserver(_:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">registerObserver</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Screen.html">Screen</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="kt">Observer</span><span class="p">,</span>
+    <span class="k">for</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">T</span>
+<span class="p">)</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">Observer</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC18unregisterObserveryyyXlF"></a>
+                    <a name="//apple_ref/swift/Method/unregisterObserver(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC18unregisterObserveryyyXlF">unregisterObserver(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unregisterObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC18unregisterObserver_3foryyXl_AA0bE6TargetOtF"></a>
+                    <a name="//apple_ref/swift/Method/unregisterObserver(_:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC18unregisterObserver_3foryyXl_AA0bE6TargetOtF">unregisterObserver(_:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unregisterObserver</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">,</span>
+    <span class="k">for</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScreenObserverTarget.html">ScreenObserverTarget</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC18unregisterObserver_3fory0E0Qz_xtAA0B0RzAGRLClF"></a>
+                    <a name="//apple_ref/swift/Method/unregisterObserver(_:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC18unregisterObserver_3fory0E0Qz_xtAA0B0RzAGRLClF">unregisterObserver(_:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">unregisterObserver</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Screen.html">Screen</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="kt">Observer</span><span class="p">,</span>
+    <span class="k">for</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">T</span>
+<span class="p">)</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">Observer</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC8observer2of3forAA0B8ObserverVyxGxm_AA0bG6TargetOtlF"></a>
+                    <a name="//apple_ref/swift/Method/observer(of:for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC8observer2of3forAA0B8ObserverVyxGxm_AA0bG6TargetOtlF">observer(of:<wbr>for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">observer</span><span class="o">&lt;</span><span class="kt">Observer</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">of</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Observer</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="k">for</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScreenObserverTarget.html">ScreenObserverTarget</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ScreenObserver.html">ScreenObserver</a></span><span class="o">&lt;</span><span class="kt">Observer</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Nivelir15ScreenNavigatorC8observer3forAA0B8ObserverVy0F0QzGx_tAA0B0RzlF"></a>
+                    <a name="//apple_ref/swift/Method/observer(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15ScreenNavigatorC8observer3forAA0B8ObserverVy0F0QzGx_tAA0B0RzlF">observer(for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">observer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ScreenObserver.html">ScreenObserver</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">.</span><span class="kt">Observer</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Screen.html">Screen</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Iterator"></a>
+                <a name="//apple_ref/swift/Section/Iterator" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Iterator"></a>
+                  <h3 class="section-name"><span>Iterator</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1139,6 +1404,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Logger"></a>
+                <a name="//apple_ref/swift/Section/Logger" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Logger"></a>
+                  <h3 class="section-name"><span>Logger</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1323,9 +1601,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>© 2022 <a class="link" href="https://tech.hh.ru" target="_blank" rel="noopener" rel="external">HeadHunter</a> under the MIT license.</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
+      <p>© 2022 <a class="link" href="https://tech.hh.ru" target="_blank" rel="external noopener">HeadHunter</a> under the MIT license.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>

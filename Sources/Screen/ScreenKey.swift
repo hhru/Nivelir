@@ -7,7 +7,7 @@ import Foundation
 ///
 /// - SeeAlso: `Screen`.
 /// - SeeAlso: `ScreenKeyedContainer`.
-public struct ScreenKey: Equatable, CustomStringConvertible {
+public struct ScreenKey: Hashable, CustomStringConvertible {
 
     /// Screen name.
     public let name: String

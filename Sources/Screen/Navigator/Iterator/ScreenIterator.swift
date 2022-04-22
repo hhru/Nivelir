@@ -1,6 +1,7 @@
 import Foundation
 
 public protocol ScreenIterator {
+
     func iterate(
         from container: ScreenContainer,
         while predicate: ScreenIterationPredicate
