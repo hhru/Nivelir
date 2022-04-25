@@ -8121,240 +8121,240 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
       "line": 3,
-      "symbol": "DefaultScreenRegistry",
+      "symbol": "DefaultScreenObservatory",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
       "line": 3,
-      "symbol": "DefaultScreenRegistry",
+      "symbol": "DefaultScreenObservatory",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
       "line": 7,
-      "symbol": "DefaultScreenRegistry.init()",
+      "symbol": "DefaultScreenObservatory.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
       "line": 7,
-      "symbol": "DefaultScreenRegistry.init()",
+      "symbol": "DefaultScreenObservatory.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 13,
-      "symbol": "DefaultScreenRegistry.registerObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 9,
+      "symbol": "DefaultScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 13,
-      "symbol": "DefaultScreenRegistry.registerObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 9,
+      "symbol": "DefaultScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 20,
-      "symbol": "DefaultScreenRegistry.registerObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 17,
+      "symbol": "DefaultScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 20,
-      "symbol": "DefaultScreenRegistry.registerObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 17,
+      "symbol": "DefaultScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 27,
-      "symbol": "DefaultScreenRegistry.unregisterObserver(_:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 24,
+      "symbol": "DefaultScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 27,
-      "symbol": "DefaultScreenRegistry.unregisterObserver(_:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 24,
+      "symbol": "DefaultScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 33,
-      "symbol": "DefaultScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 34,
+      "symbol": "DefaultScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 33,
-      "symbol": "DefaultScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 34,
+      "symbol": "DefaultScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 40,
-      "symbol": "DefaultScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 41,
+      "symbol": "DefaultScreenObservatory.unregisterObserver(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 40,
-      "symbol": "DefaultScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 41,
+      "symbol": "DefaultScreenObservatory.unregisterObserver(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
       "line": 47,
-      "symbol": "DefaultScreenRegistry.observer(of:for:)",
+      "symbol": "DefaultScreenObservatory.observation(of:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
       "line": 47,
-      "symbol": "DefaultScreenRegistry.observer(of:for:)",
+      "symbol": "DefaultScreenObservatory.observation(of:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 61,
-      "symbol": "DefaultScreenRegistry.observer(for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 65,
+      "symbol": "DefaultScreenObservatory.observation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/DefaultScreenRegistry.swift",
-      "line": 61,
-      "symbol": "DefaultScreenRegistry.observer(for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/DefaultScreenObservatory.swift",
+      "line": 65,
+      "symbol": "DefaultScreenObservatory.observation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 3,
-      "symbol": "ScreenRegistry",
+      "symbol": "ScreenObservatory",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 3,
-      "symbol": "ScreenRegistry",
+      "symbol": "ScreenObservatory",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 5,
-      "symbol": "ScreenRegistry.registerObserver(_:for:)",
+      "symbol": "ScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 5,
-      "symbol": "ScreenRegistry.registerObserver(_:for:)",
+      "symbol": "ScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 10,
-      "symbol": "ScreenRegistry.registerObserver(_:for:)",
+      "symbol": "ScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 10,
-      "symbol": "ScreenRegistry.registerObserver(_:for:)",
+      "symbol": "ScreenObservatory.registerObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 15,
-      "symbol": "ScreenRegistry.unregisterObserver(_:)",
+      "symbol": "ScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 15,
-      "symbol": "ScreenRegistry.unregisterObserver(_:)",
+      "symbol": "ScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
-      "line": 17,
-      "symbol": "ScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
+      "line": 20,
+      "symbol": "ScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
-      "line": 17,
-      "symbol": "ScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
+      "line": 20,
+      "symbol": "ScreenObservatory.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
-      "line": 22,
-      "symbol": "ScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
+      "line": 25,
+      "symbol": "ScreenObservatory.unregisterObserver(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
-      "line": 22,
-      "symbol": "ScreenRegistry.unregisterObserver(_:for:)",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
+      "line": 25,
+      "symbol": "ScreenObservatory.unregisterObserver(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 27,
-      "symbol": "ScreenRegistry.observer(of:for:)",
+      "symbol": "ScreenObservatory.observation(of:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 27,
-      "symbol": "ScreenRegistry.observer(of:for:)",
+      "symbol": "ScreenObservatory.observation(of:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 32,
-      "symbol": "ScreenRegistry.observer(for:)",
+      "symbol": "ScreenObservatory.observation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Registry/ScreenRegistry.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Observatory/ScreenObservatory.swift",
       "line": 32,
-      "symbol": "ScreenRegistry.observer(for:)",
+      "symbol": "ScreenObservatory.observation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -8445,14 +8445,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 42,
-      "symbol": "ScreenNavigator.init(windowProvider:registry:iterator:logger:)",
+      "symbol": "ScreenNavigator.init(windowProvider:observatory:iterator:logger:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 42,
-      "symbol": "ScreenNavigator.init(windowProvider:registry:iterator:logger:)",
+      "symbol": "ScreenNavigator.init(windowProvider:observatory:iterator:logger:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -8473,14 +8473,14 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 54,
-      "symbol": "ScreenNavigator.init(window:registry:iterator:logger:)",
+      "symbol": "ScreenNavigator.init(window:observatory:iterator:logger:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 54,
-      "symbol": "ScreenNavigator.init(window:registry:iterator:logger:)",
+      "symbol": "ScreenNavigator.init(window:observatory:iterator:logger:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -8543,70 +8543,70 @@
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 128,
-      "symbol": "ScreenNavigator.unregisterObserver(_:)",
+      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 128,
+      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
+      "line": 135,
+      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
+      "line": 135,
+      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
+      "line": 142,
       "symbol": "ScreenNavigator.unregisterObserver(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
-      "line": 132,
-      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
-      "line": 132,
-      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
-      "line": 139,
-      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
-      "line": 139,
-      "symbol": "ScreenNavigator.unregisterObserver(_:for:)",
+      "line": 142,
+      "symbol": "ScreenNavigator.unregisterObserver(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 146,
-      "symbol": "ScreenNavigator.observer(of:for:)",
+      "symbol": "ScreenNavigator.observation(of:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 146,
-      "symbol": "ScreenNavigator.observer(of:for:)",
+      "symbol": "ScreenNavigator.observation(of:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 153,
-      "symbol": "ScreenNavigator.observer(for:)",
+      "symbol": "ScreenNavigator.observation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/ScreenNavigator.swift",
       "line": 153,
-      "symbol": "ScreenNavigator.observer(for:)",
+      "symbol": "ScreenNavigator.observation(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -8807,86 +8807,100 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserver.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
       "line": 3,
-      "symbol": "ScreenObserver",
+      "symbol": "ScreenObservation",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserver.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
       "line": 3,
-      "symbol": "ScreenObserver",
+      "symbol": "ScreenObservation",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserver.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
       "line": 5,
-      "symbol": "ScreenObserver.target",
+      "symbol": "ScreenObservation.target",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserver.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
       "line": 5,
-      "symbol": "ScreenObserver.target",
+      "symbol": "ScreenObservation.target",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserver.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
       "line": 16,
-      "symbol": "ScreenObserver.post(_:)",
+      "symbol": "ScreenObservation.notify(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserver.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
       "line": 16,
-      "symbol": "ScreenObserver.post(_:)",
+      "symbol": "ScreenObservation.notify(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserverTarget.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
+      "line": 20,
+      "symbol": "ScreenObservation.callAsFunction(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservation.swift",
+      "line": 20,
+      "symbol": "ScreenObservation.callAsFunction(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservationTarget.swift",
       "line": 3,
-      "symbol": "ScreenObserverTarget",
+      "symbol": "ScreenObservationTarget",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserverTarget.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservationTarget.swift",
       "line": 3,
-      "symbol": "ScreenObserverTarget",
+      "symbol": "ScreenObservationTarget",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserverTarget.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservationTarget.swift",
       "line": 5,
-      "symbol": "ScreenObserverTarget.any",
+      "symbol": "ScreenObservationTarget.any",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserverTarget.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservationTarget.swift",
       "line": 5,
-      "symbol": "ScreenObserverTarget.any",
+      "symbol": "ScreenObservationTarget.any",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserverTarget.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservationTarget.swift",
       "line": 6,
-      "symbol": "ScreenObserverTarget.screen(key:)",
+      "symbol": "ScreenObservationTarget.screen(key:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observer/ScreenObserverTarget.swift",
+      "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Observation/ScreenObservationTarget.swift",
       "line": 6,
-      "symbol": "ScreenObserverTarget.screen(key:)",
+      "symbol": "ScreenObservationTarget.screen(key:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
