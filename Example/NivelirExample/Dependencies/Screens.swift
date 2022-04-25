@@ -48,6 +48,7 @@ struct Screens {
         ).eraseToAnyScreen()
     }
 
+    #if os(iOS)
     func moreExampleListScreen() -> AnyModalScreen {
         MoreExampleListScreen(
             screens: self
@@ -57,6 +58,7 @@ struct Screens {
     func landmarkScreen() -> AnyModalScreen {
         LandmarkScreen().eraseToAnyScreen()
     }
+    #endif
 
     // MARK: - Routes
 

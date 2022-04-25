@@ -37,6 +37,8 @@
 		C0238F3D27A9544300148E91 /* RoomListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F3C27A9544300148E91 /* RoomListScreen.swift */; };
 		C0238F4427A96A7A00148E91 /* ProfileUnauthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0238F4327A96A7A00148E91 /* ProfileUnauthorizedView.swift */; };
 		C0268C20265909E400380F76 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0268C1F265909E400380F76 /* ChatListCell.swift */; };
+		C034D8162816B74500DCF391 /* ScreenAuthorizeActionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000DAB8280DB390009414FA /* ScreenAuthorizeActionObserver.swift */; };
+		C034D8172816B75900DCF391 /* AuthorizationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4EDF1280ACBB7009BC54E /* AuthorizationObserver.swift */; };
 		C057512127A9AD9E00396BB7 /* ServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512027A9AD9E00396BB7 /* ServiceKey.swift */; };
 		C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512227A9ADFA00396BB7 /* ServiceContainer.swift */; };
 		C057512627A9AE4800396BB7 /* ServiceScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057512527A9AE4800396BB7 /* ServiceScope.swift */; };
@@ -745,6 +747,7 @@
 				C0C06DF827AA6193002B7F03 /* ProfileUnauthorizedView.swift in Sources */,
 				C0C06DF427AA618A002B7F03 /* AuthorizationViewController.swift in Sources */,
 				C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */,
+				C034D8162816B74500DCF391 /* ScreenAuthorizeActionObserver.swift in Sources */,
 				C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */,
 				C0BF2F63265A70AA00419426 /* HomeTabBarController.swift in Sources */,
 				C0BF2F6B265A70CC00419426 /* SceneDelegate.swift in Sources */,
@@ -758,6 +761,7 @@
 				C0C06E0227AA61D3002B7F03 /* ScreenAuthorizeActionScreens.swift in Sources */,
 				C0C06DF127AA6182002B7F03 /* Screens.swift in Sources */,
 				C0BF2F60265A70A600419426 /* ChatListViewController.swift in Sources */,
+				C034D8172816B75900DCF391 /* AuthorizationObserver.swift in Sources */,
 				C0C06DF027AA617F002B7F03 /* Services.swift in Sources */,
 				C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */,
 				C05C623327AAD3520054F0BC /* ChatDeeplinkPayload.swift in Sources */,
