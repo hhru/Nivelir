@@ -28,12 +28,14 @@ struct HomeScreen: Screen {
                         .withStackContainer()
                         .withTabBarItem(.profile)
                 )
+                #if os(iOS)
                 .setupTab(
                     with: screens
                         .moreExampleListScreen()
                         .withStackContainer()
                         .withTabBarItem(.moreExampleList)
                 )
+                #endif
                 .selectTab(with: .index(0))
         }
 
