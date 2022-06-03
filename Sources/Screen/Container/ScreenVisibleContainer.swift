@@ -1,5 +1,8 @@
+import Foundation
+
 #if canImport(UIKit)
 import UIKit
+#endif
 
 /// A screen container that can be visible.
 ///
@@ -12,8 +15,9 @@ public protocol ScreenVisibleContainer: ScreenContainer {
     /// A Boolean value indicating whether the container is visible.
     var isVisible: Bool { get }
 
+    #if canImport(UIKit)
     /// The scene containing the container.
     @available(iOS 13.0, tvOS 13.0, *)
     var windowScene: UIWindowScene? { get }
+    #endif
 }
-#endif
