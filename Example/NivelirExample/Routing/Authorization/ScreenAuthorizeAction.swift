@@ -35,9 +35,12 @@ struct ScreenAuthorizeAction<Container: UIViewController>: ScreenAction {
             }
         }
 
-        storage.storeState(observer)
+        let observerToken = navigator.observe(
+            by: observer,
+            where: .type(AuthorizationObserver.self)
+        )
 
-        navigator.registerObserver(observer, for: .any)
+        storage.storeState(observerToken)
         navigator.navigate(to: screens.showAuthorizationRoute())
     }
 }
