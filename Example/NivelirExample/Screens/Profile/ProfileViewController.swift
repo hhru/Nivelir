@@ -154,7 +154,18 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        screenNavigator.registerObserver(self, for: .any)
+        screenNavigator.observeWeakly(
+            by: self,
+            where: .satisfiedAll(
+                .type(AuthorizationObserver.self),
+                .satisfiedAny(
+                    .presented(on: self),
+                    .pushed(after: self),
+                    .child(of: self),
+                    .visible(self)
+                )
+            )
+        )
 
         setupProfileView()
         setupProfileUnauthorizedView()

@@ -2,32 +2,24 @@ import Foundation
 
 public protocol ScreenObservatory {
 
-    func registerObserver(
-        _ observer: AnyObject,
-        for target: ScreenObservationTarget
+    func observeWeakly(
+        by observer: ScreenObserver,
+        where predicate: ScreenObserverPredicate
     )
 
-    func registerObserver<T: Screen>(
-        _ observer: T.Observer,
-        for screen: T
-    ) where T.Observer: AnyObject
+    func observe(
+        by observer: ScreenObserver,
+        where predicate: ScreenObserverPredicate,
+        weakly: Bool
+    ) -> ScreenObserverToken
 
-    func unregisterObserver(
-        _ observer: AnyObject,
-        for target: ScreenObservationTarget
-    )
-
-    func unregisterObserver<T: Screen>(
-        _ observer: T.Observer,
-        for screen: T
-    ) where T.Observer: AnyObject
-
-    func unregisterObserver(_ observer: AnyObject)
+    func observe(
+        by observer: ScreenObserver,
+        where predicate: ScreenObserverPredicate
+    ) -> ScreenObserverToken
 
     func observation<Observer>(
         of type: Observer.Type,
-        for target: ScreenObservationTarget
+        iterator: ScreenIterator
     ) -> ScreenObservation<Observer>
-
-    func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer>
 }

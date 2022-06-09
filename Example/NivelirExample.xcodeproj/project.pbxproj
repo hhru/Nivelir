@@ -316,8 +316,8 @@
 		C0238F2927A9455400148E91 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				C0D562FB27AA9CE0000027CF /* Deeplinks */,
 				C0238F3E27A9599000148E91 /* Authorization */,
+				C0D562FB27AA9CE0000027CF /* Deeplinks */,
 			);
 			path = Routing;
 			sourceTree = "<group>";

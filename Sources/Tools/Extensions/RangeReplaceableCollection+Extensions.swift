@@ -34,4 +34,12 @@ extension RangeReplaceableCollection {
 
         return collection
     }
+
+    internal func unique(_ comparator: (Element, Element) throws -> Bool) rethrows -> Self {
+        try reduce(into: Self()) { result, element in
+            if try !result.contains(where: { try comparator($0, element) }) {
+                result.append(element)
+            }
+        }
+    }
 }

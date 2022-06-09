@@ -1,6 +1,7 @@
 import Foundation
+import Nivelir
 
-public protocol AuthorizationObserver: AnyObject {
+public protocol AuthorizationObserver: ScreenObserver {
 
     func authorizationFinished(isAuthorized: Bool)
 }

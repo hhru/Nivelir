@@ -70,7 +70,9 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 
             self.screenNavigator.navigate(
                 from: self.presenting,
-                to: { $0.dismiss() },
+                to: { route in
+                    route.dismiss()
+                },
                 completion: { _ in
                     self.screenObservation { observer in
                         observer.authorizationFinished(isAuthorized: true)

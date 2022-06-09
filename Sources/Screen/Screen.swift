@@ -166,20 +166,36 @@ public protocol Screen: CustomStringConvertible {
     ) -> Container
 }
 
-extension Screen where Self: ScreenContainer, Observer == Void {
+extension Screen where Self: ScreenContainer, Observer == Never {
 
     public func build(navigator: ScreenNavigator) -> Self {
         self
     }
 }
 
-extension Screen where Observer == Void {
+extension Screen where Observer == Never {
 
     public func build(
         navigator: ScreenNavigator,
-        observation: ScreenObservation<Void>
+        observation: ScreenObservation<Never>
     ) -> Container {
         build(navigator: navigator)
+    }
+}
+
+extension Screen {
+
+    public func build(navigator: ScreenNavigator) -> Container {
+        let observation = navigator.observation(of: Observer.self)
+
+        let container = build(
+            navigator: navigator,
+            observation: observation
+        )
+
+        observation.associate(with: container)
+
+        return container
     }
 }
 
@@ -205,12 +221,5 @@ extension Screen {
     /// - SeeAlso: `ScreenKeyedContainer`
     public var key: ScreenKey {
         ScreenKey(name: name, traits: traits)
-    }
-
-    public func build(navigator: ScreenNavigator) -> Container {
-        build(
-            navigator: navigator,
-            observation: navigator.observation(for: self)
-        )
     }
 }

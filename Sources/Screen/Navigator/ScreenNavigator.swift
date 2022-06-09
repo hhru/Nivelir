@@ -111,47 +111,30 @@ public final class ScreenNavigator {
 
     // MARK: - Observatory
 
-    public func registerObserver(
-        _ observer: AnyObject,
-        for target: ScreenObservationTarget
+    public func observeWeakly(
+        by observer: ScreenObserver,
+        where predicate: ScreenObserverPredicate
     ) {
-        observatory.registerObserver(observer, for: target)
+        observatory.observeWeakly(by: observer, where: predicate)
     }
 
-    public func registerObserver<T: Screen>(
-        _ observer: T.Observer,
-        for screen: T
-    ) where T.Observer: AnyObject {
-        observatory.registerObserver(observer, for: screen)
+    public func observe(
+        by observer: ScreenObserver,
+        where predicate: ScreenObserverPredicate,
+        weakly: Bool
+    ) -> ScreenObserverToken {
+        observatory.observe(by: observer, where: predicate, weakly: weakly)
     }
 
-    public func unregisterObserver(
-        _ observer: AnyObject,
-        for target: ScreenObservationTarget
-    ) {
-        observatory.unregisterObserver(observer, for: target)
+    public func observe(
+        by observer: ScreenObserver,
+        where predicate: ScreenObserverPredicate
+    ) -> ScreenObserverToken {
+        observatory.observe(by: observer, where: predicate)
     }
 
-    public func unregisterObserver<T: Screen>(
-        _ observer: T.Observer,
-        for screen: T
-    ) where T.Observer: AnyObject {
-        observatory.unregisterObserver(observer, for: screen)
-    }
-
-    public func unregisterObserver(_ observer: AnyObject) {
-        observatory.unregisterObserver(observer)
-    }
-
-    public func observation<Observer>(
-        of type: Observer.Type,
-        for target: ScreenObservationTarget
-    ) -> ScreenObservation<Observer> {
-        observatory.observation(of: type, for: target)
-    }
-
-    public func observation<T: Screen>(for screen: T) -> ScreenObservation<T.Observer> {
-        observatory.observation(for: screen)
+    public func observation<Observer>(of type: Observer.Type) -> ScreenObservation<Observer> {
+        observatory.observation(of: type, iterator: iterator)
     }
 
     // MARK: - Iterator
