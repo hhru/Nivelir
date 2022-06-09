@@ -128,12 +128,12 @@ public protocol ScreenAction {
     )
 }
 
-extension ScreenAction where State == Void {
+extension ScreenAction where State == Never {
 
     public func perform(
         container: Container,
         navigator: ScreenNavigator,
-        storage: ScreenActionStorage<Void>,
+        storage: ScreenActionStorage<Never>,
         completion: @escaping Completion
     ) {
         perform(

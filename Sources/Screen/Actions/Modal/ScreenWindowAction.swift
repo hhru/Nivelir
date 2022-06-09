@@ -16,7 +16,7 @@ public struct ScreenWindowAction<
         completion: @escaping Completion
     ) {
         guard let window = container.window else {
-            return completion(.containerNotFound(type: UIViewController.self, for: self))
+            return completion(.containerNotFound(type: UIWindow.self, for: self))
         }
 
         guard let output = window as? Output else {
