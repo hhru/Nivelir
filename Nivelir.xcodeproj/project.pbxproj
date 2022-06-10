@@ -135,6 +135,9 @@
 		C06DFA10276EB80600D751C4 /* URLDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA0F276EB80600D751C4 /* URLDeeplink.swift */; };
 		C06DFA13276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA12276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift */; };
 		C06DFA15276EBDF900D751C4 /* AnyURLDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA14276EBDF900D751C4 /* AnyURLDeeplink.swift */; };
+		C0866B462853545000B85C54 /* ScreenImpactOccurredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */; };
+		C0866B482853566600B85C54 /* ScreenNotificationOccurredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */; };
+		C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */; };
 		C0885F6026B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F3926B6BA0000CA0A77 /* ScreenSetupTabAction.swift */; };
 		C0885F6126B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F3926B6BA0000CA0A77 /* ScreenSetupTabAction.swift */; };
 		C0885F6226B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F3A26B6BA0000CA0A77 /* ScreenSelectedTabAction.swift */; };
@@ -541,6 +544,9 @@
 		C06DFA17276EBFA100D751C4 /* NotificationDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDeeplink.swift; sourceTree = "<group>"; };
 		C06DFA1C276F27F500D751C4 /* NotificationDeeplinkUserInfoDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDeeplinkUserInfoDecoder.swift; sourceTree = "<group>"; };
 		C06DFA1E276F283F00D751C4 /* AnyNotificationDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNotificationDeeplink.swift; sourceTree = "<group>"; };
+		C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenImpactOccurredAction.swift; sourceTree = "<group>"; };
+		C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNotificationOccurredAction.swift; sourceTree = "<group>"; };
+		C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelectionChangedAction.swift; sourceTree = "<group>"; };
 		C0885F3926B6BA0000CA0A77 /* ScreenSetupTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSetupTabAction.swift; sourceTree = "<group>"; };
 		C0885F3A26B6BA0000CA0A77 /* ScreenSelectedTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectedTabAction.swift; sourceTree = "<group>"; };
 		C0885F3C26B6BA0000CA0A77 /* ScreenTabPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabPredicate.swift; sourceTree = "<group>"; };
@@ -1042,6 +1048,16 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		C0866B44285344DC00B85C54 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */,
+				C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */,
+				C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
 		C0885F3826B6BA0000CA0A77 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1219,6 +1235,7 @@
 				C0885FC726B6C60B00CA0A77 /* ActionSheet */,
 				C0885FCB26B6C60B00CA0A77 /* Alert */,
 				C0885FD326B6C60B00CA0A77 /* DocumentPreview */,
+				C0866B44285344DC00B85C54 /* Haptics */,
 				C0885FE926B6C60B00CA0A77 /* MediaPicker */,
 				C09591532853128D00729E93 /* Safari */,
 				C0885FF626B6C60B00CA0A77 /* StoreProduct */,
@@ -1861,6 +1878,7 @@
 				C0A728632799487B000BFBF9 /* AnyDeeplink.swift in Sources */,
 				C0238F0427A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */,
 				C0A728C0279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
+				C0866B462853545000B85C54 /* ScreenImpactOccurredAction.swift in Sources */,
 				C052C7D02823A94500132875 /* ScreenObserverPredicate.swift in Sources */,
 				C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */,
 				C0D5796627A0048100084220 /* URLQueryKeyDecodingStrategy.swift in Sources */,
@@ -1915,6 +1933,7 @@
 				C09591582853257700729E93 /* InvalidSafariURLError.swift in Sources */,
 				C0C3427226BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
 				C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
+				C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C0A728BD279AD5A2000BFBF9 /* DictionarySingleValueDecodingContainer.swift in Sources */,
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
@@ -2015,6 +2034,7 @@
 				C088600926B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C0885FBC26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
 				C0E932EF262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
+				C0866B482853566600B85C54 /* ScreenNotificationOccurredAction.swift in Sources */,
 				C0C3426E26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603926B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C088601326B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
