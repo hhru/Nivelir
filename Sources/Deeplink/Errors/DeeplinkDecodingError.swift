@@ -9,9 +9,13 @@ internal struct DeeplinkDecodingError: DeeplinkError {
         """
     }
 
-    internal let underlyingError: Any
+    internal let underlyingError: Error
 
     internal let trigger: Any
+
+    internal var isWarning: Bool {
+        true
+    }
 
     internal init(
         underlyingError: Error,

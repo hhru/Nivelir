@@ -7,33 +7,43 @@ import UserNotifications
 
 public final class DeeplinkManager: DeeplinkHandler {
 
-    public let deeplinkTypes: [AnyDeeplink.Type]
+    public let deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]]
     public let navigator: ScreenNavigator
 
-    public private(set) var screens: Any?
+    public private(set) var screens: [DeeplinkScope: Any?] = [:]
 
     public var isActive: Bool {
-        applicationStateSubscription != nil
+        !screens.isEmpty
     }
 
     private var applicationStateSubscription: Any? {
         didSet { navigateIfPossible() }
     }
 
-    private var pendingDeeplink: AnyDeeplink? {
+    private var pendingDeeplink: DeeplinkStorage? {
         didSet { navigateIfPossible() }
     }
 
     public init(
-        deeplinkTypes: [AnyDeeplink.Type],
+        deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]],
         navigator: ScreenNavigator
     ) {
         self.deeplinkTypes = deeplinkTypes
         self.navigator = navigator
     }
 
+    public convenience init(
+        deeplinkTypes: [AnyDeeplink.Type],
+        navigator: ScreenNavigator
+    ) {
+        self.init(
+            deeplinkTypes: [.default: deeplinkTypes],
+            navigator: navigator
+        )
+    }
+
     private func navigateIfPossible() {
-        guard isActive, UIApplication.shared.applicationState == .active else {
+        guard UIApplication.shared.applicationState == .active else {
             return
         }
 
@@ -41,10 +51,14 @@ public final class DeeplinkManager: DeeplinkHandler {
             return
         }
 
+        guard let screens = screens[deeplink.scope] else {
+            return
+        }
+
         pendingDeeplink = nil
 
         do {
-            try deeplink.navigateIfPossible(
+            try deeplink.value.navigateIfPossible(
                 screens: screens,
                 navigator: navigator,
                 handler: self
@@ -54,7 +68,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         }
     }
 
-    private func handleDeeplinkIfPossible(_ deeplink: AnyDeeplink?) -> Bool {
+    private func handleDeeplinkIfPossible(_ deeplink: DeeplinkStorage?) -> Bool {
         if let deeplink = deeplink {
             pendingDeeplink = deeplink
         }
@@ -62,103 +76,171 @@ public final class DeeplinkManager: DeeplinkHandler {
         return deeplink != nil
     }
 
-    private func handleErrorIfPossible(_ error: Error) throws {
-        guard let decodingError = error as? DeeplinkDecodingError else {
-            throw error
+    private func resolveDeeplinkResult(deeplink: AnyDeeplink?, scope: DeeplinkScope) -> DeeplinkResult? {
+        guard let deeplink = deeplink else {
+            return nil
         }
 
-        navigator.logInfo("\(decodingError)")
-    }
-
-    private func makeURLDeeplinkIfPossible(
-        of deeplinkType: AnyURLDeeplink.Type,
-        url: URL,
-        context: Any?
-    ) throws -> AnyURLDeeplink? {
-        let queryOptions = try deeplinkType.urlQueryOptions(context: context)
-
-        let queryDecoder = URLQueryDecoder(
-            dateDecodingStrategy: queryOptions.dateDecodingStrategy,
-            dataDecodingStrategy: queryOptions.dataDecodingStrategy,
-            nonConformingFloatDecodingStrategy: queryOptions.nonConformingFloatDecodingStrategy,
-            keyDecodingStrategy: queryOptions.keyDecodingStrategy,
-            userInfo: queryOptions.userInfo
+        let storage = DeeplinkStorage(
+            value: deeplink,
+            scope: scope
         )
 
-        do {
-            return try deeplinkType.url(
-                url,
-                queryDecoder: queryDecoder,
-                context: context
+        return .success(storage)
+    }
+
+    private func resolveDeeplinkResult(error: Error) -> DeeplinkResult {
+        guard let deeplinkError = error as? DeeplinkError else {
+            return .failure(error)
+        }
+
+        guard deeplinkError.isWarning else {
+            return .failure(error)
+        }
+
+        return .warning(deeplinkError)
+    }
+
+    private func makeDeeplinkIfPossible<T>(
+        of deeplinkType: T.Type,
+        resolver: @escaping (_ scope: DeeplinkScope, _ index: Int) -> DeeplinkResult?
+    ) throws -> DeeplinkStorage? {
+        let results = deeplinkTypes
+            .lazy
+            .compactMap { scope, deeplinkTypes in
+                deeplinkTypes
+                    .enumerated()
+                    .lazy
+                    .compactMap { offset, _ in
+                        resolver(scope, offset)
+                    }
+            }
+            .flatMap { $0 }
+
+        var warnings: [Error] = []
+
+        for result in results {
+            switch result {
+            case let .success(deeplink):
+                return deeplink
+
+            case let .failure(error):
+                throw error
+
+            case let .warning(error):
+                warnings.append(error)
+            }
+        }
+
+        guard warnings.isEmpty else {
+            throw DeeplinkWarningsError(
+                deeplinkType: deeplinkType,
+                warnings: warnings
             )
-        } catch {
-            try handleErrorIfPossible(error)
         }
 
         return nil
     }
 
     private func makeURLDeeplinkIfPossible(
+        of deeplinkType: AnyURLDeeplink.Type,
+        url: URL,
+        context: Any?,
+        scope: DeeplinkScope
+    ) -> DeeplinkResult? {
+        do {
+            let queryOptions = try deeplinkType.urlQueryOptions(context: context)
+
+            let queryDecoder = URLQueryDecoder(
+                dateDecodingStrategy: queryOptions.dateDecodingStrategy,
+                dataDecodingStrategy: queryOptions.dataDecodingStrategy,
+                nonConformingFloatDecodingStrategy: queryOptions.nonConformingFloatDecodingStrategy,
+                keyDecodingStrategy: queryOptions.keyDecodingStrategy,
+                userInfo: queryOptions.userInfo
+            )
+
+            let deeplink = try deeplinkType.url(
+                url,
+                queryDecoder: queryDecoder,
+                context: context
+            )
+
+            return resolveDeeplinkResult(
+                deeplink: deeplink,
+                scope: scope
+            )
+        } catch {
+            return resolveDeeplinkResult(error: error)
+        }
+    }
+
+    private func makeURLDeeplinkIfPossible(
         url: URL,
         context: Any?
-    ) throws -> AnyURLDeeplink? {
-        try deeplinkTypes
-            .lazy
-            .compactMap { $0 as? AnyURLDeeplink.Type }
-            .compactMap { deeplinkType in
-                try self.makeURLDeeplinkIfPossible(
-                    of: deeplinkType,
-                    url: url,
-                    context: context
-                )
-            }
-            .first { _ in true }
+    ) throws -> DeeplinkStorage? {
+        try makeDeeplinkIfPossible(of: AnyURLDeeplink.self) { scope, index in
+            self.deeplinkTypes[scope]
+                .flatMap { $0[index] as? AnyURLDeeplink.Type }
+                .flatMap { deeplinkType in
+                    self.makeURLDeeplinkIfPossible(
+                        of: deeplinkType,
+                        url: url,
+                        context: context,
+                        scope: scope
+                    )
+                }
+        }
     }
 
     #if canImport(UserNotifications) && os(iOS)
     private func makeNotificationDeeplinkIfPossible(
         of deeplinkType: AnyNotificationDeeplink.Type,
         response: UNNotificationResponse,
-        context: Any?
-    ) throws -> AnyNotificationDeeplink? {
-        let userInfoOptions = try deeplinkType.notificationUserInfoOptions(context: context)
-
-        let userInfoDecoder = DictionaryDecoder(
-            dateDecodingStrategy: userInfoOptions.dateDecodingStrategy,
-            dataDecodingStrategy: userInfoOptions.dataDecodingStrategy,
-            nonConformingFloatDecodingStrategy: userInfoOptions.nonConformingFloatDecodingStrategy,
-            keyDecodingStrategy: userInfoOptions.keyDecodingStrategy,
-            userInfo: userInfoOptions.userInfo
-        )
-
+        context: Any?,
+        scope: DeeplinkScope
+    ) -> DeeplinkResult? {
         do {
-            return try deeplinkType.notification(
+            let userInfoOptions = try deeplinkType.notificationUserInfoOptions(context: context)
+
+            let userInfoDecoder = DictionaryDecoder(
+                dateDecodingStrategy: userInfoOptions.dateDecodingStrategy,
+                dataDecodingStrategy: userInfoOptions.dataDecodingStrategy,
+                nonConformingFloatDecodingStrategy: userInfoOptions.nonConformingFloatDecodingStrategy,
+                keyDecodingStrategy: userInfoOptions.keyDecodingStrategy,
+                userInfo: userInfoOptions.userInfo
+            )
+
+            let deeplink = try deeplinkType.notification(
                 response: response,
                 userInfoDecoder: userInfoDecoder,
                 context: context
             )
-        } catch {
-            try handleErrorIfPossible(error)
-        }
 
-        return nil
+            return resolveDeeplinkResult(
+                deeplink: deeplink,
+                scope: scope
+            )
+        } catch {
+            return resolveDeeplinkResult(error: error)
+        }
     }
 
     private func makeNotificationDeeplinkIfPossible(
         response: UNNotificationResponse,
         context: Any?
-    ) throws -> AnyNotificationDeeplink? {
-        try deeplinkTypes
-            .lazy
-            .compactMap { $0 as? AnyNotificationDeeplink.Type }
-            .compactMap { deeplinkType in
-                try makeNotificationDeeplinkIfPossible(
-                    of: deeplinkType,
-                    response: response,
-                    context: context
-                )
-            }
-            .first { _ in true }
+    ) throws -> DeeplinkStorage? {
+        try makeDeeplinkIfPossible(of: AnyNotificationDeeplink.self) { scope, index in
+            self.deeplinkTypes[scope]
+                .flatMap { $0[index] as? AnyNotificationDeeplink.Type }
+                .flatMap { deeplinkType in
+                    self.makeNotificationDeeplinkIfPossible(
+                        of: deeplinkType,
+                        response: response,
+                        context: context,
+                        scope: scope
+                    )
+                }
+        }
     }
     #endif
 
@@ -166,48 +248,67 @@ public final class DeeplinkManager: DeeplinkHandler {
     private func makeShortcutDeeplinkIfPossible(
         of deeplinkType: AnyShortcutDeeplink.Type,
         shortcut: UIApplicationShortcutItem,
-        context: Any?
-    ) throws -> AnyShortcutDeeplink? {
-        let userInfoOptions = try deeplinkType.shortcutUserInfoOptions(context: context)
-
-        let userInfoDecoder = DictionaryDecoder(
-            dateDecodingStrategy: userInfoOptions.dateDecodingStrategy,
-            dataDecodingStrategy: userInfoOptions.dataDecodingStrategy,
-            nonConformingFloatDecodingStrategy: userInfoOptions.nonConformingFloatDecodingStrategy,
-            keyDecodingStrategy: userInfoOptions.keyDecodingStrategy,
-            userInfo: userInfoOptions.userInfo
-        )
-
+        context: Any?,
+        scope: DeeplinkScope
+    ) -> DeeplinkResult? {
         do {
-            return try deeplinkType.shortcut(
+            let userInfoOptions = try deeplinkType.shortcutUserInfoOptions(context: context)
+
+            let userInfoDecoder = DictionaryDecoder(
+                dateDecodingStrategy: userInfoOptions.dateDecodingStrategy,
+                dataDecodingStrategy: userInfoOptions.dataDecodingStrategy,
+                nonConformingFloatDecodingStrategy: userInfoOptions.nonConformingFloatDecodingStrategy,
+                keyDecodingStrategy: userInfoOptions.keyDecodingStrategy,
+                userInfo: userInfoOptions.userInfo
+            )
+
+            let deeplink = try deeplinkType.shortcut(
                 shortcut,
                 userInfoDecoder: userInfoDecoder,
                 context: context
             )
-        } catch {
-            try handleErrorIfPossible(error)
-        }
 
-        return nil
+            return resolveDeeplinkResult(
+                deeplink: deeplink,
+                scope: scope
+            )
+        } catch {
+            return resolveDeeplinkResult(error: error)
+        }
+    }
+
+    private func makeShortcutDeeplinkIfPossible(
+        shortcut: UIApplicationShortcutItem,
+        context: Any?,
+        scope: DeeplinkScope
+    ) throws -> DeeplinkStorage? {
+        try makeDeeplinkIfPossible(of: AnyShortcutDeeplink.self) { scope, index in
+            self.deeplinkTypes[scope]
+                .flatMap { $0[index] as? AnyShortcutDeeplink.Type }
+                .flatMap { deeplinkType in
+                    self.makeShortcutDeeplinkIfPossible(
+                        of: deeplinkType,
+                        shortcut: shortcut,
+                        context: context,
+                        scope: scope
+                    )
+                }
+        }
     }
 
     private func makeShortcutDeeplinkIfPossible(
         shortcut: UIApplicationShortcutItem,
         context: Any?
-    ) throws -> AnyShortcutDeeplink? {
-        try deeplinkTypes
-            .lazy
-            .compactMap { $0 as? AnyShortcutDeeplink.Type }
-            .compactMap { deeplinkType in
-                try makeShortcutDeeplinkIfPossible(
-                    of: deeplinkType,
-                    shortcut: shortcut,
-                    context: context
-                )
-            }
-            .first { _ in true }
+    ) throws -> DeeplinkStorage? {
+        try deeplinkTypes.keys.lazy.compactMap { scope in
+            try makeShortcutDeeplinkIfPossible(
+                shortcut: shortcut,
+                context: context,
+                scope: scope
+            )
+        }
+        .first { _ in true }
     }
-
     #endif
 
     public func canHandleURL(_ url: URL, context: Any?) -> Bool {
@@ -221,6 +322,8 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     @discardableResult
     public func handleURL(_ url: URL, context: Any?) throws -> Bool {
+        navigator.logInfo("Handling navigation for URL: \(url)")
+
         let deeplink = try makeURLDeeplinkIfPossible(
             url: url,
             context: context
@@ -252,6 +355,13 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     @discardableResult
     public func handleNotification(response: UNNotificationResponse, context: Any?) throws -> Bool {
+        navigator.logInfo(
+            """
+            Handling navigation for notification:
+            \(response.logDescription ?? "nil")
+            """
+        )
+
         let deeplink = try makeNotificationDeeplinkIfPossible(
             response: response,
             context: context
@@ -284,6 +394,13 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     @discardableResult
     public func handleShortcut(_ shortcut: UIApplicationShortcutItem, context: Any?) throws -> Bool {
+        navigator.logInfo(
+            """
+            Handling navigation for shortcut:
+            \(shortcut.logDescription ?? "nil")
+            """
+        )
+
         let deeplink = try makeShortcutDeeplinkIfPossible(
             shortcut: shortcut,
             context: context
@@ -304,8 +421,12 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
     #endif
 
-    public func activate(screens: Any?) {
-        self.screens = screens
+    public func isActive(scope: DeeplinkScope) -> Bool {
+        screens[scope] != nil
+    }
+
+    public func activate(screens: Any?, scope: DeeplinkScope) {
+        self.screens[scope] = screens
 
         guard applicationStateSubscription == nil else {
             return
@@ -320,12 +441,34 @@ public final class DeeplinkManager: DeeplinkHandler {
         }
     }
 
-    public func deactivate() {
-        if let applicationStateSubscription = applicationStateSubscription {
-            NotificationCenter.default.removeObserver(applicationStateSubscription)
+    public func activate(screens: Any?) {
+        deeplinkTypes.keys.forEach { scope in
+            activate(screens: screens, scope: scope)
+        }
+    }
+
+    public func deactivate(scope: DeeplinkScope) {
+        self.screens.removeValue(forKey: scope)
+
+        guard screens.isEmpty else {
+            return
         }
 
-        applicationStateSubscription = nil
+        guard let applicationStateSubscription = applicationStateSubscription else {
+            return
+        }
+
+        NotificationCenter
+            .default
+            .removeObserver(applicationStateSubscription)
+
+        self.applicationStateSubscription = nil
+    }
+
+    public func deactivate() {
+        deeplinkTypes.keys.forEach { scope in
+            deactivate(scope: scope)
+        }
     }
 }
 #endif
