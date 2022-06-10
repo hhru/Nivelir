@@ -3,8 +3,6 @@ import UIKit
 
 public struct MediaPicker: CustomStringConvertible {
 
-    public typealias Handler = (_ result: MediaPickerResult?) -> Void
-
     public let source: MediaPickerSource
     public let types: [MediaPickerType]
     public let allowsEditing: Bool
@@ -12,7 +10,9 @@ public struct MediaPicker: CustomStringConvertible {
     public let videoExportPreset: String?
     public let videoMaximumDuration: TimeInterval
     public let videoQuality: UIImagePickerController.QualityType
-    public let handler: Handler
+
+    public let didInitialize: ((_ container: UIImagePickerController) -> Void)?
+    public let didFinish: (_ result: MediaPickerResult?) -> Void
 
     public var description: String {
         "ImagePicker(from: \"\(source)\")"
@@ -27,7 +27,8 @@ public struct MediaPicker: CustomStringConvertible {
         videoExportPreset: String? = nil,
         videoMaximumDuration: TimeInterval = 600.0,
         videoQuality: UIImagePickerController.QualityType = .typeMedium,
-        handler: @escaping Handler
+        didInitialize: ((_ container: UIImagePickerController) -> Void)? = nil,
+        didFinish: @escaping (_ result: MediaPickerResult?) -> Void
     ) {
         self.source = source
         self.types = types
@@ -36,7 +37,9 @@ public struct MediaPicker: CustomStringConvertible {
         self.videoExportPreset = videoExportPreset
         self.videoMaximumDuration = videoMaximumDuration
         self.videoQuality = videoQuality
-        self.handler = handler
+
+        self.didInitialize = didInitialize
+        self.didFinish = didFinish
     }
 
     public init(
@@ -45,7 +48,8 @@ public struct MediaPicker: CustomStringConvertible {
         allowsEditing: Bool = false,
         videoMaximumDuration: TimeInterval = 600.0,
         videoQuality: UIImagePickerController.QualityType = .typeMedium,
-        handler: @escaping Handler
+        didInitialize: ((_ container: UIImagePickerController) -> Void)? = nil,
+        didFinish: @escaping (_ result: MediaPickerResult?) -> Void
     ) {
         self.source = source
         self.types = types
@@ -54,7 +58,9 @@ public struct MediaPicker: CustomStringConvertible {
         self.videoExportPreset = nil
         self.videoMaximumDuration = videoMaximumDuration
         self.videoQuality = videoQuality
-        self.handler = handler
+
+        self.didInitialize = didInitialize
+        self.didFinish = didFinish
     }
 }
 #endif
