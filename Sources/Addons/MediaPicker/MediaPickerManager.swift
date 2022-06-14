@@ -16,11 +16,11 @@ extension MediaPickerManager: UIImagePickerControllerDelegate {
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
-        mediaPicker.handler(MediaPickerResult(info: info))
+        mediaPicker.didFinish(MediaPickerResult(info: info))
     }
 
     internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        mediaPicker.handler(nil)
+        mediaPicker.didFinish(nil)
     }
 }
 #endif

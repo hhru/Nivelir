@@ -24,12 +24,6 @@ public struct ScreenShowStoreProductAction<Container: UIViewController>: ScreenA
     ) {
         navigator.logInfo("Presenting \(storeProduct) on \(type(of: container))")
 
-        let storeProductContainer = SKStoreProductViewController()
-        let storeProductManager = StoreProductManager(storeProduct: storeProduct)
-
-        storeProductContainer.screenPayload.store(storeProductManager)
-        storeProductContainer.delegate = storeProductManager
-
         guard let storeProductID = Int(storeProduct.itemID).map(NSNumber.init(value:)) else {
             return completion(.invalidStoreProductID(for: self))
         }
@@ -37,6 +31,14 @@ public struct ScreenShowStoreProductAction<Container: UIViewController>: ScreenA
         let parameters = storeProduct
             .parameters
             .merging([SKStoreProductParameterITunesItemIdentifier: storeProductID]) { $1 }
+
+        let storeProductContainer = SKStoreProductViewController()
+        let storeProductManager = StoreProductManager(storeProduct: storeProduct)
+
+        storeProduct.didInitialize?(storeProductContainer)
+
+        storeProductContainer.screenPayload.store(storeProductManager)
+        storeProductContainer.delegate = storeProductManager
 
         storeProductContainer.loadProduct(withParameters: parameters)
 

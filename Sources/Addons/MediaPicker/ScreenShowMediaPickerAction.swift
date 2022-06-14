@@ -94,6 +94,8 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         let mediaPickerContainer = UIImagePickerController()
         let mediaPickerManager = MediaPickerManager(mediaPicker: mediaPicker)
 
+        mediaPicker.didInitialize?(mediaPickerContainer)
+
         mediaPickerContainer.screenPayload.store(mediaPickerManager)
         mediaPickerContainer.delegate = mediaPickerManager
 
