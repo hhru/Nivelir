@@ -30,7 +30,9 @@ public struct ScreenShowSafariAction<Container: UIViewController>: ScreenAction 
 
         let safariContainer: SFSafariViewController
 
-        if #available(iOS 11.0, *), let configuration = safari.configuration {
+        if #available(iOS 11.0, *) {
+            let configuration = safari.configuration ?? SFSafariViewController.Configuration()
+
             safariContainer = SFSafariViewController(
                 url: safari.url,
                 configuration: configuration
@@ -40,6 +42,13 @@ public struct ScreenShowSafariAction<Container: UIViewController>: ScreenAction 
         }
 
         safari.didInitialize?(safariContainer)
+
+        if #available(iOS 11.0, *) {
+            safariContainer.dismissButtonStyle = safari.dismissButtonStyle ?? .done
+        }
+
+        safariContainer.preferredBarTintColor = safari.preferredBarTintColor
+        safariContainer.preferredControlTintColor = safari.preferredControlTintColor
 
         let safariManager = SafariManager(safari: safari)
 

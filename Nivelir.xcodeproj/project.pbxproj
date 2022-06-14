@@ -138,6 +138,8 @@
 		C0866B462853545000B85C54 /* ScreenImpactOccurredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */; };
 		C0866B482853566600B85C54 /* ScreenNotificationOccurredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */; };
 		C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */; };
+		C0866B5A2853A59D00B85C54 /* ScreenGetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B592853A59D00B85C54 /* ScreenGetAction.swift */; };
+		C0866B5B2853A59D00B85C54 /* ScreenGetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B592853A59D00B85C54 /* ScreenGetAction.swift */; };
 		C0885F6026B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F3926B6BA0000CA0A77 /* ScreenSetupTabAction.swift */; };
 		C0885F6126B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F3926B6BA0000CA0A77 /* ScreenSetupTabAction.swift */; };
 		C0885F6226B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F3A26B6BA0000CA0A77 /* ScreenSelectedTabAction.swift */; };
@@ -308,7 +310,6 @@
 		C0959155285312AB00729E93 /* ScreenShowSafariAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0959154285312AB00729E93 /* ScreenShowSafariAction.swift */; };
 		C09591582853257700729E93 /* InvalidSafariURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09591572853257700729E93 /* InvalidSafariURLError.swift */; };
 		C095915B28532CC900729E93 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095915A28532CC900729E93 /* Safari.swift */; };
-		C095915E2853356100729E93 /* SafariManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095915D2853356100729E93 /* SafariManager.swift */; };
 		C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */; };
 		C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A72860279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A7285F279932C5000BFBF9 /* ScreenMakeKeyAction.swift */; };
@@ -387,6 +388,7 @@
 		C0C3427326BC4511007A45E9 /* ScreenStackRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3426326BC4511007A45E9 /* ScreenStackRoute.swift */; };
 		C0C3428026BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */; };
 		C0C3428126BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */; };
+		C0C8AE30285856010097147A /* SafariManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8AE2F285856010097147A /* SafariManager.swift */; };
 		C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */; };
 		C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */; };
@@ -547,6 +549,7 @@
 		C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenImpactOccurredAction.swift; sourceTree = "<group>"; };
 		C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNotificationOccurredAction.swift; sourceTree = "<group>"; };
 		C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelectionChangedAction.swift; sourceTree = "<group>"; };
+		C0866B592853A59D00B85C54 /* ScreenGetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenGetAction.swift; sourceTree = "<group>"; };
 		C0885F3926B6BA0000CA0A77 /* ScreenSetupTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSetupTabAction.swift; sourceTree = "<group>"; };
 		C0885F3A26B6BA0000CA0A77 /* ScreenSelectedTabAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSelectedTabAction.swift; sourceTree = "<group>"; };
 		C0885F3C26B6BA0000CA0A77 /* ScreenTabPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTabPredicate.swift; sourceTree = "<group>"; };
@@ -644,7 +647,6 @@
 		C0959154285312AB00729E93 /* ScreenShowSafariAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShowSafariAction.swift; sourceTree = "<group>"; };
 		C09591572853257700729E93 /* InvalidSafariURLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidSafariURLError.swift; sourceTree = "<group>"; };
 		C095915A28532CC900729E93 /* Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
-		C095915D2853356100729E93 /* SafariManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariManager.swift; sourceTree = "<group>"; };
 		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1723CB900900AC2C3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 		C0C3426226BC4511007A45E9 /* ScreenWindowRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenWindowRoute.swift; sourceTree = "<group>"; };
 		C0C3426326BC4511007A45E9 /* ScreenStackRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenStackRoute.swift; sourceTree = "<group>"; };
 		C0C3427F26BC525A007A45E9 /* ScreenRouteConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRouteConvertible.swift; sourceTree = "<group>"; };
+		C0C8AE2F285856010097147A /* SafariManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariManager.swift; sourceTree = "<group>"; };
 		C0C9FE8B2655DECE0074D669 /* Mintfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mintfile; sourceTree = "<group>"; };
 		C0C9FE912655E45D0074D669 /* ScreenWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWindowProvider.swift; sourceTree = "<group>"; };
 		C0C9FE942655E4C10074D669 /* ScreenCustomWindowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCustomWindowProvider.swift; sourceTree = "<group>"; };
@@ -1096,6 +1099,7 @@
 				C0885F4826B6BA0000CA0A77 /* Try */,
 				C0885F5026B6BA0000CA0A77 /* ScreenFoldAction.swift */,
 				C0885F4726B6BA0000CA0A77 /* ScreenFromAction.swift */,
+				C0866B592853A59D00B85C54 /* ScreenGetAction.swift */,
 				C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */,
 				C0E9EF2326BC3094005A20E3 /* ScreenNavigateAction.swift */,
 				C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */,
@@ -1441,7 +1445,7 @@
 			children = (
 				C09591572853257700729E93 /* InvalidSafariURLError.swift */,
 				C095915A28532CC900729E93 /* Safari.swift */,
-				C095915D2853356100729E93 /* SafariManager.swift */,
+				C0C8AE2F285856010097147A /* SafariManager.swift */,
 				C0959154285312AB00729E93 /* ScreenShowSafariAction.swift */,
 			);
 			path = Safari;
@@ -1939,6 +1943,7 @@
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
 				C0959151285256E400729E93 /* DeeplinkWarningsError.swift in Sources */,
 				C0885F6C26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
+				C0866B5A2853A59D00B85C54 /* ScreenGetAction.swift in Sources */,
 				C052C7D82823B48900132875 /* ScreenContainerStorage.swift in Sources */,
 				C0885FB826B6C0A500CA0A77 /* ScreenStackReplaceModifier.swift in Sources */,
 				C0C3426C26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */,
@@ -1996,6 +2001,7 @@
 				C088601F26B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
 				C0238EEE27A7DD9200148E91 /* DeeplinkInvalidContextError.swift in Sources */,
 				C0A72874279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
+				C0C8AE30285856010097147A /* SafariManager.swift in Sources */,
 				C093BA7F2798172B0093F29B /* ScreenMakeKeyAndVisibleAction.swift in Sources */,
 				C0AAD97125EEC0160087439E /* UIViewController+ScreenVisibleContainer.swift in Sources */,
 				C0D5799127A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */,
@@ -2052,7 +2058,6 @@
 				C0F9A47525FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
 				C0885FC426B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C0238F1527A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */,
-				C095915E2853356100729E93 /* SafariManager.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
 				C0238F2D27A9477000148E91 /* ScreenCanceledError.swift in Sources */,
 				C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */,
@@ -2122,6 +2127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0866B5B2853A59D00B85C54 /* ScreenGetAction.swift in Sources */,
 				C05F488C26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C088602226B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
 				C0238F0527A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */,
