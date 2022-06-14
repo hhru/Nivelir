@@ -1,4 +1,4 @@
-#if canImport(SafariServices)
+#if canImport(SafariServices) && os(iOS)
 import Foundation
 import SafariServices
 

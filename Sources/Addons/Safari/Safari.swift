@@ -1,4 +1,4 @@
-#if canImport(UIKit) && canImport(SafariServices)
+#if canImport(UIKit) && canImport(SafariServices) && os(iOS)
 import UIKit
 import SafariServices
 
