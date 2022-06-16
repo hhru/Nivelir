@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01294B62859B2C80039D06B /* SharingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B52859B2C80039D06B /* SharingActivity.swift */; };
+		C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */; };
+		C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B92859B2EC0039D06B /* SharingCustomItem.swift */; };
+		C01294BC2859B2F40039D06B /* SharingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294BB2859B2F40039D06B /* SharingItem.swift */; };
+		C01294BE2859B3420039D06B /* SharingItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294BD2859B3420039D06B /* SharingItemManager.swift */; };
+		C01294C02859D7C60039D06B /* SharingActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294BF2859D7C60039D06B /* SharingActivityManager.swift */; };
+		C01294C42859DEC70039D06B /* SharingVisualActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294C32859DEC70039D06B /* SharingVisualActivity.swift */; };
+		C01294C62859E47A0039D06B /* SharingSilentActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294C52859E47A0039D06B /* SharingSilentActivity.swift */; };
+		C01294C82859E6BC0039D06B /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294C72859E6BC0039D06B /* Sharing.swift */; };
+		C01294CA2859E7AF0039D06B /* SharingActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294C92859E7AF0039D06B /* SharingActivityType.swift */; };
+		C01294CC2859ECAE0039D06B /* SharingActivityCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294CB2859ECAE0039D06B /* SharingActivityCategory.swift */; };
+		C01294CE2859EDAF0039D06B /* ScreenShareAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294CD2859EDAF0039D06B /* ScreenShareAction.swift */; };
 		C015F480265A8370003ECCB0 /* ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F47F265A8370003ECCB0 /* ScreenPayload.swift */; };
 		C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F47F265A8370003ECCB0 /* ScreenPayload.swift */; };
 		C015F483265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */; };
@@ -473,6 +485,18 @@
 /* Begin PBXFileReference section */
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C01294B52859B2C80039D06B /* SharingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivity.swift; sourceTree = "<group>"; };
+		C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingCustomActivity.swift; sourceTree = "<group>"; };
+		C01294B92859B2EC0039D06B /* SharingCustomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingCustomItem.swift; sourceTree = "<group>"; };
+		C01294BB2859B2F40039D06B /* SharingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingItem.swift; sourceTree = "<group>"; };
+		C01294BD2859B3420039D06B /* SharingItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingItemManager.swift; sourceTree = "<group>"; };
+		C01294BF2859D7C60039D06B /* SharingActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivityManager.swift; sourceTree = "<group>"; };
+		C01294C32859DEC70039D06B /* SharingVisualActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingVisualActivity.swift; sourceTree = "<group>"; };
+		C01294C52859E47A0039D06B /* SharingSilentActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingSilentActivity.swift; sourceTree = "<group>"; };
+		C01294C72859E6BC0039D06B /* Sharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharing.swift; sourceTree = "<group>"; };
+		C01294C92859E7AF0039D06B /* SharingActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivityType.swift; sourceTree = "<group>"; };
+		C01294CB2859ECAE0039D06B /* SharingActivityCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivityCategory.swift; sourceTree = "<group>"; };
+		C01294CD2859EDAF0039D06B /* ScreenShareAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShareAction.swift; sourceTree = "<group>"; };
 		C015F47F265A8370003ECCB0 /* ScreenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayload.swift; sourceTree = "<group>"; };
 		C015F482265A8466003ECCB0 /* ScreenPayloadedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPayloadedContainer.swift; sourceTree = "<group>"; };
 		C015F486265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ScreenPayloadContainer.swift"; sourceTree = "<group>"; };
@@ -774,6 +798,41 @@
 				C058492C2846761D00DE42F0 /* ScreenObserverToken.swift */,
 			);
 			path = Observation;
+			sourceTree = "<group>";
+		};
+		C01294B42859B2BD0039D06B /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				C01294C22859D81C0039D06B /* Activity */,
+				C01294C12859D8120039D06B /* Item */,
+				C01294CD2859EDAF0039D06B /* ScreenShareAction.swift */,
+				C01294C72859E6BC0039D06B /* Sharing.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		C01294C12859D8120039D06B /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C01294B92859B2EC0039D06B /* SharingCustomItem.swift */,
+				C01294BB2859B2F40039D06B /* SharingItem.swift */,
+				C01294BD2859B3420039D06B /* SharingItemManager.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C01294C22859D81C0039D06B /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				C01294B52859B2C80039D06B /* SharingActivity.swift */,
+				C01294CB2859ECAE0039D06B /* SharingActivityCategory.swift */,
+				C01294BF2859D7C60039D06B /* SharingActivityManager.swift */,
+				C01294C92859E7AF0039D06B /* SharingActivityType.swift */,
+				C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */,
+				C01294C52859E47A0039D06B /* SharingSilentActivity.swift */,
+				C01294C32859DEC70039D06B /* SharingVisualActivity.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		C015F47E265A8360003ECCB0 /* Payload */ = {
@@ -1242,6 +1301,7 @@
 				C0866B44285344DC00B85C54 /* Haptics */,
 				C0885FE926B6C60B00CA0A77 /* MediaPicker */,
 				C09591532853128D00729E93 /* Safari */,
+				C01294B42859B2BD0039D06B /* Sharing */,
 				C0885FF626B6C60B00CA0A77 /* StoreProduct */,
 				C0885FD126B6C60B00CA0A77 /* StoreReview */,
 				C0885FDA26B6C60B00CA0A77 /* URL */,
@@ -1881,6 +1941,7 @@
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C0A728632799487B000BFBF9 /* AnyDeeplink.swift in Sources */,
 				C0238F0427A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */,
+				C01294C42859DEC70039D06B /* SharingVisualActivity.swift in Sources */,
 				C0A728C0279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C0866B462853545000B85C54 /* ScreenImpactOccurredAction.swift in Sources */,
 				C052C7D02823A94500132875 /* ScreenObserverPredicate.swift in Sources */,
@@ -1909,10 +1970,12 @@
 				C0885FAC26B6C0A500CA0A77 /* ScreenStackRootAction.swift in Sources */,
 				C088601126B6C60B00CA0A77 /* ScreenShowDocumentPreviewAction.swift in Sources */,
 				C0885F8A26B6BA0100CA0A77 /* ScreenRootTransitionAnimation.swift in Sources */,
+				C01294BE2859B3420039D06B /* SharingItemManager.swift in Sources */,
 				C058492D2846761D00DE42F0 /* ScreenObserverToken.swift in Sources */,
 				C058493428475F1E00DE42F0 /* ScreenObservatory.swift in Sources */,
 				C06DFA0C276EB20200D751C4 /* Deeplink.swift in Sources */,
 				C05F488D26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */,
+				C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */,
 				C093BA7C2797F33E0093F29B /* ScreenWindowAction.swift in Sources */,
 				C088600726B6C60B00CA0A77 /* AlertTextFieldsManager.swift in Sources */,
 				C0238ECC27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */,
@@ -1933,6 +1996,7 @@
 				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
 				C055B45D2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift in Sources */,
 				C08FA8F126BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
+				C01294C62859E47A0039D06B /* SharingSilentActivity.swift in Sources */,
 				C0270CA325F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
 				C09591582853257700729E93 /* InvalidSafariURLError.swift in Sources */,
 				C0C3427226BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
@@ -1955,6 +2019,7 @@
 				C088601726B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C058493228475F0200DE42F0 /* DefaultScreenObservatory.swift in Sources */,
+				C01294C02859D7C60039D06B /* SharingActivityManager.swift in Sources */,
 				C088603126B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
 				C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
 				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
@@ -1965,6 +2030,7 @@
 				C06DFA10276EB80600D751C4 /* URLDeeplink.swift in Sources */,
 				C088600326B6C60B00CA0A77 /* Alert.swift in Sources */,
 				C088602926B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
+				C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */,
 				C0A7286F27996E4A000BFBF9 /* AnyNotificationDeeplink.swift in Sources */,
 				C05849402847766500DE42F0 /* ScreenObserverSharedStorage.swift in Sources */,
 				C0238EF427A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
@@ -1985,6 +2051,7 @@
 				C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
 				C088600526B6C60B00CA0A77 /* ScreenShowAlertAction.swift in Sources */,
+				C01294BC2859B2F40039D06B /* SharingItem.swift in Sources */,
 				C088603F26B6C60B00CA0A77 /* MediaPickerManager.swift in Sources */,
 				C06B5824262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
@@ -1998,6 +2065,7 @@
 				C0238EF727A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */,
 				C0885F7826B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
 				C0D5799427A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
+				C01294C82859E6BC0039D06B /* Sharing.swift in Sources */,
 				C088601F26B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
 				C0238EEE27A7DD9200148E91 /* DeeplinkInvalidContextError.swift in Sources */,
 				C0A72874279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
@@ -2034,7 +2102,9 @@
 				C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C0A728A4279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088602F26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift in Sources */,
+				C01294CC2859ECAE0039D06B /* SharingActivityCategory.swift in Sources */,
 				C0885FFB26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
+				C01294CA2859E7AF0039D06B /* SharingActivityType.swift in Sources */,
 				C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C0959146285256CE00729E93 /* UIApplicationShortcutItem+Extensions.swift in Sources */,
 				C088600926B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
@@ -2052,6 +2122,7 @@
 				C0AAD99325EEC1A50087439E /* UIWindow+ScreenVisibleContainer.swift in Sources */,
 				C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C05E19C0266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift in Sources */,
+				C01294B62859B2C80039D06B /* SharingActivity.swift in Sources */,
 				C0885F6026B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */,
 				C015F480265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
 				C0238ED027A40F6C00148E91 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
@@ -2096,6 +2167,7 @@
 				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
 				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
 				C0885F6E26B6BA0100CA0A77 /* ScreenRefreshAction.swift in Sources */,
+				C01294CE2859EDAF0039D06B /* ScreenShareAction.swift in Sources */,
 				C088601B26B6C60B00CA0A77 /* ScreenOpenSettingsAction.swift in Sources */,
 				C05E19C2266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift in Sources */,
 				C0885FAE26B6C0A500CA0A77 /* ScreenStackPushModifier.swift in Sources */,
