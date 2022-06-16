@@ -27,6 +27,10 @@ public protocol SharingCustomItem: CustomStringConvertible {
 
 extension SharingCustomItem {
 
+    public var description: String {
+        "\(type(of: self))"
+    }
+
     #if canImport(LinkPresentation)
     @available(iOS 13.0, *)
     public var metadata: LPLinkMetadata? {

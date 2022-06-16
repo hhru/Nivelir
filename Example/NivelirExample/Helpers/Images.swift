@@ -11,4 +11,6 @@ enum Images {
     static let unauthorized = UIImage(named: "Unauthorized")!
     static let chevron = UIImage(named: "Chevron")!
     static let moreTab = UIImage(named: "MoreTab")!
+    static let share = UIImage(named: "Share")!
+    static let browser = UIImage(named: "Browser")!
 }
