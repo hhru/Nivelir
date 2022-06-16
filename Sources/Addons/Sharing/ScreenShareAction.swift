@@ -80,9 +80,11 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
 
         sharingContainer.excludedActivityTypes = sharing.excludedActivityTypes.nonEmpty
 
+        #if swift(>=5.6)
         if #available(iOS 15.4, *) {
             sharingContainer.allowsProminentActivity = sharing.allowsProminentActivity
         }
+        #endif
 
         sharingContainer.completionWithItemsHandler = { activityType, completed, items, error in
             sharing.didFinish?(
