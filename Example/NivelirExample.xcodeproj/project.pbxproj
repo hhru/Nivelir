@@ -54,6 +54,8 @@
 		C07888E72659133500F09955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
 		C07888E9265940C600F09955 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
 		C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C07EB430285B036C001FD54E /* SharingNivelirLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EB42E285B036C001FD54E /* SharingNivelirLinkItem.swift */; };
+		C07EB431285B036C001FD54E /* SharingOpenInBrowserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EB42F285B036C001FD54E /* SharingOpenInBrowserActivity.swift */; };
 		C0B4EDF2280ACBB7009BC54E /* AuthorizationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4EDF1280ACBB7009BC54E /* AuthorizationObserver.swift */; };
 		C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B5A45226625DC100D7521C /* ChatScreen.swift */; };
 		C0BF2F58265A709700419426 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E226590C1800F09955 /* UITableView+Reusable.swift */; };
@@ -159,6 +161,8 @@
 		C07888E62659133500F09955 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C07888E8265940C600F09955 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
+		C07EB42E285B036C001FD54E /* SharingNivelirLinkItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingNivelirLinkItem.swift; sourceTree = "<group>"; };
+		C07EB42F285B036C001FD54E /* SharingOpenInBrowserActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingOpenInBrowserActivity.swift; sourceTree = "<group>"; };
 		C0B4EDF1280ACBB7009BC54E /* AuthorizationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationObserver.swift; sourceTree = "<group>"; };
 		C0B5A45226625DC100D7521C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		C0BF2F45265A704400419426 /* NivelirExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NivelirExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,6 +322,7 @@
 			children = (
 				C0238F3E27A9599000148E91 /* Authorization */,
 				C0D562FB27AA9CE0000027CF /* Deeplinks */,
+				C07EB42D285B036C001FD54E /* Sharing */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -396,6 +401,15 @@
 				C07888E226590C1800F09955 /* UITableView+Reusable.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		C07EB42D285B036C001FD54E /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				C07EB42E285B036C001FD54E /* SharingNivelirLinkItem.swift */,
+				C07EB42F285B036C001FD54E /* SharingOpenInBrowserActivity.swift */,
+			);
+			path = Sharing;
 			sourceTree = "<group>";
 		};
 		C0D562FB27AA9CE0000027CF /* Deeplinks */ = {
@@ -730,9 +744,11 @@
 				C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */,
 				C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */,
 				C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */,
+				C07EB430285B036C001FD54E /* SharingNivelirLinkItem.swift in Sources */,
 				C0238F1E27A93D1000148E91 /* RoomListViewController.swift in Sources */,
 				8EBD6C4F27CD0B6E00C441B3 /* MoreExampleListCell.swift in Sources */,
 				C0238F1C27A933A400148E91 /* RoomListCell.swift in Sources */,
+				C07EB431285B036C001FD54E /* SharingOpenInBrowserActivity.swift in Sources */,
 				C057512827A9AE5400396BB7 /* ServiceSharedScope.swift in Sources */,
 				C0238F3027A948ED00148E91 /* ScreenAuthorizeActionScreens.swift in Sources */,
 				8EBD6C5A27CD206D00C441B3 /* LandmarkCircleImage.swift in Sources */,

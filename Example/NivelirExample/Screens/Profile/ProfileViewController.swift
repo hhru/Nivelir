@@ -34,6 +34,18 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     }
 
     #if os(iOS)
+    @objc private func shareNivelirLink(sender: UIBarButtonItem) {
+        let sharing = Sharing(
+            items: [.nivelirLink],
+            applicationActivities: [.openInBrowser],
+            anchor: .barButtonItem(sender)
+        )
+
+        screenNavigator.navigate(from: self) { route in
+            route.share(sharing)
+        }
+    }
+
     private func pickPhotoImageFromCamera() {
         let mediaPicker = MediaPicker(source: .camera) { result in
             self.screenNavigator.navigate(from: self) { $0.dismiss() }
@@ -147,6 +159,19 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         }
     }
 
+    #if os(iOS)
+    private func setupShareBarButton() {
+        let rightBarButtonItem = UIBarButtonItem(
+            image: Images.share,
+            style: .plain,
+            target: self,
+            action: #selector(shareNivelirLink(sender:))
+        )
+
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    #endif
+
     override func loadView() {
         view = ProfileView()
     }
@@ -169,6 +194,10 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
         setupProfileView()
         setupProfileUnauthorizedView()
+
+        #if os(iOS)
+        setupShareBarButton()
+        #endif
     }
 
     override func viewWillAppear(_ animated: Bool) {
