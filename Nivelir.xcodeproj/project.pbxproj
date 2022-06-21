@@ -1287,9 +1287,9 @@
 		C078FCFE2861A1DA0008FC6E /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				C078FDA72861C7D00008FC6E /* Extensions */,
 				C078FD1F2861A1DA0008FC6E /* Animation */,
 				C078FD232861A1DA0008FC6E /* Content */,
+				C078FDA72861C7D00008FC6E /* Extensions */,
 				C078FCFF2861A1DA0008FC6E /* Footer */,
 				C078FD272861A1DA0008FC6E /* Header */,
 				C078FD082861A1DA0008FC6E /* Indicator */,
@@ -3035,7 +3035,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
@@ -3064,7 +3064,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
@@ -3134,7 +3134,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;
@@ -3164,7 +3164,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
 				PRODUCT_NAME = Nivelir;
 				SDKROOT = appletvos;

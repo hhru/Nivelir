@@ -312,8 +312,8 @@
 		C0238F1F27A93D2000148E91 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C078FDBA2861CE530008FC6E /* Profile */,
 				C0238F2027A93D2D00148E91 /* Authorization */,
+				C078FDBA2861CE530008FC6E /* Profile */,
 			);
 			path = Services;
 			sourceTree = "<group>";
