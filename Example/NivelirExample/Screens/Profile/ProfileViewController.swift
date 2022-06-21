@@ -129,8 +129,7 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private func uploadPhoto(image: UIImage) {
         screenNavigator.navigate(from: self) { route in
-            route
-                .dismiss()
+            route.dismiss()
         }
 
         profileService.uploadPhoto(
