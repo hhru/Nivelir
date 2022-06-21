@@ -13,7 +13,7 @@ public struct ProgressImageIndicator: ProgressIndicator {
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
-        "Image"
+        ".image"
     }
 
     public init(

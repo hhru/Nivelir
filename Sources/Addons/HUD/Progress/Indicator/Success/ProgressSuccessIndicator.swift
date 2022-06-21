@@ -11,7 +11,7 @@ public struct ProgressSuccessIndicator: ProgressIndicator {
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
-        "Success"
+        ".success"
     }
 
     public init(

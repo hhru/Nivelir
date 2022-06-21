@@ -11,7 +11,7 @@ public struct ProgressSpinnerIndicator: ProgressIndicator {
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
-        "Spinner"
+        ".spinner"
     }
 
     public init(

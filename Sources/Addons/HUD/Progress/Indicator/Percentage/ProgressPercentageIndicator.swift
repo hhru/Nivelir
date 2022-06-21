@@ -14,7 +14,7 @@ public struct ProgressPercentageIndicator: ProgressIndicator {
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
-        "Percentage(\(ratio))"
+        ".percentage(\(ratio))"
     }
 
     public init(

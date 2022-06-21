@@ -16,7 +16,7 @@ public struct ProgressMessageFooter: ProgressFooter {
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
-        "Message(\"\(text)\")"
+        ".message(\"\(text)\")"
     }
 
     public init(
