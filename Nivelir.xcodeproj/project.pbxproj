@@ -1287,9 +1287,9 @@
 		C078FCFE2861A1DA0008FC6E /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				C078FDA72861C7D00008FC6E /* Extensions */,
 				C078FD1F2861A1DA0008FC6E /* Animation */,
 				C078FD232861A1DA0008FC6E /* Content */,
+				C078FDA72861C7D00008FC6E /* Extensions */,
 				C078FCFF2861A1DA0008FC6E /* Footer */,
 				C078FD272861A1DA0008FC6E /* Header */,
 				C078FD082861A1DA0008FC6E /* Indicator */,
