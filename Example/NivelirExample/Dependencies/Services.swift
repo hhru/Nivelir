@@ -29,6 +29,10 @@ struct Services {
             DefaultAuthorizationService()
         }
     }
+
+    func profileService() -> ProfileService {
+        DefaultProfileService(authorizationService: authorizationService())
+    }
 }
 
 extension Services: ScreenAuthorizeActionServices { }

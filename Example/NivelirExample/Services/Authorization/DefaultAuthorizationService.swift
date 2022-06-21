@@ -7,11 +7,24 @@ final class DefaultAuthorizationService: AuthorizationService {
         set { UserDefaults.standard.set(newValue, forKey: #function) }
     }
 
-    func login(phoneNumber: String) {
-        isAuthorized = true
+    func login(
+        phoneNumber: String,
+        completion: @escaping (_ result: Result<Void, Error>) -> Void
+    ) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            let random = Int.random(in: 1...10)
+
+            guard random < 8 else {
+                return completion(.failure(AuthorizationError.unavailable))
+            }
+
+            self.isAuthorized = true
+
+            completion(.success(Void()))
+        }
     }
 
     func logout() {
-        isAuthorized = false
+        self.isAuthorized = false
     }
 }
