@@ -43,8 +43,10 @@ custom_categories:
       - ScreenActionStorage
       - AnyScreenAction
 
+      - ScreenFailAction
       - ScreenFoldAction
       - ScreenFromAction
+      - ScreenGetAction
       - ScreenMakeVisibleAction
       - ScreenNavigateAction
       - ScreenWaitAction
@@ -79,8 +81,8 @@ custom_categories:
       - ScreenStackCustomAnimation
       - ScreenStackTransitionAnimation
       - ScreenStackRootAction
-      - ScreenStackVisibleAction
       - ScreenStackTopAction
+      - ScreenStackVisibleAction
 
       - ScreenSelectTabAction
       - ScreenTabAnimation
@@ -92,11 +94,11 @@ custom_categories:
 
       - ScreenMakeKeyAction
       - ScreenMakeKeyAndVisibleAction
+      - ScreenRootAction
       - ScreenSetRootAction
       - ScreenRootAnimation
       - ScreenRootCustomAnimation
       - ScreenRootTransitionAnimation
-      - ScreenRootAction
 
   - name: Errors
     children:
@@ -109,7 +111,9 @@ custom_categories:
   - name: Observation
     children:
       - ScreenObservation
-      - ScreenObservationTarget
+      - ScreenObserver
+      - ScreenObserverPredicate
+      - ScreenObserverToken
 
   - name: Navigator
     children:
@@ -132,18 +136,23 @@ custom_categories:
       - AnyDeeplink
       - DeeplinkManager
       - DeeplinkHandler
+      - DeeplinkScope
+
       - DeeplinkError
       - DeeplinkInvalidContextError
       - DeeplinkInvalidRoutesError
+
       - NotificationDeeplink
       - NotificationDeeplinkUserInfoDecoder
       - NotificationDeeplinkUserInfoOptions
       - AnyNotificationDeeplink
       - NotificationDeeplinkInvalidUserInfoError
+
       - ShortcutDeeplink
       - ShortcutDeeplinkUserInfoDecoder
       - ShortcutDeeplinkUserInfoOptions
       - AnyShortcutDeeplink
+
       - URLDeeplink
       - URLDeeplinkQueryDecoder
       - URLDeeplinkQueryOptions
@@ -176,6 +185,57 @@ custom_categories:
       - DocumentPreviewAnchor
       - ScreenShowDocumentPreviewAction
 
+  - name: Haptics
+    children:
+      - ScreenImpactOccurredAction
+      - ScreenNotificationOccurredAction
+      - ScreenSelectionChangedAction
+
+  - name: HUD
+    children:
+      - HUD
+      - HUDStyle
+      - HUDAnimation
+      - HUDCustomAnimation
+      - HUDDefaultAnimation
+      - ScreenHideHUDAction
+      - ScreenShowHUDAction
+
+      - Progress
+      - ProgressView
+
+      - ProgressAnimation
+      - ProgressCustomAnimation
+      - ProgressDefaultAnimation
+
+      - AnyProgressContent
+      - ProgressContent
+      - ProgressContentView
+
+      - ProgressHeader
+      - ProgressEmptyHeader
+      - ProgressEmptyHeaderView
+
+      - ProgressFooter
+      - ProgressMessageFooter
+      - ProgressMessageFooterView
+      - ProgressEmptyFooter
+      - ProgressEmptyFooterView
+
+      - ProgressIndicator
+      - ProgressActivityIndicator
+      - ProgressActivityIndicatorView
+      - ProgressFailureIndicator
+      - ProgressFailureIndicatorView
+      - ProgressImageIndicator
+      - ProgressImageIndicatorView
+      - ProgressPercentageIndicator
+      - ProgressPercentageIndicatorView
+      - ProgressSpinnerIndicator
+      - ProgressSpinnerIndicatorView
+      - ProgressSuccessIndicator
+      - ProgressSuccessIndicatorView
+
   - name: MediaPicker
     children:
       - MediaPicker
@@ -188,6 +248,25 @@ custom_categories:
       - MediaPickerSourceAccessDeniedError
       - UnavailableMediaPickerSourceError
       - UnavailableMediaPickerTypesError
+
+  - name: Safari
+    children:
+      - Safari
+      - ScreenShowSafariAction
+      - InvalidSafariURLError
+
+  - name: Sharing
+    children:
+      - Sharing
+      - SharingItem
+      - SharingCustomItem
+      - SharingActivity
+      - SharingActivityCategory
+      - SharingActivityType
+      - SharingCustomActivity
+      - SharingSilentActivity
+      - SharingVisualActivity
+      - ScreenShareAction
 
   - name: StoreProduct
     children:
