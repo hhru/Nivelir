@@ -54,6 +54,18 @@
 		C07888E72659133500F09955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E62659133500F09955 /* Images.swift */; };
 		C07888E9265940C600F09955 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888E8265940C600F09955 /* ProfileView.swift */; };
 		C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07888EC2659579700F09955 /* ChatEmptyView.swift */; };
+		C078FDA22861C3060008FC6E /* Alert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA12861C3060008FC6E /* Alert+Extensions.swift */; };
+		C078FDA42861C4070008FC6E /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA32861C4070008FC6E /* AuthorizationError.swift */; };
+		C078FDA62861C6870008FC6E /* HUD+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA52861C6870008FC6E /* HUD+Extensions.swift */; };
+		C078FDBC2861CE5C0008FC6E /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDBB2861CE5C0008FC6E /* ProfileService.swift */; };
+		C078FDBE2861CE9A0008FC6E /* ProfileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDBD2861CE9A0008FC6E /* ProfileError.swift */; };
+		C078FDC02861CEE20008FC6E /* DefaultProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDBF2861CEE20008FC6E /* DefaultProfileService.swift */; };
+		C078FDC12861E4470008FC6E /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA32861C4070008FC6E /* AuthorizationError.swift */; };
+		C078FDC22861E4520008FC6E /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDBB2861CE5C0008FC6E /* ProfileService.swift */; };
+		C078FDC32861E4560008FC6E /* ProfileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDBD2861CE9A0008FC6E /* ProfileError.swift */; };
+		C078FDC42861E4580008FC6E /* DefaultProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDBF2861CEE20008FC6E /* DefaultProfileService.swift */; };
+		C078FDC52861E45D0008FC6E /* HUD+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA52861C6870008FC6E /* HUD+Extensions.swift */; };
+		C078FDC62861E45D0008FC6E /* Alert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA12861C3060008FC6E /* Alert+Extensions.swift */; };
 		C07EB430285B036C001FD54E /* SharingNivelirLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EB42E285B036C001FD54E /* SharingNivelirLinkItem.swift */; };
 		C07EB431285B036C001FD54E /* SharingOpenInBrowserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EB42F285B036C001FD54E /* SharingOpenInBrowserActivity.swift */; };
 		C0B4EDF2280ACBB7009BC54E /* AuthorizationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B4EDF1280ACBB7009BC54E /* AuthorizationObserver.swift */; };
@@ -161,6 +173,12 @@
 		C07888E62659133500F09955 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C07888E8265940C600F09955 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C07888EC2659579700F09955 /* ChatEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmptyView.swift; sourceTree = "<group>"; };
+		C078FDA12861C3060008FC6E /* Alert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extensions.swift"; sourceTree = "<group>"; };
+		C078FDA32861C4070008FC6E /* AuthorizationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationError.swift; sourceTree = "<group>"; };
+		C078FDA52861C6870008FC6E /* HUD+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Extensions.swift"; sourceTree = "<group>"; };
+		C078FDBB2861CE5C0008FC6E /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		C078FDBD2861CE9A0008FC6E /* ProfileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileError.swift; sourceTree = "<group>"; };
+		C078FDBF2861CEE20008FC6E /* DefaultProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProfileService.swift; sourceTree = "<group>"; };
 		C07EB42E285B036C001FD54E /* SharingNivelirLinkItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingNivelirLinkItem.swift; sourceTree = "<group>"; };
 		C07EB42F285B036C001FD54E /* SharingOpenInBrowserActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingOpenInBrowserActivity.swift; sourceTree = "<group>"; };
 		C0B4EDF1280ACBB7009BC54E /* AuthorizationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationObserver.swift; sourceTree = "<group>"; };
@@ -294,6 +312,7 @@
 		C0238F1F27A93D2000148E91 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C078FDBA2861CE530008FC6E /* Profile */,
 				C0238F2027A93D2D00148E91 /* Authorization */,
 			);
 			path = Services;
@@ -302,6 +321,7 @@
 		C0238F2027A93D2D00148E91 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				C078FDA32861C4070008FC6E /* AuthorizationError.swift */,
 				C0238F2127A93D3E00148E91 /* AuthorizationService.swift */,
 				C0238F2327A93D7C00148E91 /* DefaultAuthorizationService.swift */,
 			);
@@ -322,6 +342,7 @@
 			children = (
 				C0238F3E27A9599000148E91 /* Authorization */,
 				C0D562FB27AA9CE0000027CF /* Deeplinks */,
+				C078FDA02861C2EA0008FC6E /* Extensions */,
 				C07EB42D285B036C001FD54E /* Sharing */,
 			);
 			path = Routing;
@@ -401,6 +422,25 @@
 				C07888E226590C1800F09955 /* UITableView+Reusable.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		C078FDA02861C2EA0008FC6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C078FDA12861C3060008FC6E /* Alert+Extensions.swift */,
+				C078FDA52861C6870008FC6E /* HUD+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C078FDBA2861CE530008FC6E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C078FDBF2861CEE20008FC6E /* DefaultProfileService.swift */,
+				C078FDBD2861CE9A0008FC6E /* ProfileError.swift */,
+				C078FDBB2861CE5C0008FC6E /* ProfileService.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		C07EB42D285B036C001FD54E /* Sharing */ = {
@@ -704,6 +744,7 @@
 				C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */,
 				C0238F3427A9493C00148E91 /* Screens.swift in Sources */,
 				8EBD6C5627CD1FC600C441B3 /* LandmarkView.swift in Sources */,
+				C078FDC02861CEE20008FC6E /* DefaultProfileService.swift in Sources */,
 				C057512F27A9AEA200396BB7 /* ServiceSharedStorage.swift in Sources */,
 				C0238F3B27A94C7200148E91 /* AuthorizationViewController.swift in Sources */,
 				C0238F2227A93D3E00148E91 /* AuthorizationService.swift in Sources */,
@@ -717,6 +758,7 @@
 				C0238F3D27A9544300148E91 /* RoomListScreen.swift in Sources */,
 				C0E9D29C25FC93CA00ABDBE5 /* HomeTabBarController.swift in Sources */,
 				C07888E5265910AE00F09955 /* Colors.swift in Sources */,
+				C078FDA62861C6870008FC6E /* HUD+Extensions.swift in Sources */,
 				C057512627A9AE4800396BB7 /* ServiceScope.swift in Sources */,
 				C0238F3227A9492400148E91 /* ScreenAuthorizeActionServices.swift in Sources */,
 				C0268C20265909E400380F76 /* ChatListCell.swift in Sources */,
@@ -733,18 +775,22 @@
 				C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */,
 				C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */,
 				8EBD6C5127CD131500C441B3 /* MoreExampleListModel.swift in Sources */,
+				C078FDBE2861CE9A0008FC6E /* ProfileError.swift in Sources */,
 				C0238F3927A94C5C00148E91 /* AuthorizationScreen.swift in Sources */,
 				C0238F2827A93DAE00148E91 /* Services.swift in Sources */,
 				8EBD6C4D27CD0A6A00C441B3 /* MoreExampleListViewController.swift in Sources */,
+				C078FDA42861C4070008FC6E /* AuthorizationError.swift in Sources */,
 				C07888E9265940C600F09955 /* ProfileView.swift in Sources */,
 				C0D562FE27AA9CE0000027CF /* ChatDeeplink.swift in Sources */,
 				C07888E126590BE100F09955 /* Reusable.swift in Sources */,
 				C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */,
+				C078FDBC2861CE5C0008FC6E /* ProfileService.swift in Sources */,
 				C07888E72659133500F09955 /* Images.swift in Sources */,
 				C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */,
 				C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */,
 				C0E9D2A325FC9A8600ABDBE5 /* ChatViewController.swift in Sources */,
 				C07EB430285B036C001FD54E /* SharingNivelirLinkItem.swift in Sources */,
+				C078FDA22861C3060008FC6E /* Alert+Extensions.swift in Sources */,
 				C0238F1E27A93D1000148E91 /* RoomListViewController.swift in Sources */,
 				8EBD6C4F27CD0B6E00C441B3 /* MoreExampleListCell.swift in Sources */,
 				C0238F1C27A933A400148E91 /* RoomListCell.swift in Sources */,
@@ -764,13 +810,16 @@
 				C0C06DF427AA618A002B7F03 /* AuthorizationViewController.swift in Sources */,
 				C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */,
 				C034D8162816B74500DCF391 /* ScreenAuthorizeActionObserver.swift in Sources */,
+				C078FDC62861E45D0008FC6E /* Alert+Extensions.swift in Sources */,
 				C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */,
+				C078FDC42861E4580008FC6E /* DefaultProfileService.swift in Sources */,
 				C0BF2F63265A70AA00419426 /* HomeTabBarController.swift in Sources */,
 				C0BF2F6B265A70CC00419426 /* SceneDelegate.swift in Sources */,
 				C0BF2F59265A709700419426 /* Reusable.swift in Sources */,
 				C0C06DF927AA619D002B7F03 /* ChatScreen.swift in Sources */,
 				C0C06DF327AA618A002B7F03 /* AuthorizationView.swift in Sources */,
 				C0C06E0027AA61CB002B7F03 /* AuthorizationService.swift in Sources */,
+				C078FDC12861E4470008FC6E /* AuthorizationError.swift in Sources */,
 				C0C06DFA27AA61AF002B7F03 /* ServiceContainer.swift in Sources */,
 				C0C06E0127AA61CB002B7F03 /* DefaultAuthorizationService.swift in Sources */,
 				C0BF2F5F265A70A600419426 /* ChatListScreen.swift in Sources */,
@@ -780,6 +829,9 @@
 				C034D8172816B75900DCF391 /* AuthorizationObserver.swift in Sources */,
 				C0C06DF027AA617F002B7F03 /* Services.swift in Sources */,
 				C0BF2F67265A70AE00419426 /* ProfileViewController.swift in Sources */,
+				C078FDC32861E4560008FC6E /* ProfileError.swift in Sources */,
+				C078FDC22861E4520008FC6E /* ProfileService.swift in Sources */,
+				C078FDC52861E45D0008FC6E /* HUD+Extensions.swift in Sources */,
 				C05C623327AAD3520054F0BC /* ChatDeeplinkPayload.swift in Sources */,
 				C0BF2F5B265A709700419426 /* Images.swift in Sources */,
 				C0C06E0427AA61DB002B7F03 /* ScreenAuthorizeActionServices.swift in Sources */,

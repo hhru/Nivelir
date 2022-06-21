@@ -44,7 +44,6 @@ whitelist_rules:
   - empty_xctest_method
   - enum_case_associated_values_count
   - explicit_init
-  - extension_access_modifier
   - file_header
   - file_length
   - file_name

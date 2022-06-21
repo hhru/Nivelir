@@ -4,6 +4,7 @@ import Nivelir
 final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     let authorizationService: AuthorizationService
+    let profileService: ProfileService
     let screens: Screens
     let screenKey: ScreenKey
     let screenNavigator: ScreenNavigator
@@ -16,11 +17,13 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     init(
         authorizationService: AuthorizationService,
+        profileService: ProfileService,
         screens: Screens,
         screenKey: ScreenKey,
         screenNavigator: ScreenNavigator
     ) {
         self.authorizationService = authorizationService
+        self.profileService = profileService
         self.screens = screens
         self.screenKey = screenKey
         self.screenNavigator = screenNavigator
@@ -48,10 +51,8 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private func pickPhotoImageFromCamera() {
         let mediaPicker = MediaPicker(source: .camera) { result in
-            self.screenNavigator.navigate(from: self) { $0.dismiss() }
-
-            if let result = result {
-                self.profileView?.photoImage = result.editedImage ?? result.originalImage
+            if let image = result?.editedImage ?? result?.originalImage {
+                self.uploadPhoto(image: image)
             }
         }
 
@@ -78,10 +79,8 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private func pickPhotoImageFromPhotoLibrary() {
         let mediaPicker = MediaPicker { result in
-            self.screenNavigator.navigate(from: self) { $0.dismiss() }
-
-            if let result = result {
-                self.profileView?.photoImage = result.editedImage ?? result.originalImage
+            if let image = result?.editedImage ?? result?.originalImage {
+                self.uploadPhoto(image: image)
             }
         }
 
@@ -127,6 +126,37 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     #else
     private func pickPhotoImage(sender: UIView) { }
     #endif
+
+    private func uploadPhoto(image: UIImage) {
+        screenNavigator.navigate(from: self) { route in
+            route
+                .dismiss()
+        }
+
+        profileService.uploadPhoto(
+            image: image,
+            progress: { ratio in
+                self.screenNavigator.navigate { route in
+                    route.showHUD(.percentage(ratio: ratio))
+                }
+            },
+            completion: { result in
+                switch result {
+                case .success:
+                    self.profileView?.photoImage = image
+
+                    self.screenNavigator.navigate { route in
+                        route.showHUD(.success, duration: 1.0)
+                    }
+
+                case .failure:
+                    self.screenNavigator.navigate { route in
+                        route.showHUD(.failure, duration: 1.0)
+                    }
+                }
+            }
+        )
+    }
 
     private func showAuthorization() {
         screenNavigator.navigate(to: screens.showAuthorizationRoute())
@@ -212,63 +242,4 @@ extension ProfileViewController: AuthorizationObserver {
     func authorizationFinished(isAuthorized: Bool) {
         profileUnauthorizedView?.isHidden = isAuthorized
     }
-}
-
-extension Alert {
-
-    static let somethingWentWrong = Self(
-        title: "Error",
-        message: """
-            Something went wrong.
-            """,
-        actions: AlertAction(title: "OK")
-    )
-
-    static let unavailableMediaTypes = Self(
-        title: "Error",
-        message: """
-            Your device does not support the required media types.
-            """,
-        actions: AlertAction(title: "OK")
-    )
-
-    static let unavailableMediaSource = Self(
-        title: "Error",
-        message: """
-            Your device does not support the selected media source.
-            """,
-        actions: AlertAction(title: "OK")
-    )
-
-    static let photoLibraryPermissionRequired = Self(
-        title: "Permission Required",
-        message: """
-            The app needs permission to access your photo library to select a photo. \
-            Please go to Setting > Privacy > Photos and enable Nivelir Example.
-            """,
-        actions: [
-            AlertAction(title: "Not Now"),
-            AlertAction(title: "Open Settings") {
-                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(settingsURL)
-                }
-            }
-        ]
-    )
-
-    static let cameraPermissionRequired = Self(
-        title: "Permission Required",
-        message: """
-            The app needs permission to access your device's camera to take a photo. \
-            Please go to Setting > Privacy > Camera, and enable Nivelir Example.
-            """,
-        actions: [
-            AlertAction(title: "Not Now"),
-            AlertAction(title: "Open Settings") {
-                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(settingsURL)
-                }
-            }
-        ]
-    )
 }

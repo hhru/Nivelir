@@ -9,6 +9,7 @@ struct ProfileScreen: Screen {
     func build(navigator: ScreenNavigator) -> UIViewController {
         ProfileViewController(
             authorizationService: services.authorizationService(),
+            profileService: services.profileService(),
             screens: screens,
             screenKey: key,
             screenNavigator: navigator

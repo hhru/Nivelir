@@ -147,6 +147,110 @@
 		C06DFA10276EB80600D751C4 /* URLDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA0F276EB80600D751C4 /* URLDeeplink.swift */; };
 		C06DFA13276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA12276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift */; };
 		C06DFA15276EBDF900D751C4 /* AnyURLDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA14276EBDF900D751C4 /* AnyURLDeeplink.swift */; };
+		C078FD332861A1DA0008FC6E /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FCFB2861A1DA0008FC6E /* CGSize+Extensions.swift */; };
+		C078FD342861A1DA0008FC6E /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FCFB2861A1DA0008FC6E /* CGSize+Extensions.swift */; };
+		C078FD352861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FCFC2861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift */; };
+		C078FD362861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FCFC2861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift */; };
+		C078FD372861A1DA0008FC6E /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FCFD2861A1DA0008FC6E /* UIApplication+Extensions.swift */; };
+		C078FD382861A1DA0008FC6E /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FCFD2861A1DA0008FC6E /* UIApplication+Extensions.swift */; };
+		C078FD392861A1DA0008FC6E /* ProgressFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD002861A1DA0008FC6E /* ProgressFooter.swift */; };
+		C078FD3A2861A1DA0008FC6E /* ProgressFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD002861A1DA0008FC6E /* ProgressFooter.swift */; };
+		C078FD3B2861A1DA0008FC6E /* ProgressEmptyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD022861A1DA0008FC6E /* ProgressEmptyFooterView.swift */; };
+		C078FD3C2861A1DA0008FC6E /* ProgressEmptyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD022861A1DA0008FC6E /* ProgressEmptyFooterView.swift */; };
+		C078FD3D2861A1DA0008FC6E /* ProgressEmptyFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD032861A1DA0008FC6E /* ProgressEmptyFooter.swift */; };
+		C078FD3E2861A1DA0008FC6E /* ProgressEmptyFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD032861A1DA0008FC6E /* ProgressEmptyFooter.swift */; };
+		C078FD412861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD062861A1DA0008FC6E /* ProgressMessageFooter.swift */; };
+		C078FD422861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD062861A1DA0008FC6E /* ProgressMessageFooter.swift */; };
+		C078FD432861A1DA0008FC6E /* ProgressMessageFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD072861A1DA0008FC6E /* ProgressMessageFooterView.swift */; };
+		C078FD442861A1DA0008FC6E /* ProgressMessageFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD072861A1DA0008FC6E /* ProgressMessageFooterView.swift */; };
+		C078FD452861A1DA0008FC6E /* ProgressSuccessIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0A2861A1DA0008FC6E /* ProgressSuccessIndicator.swift */; };
+		C078FD462861A1DA0008FC6E /* ProgressSuccessIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0A2861A1DA0008FC6E /* ProgressSuccessIndicator.swift */; };
+		C078FD472861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0B2861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift */; };
+		C078FD482861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0B2861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift */; };
+		C078FD492861A1DA0008FC6E /* ProgressActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0D2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift */; };
+		C078FD4A2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0D2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift */; };
+		C078FD4B2861A1DA0008FC6E /* ProgressActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0E2861A1DA0008FC6E /* ProgressActivityIndicator.swift */; };
+		C078FD4C2861A1DA0008FC6E /* ProgressActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD0E2861A1DA0008FC6E /* ProgressActivityIndicator.swift */; };
+		C078FD4D2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD102861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift */; };
+		C078FD4E2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD102861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift */; };
+		C078FD4F2861A1DA0008FC6E /* ProgressPercentageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD112861A1DA0008FC6E /* ProgressPercentageIndicator.swift */; };
+		C078FD502861A1DA0008FC6E /* ProgressPercentageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD112861A1DA0008FC6E /* ProgressPercentageIndicator.swift */; };
+		C078FD532861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD142861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift */; };
+		C078FD542861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD142861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift */; };
+		C078FD552861A1DA0008FC6E /* ProgressSpinnerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD152861A1DA0008FC6E /* ProgressSpinnerIndicator.swift */; };
+		C078FD562861A1DA0008FC6E /* ProgressSpinnerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD152861A1DA0008FC6E /* ProgressSpinnerIndicator.swift */; };
+		C078FD572861A1DA0008FC6E /* ProgressImageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD172861A1DA0008FC6E /* ProgressImageIndicator.swift */; };
+		C078FD582861A1DA0008FC6E /* ProgressImageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD172861A1DA0008FC6E /* ProgressImageIndicator.swift */; };
+		C078FD592861A1DA0008FC6E /* ProgressImageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD182861A1DA0008FC6E /* ProgressImageIndicatorView.swift */; };
+		C078FD5A2861A1DA0008FC6E /* ProgressImageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD182861A1DA0008FC6E /* ProgressImageIndicatorView.swift */; };
+		C078FD5B2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1A2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift */; };
+		C078FD5C2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1A2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift */; };
+		C078FD5D2861A1DA0008FC6E /* ProgressFailureIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1B2861A1DA0008FC6E /* ProgressFailureIndicator.swift */; };
+		C078FD5E2861A1DA0008FC6E /* ProgressFailureIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1B2861A1DA0008FC6E /* ProgressFailureIndicator.swift */; };
+		C078FD5F2861A1DA0008FC6E /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1C2861A1DA0008FC6E /* ProgressIndicator.swift */; };
+		C078FD602861A1DA0008FC6E /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1C2861A1DA0008FC6E /* ProgressIndicator.swift */; };
+		C078FD612861A1DA0008FC6E /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1D2861A1DA0008FC6E /* Progress.swift */; };
+		C078FD622861A1DA0008FC6E /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1D2861A1DA0008FC6E /* Progress.swift */; };
+		C078FD632861A1DA0008FC6E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1E2861A1DA0008FC6E /* ProgressView.swift */; };
+		C078FD642861A1DA0008FC6E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD1E2861A1DA0008FC6E /* ProgressView.swift */; };
+		C078FD652861A1DA0008FC6E /* ProgressDefaultAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD202861A1DA0008FC6E /* ProgressDefaultAnimation.swift */; };
+		C078FD662861A1DA0008FC6E /* ProgressDefaultAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD202861A1DA0008FC6E /* ProgressDefaultAnimation.swift */; };
+		C078FD672861A1DA0008FC6E /* ProgressCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD212861A1DA0008FC6E /* ProgressCustomAnimation.swift */; };
+		C078FD682861A1DA0008FC6E /* ProgressCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD212861A1DA0008FC6E /* ProgressCustomAnimation.swift */; };
+		C078FD692861A1DA0008FC6E /* ProgressAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD222861A1DA0008FC6E /* ProgressAnimation.swift */; };
+		C078FD6A2861A1DA0008FC6E /* ProgressAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD222861A1DA0008FC6E /* ProgressAnimation.swift */; };
+		C078FD6B2861A1DA0008FC6E /* AnyProgressContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD242861A1DA0008FC6E /* AnyProgressContent.swift */; };
+		C078FD6C2861A1DA0008FC6E /* AnyProgressContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD242861A1DA0008FC6E /* AnyProgressContent.swift */; };
+		C078FD6D2861A1DA0008FC6E /* ProgressContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD252861A1DA0008FC6E /* ProgressContent.swift */; };
+		C078FD6E2861A1DA0008FC6E /* ProgressContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD252861A1DA0008FC6E /* ProgressContent.swift */; };
+		C078FD6F2861A1DA0008FC6E /* ProgressContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD262861A1DA0008FC6E /* ProgressContentView.swift */; };
+		C078FD702861A1DA0008FC6E /* ProgressContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD262861A1DA0008FC6E /* ProgressContentView.swift */; };
+		C078FD712861A1DA0008FC6E /* ProgressEmptyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD292861A1DA0008FC6E /* ProgressEmptyHeader.swift */; };
+		C078FD722861A1DA0008FC6E /* ProgressEmptyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD292861A1DA0008FC6E /* ProgressEmptyHeader.swift */; };
+		C078FD732861A1DA0008FC6E /* ProgressEmptyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2A2861A1DA0008FC6E /* ProgressEmptyHeaderView.swift */; };
+		C078FD742861A1DA0008FC6E /* ProgressEmptyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2A2861A1DA0008FC6E /* ProgressEmptyHeaderView.swift */; };
+		C078FD752861A1DA0008FC6E /* ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2B2861A1DA0008FC6E /* ProgressHeader.swift */; };
+		C078FD762861A1DA0008FC6E /* ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2B2861A1DA0008FC6E /* ProgressHeader.swift */; };
+		C078FD792861A1DA0008FC6E /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2D2861A1DA0008FC6E /* HUDView.swift */; };
+		C078FD7A2861A1DA0008FC6E /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2D2861A1DA0008FC6E /* HUDView.swift */; };
+		C078FD7B2861A1DA0008FC6E /* HUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2F2861A1DA0008FC6E /* HUDAnimation.swift */; };
+		C078FD7C2861A1DA0008FC6E /* HUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD2F2861A1DA0008FC6E /* HUDAnimation.swift */; };
+		C078FD7D2861A1DA0008FC6E /* HUDDefaultAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD302861A1DA0008FC6E /* HUDDefaultAnimation.swift */; };
+		C078FD7E2861A1DA0008FC6E /* HUDDefaultAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD302861A1DA0008FC6E /* HUDDefaultAnimation.swift */; };
+		C078FD7F2861A1DA0008FC6E /* HUDCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD312861A1DA0008FC6E /* HUDCustomAnimation.swift */; };
+		C078FD802861A1DA0008FC6E /* HUDCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD312861A1DA0008FC6E /* HUDCustomAnimation.swift */; };
+		C078FD812861A1DA0008FC6E /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD322861A1DA0008FC6E /* HUD.swift */; };
+		C078FD822861A1DA0008FC6E /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD322861A1DA0008FC6E /* HUD.swift */; };
+		C078FD852861A7F20008FC6E /* ScreenShowHUDAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD842861A7F20008FC6E /* ScreenShowHUDAction.swift */; };
+		C078FD862861A7F20008FC6E /* ScreenShowHUDAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD842861A7F20008FC6E /* ScreenShowHUDAction.swift */; };
+		C078FD882861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD872861AAEC0008FC6E /* ScreenHideHUDAction.swift */; };
+		C078FD892861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD872861AAEC0008FC6E /* ScreenHideHUDAction.swift */; };
+		C078FD8B2861BCEA0008FC6E /* HUD+Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD8A2861BCEA0008FC6E /* HUD+Activity.swift */; };
+		C078FD8C2861BCEA0008FC6E /* HUD+Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD8A2861BCEA0008FC6E /* HUD+Activity.swift */; };
+		C078FD8E2861BDAE0008FC6E /* HUDStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD8D2861BDAE0008FC6E /* HUDStyle.swift */; };
+		C078FD8F2861BDAE0008FC6E /* HUDStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD8D2861BDAE0008FC6E /* HUDStyle.swift */; };
+		C078FD922861BEEB0008FC6E /* HUD+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD912861BEEB0008FC6E /* HUD+Spinner.swift */; };
+		C078FD932861BEEB0008FC6E /* HUD+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD912861BEEB0008FC6E /* HUD+Spinner.swift */; };
+		C078FD952861BF1F0008FC6E /* HUD+Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD942861BF1F0008FC6E /* HUD+Failure.swift */; };
+		C078FD962861BF1F0008FC6E /* HUD+Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD942861BF1F0008FC6E /* HUD+Failure.swift */; };
+		C078FD982861BF4A0008FC6E /* HUD+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD972861BF4A0008FC6E /* HUD+Success.swift */; };
+		C078FD992861BF4A0008FC6E /* HUD+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD972861BF4A0008FC6E /* HUD+Success.swift */; };
+		C078FD9B2861BF840008FC6E /* HUD+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD9A2861BF840008FC6E /* HUD+Image.swift */; };
+		C078FD9C2861BF840008FC6E /* HUD+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD9A2861BF840008FC6E /* HUD+Image.swift */; };
+		C078FD9E2861BFAD0008FC6E /* HUD+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD9D2861BFAD0008FC6E /* HUD+Percentage.swift */; };
+		C078FD9F2861BFAD0008FC6E /* HUD+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FD9D2861BFAD0008FC6E /* HUD+Percentage.swift */; };
+		C078FDA92861C7E00008FC6E /* Progress+Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA82861C7E00008FC6E /* Progress+Activity.swift */; };
+		C078FDAA2861C7E00008FC6E /* Progress+Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDA82861C7E00008FC6E /* Progress+Activity.swift */; };
+		C078FDAC2861C8110008FC6E /* Progress+Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDAB2861C8110008FC6E /* Progress+Failure.swift */; };
+		C078FDAD2861C8110008FC6E /* Progress+Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDAB2861C8110008FC6E /* Progress+Failure.swift */; };
+		C078FDAF2861C8450008FC6E /* Progress+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDAE2861C8450008FC6E /* Progress+Image.swift */; };
+		C078FDB02861C8450008FC6E /* Progress+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDAE2861C8450008FC6E /* Progress+Image.swift */; };
+		C078FDB22861C8630008FC6E /* Progress+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDB12861C8630008FC6E /* Progress+Percentage.swift */; };
+		C078FDB32861C8630008FC6E /* Progress+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDB12861C8630008FC6E /* Progress+Percentage.swift */; };
+		C078FDB52861C8800008FC6E /* Progress+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDB42861C8800008FC6E /* Progress+Spinner.swift */; };
+		C078FDB62861C8800008FC6E /* Progress+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDB42861C8800008FC6E /* Progress+Spinner.swift */; };
+		C078FDB82861C8AB0008FC6E /* Progress+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDB72861C8AB0008FC6E /* Progress+Success.swift */; };
+		C078FDB92861C8AB0008FC6E /* Progress+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078FDB72861C8AB0008FC6E /* Progress+Success.swift */; };
 		C0866B462853545000B85C54 /* ScreenImpactOccurredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */; };
 		C0866B482853566600B85C54 /* ScreenNotificationOccurredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */; };
 		C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */; };
@@ -570,6 +674,58 @@
 		C06DFA17276EBFA100D751C4 /* NotificationDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDeeplink.swift; sourceTree = "<group>"; };
 		C06DFA1C276F27F500D751C4 /* NotificationDeeplinkUserInfoDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDeeplinkUserInfoDecoder.swift; sourceTree = "<group>"; };
 		C06DFA1E276F283F00D751C4 /* AnyNotificationDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNotificationDeeplink.swift; sourceTree = "<group>"; };
+		C078FCFB2861A1DA0008FC6E /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
+		C078FCFC2861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		C078FCFD2861A1DA0008FC6E /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		C078FD002861A1DA0008FC6E /* ProgressFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressFooter.swift; sourceTree = "<group>"; };
+		C078FD022861A1DA0008FC6E /* ProgressEmptyFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressEmptyFooterView.swift; sourceTree = "<group>"; };
+		C078FD032861A1DA0008FC6E /* ProgressEmptyFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressEmptyFooter.swift; sourceTree = "<group>"; };
+		C078FD062861A1DA0008FC6E /* ProgressMessageFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressMessageFooter.swift; sourceTree = "<group>"; };
+		C078FD072861A1DA0008FC6E /* ProgressMessageFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressMessageFooterView.swift; sourceTree = "<group>"; };
+		C078FD0A2861A1DA0008FC6E /* ProgressSuccessIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSuccessIndicator.swift; sourceTree = "<group>"; };
+		C078FD0B2861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSuccessIndicatorView.swift; sourceTree = "<group>"; };
+		C078FD0D2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressActivityIndicatorView.swift; sourceTree = "<group>"; };
+		C078FD0E2861A1DA0008FC6E /* ProgressActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressActivityIndicator.swift; sourceTree = "<group>"; };
+		C078FD102861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPercentageIndicatorView.swift; sourceTree = "<group>"; };
+		C078FD112861A1DA0008FC6E /* ProgressPercentageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressPercentageIndicator.swift; sourceTree = "<group>"; };
+		C078FD142861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerIndicatorView.swift; sourceTree = "<group>"; };
+		C078FD152861A1DA0008FC6E /* ProgressSpinnerIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerIndicator.swift; sourceTree = "<group>"; };
+		C078FD172861A1DA0008FC6E /* ProgressImageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressImageIndicator.swift; sourceTree = "<group>"; };
+		C078FD182861A1DA0008FC6E /* ProgressImageIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressImageIndicatorView.swift; sourceTree = "<group>"; };
+		C078FD1A2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressFailureIndicatorView.swift; sourceTree = "<group>"; };
+		C078FD1B2861A1DA0008FC6E /* ProgressFailureIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressFailureIndicator.swift; sourceTree = "<group>"; };
+		C078FD1C2861A1DA0008FC6E /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		C078FD1D2861A1DA0008FC6E /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		C078FD1E2861A1DA0008FC6E /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		C078FD202861A1DA0008FC6E /* ProgressDefaultAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDefaultAnimation.swift; sourceTree = "<group>"; };
+		C078FD212861A1DA0008FC6E /* ProgressCustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCustomAnimation.swift; sourceTree = "<group>"; };
+		C078FD222861A1DA0008FC6E /* ProgressAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressAnimation.swift; sourceTree = "<group>"; };
+		C078FD242861A1DA0008FC6E /* AnyProgressContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyProgressContent.swift; sourceTree = "<group>"; };
+		C078FD252861A1DA0008FC6E /* ProgressContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressContent.swift; sourceTree = "<group>"; };
+		C078FD262861A1DA0008FC6E /* ProgressContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressContentView.swift; sourceTree = "<group>"; };
+		C078FD292861A1DA0008FC6E /* ProgressEmptyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressEmptyHeader.swift; sourceTree = "<group>"; };
+		C078FD2A2861A1DA0008FC6E /* ProgressEmptyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressEmptyHeaderView.swift; sourceTree = "<group>"; };
+		C078FD2B2861A1DA0008FC6E /* ProgressHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHeader.swift; sourceTree = "<group>"; };
+		C078FD2D2861A1DA0008FC6E /* HUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		C078FD2F2861A1DA0008FC6E /* HUDAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDAnimation.swift; sourceTree = "<group>"; };
+		C078FD302861A1DA0008FC6E /* HUDDefaultAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDDefaultAnimation.swift; sourceTree = "<group>"; };
+		C078FD312861A1DA0008FC6E /* HUDCustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDCustomAnimation.swift; sourceTree = "<group>"; };
+		C078FD322861A1DA0008FC6E /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		C078FD842861A7F20008FC6E /* ScreenShowHUDAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShowHUDAction.swift; sourceTree = "<group>"; };
+		C078FD872861AAEC0008FC6E /* ScreenHideHUDAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHideHUDAction.swift; sourceTree = "<group>"; };
+		C078FD8A2861BCEA0008FC6E /* HUD+Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Activity.swift"; sourceTree = "<group>"; };
+		C078FD8D2861BDAE0008FC6E /* HUDStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDStyle.swift; sourceTree = "<group>"; };
+		C078FD912861BEEB0008FC6E /* HUD+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Spinner.swift"; sourceTree = "<group>"; };
+		C078FD942861BF1F0008FC6E /* HUD+Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Failure.swift"; sourceTree = "<group>"; };
+		C078FD972861BF4A0008FC6E /* HUD+Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Success.swift"; sourceTree = "<group>"; };
+		C078FD9A2861BF840008FC6E /* HUD+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Image.swift"; sourceTree = "<group>"; };
+		C078FD9D2861BFAD0008FC6E /* HUD+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Percentage.swift"; sourceTree = "<group>"; };
+		C078FDA82861C7E00008FC6E /* Progress+Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Activity.swift"; sourceTree = "<group>"; };
+		C078FDAB2861C8110008FC6E /* Progress+Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Failure.swift"; sourceTree = "<group>"; };
+		C078FDAE2861C8450008FC6E /* Progress+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Image.swift"; sourceTree = "<group>"; };
+		C078FDB12861C8630008FC6E /* Progress+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Percentage.swift"; sourceTree = "<group>"; };
+		C078FDB42861C8800008FC6E /* Progress+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Spinner.swift"; sourceTree = "<group>"; };
+		C078FDB72861C8AB0008FC6E /* Progress+Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Progress+Success.swift"; sourceTree = "<group>"; };
 		C0866B452853545000B85C54 /* ScreenImpactOccurredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenImpactOccurredAction.swift; sourceTree = "<group>"; };
 		C0866B472853566600B85C54 /* ScreenNotificationOccurredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNotificationOccurredAction.swift; sourceTree = "<group>"; };
 		C0866B492853570400B85C54 /* ScreenSelectionChangedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelectionChangedAction.swift; sourceTree = "<group>"; };
@@ -917,6 +1073,9 @@
 		C0270F3425F4A89300ECC57C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C078FCFB2861A1DA0008FC6E /* CGSize+Extensions.swift */,
+				C078FCFD2861A1DA0008FC6E /* UIApplication+Extensions.swift */,
+				C078FCFC2861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift */,
 				C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */,
 				C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */,
 				C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */,
@@ -1110,6 +1269,206 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		C078FCF82861A1DA0008FC6E /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD2E2861A1DA0008FC6E /* Animation */,
+				C078FD902861BECE0008FC6E /* Extensions */,
+				C078FCFE2861A1DA0008FC6E /* Progress */,
+				C078FD322861A1DA0008FC6E /* HUD.swift */,
+				C078FD8D2861BDAE0008FC6E /* HUDStyle.swift */,
+				C078FD2D2861A1DA0008FC6E /* HUDView.swift */,
+				C078FD872861AAEC0008FC6E /* ScreenHideHUDAction.swift */,
+				C078FD842861A7F20008FC6E /* ScreenShowHUDAction.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		C078FCFE2861A1DA0008FC6E /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				C078FDA72861C7D00008FC6E /* Extensions */,
+				C078FD1F2861A1DA0008FC6E /* Animation */,
+				C078FD232861A1DA0008FC6E /* Content */,
+				C078FCFF2861A1DA0008FC6E /* Footer */,
+				C078FD272861A1DA0008FC6E /* Header */,
+				C078FD082861A1DA0008FC6E /* Indicator */,
+				C078FD1D2861A1DA0008FC6E /* Progress.swift */,
+				C078FD1E2861A1DA0008FC6E /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		C078FCFF2861A1DA0008FC6E /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD012861A1DA0008FC6E /* Empty */,
+				C078FD052861A1DA0008FC6E /* Message */,
+				C078FD002861A1DA0008FC6E /* ProgressFooter.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		C078FD012861A1DA0008FC6E /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD032861A1DA0008FC6E /* ProgressEmptyFooter.swift */,
+				C078FD022861A1DA0008FC6E /* ProgressEmptyFooterView.swift */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		C078FD052861A1DA0008FC6E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD062861A1DA0008FC6E /* ProgressMessageFooter.swift */,
+				C078FD072861A1DA0008FC6E /* ProgressMessageFooterView.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C078FD082861A1DA0008FC6E /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD0C2861A1DA0008FC6E /* Activity */,
+				C078FD192861A1DA0008FC6E /* Failure */,
+				C078FD162861A1DA0008FC6E /* Image */,
+				C078FD0F2861A1DA0008FC6E /* Percentage */,
+				C078FD132861A1DA0008FC6E /* Spinner */,
+				C078FD092861A1DA0008FC6E /* Success */,
+				C078FD1C2861A1DA0008FC6E /* ProgressIndicator.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
+		C078FD092861A1DA0008FC6E /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD0A2861A1DA0008FC6E /* ProgressSuccessIndicator.swift */,
+				C078FD0B2861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift */,
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
+		C078FD0C2861A1DA0008FC6E /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD0E2861A1DA0008FC6E /* ProgressActivityIndicator.swift */,
+				C078FD0D2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		C078FD0F2861A1DA0008FC6E /* Percentage */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD112861A1DA0008FC6E /* ProgressPercentageIndicator.swift */,
+				C078FD102861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift */,
+			);
+			path = Percentage;
+			sourceTree = "<group>";
+		};
+		C078FD132861A1DA0008FC6E /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD152861A1DA0008FC6E /* ProgressSpinnerIndicator.swift */,
+				C078FD142861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		C078FD162861A1DA0008FC6E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD172861A1DA0008FC6E /* ProgressImageIndicator.swift */,
+				C078FD182861A1DA0008FC6E /* ProgressImageIndicatorView.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		C078FD192861A1DA0008FC6E /* Failure */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD1B2861A1DA0008FC6E /* ProgressFailureIndicator.swift */,
+				C078FD1A2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift */,
+			);
+			path = Failure;
+			sourceTree = "<group>";
+		};
+		C078FD1F2861A1DA0008FC6E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD222861A1DA0008FC6E /* ProgressAnimation.swift */,
+				C078FD212861A1DA0008FC6E /* ProgressCustomAnimation.swift */,
+				C078FD202861A1DA0008FC6E /* ProgressDefaultAnimation.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		C078FD232861A1DA0008FC6E /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD242861A1DA0008FC6E /* AnyProgressContent.swift */,
+				C078FD252861A1DA0008FC6E /* ProgressContent.swift */,
+				C078FD262861A1DA0008FC6E /* ProgressContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		C078FD272861A1DA0008FC6E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD282861A1DA0008FC6E /* Empty */,
+				C078FD2B2861A1DA0008FC6E /* ProgressHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		C078FD282861A1DA0008FC6E /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD292861A1DA0008FC6E /* ProgressEmptyHeader.swift */,
+				C078FD2A2861A1DA0008FC6E /* ProgressEmptyHeaderView.swift */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		C078FD2E2861A1DA0008FC6E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD2F2861A1DA0008FC6E /* HUDAnimation.swift */,
+				C078FD312861A1DA0008FC6E /* HUDCustomAnimation.swift */,
+				C078FD302861A1DA0008FC6E /* HUDDefaultAnimation.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		C078FD902861BECE0008FC6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C078FD8A2861BCEA0008FC6E /* HUD+Activity.swift */,
+				C078FD942861BF1F0008FC6E /* HUD+Failure.swift */,
+				C078FD9A2861BF840008FC6E /* HUD+Image.swift */,
+				C078FD912861BEEB0008FC6E /* HUD+Spinner.swift */,
+				C078FD972861BF4A0008FC6E /* HUD+Success.swift */,
+				C078FD9D2861BFAD0008FC6E /* HUD+Percentage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C078FDA72861C7D00008FC6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C078FDA82861C7E00008FC6E /* Progress+Activity.swift */,
+				C078FDAB2861C8110008FC6E /* Progress+Failure.swift */,
+				C078FDAE2861C8450008FC6E /* Progress+Image.swift */,
+				C078FDB12861C8630008FC6E /* Progress+Percentage.swift */,
+				C078FDB42861C8800008FC6E /* Progress+Spinner.swift */,
+				C078FDB72861C8AB0008FC6E /* Progress+Success.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C0866B44285344DC00B85C54 /* Haptics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1299,6 +1658,7 @@
 				C0885FCB26B6C60B00CA0A77 /* Alert */,
 				C0885FD326B6C60B00CA0A77 /* DocumentPreview */,
 				C0866B44285344DC00B85C54 /* Haptics */,
+				C078FCF82861A1DA0008FC6E /* HUD */,
 				C0885FE926B6C60B00CA0A77 /* MediaPicker */,
 				C09591532853128D00729E93 /* Safari */,
 				C01294B42859B2BD0039D06B /* Sharing */,
@@ -1938,10 +2298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C078FD412861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */,
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
+				C078FD752861A1DA0008FC6E /* ProgressHeader.swift in Sources */,
+				C078FD922861BEEB0008FC6E /* HUD+Spinner.swift in Sources */,
 				C0A728632799487B000BFBF9 /* AnyDeeplink.swift in Sources */,
 				C0238F0427A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */,
 				C01294C42859DEC70039D06B /* SharingVisualActivity.swift in Sources */,
+				C078FD9E2861BFAD0008FC6E /* HUD+Percentage.swift in Sources */,
 				C0A728C0279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C0866B462853545000B85C54 /* ScreenImpactOccurredAction.swift in Sources */,
 				C052C7D02823A94500132875 /* ScreenObserverPredicate.swift in Sources */,
@@ -1957,6 +2321,7 @@
 				C0A728A1279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */,
 				C0885FC226B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0C3426426BC4511007A45E9 /* ScreenThenable.swift in Sources */,
+				C078FD812861A1DA0008FC6E /* HUD.swift in Sources */,
 				C05E19B42669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift in Sources */,
 				C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8426B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
@@ -1974,8 +2339,10 @@
 				C058492D2846761D00DE42F0 /* ScreenObserverToken.swift in Sources */,
 				C058493428475F1E00DE42F0 /* ScreenObservatory.swift in Sources */,
 				C06DFA0C276EB20200D751C4 /* Deeplink.swift in Sources */,
+				C078FD3B2861A1DA0008FC6E /* ProgressEmptyFooterView.swift in Sources */,
 				C05F488D26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */,
 				C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */,
+				C078FD6D2861A1DA0008FC6E /* ProgressContent.swift in Sources */,
 				C093BA7C2797F33E0093F29B /* ScreenWindowAction.swift in Sources */,
 				C088600726B6C60B00CA0A77 /* AlertTextFieldsManager.swift in Sources */,
 				C0238ECC27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */,
@@ -1983,9 +2350,11 @@
 				C0270E5425F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0885FB226B6C0A500CA0A77 /* ScreenStackPopModifier.swift in Sources */,
 				C0270CA525F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
+				C078FD4D2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */,
 				C0885F6826B6BA0100CA0A77 /* ScreenTabAnimation.swift in Sources */,
 				C0885F9226B6BA0100CA0A77 /* ScreenPresentAction.swift in Sources */,
 				C0238F0127A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift in Sources */,
+				C078FD332861A1DA0008FC6E /* CGSize+Extensions.swift in Sources */,
 				C0238ECE27A40F6C00148E91 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C088602526B6C60B00CA0A77 /* InvalidStoreAppIDError.swift in Sources */,
 				C052C7CD2823A90F00132875 /* ScreenObserver.swift in Sources */,
@@ -1994,6 +2363,7 @@
 				C0885FB026B6C0A500CA0A77 /* ScreenStackPopPredicate.swift in Sources */,
 				C0885F7026B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,
 				C0270E5F25F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
+				C078FD4F2861A1DA0008FC6E /* ProgressPercentageIndicator.swift in Sources */,
 				C055B45D2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift in Sources */,
 				C08FA8F126BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
 				C01294C62859E47A0039D06B /* SharingSilentActivity.swift in Sources */,
@@ -2003,7 +2373,9 @@
 				C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
 				C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
+				C078FD5B2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift in Sources */,
 				C0A728BD279AD5A2000BFBF9 /* DictionarySingleValueDecodingContainer.swift in Sources */,
+				C078FD8B2861BCEA0008FC6E /* HUD+Activity.swift in Sources */,
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
 				C0959151285256E400729E93 /* DeeplinkWarningsError.swift in Sources */,
 				C0885F6C26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
@@ -2019,6 +2391,8 @@
 				C088601726B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C058493228475F0200DE42F0 /* DefaultScreenObservatory.swift in Sources */,
+				C078FD392861A1DA0008FC6E /* ProgressFooter.swift in Sources */,
+				C078FDAC2861C8110008FC6E /* Progress+Failure.swift in Sources */,
 				C01294C02859D7C60039D06B /* SharingActivityManager.swift in Sources */,
 				C088603126B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
 				C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
@@ -2031,6 +2405,8 @@
 				C088600326B6C60B00CA0A77 /* Alert.swift in Sources */,
 				C088602926B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
 				C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */,
+				C078FDB22861C8630008FC6E /* Progress+Percentage.swift in Sources */,
+				C078FD5F2861A1DA0008FC6E /* ProgressIndicator.swift in Sources */,
 				C0A7286F27996E4A000BFBF9 /* AnyNotificationDeeplink.swift in Sources */,
 				C05849402847766500DE42F0 /* ScreenObserverSharedStorage.swift in Sources */,
 				C0238EF427A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
@@ -2041,41 +2417,57 @@
 				C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
 				C0885F8226B6BA0100CA0A77 /* ScreenFoldAction.swift in Sources */,
+				C078FD852861A7F20008FC6E /* ScreenShowHUDAction.swift in Sources */,
 				C0AAD9CA25EEC9100087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
 				C0FF99D226BCB28A00961A70 /* ScreenFailAction.swift in Sources */,
 				C088603D26B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift in Sources */,
 				C0885F8626B6BA0100CA0A77 /* ScreenRootCustomAnimation.swift in Sources */,
 				C0885FBA26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
 				C088600126B6C60B00CA0A77 /* AlertAction.swift in Sources */,
+				C078FD5D2861A1DA0008FC6E /* ProgressFailureIndicator.swift in Sources */,
 				C0959148285256CE00729E93 /* UNNotificationResponse+Extensions.swift in Sources */,
 				C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
+				C078FD882861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */,
+				C078FDB82861C8AB0008FC6E /* Progress+Success.swift in Sources */,
 				C088600526B6C60B00CA0A77 /* ScreenShowAlertAction.swift in Sources */,
 				C01294BC2859B2F40039D06B /* SharingItem.swift in Sources */,
+				C078FD492861A1DA0008FC6E /* ProgressActivityIndicatorView.swift in Sources */,
 				C088603F26B6C60B00CA0A77 /* MediaPickerManager.swift in Sources */,
 				C06B5824262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0C9FE982655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
+				C078FD652861A1DA0008FC6E /* ProgressDefaultAnimation.swift in Sources */,
 				C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C0A7286D27996E48000BFBF9 /* NotificationDeeplink.swift in Sources */,
 				C0238ECA27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */,
+				C078FD9B2861BF840008FC6E /* HUD+Image.swift in Sources */,
+				C078FD3D2861A1DA0008FC6E /* ProgressEmptyFooter.swift in Sources */,
 				C0AAD9A925EEC2790087439E /* Screen.swift in Sources */,
 				C088602D26B6C60B00CA0A77 /* MediaPicker.swift in Sources */,
+				C078FD792861A1DA0008FC6E /* HUDView.swift in Sources */,
 				C0885F8E26B6BA0100CA0A77 /* ScreenTabsAction.swift in Sources */,
 				C0238EF727A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */,
+				C078FD352861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift in Sources */,
 				C0885F7826B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
 				C0D5799427A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
 				C01294C82859E6BC0039D06B /* Sharing.swift in Sources */,
+				C078FD6F2861A1DA0008FC6E /* ProgressContentView.swift in Sources */,
 				C088601F26B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
+				C078FD452861A1DA0008FC6E /* ProgressSuccessIndicator.swift in Sources */,
 				C0238EEE27A7DD9200148E91 /* DeeplinkInvalidContextError.swift in Sources */,
 				C0A72874279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
 				C0C8AE30285856010097147A /* SafariManager.swift in Sources */,
 				C093BA7F2798172B0093F29B /* ScreenMakeKeyAndVisibleAction.swift in Sources */,
+				C078FD732861A1DA0008FC6E /* ProgressEmptyHeaderView.swift in Sources */,
+				C078FDAF2861C8450008FC6E /* Progress+Image.swift in Sources */,
 				C0AAD97125EEC0160087439E /* UIViewController+ScreenVisibleContainer.swift in Sources */,
+				C078FD6B2861A1DA0008FC6E /* AnyProgressContent.swift in Sources */,
 				C0D5799127A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */,
 				C0E932FD262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
 				C0238ED227A40F6C00148E91 /* DictionaryDecodingOptions.swift in Sources */,
 				C095915B28532CC900729E93 /* Safari.swift in Sources */,
+				C078FD712861A1DA0008FC6E /* ProgressEmptyHeader.swift in Sources */,
 				C088602B26B6C60B00CA0A77 /* MediaPickerResult.swift in Sources */,
 				C0A728E8279EEF1B000BFBF9 /* String+Extensions.swift in Sources */,
 				C088604526B6C60B00CA0A77 /* ScreenShowStoreProductAction.swift in Sources */,
@@ -2083,10 +2475,13 @@
 				C0C9FE952655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */,
 				C015F487265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */,
 				C0885F7E26B6BA0100CA0A77 /* ScreenTopAction.swift in Sources */,
+				C078FD7B2861A1DA0008FC6E /* HUDAnimation.swift in Sources */,
 				C0885F9026B6BA0100CA0A77 /* ScreenPresentedAction.swift in Sources */,
 				C0885F8026B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
+				C078FD372861A1DA0008FC6E /* UIApplication+Extensions.swift in Sources */,
 				C0238EE127A411D100148E91 /* DeeplinkHandler.swift in Sources */,
+				C078FD982861BF4A0008FC6E /* HUD+Success.swift in Sources */,
 				C0A728F1279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0885F6426B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
 				C095914E285256CE00729E93 /* DeeplinkScope.swift in Sources */,
@@ -2094,10 +2489,13 @@
 				C0D5797B27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F8C26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601926B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
+				C078FD572861A1DA0008FC6E /* ProgressImageIndicator.swift in Sources */,
 				C088600B26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
 				C0E9EF2426BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
 				C0D5796927A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
+				C078FDA92861C7E00008FC6E /* Progress+Activity.swift in Sources */,
 				C0C3427026BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
+				C078FD612861A1DA0008FC6E /* Progress.swift in Sources */,
 				C0D5798B27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
 				C088605C26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C0A728A4279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
@@ -2108,17 +2506,22 @@
 				C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C0959146285256CE00729E93 /* UIApplicationShortcutItem+Extensions.swift in Sources */,
 				C088600926B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
+				C078FD672861A1DA0008FC6E /* ProgressCustomAnimation.swift in Sources */,
 				C0885FBC26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
+				C078FD532861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift in Sources */,
 				C0E932EF262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
 				C0866B482853566600B85C54 /* ScreenNotificationOccurredAction.swift in Sources */,
 				C0C3426E26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603926B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
+				C078FD692861A1DA0008FC6E /* ProgressAnimation.swift in Sources */,
 				C088601326B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
 				C0A728F4279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */,
 				C058492B2846759700DE42F0 /* ScreenObserverStorage.swift in Sources */,
 				C0C9FE9B2655E5700074D669 /* ScreenNavigator.swift in Sources */,
 				C088603326B6C60B00CA0A77 /* MediaPickerType.swift in Sources */,
+				C078FD4B2861A1DA0008FC6E /* ProgressActivityIndicator.swift in Sources */,
 				C0238F1827A8443700148E91 /* UINavigationController+ScreenIterableContainer.swift in Sources */,
+				C078FD432861A1DA0008FC6E /* ProgressMessageFooterView.swift in Sources */,
 				C0AAD99325EEC1A50087439E /* UIWindow+ScreenVisibleContainer.swift in Sources */,
 				C0270E9025F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C05E19C0266A3EA100255A69 /* ScreenPopoverPresentationAnchor.swift in Sources */,
@@ -2130,10 +2533,14 @@
 				C0885FC426B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C0238F1527A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
+				C078FD592861A1DA0008FC6E /* ProgressImageIndicatorView.swift in Sources */,
 				C0238F2D27A9477000148E91 /* ScreenCanceledError.swift in Sources */,
+				C078FD7D2861A1DA0008FC6E /* HUDDefaultAnimation.swift in Sources */,
 				C05E19BB266A264900255A69 /* ScreenVisibleContainer.swift in Sources */,
 				C0A728762799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
+				C078FD552861A1DA0008FC6E /* ProgressSpinnerIndicator.swift in Sources */,
 				C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */,
+				C078FD7F2861A1DA0008FC6E /* HUDCustomAnimation.swift in Sources */,
 				C0A728C3279AD909000BFBF9 /* DictionaryDecoder.swift in Sources */,
 				C0885FBE26B6C0A500CA0A77 /* ScreenStackCustomAnimation.swift in Sources */,
 				C0E93303262B16B80041C564 /* ScreenModalStyle.swift in Sources */,
@@ -2147,10 +2554,12 @@
 				C0AADA4D25EEE1F10087439E /* ScreenKeyedContainer.swift in Sources */,
 				C0C3428026BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C088604726B6C60B00CA0A77 /* InvalidStoreProductIDError.swift in Sources */,
+				C078FD952861BF1F0008FC6E /* HUD+Failure.swift in Sources */,
 				C058493D2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
 				C088600F26B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
 				C0A7287127996E6E000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
 				C0C06E0827AA78F4002B7F03 /* Nullable.swift in Sources */,
+				C078FDB52861C8800008FC6E /* Progress+Spinner.swift in Sources */,
 				C0A72860279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */,
 				C0238EEB27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */,
 				C0885F9426B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,
@@ -2159,6 +2568,7 @@
 				C0E932FF262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
 				C088602726B6C60B00CA0A77 /* ScreenCallAction.swift in Sources */,
 				C088601D26B6C60B00CA0A77 /* ScreenOpenURLAction.swift in Sources */,
+				C078FD8E2861BDAE0008FC6E /* HUDStyle.swift in Sources */,
 				C0238F0727A7F87300148E91 /* URLDeeplinkQueryOptions.swift in Sources */,
 				C027109F25F51C7F00ECC57C /* ScreenIterationResult.swift in Sources */,
 				C0885FB426B6C0A500CA0A77 /* ScreenStackModifier.swift in Sources */,
@@ -2171,12 +2581,14 @@
 				C088601B26B6C60B00CA0A77 /* ScreenOpenSettingsAction.swift in Sources */,
 				C05E19C2266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift in Sources */,
 				C0885FAE26B6C0A500CA0A77 /* ScreenStackPushModifier.swift in Sources */,
+				C078FD472861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift in Sources */,
 				C0270CA725F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
 				C0238F1227A840E400148E91 /* ScreenIterableContainer.swift in Sources */,
 				C0584939284762E100DE42F0 /* ScreenActionStorage.swift in Sources */,
 				C0885FFD26B6C60B00CA0A77 /* ActionSheetAction.swift in Sources */,
 				C0D5798E27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */,
 				C0A728792799A5CF000BFBF9 /* ShortcutDeeplink.swift in Sources */,
+				C078FD632861A1DA0008FC6E /* ProgressView.swift in Sources */,
 				C0959155285312AB00729E93 /* ScreenShowSafariAction.swift in Sources */,
 				C0A728BA279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift in Sources */,
 			);
@@ -2210,15 +2622,20 @@
 				C0885F9726B6BA0100CA0A77 /* ScreenDismissAction.swift in Sources */,
 				C06B581E262C619100BE4762 /* AnyScreenBox.swift in Sources */,
 				C0885FC126B6C0A500CA0A77 /* ScreenStackAnimation.swift in Sources */,
+				C078FD702861A1DA0008FC6E /* ProgressContentView.swift in Sources */,
 				C0D5797E27A0609000084220 /* URLQueryDeserializer.swift in Sources */,
 				C0885FC326B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0A728A2279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */,
 				C0C3426526BC4511007A45E9 /* ScreenThenable.swift in Sources */,
+				C078FD582861A1DA0008FC6E /* ProgressImageIndicator.swift in Sources */,
 				C0270CA825F3DAF000ECC57C /* UIWindow+Extensions.swift in Sources */,
 				C088605526B9294E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
+				C078FD342861A1DA0008FC6E /* CGSize+Extensions.swift in Sources */,
 				C0885F8526B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
 				C0AADB6425EF900B0087439E /* UIWindow+ScreenVisibleContainer.swift in Sources */,
+				C078FD5C2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift in Sources */,
+				C078FD992861BF4A0008FC6E /* HUD+Success.swift in Sources */,
 				C088600026B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
 				C08995F927968C82007D9D17 /* URLDeeplink.swift in Sources */,
 				C05F48D626B68B7F0002DF52 /* ScreenAction.swift in Sources */,
@@ -2231,6 +2648,7 @@
 				C08995FA27968C84007D9D17 /* AnyURLDeeplink.swift in Sources */,
 				C0885FAD26B6C0A500CA0A77 /* ScreenStackRootAction.swift in Sources */,
 				C0A7287027996E4B000BFBF9 /* AnyNotificationDeeplink.swift in Sources */,
+				C078FD6C2861A1DA0008FC6E /* AnyProgressContent.swift in Sources */,
 				C0885F8B26B6BA0100CA0A77 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C0A7286E27996E48000BFBF9 /* NotificationDeeplink.swift in Sources */,
 				C0238ECD27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */,
@@ -2244,9 +2662,12 @@
 				C0238ECF27A40F6C00148E91 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C0885F6926B6BA0100CA0A77 /* ScreenTabAnimation.swift in Sources */,
 				C052C7CE2823A90F00132875 /* ScreenObserver.swift in Sources */,
+				C078FD932861BEEB0008FC6E /* HUD+Spinner.swift in Sources */,
 				C0885F9326B6BA0100CA0A77 /* ScreenPresentAction.swift in Sources */,
 				C088602626B6C60B00CA0A77 /* InvalidStoreAppIDError.swift in Sources */,
 				C0885F9926B6BA0100CA0A77 /* ScreenPresentingAction.swift in Sources */,
+				C078FD862861A7F20008FC6E /* ScreenShowHUDAction.swift in Sources */,
+				C078FDB62861C8800008FC6E /* Progress+Spinner.swift in Sources */,
 				C0885F7726B6BA0100CA0A77 /* ScreenTryResolution.swift in Sources */,
 				C0A72875279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
 				C055B45E2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift in Sources */,
@@ -2261,12 +2682,15 @@
 				C0959152285256E400729E93 /* DeeplinkWarningsError.swift in Sources */,
 				C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
 				C052C7D92823B48900132875 /* ScreenContainerStorage.swift in Sources */,
+				C078FD622861A1DA0008FC6E /* Progress.swift in Sources */,
+				C078FDAD2861C8110008FC6E /* Progress+Failure.swift in Sources */,
 				C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */,
 				C0AADB6525EF900B0087439E /* UIViewController+ScreenVisibleContainer.swift in Sources */,
 				C0885F6D26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
 				C0885FB926B6C0A500CA0A77 /* ScreenStackReplaceModifier.swift in Sources */,
 				C0C3426D26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */,
 				C055B45B2823CCAD00C4EBC4 /* ScreenContainerSharedStorage.swift in Sources */,
+				C078FD362861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift in Sources */,
 				C058493528475FD200DE42F0 /* ScreenObserverToken.swift in Sources */,
 				C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */,
 				C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
@@ -2274,22 +2698,32 @@
 				C088601826B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0A7287227996E6F000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
 				C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */,
+				C078FD7E2861A1DA0008FC6E /* HUDDefaultAnimation.swift in Sources */,
 				C0D57964279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */,
+				C078FD3C2861A1DA0008FC6E /* ProgressEmptyFooterView.swift in Sources */,
 				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C05849412847766500DE42F0 /* ScreenObserverSharedStorage.swift in Sources */,
 				C0238EF527A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
 				C015F484265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
+				C078FDB32861C8630008FC6E /* Progress+Percentage.swift in Sources */,
 				C088600426B6C60B00CA0A77 /* Alert.swift in Sources */,
+				C078FD962861BF1F0008FC6E /* HUD+Failure.swift in Sources */,
 				C0D5794E279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */,
 				C093BA7D2797F33E0093F29B /* ScreenWindowAction.swift in Sources */,
+				C078FD9F2861BFAD0008FC6E /* HUD+Percentage.swift in Sources */,
+				C078FD5A2861A1DA0008FC6E /* ProgressImageIndicatorView.swift in Sources */,
 				C058493A284762E100DE42F0 /* ScreenActionStorage.swift in Sources */,
+				C078FDAA2861C7E00008FC6E /* Progress+Activity.swift in Sources */,
+				C078FD602861A1DA0008FC6E /* ProgressIndicator.swift in Sources */,
 				C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C0885F7526B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
+				C078FD542861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift in Sources */,
 				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0885F8326B6BA0100CA0A77 /* ScreenFoldAction.swift in Sources */,
 				C0FF99D326BCB28A00961A70 /* ScreenFailAction.swift in Sources */,
+				C078FD662861A1DA0008FC6E /* ProgressDefaultAnimation.swift in Sources */,
 				C0A7287A2799A5CF000BFBF9 /* ShortcutDeeplink.swift in Sources */,
 				C0959149285256CE00729E93 /* UNNotificationResponse+Extensions.swift in Sources */,
 				C06B5817262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
@@ -2302,17 +2736,26 @@
 				C0238ECB27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C0A7287B279A7853000BFBF9 /* Deeplink.swift in Sources */,
 				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
+				C078FD7C2861A1DA0008FC6E /* HUDAnimation.swift in Sources */,
 				C06B5825262C625A00BE4762 /* AnyScreen.swift in Sources */,
+				C078FD6A2861A1DA0008FC6E /* ProgressAnimation.swift in Sources */,
 				C0238EF827A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */,
+				C078FDB92861C8AB0008FC6E /* Progress+Success.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
+				C078FD9C2861BF840008FC6E /* HUD+Image.swift in Sources */,
+				C078FD562861A1DA0008FC6E /* ProgressSpinnerIndicator.swift in Sources */,
+				C078FD4A2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift in Sources */,
+				C078FD682861A1DA0008FC6E /* ProgressCustomAnimation.swift in Sources */,
 				C0D5799527A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
 				C0238EEF27A7DD9200148E91 /* DeeplinkInvalidContextError.swift in Sources */,
 				C0A728772799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
 				C0885F8F26B6BA0100CA0A77 /* ScreenTabsAction.swift in Sources */,
+				C078FD8C2861BCEA0008FC6E /* HUD+Activity.swift in Sources */,
 				C0885F7926B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
 				C0D5799227A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */,
 				C088602026B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
 				C0238ED327A40F6C00148E91 /* DictionaryDecodingOptions.swift in Sources */,
+				C078FD7A2861A1DA0008FC6E /* HUDView.swift in Sources */,
 				C0C9FE992655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
 				C0A728E9279EEF1B000BFBF9 /* String+Extensions.swift in Sources */,
 				C058493628475FD600DE42F0 /* DefaultScreenObservatory.swift in Sources */,
@@ -2321,36 +2764,48 @@
 				C0C9FE962655E4C10074D669 /* ScreenCustomWindowProvider.swift in Sources */,
 				C0885F7F26B6BA0100CA0A77 /* ScreenTopAction.swift in Sources */,
 				C0885F9126B6BA0100CA0A77 /* ScreenPresentedAction.swift in Sources */,
+				C078FD442861A1DA0008FC6E /* ProgressMessageFooterView.swift in Sources */,
 				C0885F8126B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0238EE227A411D100148E91 /* DeeplinkHandler.swift in Sources */,
+				C078FD502861A1DA0008FC6E /* ProgressPercentageIndicator.swift in Sources */,
+				C078FD822861A1DA0008FC6E /* HUD.swift in Sources */,
 				C095914F285256CE00729E93 /* DeeplinkScope.swift in Sources */,
 				C0A728F2279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0E932FE262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
+				C078FD4C2861A1DA0008FC6E /* ProgressActivityIndicator.swift in Sources */,
 				C0238ED627A40FE500148E91 /* DeeplinkManager.swift in Sources */,
 				C0D5797A27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F6526B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
 				C0885F8D26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
 				C088601A26B6C60B00CA0A77 /* InvalidOpenSettingsURLError.swift in Sources */,
+				C078FD462861A1DA0008FC6E /* ProgressSuccessIndicator.swift in Sources */,
 				C0D5796A27A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
 				C0E9EF2526BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
+				C078FD422861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */,
 				C0D5798C27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
 				C0C3427126BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
+				C078FDB02861C8450008FC6E /* Progress+Image.swift in Sources */,
 				C0A728A5279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C0959147285256CE00729E93 /* UIApplicationShortcutItem+Extensions.swift in Sources */,
 				C093BA802798172B0093F29B /* ScreenMakeKeyAndVisibleAction.swift in Sources */,
 				C0885FFC26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
+				C078FD892861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */,
 				C0C9FE932655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C088600A26B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C0885FBD26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
 				C06A4C8C266AA641008A7DF3 /* ScreenPayloadedContainer+NSObject.swift in Sources */,
 				C0C3426F26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
+				C078FD382861A1DA0008FC6E /* UIApplication+Extensions.swift in Sources */,
 				C0A728F5279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */,
+				C078FD802861A1DA0008FC6E /* HUDCustomAnimation.swift in Sources */,
 				C0238F1927A8443700148E91 /* UINavigationController+ScreenIterableContainer.swift in Sources */,
 				C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
 				C0C9FE9C2655E5700074D669 /* ScreenNavigator.swift in Sources */,
 				C0F9A47625FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
+				C078FD482861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift in Sources */,
 				C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */,
+				C078FD722861A1DA0008FC6E /* ProgressEmptyHeader.swift in Sources */,
 				C0238ED127A40F6C00148E91 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C0885F6126B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */,
 				C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
@@ -2364,21 +2819,27 @@
 				C0E93304262B16B80041C564 /* ScreenModalStyle.swift in Sources */,
 				C0885FBF26B6C0A500CA0A77 /* ScreenStackCustomAnimation.swift in Sources */,
 				C088602426B6C60B00CA0A77 /* ScreenOpenStoreAppAction.swift in Sources */,
+				C078FD6E2861A1DA0008FC6E /* ProgressContent.swift in Sources */,
 				C0A728B8279AD53B000BFBF9 /* DictionaryComponentDecoder.swift in Sources */,
 				C095914D285256CE00729E93 /* DeeplinkResult.swift in Sources */,
 				C01B01CA27B3D83D00DF0BB1 /* NotificationDeeplinkInvalidUserInfoError.swift in Sources */,
 				C0885F6326B6BA0100CA0A77 /* ScreenSelectedTabAction.swift in Sources */,
 				C05F488A26B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
+				C078FD4E2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */,
 				C058493E2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
+				C078FD762861A1DA0008FC6E /* ProgressHeader.swift in Sources */,
 				C0C3428126BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C0A72861279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */,
 				C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */,
 				C0C06E0927AA78F4002B7F03 /* Nullable.swift in Sources */,
 				C0238EEC27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */,
+				C078FD5E2861A1DA0008FC6E /* ProgressFailureIndicator.swift in Sources */,
 				C095914B285256CE00729E93 /* DeeplinkStorage.swift in Sources */,
 				C0885F9526B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,
+				C078FD742861A1DA0008FC6E /* ProgressEmptyHeaderView.swift in Sources */,
 				C0238EE527A7DA8600148E91 /* DeeplinkError.swift in Sources */,
+				C078FD3E2861A1DA0008FC6E /* ProgressEmptyFooter.swift in Sources */,
 				C0A728642799487B000BFBF9 /* AnyDeeplink.swift in Sources */,
 				C0270CA425F3DAF000ECC57C /* UIViewController+Extensions.swift in Sources */,
 				C0238F0827A7F87300148E91 /* URLDeeplinkQueryOptions.swift in Sources */,
@@ -2396,7 +2857,10 @@
 				C0238F1327A840E400148E91 /* ScreenIterableContainer.swift in Sources */,
 				C0AADB8225EF901F0087439E /* ScreenError.swift in Sources */,
 				C0D5798F27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */,
+				C078FD8F2861BDAE0008FC6E /* HUDStyle.swift in Sources */,
 				C0885FFE26B6C60B00CA0A77 /* ActionSheetAction.swift in Sources */,
+				C078FD642861A1DA0008FC6E /* ProgressView.swift in Sources */,
+				C078FD3A2861A1DA0008FC6E /* ProgressFooter.swift in Sources */,
 				C0A728BB279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

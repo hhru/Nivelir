@@ -54,7 +54,7 @@ final class AuthorizationView: UIView {
 
         phoneNumberTextField.snp.makeConstraints { make in
             make.top.equalTo(messageLabel.snp.bottom).offset(32.0)
-            make.left.right.equalToSuperview().inset(24.0)
+            make.left.right.equalTo(safeAreaLayoutGuide).inset(24.0)
         }
 
         phoneNumberTextField.becomeFirstResponder()

@@ -55,7 +55,7 @@ public protocol ScreenAction {
     /// - Returns: An optional value of the type you are trying to cast to.
     func cast<Action: ScreenAction>(to type: Action.Type) -> Action?
 
-    /// Сombines this action with another.
+    /// Combines this action with another.
     ///
     /// Some navigation actions can be combined with others to form a single new action that does the same thing.
     /// For example, you need to push two view controllers into the navigation stack,

@@ -33,7 +33,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc private func onCloseBarBattonTouchUpInside() {
+    @objc private func onCloseBarButtonTouchUpInside() {
         screenNavigator.navigate(
             from: presenting,
             to: { route in
@@ -47,12 +47,45 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
         )
     }
 
+    private func authorizeUser(phoneNumber: String) {
+        screenNavigator.navigate { $0.showHUD(.spinner) }
+
+        authorizationService.login(phoneNumber: phoneNumber) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+
+            switch result {
+            case .success:
+                self.screenNavigator.navigate(
+                    from: self.presenting,
+                    to: { route in
+                        route
+                            .showHUD(.success, duration: 1.0)
+                            .wait(for: 0.75)
+                            .dismiss()
+                    },
+                    completion: { _ in
+                        self.screenObservation { observer in
+                            observer.authorizationFinished(isAuthorized: true)
+                        }
+                    }
+                )
+
+            case .failure:
+                self.screenNavigator.navigate { route in
+                    route.showHUD(.failure, duration: 1.0)
+                }
+            }
+        }
+    }
+
     private func setupCloseBarButton() {
         let closeBarBattonItem = UIBarButtonItem(
             image: Images.close,
             style: .plain,
             target: self,
-            action: #selector(onCloseBarBattonTouchUpInside)
+            action: #selector(onCloseBarButtonTouchUpInside)
         )
 
         closeBarBattonItem.tintColor = Colors.important
@@ -62,23 +95,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 
     private func setupAuthorizationView() {
         authorizationView?.onLoginTapped = { [weak self] phoneNumber in
-            guard let self = self else {
-                return
-            }
-
-            self.authorizationService.login(phoneNumber: phoneNumber)
-
-            self.screenNavigator.navigate(
-                from: self.presenting,
-                to: { route in
-                    route.dismiss()
-                },
-                completion: { _ in
-                    self.screenObservation { observer in
-                        observer.authorizationFinished(isAuthorized: true)
-                    }
-                }
-            )
+            self?.authorizeUser(phoneNumber: phoneNumber)
         }
     }
 
