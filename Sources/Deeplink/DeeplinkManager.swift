@@ -8,6 +8,7 @@ import UserNotifications
 public final class DeeplinkManager: DeeplinkHandler {
 
     public let deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]]
+    public let interceptors: [DeeplinkInterceptor]
     public let navigator: ScreenNavigator
 
     public private(set) var screens: [DeeplinkScope: Any?] = [:]
@@ -26,20 +27,47 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     public init(
         deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]],
+        interceptors: [DeeplinkInterceptor] = [],
         navigator: ScreenNavigator
     ) {
         self.deeplinkTypes = deeplinkTypes
+        self.interceptors = interceptors
         self.navigator = navigator
     }
 
     public convenience init(
         deeplinkTypes: [AnyDeeplink.Type],
+        interceptors: [DeeplinkInterceptor] = [],
         navigator: ScreenNavigator
     ) {
         self.init(
             deeplinkTypes: [.default: deeplinkTypes],
             navigator: navigator
         )
+    }
+
+    private func performInterceptors(
+        for deeplink: AnyDeeplink,
+        from index: Int = .zero,
+        completion: @escaping DeeplinkInterceptor.Completion
+    ) {
+        guard index < interceptors.count else {
+            return completion(.success)
+        }
+
+        interceptors[index].interceptDeeplink(deeplink, navigator: navigator) { result in
+            switch result {
+            case .success:
+                self.performInterceptors(
+                    for: deeplink,
+                    from: index + 1,
+                    completion: completion
+                )
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 
     private func navigateIfPossible() {
@@ -57,14 +85,18 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         pendingDeeplink = nil
 
-        do {
-            try deeplink.value.navigateIfPossible(
-                screens: screens,
-                navigator: navigator,
-                handler: self
-            )
-        } catch {
-            navigator.logError(error)
+        performInterceptors(for: deeplink.value) { result in
+            do {
+                try result.get()
+
+                try deeplink.value.navigateIfPossible(
+                    screens: screens,
+                    navigator: self.navigator,
+                    handler: self
+                )
+            } catch {
+                self.navigator.logError(error)
+            }
         }
     }
 
