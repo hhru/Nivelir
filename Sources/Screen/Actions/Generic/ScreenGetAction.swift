@@ -6,7 +6,7 @@ public struct ScreenGetAction<Container: ScreenContainer>: ScreenAction {
 
     public typealias Body = (
         _ container: Container,
-        _ completion: () -> Void
+        _ completion: @escaping Completion
     ) -> Void
 
     public let body: Body
@@ -18,7 +18,7 @@ public struct ScreenGetAction<Container: ScreenContainer>: ScreenAction {
     public init(body: @escaping (_ container: Container) -> Void) {
         self.init { container, completion in
             body(container)
-            completion()
+            completion(.success)
         }
     }
 
@@ -27,7 +27,7 @@ public struct ScreenGetAction<Container: ScreenContainer>: ScreenAction {
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        body(container) { completion(.success) }
+        body(container, completion)
     }
 }
 
