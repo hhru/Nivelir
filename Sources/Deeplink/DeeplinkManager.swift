@@ -47,7 +47,7 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
 
     private func performInterceptors(
-        for deeplink: AnyDeeplink,
+        for deeplink: DeeplinkStorage,
         from index: Int = .zero,
         completion: @escaping DeeplinkInterceptor.Completion
     ) {
@@ -55,7 +55,11 @@ public final class DeeplinkManager: DeeplinkHandler {
             return completion(.success)
         }
 
-        interceptors[index].interceptDeeplink(deeplink, navigator: navigator) { result in
+        interceptors[index].interceptDeeplink(
+            deeplink.value,
+            of: deeplink.type,
+            navigator: navigator
+        ) { result in
             switch result {
             case .success:
                 self.performInterceptors(
@@ -85,7 +89,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         pendingDeeplink = nil
 
-        performInterceptors(for: deeplink.value) { result in
+        performInterceptors(for: deeplink) { result in
             do {
                 try result.get()
 
@@ -108,13 +112,18 @@ public final class DeeplinkManager: DeeplinkHandler {
         return deeplink != nil
     }
 
-    private func resolveDeeplinkResult(deeplink: AnyDeeplink?, scope: DeeplinkScope) -> DeeplinkResult? {
+    private func resolveDeeplinkResult(
+        deeplink: AnyDeeplink?,
+        of type: DeeplinkType,
+        scope: DeeplinkScope
+    ) -> DeeplinkResult? {
         guard let deeplink = deeplink else {
             return nil
         }
 
         let storage = DeeplinkStorage(
             value: deeplink,
+            type: type,
             scope: scope
         )
 
@@ -199,6 +208,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
             return resolveDeeplinkResult(
                 deeplink: deeplink,
+                of: .url,
                 scope: scope
             )
         } catch {
@@ -250,6 +260,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
             return resolveDeeplinkResult(
                 deeplink: deeplink,
+                of: .notification,
                 scope: scope
             )
         } catch {
@@ -302,6 +313,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
             return resolveDeeplinkResult(
                 deeplink: deeplink,
+                of: .shortcut,
                 scope: scope
             )
         } catch {

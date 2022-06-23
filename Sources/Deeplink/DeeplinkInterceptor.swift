@@ -6,6 +6,7 @@ public protocol DeeplinkInterceptor {
 
     func interceptDeeplink(
         _ deeplink: AnyDeeplink,
+        of type: DeeplinkType,
         navigator: ScreenNavigator,
         completion: @escaping Completion
     )
