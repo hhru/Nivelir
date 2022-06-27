@@ -137,6 +137,8 @@ custom_categories:
       - DeeplinkManager
       - DeeplinkHandler
       - DeeplinkScope
+      - DeeplinkType
+      - DeeplinkInterceptor
 
       - DeeplinkError
       - DeeplinkInvalidContextError
