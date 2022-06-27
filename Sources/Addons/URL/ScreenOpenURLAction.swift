@@ -27,11 +27,11 @@ public struct ScreenOpenURLAction<Container: ScreenContainer>: ScreenAction {
         let urls = fallbackURLs.prepending(url)
 
         guard let url = urls.first(where: { UIApplication.shared.canOpenURL($0) }) else {
-            return completion(.failedToOpenURL(for: self))
+            return completion(.failedToOpenURL(url, for: self))
         }
 
         UIApplication.shared.open(url, options: options) { success in
-            completion(success ? .success : .failedToOpenURL(for: self))
+            completion(success ? .success : .failedToOpenURL(url, for: self))
         }
     }
 }

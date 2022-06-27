@@ -8,7 +8,7 @@ public struct DeeplinkScope: Hashable, ExpressibleByStringLiteral {
         self.key = nil
     }
 
-    public init(key: String = #function) {
+    public init(key: String) {
         self.key = key
     }
 
@@ -20,4 +20,8 @@ public struct DeeplinkScope: Hashable, ExpressibleByStringLiteral {
 extension DeeplinkScope {
 
     public static let `default` = Self()
+
+    public static func fromPropertyName(_ name: String = #function) -> Self {
+        Self(key: name)
+    }
 }

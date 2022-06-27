@@ -46,6 +46,23 @@ extension ScreenPopoverPresentationAnchor {
         )
     }
 
+    public static func bottomCenter(
+        of view: UIView,
+        permittedArrowDirections: UIPopoverArrowDirection? = nil
+    ) -> Self {
+        .rect(
+            CGRect(
+                origin: CGPoint(
+                    x: view.bounds.midX,
+                    y: view.bounds.size.height
+                ),
+                size: .zero
+            ),
+            of: view,
+            permittedArrowDirections: permittedArrowDirections
+        )
+    }
+
     public static func rect(
         _ rect: CGRect,
         of view: UIView? = nil,

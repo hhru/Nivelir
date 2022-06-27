@@ -8,6 +8,7 @@ import UserNotifications
 public final class DeeplinkManager: DeeplinkHandler {
 
     public let deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]]
+    public let interceptors: [DeeplinkInterceptor]
     public let navigator: ScreenNavigator
 
     public private(set) var screens: [DeeplinkScope: Any?] = [:]
@@ -26,20 +27,51 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     public init(
         deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]],
+        interceptors: [DeeplinkInterceptor] = [],
         navigator: ScreenNavigator
     ) {
         self.deeplinkTypes = deeplinkTypes
+        self.interceptors = interceptors
         self.navigator = navigator
     }
 
     public convenience init(
         deeplinkTypes: [AnyDeeplink.Type],
+        interceptors: [DeeplinkInterceptor] = [],
         navigator: ScreenNavigator
     ) {
         self.init(
             deeplinkTypes: [.default: deeplinkTypes],
             navigator: navigator
         )
+    }
+
+    private func performInterceptors(
+        for deeplink: DeeplinkStorage,
+        from index: Int = .zero,
+        completion: @escaping DeeplinkInterceptor.Completion
+    ) {
+        guard index < interceptors.count else {
+            return completion(.success)
+        }
+
+        interceptors[index].interceptDeeplink(
+            deeplink.value,
+            of: deeplink.type,
+            navigator: navigator
+        ) { result in
+            switch result {
+            case .success:
+                self.performInterceptors(
+                    for: deeplink,
+                    from: index + 1,
+                    completion: completion
+                )
+
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 
     private func navigateIfPossible() {
@@ -57,14 +89,18 @@ public final class DeeplinkManager: DeeplinkHandler {
 
         pendingDeeplink = nil
 
-        do {
-            try deeplink.value.navigateIfPossible(
-                screens: screens,
-                navigator: navigator,
-                handler: self
-            )
-        } catch {
-            navigator.logError(error)
+        performInterceptors(for: deeplink) { result in
+            do {
+                try result.get()
+
+                try deeplink.value.navigateIfPossible(
+                    screens: screens,
+                    navigator: self.navigator,
+                    handler: self
+                )
+            } catch {
+                self.navigator.logError(error)
+            }
         }
     }
 
@@ -76,13 +112,18 @@ public final class DeeplinkManager: DeeplinkHandler {
         return deeplink != nil
     }
 
-    private func resolveDeeplinkResult(deeplink: AnyDeeplink?, scope: DeeplinkScope) -> DeeplinkResult? {
+    private func resolveDeeplinkResult(
+        deeplink: AnyDeeplink?,
+        of type: DeeplinkType,
+        scope: DeeplinkScope
+    ) -> DeeplinkResult? {
         guard let deeplink = deeplink else {
             return nil
         }
 
         let storage = DeeplinkStorage(
             value: deeplink,
+            type: type,
             scope: scope
         )
 
@@ -167,6 +208,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
             return resolveDeeplinkResult(
                 deeplink: deeplink,
+                of: .url,
                 scope: scope
             )
         } catch {
@@ -218,6 +260,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
             return resolveDeeplinkResult(
                 deeplink: deeplink,
+                of: .notification,
                 scope: scope
             )
         } catch {
@@ -270,6 +313,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
             return resolveDeeplinkResult(
                 deeplink: deeplink,
+                of: .shortcut,
                 scope: scope
             )
         } catch {
