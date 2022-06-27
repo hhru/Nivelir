@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Nivelir 1.4.0 Docs
+          Nivelir 1.4.1 Docs
         </a>
          (31% documented)
       </p>
@@ -388,6 +388,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/DeeplinkScope.html">DeeplinkScope</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/DeeplinkType.html">DeeplinkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DeeplinkInterceptor.html">DeeplinkInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/DeeplinkError.html">DeeplinkError</a>
@@ -1066,6 +1072,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7Nivelir15DeeplinkManagerC12interceptorsSayAA0B11Interceptor_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/interceptors" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15DeeplinkManagerC12interceptorsSayAA0B11Interceptor_pGvp">interceptors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/DeeplinkInterceptor.html">DeeplinkInterceptor</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7Nivelir15DeeplinkManagerC9navigatorAA15ScreenNavigatorCvp"></a>
                     <a name="//apple_ref/swift/Property/navigator" class="dashAnchor"></a>
                     <a class="token" href="#/s:7Nivelir15DeeplinkManagerC9navigatorAA15ScreenNavigatorCvp">navigator</a>
@@ -1147,9 +1180,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir15DeeplinkManagerC13deeplinkTypes9navigatorACSDyAA0B5ScopeVSayAA03AnyB0_pXpGG_AA15ScreenNavigatorCtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(deeplinkTypes:navigator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir15DeeplinkManagerC13deeplinkTypes9navigatorACSDyAA0B5ScopeVSayAA03AnyB0_pXpGG_AA15ScreenNavigatorCtcfc">init(deeplinkTypes:<wbr>navigator:<wbr>)</a>
+                    <a name="/s:7Nivelir15DeeplinkManagerC13deeplinkTypes12interceptors9navigatorACSDyAA0B5ScopeVSayAA03AnyB0_pXpGG_SayAA0B11Interceptor_pGAA15ScreenNavigatorCtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(deeplinkTypes:interceptors:navigator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15DeeplinkManagerC13deeplinkTypes12interceptors9navigatorACSDyAA0B5ScopeVSayAA03AnyB0_pXpGG_SayAA0B11Interceptor_pGAA15ScreenNavigatorCtcfc">init(deeplinkTypes:<wbr>interceptors:<wbr>navigator:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1166,6 +1199,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
     <span class="nv">deeplinkTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/DeeplinkScope.html">DeeplinkScope</a></span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AnyDeeplink.html">AnyDeeplink</a></span><span class="o">.</span><span class="k">Type</span><span class="p">]],</span>
+    <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/DeeplinkInterceptor.html">DeeplinkInterceptor</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
     <span class="nv">navigator</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></span>
 <span class="p">)</span></code></pre>
 
@@ -1177,9 +1211,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Nivelir15DeeplinkManagerC13deeplinkTypes9navigatorACSayAA03AnyB0_pXpG_AA15ScreenNavigatorCtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(deeplinkTypes:navigator:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Nivelir15DeeplinkManagerC13deeplinkTypes9navigatorACSayAA03AnyB0_pXpG_AA15ScreenNavigatorCtcfc">init(deeplinkTypes:<wbr>navigator:<wbr>)</a>
+                    <a name="/s:7Nivelir15DeeplinkManagerC13deeplinkTypes12interceptors9navigatorACSayAA03AnyB0_pXpG_SayAA0B11Interceptor_pGAA15ScreenNavigatorCtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(deeplinkTypes:interceptors:navigator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Nivelir15DeeplinkManagerC13deeplinkTypes12interceptors9navigatorACSayAA03AnyB0_pXpG_SayAA0B11Interceptor_pGAA15ScreenNavigatorCtcfc">init(deeplinkTypes:<wbr>interceptors:<wbr>navigator:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1196,6 +1230,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span>
     <span class="nv">deeplinkTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AnyDeeplink.html">AnyDeeplink</a></span><span class="o">.</span><span class="k">Type</span><span class="p">],</span>
+    <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/DeeplinkInterceptor.html">DeeplinkInterceptor</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
     <span class="nv">navigator</span><span class="p">:</span> <span class="kt"><a href="../Classes/ScreenNavigator.html">ScreenNavigator</a></span>
 <span class="p">)</span></code></pre>
 
