@@ -48,8 +48,6 @@ public final class DefaultScreenIterator: ScreenIterator {
 
         if let container = container as? ScreenIterableContainer {
             localContainers = container.nestedContainers
-        } else if let container = container as? UIViewController {
-            localContainers = container.children
         } else {
             localContainers = []
         }
