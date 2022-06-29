@@ -473,7 +473,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         self.screens[scope] = screens
 
         guard applicationStateSubscription == nil else {
-            return
+            return navigateIfPossible()
         }
 
         applicationStateSubscription = NotificationCenter.default.addObserver(
