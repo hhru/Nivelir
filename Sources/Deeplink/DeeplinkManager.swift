@@ -87,6 +87,8 @@ public final class DeeplinkManager: DeeplinkHandler {
             return
         }
 
+        navigator.logInfo("Performing navigation for deeplink: \(deeplink.value)")
+
         pendingDeeplink = nil
 
         performInterceptors(for: deeplink) { result in
