@@ -5952,154 +5952,154 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 358,
+      "line": 360,
       "symbol": "DeeplinkManager.canHandleURL(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 358,
+      "line": 360,
       "symbol": "DeeplinkManager.canHandleURL(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 368,
+      "line": 370,
       "symbol": "DeeplinkManager.handleURL(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 368,
+      "line": 370,
       "symbol": "DeeplinkManager.handleURL(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 380,
+      "line": 382,
       "symbol": "DeeplinkManager.handleURLIfPossible(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 380,
+      "line": 382,
       "symbol": "DeeplinkManager.handleURLIfPossible(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 391,
+      "line": 393,
       "symbol": "DeeplinkManager.canHandleNotification(response:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 401,
+      "line": 403,
       "symbol": "DeeplinkManager.handleNotification(response:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 418,
+      "line": 420,
       "symbol": "DeeplinkManager.handleNotificationIfPossible(response:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 430,
+      "line": 432,
       "symbol": "DeeplinkManager.canHandleShortcut(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 440,
+      "line": 442,
       "symbol": "DeeplinkManager.handleShortcut(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 457,
+      "line": 459,
       "symbol": "DeeplinkManager.handleShortcutIfPossible(_:context:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 468,
+      "line": 470,
       "symbol": "DeeplinkManager.isActive(scope:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 468,
+      "line": 470,
       "symbol": "DeeplinkManager.isActive(scope:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 472,
+      "line": 474,
       "symbol": "DeeplinkManager.activate(screens:scope:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 472,
+      "line": 474,
       "symbol": "DeeplinkManager.activate(screens:scope:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 488,
+      "line": 490,
       "symbol": "DeeplinkManager.activate(screens:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 488,
+      "line": 490,
       "symbol": "DeeplinkManager.activate(screens:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 494,
+      "line": 496,
       "symbol": "DeeplinkManager.deactivate(scope:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 494,
+      "line": 496,
       "symbol": "DeeplinkManager.deactivate(scope:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 512,
+      "line": 514,
       "symbol": "DeeplinkManager.deactivate()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Deeplink/DeeplinkManager.swift",
-      "line": 512,
+      "line": 514,
       "symbol": "DeeplinkManager.deactivate()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -11951,56 +11951,56 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 132,
+      "line": 130,
       "symbol": "DefaultScreenIterator.iterate(from:while:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 132,
+      "line": 130,
       "symbol": "DefaultScreenIterator.iterate(from:while:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 166,
+      "line": 164,
       "symbol": "DefaultScreenIterator.firstContainer(in:where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 166,
+      "line": 164,
       "symbol": "DefaultScreenIterator.firstContainer(in:where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 180,
+      "line": 178,
       "symbol": "DefaultScreenIterator.lastContainer(in:where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 180,
+      "line": 178,
       "symbol": "DefaultScreenIterator.lastContainer(in:where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 192,
+      "line": 190,
       "symbol": "DefaultScreenIterator.topContainer(in:where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Navigator/Iterator/DefaultScreenIterator.swift",
-      "line": 192,
+      "line": 190,
       "symbol": "DefaultScreenIterator.topContainer(in:where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
