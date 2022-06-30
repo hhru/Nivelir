@@ -87,6 +87,8 @@ public final class DeeplinkManager: DeeplinkHandler {
             return
         }
 
+        navigator.logInfo("Performing navigation for deeplink: \(deeplink.value)")
+
         pendingDeeplink = nil
 
         performInterceptors(for: deeplink) { result in
@@ -473,7 +475,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         self.screens[scope] = screens
 
         guard applicationStateSubscription == nil else {
-            return
+            return navigateIfPossible()
         }
 
         applicationStateSubscription = NotificationCenter.default.addObserver(

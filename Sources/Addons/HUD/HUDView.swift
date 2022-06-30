@@ -112,7 +112,6 @@ extension HUDView {
     ) {
         view.translatesAutoresizingMaskIntoConstraints = false
 
-        window.endEditing(true)
         window.addSubview(view)
 
         let constraints = [
