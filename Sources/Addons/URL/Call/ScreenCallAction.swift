@@ -23,8 +23,8 @@ public struct ScreenCallAction<Container: ScreenContainer>: ScreenAction {
 
         var urlComponents = URLComponents()
 
-        urlComponents.scheme = "tel:"
-        urlComponents.path = phoneNumber
+        urlComponents.scheme = "tel"
+        urlComponents.host = phoneNumber
 
         guard let url = urlComponents.url else {
             return completion(.invalidCallParameters(for: self))
