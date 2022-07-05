@@ -9235,14 +9235,14 @@
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/Modifiers/Pop/ScreenStackPopModifier.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "ScreenThenable.popToRoot(animation:separated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/almaz/Development/HH/Nivelir/Sources/Screen/Actions/Stack/SetStack/Modifiers/Pop/ScreenStackPopModifier.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "ScreenThenable.popToRoot(animation:separated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
