@@ -45,6 +45,7 @@ extension ScreenThenable where Current: UINavigationController {
     ) -> Self {
         pop(
             to: .previous,
+            animation: animation,
             separated: separated
         )
     }
@@ -55,6 +56,7 @@ extension ScreenThenable where Current: UINavigationController {
     ) -> Self {
         pop(
             to: .root,
+            animation: animation,
             separated: separated
         )
     }
