@@ -2,7 +2,8 @@ import Foundation
 
 /// A protocol representing the navigation action that is performed in the screen container.
 ///
-/// The navigation actions that are performed can be limited by the type of container on which they are performed by `associatedtype Container`.
+/// The navigation actions that are performed can be limited by the type of container
+/// on which they are performed by `associatedtype Container`.
 /// For example, for a container with `UINavigationController` type, `push`, `pop` and etc actions will be available.
 /// Also for the `UITabBarController` the `selectTab` action will be available as well.
 public protocol ScreenAction {
