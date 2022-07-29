@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Sets the `leftBarButtonItem` for the `navigationItem` of container of type `UIViewController`.
 public struct ScreenLeftBarButtonDecorator<Container: UIViewController>: ScreenDecorator {
 
     public let item: UIBarButtonItem
@@ -31,6 +32,12 @@ public struct ScreenLeftBarButtonDecorator<Container: UIViewController>: ScreenD
 
 extension Screen where Container: UIViewController {
 
+    /// Sets the `leftBarButtonItem` for the `navigationItem`
+    /// - Parameter item: `item` to set.
+    /// - Returns: New `Screen` with `UIBarButtonItem` set to `leftBarButtonItem`.
+    ///
+    /// - SeeAlso: `UINavigationItem`
+    /// - SeeAlso: `UIBarButtonItem`
     public func withLeftBarButton(_ item: UIBarButtonItem) -> AnyScreen<Container> {
         decorated(by: ScreenLeftBarButtonDecorator(item: item))
     }
