@@ -1,6 +1,10 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Configuring the `popoverPresentationController` property
+/// using `ScreenPopoverPresentationAnchor` for a container with type `UIViewController`.
+///
+/// - SeeAlso: `popoverPresentationController`
 public struct ScreenPopoverPresentationDecorator<Container: UIViewController>: ScreenDecorator {
 
     public let anchor: ScreenPopoverPresentationAnchor
@@ -47,6 +51,11 @@ public struct ScreenPopoverPresentationDecorator<Container: UIViewController>: S
 
 extension Screen where Container: UIViewController {
 
+    /// Configuring the `popoverPresentationController` property
+    /// using `ScreenPopoverPresentationAnchor` for a container with type `UIViewController`.
+    ///
+    /// - Parameter anchor: Anchor for `popoverPresentationController`.
+    /// - Returns: New `Screen` with configured `UIPopoverPresentationController`.
     public func withPopoverPresentation(anchor: ScreenPopoverPresentationAnchor) -> AnyScreen<Container> {
         decorated(by: ScreenPopoverPresentationDecorator(anchor: anchor))
     }
