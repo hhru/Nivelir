@@ -2,7 +2,8 @@
 import UIKit
 
 /// Default implementation of the `ScreenIterator`.
-/// Iterating over all standard container types from UIKit — `UIWindow`, `UIViewController`, `UINavigationController`, `UITabBarController`.
+/// Iterating over all standard container types from UIKit — `UIWindow`, `UIViewController`,
+/// `UINavigationController`, `UITabBarController`.
 public final class DefaultScreenIterator: ScreenIterator {
 
     public init() { }

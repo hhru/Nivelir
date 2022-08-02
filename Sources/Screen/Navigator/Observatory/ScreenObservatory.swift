@@ -12,7 +12,7 @@ import Foundation
 /// But if the navigation is a chain of screens,
 /// then passing closure/delegate from the first to the last screen through all screens in the chain is difficult.
 /// And such a chain is difficult to collect via deeplink.
-/// 
+///
 /// **Example**
 ///
 /// For example, we have three screens: `EmployerRewiewList`, `EmployerReview`, `EmployerReviewDeletion`.
@@ -74,12 +74,14 @@ import Foundation
 /// }
 /// ```
 ///
-/// Now in order for the `EmployerRewiewList` and `EmployerReview` screens to start observing the `EmployerReviewDeletion`,
+/// Now in order for the `EmployerRewiewList` and `EmployerReview` screens
+/// to start observing the `EmployerReviewDeletion`,
 /// the `EmployerReviewDeletionObserver` protocol must be implemented.
 /// It can be implemented by, for example, `UIViewController` or ViewModel/Presenter.
 /// After that, you need to add an observer to observatory using one of the `ScreenObservatory` methods,
 /// where the class implementing the `EmployerReviewDeletionObserver` protocol is passed in the `observer` parameter.
-/// For observers, the `employerReviewDeleted(employerReviewID:)` method will be called as soon as the observation notifies it.
+/// For observers, the `employerReviewDeleted(employerReviewID:)` method
+/// will be called as soon as the observation notifies it.
 ///
 /// Thus, we subscribed several observers for one screen.
 ///
