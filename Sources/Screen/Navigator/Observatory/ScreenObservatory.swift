@@ -2,7 +2,7 @@ import Foundation
 
 /// A type that adds observers for subscribe to notifications from observation.
 ///
-/// With `ScreenObservatory`, any screen can observing changes of another screen using an observer.
+/// With `ScreenObservatory`, any screen can observe changes of another screen using an observer.
 /// The observer can be the `UIViewController` itself, which wants to receive new notifications,
 /// or for example in case of using MVVM architecture,
 /// the observer can be a ViewModel (or Presenter for VIPER).
@@ -15,21 +15,21 @@ import Foundation
 ///
 /// **Example**
 ///
-/// For example, we have three screens: `EmployerRewiewList`, `EmployerReview`, `EmployerReviewDeletion`.
-/// `EmployerRewiewList` shows `EmployerReview` and `EmployerReviewDeletion` screen,
+/// For example, we have three screens: `EmployerReviewList`, `EmployerReview`, `EmployerReviewDeletion`.
+/// `EmployerReviewList` shows `EmployerReview` and `EmployerReviewDeletion` screen,
 /// and `EmployerReview` can show `EmployerReviewDeletion`. This results in the following diagram:
 ///
 /// ```
-/// EmployerRewiewList ---------------> EmployerReview
+/// EmployerReviewList ---------------> EmployerReview
 ///         |                                   |
 ///         |                                   |
 ///          ----> EmployerReviewDeletion <-----
 /// ```
 ///
-/// `EmployerReview` and `EmployerRewiewList` should update their data when the `EmployerReviewDeletion` screen changes.
+/// `EmployerReview` and `EmployerReviewList` should update their data when the `EmployerReviewDeletion` screen changes.
 /// Such a chain is difficult to maintain and difficult to implement when opening screens through a deep link.
 ///
-/// Instead, `EmployerReview` and `EmployerRewiewList` can become observers of the `EmployerReviewDeletion` screen.
+/// Instead, `EmployerReview` and `EmployerReviewList` can become observers of the `EmployerReviewDeletion` screen.
 /// To do this, you need to create a protocol for `EmployerReviewDeletion` screen observers:
 ///
 /// ```swift
@@ -74,7 +74,7 @@ import Foundation
 /// }
 /// ```
 ///
-/// Now in order for the `EmployerRewiewList` and `EmployerReview` screens
+/// Now in order for the `EmployerReviewList` and `EmployerReview` screens
 /// to start observing the `EmployerReviewDeletion`,
 /// the `EmployerReviewDeletionObserver` protocol must be implemented.
 /// It can be implemented by, for example, `UIViewController` or ViewModel/Presenter.
