@@ -27,7 +27,7 @@ public protocol ScreenDecorator: CustomStringConvertible {
     /// - SeeAlso: `ScreenContainer`
     associatedtype Container: ScreenContainer
 
-    /// A new type of container, which will turn out in the results of the decoration.
+    /// A new type of container, returned as a result of the decoration.
     /// `Output` and `Conatiner` types can be the same when only modifying a container without changing its type.
     ///
     /// - SeeAlso: `ScreenPayloadedContainer`
