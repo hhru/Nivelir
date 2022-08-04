@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Sets the `tabBarItem` property for a container with type `UIViewController`.
 public struct ScreenTabBarItemDecorator<Container: UIViewController>: ScreenDecorator {
 
     public let item: UITabBarItem
@@ -31,6 +32,9 @@ public struct ScreenTabBarItemDecorator<Container: UIViewController>: ScreenDeco
 
 extension Screen where Container: UIViewController {
 
+    /// Sets the `tabBarItem` property for a container with type `UIViewController`.
+    /// - Parameter item: `item` to set.
+    /// - Returns: New `Screen` with `UITabBarItem` set to `tabBarItem`.
     public func withTabBarItem(_ item: UITabBarItem) -> AnyScreen<Container> {
         decorated(by: ScreenTabBarItemDecorator(item: item))
     }

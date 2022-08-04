@@ -1,6 +1,9 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Anchor to configure the `UIPopoverPresentationController` for the `UIViewController`.
+///
+/// - SeeAlso: `popoverPresentationController`
 public struct ScreenPopoverPresentationAnchor {
 
     public let rect: CGRect?

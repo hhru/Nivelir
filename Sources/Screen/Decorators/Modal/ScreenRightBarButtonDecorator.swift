@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Sets the `rightBarButtonItem` for the `navigationItem` of container of type `UIViewController`.
 public struct ScreenRightBarButtonDecorator<Container: UIViewController>: ScreenDecorator {
 
     public let item: UIBarButtonItem
@@ -31,6 +32,12 @@ public struct ScreenRightBarButtonDecorator<Container: UIViewController>: Screen
 
 extension Screen where Container: UIViewController {
 
+    /// Sets the `rightBarButtonItem` for the `navigationItem`
+    /// - Parameter item: `item` to set.
+    /// - Returns: New `Screen` with `UIBarButtonItem` set to `rightBarButtonItem`.
+    ///
+    /// - SeeAlso: `UINavigationItem`
+    /// - SeeAlso: `UIBarButtonItem`
     public func withRightBarButton(_ item: UIBarButtonItem) -> AnyScreen<Container> {
         decorated(by: ScreenRightBarButtonDecorator(item: item))
     }
