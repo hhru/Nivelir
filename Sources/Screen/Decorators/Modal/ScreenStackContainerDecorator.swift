@@ -27,7 +27,7 @@ public struct ScreenStackContainerDecorator<
 
 extension Screen where Container: UIViewController {
 
-    /// Wraps the screen container into a navigation controller with the specified class type.
+    /// Wraps the screen container in a navigation controller with the specified class type.
     /// - Parameter type: `UINavigationController` class type.
     /// - Returns: New `Screen` with new container of class type `UINavigationController`.
     public func withStackContainer<Output: UINavigationController>(
@@ -36,7 +36,7 @@ extension Screen where Container: UIViewController {
         decorated(by: ScreenStackContainerDecorator<Container, Output>())
     }
 
-    /// Wraps the screen container into a navigation controller.
+    /// Wraps the screen container in a navigation controller.
     /// - Returns: New `Screen` with new container of class `UINavigationController`.
     public func withStackContainer() -> AnyStackScreen {
         withStackContainer(of: UINavigationController.self)
