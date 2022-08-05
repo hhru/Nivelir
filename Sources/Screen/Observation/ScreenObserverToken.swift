@@ -1,5 +1,10 @@
 import Foundation
 
+/// Token associated with the subscription lifecycle for the observer.
+///
+/// Once the token is removed from memory (deinit is called),
+/// the subscription will be canceled and new notifications will not be received for the observer.
+/// The subscription can also be canceled manually using the ``cancel()`` method.
 public final class ScreenObserverToken {
 
     private let cancellation: () -> Void
@@ -12,6 +17,7 @@ public final class ScreenObserverToken {
         cancellation()
     }
 
+    /// Unsubscribe the observer.
     public func cancel() {
         cancellation()
     }
