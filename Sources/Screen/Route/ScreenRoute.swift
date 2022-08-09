@@ -1,6 +1,10 @@
 import Foundation
 
 /// A route that describes navigation as a set of actions.
+///
+/// `ScreenRoute` is built from a set of navigation actions
+/// and contains the root and the current container type on which these actions will be performed.
+/// The actions that can be added to route are constrained to the current container type.
 public struct ScreenRoute<
     Root: ScreenContainer,
     Current: ScreenContainer
