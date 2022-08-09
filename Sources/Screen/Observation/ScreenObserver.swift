@@ -2,7 +2,7 @@ import Foundation
 
 /// Protocol-Mark for Observers.
 ///
-/// The protocol is inherited in other protocols that the observers will implement.
+/// The protocol is inherited by other protocols that the observers will implement.
 ///
 /// ```swift
 /// protocol EmployerReviewObserver: ScreenObserver {
