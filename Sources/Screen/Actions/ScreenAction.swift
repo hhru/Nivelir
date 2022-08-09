@@ -10,7 +10,7 @@ import Foundation
 /// **Navigation Interceptor**
 ///
 /// The `ScreenAction` can be an interceptor,
-/// depending on which will continue or interrupt the navigation.
+/// that can decide wether navigation should continue or be interrupted.
 /// To do this, implement the `ScreenAction` protocol
 /// and make the necessary checks in the `perform(container:,navigator:,storage:,completion:)` method,
 /// after which call `completion` with the result. You can also perform navigation actions in this method.
