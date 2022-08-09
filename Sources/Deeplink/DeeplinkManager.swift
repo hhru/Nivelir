@@ -5,14 +5,44 @@ import UIKit
 import UserNotifications
 #endif
 
+/// The `DeeplinkManager` keeps track of the opening of deep links.
+///
+/// The manager is the entry point when working with deep links.
+/// The types of deep links that the manager will handle are passed to the initializer.
+///
+/// The manager can handle deep links at any time,
+/// but deep links will only start when the manager is activated, through the ``activate(screens:)`` method.
+/// Until then, the manager will pend the last handled deep link for its performance.
+///
+/// The manager also keeps track of the state of the application,
+/// and performs deep links only in the `UIApplication.State == .active` state.
+///
+/// If it is required to stop deep link handling, the manager can be deactivated through the ``deactivate()`` method.
+///
+/// **Scopes**
+///
+/// Deep links can also be separated into scopes of application.
+/// Each scope can be separately activated and deactivated as needed
+/// using the ``activate(screens:scope:)`` and ``deactivate(scope:)`` methods, respectively.
+/// For example, you can separate the deep links, which should work before and after the user onboarding,
+/// and perform the activation and deactivation separately.
 public final class DeeplinkManager: DeeplinkHandler {
 
+    /// The types of deep links to handle, separated by scope of application.
     public let deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]]
+
+    /// Interceptors for deep links.
     public let interceptors: [DeeplinkInterceptor]
+
+    /// A navigator instance that performs navigation actions for deep links.
     public let navigator: ScreenNavigator
 
+    /// Activated scopes with erased type of screen factories.
     public private(set) var screens: [DeeplinkScope: Any?] = [:]
 
+    /// A Boolean value indicating whether this manager is active.
+    ///
+    /// The value of this property is `true` if the manager has active scopes, and `false` if not.
     public var isActive: Bool {
         !screens.isEmpty
     }
@@ -25,6 +55,11 @@ public final class DeeplinkManager: DeeplinkHandler {
         didSet { navigateIfPossible() }
     }
 
+    /// Creating a manager with types of deep links, separated by scope.
+    /// - Parameters:
+    ///   - deeplinkTypes: The types of deep links to handle, separated by scope of application.
+    ///   - interceptors: Interceptors for deep links.
+    ///   - navigator: A navigator instance that performs navigation actions for deep links.
     public init(
         deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]],
         interceptors: [DeeplinkInterceptor] = [],
@@ -35,6 +70,11 @@ public final class DeeplinkManager: DeeplinkHandler {
         self.navigator = navigator
     }
 
+    /// Creating a manager with deep link types with default scope.
+    /// - Parameters:
+    ///   - deeplinkTypes: The types of deep links to handle.
+    ///   - interceptors: Interceptors for deep links.
+    ///   - navigator: A navigator instance that performs navigation actions for deep links.
     public convenience init(
         deeplinkTypes: [AnyDeeplink.Type],
         interceptors: [DeeplinkInterceptor] = [],
@@ -378,6 +418,17 @@ public final class DeeplinkManager: DeeplinkHandler {
         return handleDeeplinkIfPossible(deeplink)
     }
 
+    /// Handle the URL by a suitable ``URLDeeplink`` and perform navigation, if possible.
+    ///
+    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// - Parameters:
+    ///   - url: A URL (Universal Resource Locator).
+    ///   URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
+    ///
+    ///   - context: Additional context for checking and creating ``URLDeeplink``.
+    ///   Must match the context type of ``URLDeeplink/URLContext``.
+    ///
+    /// - Returns: `false` if there is no suitable ``URLDeeplink`` to handle the URL; otherwise `true`.
     @discardableResult
     public func handleURLIfPossible(_ url: URL, context: Any?) -> Bool {
         do {
@@ -416,6 +467,15 @@ public final class DeeplinkManager: DeeplinkHandler {
         return handleDeeplinkIfPossible(deeplink)
     }
 
+    /// Handle the Notification by a suitable ``NotificationDeeplink`` and perform navigation, if possible.
+    ///
+    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// - Parameters:
+    ///   - response: The user’s response to an actionable notification.
+    ///   - context: Additional context for checking and creating ``NotificationDeeplink``.
+    ///   Must match the context type of ``NotificationDeeplink/NotificationContext``.
+    /// - Returns: `false` if there is no suitable ``NotificationDeeplink`` to handle the Notification;
+    /// otherwise `true`.
     @discardableResult
     public func handleNotificationIfPossible(response: UNNotificationResponse, context: Any?) -> Bool {
         do {
@@ -455,6 +515,18 @@ public final class DeeplinkManager: DeeplinkHandler {
         return handleDeeplinkIfPossible(deeplink)
     }
 
+    /// Handle the Notification by a suitable ``NotificationDeeplink`` and perform navigation, if possible.
+    ///
+    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// - Parameters:
+    ///   - shortcut: An application shortcut item, also called a *Home screen dynamic quick action*,
+    ///   that specifies a user-initiated action for your app.
+    ///
+    ///   - context: Additional context for checking and creating ``ShortcutDeeplink``.
+    ///   Must match the context type of ``ShortcutDeeplink/ShortcutContext``.
+    ///
+    /// - Returns: `false` if there is no suitable ``ShortcutDeeplink`` to handle the Shortcut App;
+    /// otherwise `true`.
     @discardableResult
     public func handleShortcutIfPossible(_ shortcut: UIApplicationShortcutItem, context: Any?) -> Bool {
         do {
@@ -467,10 +539,21 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
     #endif
 
+    /// Returns a Boolean value indicating whether the specified `scope` is active.
+    /// - Parameter scope: Scope for checking.
+    /// - Returns: The return value is `true` if the specified `scope` is active, and `false` if it is not.
     public func isActive(scope: DeeplinkScope) -> Bool {
         screens[scope] != nil
     }
 
+    /// Activates the scope with the screen factory.
+    ///
+    /// After activation, the manager will be able to handle the deep links included in the specified `scope`
+    /// and perform a pending one, if any.
+    /// - Parameters:
+    ///   - screens: A screen factory used to navigate deep links.
+    ///   The instance type must match the type of the ``Deeplink/Screens`` to being handled.
+    ///   - scope: Activatable scope of deep links.
     public func activate(screens: Any?, scope: DeeplinkScope) {
         self.screens[scope] = screens
 
@@ -487,12 +570,22 @@ public final class DeeplinkManager: DeeplinkHandler {
         }
     }
 
+    /// Activates all scopes with the screen factory.
+    ///
+    /// After activation, the manager will be able to handle all deep links and perform a pending one, if any.
+    /// - Parameter screens: A screen factory used to navigate deep links.
+    /// The instance type must match the type of the ``Deeplink/Screens`` to being handled.
     public func activate(screens: Any?) {
         deeplinkTypes.keys.forEach { scope in
             activate(screens: screens, scope: scope)
         }
     }
 
+    /// Deactivates the scope of deep links.
+    ///
+    /// After deactivation, the manager will not handle deep links within the specified `scope`.
+    /// The manager will pend the last handled deep link for its performance after activation.
+    /// - Parameter scope: Deactivatable scope of deep links.
     public func deactivate(scope: DeeplinkScope) {
         self.screens.removeValue(forKey: scope)
 
@@ -511,6 +604,10 @@ public final class DeeplinkManager: DeeplinkHandler {
         self.applicationStateSubscription = nil
     }
 
+    /// Deactivates all scopes.
+    ///
+    /// After deactivation, the manager will not handle all deep links.
+    /// The manager will pend the last handled deep link for its performance after activation.
     public func deactivate() {
         deeplinkTypes.keys.forEach { scope in
             deactivate(scope: scope)
