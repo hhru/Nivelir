@@ -9,7 +9,7 @@ import UIKit
 /// Frequently used predicates are available through static properties and functions.
 /// Predicates can be grouped using the static methods ``satisfiedAny(_:)`` and ``satisfiedAll(_:)``.
 ///
-/// In the example below, the `ProleViewController` receives
+/// In the example below, the `ProfileViewController` receives
 /// new events only from the `AuthorizationObserver` type AND the list of containers specified in ``satisfiedAny(_:)``.
 ///
 /// ```swift
