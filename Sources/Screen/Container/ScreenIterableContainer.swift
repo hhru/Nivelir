@@ -5,7 +5,7 @@ import UIKit
 ///
 /// This type of container is implemented by containers that can have nested containers.
 /// For example, `UINavigationController` has nested containers that are stored in a stack.
-/// For `UITabBarController`, they are containers in the tab.
+/// The `UITabBarController` has nested containers that are stored in the tab.
 ///
 /// This protocol is used to find the specific container in nested containers.
 ///
