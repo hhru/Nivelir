@@ -20,7 +20,7 @@ import Foundation
 /// }
 /// ```
 ///
-/// Where in this example `AuthorizationObserver` is a protocol inherited from `ScreenObserver`,
+/// In this example `AuthorizationObserver` is a protocol inherited from `ScreenObserver`,
 /// which is implemented by observers and subscribed through the navigator method `observe(by:,where:)`:
 ///
 /// ```swift
