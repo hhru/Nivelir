@@ -1,14 +1,14 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-/// The type of ``Deeplink`` that is handled from the the Shortcuts App
+/// The type of ``Deeplink`` that is handled from the Shortcuts App.
 ///
 /// This type allows you to handle the deep link from the shortcut item data, which comes via function parameters.
 ///
 /// Nivelir can decode `userInfo` depending on the type of ``ShortcutUserInfo``.
 /// For example, if ``ShortcutUserInfo`` implements the `Decodable` protocol,
 /// then there is no need to manually parse
-/// the dictionary of `userInfo` – check for keys and cast them to the correct type.
+/// the dictionary of `userInfo` – check for keys and cast values to the correct type.
 /// Instead, the dictionary will be automatically decoded
 /// into an instance of the ``ShortcutUserInfo`` type (like with JSON).
 /// The options for decoding are set via ``shortcutUserInfoOptions(context:)-6vc5x``.

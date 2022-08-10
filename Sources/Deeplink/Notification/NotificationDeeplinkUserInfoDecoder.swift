@@ -29,6 +29,13 @@ import Foundation
 /// - SeeAlso: ``NotificationDeeplinkUserInfoOptions``
 public protocol NotificationDeeplinkUserInfoDecoder {
 
+    /// Returns a value of the type you specify, decoded from a dictionary.
+    ///
+    /// If a value within the dictionary fails to decode, this method throws the corresponding error.
+    /// - Parameters:
+    ///   - type: The type of the value to decode from the supplied dictionary.
+    ///   - dictionary: The dictionary to decode.
+    /// - Returns: A value of the specified type, if the decoder can parse the data.
     func decode<T: Decodable>(_ type: T.Type, from dictionary: [String: Any]) throws -> T
 }
 

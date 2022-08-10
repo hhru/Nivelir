@@ -13,11 +13,11 @@ import Foundation
 ///     var description: String?
 /// }
 ///
-///let dictionary: [String: NSSecureCoding] = [
-///    "name": NSString("Durian"),
-///    "points": NSNumber(600),
-///    "description": NSString("A fruit with a distinctive scent.")
-///]
+/// let dictionary: [String: NSSecureCoding] = [
+///     "name": NSString("Durian"),
+///     "points": NSNumber(600),
+///     "description": NSString("A fruit with a distinctive scent.")
+/// ]
 ///
 /// let decoder: NotificationDeeplinkUserInfoDecoder
 /// let product = try decoder.decode(GroceryProduct.self, from: dictionary)
@@ -29,6 +29,13 @@ import Foundation
 /// - SeeAlso: ``ShortcutDeeplinkUserInfoOptions``
 public protocol ShortcutDeeplinkUserInfoDecoder {
 
+    /// Returns a value of the type you specify, decoded from a dictionary.
+    ///
+    /// If a value within the dictionary fails to decode, this method throws the corresponding error.
+    /// - Parameters:
+    ///   - type: The type of the value to decode from the supplied dictionary.
+    ///   - dictionary: The dictionary to decode.
+    /// - Returns: A value of the specified type, if the decoder can parse the data.
     func decode<T: Decodable>(
         _ type: T.Type,
         from dictionary: [String: NSSecureCoding]
