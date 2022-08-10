@@ -1,13 +1,25 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A representation of an action sheet presentation.
 public struct ActionSheet: CustomStringConvertible {
 
+    /// The title of the action sheet.
     public let title: String?
+
+    /// The message to display in the body of the action sheet.
     public let message: String?
+
+    /// Anchor for a popover.
     public let anchor: ScreenPopoverPresentationAnchor
+
+    /// Tint color for view of action sheet.
     public let tintColor: UIColor?
+
+    /// A string that identifies the element.
     public let accessibilityIdentifier: String?
+
+    /// The actions to show in the action sheet.
     public let actions: [ActionSheetAction]
 
     public var description: String {
@@ -18,6 +30,14 @@ public struct ActionSheet: CustomStringConvertible {
         }
     }
 
+    /// Creates an action sheet configuration.
+    /// - Parameters:
+    ///   - title: The title of the action sheet.
+    ///   - message: The message to display in the body of the action sheet.
+    ///   - anchor: Anchor for a popover.
+    ///   - tintColor: Tint color for view of action sheet.
+    ///   - accessibilityIdentifier: A string that identifies the element.
+    ///   - actions: The actions to show in the action sheet.
     public init(
         title: String? = nil,
         message: String? = nil,
@@ -34,6 +54,14 @@ public struct ActionSheet: CustomStringConvertible {
         self.actions = actions
     }
 
+    /// Creates an action sheet configuration.
+    /// - Parameters:
+    ///   - title: The title of the action sheet.
+    ///   - message: The message to display in the body of the action sheet.
+    ///   - anchor: Anchor for a popover.
+    ///   - tintColor: Tint color for view of action sheet.
+    ///   - accessibilityIdentifier: A string that identifies the element.
+    ///   - actions: The actions to show in the action sheet.
     public init(
         title: String? = nil,
         message: String? = nil,
