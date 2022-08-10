@@ -6,6 +6,17 @@ import Foundation
 /// on which they are performed by `associatedtype Container`.
 /// For example, for a container with `UINavigationController` type, `push`, `pop` and etc actions will be available.
 /// Also for the `UITabBarController` the `selectTab` action will be available as well.
+///
+/// **Navigation Interceptor**
+///
+/// The `ScreenAction` can be an interceptor,
+/// that can decide wether navigation should continue or be interrupted.
+/// To do this, implement the `ScreenAction` protocol
+/// and make the necessary checks in the `perform(container:,navigator:,storage:,completion:)` method,
+/// after which call `completion` with the result. You can also perform navigation actions in this method.
+/// For example, show a screen for authorization,
+/// as a result of which `completion` is called with success if authorization was completed,
+/// or with an error (for example `ScreenCanceledError`) if the user canceled authorization.
 public protocol ScreenAction {
 
     /// A type of container that the action uses for navigation.
