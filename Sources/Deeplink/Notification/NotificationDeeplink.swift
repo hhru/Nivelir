@@ -39,15 +39,9 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
     /// Creating a deep link from data of `UNNotificationResponse`.
     ///
     /// - Parameters:
-    ///   - requestIdentifier: [The unique identifier for this notification request.
-    ///   [Details](https://developer.apple.com/documentation/usernotifications/unnotificationrequest/1649634-identifier).
-    ///
+    ///   - requestIdentifier: The unique identifier for this notification request.
     ///   - categoryIdentifier: The identifier of the app-defined category object.
-    ///   [Details](https://developer.apple.com/documentation/usernotifications/unnotificationcontent/1649866-categoryidentifier).
-    ///
     ///   - actionIdentifier: The identifier string of the action that the user selected.
-    ///   [Details](https://developer.apple.com/documentation/usernotifications/unnotificationresponse/1649548-actionidentifier).
-    ///
     ///   - userInfo: Custom information associated with the notification.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``NotificationDeeplink`` that performs navigation.

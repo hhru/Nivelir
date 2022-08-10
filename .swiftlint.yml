@@ -289,7 +289,7 @@ large_tuple:
 line_length:
   warning: 120
   error: 1200
-  ignores_urls: true
+  ignores_urls: false
   ignores_function_declarations: false
   ignores_comments: false
   ignores_interpolated_strings: false
