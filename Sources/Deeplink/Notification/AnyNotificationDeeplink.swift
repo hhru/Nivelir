@@ -5,6 +5,7 @@ import UserNotifications
 /// Erased type of ``NotificationDeeplink`` protocol.
 ///
 /// - SeeAlso: ``NotificationDeeplink``
+/// - SeeAlso: ``DeeplinkManager``
 public protocol AnyNotificationDeeplink: AnyDeeplink {
 
     /// Options for decoding `userInfo` from notification.
@@ -24,7 +25,7 @@ public protocol AnyNotificationDeeplink: AnyDeeplink {
     ///
     /// - Parameters:
     ///   - response: The user’s response to an actionable notification.
-    ///   - userInfoDecoder: Decoder for decoding data from `userInfo`.
+    ///   - userInfoDecoder: Decoder for decoding dictionary from `userInfo`.
     ///   - context: Additional context for checking and creating ``NotificationDeeplink``.
     ///   Must match the context type of ``NotificationDeeplink/NotificationContext``.
     /// - Returns: Returns a new instance of ``NotificationDeeplink`` that performs navigation from `response` data.

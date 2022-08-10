@@ -13,7 +13,7 @@ import Foundation
 ///     var description: String?
 /// }
 ///
-/// let dictionary = [
+/// let dictionary: [String: Any] = [
 ///     "name": "Durian",
 ///     "points": 600,
 ///     "description": "A fruit with a distinctive scent."
