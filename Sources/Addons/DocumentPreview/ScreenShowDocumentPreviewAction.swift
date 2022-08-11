@@ -50,7 +50,8 @@ extension ScreenThenable where Current: UIViewController {
     /// Displays a full-screen preview of the target document.
     ///
     /// This method displays the document preview using `UIDocumentInteractionController`.
-    /// The document interaction controller dismisses the document preview automatically in response to appropriate user interactions.
+    /// The document interaction controller dismisses
+    /// the document preview automatically in response to appropriate user interactions.
     ///
     /// You can also use closures in ``DocumentPreview`` participate
     /// in interactions occurring within the presented interface.
@@ -59,7 +60,8 @@ extension ScreenThenable where Current: UIViewController {
     /// See ``DocumentPreview`` for a complete description of the properties you can configure.
     /// - Parameters:
     ///   - documentPreview: An object for configuring the display and handling of target document events.
-    ///   - animated: Specify `true` to animate the appearance of the document preview or `false` to display it immediately.
+    ///   - animated: Specify `true` to animate the appearance of the document preview
+    ///   or `false` to display it immediately.
     ///   - route: Nested route to be performed in the `UIDocumentInteractionController`.
     /// - Returns: An instance containing the new action.
     public func showDocumentPreview<Route: ScreenThenable>(
@@ -79,7 +81,8 @@ extension ScreenThenable where Current: UIViewController {
     /// Displays a full-screen preview of the target document.
     ///
     /// This method displays the document preview using `UIDocumentInteractionController`.
-    /// The document interaction controller dismisses the document preview automatically in response to appropriate user interactions.
+    /// The document interaction controller dismisses
+    /// the document preview automatically in response to appropriate user interactions.
     ///
     /// You can also use closures in ``DocumentPreview`` participate
     /// in interactions occurring within the presented interface.
@@ -88,7 +91,8 @@ extension ScreenThenable where Current: UIViewController {
     /// See ``DocumentPreview`` for a complete description of the properties you can configure.
     /// - Parameters:
     ///   - documentPreview: An object for configuring the display and handling of target document events.
-    ///   - animated: Specify `true` to animate the appearance of the document preview or `false` to display it immediately.
+    ///   - animated: Specify `true` to animate the appearance of the document preview
+    ///   or `false` to display it immediately.
     ///   - route: Nested route to be performed in the `UIDocumentInteractionController`.
     /// - Returns: An instance containing the new action.
     public func showDocumentPreview(
