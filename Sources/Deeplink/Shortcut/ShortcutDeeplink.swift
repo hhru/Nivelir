@@ -3,7 +3,7 @@ import UIKit
 
 /// The type of ``Deeplink`` that is handled from the Shortcuts App.
 ///
-/// This type allows you to handle the deep link from the shortcut item data, which comes via function parameters.
+/// This type allows you to handle the ``Deeplink`` from the shortcut item data, which comes via function parameters.
 ///
 /// Nivelir can decode `userInfo` depending on the type of ``ShortcutUserInfo``.
 /// For example, if ``ShortcutUserInfo`` implements the `Decodable` protocol,
@@ -22,7 +22,7 @@ public protocol ShortcutDeeplink: Deeplink, AnyShortcutDeeplink {
     /// your application performs a quick action on the Home screen.
     associatedtype ShortcutUserInfo
 
-    /// Type of context for checking and creating a deep link instance.
+    /// Type of context for checking and creating a ``Deeplink`` instance.
     associatedtype ShortcutContext
 
     /// Options for decoding `userInfo` from shortcut item.
@@ -36,14 +36,14 @@ public protocol ShortcutDeeplink: Deeplink, AnyShortcutDeeplink {
         context: ShortcutContext
     ) -> ShortcutDeeplinkUserInfoOptions
 
-    /// Creating a deep link from a shortcut item type.
+    /// Creating a ``Deeplink`` from a shortcut item type.
     /// - Parameters:
     ///   - type: A required, app-specific string that you employ to identify the type of quick action to perform.
     ///   - userInfo: Optional, app-specific information that provided for use
     ///   when your app performs the Home screen quick action.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``ShortcutDeeplink`` that performs navigation.
-    /// Otherwise `nil` if the deep link cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` cannot be handled.
     static func shortcut(
         type: String,
         userInfo: ShortcutUserInfo?,

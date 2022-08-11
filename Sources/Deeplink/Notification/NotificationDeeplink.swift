@@ -4,7 +4,7 @@ import UserNotifications
 
 /// The type of ``Deeplink`` that is handled from the Notification.
 ///
-/// This type allows you to handle the deep link from the notification data, which comes via function parameters.
+/// This type allows you to handle the ``Deeplink`` from the notification data, which comes via function parameters.
 ///
 /// Nivelir can decode `userInfo` depending on the type of ``NotificationUserInfo``.
 /// For example, if ``NotificationUserInfo`` implements the `Decodable` protocol,
@@ -22,7 +22,7 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
     /// The type of user information associated with the notification.
     associatedtype NotificationUserInfo
 
-    /// Type of context for checking and creating a deep link instance.
+    /// Type of context for checking and creating a ``Deeplink`` instance.
     associatedtype NotificationContext
 
     /// Options for decoding `userInfo` from notification.
@@ -36,7 +36,7 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
         context: NotificationContext
     ) -> NotificationDeeplinkUserInfoOptions
 
-    /// Creating a deep link from data of `UNNotificationResponse`.
+    /// Creating a ``Deeplink`` from data of `UNNotificationResponse`.
     ///
     /// - Parameters:
     ///   - requestIdentifier: The unique identifier for this notification request.
@@ -45,7 +45,7 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
     ///   - userInfo: Custom information associated with the notification.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``NotificationDeeplink`` that performs navigation.
-    /// Otherwise `nil` if the deep link cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` cannot be handled.
     static func notification(
         requestIdentifier: String,
         categoryIdentifier: String,
@@ -54,14 +54,14 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
         context: NotificationContext
     ) throws -> Self?
 
-    /// Creating a deep link from `UNNotificationResponse`.
+    /// Creating a ``Deeplink`` from `UNNotificationResponse`.
     ///
     /// - Parameters:
     ///   - response: The user’s response to an actionable notification.
     ///   - userInfo: Custom information associated with the notification.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``NotificationDeeplink`` that performs navigation from `response` data.
-    /// Otherwise `nil` if the deep link from `response` cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` from `response` cannot be handled.
     static func notification(
         response: UNNotificationResponse,
         userInfo: NotificationUserInfo,

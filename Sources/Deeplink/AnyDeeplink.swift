@@ -10,7 +10,7 @@ public protocol AnyDeeplink {
     /// - Parameters:
     ///   - screens: Screen Factory.
     ///   - navigator: Navigator for performing navigation actions.
-    ///   - handler: Handler for processing a new deep link.
+    ///   - handler: Handler for processing a new ``Deeplink``.
     func navigateIfPossible(
         screens: Any?,
         navigator: ScreenNavigator,

@@ -20,7 +20,7 @@ public protocol AnyShortcutDeeplink: AnyDeeplink {
         context: Any?
     ) throws -> ShortcutDeeplinkUserInfoOptions
 
-    /// Creating a deep link from a shortcut item.
+    /// Creating a ``Deeplink`` from a shortcut item.
     /// - Parameters:
     ///   - shortcut: An application shortcut item, also called a *Home screen dynamic quick action*,
     ///   that specifies a user-initiated action for your app.
@@ -28,7 +28,7 @@ public protocol AnyShortcutDeeplink: AnyDeeplink {
     ///   - context: Additional context for checking and creating ``ShortcutDeeplink``.
     ///   Must match the context type of ``ShortcutDeeplink/ShortcutContext``.
     /// - Returns: Returns a new instance of ``ShortcutDeeplink`` that performs navigation.
-    /// Otherwise `nil` if the deep link cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` cannot be handled.
     static func shortcut(
         _ shortcut: UIApplicationShortcutItem,
         userInfoDecoder: ShortcutDeeplinkUserInfoDecoder,

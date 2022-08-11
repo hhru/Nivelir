@@ -19,7 +19,7 @@ public protocol AnyURLDeeplink: AnyDeeplink {
         context: Any?
     ) throws -> URLDeeplinkQueryOptions
 
-    /// Creating a deep link from a URL.
+    /// Creating a ``Deeplink`` from a URL.
     ///
     /// - Parameters:
     ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
@@ -27,7 +27,7 @@ public protocol AnyURLDeeplink: AnyDeeplink {
     ///   - context: Additional context for checking and creating ``URLDeeplink``.
     ///   Must match the context type of ``URLDeeplink/URLContext``.
     /// - Returns: Returns a new instance of ``URLDeeplink`` that performs navigation.
-    /// Otherwise `nil` if the deep link cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` cannot be handled.
     static func url(
         _ url: URL,
         queryDecoder: URLDeeplinkQueryDecoder,

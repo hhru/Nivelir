@@ -5,23 +5,23 @@ import UIKit
 import UserNotifications
 #endif
 
-/// The `DeeplinkManager` keeps track of the opening of deep links.
+/// The `DeeplinkManager` keeps track of the opening of ``Deeplink``.
 ///
-/// The manager is the entry point when working with deep links.
-/// The types of deep links that the manager will handle are passed to the initializer.
+/// The manager is the entry point when working with ``Deeplink``.
+/// The types of ``Deeplink`` that the manager will handle are passed to the initializer.
 ///
-/// The manager can handle deep links at any time,
-/// but deep links will only start when the manager is activated, through the ``activate(screens:)`` method.
-/// Until then, the manager will pend the last handled deep link for its performance.
+/// The manager can handle ``Deeplink`` at any time,
+/// but ``Deeplink`` will only start when the manager is activated, through the ``activate(screens:)`` method.
+/// Until then, the manager will pend the last handled ``Deeplink`` for its performance.
 ///
 /// The manager also keeps track of the state of the application,
-/// and performs deep links only in the `UIApplication.State == .active` state.
+/// and performs ``Deeplink`` only in the `UIApplication.State == .active` state.
 ///
-/// If it is required to stop deep link handling, the manager can be deactivated through the ``deactivate()`` method.
+/// If it is required to stop ``Deeplink`` handling, the manager can be deactivated through the ``deactivate()`` method.
 ///
 /// **Scopes**
 ///
-/// Deep links can also be separated into scopes of application.
+/// ``Deeplink`` can also be separated into scopes of application.
 /// Each scope can be separately activated and deactivated as needed
 /// using the ``activate(screens:scope:)`` and ``deactivate(scope:)`` methods, respectively.
 /// For example, you can separate the deep links, which should work before and after the user onboarding,
@@ -31,10 +31,10 @@ public final class DeeplinkManager: DeeplinkHandler {
     /// The types of deep links to handle, separated by scope of application.
     public let deeplinkTypes: [DeeplinkScope: [AnyDeeplink.Type]]
 
-    /// Interceptors for deep links.
+    /// Interceptors for ``Deeplink``.
     public let interceptors: [DeeplinkInterceptor]
 
-    /// A navigator instance that performs navigation actions for deep links.
+    /// A navigator instance that performs navigation actions for ``Deeplink``.
     public let navigator: ScreenNavigator
 
     /// Activated scopes with erased type of screen factories.
@@ -55,7 +55,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         didSet { navigateIfPossible() }
     }
 
-    /// Creating a manager with types of deep links, separated by scope.
+    /// Creating a manager with types of ``Deeplink``, separated by scope.
     /// - Parameters:
     ///   - deeplinkTypes: The types of deep links to handle, separated by scope of application.
     ///   - interceptors: Interceptors for deep links.
@@ -70,7 +70,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         self.navigator = navigator
     }
 
-    /// Creating a manager with deep link types with default scope.
+    /// Creating a manager with ``Deeplink`` types with default scope.
     /// - Parameters:
     ///   - deeplinkTypes: The types of deep links to handle.
     ///   - interceptors: Interceptors for deep links.
@@ -547,7 +547,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     /// Activates the scope with the screen factory.
     ///
-    /// After activation, the manager will be able to handle the deep links included in the specified `scope`
+    /// After activation, the manager will be able to handle the ``Deeplink`` included in the specified `scope`
     /// and perform a pending one, if any.
     /// - Parameters:
     ///   - screens: A screen factory used to navigate deep links.
@@ -582,8 +582,8 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     /// Deactivates the scope of deep links.
     ///
-    /// After deactivation, the manager will not handle deep links within the specified `scope`.
-    /// The manager will pend the last handled deep link for its performance after activation.
+    /// After deactivation, the manager will not handle ``Deeplink`` within the specified `scope`.
+    /// The manager will pend the last handled ``Deeplink`` for its performance after activation.
     /// - Parameter scope: Deactivatable scope of deep links.
     public func deactivate(scope: DeeplinkScope) {
         self.screens.removeValue(forKey: scope)
@@ -606,7 +606,7 @@ public final class DeeplinkManager: DeeplinkHandler {
     /// Deactivates all scopes.
     ///
     /// After deactivation, the manager will not handle all deep links.
-    /// The manager will pend the last handled deep link for its performance after activation.
+    /// The manager will pend the last handled ``Deeplink`` for its performance after activation.
     public func deactivate() {
         deeplinkTypes.keys.forEach { scope in
             deactivate(scope: scope)

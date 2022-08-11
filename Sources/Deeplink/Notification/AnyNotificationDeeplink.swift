@@ -21,7 +21,7 @@ public protocol AnyNotificationDeeplink: AnyDeeplink {
         context: Any?
     ) throws -> NotificationDeeplinkUserInfoOptions
 
-    /// Creating a deep link from a notification.
+    /// Creating a ``Deeplink`` from a notification.
     ///
     /// - Parameters:
     ///   - response: The user’s response to an actionable notification.
@@ -29,7 +29,7 @@ public protocol AnyNotificationDeeplink: AnyDeeplink {
     ///   - context: Additional context for checking and creating ``NotificationDeeplink``.
     ///   Must match the context type of ``NotificationDeeplink/NotificationContext``.
     /// - Returns: Returns a new instance of ``NotificationDeeplink`` that performs navigation from `response` data.
-    /// Otherwise `nil` if the deep link from `response` cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` from `response` cannot be handled.
     static func notification(
         response: UNNotificationResponse,
         userInfoDecoder: NotificationDeeplinkUserInfoDecoder,

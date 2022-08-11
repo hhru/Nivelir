@@ -2,7 +2,7 @@ import Foundation
 
 /// The type of ``Deeplink`` that is handled from the URL.
 ///
-/// This type allows you to handle the deep link from URL, which comes via function parameters.
+/// This type allows you to handle the ``Deeplink`` from URL, which comes via function parameters.
 ///
 /// Nivelir can decode query part of URL depending on the type of ``URLQuery``.
 /// For example, if ``URLQuery`` implements the `Decodable` protocol,
@@ -20,7 +20,7 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
     /// The type of the query of the URL.
     associatedtype URLQuery
 
-    /// Type of context for checking and creating a deep link instance.
+    /// Type of context for checking and creating a ``Deeplink`` instance.
     associatedtype URLContext
 
     /// Options for decoding query part from URL.
@@ -34,7 +34,7 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
         context: URLContext
     ) -> URLDeeplinkQueryOptions
 
-    /// Creating a deep link from a URL components.
+    /// Creating a ``Deeplink`` from a URL components.
     /// - Parameters:
     ///   - scheme: The scheme subcomponent of the URL.
     ///   - host: The host subcomponent.
@@ -42,7 +42,7 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
     ///   - query: The query of the URL if the URL conforms to RFC 1808 (the most common form of URL), otherwise nil.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``URLDeeplink`` that performs navigation.
-    /// Otherwise `nil` if the deep link cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` cannot be handled.
     static func url(
         scheme: String?,
         host: String?,
@@ -51,13 +51,13 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
         context: URLContext
     ) throws -> Self?
 
-    /// Creating a deep link from a URL.
+    /// Creating a ``Deeplink`` from a URL.
     /// - Parameters:
     ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///   - query: The query of the URL if the URL conforms to RFC 1808 (the most common form of URL), otherwise nil.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``URLDeeplink`` that performs navigation.
-    /// Otherwise `nil` if the deep link cannot be handled.
+    /// Otherwise `nil` if the ``Deeplink`` cannot be handled.
     static func url(
         _ url: URL,
         query: URLQuery?,
