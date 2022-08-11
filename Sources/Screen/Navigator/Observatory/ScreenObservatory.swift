@@ -27,7 +27,7 @@ import Foundation
 /// ```
 ///
 /// `EmployerReview` and `EmployerReviewList` should update their data when the `EmployerReviewDeletion` screen changes.
-/// Such a chain is difficult to maintain and difficult to implement when opening screens through a deep link.
+/// Such a chain is difficult to maintain and difficult to implement when opening screens through a ``Deeplink``.
 ///
 /// Instead, `EmployerReview` and `EmployerReviewList` can become observers of the `EmployerReviewDeletion` screen.
 /// To do this, you need to create a protocol for `EmployerReviewDeletion` screen observers:
