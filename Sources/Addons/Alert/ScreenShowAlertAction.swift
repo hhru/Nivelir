@@ -119,6 +119,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Parameters:
     ///   - alert: The alert to present.
     ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    /// - Returns: An instance containing the new action.
     public func showAlert(
         _ alert: Alert,
         animated: Bool = true

@@ -154,6 +154,7 @@ extension ScreenThenable where Current: UIViewController {
     /// - Parameters:
     ///   - actionSheet: ``ActionSheet`` to present.
     ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    /// - Returns: An instance containing the new action.
     public func showActionSheet(
         _ actionSheet: ActionSheet,
         animated: Bool = true
