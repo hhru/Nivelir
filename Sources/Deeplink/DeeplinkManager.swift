@@ -422,8 +422,7 @@ public final class DeeplinkManager: DeeplinkHandler {
     ///
     /// This method does not raise an exception. Instead the error is logged through the navigator.
     /// - Parameters:
-    ///   - url: A URL (Universal Resource Locator).
-    ///   URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
+    ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///
     ///   - context: Additional context for checking and creating ``URLDeeplink``.
     ///   Must match the context type of ``URLDeeplink/URLContext``.

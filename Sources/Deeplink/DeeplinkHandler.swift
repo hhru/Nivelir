@@ -18,8 +18,7 @@ public protocol DeeplinkHandler {
     /// Returns a Boolean value that indicates whether ``URLDeeplink`` exists to handle the URL.
     ///
     /// - Parameters:
-    ///   - url: A URL (Universal Resource Locator).
-    ///   URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
+    ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///
     ///   - context: Additional context for checking and creating ``URLDeeplink``.
     ///   Must match the context type of ``URLDeeplink/URLContext``.
@@ -33,8 +32,7 @@ public protocol DeeplinkHandler {
     /// Handle the URL by a suitable ``URLDeeplink`` and perform navigation, if possible.
     ///
     /// - Parameters:
-    ///   - url: A URL (Universal Resource Locator).
-    ///   URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
+    ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///
     ///   - context: Additional context for checking and creating ``URLDeeplink``.
     ///   Must match the context type of ``URLDeeplink/URLContext``.

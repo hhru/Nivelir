@@ -2,11 +2,11 @@ import Foundation
 
 /// A type describing the navigation of a deep link.
 ///
-/// The deep link in Nivelir is responsible for opening a specific screen
+/// The ``Deeplink`` in Nivelir is responsible for opening a specific screen
 /// in the application by URL, Push Notification or Shortcut.
 ///
 /// `Deeplink` has an associated type ``Screens``, which is a navigation helper type that should be a screen factory.
-/// From this factory, the necessary screens are created to navigate the deep liink.
+/// From this factory are created the necessary screens to make the navigation.
 ///
 /// - Note: The type of the associated type ``Screens`` must match the type
 /// of the implementation passed to the `screens` parameter
@@ -22,7 +22,7 @@ public protocol Deeplink: AnyDeeplink {
     /// - Parameters:
     ///   - screens: Screen Factory.
     ///   - navigator: Navigator for performing navigation actions.
-    ///   - handler: Handler for processing a new deep link.
+    ///   - handler: Handler for processing a new ``Deeplink``
     func navigate(
         screens: Screens,
         navigator: ScreenNavigator,

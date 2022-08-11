@@ -53,8 +53,7 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
 
     /// Creating a deep link from a URL.
     /// - Parameters:
-    ///   - url: A URL (Universal Resource Locator).
-    ///   URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
+    ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///   - query: The query of the URL if the URL conforms to RFC 1808 (the most common form of URL), otherwise nil.
     ///   - context: Additional context for checking and creating instance.
     /// - Returns: Returns a new instance of ``URLDeeplink`` that performs navigation.

@@ -22,8 +22,7 @@ public protocol AnyURLDeeplink: AnyDeeplink {
     /// Creating a deep link from a URL.
     ///
     /// - Parameters:
-    ///   - url: A URL (Universal Resource Locator).
-    ///   URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
+    ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///   - queryDecoder: Decoder for decoding query part from `url`.
     ///   - context: Additional context for checking and creating ``URLDeeplink``.
     ///   Must match the context type of ``URLDeeplink/URLContext``.
