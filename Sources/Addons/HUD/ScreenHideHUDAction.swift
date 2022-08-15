@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Action to hide the currently displayed ``HUD``.
 public struct ScreenHideHUDAction<Container: ScreenContainer>: ScreenAction {
 
     public typealias Output = Void
@@ -26,6 +27,9 @@ public struct ScreenHideHUDAction<Container: ScreenContainer>: ScreenAction {
 
 extension ScreenThenable {
 
+    /// Finds the top-most HUD subview in window of navigator that hasn’t finished and hides it.
+    /// The counterpart to this method is ``ScreenThenable/showHUD(_:animation:duration:)``.
+    /// - Returns: An instance containing the new action.
     public func hideHUD() -> Self {
         then(ScreenHideHUDAction<Current>())
     }

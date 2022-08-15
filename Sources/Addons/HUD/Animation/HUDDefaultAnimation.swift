@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Default show, update and hide animation of ``HUD``.
 public struct HUDDefaultAnimation: HUDCustomAnimation {
 
     public func animateAppearance(
@@ -52,6 +53,7 @@ public struct HUDDefaultAnimation: HUDCustomAnimation {
 
 extension HUDAnimation {
 
+    /// Default show, update and hide animation of ``HUD``.
     public static let `default` = Self.custom(
         HUDDefaultAnimation()
     )

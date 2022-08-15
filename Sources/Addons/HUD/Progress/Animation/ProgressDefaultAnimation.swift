@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// The default animation of showing, updating and hiding the ``HUD``.
 public struct ProgressDefaultAnimation: ProgressCustomAnimation {
 
     public func animateView(
@@ -38,6 +39,7 @@ public struct ProgressDefaultAnimation: ProgressCustomAnimation {
 
 extension ProgressAnimation {
 
+    /// The default animation of showing, updating and hiding the ``HUD``.
     public static let `default` = Self.custom(
         ProgressDefaultAnimation()
     )

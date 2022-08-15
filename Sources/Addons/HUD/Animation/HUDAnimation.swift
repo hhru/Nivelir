@@ -1,10 +1,20 @@
 #if canImport(UIKit)
 import UIKit
 
+/// The animation type that should be used when the ``HUD`` is shown and hidden.
 public enum HUDAnimation {
 
+    /// Custom animation for showing and hiding the HUD.
+    ///
+    /// Implement ``HUDCustomAnimation`` to configure a custom animation and pass an instance to the associated value.
     case custom(HUDCustomAnimation)
 
+    /// Animates the appearance for the specified `view`, using an animation type.
+    /// - Parameters:
+    ///   - view: The container view of HUD.
+    ///   - completion: A closure to be called when the animation sequence ends.
+    ///   This block has no return value.
+    ///   This parameter may be `nil`.
     public func animateAppearance(
         of view: UIView,
         completion: (() -> Void)?
@@ -18,6 +28,13 @@ public enum HUDAnimation {
         }
     }
 
+    /// Animates the update for the specified `view`, using an animation type.
+    /// - Parameters:
+    ///   - body: A closure containing the changes to update HUD style.
+    ///   - view: The container view of HUD.
+    ///   - completion: A closure to be called when the animation sequence ends.
+    ///   This block has no return value.
+    ///   This parameter may be `nil`.
     public func animateUpdate(
         body: @escaping () -> Void,
         of view: UIView,
@@ -33,6 +50,12 @@ public enum HUDAnimation {
         }
     }
 
+    /// Animates the disappearance for the specified `view`, using an animation type.
+    /// - Parameters:
+    ///   - view: The container view of HUD.
+    ///   - completion: A closure to be called when the animation sequence ends.
+    ///   This block has no return value.
+    ///   This parameter may be `nil`.
     public func animateDisappearance(
         of view: UIView,
         completion: (() -> Void)?
