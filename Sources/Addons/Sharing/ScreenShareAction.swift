@@ -1,6 +1,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
+/// Action to show the `UIActivityViewController`.
 public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = UIActivityViewController
@@ -134,6 +135,17 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
 
 extension ScreenThenable where Current: UIViewController {
 
+    /// Presents an activity view controller.
+    ///
+    /// The system provides several standard services,
+    /// such as copying items to the pasteboard,
+    /// posting content to social media sites, sending items via email or SMS, and more.
+    /// Apps can also define custom services.
+    /// - Parameters:
+    ///   - sharing: An object for configuring the activity view controller.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `UIActivityViewController`.
+    /// - Returns: An instance containing the new action.
     public func share<Route: ScreenThenable>(
         _ sharing: Sharing,
         animated: Bool = true,
@@ -148,6 +160,17 @@ extension ScreenThenable where Current: UIViewController {
         )
     }
 
+    /// Presents an activity view controller.
+    ///
+    /// The system provides several standard services,
+    /// such as copying items to the pasteboard,
+    /// posting content to social media sites, sending items via email or SMS, and more.
+    /// Apps can also define custom services.
+    /// - Parameters:
+    ///   - sharing: An object for configuring the activity view controller.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `UIActivityViewController`.
+    /// - Returns: An instance containing the new action.
     public func share(
         _ sharing: Sharing,
         animated: Bool = true,

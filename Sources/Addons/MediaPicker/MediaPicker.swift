@@ -25,7 +25,7 @@ public struct MediaPicker: CustomStringConvertible {
     /// The video recording and transcoding quality.
     public let videoQuality: UIImagePickerController.QualityType
 
-    /// Closure to configure the `UIImagePickerController` after initialization.
+    /// A closure that returns the created `UIImagePickerController` in the argument.
     public let didInitialize: ((_ container: UIImagePickerController) -> Void)?
 
     /// Closure with result,

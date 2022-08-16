@@ -17,7 +17,7 @@ public struct Safari: CustomStringConvertible {
     /// The color to tint the control buttons on the navigation bar and the toolbar.
     public let preferredControlTintColor: UIColor?
 
-    /// Closure to configure the `SFSafariViewController` after initialization.
+    /// A closure that returns the created `SFSafariViewController` in the argument.
     public let didInitialize: ((_ container: SFSafariViewController) -> Void)?
 
     /// Called when the initial URL loading is complete.
