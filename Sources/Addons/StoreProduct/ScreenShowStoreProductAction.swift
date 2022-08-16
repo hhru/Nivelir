@@ -2,6 +2,7 @@
 import UIKit
 import StoreKit
 
+/// Action to show the `SKStoreProductViewController`.
 public struct ScreenShowStoreProductAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = SKStoreProductViewController
@@ -50,6 +51,12 @@ public struct ScreenShowStoreProductAction<Container: UIViewController>: ScreenA
 
 extension ScreenThenable where Current: UIViewController {
 
+    /// Present a view controller that provides a page where the user can purchase media from the App Store.
+    /// - Parameters:
+    ///   - storeProduct: An object for configuring the page.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `SKStoreProductViewController`.
+    /// - Returns: An instance containing the new action.
     public func showStoreProduct<Route: ScreenThenable>(
         _ storeProduct: StoreProduct,
         animated: Bool = true,
@@ -64,6 +71,12 @@ extension ScreenThenable where Current: UIViewController {
         )
     }
 
+    /// Present a view controller that provides a page where the user can purchase media from the App Store.
+    /// - Parameters:
+    ///   - storeProduct: An object for configuring the page.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `SKStoreProductViewController`.
+    /// - Returns: An instance containing the new action.
     public func showStoreProduct(
         _ storeProduct: StoreProduct,
         animated: Bool = true,
