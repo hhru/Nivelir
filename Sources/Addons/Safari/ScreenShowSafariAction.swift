@@ -2,6 +2,7 @@
 import UIKit
 import SafariServices
 
+/// Action to show the `SFSafariViewController`.
 public struct ScreenShowSafariAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = SFSafariViewController
@@ -66,6 +67,12 @@ public struct ScreenShowSafariAction<Container: UIViewController>: ScreenAction 
 
 extension ScreenThenable where Current: UIViewController {
 
+    /// Presents a Safari.
+    /// - Parameters:
+    ///   - safari: An object for configuring the web browsing interface.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `SFSafariViewController`.
+    /// - Returns: An instance containing the new action.
     public func showSafari<Route: ScreenThenable>(
         _ safari: Safari,
         animated: Bool = true,
@@ -80,6 +87,12 @@ extension ScreenThenable where Current: UIViewController {
         )
     }
 
+    /// Presents a Safari.
+    /// - Parameters:
+    ///   - safari: An object for configuring the web browsing interface.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `SFSafariViewController`.
+    /// - Returns: An instance containing the new action.
     public func showSafari(
         _ safari: Safari,
         animated: Bool = true,
