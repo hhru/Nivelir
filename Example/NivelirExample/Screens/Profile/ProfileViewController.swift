@@ -105,10 +105,6 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         }
     }
 
-    private func emptyTrashAction() {
-        // Handle empty trash action.
-    }
-
     private func pickPhotoImage(sender: UIView) {
         let actionSheet = ActionSheet(
             anchor: .center(of: sender),
@@ -126,26 +122,6 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
         screenNavigator.navigate(from: self) { route in
             route.showActionSheet(actionSheet)
         }
-
-        let actionSheet = ActionSheet(
-            title: "Permanently erase the items in the Trash?",
-            message: "You can't undo this action.",
-            anchor: .center,
-            actions: [
-                ActionSheetAction(title: "Empty Trash", style: .destructive, handler: emptyTrashAction),
-                .cancel(title: "Cancel")
-            ]
-        )
-
-        screenNavigator.navigate(from: self) { route in
-            route.showActionSheet(actionSheet)
-        }
-
-//        let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-//        NSLog("The \"OK\" alert occured.")
-//        }))
-//        self.present(alert, animated: true, completion: nil)
     }
     #else
     private func pickPhotoImage(sender: UIView) { }
