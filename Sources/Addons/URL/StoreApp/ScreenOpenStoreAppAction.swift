@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Action, to open the page of the application in the App Store.
 public struct ScreenOpenStoreAppAction<Container: ScreenContainer>: ScreenAction {
 
     public typealias Output = Void
@@ -36,6 +37,17 @@ public struct ScreenOpenStoreAppAction<Container: ScreenContainer>: ScreenAction
 
 extension ScreenThenable {
 
+    /// Opens the page with the application in the App Store.
+    ///
+    /// The action will open the App Store application
+    /// with the page of the application whose `id` is specified in the parameter.
+    /// - Parameters:
+    ///   - id: Application ID.
+    ///   An iOS application’s store ID number can be found
+    ///   in the App Store URL as the string of numbers directly after `id`.
+    ///   For Example, in `https://apps.apple.com/ru/app/работа-и-вакансии-на-hh/id502838820` the ID is: 502838820.
+    ///   - forReview: Pass `true` if you want to open a page to write a review of the app.
+    /// - Returns: An instance containing the new action.
     public func openStoreApp(id: String, forReview: Bool = false) -> Self {
         then(
             ScreenOpenStoreAppAction(

@@ -54,7 +54,7 @@ extension ScreenThenable where Current: ScreenVisibleContainer {
     /// In addition, you can continue to include a persistent link
     /// in the settings or configuration screens of your app that links to your App Store product page.
     /// To automatically open a page on which users can write a review in the App Store,
-    ///  append the query parameter `action=write-review` to your product URL.
+    /// use ``openStoreApp(id:forReview:)`` and pass `true` to `forReview` parameter.
     /// - Returns: An instance containing the new action.
     public func requestStoreReview() -> Self {
         then(ScreenRequestStoreReviewAction())
