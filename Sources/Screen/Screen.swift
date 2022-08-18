@@ -71,7 +71,6 @@ import Foundation
 ///
 /// Usually you don't need to implement the `name` property yourself.
 /// If you want to distinguish between screens of the same type, implement the `traits`property.
-
 /// For example, chat screens may be different if they have different chat IDs.
 /// In this case, the `traits` property must include the chat ID:
 ///
