@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E41C80628AD38B400E3E1B2 /* Nivelir.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Nivelir.docc */; };
-		8E41C80728AD38B400E3E1B2 /* Nivelir.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Nivelir.docc */; };
+		8E41C80628AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
+		8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
 		C01294B62859B2C80039D06B /* SharingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B52859B2C80039D06B /* SharingActivity.swift */; };
 		C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */; };
 		C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B92859B2EC0039D06B /* SharingCustomItem.swift */; };
@@ -593,7 +593,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E41C80528AD38B400E3E1B2 /* Nivelir.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nivelir.docc; sourceTree = "<group>"; };
+		8E41C80528AD38B400E3E1B2 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C01294B52859B2C80039D06B /* SharingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivity.swift; sourceTree = "<group>"; };
@@ -1118,6 +1118,7 @@
 			isa = PBXGroup;
 			children = (
 				C057F01023CB8EEB00C2D895 /* Sources */,
+				8E41C80528AD38B400E3E1B2 /* Documentation.docc */,
 				C057F01B23CB8EEB00C2D895 /* Tests */,
 				C057F00F23CB8EEB00C2D895 /* Products */,
 				C0BF2F112659B9CC00419426 /* Example */,
@@ -1157,7 +1158,6 @@
 				C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */,
 				C057F01223CB8EEB00C2D895 /* Info.plist */,
 				C057F01123CB8EEB00C2D895 /* Nivelir.h */,
-				8E41C80528AD38B400E3E1B2 /* Nivelir.docc */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -2490,7 +2490,7 @@
 				C0885F7E26B6BA0100CA0A77 /* ScreenTopAction.swift in Sources */,
 				C078FD7B2861A1DA0008FC6E /* HUDAnimation.swift in Sources */,
 				C0885F9026B6BA0100CA0A77 /* ScreenPresentedAction.swift in Sources */,
-				8E41C80628AD38B400E3E1B2 /* Nivelir.docc in Sources */,
+				8E41C80628AD38B400E3E1B2 /* Documentation.docc in Sources */,
 				C0885F8026B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
 				C078FD372861A1DA0008FC6E /* UIApplication+Extensions.swift in Sources */,
@@ -2658,7 +2658,7 @@
 				C0885FB726B6C0A500CA0A77 /* ScreenStackClearModifier.swift in Sources */,
 				C08995F827968C7E007D9D17 /* URLDeeplinkQueryDecoder.swift in Sources */,
 				C0885F8926B6BA0100CA0A77 /* ScreenRootAnimation.swift in Sources */,
-				8E41C80728AD38B400E3E1B2 /* Nivelir.docc in Sources */,
+				8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */,
 				C088604B26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */,
 				C058493728475FD600DE42F0 /* ScreenObservatory.swift in Sources */,
 				C08995FA27968C84007D9D17 /* AnyURLDeeplink.swift in Sources */,
