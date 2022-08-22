@@ -4,7 +4,8 @@ import UIKit
 /// Anchor of the starting point for animating the display of a document preview.
 public struct DocumentPreviewAnchor {
 
-    /// A rectangle in the coordinate system of the `view`.
+    /// The rectangle to use as the starting point for animating
+    /// the display of a document preview in the coordinate system of the ``view``.
     public let rect: CGRect?
 
     /// The view to use as the starting point for the animation
