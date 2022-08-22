@@ -100,7 +100,7 @@ let package = Package(
 
 ## Usage
 
-[API Documentation](http://tech.hh.ru/Nivelir/)
+[API Documentation](http://tech.hh.ru/Nivelir/documentation/nivelir)
 
 ### Quick Start
 
@@ -165,6 +165,8 @@ This navigation performs the following steps:
 - Adding a green screen to the stack
 - Presenting a blue screen on the green screen modally
 
+### Cheat sheets
+Learn the most common use cases for Nivelir. See article in [API documentation](http://tech.hh.ru/Nivelir/documentation/nivelir/cheatsheet).
 
 ### Example App
 [Example app](Example) is a simple iOS and tvOS app that demonstrates how Nivelir works in practice.
