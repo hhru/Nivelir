@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// A representation of an action sheet presentation.
+/// A representation of an action sheet.
 public struct ActionSheet: CustomStringConvertible {
 
     /// The title of the action sheet.
