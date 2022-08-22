@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view showing percentages with an animated circle fill in the progress indicator.
 public final class ProgressPercentageIndicatorView: UIView, ProgressContentView {
 
     private enum Layout {

@@ -1,19 +1,30 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Progress indicator displaying an error with an animated cross.
+///
+/// Use this object to customize the display of the cross in the view.
 public struct ProgressFailureIndicator: ProgressIndicator {
 
     public typealias View = ProgressFailureIndicatorView
 
+    /// The default configuration.
     public static let `default` = Self()
 
+    /// The stroke color for the shape path.
     public let color: UIColor
+
+    /// Insets relative to the superview.
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
         ".failure"
     }
 
+    /// Creates new indicator content.
+    /// - Parameters:
+    ///   - color: The color used to stroke the shape’s path.
+    ///   - insets: Insets relative to the superview.
     public init(
         color: UIColor = .lightGray,
         insets: UIEdgeInsets = UIEdgeInsets(

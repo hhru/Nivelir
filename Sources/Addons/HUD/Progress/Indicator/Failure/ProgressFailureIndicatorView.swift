@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view showing an animated cross in the progress indicator.
 public final class ProgressFailureIndicatorView: UIView, ProgressContentView {
 
     private enum Layout {

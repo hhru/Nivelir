@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view that displays an animated checkmark in the progress indicator.
 public final class ProgressSuccessIndicatorView: UIView, ProgressContentView {
 
     private enum Layout {

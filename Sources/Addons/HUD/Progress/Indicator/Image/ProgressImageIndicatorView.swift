@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view showing the image in the progress indicator.
 public final class ProgressImageIndicatorView: UIView, ProgressContentView {
 
     private enum Layout {

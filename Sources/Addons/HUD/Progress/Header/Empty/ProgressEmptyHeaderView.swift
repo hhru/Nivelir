@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Empty view for the progress header.
 public final class ProgressEmptyHeaderView: UIView, ProgressContentView {
 
     public var content: ProgressEmptyHeader

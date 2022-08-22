@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view showing progress with a configuration from ``Progress``.
 public final class ProgressView: UIView {
 
     private let headerContainerView = UIView()
@@ -11,6 +12,9 @@ public final class ProgressView: UIView {
     private var indicatorView: UIView?
     private var footerView: UIView?
 
+    /// The current content of the view.
+    ///
+    /// Setting this property applies the new configuration to the view.
     public var progress: Progress? {
         didSet { updateViews() }
     }

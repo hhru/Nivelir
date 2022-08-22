@@ -1,22 +1,37 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Progress indicator displaying percentages with an animated circle fill.
+///
+/// Use this object to customize the display of progress in the view.
 public struct ProgressPercentageIndicator: ProgressIndicator {
 
     public typealias View = ProgressPercentageIndicatorView
 
+    /// The default configuration.
+    /// - Parameter ratio: A measure of progress through the task, given as a fraction in the range [0, 1].
     public static func `default`(ratio: CGFloat) -> Self {
         Self(ratio: ratio)
     }
 
+    /// A measure of progress through the task, given as a fraction in the range [0, 1].
     public let ratio: CGFloat
+
+    /// The color used to stroke the shape’s path and text.
     public let color: UIColor
+
+    /// Additional indents to expand the container.
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
         ".percentage(\(ratio))"
     }
 
+    /// Creates new indicator content.
+    /// - Parameters:
+    ///   - ratio: A measure of progress through the task, given as a fraction in the range [0, 1].
+    ///   - color: The color used to stroke the shape’s path and text.
+    ///   - insets: Additional indents to expand the container.
     public init(
         ratio: CGFloat,
         color: UIColor = .lightGray,

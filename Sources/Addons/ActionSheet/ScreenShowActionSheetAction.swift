@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Action that displays the `UIAlertController` in form of action sheet.
 public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = UIAlertController
@@ -123,6 +124,37 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
 
 extension ScreenThenable where Current: UIViewController {
 
+    /// Presents an action sheet.
+    ///
+    /// The example below shows how to set up an action sheet with both destructive and default actions:
+    ///
+    /// ```swift
+    /// let navigator: SreenNavigator
+    ///
+    /// let actionSheet = ActionSheet(
+    ///     title: "My Action Sheet",
+    ///     message: "This is an action sheet.",
+    ///     anchor: .center,
+    ///     actions: [
+    ///         ActionSheetAction(title: "Empty Trash", style: .destructive, handler: emptyTrashAction),
+    ///        .cancel(title: "Cancel")
+    ///     ]
+    /// )
+    ///
+    /// navigator.navigate(from: self) { route in
+    ///     route.showActionSheet(actionSheet)
+    /// }
+    ///
+    /// func emptyTrashAction() {
+    ///     // Handle empty trash action.
+    /// }
+    /// ```
+    ///
+    /// Action sheet will be displayed in the center for iPad and Mac.
+    /// - Parameters:
+    ///   - actionSheet: ``ActionSheet`` to present.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    /// - Returns: An instance containing the new action.
     public func showActionSheet(
         _ actionSheet: ActionSheet,
         animated: Bool = true

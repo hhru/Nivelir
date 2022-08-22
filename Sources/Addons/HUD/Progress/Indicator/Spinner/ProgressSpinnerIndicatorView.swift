@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view showing the spinner in the progress indicator.
 public final class ProgressSpinnerIndicatorView: UIView, ProgressContentView {
 
     private enum Layout {

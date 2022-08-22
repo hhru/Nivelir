@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Action to open the system settings of the application.
 public struct ScreenOpenSettingsAction<Container: ScreenContainer>: ScreenAction {
 
     public typealias Output = Void
@@ -26,6 +27,8 @@ public struct ScreenOpenSettingsAction<Container: ScreenContainer>: ScreenAction
 
 extension ScreenThenable {
 
+    /// The system launches the Settings app and displays the app’s custom settings, if it has any.
+    /// - Returns: An instance containing the new action.
     public func openAppSettings() -> Self {
         then(ScreenOpenSettingsAction())
     }

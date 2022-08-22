@@ -3,6 +3,7 @@ import UIKit
 import Photos
 import AVFoundation
 
+/// Action to show the `UIImagePickerController`.
 public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = UIImagePickerController
@@ -172,6 +173,18 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
 
 extension ScreenThenable where Current: UIViewController {
 
+    /// Displays the view controller that manages the system interfaces for taking pictures,
+    /// recording movies, and choosing items from the user's media library.
+    ///
+    /// To use this method, you must provide a ``MediaPicker`` configuration object via parameters.
+    /// The media file selection result is called by a closure ``MediaPicker/didFinish``,
+    /// where you will be able to close the controller via ``dismiss(animated:)`` if needed.
+    ///
+    /// - Parameters:
+    ///   - mediaPicker: Object for configuring the display and handling of events.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `UIImagePickerController`.
+    /// - Returns: An instance containing the new action.
     public func showMediaPicker<Route: ScreenThenable>(
         _ mediaPicker: MediaPicker,
         animated: Bool = true,
@@ -186,6 +199,18 @@ extension ScreenThenable where Current: UIViewController {
         )
     }
 
+    /// Displays the view controller that manages the system interfaces for taking pictures,
+    /// recording movies, and choosing items from the user's media library.
+    ///
+    /// To use this method, you must provide a ``MediaPicker`` configuration object via parameters.
+    /// The media file selection result is called by a closure ``MediaPicker/didFinish``,
+    /// where you will be able to close the controller via ``dismiss(animated:)`` if needed.
+    ///
+    /// - Parameters:
+    ///   - mediaPicker: Object for configuring the display and handling of events.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    ///   - route: Nested route to be performed in the `UIImagePickerController`.
+    /// - Returns: An instance containing the new action.
     public func showMediaPicker(
         _ mediaPicker: MediaPicker,
         animated: Bool = true,

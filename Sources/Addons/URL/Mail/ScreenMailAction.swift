@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// An action that prepares an email to be sent using the default email client.
 public struct ScreenMailAction<Container: ScreenContainer>: ScreenAction {
 
     public typealias Output = Void
@@ -51,6 +52,12 @@ public struct ScreenMailAction<Container: ScreenContainer>: ScreenAction {
 
 extension ScreenThenable {
 
+    /// Sending an email, with address, subject, and text, using the default email client.
+    /// - Parameters:
+    ///   - emailAddress: Email address.
+    ///   - subject: Subject of the email.
+    ///   - body: Email text.,
+    /// - Returns: An instance containing the new action.
     public func mail(
         to emailAddress: String,
         subject: String? = nil,

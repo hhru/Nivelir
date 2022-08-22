@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Action that displays the `UIAlertController` in alert style.
 public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = UIAlertController
@@ -96,6 +97,29 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
 
 extension ScreenThenable where Current: UIViewController {
 
+    /// Presents an alert to the user.
+    ///
+    /// Use this method when you need to show an alert to the user.
+    /// The example below displays an alert with single default action:
+    ///
+    /// ```swift
+    /// let navigator: ScreenNavigator
+    ///
+    /// let alert = Alert(
+    ///     title: "Order Complete",
+    ///     message: "Thank you for shopping with us.",
+    ///     actions: AlertAction(title: "OK")
+    /// )
+    ///
+    /// navigator.navigate(from: self) { route in
+    ///     route.showAlert(alert)
+    /// }
+    /// ```
+    ///
+    /// - Parameters:
+    ///   - alert: The alert to present.
+    ///   - animated: Pass `true` to animate the presentation; otherwise, pass `false`.
+    /// - Returns: An instance containing the new action.
     public func showAlert(
         _ alert: Alert,
         animated: Bool = true

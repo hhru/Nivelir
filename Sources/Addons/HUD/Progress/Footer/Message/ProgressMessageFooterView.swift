@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A view showing the text below the progress indicator.
 public final class ProgressMessageFooterView: UIView, ProgressContentView {
 
     private enum Layout {

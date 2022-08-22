@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Action to show ``HUD``.
 public struct ScreenShowHUDAction<Container: ScreenContainer>: ScreenAction {
 
     public typealias Output = Void
@@ -38,6 +39,16 @@ public struct ScreenShowHUDAction<Container: ScreenContainer>: ScreenAction {
 
 extension ScreenThenable {
 
+    /// Adds the specified hud to window and displays it.
+    /// The counterpart of this method is ``ScreenThenable/hideHUD()``.
+    /// - Parameters:
+    ///   - hud: A representation of a HUD.
+    ///   - animation: The animation type that should be used when the HUD is shown and hidden.
+    ///   The default is ``HUDAnimation/default``.
+    ///   - duration: Duration of HUD display in seconds.
+    ///   After this time has elapsed, the HUD will be hidden.
+    ///   By default `nil`, the HUD will not be hidden.
+    /// - Returns: An instance containing the new action.
     public func showHUD(
         _ hud: HUD,
         animation: HUDAnimation? = .default,

@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+/// Empty view for the progress footer.
 public final class ProgressEmptyFooterView: UIView, ProgressContentView {
 
     public let content: ProgressEmptyFooter
