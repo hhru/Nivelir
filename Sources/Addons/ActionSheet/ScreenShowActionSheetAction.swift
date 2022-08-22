@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// Action that displays the `UIAlertController` in action sheet style.
+/// Action that displays the `UIAlertController` in form of action sheet.
 public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAction {
 
     public typealias Output = UIAlertController

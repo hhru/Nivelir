@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// A action representing an operation of an alert presentation.
+/// An action representing the alert operation.
 public struct AlertAction {
 
     public typealias Enabler = (_ texts: [String]) -> Bool

@@ -11,7 +11,7 @@ public struct ProgressFailureIndicator: ProgressIndicator {
     /// The default configuration.
     public static let `default` = Self()
 
-    /// The color used to stroke the shape’s path.
+    /// The stroke color for the shape path.
     public let color: UIColor
 
     /// Insets relative to the superview.

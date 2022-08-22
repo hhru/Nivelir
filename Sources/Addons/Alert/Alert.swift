@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// A representation of an alert presentation.
+/// A representation of an alert.
 public struct Alert: CustomStringConvertible {
 
     /// The title of the alert.

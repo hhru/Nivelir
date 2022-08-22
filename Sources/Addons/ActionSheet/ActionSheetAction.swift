@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-/// A action representing an operation of an action sheet presentation.
+/// An action representing the action sheet operation.
 public struct ActionSheetAction {
 
     public typealias Handler = () -> Void
@@ -33,9 +33,9 @@ public struct ActionSheetAction {
 
 extension ActionSheetAction {
 
-    /// Creates an action sheet button that indicates cancellation, with a custom title.
+    /// Creates an action sheet cancel button with a custom title.
     /// - Parameter title: The text to display on the action.
-    /// - Returns: An action sheet button that indicates cancellation.
+    /// - Returns: An action sheet cancel button.
     public static func cancel(title: String) -> Self {
         Self(title: title, style: .cancel)
     }

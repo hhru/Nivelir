@@ -15,7 +15,7 @@ public struct HUD: CustomStringConvertible {
         Self(progress: progress)
     }
 
-    /// A representation of an progress presentation.
+    /// A representation of the progress.
     public let progress: Progress
 
     /// Configuration the appearance of the HUD.
@@ -27,7 +27,7 @@ public struct HUD: CustomStringConvertible {
 
     /// Creates a HUD with progress and style representations.
     /// - Parameters:
-    ///   - progress: A representation of an progress presentation.
+    ///   - progress: A representation of the progress.
     ///   - style: Configuration the appearance of the HUD. Default is ``HUDStyle/default``.
     public init(
         progress: Progress,

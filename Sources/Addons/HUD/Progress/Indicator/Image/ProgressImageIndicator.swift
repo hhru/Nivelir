@@ -17,7 +17,7 @@ public struct ProgressImageIndicator: ProgressIndicator {
     /// The image displayed in the image view.
     public let image: UIImage
 
-    /// Additional indents to expand the container.
+    /// Additional indentation to expand the container.
     public let insets: UIEdgeInsets
 
     public var logDescription: String? {
