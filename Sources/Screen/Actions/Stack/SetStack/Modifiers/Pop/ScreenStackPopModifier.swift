@@ -21,7 +21,13 @@ public struct ScreenStackPopModifier: ScreenStackModifier {
             throw ScreenContainerNotFoundError(type: UIViewController.self, for: self)
         }
 
-        return Array(stack.prefix(through: stackIndex))
+        let stackCount = stackIndex + 1
+
+        guard stackCount >= .zero, stackCount <= stack.count else {
+            throw ScreenContainerNotFoundError(type: UIViewController.self, for: self)
+        }
+
+        return Array(stack.prefix(stackCount))
     }
 }
 

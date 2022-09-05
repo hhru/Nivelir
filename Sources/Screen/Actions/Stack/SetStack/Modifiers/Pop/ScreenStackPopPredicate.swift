@@ -23,12 +23,12 @@ public struct ScreenStackPopPredicate: CustomStringConvertible {
 extension ScreenStackPopPredicate {
 
     public static var root: Self {
-        Self(description: "to root") { _ in 0 }
+        Self(description: "to root") { _ in .zero }
     }
 
     public static var previous: Self {
         Self(description: "") { stack in
-            max(stack.count - 2, 0)
+            stack.count - 2
         }
     }
 
