@@ -1,5 +1,5 @@
 PODS:
-  - Nivelir (1.4.5)
+  - Nivelir (1.4.6)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  Nivelir: 30b404cbcdbe7737239e67fcfe6628adfdc9aa71
+  Nivelir: 740bb364a9db3ffb53a11e846dc7113c46c09107
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
 PODFILE CHECKSUM: da8b281ef18accce1d0505caaeb1d708354daf4e
