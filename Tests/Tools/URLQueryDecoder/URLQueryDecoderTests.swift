@@ -17,6 +17,18 @@ final class URLQueryDecoderTests: XCTestCase, URLQueryDecoderTesting {
         )
     }
 
+    func testThatDecoderSucceedsWhenDecodingKeyWithoutValue() {
+        let query = "foo&bar=123"
+
+        let expectedValue: [String: Int?] = ["bar": 123]
+
+        assertDecoderSucceeds(
+            decoding: [String: Int?].self,
+            from: query,
+            expecting: expectedValue
+        )
+    }
+
     func testThatDecoderSucceedsWhenDecodingStringToBoolDictionary() {
         let query = "foo=true&bar=false"
 
@@ -780,20 +792,6 @@ final class URLQueryDecoderTests: XCTestCase, URLQueryDecoderTesting {
         let query = "foo[bar=123"
 
         assertDecoderFails(decoding: [String: [String: Int]].self, from: query) { error in
-            switch error {
-            case DecodingError.dataCorrupted:
-                return true
-
-            default:
-                return false
-            }
-        }
-    }
-
-    func testThatDecoderFailsWhenDecodingKeyWithoutValue() {
-        let query = "foobar"
-
-        assertDecoderFails(decoding: [Int].self, from: query) { error in
             switch error {
             case DecodingError.dataCorrupted:
                 return true
