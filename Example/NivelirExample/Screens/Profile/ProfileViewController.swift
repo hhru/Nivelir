@@ -51,6 +51,10 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private func pickPhotoImageFromCamera() {
         let mediaPicker = MediaPicker(source: .camera) { result in
+            self.screenNavigator.navigate(from: self) { route in
+                route.dismiss()
+            }
+
             if let image = result?.editedImage ?? result?.originalImage {
                 self.uploadPhoto(image: image)
             }
@@ -79,6 +83,10 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
 
     private func pickPhotoImageFromPhotoLibrary() {
         let mediaPicker = MediaPicker { result in
+            self.screenNavigator.navigate(from: self) { route in
+                route.dismiss()
+            }
+
             if let image = result?.editedImage ?? result?.originalImage {
                 self.uploadPhoto(image: image)
             }
@@ -128,10 +136,6 @@ final class ProfileViewController: UIViewController, ScreenKeyedContainer {
     #endif
 
     private func uploadPhoto(image: UIImage) {
-        screenNavigator.navigate(from: self) { route in
-            route.dismiss()
-        }
-
         profileService.uploadPhoto(
             image: image,
             progress: { ratio in
