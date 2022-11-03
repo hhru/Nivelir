@@ -4,8 +4,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Platforms](https://img.shields.io/cocoapods/p/Nivelir.svg?style=flat)](https://developer.apple.com/discover/)
-[![Xcode](https://img.shields.io/badge/Xcode-11-blue.svg)](https://developer.apple.com/xcode)
-[![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-13-blue.svg)](https://developer.apple.com/xcode)
+[![Swift](https://img.shields.io/badge/Swift-5.5-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/github/license/hhru/Nivelir.svg)](https://opensource.org/licenses/MIT)
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
@@ -26,9 +26,9 @@ Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainabl
 
 
 ## Requirements
-- iOS 10.0+ / tvOS 10.0+
-- Xcode 11+
-- Swift 5.1+
+- iOS 12.0+ / tvOS 12.0+
+- Xcode 13.0+
+- Swift 5.5+
 
 
 ## Installation
@@ -40,7 +40,7 @@ $ gem install cocoapods
 
 To integrate Nivelir into your Xcode project using [CocoaPods](http://cocoapods.org), specify it in your `Podfile`:
 ``` ruby
-platform :ios, '10.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target '<Your Target Name>' do
@@ -80,7 +80,7 @@ Then specify `"Nivelir"` as a dependency of the Target in which you wish to use 
 
 Here's an example `Package.swift`:
 ``` swift
-// swift-tools-version:5.1
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(

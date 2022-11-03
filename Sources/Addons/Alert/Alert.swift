@@ -63,7 +63,7 @@ public struct Alert: CustomStringConvertible {
     ///   - textFields: The text fields to show in the alert.
     ///   - actions: The actions to show in the alert.
     public init(
-        title: String? ,
+        title: String?,
         message: String? = nil,
         tintColor: UIColor? = nil,
         accessibilityIdentifier: String? = nil,
