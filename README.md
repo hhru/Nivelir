@@ -1,12 +1,12 @@
 # Nivelir
 [![Build Status](https://github.com/hhru/Nivelir/workflows/CI/badge.svg?branch=main)](https://github.com/hhru/Nivelir/actions)
-[![Cocoapods](https://img.shields.io/cocoapods/v/Nivelir.svg?style=flat)](http://cocoapods.org/pods/Nivelir)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
-[![Platforms](https://img.shields.io/cocoapods/p/Nivelir.svg?style=flat)](https://developer.apple.com/discover/)
-[![Xcode](https://img.shields.io/badge/Xcode-13-blue.svg)](https://developer.apple.com/xcode)
-[![Swift](https://img.shields.io/badge/Swift-5.5-orange.svg)](https://swift.org)
-[![License](https://img.shields.io/github/license/hhru/Nivelir.svg)](https://opensource.org/licenses/MIT)
+[![Cocoapods](https://img.shields.io/cocoapods/v/Nivelir)](http://cocoapods.org/pods/Nivelir)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen)](https://github.com/Carthage/Carthage)
+[![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen)](https://swift.org/package-manager/)
+[![Platforms](https://img.shields.io/cocoapods/p/Nivelir)](https://developer.apple.com/discover/)
+[![Xcode](https://img.shields.io/badge/Xcode-13-blue)](https://developer.apple.com/xcode)
+[![Swift](https://img.shields.io/badge/Swift-5.5-orange)](https://swift.org)
+[![License](https://img.shields.io/github/license/hhru/Nivelir)](https://opensource.org/licenses/MIT)
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
 
