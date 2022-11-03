@@ -18,13 +18,13 @@ jobs:
     name: Build & Tests
     runs-on: macOS-latest
     env:
-      DEVELOPER_DIR: /Applications/Xcode_13.2.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_14.0.1.app/Contents/Developer
       XCODE_PROJECT: Nivelir.xcodeproj
       IOS_SCHEME: Nivelir iOS
-      IOS_DESTINATION: OS=15.2,name=iPhone 13
+      IOS_DESTINATION: OS=16.0,name=iPhone 14
       IOS_RESULT_PATH: xcodebuild-ios.xcresult
       TVOS_SCHEME: Nivelir tvOS
-      TVOS_DESTINATION: OS=15.2,name=Apple TV 4K
+      TVOS_DESTINATION: OS=16.0,name=Apple TV
       TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}

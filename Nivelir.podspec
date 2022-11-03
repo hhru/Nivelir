@@ -8,13 +8,13 @@ Pod::Spec.new do |spec|
   spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
   spec.source = { :git => "https://github.com/hhru/Nivelir.git", :tag => "#{spec.version}" }
 
-  spec.swift_version = '5.1'
+  spec.swift_version = '5.5'
   spec.requires_arc = true
   spec.source_files = 'Sources/**/*.swift'
 
   spec.ios.frameworks = 'Foundation'
-  spec.ios.deployment_target = "10.0"
+  spec.ios.deployment_target = "12.0"
 
   spec.tvos.frameworks = 'Foundation'
-  spec.tvos.deployment_target = "10.0"
+  spec.tvos.deployment_target = "12.0"
 end

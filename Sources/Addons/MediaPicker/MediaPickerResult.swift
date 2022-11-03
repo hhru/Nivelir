@@ -19,9 +19,6 @@ public struct MediaPickerResult {
     /// The URL of the image file.
     public let imageURL: URL?
 
-    /// The Assets Library URL for the original version of the picked item.
-    public let referenceURL: URL?
-
     /// The original, uncropped image selected by the user.
     public let originalImage: UIImage?
 
@@ -52,7 +49,6 @@ public struct MediaPickerResult {
             self.imageURL = nil
         }
 
-        self.referenceURL = info[.referenceURL] as? URL
         self.originalImage = info[.originalImage] as? UIImage
         self.editedImage = info[.editedImage] as? UIImage
 
