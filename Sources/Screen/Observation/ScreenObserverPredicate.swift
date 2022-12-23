@@ -79,9 +79,35 @@ extension ScreenObserverPredicate {
     ///
     /// - Parameter predicates: A set of predicates.
     /// - Returns: A new instance of the predicate with an updated filter.
-    public static func satisfiedAny(_ predicates: ScreenObserverPredicate...) -> Self {
+    public static func satisfiedAny(_ predicates: [ScreenObserverPredicate]) -> Self {
         Self { observer, container, iterator in
             predicates.contains { predicate in
+                predicate.filterObserver(
+                    observer,
+                    for: container,
+                    using: iterator
+                )
+            }
+        }
+    }
+
+    /// Observe and receive notifications from sources
+    /// matching one of the conditions specified in the `predicates` parameter.
+    ///
+    /// - Parameter predicates: A set of predicates.
+    /// - Returns: A new instance of the predicate with an updated filter.
+    public static func satisfiedAny(_ predicates: ScreenObserverPredicate...) -> Self {
+        satisfiedAny(predicates)
+    }
+
+    /// Observe and receive notifications from sources
+    /// matching all the conditions specified in the `predicates` parameter.
+    ///
+    /// - Parameter predicates: A set of predicates.
+    /// - Returns: A new instance of the predicate with an updated filter.
+    public static func satisfiedAll(_ predicates: [ScreenObserverPredicate]) -> Self {
+        Self { observer, container, iterator in
+            predicates.allSatisfy { predicate in
                 predicate.filterObserver(
                     observer,
                     for: container,
@@ -97,15 +123,7 @@ extension ScreenObserverPredicate {
     /// - Parameter predicates: A set of predicates.
     /// - Returns: A new instance of the predicate with an updated filter.
     public static func satisfiedAll(_ predicates: ScreenObserverPredicate...) -> Self {
-        Self { observer, container, iterator in
-            predicates.allSatisfy { predicate in
-                predicate.filterObserver(
-                    observer,
-                    for: container,
-                    using: iterator
-                )
-            }
-        }
+        satisfiedAll(predicates)
     }
 
     /// Observing and receiving notifications from sources by observer `type`.
@@ -136,10 +154,10 @@ extension ScreenObserverPredicate {
     /// - Parameter container: The container being checked for visibility.
     /// - Returns: A new instance of the predicate with an updated filter.
     public static func visible(
-        _ container: ScreenVisibleContainer
+        _ container: ScreenVisibleContainer & AnyObject
     ) -> Self {
-        Self { _, _, _ in
-            container.isVisible
+        Self { [weak container] _, _, _ in
+            container?.isVisible ?? false
         }
     }
 
@@ -154,8 +172,12 @@ extension ScreenObserverPredicate {
         on presentingContainer: UIViewController,
         recursively: Bool = true
     ) -> Self {
-        Self { _, container, iterator in
+        Self { [weak presentingContainer] _, container, iterator in
             guard let container = container as? UIViewController else {
+                return false
+            }
+
+            guard let presentingContainer = presentingContainer else {
                 return false
             }
 
@@ -189,12 +211,14 @@ extension ScreenObserverPredicate {
         of parentContainer: UIViewController,
         recursively: Bool = true
     ) -> Self {
-        Self { _, container, iterator in
+        Self { [weak parentContainer] _, container, iterator in
             guard let container = container as? UIViewController else {
                 return false
             }
 
-            let children = parentContainer.children
+            guard let children = parentContainer?.children.nonEmpty else {
+                return false
+            }
 
             if children.contains(container) {
                 return true
@@ -220,23 +244,29 @@ extension ScreenObserverPredicate {
         into stack: [UIViewController],
         recursively: Bool = true
     ) -> Self {
-        Self { _, container, iterator in
-            guard let container = container as? UIViewController else {
-                return false
-            }
+        let predicates = stack.map { pushedContainer in
+            Self { [weak pushedContainer] _, container, iterator in
+                guard let container = container as? UIViewController else {
+                    return false
+                }
 
-            if stack.contains(container) {
-                return true
-            } else if !recursively {
-                return false
-            }
+                guard let pushedContainer = pushedContainer else {
+                    return false
+                }
 
-            return stack.contains { pushedContainer in
-                iterator.firstContainer(in: pushedContainer) { nextContainer in
+                if pushedContainer == container {
+                    return true
+                } else if !recursively {
+                    return false
+                }
+
+                return iterator.firstContainer(in: pushedContainer) { nextContainer in
                     container == nextContainer as? UIViewController
                 } != nil
             }
         }
+
+        return satisfiedAny(predicates)
     }
 
     /// Observe and receive notifications from containers in the navigation stack.
@@ -249,8 +279,12 @@ extension ScreenObserverPredicate {
         into stackContainer: UINavigationController,
         recursively: Bool = true
     ) -> Self {
-        Self { observer, container, iterator in
-            pushed(into: stackContainer.viewControllers, recursively: recursively).filterObserver(
+        Self { [weak stackContainer] observer, container, iterator in
+            guard let stack = stackContainer?.viewControllers.nonEmpty else {
+                return false
+            }
+
+            return pushed(into: stack, recursively: recursively).filterObserver(
                 observer,
                 for: container,
                 using: iterator
@@ -270,8 +304,10 @@ extension ScreenObserverPredicate {
         after pushingContainer: UIViewController,
         recursively: Bool = true
     ) -> Self {
-        Self { observer, container, iterator in
-            var pushingContainer = pushingContainer
+        Self { [weak pushingContainer] observer, container, iterator in
+            guard var pushingContainer = pushingContainer else {
+                return false
+            }
 
             while let parentContainer = pushingContainer.parent, parentContainer != pushingContainer.stack {
                 pushingContainer = parentContainer
