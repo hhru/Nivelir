@@ -1,3 +1,4 @@
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 internal protocol KeyboardHandler: AnyObject {
@@ -158,3 +159,4 @@ extension KeyboardHandler {
         keyboardDidHideNotificationObserver = nil
     }
 }
+#endif
