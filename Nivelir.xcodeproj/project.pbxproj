@@ -406,6 +406,20 @@
 		C08995F827968C7E007D9D17 /* URLDeeplinkQueryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA12276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift */; };
 		C08995F927968C82007D9D17 /* URLDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA0F276EB80600D751C4 /* URLDeeplink.swift */; };
 		C08995FA27968C84007D9D17 /* AnyURLDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFA14276EBDF900D751C4 /* AnyURLDeeplink.swift */; };
+		C089D8E82A0B18C800B6400C /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8E52A0B18C800B6400C /* KeyboardHandler.swift */; };
+		C089D8E92A0B18C800B6400C /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8E52A0B18C800B6400C /* KeyboardHandler.swift */; };
+		C089D8EA2A0B18C800B6400C /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8E62A0B18C800B6400C /* NotificationObserver.swift */; };
+		C089D8EB2A0B18C800B6400C /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8E62A0B18C800B6400C /* NotificationObserver.swift */; };
+		C089D8EC2A0B18C800B6400C /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8E72A0B18C800B6400C /* ObjectAssociation.swift */; };
+		C089D8ED2A0B18C800B6400C /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8E72A0B18C800B6400C /* ObjectAssociation.swift */; };
+		C089D8F22A0B190000B6400C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8EE2A0B190000B6400C /* UIView+Extensions.swift */; };
+		C089D8F32A0B190000B6400C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8EE2A0B190000B6400C /* UIView+Extensions.swift */; };
+		C089D8F42A0B190000B6400C /* UIScrollView+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8EF2A0B190000B6400C /* UIScrollView+Extenions.swift */; };
+		C089D8F52A0B190000B6400C /* UIScrollView+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8EF2A0B190000B6400C /* UIScrollView+Extenions.swift */; };
+		C089D8F62A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F02A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift */; };
+		C089D8F72A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F02A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift */; };
+		C089D8F82A0B190000B6400C /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */; };
+		C089D8F92A0B190000B6400C /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */; };
 		C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
 		C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8E926BC647A008C274A /* ScreenRoute.swift */; };
 		C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8E926BC647A008C274A /* ScreenRoute.swift */; };
@@ -821,6 +835,13 @@
 		C088604926B6CD6600CA0A77 /* ScreenWaitAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenWaitAction.swift; sourceTree = "<group>"; };
 		C088605326B9048E00CA0A77 /* ScreenMakeVisibleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMakeVisibleAction.swift; sourceTree = "<group>"; };
 		C088605B26B9737C00CA0A77 /* ScreenContainerNotSupportedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerNotSupportedError.swift; sourceTree = "<group>"; };
+		C089D8E52A0B18C800B6400C /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		C089D8E62A0B18C800B6400C /* NotificationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
+		C089D8E72A0B18C800B6400C /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		C089D8EE2A0B190000B6400C /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C089D8EF2A0B190000B6400C /* UIScrollView+Extenions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extenions.swift"; sourceTree = "<group>"; };
+		C089D8F02A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
+		C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
 		C08FA8E926BC647A008C274A /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
 		C08FA8F026BC68F8008C274A /* ScreenRootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootRoute.swift; sourceTree = "<group>"; };
@@ -1086,7 +1107,11 @@
 				C078FCFD2861A1DA0008FC6E /* UIApplication+Extensions.swift */,
 				C078FCFC2861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift */,
 				C0270C9D25F3DAF000ECC57C /* UINavigationController+Extensions.swift */,
+				C089D8F02A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift */,
+				C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */,
+				C089D8EF2A0B190000B6400C /* UIScrollView+Extenions.swift */,
 				C0270C9F25F3DAF000ECC57C /* UITabBarController+Extensions.swift */,
+				C089D8EE2A0B190000B6400C /* UIView+Extensions.swift */,
 				C0270C9E25F3DAF000ECC57C /* UIViewController+Extensions.swift */,
 				C0270CA025F3DAF000ECC57C /* UIWindow+Extensions.swift */,
 			);
@@ -1901,7 +1926,10 @@
 				C08F982125EEB9910077AE40 /* Extensions */,
 				C0A728DA279ADE28000BFBF9 /* URLQueryDecoder */,
 				C0A728A0279ACBEC000BFBF9 /* AnyCodingKey.swift */,
+				C089D8E52A0B18C800B6400C /* KeyboardHandler.swift */,
+				C089D8E62A0B18C800B6400C /* NotificationObserver.swift */,
 				C0C06E0727AA78F4002B7F03 /* Nullable.swift */,
+				C089D8E72A0B18C800B6400C /* ObjectAssociation.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2343,6 +2371,8 @@
 				C0885FFF26B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
 				C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6626B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
+				C089D8F62A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */,
+				C089D8F42A0B190000B6400C /* UIScrollView+Extenions.swift in Sources */,
 				C0885FB626B6C0A500CA0A77 /* ScreenStackClearModifier.swift in Sources */,
 				C0885F8826B6BA0100CA0A77 /* ScreenRootAnimation.swift in Sources */,
 				C088604A26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */,
@@ -2388,6 +2418,7 @@
 				C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C078FD5B2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift in Sources */,
+				C089D8EC2A0B18C800B6400C /* ObjectAssociation.swift in Sources */,
 				C0A728BD279AD5A2000BFBF9 /* DictionarySingleValueDecodingContainer.swift in Sources */,
 				C078FD8B2861BCEA0008FC6E /* HUD+Activity.swift in Sources */,
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
@@ -2413,6 +2444,7 @@
 				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
 				C0E93305262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C0D57963279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */,
+				C089D8F22A0B190000B6400C /* UIView+Extensions.swift in Sources */,
 				C088604326B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
 				C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
 				C06DFA10276EB80600D751C4 /* URLDeeplink.swift in Sources */,
@@ -2531,6 +2563,7 @@
 				C088603926B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C078FD692861A1DA0008FC6E /* ProgressAnimation.swift in Sources */,
 				C088601326B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
+				C089D8E82A0B18C800B6400C /* KeyboardHandler.swift in Sources */,
 				C0A728F4279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */,
 				C058492B2846759700DE42F0 /* ScreenObserverStorage.swift in Sources */,
 				C0C9FE9B2655E5700074D669 /* ScreenNavigator.swift in Sources */,
@@ -2572,11 +2605,13 @@
 				C0C3428026BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C088604726B6C60B00CA0A77 /* InvalidStoreProductIDError.swift in Sources */,
 				C078FD952861BF1F0008FC6E /* HUD+Failure.swift in Sources */,
+				C089D8F82A0B190000B6400C /* UIScreen+Extensions.swift in Sources */,
 				C058493D2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
 				C088600F26B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
 				C0A7287127996E6E000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
 				C0C06E0827AA78F4002B7F03 /* Nullable.swift in Sources */,
 				C078FDB52861C8800008FC6E /* Progress+Spinner.swift in Sources */,
+				C089D8EA2A0B18C800B6400C /* NotificationObserver.swift in Sources */,
 				C0A72860279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */,
 				C0238EEB27A7DBA100148E91 /* DeeplinkInvalidScreensError.swift in Sources */,
 				C0885F9426B6BA0100CA0A77 /* ScreenStackAction.swift in Sources */,
@@ -2659,6 +2694,7 @@
 				C0885F6726B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
 				C0885FB726B6C0A500CA0A77 /* ScreenStackClearModifier.swift in Sources */,
 				C08995F827968C7E007D9D17 /* URLDeeplinkQueryDecoder.swift in Sources */,
+				C089D8F52A0B190000B6400C /* UIScrollView+Extenions.swift in Sources */,
 				C0885F8926B6BA0100CA0A77 /* ScreenRootAnimation.swift in Sources */,
 				8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */,
 				C088604B26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */,
@@ -2668,6 +2704,7 @@
 				C0A7287027996E4B000BFBF9 /* AnyNotificationDeeplink.swift in Sources */,
 				C078FD6C2861A1DA0008FC6E /* AnyProgressContent.swift in Sources */,
 				C0885F8B26B6BA0100CA0A77 /* ScreenRootTransitionAnimation.swift in Sources */,
+				C089D8F72A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */,
 				C0A7286E27996E48000BFBF9 /* NotificationDeeplink.swift in Sources */,
 				C0238ECD27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C05F488E26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */,
@@ -2736,6 +2773,7 @@
 				C078FDAA2861C7E00008FC6E /* Progress+Activity.swift in Sources */,
 				C078FD602861A1DA0008FC6E /* ProgressIndicator.swift in Sources */,
 				C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */,
+				C089D8F32A0B190000B6400C /* UIView+Extensions.swift in Sources */,
 				C0885F7526B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
 				C078FD542861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift in Sources */,
 				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
@@ -2788,10 +2826,12 @@
 				C0238EE227A411D100148E91 /* DeeplinkHandler.swift in Sources */,
 				C078FD502861A1DA0008FC6E /* ProgressPercentageIndicator.swift in Sources */,
 				C078FD822861A1DA0008FC6E /* HUD.swift in Sources */,
+				C089D8F92A0B190000B6400C /* UIScreen+Extensions.swift in Sources */,
 				C095914F285256CE00729E93 /* DeeplinkScope.swift in Sources */,
 				C0A728F2279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0E932FE262B16B80041C564 /* ScreenTabBarItemDecorator.swift in Sources */,
 				C078FD4C2861A1DA0008FC6E /* ProgressActivityIndicator.swift in Sources */,
+				C089D8EB2A0B18C800B6400C /* NotificationObserver.swift in Sources */,
 				C0238ED627A40FE500148E91 /* DeeplinkManager.swift in Sources */,
 				C0D5797A27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F6526B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
@@ -2823,6 +2863,7 @@
 				C0E932F0262B16910041C564 /* ScreenTabsDecorator.swift in Sources */,
 				C0C9FE9C2655E5700074D669 /* ScreenNavigator.swift in Sources */,
 				C0F9A47625FD61EB00DAE060 /* ScreenContainerTypeMismatchError.swift in Sources */,
+				C089D8E92A0B18C800B6400C /* KeyboardHandler.swift in Sources */,
 				C078FD482861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift in Sources */,
 				C0270E9125F4245800ECC57C /* ScreenDecorator.swift in Sources */,
 				C078FD722861A1DA0008FC6E /* ProgressEmptyHeader.swift in Sources */,
@@ -2849,6 +2890,7 @@
 				C078FD4E2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */,
 				C058493E2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
 				C078FD762861A1DA0008FC6E /* ProgressHeader.swift in Sources */,
+				C089D8ED2A0B18C800B6400C /* ObjectAssociation.swift in Sources */,
 				C0C3428126BC525A007A45E9 /* ScreenRouteConvertible.swift in Sources */,
 				C0A72861279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */,
 				C0AADA1825EED7740087439E /* ScreenContainer.swift in Sources */,
@@ -2966,14 +3008,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3025,13 +3067,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
