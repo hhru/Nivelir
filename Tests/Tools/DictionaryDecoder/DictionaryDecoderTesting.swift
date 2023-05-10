@@ -83,7 +83,7 @@ extension DictionaryDecoderTesting {
 
 extension DictionaryKeyDecodingStrategy {
 
-    private var jsonDecodingStrategy: JSONDecoder.KeyDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.KeyDecodingStrategy {
         switch self {
         case .useDefaultKeys:
             return .useDefaultKeys
@@ -96,7 +96,7 @@ extension DictionaryKeyDecodingStrategy {
 
 extension DictionaryDateDecodingStrategy {
 
-    private var jsonDecodingStrategy: JSONDecoder.DateDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.DateDecodingStrategy {
         switch self {
         case .deferredToDate:
             return .deferredToDate
@@ -125,7 +125,7 @@ extension DictionaryDateDecodingStrategy {
 
 extension DictionaryDataDecodingStrategy {
 
-    private var jsonDecodingStrategy: JSONDecoder.DataDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.DataDecodingStrategy {
         switch self {
         case .deferredToData:
             return .deferredToData
@@ -141,7 +141,7 @@ extension DictionaryDataDecodingStrategy {
 
 extension DictionaryNonConformingFloatDecodingStrategy {
 
-    private var jsonDecodingStrategy: JSONDecoder.NonConformingFloatDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.NonConformingFloatDecodingStrategy {
         switch self {
         case let .convertFromString(positiveInfinity, negativeInfinity, nan):
             return .convertFromString(
