@@ -420,6 +420,64 @@
 		C089D8F72A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F02A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift */; };
 		C089D8F82A0B190000B6400C /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */; };
 		C089D8F92A0B190000B6400C /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */; };
+		C089D9252A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8FC2A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift */; };
+		C089D9262A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8FC2A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift */; };
+		C089D9272A0B1AC300B6400C /* BottomSheetDetentionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8FD2A0B1AC300B6400C /* BottomSheetDetentionController.swift */; };
+		C089D9282A0B1AC300B6400C /* BottomSheetDetentionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8FD2A0B1AC300B6400C /* BottomSheetDetentionController.swift */; };
+		C089D9292A0B1AC300B6400C /* BottomSheetDetentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */; };
+		C089D92A2A0B1AC300B6400C /* BottomSheetDetentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */; };
+		C089D92B2A0B1AC300B6400C /* BottomSheetDetentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */; };
+		C089D92C2A0B1AC300B6400C /* BottomSheetDetentContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */; };
+		C089D92D2A0B1AC300B6400C /* BottomSheetDetent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9012A0B1AC300B6400C /* BottomSheetDetent.swift */; };
+		C089D92E2A0B1AC300B6400C /* BottomSheetDetent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9012A0B1AC300B6400C /* BottomSheetDetent.swift */; };
+		C089D9332A0B1AC300B6400C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9052A0B1AC300B6400C /* BottomSheet.swift */; };
+		C089D9342A0B1AC300B6400C /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9052A0B1AC300B6400C /* BottomSheet.swift */; };
+		C089D9352A0B1AC300B6400C /* BottomSheetStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9062A0B1AC300B6400C /* BottomSheetStackController.swift */; };
+		C089D9362A0B1AC300B6400C /* BottomSheetStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9062A0B1AC300B6400C /* BottomSheetStackController.swift */; };
+		C089D9372A0B1AC300B6400C /* UIViewController+BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9082A0B1AC300B6400C /* UIViewController+BottomSheet.swift */; };
+		C089D9382A0B1AC300B6400C /* UIViewController+BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9082A0B1AC300B6400C /* UIViewController+BottomSheet.swift */; };
+		C089D9392A0B1AC300B6400C /* BottomSheetGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9092A0B1AC300B6400C /* BottomSheetGrabber.swift */; };
+		C089D93A2A0B1AC300B6400C /* BottomSheetGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9092A0B1AC300B6400C /* BottomSheetGrabber.swift */; };
+		C089D93F2A0B1AC300B6400C /* BottomSheetTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D90D2A0B1AC300B6400C /* BottomSheetTransitionView.swift */; };
+		C089D9402A0B1AC300B6400C /* BottomSheetTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D90D2A0B1AC300B6400C /* BottomSheetTransitionView.swift */; };
+		C089D9412A0B1AC300B6400C /* BottomSheetBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D90E2A0B1AC300B6400C /* BottomSheetBorder.swift */; };
+		C089D9422A0B1AC300B6400C /* BottomSheetBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D90E2A0B1AC300B6400C /* BottomSheetBorder.swift */; };
+		C089D9432A0B1AC300B6400C /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D90F2A0B1AC300B6400C /* BottomSheetController.swift */; };
+		C089D9442A0B1AC300B6400C /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D90F2A0B1AC300B6400C /* BottomSheetController.swift */; };
+		C089D9452A0B1AC300B6400C /* BottomSheetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9102A0B1AC300B6400C /* BottomSheetCard.swift */; };
+		C089D9462A0B1AC300B6400C /* BottomSheetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9102A0B1AC300B6400C /* BottomSheetCard.swift */; };
+		C089D9472A0B1AC300B6400C /* BottomSheetShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9112A0B1AC300B6400C /* BottomSheetShadow.swift */; };
+		C089D9482A0B1AC300B6400C /* BottomSheetShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9112A0B1AC300B6400C /* BottomSheetShadow.swift */; };
+		C089D9492A0B1AC300B6400C /* BottomSheetDimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9132A0B1AC300B6400C /* BottomSheetDimming.swift */; };
+		C089D94A2A0B1AC300B6400C /* BottomSheetDimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9132A0B1AC300B6400C /* BottomSheetDimming.swift */; };
+		C089D94B2A0B1AC300B6400C /* BottomSheetDimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9142A0B1AC300B6400C /* BottomSheetDimmingView.swift */; };
+		C089D94C2A0B1AC300B6400C /* BottomSheetDimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9142A0B1AC300B6400C /* BottomSheetDimmingView.swift */; };
+		C089D94D2A0B1AC300B6400C /* BottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9162A0B1AC300B6400C /* BottomSheetPresentationController.swift */; };
+		C089D94E2A0B1AC300B6400C /* BottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9162A0B1AC300B6400C /* BottomSheetPresentationController.swift */; };
+		C089D94F2A0B1AC300B6400C /* BottomSheetPresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9172A0B1AC300B6400C /* BottomSheetPresentationState.swift */; };
+		C089D9502A0B1AC300B6400C /* BottomSheetPresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9172A0B1AC300B6400C /* BottomSheetPresentationState.swift */; };
+		C089D9512A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91A2A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift */; };
+		C089D9522A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91A2A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift */; };
+		C089D9532A0B1AC300B6400C /* BottomSheetInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91B2A0B1AC300B6400C /* BottomSheetInteraction.swift */; };
+		C089D9542A0B1AC300B6400C /* BottomSheetInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91B2A0B1AC300B6400C /* BottomSheetInteraction.swift */; };
+		C089D9552A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91C2A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift */; };
+		C089D9562A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91C2A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift */; };
+		C089D9572A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91D2A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift */; };
+		C089D9582A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91D2A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift */; };
+		C089D9592A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91E2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift */; };
+		C089D95A2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91E2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift */; };
+		C089D95B2A0B1AC300B6400C /* BottomSheetInteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91F2A0B1AC300B6400C /* BottomSheetInteractionState.swift */; };
+		C089D95C2A0B1AC300B6400C /* BottomSheetInteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D91F2A0B1AC300B6400C /* BottomSheetInteractionState.swift */; };
+		C089D95D2A0B1AC300B6400C /* BottomSheetInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9202A0B1AC300B6400C /* BottomSheetInteractionController.swift */; };
+		C089D95E2A0B1AC300B6400C /* BottomSheetInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9202A0B1AC300B6400C /* BottomSheetInteractionController.swift */; };
+		C089D95F2A0B1AC300B6400C /* BottomSheetDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9222A0B1AC300B6400C /* BottomSheetDismissAnimation.swift */; };
+		C089D9602A0B1AC300B6400C /* BottomSheetDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9222A0B1AC300B6400C /* BottomSheetDismissAnimation.swift */; };
+		C089D9612A0B1AC300B6400C /* BottomSheetAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9232A0B1AC300B6400C /* BottomSheetAnimationOptions.swift */; };
+		C089D9622A0B1AC300B6400C /* BottomSheetAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9232A0B1AC300B6400C /* BottomSheetAnimationOptions.swift */; };
+		C089D9632A0B1AC300B6400C /* BottomSheetPresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9242A0B1AC300B6400C /* BottomSheetPresentAnimation.swift */; };
+		C089D9642A0B1AC300B6400C /* BottomSheetPresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9242A0B1AC300B6400C /* BottomSheetPresentAnimation.swift */; };
+		C089D9662A0B1AF400B6400C /* CACornerMask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9652A0B1AF400B6400C /* CACornerMask+Extensions.swift */; };
+		C089D9672A0B1AF400B6400C /* CACornerMask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089D9652A0B1AF400B6400C /* CACornerMask+Extensions.swift */; };
 		C08F981C25EEB9830077AE40 /* ScreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F981B25EEB9830077AE40 /* ScreenContainer.swift */; };
 		C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8E926BC647A008C274A /* ScreenRoute.swift */; };
 		C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FA8E926BC647A008C274A /* ScreenRoute.swift */; };
@@ -842,6 +900,35 @@
 		C089D8EF2A0B190000B6400C /* UIScrollView+Extenions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extenions.swift"; sourceTree = "<group>"; };
 		C089D8F02A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Extensions.swift"; sourceTree = "<group>"; };
 		C089D8F12A0B190000B6400C /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
+		C089D8FC2A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDetentionDelegate.swift; sourceTree = "<group>"; };
+		C089D8FD2A0B1AC300B6400C /* BottomSheetDetentionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDetentionController.swift; sourceTree = "<group>"; };
+		C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDetentKey.swift; sourceTree = "<group>"; };
+		C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDetentContext.swift; sourceTree = "<group>"; };
+		C089D9012A0B1AC300B6400C /* BottomSheetDetent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDetent.swift; sourceTree = "<group>"; };
+		C089D9052A0B1AC300B6400C /* BottomSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		C089D9062A0B1AC300B6400C /* BottomSheetStackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetStackController.swift; sourceTree = "<group>"; };
+		C089D9082A0B1AC300B6400C /* UIViewController+BottomSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+BottomSheet.swift"; sourceTree = "<group>"; };
+		C089D9092A0B1AC300B6400C /* BottomSheetGrabber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetGrabber.swift; sourceTree = "<group>"; };
+		C089D90D2A0B1AC300B6400C /* BottomSheetTransitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetTransitionView.swift; sourceTree = "<group>"; };
+		C089D90E2A0B1AC300B6400C /* BottomSheetBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetBorder.swift; sourceTree = "<group>"; };
+		C089D90F2A0B1AC300B6400C /* BottomSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetController.swift; sourceTree = "<group>"; };
+		C089D9102A0B1AC300B6400C /* BottomSheetCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetCard.swift; sourceTree = "<group>"; };
+		C089D9112A0B1AC300B6400C /* BottomSheetShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetShadow.swift; sourceTree = "<group>"; };
+		C089D9132A0B1AC300B6400C /* BottomSheetDimming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDimming.swift; sourceTree = "<group>"; };
+		C089D9142A0B1AC300B6400C /* BottomSheetDimmingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDimmingView.swift; sourceTree = "<group>"; };
+		C089D9162A0B1AC300B6400C /* BottomSheetPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentationController.swift; sourceTree = "<group>"; };
+		C089D9172A0B1AC300B6400C /* BottomSheetPresentationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentationState.swift; sourceTree = "<group>"; };
+		C089D91A2A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDismissingInteraction.swift; sourceTree = "<group>"; };
+		C089D91B2A0B1AC300B6400C /* BottomSheetInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetInteraction.swift; sourceTree = "<group>"; };
+		C089D91C2A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDismissedInteraction.swift; sourceTree = "<group>"; };
+		C089D91D2A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentedInteraction.swift; sourceTree = "<group>"; };
+		C089D91E2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentingInteraction.swift; sourceTree = "<group>"; };
+		C089D91F2A0B1AC300B6400C /* BottomSheetInteractionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetInteractionState.swift; sourceTree = "<group>"; };
+		C089D9202A0B1AC300B6400C /* BottomSheetInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetInteractionController.swift; sourceTree = "<group>"; };
+		C089D9222A0B1AC300B6400C /* BottomSheetDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetDismissAnimation.swift; sourceTree = "<group>"; };
+		C089D9232A0B1AC300B6400C /* BottomSheetAnimationOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetAnimationOptions.swift; sourceTree = "<group>"; };
+		C089D9242A0B1AC300B6400C /* BottomSheetPresentAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentAnimation.swift; sourceTree = "<group>"; };
+		C089D9652A0B1AF400B6400C /* CACornerMask+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CACornerMask+Extensions.swift"; sourceTree = "<group>"; };
 		C08F981B25EEB9830077AE40 /* ScreenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainer.swift; sourceTree = "<group>"; };
 		C08FA8E926BC647A008C274A /* ScreenRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRoute.swift; sourceTree = "<group>"; };
 		C08FA8F026BC68F8008C274A /* ScreenRootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRootRoute.swift; sourceTree = "<group>"; };
@@ -1103,6 +1190,7 @@
 		C0270F3425F4A89300ECC57C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C089D9652A0B1AF400B6400C /* CACornerMask+Extensions.swift */,
 				C078FCFB2861A1DA0008FC6E /* CGSize+Extensions.swift */,
 				C078FCFD2861A1DA0008FC6E /* UIApplication+Extensions.swift */,
 				C078FCFC2861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift */,
@@ -1693,6 +1781,7 @@
 			children = (
 				C0885FC726B6C60B00CA0A77 /* ActionSheet */,
 				C0885FCB26B6C60B00CA0A77 /* Alert */,
+				C089D8FA2A0B1AC300B6400C /* BottomSheet */,
 				C0885FD326B6C60B00CA0A77 /* DocumentPreview */,
 				C0866B44285344DC00B85C54 /* Haptics */,
 				C078FCF82861A1DA0008FC6E /* HUD */,
@@ -1840,6 +1929,105 @@
 				C0885FF726B6C60B00CA0A77 /* StoreProductManager.swift */,
 			);
 			path = StoreProduct;
+			sourceTree = "<group>";
+		};
+		C089D8FA2A0B1AC300B6400C /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C089D9212A0B1AC300B6400C /* Animations */,
+				C089D8FB2A0B1AC300B6400C /* Detention */,
+				C089D9122A0B1AC300B6400C /* Dimming */,
+				C089D9072A0B1AC300B6400C /* Extensions */,
+				C089D9182A0B1AC300B6400C /* Interaction */,
+				C089D9152A0B1AC300B6400C /* Presentation */,
+				C089D9052A0B1AC300B6400C /* BottomSheet.swift */,
+				C089D90E2A0B1AC300B6400C /* BottomSheetBorder.swift */,
+				C089D9102A0B1AC300B6400C /* BottomSheetCard.swift */,
+				C089D90F2A0B1AC300B6400C /* BottomSheetController.swift */,
+				C089D9092A0B1AC300B6400C /* BottomSheetGrabber.swift */,
+				C089D9112A0B1AC300B6400C /* BottomSheetShadow.swift */,
+				C089D9062A0B1AC300B6400C /* BottomSheetStackController.swift */,
+				C089D90D2A0B1AC300B6400C /* BottomSheetTransitionView.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		C089D8FB2A0B1AC300B6400C /* Detention */ = {
+			isa = PBXGroup;
+			children = (
+				C089D8FE2A0B1AC300B6400C /* Detent */,
+				C089D8FD2A0B1AC300B6400C /* BottomSheetDetentionController.swift */,
+				C089D8FC2A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift */,
+			);
+			path = Detention;
+			sourceTree = "<group>";
+		};
+		C089D8FE2A0B1AC300B6400C /* Detent */ = {
+			isa = PBXGroup;
+			children = (
+				C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */,
+				C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */,
+				C089D9012A0B1AC300B6400C /* BottomSheetDetent.swift */,
+			);
+			path = Detent;
+			sourceTree = "<group>";
+		};
+		C089D9072A0B1AC300B6400C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C089D9082A0B1AC300B6400C /* UIViewController+BottomSheet.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C089D9122A0B1AC300B6400C /* Dimming */ = {
+			isa = PBXGroup;
+			children = (
+				C089D9132A0B1AC300B6400C /* BottomSheetDimming.swift */,
+				C089D9142A0B1AC300B6400C /* BottomSheetDimmingView.swift */,
+			);
+			path = Dimming;
+			sourceTree = "<group>";
+		};
+		C089D9152A0B1AC300B6400C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C089D9162A0B1AC300B6400C /* BottomSheetPresentationController.swift */,
+				C089D9172A0B1AC300B6400C /* BottomSheetPresentationState.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C089D9182A0B1AC300B6400C /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				C089D9192A0B1AC300B6400C /* Interactions */,
+				C089D9202A0B1AC300B6400C /* BottomSheetInteractionController.swift */,
+				C089D91F2A0B1AC300B6400C /* BottomSheetInteractionState.swift */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
+		C089D9192A0B1AC300B6400C /* Interactions */ = {
+			isa = PBXGroup;
+			children = (
+				C089D91C2A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift */,
+				C089D91A2A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift */,
+				C089D91B2A0B1AC300B6400C /* BottomSheetInteraction.swift */,
+				C089D91D2A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift */,
+				C089D91E2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift */,
+			);
+			path = Interactions;
+			sourceTree = "<group>";
+		};
+		C089D9212A0B1AC300B6400C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C089D9232A0B1AC300B6400C /* BottomSheetAnimationOptions.swift */,
+				C089D9222A0B1AC300B6400C /* BottomSheetDismissAnimation.swift */,
+				C089D9242A0B1AC300B6400C /* BottomSheetPresentAnimation.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		C08F980E25EEB5A60077AE40 /* Screen */ = {
@@ -2341,6 +2529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C078FD412861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */,
+				C089D9572A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift in Sources */,
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C078FD752861A1DA0008FC6E /* ProgressHeader.swift in Sources */,
 				C078FD922861BEEB0008FC6E /* HUD+Spinner.swift in Sources */,
@@ -2368,6 +2557,8 @@
 				C088605426B9048E00CA0A77 /* ScreenMakeVisibleAction.swift in Sources */,
 				C0885F8426B6BA0100CA0A77 /* ScreenSetRootAction.swift in Sources */,
 				C015F483265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
+				C089D94F2A0B1AC300B6400C /* BottomSheetPresentationState.swift in Sources */,
+				C089D9332A0B1AC300B6400C /* BottomSheet.swift in Sources */,
 				C0885FFF26B6C60B00CA0A77 /* ScreenShowActionSheetAction.swift in Sources */,
 				C05F48D526B68B7F0002DF52 /* ScreenAction.swift in Sources */,
 				C0885F6626B6BA0100CA0A77 /* ScreenTabCustomAnimation.swift in Sources */,
@@ -2380,6 +2571,7 @@
 				C088601126B6C60B00CA0A77 /* ScreenShowDocumentPreviewAction.swift in Sources */,
 				C0885F8A26B6BA0100CA0A77 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C01294BE2859B3420039D06B /* SharingItemManager.swift in Sources */,
+				C089D93F2A0B1AC300B6400C /* BottomSheetTransitionView.swift in Sources */,
 				C058492D2846761D00DE42F0 /* ScreenObserverToken.swift in Sources */,
 				C058493428475F1E00DE42F0 /* ScreenObservatory.swift in Sources */,
 				C06DFA0C276EB20200D751C4 /* Deeplink.swift in Sources */,
@@ -2396,6 +2588,7 @@
 				C0270CA525F3DAF000ECC57C /* UITabBarController+Extensions.swift in Sources */,
 				C078FD4D2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */,
 				C0885F6826B6BA0100CA0A77 /* ScreenTabAnimation.swift in Sources */,
+				C089D92D2A0B1AC300B6400C /* BottomSheetDetent.swift in Sources */,
 				C0885F9226B6BA0100CA0A77 /* ScreenPresentAction.swift in Sources */,
 				C0238F0127A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift in Sources */,
 				C078FD332861A1DA0008FC6E /* CGSize+Extensions.swift in Sources */,
@@ -2416,13 +2609,16 @@
 				C0C3427226BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
 				C0E932E7262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
 				C0866B4A2853570400B85C54 /* ScreenSelectionChangedAction.swift in Sources */,
+				C089D9292A0B1AC300B6400C /* BottomSheetDetentKey.swift in Sources */,
 				C0270CA125F3DAF000ECC57C /* UINavigationController+Extensions.swift in Sources */,
 				C078FD5B2861A1DA0008FC6E /* ProgressFailureIndicatorView.swift in Sources */,
 				C089D8EC2A0B18C800B6400C /* ObjectAssociation.swift in Sources */,
+				C089D9492A0B1AC300B6400C /* BottomSheetDimming.swift in Sources */,
 				C0A728BD279AD5A2000BFBF9 /* DictionarySingleValueDecodingContainer.swift in Sources */,
 				C078FD8B2861BCEA0008FC6E /* HUD+Activity.swift in Sources */,
 				C027115825F60A4F00ECC57C /* AnyStackScreen.swift in Sources */,
 				C0959151285256E400729E93 /* DeeplinkWarningsError.swift in Sources */,
+				C089D9452A0B1AC300B6400C /* BottomSheetCard.swift in Sources */,
 				C0885F6C26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
 				C0866B5A2853A59D00B85C54 /* ScreenGetAction.swift in Sources */,
 				C052C7D82823B48900132875 /* ScreenContainerStorage.swift in Sources */,
@@ -2436,9 +2632,12 @@
 				C088601726B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0E93301262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
 				C058493228475F0200DE42F0 /* DefaultScreenObservatory.swift in Sources */,
+				C089D92B2A0B1AC300B6400C /* BottomSheetDetentContext.swift in Sources */,
 				C078FD392861A1DA0008FC6E /* ProgressFooter.swift in Sources */,
 				C078FDAC2861C8110008FC6E /* Progress+Failure.swift in Sources */,
+				C089D9512A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift in Sources */,
 				C01294C02859D7C60039D06B /* SharingActivityManager.swift in Sources */,
+				C089D9472A0B1AC300B6400C /* BottomSheetShadow.swift in Sources */,
 				C088603126B6C60B00CA0A77 /* MediaPickerSource.swift in Sources */,
 				C088601526B6C60B00CA0A77 /* DocumentPreviewManager.swift in Sources */,
 				C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
@@ -2447,9 +2646,11 @@
 				C089D8F22A0B190000B6400C /* UIView+Extensions.swift in Sources */,
 				C088604326B6C60B00CA0A77 /* StoreProduct.swift in Sources */,
 				C027107B25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
+				C089D94D2A0B1AC300B6400C /* BottomSheetPresentationController.swift in Sources */,
 				C06DFA10276EB80600D751C4 /* URLDeeplink.swift in Sources */,
 				C088600326B6C60B00CA0A77 /* Alert.swift in Sources */,
 				C088602926B6C60B00CA0A77 /* InvalidCallParametersError.swift in Sources */,
+				C089D9272A0B1AC300B6400C /* BottomSheetDetentionController.swift in Sources */,
 				C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */,
 				C078FDB22861C8630008FC6E /* Progress+Percentage.swift in Sources */,
 				C078FD5F2861A1DA0008FC6E /* ProgressIndicator.swift in Sources */,
@@ -2458,6 +2659,7 @@
 				C0238EF427A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
 				C088603B26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
 				C0885F7426B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
+				C089D9552A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift in Sources */,
 				C0D5794D279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */,
 				C06DFA13276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift in Sources */,
 				C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */,
@@ -2468,11 +2670,13 @@
 				C0FF99D226BCB28A00961A70 /* ScreenFailAction.swift in Sources */,
 				C088603D26B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift in Sources */,
 				C0885F8626B6BA0100CA0A77 /* ScreenRootCustomAnimation.swift in Sources */,
+				C089D9352A0B1AC300B6400C /* BottomSheetStackController.swift in Sources */,
 				C0885FBA26B6C0A500CA0A77 /* ScreenSetStackAction.swift in Sources */,
 				C088600126B6C60B00CA0A77 /* AlertAction.swift in Sources */,
 				C078FD5D2861A1DA0008FC6E /* ProgressFailureIndicator.swift in Sources */,
 				C0959148285256CE00729E93 /* UNNotificationResponse+Extensions.swift in Sources */,
 				C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
+				C089D9412A0B1AC300B6400C /* BottomSheetBorder.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
 				C078FD882861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */,
 				C078FDB82861C8AB0008FC6E /* Progress+Success.swift in Sources */,
@@ -2484,7 +2688,9 @@
 				C06B5824262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0C9FE982655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
+				C089D9252A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift in Sources */,
 				C078FD652861A1DA0008FC6E /* ProgressDefaultAnimation.swift in Sources */,
+				C089D94B2A0B1AC300B6400C /* BottomSheetDimmingView.swift in Sources */,
 				C0F9A45625FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C0A7286D27996E48000BFBF9 /* NotificationDeeplink.swift in Sources */,
 				C0238ECA27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */,
@@ -2525,6 +2731,7 @@
 				C078FD7B2861A1DA0008FC6E /* HUDAnimation.swift in Sources */,
 				C0885F9026B6BA0100CA0A77 /* ScreenPresentedAction.swift in Sources */,
 				8E41C80628AD38B400E3E1B2 /* Documentation.docc in Sources */,
+				C089D9632A0B1AC300B6400C /* BottomSheetPresentAnimation.swift in Sources */,
 				C0885F8026B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0AADA3025EED85C0087439E /* ScreenError.swift in Sources */,
 				C078FD372861A1DA0008FC6E /* UIApplication+Extensions.swift in Sources */,
@@ -2533,6 +2740,7 @@
 				C0A728F1279F06BF000BFBF9 /* Dictionary+Extensions.swift in Sources */,
 				C0885F6426B6BA0100CA0A77 /* ScreenTabPredicate.swift in Sources */,
 				C095914E285256CE00729E93 /* DeeplinkScope.swift in Sources */,
+				C089D9372A0B1AC300B6400C /* UIViewController+BottomSheet.swift in Sources */,
 				C0238ED527A40FE500148E91 /* DeeplinkManager.swift in Sources */,
 				C0D5797B27A0606200084220 /* URLQueryDecoder.swift in Sources */,
 				C0885F8C26B6BA0100CA0A77 /* ScreenRootAction.swift in Sources */,
@@ -2553,6 +2761,7 @@
 				C01294CA2859E7AF0039D06B /* SharingActivityType.swift in Sources */,
 				C0C9FE922655E45D0074D669 /* ScreenWindowProvider.swift in Sources */,
 				C0959146285256CE00729E93 /* UIApplicationShortcutItem+Extensions.swift in Sources */,
+				C089D95D2A0B1AC300B6400C /* BottomSheetInteractionController.swift in Sources */,
 				C088600926B6C60B00CA0A77 /* AlertTextField.swift in Sources */,
 				C078FD672861A1DA0008FC6E /* ProgressCustomAnimation.swift in Sources */,
 				C0885FBC26B6C0A500CA0A77 /* ScreenStackTransitionAnimation.swift in Sources */,
@@ -2562,6 +2771,7 @@
 				C0C3426E26BC4511007A45E9 /* ScreenTabsRoute.swift in Sources */,
 				C088603926B6C60B00CA0A77 /* UnavailableMediaPickerTypesError.swift in Sources */,
 				C078FD692861A1DA0008FC6E /* ProgressAnimation.swift in Sources */,
+				C089D9592A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift in Sources */,
 				C088601326B6C60B00CA0A77 /* DocumentPreview.swift in Sources */,
 				C089D8E82A0B18C800B6400C /* KeyboardHandler.swift in Sources */,
 				C0A728F4279F0826000BFBF9 /* URLQueryDateDecodingStrategy.swift in Sources */,
@@ -2582,6 +2792,7 @@
 				C0885FC426B6C0A500CA0A77 /* ScreenStackTopAction.swift in Sources */,
 				C0238F1527A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */,
 				C0AAD9C425EEC8F50087439E /* Result+Extensions.swift in Sources */,
+				C089D95B2A0B1AC300B6400C /* BottomSheetInteractionState.swift in Sources */,
 				C078FD592861A1DA0008FC6E /* ProgressImageIndicatorView.swift in Sources */,
 				C0238F2D27A9477000148E91 /* ScreenCanceledError.swift in Sources */,
 				C078FD7D2861A1DA0008FC6E /* HUDDefaultAnimation.swift in Sources */,
@@ -2608,6 +2819,7 @@
 				C089D8F82A0B190000B6400C /* UIScreen+Extensions.swift in Sources */,
 				C058493D2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
 				C088600F26B6C60B00CA0A77 /* DocumentPreviewAnchor.swift in Sources */,
+				C089D9392A0B1AC300B6400C /* BottomSheetGrabber.swift in Sources */,
 				C0A7287127996E6E000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
 				C0C06E0827AA78F4002B7F03 /* Nullable.swift in Sources */,
 				C078FDB52861C8800008FC6E /* Progress+Spinner.swift in Sources */,
@@ -2626,11 +2838,15 @@
 				C0885FB426B6C0A500CA0A77 /* ScreenStackModifier.swift in Sources */,
 				C0D5796F27A05E5600084220 /* URLQueryComponent.swift in Sources */,
 				C052C7B52822D9E100132875 /* ScreenObservation.swift in Sources */,
+				C089D9432A0B1AC300B6400C /* BottomSheetController.swift in Sources */,
 				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
 				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
+				C089D9662A0B1AF400B6400C /* CACornerMask+Extensions.swift in Sources */,
 				C0885F6E26B6BA0100CA0A77 /* ScreenRefreshAction.swift in Sources */,
 				C01294CE2859EDAF0039D06B /* ScreenShareAction.swift in Sources */,
+				C089D95F2A0B1AC300B6400C /* BottomSheetDismissAnimation.swift in Sources */,
 				C088601B26B6C60B00CA0A77 /* ScreenOpenSettingsAction.swift in Sources */,
+				C089D9532A0B1AC300B6400C /* BottomSheetInteraction.swift in Sources */,
 				C05E19C2266A3EF600255A69 /* ScreenPopoverPresentationDecorator.swift in Sources */,
 				C0885FAE26B6C0A500CA0A77 /* ScreenStackPushModifier.swift in Sources */,
 				C078FD472861A1DA0008FC6E /* ProgressSuccessIndicatorView.swift in Sources */,
@@ -2638,6 +2854,7 @@
 				C0238F1227A840E400148E91 /* ScreenIterableContainer.swift in Sources */,
 				C0584939284762E100DE42F0 /* ScreenActionStorage.swift in Sources */,
 				C0885FFD26B6C60B00CA0A77 /* ActionSheetAction.swift in Sources */,
+				C089D9612A0B1AC300B6400C /* BottomSheetAnimationOptions.swift in Sources */,
 				C0D5798E27A1869800084220 /* URLQuerySingleValueDecodingContainer.swift in Sources */,
 				C0A728792799A5CF000BFBF9 /* ShortcutDeeplink.swift in Sources */,
 				C078FD632861A1DA0008FC6E /* ProgressView.swift in Sources */,
@@ -2677,6 +2894,7 @@
 				C078FD702861A1DA0008FC6E /* ProgressContentView.swift in Sources */,
 				C0D5797E27A0609000084220 /* URLQueryDeserializer.swift in Sources */,
 				C0885FC326B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
+				C089D94A2A0B1AC300B6400C /* BottomSheetDimming.swift in Sources */,
 				C0270E5525F3EC6000ECC57C /* ScreenLogger.swift in Sources */,
 				C0A728A2279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */,
 				C0C3426526BC4511007A45E9 /* ScreenThenable.swift in Sources */,
@@ -2697,7 +2915,9 @@
 				C089D8F52A0B190000B6400C /* UIScrollView+Extenions.swift in Sources */,
 				C0885F8926B6BA0100CA0A77 /* ScreenRootAnimation.swift in Sources */,
 				8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */,
+				C089D9422A0B1AC300B6400C /* BottomSheetBorder.swift in Sources */,
 				C088604B26B6CD6600CA0A77 /* ScreenWaitAction.swift in Sources */,
+				C089D9342A0B1AC300B6400C /* BottomSheet.swift in Sources */,
 				C058493728475FD600DE42F0 /* ScreenObservatory.swift in Sources */,
 				C08995FA27968C84007D9D17 /* AnyURLDeeplink.swift in Sources */,
 				C0885FAD26B6C0A500CA0A77 /* ScreenStackRootAction.swift in Sources */,
@@ -2706,28 +2926,35 @@
 				C0885F8B26B6BA0100CA0A77 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C089D8F72A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */,
 				C0A7286E27996E48000BFBF9 /* NotificationDeeplink.swift in Sources */,
+				C089D95A2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift in Sources */,
 				C0238ECD27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C05F488E26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */,
 				C088600826B6C60B00CA0A77 /* AlertTextFieldsManager.swift in Sources */,
 				C0885F6B26B6BA0100CA0A77 /* ScreenTabTransitionAnimation.swift in Sources */,
+				C089D94E2A0B1AC300B6400C /* BottomSheetPresentationController.swift in Sources */,
 				C027107C25F50FE300ECC57C /* DefaultScreenIterator.swift in Sources */,
+				C089D9262A0B1AC300B6400C /* BottomSheetDetentionDelegate.swift in Sources */,
 				C0885FB326B6C0A500CA0A77 /* ScreenStackPopModifier.swift in Sources */,
 				C0AADB8825EF90270087439E /* RangeReplaceableCollection+Extensions.swift in Sources */,
 				C0238F0227A7F5EB00148E91 /* NotificationDeeplinkUserInfoOptions.swift in Sources */,
+				C089D9382A0B1AC300B6400C /* UIViewController+BottomSheet.swift in Sources */,
 				C0238ECF27A40F6C00148E91 /* DictionaryDataDecodingStrategy.swift in Sources */,
 				C0885F6926B6BA0100CA0A77 /* ScreenTabAnimation.swift in Sources */,
 				C052C7CE2823A90F00132875 /* ScreenObserver.swift in Sources */,
 				C078FD932861BEEB0008FC6E /* HUD+Spinner.swift in Sources */,
 				C0885F9326B6BA0100CA0A77 /* ScreenPresentAction.swift in Sources */,
 				C088602626B6C60B00CA0A77 /* InvalidStoreAppIDError.swift in Sources */,
+				C089D9582A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift in Sources */,
 				C0885F9926B6BA0100CA0A77 /* ScreenPresentingAction.swift in Sources */,
 				C078FD862861A7F20008FC6E /* ScreenShowHUDAction.swift in Sources */,
 				C078FDB62861C8800008FC6E /* Progress+Spinner.swift in Sources */,
 				C0885F7726B6BA0100CA0A77 /* ScreenTryResolution.swift in Sources */,
 				C0A72875279971D9000BFBF9 /* ShortcutDeeplinkUserInfoDecoder.swift in Sources */,
 				C055B45E2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift in Sources */,
+				C089D9642A0B1AC300B6400C /* BottomSheetPresentAnimation.swift in Sources */,
 				C058492F2846762800DE42F0 /* ScreenObserverStorage.swift in Sources */,
 				C0885FB126B6C0A500CA0A77 /* ScreenStackPopPredicate.swift in Sources */,
+				C089D9622A0B1AC300B6400C /* BottomSheetAnimationOptions.swift in Sources */,
 				C0885F7126B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,
 				C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
 				C08FA8F226BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
@@ -2735,29 +2962,40 @@
 				C0A728BE279AD5A2000BFBF9 /* DictionarySingleValueDecodingContainer.swift in Sources */,
 				C0C3427326BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
 				C0959152285256E400729E93 /* DeeplinkWarningsError.swift in Sources */,
+				C089D9542A0B1AC300B6400C /* BottomSheetInteraction.swift in Sources */,
 				C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
+				C089D94C2A0B1AC300B6400C /* BottomSheetDimmingView.swift in Sources */,
+				C089D95E2A0B1AC300B6400C /* BottomSheetInteractionController.swift in Sources */,
 				C052C7D92823B48900132875 /* ScreenContainerStorage.swift in Sources */,
 				C078FD622861A1DA0008FC6E /* Progress.swift in Sources */,
 				C078FDAD2861C8110008FC6E /* Progress+Failure.swift in Sources */,
 				C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */,
 				C0AADB6525EF900B0087439E /* UIViewController+ScreenVisibleContainer.swift in Sources */,
+				C089D95C2A0B1AC300B6400C /* BottomSheetInteractionState.swift in Sources */,
 				C0885F6D26B6BA0100CA0A77 /* ScreenSelectTabAction.swift in Sources */,
 				C0885FB926B6C0A500CA0A77 /* ScreenStackReplaceModifier.swift in Sources */,
 				C0C3426D26BC4511007A45E9 /* ScreenModalRoute.swift in Sources */,
 				C055B45B2823CCAD00C4EBC4 /* ScreenContainerSharedStorage.swift in Sources */,
+				C089D93A2A0B1AC300B6400C /* BottomSheetGrabber.swift in Sources */,
 				C078FD362861A1DA0008FC6E /* UIEdgeInsets+Extensions.swift in Sources */,
+				C089D9502A0B1AC300B6400C /* BottomSheetPresentationState.swift in Sources */,
 				C058493528475FD200DE42F0 /* ScreenObserverToken.swift in Sources */,
+				C089D9482A0B1AC300B6400C /* BottomSheetShadow.swift in Sources */,
 				C0AADB8925EF90270087439E /* Result+Extensions.swift in Sources */,
 				C0E93308262B16B80041C564 /* ScreenLeftBarButtonDecorator.swift in Sources */,
 				C0885F7B26B6BA0100CA0A77 /* ScreenPredicate.swift in Sources */,
 				C088601826B6C60B00CA0A77 /* FailedToOpenURLError.swift in Sources */,
 				C0A7287227996E6F000BFBF9 /* NotificationDeeplinkUserInfoDecoder.swift in Sources */,
+				C089D9362A0B1AC300B6400C /* BottomSheetStackController.swift in Sources */,
 				C015F488265A84C7003ECCB0 /* UIViewController+ScreenPayloadContainer.swift in Sources */,
 				C078FD7E2861A1DA0008FC6E /* HUDDefaultAnimation.swift in Sources */,
+				C089D9462A0B1AC300B6400C /* BottomSheetCard.swift in Sources */,
 				C0D57964279FF3BF00084220 /* URLQueryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C078FD3C2861A1DA0008FC6E /* ProgressEmptyFooterView.swift in Sources */,
 				C0E93302262B16B80041C564 /* ScreenStackContainerDecorator.swift in Sources */,
+				C089D9602A0B1AC300B6400C /* BottomSheetDismissAnimation.swift in Sources */,
 				C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */,
+				C089D9402A0B1AC300B6400C /* BottomSheetTransitionView.swift in Sources */,
 				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C05849412847766500DE42F0 /* ScreenObserverSharedStorage.swift in Sources */,
 				C0238EF527A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
@@ -2774,6 +3012,7 @@
 				C078FD602861A1DA0008FC6E /* ProgressIndicator.swift in Sources */,
 				C08FA8EB26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C089D8F32A0B190000B6400C /* UIView+Extensions.swift in Sources */,
+				C089D92A2A0B1AC300B6400C /* BottomSheetDetentKey.swift in Sources */,
 				C0885F7526B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
 				C078FD542861A1DA0008FC6E /* ProgressSpinnerIndicatorView.swift in Sources */,
 				C0F9A47825FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
@@ -2791,6 +3030,7 @@
 				C0AADB5825EF8FFB0087439E /* ScreenKeyedContainer.swift in Sources */,
 				C0238ECB27A40F6C00148E91 /* DictionaryKeyDecodingStrategy.swift in Sources */,
 				C0A7287B279A7853000BFBF9 /* Deeplink.swift in Sources */,
+				C089D9522A0B1AC300B6400C /* BottomSheetDismissingInteraction.swift in Sources */,
 				C0F9A45725FD5B5B00DAE060 /* ScreenKey.swift in Sources */,
 				C078FD7C2861A1DA0008FC6E /* HUDAnimation.swift in Sources */,
 				C06B5825262C625A00BE4762 /* AnyScreen.swift in Sources */,
@@ -2801,6 +3041,7 @@
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
 				C078FD9C2861BF840008FC6E /* HUD+Image.swift in Sources */,
 				C078FD562861A1DA0008FC6E /* ProgressSpinnerIndicator.swift in Sources */,
+				C089D92E2A0B1AC300B6400C /* BottomSheetDetent.swift in Sources */,
 				C078FD4A2861A1DA0008FC6E /* ProgressActivityIndicatorView.swift in Sources */,
 				C078FD682861A1DA0008FC6E /* ProgressCustomAnimation.swift in Sources */,
 				C0D5799527A1948300084220 /* URLQueryKeyedDecodingContainer.swift in Sources */,
@@ -2808,6 +3049,7 @@
 				C0A728772799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
 				C0885F8F26B6BA0100CA0A77 /* ScreenTabsAction.swift in Sources */,
 				C078FD8C2861BCEA0008FC6E /* HUD+Activity.swift in Sources */,
+				C089D9562A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift in Sources */,
 				C0885F7926B6BA0100CA0A77 /* ScreenTryAction.swift in Sources */,
 				C0D5799227A1877400084220 /* URLQueryUnkeyedDecodingContainer.swift in Sources */,
 				C088602026B6C60B00CA0A77 /* ScreenMailAction.swift in Sources */,
@@ -2825,6 +3067,7 @@
 				C0885F8126B6BA0100CA0A77 /* ScreenLastAction.swift in Sources */,
 				C0238EE227A411D100148E91 /* DeeplinkHandler.swift in Sources */,
 				C078FD502861A1DA0008FC6E /* ProgressPercentageIndicator.swift in Sources */,
+				C089D9672A0B1AF400B6400C /* CACornerMask+Extensions.swift in Sources */,
 				C078FD822861A1DA0008FC6E /* HUD.swift in Sources */,
 				C089D8F92A0B190000B6400C /* UIScreen+Extensions.swift in Sources */,
 				C095914F285256CE00729E93 /* DeeplinkScope.swift in Sources */,
@@ -2848,6 +3091,7 @@
 				C0A728A5279ACC15000BFBF9 /* Optional+Extensions.swift in Sources */,
 				C088605D26B973FA00CA0A77 /* ScreenContainerNotSupportedError.swift in Sources */,
 				C0959147285256CE00729E93 /* UIApplicationShortcutItem+Extensions.swift in Sources */,
+				C089D9442A0B1AC300B6400C /* BottomSheetController.swift in Sources */,
 				C093BA802798172B0093F29B /* ScreenMakeKeyAndVisibleAction.swift in Sources */,
 				C0885FFC26B6C60B00CA0A77 /* ActionSheet.swift in Sources */,
 				C078FD892861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */,
@@ -2869,6 +3113,7 @@
 				C078FD722861A1DA0008FC6E /* ProgressEmptyHeader.swift in Sources */,
 				C0238ED127A40F6C00148E91 /* DictionaryNonConformingFloatDecodingStrategy.swift in Sources */,
 				C0885F6126B6BA0100CA0A77 /* ScreenSetupTabAction.swift in Sources */,
+				C089D9282A0B1AC300B6400C /* BottomSheetDetentionController.swift in Sources */,
 				C015F481265A8370003ECCB0 /* ScreenPayload.swift in Sources */,
 				C0238F1627A843F800148E91 /* UITabBarController+ScreenIterableContainer.swift in Sources */,
 				C027115125F6083200ECC57C /* AnyModalScreen.swift in Sources */,
@@ -2888,6 +3133,7 @@
 				C05F488A26B68B7F0002DF52 /* AnyScreenAction.swift in Sources */,
 				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
 				C078FD4E2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */,
+				C089D92C2A0B1AC300B6400C /* BottomSheetDetentContext.swift in Sources */,
 				C058493E2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
 				C078FD762861A1DA0008FC6E /* ProgressHeader.swift in Sources */,
 				C089D8ED2A0B18C800B6400C /* ObjectAssociation.swift in Sources */,
