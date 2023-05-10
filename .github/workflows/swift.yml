@@ -11,7 +11,6 @@ on:
 env:
   LC_CTYPE: en_US.UTF-8
   LANG: en_US.UTF-8
-  RUBY_VERSION: 3.1.0
 
 jobs:
   BuildAndTests:
@@ -30,10 +29,7 @@ jobs:
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
     steps:
       - uses: actions/checkout@v2
-      - name: Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: ${{ env.RUBY_VERSION }}
+      - uses: ruby/setup-ruby@v1
       - name: Bundler
         run: |
           gem install bundler
@@ -58,10 +54,7 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: ${{ env.RUBY_VERSION }}
+      - uses: ruby/setup-ruby@v1
       - name: Bundler
         run: |
           gem install bundler
