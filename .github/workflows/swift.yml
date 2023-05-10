@@ -20,7 +20,7 @@ jobs:
       DEVELOPER_DIR: /Applications/Xcode_14.3.app/Contents/Developer
       XCODE_PROJECT: Nivelir.xcodeproj
       IOS_SCHEME: Nivelir iOS
-      IOS_DESTINATION: OS=16.4,name=iPhone 14 Pro
+      IOS_DESTINATION: OS=16.4,name=iPhone 14
       IOS_RESULT_PATH: xcodebuild-ios.xcresult
       TVOS_SCHEME: Nivelir tvOS
       TVOS_DESTINATION: OS=16.4,name=Apple TV
