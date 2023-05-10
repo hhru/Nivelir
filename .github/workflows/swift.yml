@@ -15,7 +15,7 @@ env:
 jobs:
   BuildAndTests:
     name: Build & Tests
-    runs-on: macOS-latest
+    runs-on: firebreak
     env:
       DEVELOPER_DIR: /Applications/Xcode_14.3.app/Contents/Developer
       XCODE_PROJECT: Nivelir.xcodeproj
