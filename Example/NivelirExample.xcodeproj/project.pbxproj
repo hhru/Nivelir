@@ -119,6 +119,12 @@
 		C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */; };
 		C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */; };
 		C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */; };
+		C0F69E4A2A0B1EC300A59DB8 /* WhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F69E432A0B1EC300A59DB8 /* WhatsNewViewController.swift */; };
+		C0F69E4B2A0B1EC300A59DB8 /* WhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F69E432A0B1EC300A59DB8 /* WhatsNewViewController.swift */; };
+		C0F69E4C2A0B1EC300A59DB8 /* WhatsNewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F69E442A0B1EC300A59DB8 /* WhatsNewScreen.swift */; };
+		C0F69E4D2A0B1EC300A59DB8 /* WhatsNewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F69E442A0B1EC300A59DB8 /* WhatsNewScreen.swift */; };
+		C0F69E4E2A0B1EC300A59DB8 /* WhatsNewMoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F69E462A0B1EC300A59DB8 /* WhatsNewMoreScreen.swift */; };
+		C0F69E502A0B1EC300A59DB8 /* WhatsNewMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F69E472A0B1EC300A59DB8 /* WhatsNewMoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +200,10 @@
 		C0E9D2B125FC9F5100ABDBE5 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		C0E9D2B425FC9FB000ABDBE5 /* ChatListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListScreen.swift; sourceTree = "<group>"; };
 		C0E9D2B725FCA2D300ABDBE5 /* HomeTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarItem.swift; sourceTree = "<group>"; };
+		C0F69E432A0B1EC300A59DB8 /* WhatsNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsNewViewController.swift; sourceTree = "<group>"; };
+		C0F69E442A0B1EC300A59DB8 /* WhatsNewScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsNewScreen.swift; sourceTree = "<group>"; };
+		C0F69E462A0B1EC300A59DB8 /* WhatsNewMoreScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsNewMoreScreen.swift; sourceTree = "<group>"; };
+		C0F69E472A0B1EC300A59DB8 /* WhatsNewMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatsNewMoreViewController.swift; sourceTree = "<group>"; };
 		CE8530BA8AC70AE0CDA58AA9 /* Pods-NivelirExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample.release.xcconfig"; path = "Target Support Files/Pods-NivelirExample/Pods-NivelirExample.release.xcconfig"; sourceTree = "<group>"; };
 		EF395F56008252324C82C9BF /* Pods-NivelirExample-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NivelirExample-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-NivelirExample-tvOS/Pods-NivelirExample-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -482,6 +492,8 @@
 				8EBD6C4B27CD09DA00C441B3 /* MoreExampleList */,
 				C0E9D29A25FC0D6500ABDBE5 /* Profile */,
 				C0238F1A27A928CB00148E91 /* RoomList */,
+				C0F69E412A0B1EC300A59DB8 /* WhatsNew */,
+				C0F69E452A0B1EC300A59DB8 /* WhatsNewMore */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -536,6 +548,24 @@
 				C07888E62659133500F09955 /* Images.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C0F69E412A0B1EC300A59DB8 /* WhatsNew */ = {
+			isa = PBXGroup;
+			children = (
+				C0F69E442A0B1EC300A59DB8 /* WhatsNewScreen.swift */,
+				C0F69E432A0B1EC300A59DB8 /* WhatsNewViewController.swift */,
+			);
+			path = WhatsNew;
+			sourceTree = "<group>";
+		};
+		C0F69E452A0B1EC300A59DB8 /* WhatsNewMore */ = {
+			isa = PBXGroup;
+			children = (
+				C0F69E462A0B1EC300A59DB8 /* WhatsNewMoreScreen.swift */,
+				C0F69E472A0B1EC300A59DB8 /* WhatsNewMoreViewController.swift */,
+			);
+			path = WhatsNewMore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,10 +795,12 @@
 				C0B5A45326625DC100D7521C /* ChatScreen.swift in Sources */,
 				C0238F3427A9493C00148E91 /* Screens.swift in Sources */,
 				8EBD6C5627CD1FC600C441B3 /* LandmarkView.swift in Sources */,
+				C0F69E502A0B1EC300A59DB8 /* WhatsNewMoreViewController.swift in Sources */,
 				C078FDC02861CEE20008FC6E /* DefaultProfileService.swift in Sources */,
 				C057512F27A9AEA200396BB7 /* ServiceSharedStorage.swift in Sources */,
 				C0238F3B27A94C7200148E91 /* AuthorizationViewController.swift in Sources */,
 				C0238F2227A93D3E00148E91 /* AuthorizationService.swift in Sources */,
+				C0F69E4E2A0B1EC300A59DB8 /* WhatsNewMoreScreen.swift in Sources */,
 				C07888ED2659579700F09955 /* ChatEmptyView.swift in Sources */,
 				C057512D27A9AE9600396BB7 /* ServiceStorage.swift in Sources */,
 				C0E9D29625FC0B9B00ABDBE5 /* HomeScreen.swift in Sources */,
@@ -792,6 +824,7 @@
 				8EBD6C5327CD14A400C441B3 /* MoreExampleListScreen.swift in Sources */,
 				C057512327A9ADFA00396BB7 /* ServiceContainer.swift in Sources */,
 				8EBD6C5C27CD20FE00C441B3 /* LandmarkScreen.swift in Sources */,
+				C0F69E4A2A0B1EC300A59DB8 /* WhatsNewViewController.swift in Sources */,
 				C0E9D2B225FC9F5100ABDBE5 /* ChatListViewController.swift in Sources */,
 				C0E9D2B525FC9FB000ABDBE5 /* ChatListScreen.swift in Sources */,
 				C0E9D2AF25FC9ECF00ABDBE5 /* ProfileScreen.swift in Sources */,
@@ -806,6 +839,7 @@
 				C07888E126590BE100F09955 /* Reusable.swift in Sources */,
 				C0E9D2B825FCA2D300ABDBE5 /* HomeTabBarItem.swift in Sources */,
 				C078FDBC2861CE5C0008FC6E /* ProfileService.swift in Sources */,
+				C0F69E4C2A0B1EC300A59DB8 /* WhatsNewScreen.swift in Sources */,
 				C07888E72659133500F09955 /* Images.swift in Sources */,
 				C017D13725FBAD0F008B90C0 /* AppDelegate.swift in Sources */,
 				C017D13925FBAD0F008B90C0 /* SceneDelegate.swift in Sources */,
@@ -830,6 +864,7 @@
 				C0C06DF827AA6193002B7F03 /* ProfileUnauthorizedView.swift in Sources */,
 				C0C06DF427AA618A002B7F03 /* AuthorizationViewController.swift in Sources */,
 				C0BF2F5D265A709F00419426 /* ChatEmptyView.swift in Sources */,
+				C0F69E4D2A0B1EC300A59DB8 /* WhatsNewScreen.swift in Sources */,
 				C034D8162816B74500DCF391 /* ScreenAuthorizeActionObserver.swift in Sources */,
 				C078FDC62861E45D0008FC6E /* Alert+Extensions.swift in Sources */,
 				C0BF2F68265A70BD00419426 /* AppDelegate.swift in Sources */,
@@ -857,6 +892,7 @@
 				C0BF2F5B265A709700419426 /* Images.swift in Sources */,
 				C0C06E0427AA61DB002B7F03 /* ScreenAuthorizeActionServices.swift in Sources */,
 				C0C06DF727AA618F002B7F03 /* RoomListCell.swift in Sources */,
+				C0F69E4B2A0B1EC300A59DB8 /* WhatsNewViewController.swift in Sources */,
 				C0BF2F5A265A709700419426 /* Colors.swift in Sources */,
 				C0BF2F62265A70AA00419426 /* HomeTabBarItem.swift in Sources */,
 				C0C06DF627AA618F002B7F03 /* RoomListViewController.swift in Sources */,

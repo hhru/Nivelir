@@ -31,7 +31,7 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc private func onCloseBarBattonTouchUpInside() {
+    @objc private func onCloseBarButtonTouchUpInside() {
         screenNavigator.navigate(from: presenting) { route in
             route.dismiss()
         }
@@ -51,7 +51,7 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
             image: Images.close,
             style: .plain,
             target: self,
-            action: #selector(onCloseBarBattonTouchUpInside)
+            action: #selector(onCloseBarButtonTouchUpInside)
         )
 
         closeBarBattonItem.tintColor = Colors.important
