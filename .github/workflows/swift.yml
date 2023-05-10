@@ -11,20 +11,20 @@ on:
 env:
   LC_CTYPE: en_US.UTF-8
   LANG: en_US.UTF-8
-  RUBY_VERSION: 2.7.x
+  RUBY_VERSION: 3.1.0
 
 jobs:
   BuildAndTests:
     name: Build & Tests
     runs-on: macOS-latest
     env:
-      DEVELOPER_DIR: /Applications/Xcode_14.0.1.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_14.3.app/Contents/Developer
       XCODE_PROJECT: Nivelir.xcodeproj
       IOS_SCHEME: Nivelir iOS
-      IOS_DESTINATION: OS=16.0,name=iPhone 14
+      IOS_DESTINATION: OS=16.4,name=iPhone 14 Pro
       IOS_RESULT_PATH: xcodebuild-ios.xcresult
       TVOS_SCHEME: Nivelir tvOS
-      TVOS_DESTINATION: OS=16.0,name=Apple TV
+      TVOS_DESTINATION: OS=16.4,name=Apple TV
       TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
