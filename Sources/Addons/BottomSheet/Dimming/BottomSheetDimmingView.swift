@@ -10,7 +10,7 @@ internal final class BottomSheetDimmingView: UIView {
 
     internal var color: UIColor? {
         get { containerView.backgroundColor }
-        set { containerView.backgroundColor = newValue}
+        set { containerView.backgroundColor = newValue }
     }
 
     internal var ratio: CGFloat {
