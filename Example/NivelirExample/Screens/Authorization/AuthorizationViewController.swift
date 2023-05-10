@@ -51,7 +51,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
         screenNavigator.navigate { $0.showHUD(.spinner) }
 
         authorizationService.login(phoneNumber: phoneNumber) { [weak self] result in
-            guard let self = self else {
+            guard let self else {
                 return
             }
 

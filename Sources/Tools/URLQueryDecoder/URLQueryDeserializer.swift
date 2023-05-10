@@ -37,7 +37,7 @@ internal final class URLQueryDeserializer {
         _ value: Substring?,
         path: [String]
     ) throws -> URLQueryComponent? {
-        guard let value = value else {
+        guard let value else {
             return nil
         }
 

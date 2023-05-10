@@ -35,7 +35,7 @@ public protocol Deeplink: AnyDeeplink {
 extension Deeplink where Screens: Nullable {
 
     private func resolveScreens(_ screens: Any?) throws -> Screens {
-        guard let screens = screens else {
+        guard let screens else {
             return .none
         }
 

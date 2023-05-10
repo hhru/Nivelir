@@ -177,7 +177,7 @@ extension ScreenObserverPredicate {
                 return false
             }
 
-            guard let presentingContainer = presentingContainer else {
+            guard let presentingContainer else {
                 return false
             }
 
@@ -250,7 +250,7 @@ extension ScreenObserverPredicate {
                     return false
                 }
 
-                guard let pushedContainer = pushedContainer else {
+                guard let pushedContainer else {
                     return false
                 }
 
@@ -305,7 +305,7 @@ extension ScreenObserverPredicate {
         recursively: Bool = true
     ) -> Self {
         Self { [weak pushingContainer] observer, container, iterator in
-            guard var pushingContainer = pushingContainer else {
+            guard var pushingContainer else {
                 return false
             }
 

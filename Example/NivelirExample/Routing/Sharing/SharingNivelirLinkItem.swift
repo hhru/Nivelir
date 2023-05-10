@@ -10,7 +10,7 @@ struct SharingNivelirLinkItem: SharingCustomItem {
     }
 
     func value(for activityType: SharingActivityType?) -> Any? {
-        guard let activityType = activityType else {
+        guard let activityType else {
             return url
         }
 

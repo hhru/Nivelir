@@ -2,7 +2,7 @@ import Foundation
 
 internal struct DictionaryDecoder {
 
-    internal static let `default` = DictionaryDecoder()
+    internal static let `default` = Self()
 
     internal var dateDecodingStrategy: DictionaryDateDecodingStrategy
     internal var dataDecodingStrategy: DictionaryDataDecodingStrategy

@@ -485,7 +485,7 @@ final class DictionaryDecoderTests: XCTestCase, DictionaryDecoderTesting {
             }
         }
 
-        let dictionary: [String: Any] = ["baz": [[123], 345, ["qwe"]]]
+        let dictionary = ["baz": [[123], 345, ["qwe"]] as [Any]]
 
         assertDecoderSucceeds(decoding: DecodableStruct.self, from: dictionary)
     }

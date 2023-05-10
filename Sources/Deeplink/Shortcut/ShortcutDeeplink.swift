@@ -56,7 +56,7 @@ public protocol ShortcutDeeplink: Deeplink, AnyShortcutDeeplink {
 extension ShortcutDeeplink where ShortcutContext: Nullable {
 
     private static func resolveContext(_ context: Any?) throws -> ShortcutContext {
-        guard let context = context else {
+        guard let context else {
             return .none
         }
 

@@ -47,8 +47,8 @@ public struct Safari: CustomStringConvertible {
         } ?? SFSafariViewController.Configuration()
     }
 
-    @available(iOS 11.0, *)
     /// The style of dismiss button to use in the navigation bar to close SFSafariViewController.
+    @available(iOS 11.0, *)
     public var dismissButtonStyle: SFSafariViewController.DismissButtonStyle {
         storedDismissButtonStyle.flatMap { dismissButtonStyle in
             dismissButtonStyle as? SFSafariViewController.DismissButtonStyle

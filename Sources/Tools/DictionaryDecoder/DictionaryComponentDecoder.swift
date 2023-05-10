@@ -258,9 +258,9 @@ extension DictionaryComponentDecoder {
     }
 }
 
-private extension DecodingError {
+extension DecodingError {
 
-    static func invalidComponent(
+    fileprivate static func invalidComponent(
         _ component: Any?,
         of expectedType: Any.Type,
         at codingPath: [CodingKey]
