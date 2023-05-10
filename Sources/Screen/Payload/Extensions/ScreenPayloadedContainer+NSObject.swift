@@ -1,30 +1,20 @@
 #if canImport(ObjectiveC)
 import ObjectiveC
 
-private var screenPayloadAssociatedKey: UInt8 = 0
+private let screenPayloadAssociation = ObjectAssociation<ScreenPayload>()
 
 extension ScreenPayloadedContainer where Self: NSObject {
 
     public var screenPayload: ScreenPayload {
-        let payload = objc_getAssociatedObject(
-            self,
-            &screenPayloadAssociatedKey
-        )
-
-        if let payload = payload as? ScreenPayload {
+        if let payload = screenPayloadAssociation[self] {
             return payload
         }
 
-        let newPayload = ScreenPayload()
+        let payload = ScreenPayload()
 
-        objc_setAssociatedObject(
-            self,
-            &screenPayloadAssociatedKey,
-            newPayload,
-            .OBJC_ASSOCIATION_RETAIN_NONATOMIC
-        )
+        screenPayloadAssociation[self] = payload
 
-        return newPayload
+        return payload
     }
 }
 #endif
