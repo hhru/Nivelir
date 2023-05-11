@@ -175,6 +175,7 @@ only_rules:
   - type_name
   - unavailable_condition
   - unavailable_function
+  - unhandled_throwing_task
   - unneeded_break_in_switch
   - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
@@ -334,7 +335,7 @@ generic_type_name:
     - U
     - V
   allowed_symbols: []
-  validates_start_with_lowercase: true
+  validates_start_with_lowercase: warning
 
 identifier_name:
   min_length:
@@ -355,7 +356,7 @@ identifier_name:
     - z
     - w
   allowed_symbols: []
-  validates_start_with_lowercase: true
+  validates_start_with_lowercase: warning
 
 implicit_return:
   included:
@@ -504,7 +505,7 @@ type_name:
     error: 500
   excluded: []
   allowed_symbols: []
-  validates_start_with_lowercase: true
+  validates_start_with_lowercase: warning
   validate_protocols: true
 
 unused_declaration:
