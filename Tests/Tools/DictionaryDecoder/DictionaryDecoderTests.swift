@@ -514,7 +514,7 @@ final class DictionaryDecoderTests: XCTestCase, DictionaryDecoderTesting {
             }
 
             override func isEqual(_ object: Any?) -> Bool {
-                guard let object = object as? DecodableSubclass else {
+                guard let object = object as? Self else {
                     return false
                 }
 

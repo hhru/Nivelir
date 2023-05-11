@@ -20,7 +20,9 @@ internal final class URLQueryDeserializer {
             .map { index, part in
                 if part.last == .rightSquareBracket {
                     return String(part.dropLast())
-                } else if key.first != .leftSquareBracket, index == .zero {
+                }
+
+                if key.first != .leftSquareBracket, index == .zero {
                     return String(part)
                 }
 

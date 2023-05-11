@@ -25,9 +25,9 @@ public struct ActionSheet: CustomStringConvertible {
     public var description: String {
         if let description = title ?? message {
             return "ActionSheet(\"\(description)\")"
-        } else {
-            return "ActionSheet"
         }
+
+        return "ActionSheet"
     }
 
     /// Creates an action sheet representation.

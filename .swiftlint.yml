@@ -82,6 +82,7 @@ only_rules:
   - implicit_return
   - implicitly_unwrapped_optional
   - inclusive_language
+  - indentation_width
   - invalid_swiftlint_command
   - is_disjoint
   - joined_default_parameter
@@ -143,6 +144,7 @@ only_rules:
   - redundant_nil_coalescing
   - redundant_objc_attribute
   - redundant_optional_initialization
+  - redundant_self_in_closure
   - redundant_set_access_control
   - redundant_string_enum_value
   - redundant_type_annotation
@@ -157,6 +159,7 @@ only_rules:
   - statement_position
   - static_operator
   - superfluous_disable_command
+  - superfluous_else
   - switch_case_alignment
   - switch_case_on_newline
   - syntactic_sugar
@@ -362,6 +365,12 @@ implicit_return:
 
 implicitly_unwrapped_optional:
   mode: all_except_iboutlets
+
+indentation_width:
+  indentation_width: 4
+  include_comments: true
+  include_compiler_directives: true
+  include_multiline_strings: false
 
 large_tuple:
   warning: 3

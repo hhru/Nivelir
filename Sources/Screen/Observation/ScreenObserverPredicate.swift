@@ -191,7 +191,9 @@ extension ScreenObserverPredicate {
 
             if presentedContainer == container {
                 return true
-            } else if !recursively {
+            }
+
+            if !recursively {
                 return false
             }
 
@@ -222,7 +224,9 @@ extension ScreenObserverPredicate {
 
             if children.contains(container) {
                 return true
-            } else if !recursively {
+            }
+
+            if !recursively {
                 return false
             }
 
@@ -256,7 +260,9 @@ extension ScreenObserverPredicate {
 
                 if pushedContainer == container {
                     return true
-                } else if !recursively {
+                }
+
+                if !recursively {
                     return false
                 }
 
@@ -325,7 +331,9 @@ extension ScreenObserverPredicate {
 
             if stack[safe: stackNextIndex] == container as? UIViewController {
                 return true
-            } else if !recursively {
+            }
+
+            if !recursively {
                 return false
             }
 

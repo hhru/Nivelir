@@ -37,9 +37,9 @@ final class URLQueryDecoderStrategiesTests: XCTestCase, URLQueryDecoderTesting {
         decoder.keyDecodingStrategy = .custom { codingPath in
             if let codingKey = codingPath.last?.stringValue.components(separatedBy: ".").first {
                 return AnyCodingKey(codingKey)
-            } else {
-                return AnyCodingKey("unknown")
             }
+
+            return AnyCodingKey("unknown")
         }
 
         let query = "foo.value=true&bar.value=false"

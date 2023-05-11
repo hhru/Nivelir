@@ -19,7 +19,7 @@ public struct ScreenLastAction<
         navigator.logInfo("Searching for a last container of \(Output.self) type in \(type(of: container))")
 
         let last = navigator.lastContainer(in: container) { container in
-            self.predicate.checkContainer(container)
+            predicate.checkContainer(container)
         }
 
         guard let output = last as? Output else {

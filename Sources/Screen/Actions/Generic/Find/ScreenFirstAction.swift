@@ -19,7 +19,7 @@ public struct ScreenFirstAction<
         navigator.logInfo("Searching for a first container of \(Output.self) type in \(type(of: container))")
 
         let first = navigator.firstContainer(in: container) { container in
-            self.predicate.checkContainer(container)
+            predicate.checkContainer(container)
         }
 
         guard let output = first as? Output else {
