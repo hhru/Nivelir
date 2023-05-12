@@ -14,7 +14,6 @@ public struct ScreenImpactOccurredAction<Container: ScreenContainer>: ScreenActi
         self.intensity = nil
     }
 
-    @available(iOS 13.0, *)
     public init(intensity: CGFloat) {
         self.style = nil
         self.intensity = intensity
@@ -29,7 +28,7 @@ public struct ScreenImpactOccurredAction<Container: ScreenContainer>: ScreenActi
             UIImpactFeedbackGenerator(style: style)
         } ?? UIImpactFeedbackGenerator()
 
-        if #available(iOS 13.0, *), let intensity {
+        if let intensity {
             generator.impactOccurred(intensity: intensity)
         } else {
             generator.impactOccurred()
@@ -60,7 +59,6 @@ extension ScreenThenable {
     ///
     /// - Parameter intensity: A CGFloat value between 0.0 and 1.0.
     /// - Returns: An instance containing the new action.
-    @available(iOS 13.0, *)
     public func impactOccurred(intensity: CGFloat) -> Self {
         then(ScreenImpactOccurredAction(intensity: intensity))
     }
