@@ -10,9 +10,9 @@ extension UIApplication {
                 .compactMap { $0 as? UIWindowScene }
                 .flatMap { $0.windows }
                 .first { $0.isKeyWindow }
-        } else {
-            return keyWindow
         }
+
+        return keyWindow
     }
 }
 #endif

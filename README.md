@@ -4,8 +4,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen)](https://github.com/Carthage/Carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen)](https://swift.org/package-manager/)
 [![Platforms](https://img.shields.io/cocoapods/p/Nivelir)](https://developer.apple.com/discover/)
-[![Xcode](https://img.shields.io/badge/Xcode-13-blue)](https://developer.apple.com/xcode)
-[![Swift](https://img.shields.io/badge/Swift-5.5-orange)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-14-blue)](https://developer.apple.com/xcode)
+[![Swift](https://img.shields.io/badge/Swift-5.7-orange)](https://swift.org)
 [![License](https://img.shields.io/github/license/hhru/Nivelir)](https://opensource.org/licenses/MIT)
 
 Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax.
@@ -27,8 +27,8 @@ Nivelir is a DSL for navigation in iOS and tvOS apps with a simplified, chainabl
 
 ## Requirements
 - iOS 13.0+ / tvOS 13.0+
-- Xcode 13.0+
-- Swift 5.5+
+- Xcode 14.0+
+- Swift 5.7+
 
 
 ## Installation
@@ -80,7 +80,7 @@ Then specify `"Nivelir"` as a dependency of the Target in which you wish to use 
 
 Here's an example `Package.swift`:
 ``` swift
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(

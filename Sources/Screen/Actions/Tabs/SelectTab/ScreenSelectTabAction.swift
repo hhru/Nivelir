@@ -23,11 +23,11 @@ public struct ScreenSelectTabAction<
         to newSelectedTab: UIViewController,
         completion: @escaping () -> Void
     ) {
-        guard let animation = animation else {
+        guard let animation else {
             return completion()
         }
 
-        guard let selectedTab = selectedTab, selectedTab !== newSelectedTab else {
+        guard let selectedTab, selectedTab !== newSelectedTab else {
             return completion()
         }
 

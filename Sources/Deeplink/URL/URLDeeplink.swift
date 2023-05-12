@@ -70,7 +70,7 @@ public protocol URLDeeplink: Deeplink, AnyURLDeeplink {
 extension URLDeeplink where URLContext: Nullable {
 
     private static func resolveContext(_ context: Any?) throws -> URLContext {
-        guard let context = context else {
+        guard let context else {
             return .none
         }
 

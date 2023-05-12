@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         notificationCenter.delegate = self
 
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, error in
-            if let error = error {
+            if let error {
                 print("requestAuthorization() -> error: \(error)")
             } else {
                 print("requestAuthorization() -> granted: \(granted)")

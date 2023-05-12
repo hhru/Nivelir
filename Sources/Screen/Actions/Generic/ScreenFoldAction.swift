@@ -38,7 +38,7 @@ public struct ScreenFoldAction<
         action.perform(container: container, navigator: navigator) { result in
             switch result {
             case let .success(container):
-                self.nested.perform(
+                nested.perform(
                     container: container,
                     navigator: navigator,
                     completion: completion

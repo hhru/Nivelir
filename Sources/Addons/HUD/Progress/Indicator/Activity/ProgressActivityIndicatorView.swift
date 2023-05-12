@@ -11,9 +11,9 @@ public final class ProgressActivityIndicatorView: UIView, ProgressContentView {
     private let activityIndicatorView: UIActivityIndicatorView = {
         if #available(iOS 13.0, tvOS 13.0, *) {
             return UIActivityIndicatorView(style: .medium)
-        } else {
-            return UIActivityIndicatorView(style: .whiteLarge)
         }
+
+        return UIActivityIndicatorView(style: .whiteLarge)
     }()
 
     public let content: ProgressActivityIndicator

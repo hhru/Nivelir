@@ -30,7 +30,7 @@ public struct ScreenNavigateAction<Container: ScreenContainer>: ScreenAction {
         actions[index].perform(container: container, navigator: navigator) { result in
             switch result {
             case .success:
-                self.performActions(
+                performActions(
                     actions,
                     from: index + 1,
                     container: container,

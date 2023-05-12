@@ -63,9 +63,7 @@ extension ChatDeeplink: ShortcutDeeplink {
         }
 
         switch type {
-        case "FirstChatInFirstRoom",
-             "SecondChatInFirstRoom",
-             "SecondChatInSecondRoom":
+        case "FirstChatInFirstRoom", "SecondChatInFirstRoom", "SecondChatInSecondRoom":
             return Self(roomID: payload.roomID, chatID: payload.chatID)
 
         default:

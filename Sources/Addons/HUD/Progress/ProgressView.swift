@@ -104,11 +104,11 @@ public final class ProgressView: UIView {
         containerView: UIView,
         animation: ProgressAnimation?
     ) {
-        guard let previousContentView = previousContentView else {
+        guard let previousContentView else {
             return
         }
 
-        guard let animation = animation, window != nil else {
+        guard let animation, window != nil else {
             return previousContentView.removeFromSuperview()
         }
 
@@ -157,7 +157,7 @@ public final class ProgressView: UIView {
     }
 
     private func updateViews() {
-        guard let progress = progress else {
+        guard let progress else {
             return removeViews()
         }
 

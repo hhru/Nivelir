@@ -3389,7 +3389,7 @@
 				SKIP_INSTALL = YES;
 				SKIP_SWIFTLINT = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3416,7 +3416,7 @@
 				PRODUCT_NAME = Nivelir;
 				SKIP_INSTALL = YES;
 				SKIP_SWIFTLINT = YES;
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3435,7 +3435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3454,7 +3454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3483,7 +3483,7 @@
 				SKIP_INSTALL = YES;
 				SKIP_SWIFTLINT = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -3511,7 +3511,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SKIP_SWIFTLINT = YES;
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -3531,7 +3531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -3551,7 +3551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir.Tests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.5;
+				SWIFT_VERSION = 5.7;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;

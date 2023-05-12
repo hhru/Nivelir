@@ -63,14 +63,14 @@ final class MoreExampleListViewController: UITableViewController, ScreenKeyedCon
 
     private func setupModels() {
         models = [
-            MoreExampleListModel(title: "SwiftUI Screen") { [unowned self] in
-                self.showLandmarkScreen()
+            MoreExampleListModel(title: "SwiftUI Screen") { [weak self] in
+                self?.showLandmarkScreen()
             },
-            MoreExampleListModel(title: "Chain Stack Modification") { [unowned self] in
-                self.showChainStackModification()
+            MoreExampleListModel(title: "Chain Stack Modification") { [weak self] in
+                self?.showChainStackModification()
             },
-            MoreExampleListModel(title: "Custom Stack Animation") { [unowned self] in
-                self.showCustomStackAnimation()
+            MoreExampleListModel(title: "Custom Stack Animation") { [weak self] in
+                self?.showCustomStackAnimation()
             }
         ]
     }

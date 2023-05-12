@@ -17,10 +17,12 @@ extension DictionaryDecoderTesting {
         jsonDecoder.dataDecodingStrategy = decoder.dataDecodingStrategy.jsonDecodingStrategy
         jsonDecoder.nonConformingFloatDecodingStrategy = decoder.nonConformingFloatDecodingStrategy.jsonDecodingStrategy
 
-        let data = try JSONSerialization.data(withJSONObject: dictionary, options: .fragmentsAllowed)
-        let value = try jsonDecoder.decode(T.self, from: data)
+        let data = try JSONSerialization.data(
+            withJSONObject: dictionary,
+            options: .fragmentsAllowed
+        )
 
-        return value
+        return try jsonDecoder.decode(T.self, from: data)
     }
 
     func assertDecoderSucceeds<Key: Hashable & Decodable, Value: Decodable & FloatingPoint & Equatable>(
@@ -79,9 +81,9 @@ extension DictionaryDecoderTesting {
     }
 }
 
-private extension DictionaryKeyDecodingStrategy {
+extension DictionaryKeyDecodingStrategy {
 
-    var jsonDecodingStrategy: JSONDecoder.KeyDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.KeyDecodingStrategy {
         switch self {
         case .useDefaultKeys:
             return .useDefaultKeys
@@ -92,9 +94,9 @@ private extension DictionaryKeyDecodingStrategy {
     }
 }
 
-private extension DictionaryDateDecodingStrategy {
+extension DictionaryDateDecodingStrategy {
 
-    var jsonDecodingStrategy: JSONDecoder.DateDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.DateDecodingStrategy {
         switch self {
         case .deferredToDate:
             return .deferredToDate
@@ -121,9 +123,9 @@ private extension DictionaryDateDecodingStrategy {
     }
 }
 
-private extension DictionaryDataDecodingStrategy {
+extension DictionaryDataDecodingStrategy {
 
-    var jsonDecodingStrategy: JSONDecoder.DataDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.DataDecodingStrategy {
         switch self {
         case .deferredToData:
             return .deferredToData
@@ -137,9 +139,9 @@ private extension DictionaryDataDecodingStrategy {
     }
 }
 
-private extension DictionaryNonConformingFloatDecodingStrategy {
+extension DictionaryNonConformingFloatDecodingStrategy {
 
-    var jsonDecodingStrategy: JSONDecoder.NonConformingFloatDecodingStrategy {
+    fileprivate var jsonDecodingStrategy: JSONDecoder.NonConformingFloatDecodingStrategy {
         switch self {
         case let .convertFromString(positiveInfinity, negativeInfinity, nan):
             return .convertFromString(

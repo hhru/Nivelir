@@ -5,13 +5,13 @@ internal class NotificationObserver {
     private var token: NSObjectProtocol?
 
     internal let center: NotificationCenter
-    internal let name: NSNotification.Name
+    internal let name: Notification.Name
     internal let queue: OperationQueue?
     internal let handler: ((_ notification: Notification) -> Void)?
 
     internal init(
         center: NotificationCenter = .default,
-        name: NSNotification.Name,
+        name: Notification.Name,
         queue: OperationQueue? = nil,
         handler: ((_ notification: Notification) -> Void)?
     ) {
@@ -26,7 +26,7 @@ internal class NotificationObserver {
     }
 
     deinit {
-        if let token = token {
+        if let token {
             center.removeObserver(token)
         }
     }

@@ -3,8 +3,8 @@ import Foundation
 internal indirect enum URLQueryComponent {
 
     case string(String)
-    case array([Int: URLQueryComponent])
-    case dictionary([String: URLQueryComponent])
+    case array([Int: Self])
+    case dictionary([String: Self])
 
     internal var string: String? {
         switch self {
@@ -16,7 +16,7 @@ internal indirect enum URLQueryComponent {
         }
     }
 
-    internal var array: [Int: URLQueryComponent]? {
+    internal var array: [Int: Self]? {
         switch self {
         case let .array(array):
             return array
@@ -26,7 +26,7 @@ internal indirect enum URLQueryComponent {
         }
     }
 
-    internal var dictionary: [String: URLQueryComponent]? {
+    internal var dictionary: [String: Self]? {
         switch self {
         case let .dictionary(dictionary):
             return dictionary

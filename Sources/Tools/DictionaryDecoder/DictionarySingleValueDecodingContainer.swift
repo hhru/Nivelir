@@ -122,9 +122,9 @@ extension DictionarySingleValueDecodingContainer: Decoder {
     }
 }
 
-private extension DecodingError {
+extension DecodingError {
 
-    static func keyedContainerTypeMismatch(
+    fileprivate static func keyedContainerTypeMismatch(
         at codingPath: [CodingKey],
         component: Any?
     ) -> Self {
@@ -141,7 +141,7 @@ private extension DecodingError {
         return .typeMismatch([String: Any].self, Context(codingPath: codingPath, debugDescription: debugDescription))
     }
 
-    static func unkeyedContainerTypeMismatch(
+    fileprivate static func unkeyedContainerTypeMismatch(
         at codingPath: [CodingKey],
         component: Any?
     ) -> Self {

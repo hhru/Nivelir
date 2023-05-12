@@ -29,7 +29,7 @@ public struct ScreenImpactOccurredAction<Container: ScreenContainer>: ScreenActi
             UIImpactFeedbackGenerator(style: style)
         } ?? UIImpactFeedbackGenerator()
 
-        if #available(iOS 13.0, *), let intensity = intensity {
+        if #available(iOS 13.0, *), let intensity {
             generator.impactOccurred(intensity: intensity)
         } else {
             generator.impactOccurred()

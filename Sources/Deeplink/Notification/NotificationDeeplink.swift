@@ -74,7 +74,7 @@ public protocol NotificationDeeplink: Deeplink, AnyNotificationDeeplink {
 extension NotificationDeeplink where NotificationContext: Nullable {
 
     private static func resolveContext(_ context: Any?) throws -> NotificationContext {
-        guard let context = context else {
+        guard let context else {
             return .none
         }
 

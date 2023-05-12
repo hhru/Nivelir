@@ -87,7 +87,7 @@ internal final class HUDView: UIView {
 
         updateProgress(hud: hud)
 
-        if let animation = animation, window != nil {
+        if let animation, window != nil {
             animation.animateUpdate(
                 body: {
                     self.updateStyle(hud: hud)
@@ -125,7 +125,7 @@ extension HUDView {
 
         view.layoutIfNeeded()
 
-        if let animation = animation {
+        if let animation {
             animation.animateAppearance(of: view, completion: completion)
         } else {
             completion?()
@@ -211,7 +211,7 @@ extension HUDView {
             .compactMap { $0 as? Self }
             .first
 
-        guard let view = view else {
+        guard let view else {
             completion?()
             return
         }
@@ -221,7 +221,7 @@ extension HUDView {
         }
 
         animation.animateDisappearance(of: view) {
-            return hideView(view, completion: completion)
+            hideView(view, completion: completion)
         }
     }
 

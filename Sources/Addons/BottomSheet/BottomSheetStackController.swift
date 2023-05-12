@@ -33,7 +33,7 @@ open class BottomSheetStackController: UINavigationController {
 
         let output = changes()
 
-        if let transitionCoordinator = transitionCoordinator, animated, transitionCoordinator.isAnimated {
+        if let transitionCoordinator, animated, transitionCoordinator.isAnimated {
             transitionCoordinator.animate(
                 alongsideTransition: { _ in },
                 completion: { _ in
