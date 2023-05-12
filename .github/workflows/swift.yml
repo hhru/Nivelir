@@ -26,6 +26,7 @@ jobs:
       TVOS_DESTINATION: OS=16.4,name=Apple TV
       TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
+      SWIFTLINT_VERSION: 0.52.1
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
     steps:
       - uses: actions/checkout@v3
