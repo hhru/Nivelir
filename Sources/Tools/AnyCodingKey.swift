@@ -2,7 +2,7 @@ import Foundation
 
 internal struct AnyCodingKey: CodingKey {
 
-    internal static let `super` = AnyCodingKey("super")
+    internal static let `super` = Self("super")
 
     internal let stringValue: String
     internal let intValue: Int?

@@ -25,9 +25,9 @@ public struct Alert: CustomStringConvertible {
     public var description: String {
         if let description = title ?? message {
             return "Alert(\"\(description)\")"
-        } else {
-            return "Alert"
         }
+
+        return "Alert"
     }
 
     /// Creates an alert representation.

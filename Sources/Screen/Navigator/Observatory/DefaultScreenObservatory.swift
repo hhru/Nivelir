@@ -52,8 +52,8 @@ public final class DefaultScreenObservatory: ScreenObservatory {
         updateObservers(appending: storage)
 
         return ScreenObserverToken { [weak self, weak storage] in
-            if let self = self, let storage = storage {
-                self.updateObservers(removing: storage)
+            if let storage {
+                self?.updateObservers(removing: storage)
             }
         }
     }

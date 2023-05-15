@@ -16,7 +16,7 @@ public struct ScreenFromAction<
         navigator: ScreenNavigator,
         completion: @escaping Completion
     ) {
-        guard let output = output else {
+        guard let output else {
             return completion(.containerNotFound(type: Container.self, for: self))
         }
 

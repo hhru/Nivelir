@@ -8,13 +8,7 @@ public final class ProgressActivityIndicatorView: UIView, ProgressContentView {
         static let size = CGSize(equilateral: 40.0)
     }
 
-    private let activityIndicatorView: UIActivityIndicatorView = {
-        if #available(iOS 13.0, tvOS 13.0, *) {
-            return UIActivityIndicatorView(style: .medium)
-        } else {
-            return UIActivityIndicatorView(style: .whiteLarge)
-        }
-    }()
+    private let activityIndicatorView = UIActivityIndicatorView(style: .medium)
 
     public let content: ProgressActivityIndicator
 

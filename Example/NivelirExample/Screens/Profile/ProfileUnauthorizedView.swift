@@ -61,7 +61,7 @@ final class ProfileUnauthorizedView: UIView {
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(Colors.important, for: .normal)
 
-        loginButton.titleLabel?.font = .systemFont(ofSize: 15.0)
+        loginButton.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .semibold)
 
         loginButton.layer.cornerRadius = 8.0
         loginButton.layer.masksToBounds = true

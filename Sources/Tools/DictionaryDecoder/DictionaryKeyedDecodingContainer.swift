@@ -46,14 +46,12 @@ internal final class DictionaryKeyedDecodingContainer<Key: CodingKey>: Dictionar
     }
 
     private func superDecoder(forAnyKey key: CodingKey) throws -> Decoder {
-        let decoder = DictionarySingleValueDecodingContainer(
+        DictionarySingleValueDecodingContainer(
             component: components[key.stringValue],
             options: options,
             userInfo: userInfo,
             codingPath: codingPath.appending(key)
         )
-
-        return decoder
     }
 }
 
@@ -151,9 +149,9 @@ extension DictionaryKeyedDecodingContainer: KeyedDecodingContainerProtocol {
     }
 }
 
-private extension DecodingError {
+extension DecodingError {
 
-    static func invalidComponent<Key: CodingKey>(
+    fileprivate static func invalidComponent<Key: CodingKey>(
         _ component: Any?,
         forKey key: Key,
         at codingPath: [CodingKey],

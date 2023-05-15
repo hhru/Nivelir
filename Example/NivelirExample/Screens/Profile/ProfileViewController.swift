@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 import Nivelir
 
 final class ProfileViewController: UIViewController, ScreenKeyedContainer {

@@ -485,7 +485,7 @@ final class DictionaryDecoderTests: XCTestCase, DictionaryDecoderTesting {
             }
         }
 
-        let dictionary: [String: Any] = ["baz": [[123], 345, ["qwe"]]]
+        let dictionary = ["baz": [[123], 345, ["qwe"]] as [Any]]
 
         assertDecoderSucceeds(decoding: DecodableStruct.self, from: dictionary)
     }
@@ -514,7 +514,7 @@ final class DictionaryDecoderTests: XCTestCase, DictionaryDecoderTesting {
             }
 
             override func isEqual(_ object: Any?) -> Bool {
-                guard let object = object as? DecodableSubclass else {
+                guard let object = object as? Self else {
                     return false
                 }
 

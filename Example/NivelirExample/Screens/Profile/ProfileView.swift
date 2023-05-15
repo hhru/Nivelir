@@ -94,7 +94,7 @@ final class ProfileView: UIView {
         logoutButton.setTitle("Logout", for: .normal)
         logoutButton.setTitleColor(Colors.important, for: .normal)
 
-        logoutButton.titleLabel?.font = .systemFont(ofSize: 15.0)
+        logoutButton.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .semibold)
 
         logoutButton.layer.cornerRadius = 8.0
         logoutButton.layer.masksToBounds = true

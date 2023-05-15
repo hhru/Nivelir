@@ -32,7 +32,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         actions[index].perform(container: container, navigator: navigator) { result in
             switch result {
             case .success:
-                self.performResolutionActions(
+                performResolutionActions(
                     actions,
                     from: index + 1,
                     container: container,
@@ -103,7 +103,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         completion: @escaping Completion
     ) {
         performEnsureActions(container: container, navigator: navigator) { ensureResult in
-            self.performResultActions(
+            performResultActions(
                 ensureResult: ensureResult,
                 actionResult: actionResult,
                 container: container,
@@ -119,7 +119,7 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         completion: @escaping Completion
     ) {
         action.perform(container: container, navigator: navigator) { result in
-            self.performResolution(
+            performResolution(
                 actionResult: result,
                 container: container,
                 navigator: navigator,

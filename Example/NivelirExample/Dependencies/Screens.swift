@@ -48,7 +48,17 @@ struct Screens {
         ).eraseToAnyScreen()
     }
 
+    func whatsNewScreen() -> AnyModalScreen {
+        WhatsNewScreen(
+            screens: self
+        ).eraseToAnyScreen()
+    }
+
     #if os(iOS)
+    func whatsNewMoreScreen() -> AnyModalScreen {
+        WhatsNewMoreScreen().eraseToAnyScreen()
+    }
+
     func moreExampleListScreen() -> AnyModalScreen {
         MoreExampleListScreen(
             screens: self

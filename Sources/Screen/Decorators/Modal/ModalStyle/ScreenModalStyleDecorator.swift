@@ -34,11 +34,11 @@ public struct ScreenModalStyleDecorator<Container: UIViewController>: ScreenDeco
 
         switch style {
         case let .default(presentationStyle, transitionStyle):
-            if let presentationStyle = presentationStyle {
+            if let presentationStyle {
                 container.modalPresentationStyle = presentationStyle
             }
 
-            if let transitionStyle = transitionStyle {
+            if let transitionStyle {
                 container.modalTransitionStyle = transitionStyle
             }
 

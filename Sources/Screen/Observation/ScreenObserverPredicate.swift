@@ -177,7 +177,7 @@ extension ScreenObserverPredicate {
                 return false
             }
 
-            guard let presentingContainer = presentingContainer else {
+            guard let presentingContainer else {
                 return false
             }
 
@@ -191,7 +191,9 @@ extension ScreenObserverPredicate {
 
             if presentedContainer == container {
                 return true
-            } else if !recursively {
+            }
+
+            if !recursively {
                 return false
             }
 
@@ -222,7 +224,9 @@ extension ScreenObserverPredicate {
 
             if children.contains(container) {
                 return true
-            } else if !recursively {
+            }
+
+            if !recursively {
                 return false
             }
 
@@ -250,13 +254,15 @@ extension ScreenObserverPredicate {
                     return false
                 }
 
-                guard let pushedContainer = pushedContainer else {
+                guard let pushedContainer else {
                     return false
                 }
 
                 if pushedContainer == container {
                     return true
-                } else if !recursively {
+                }
+
+                if !recursively {
                     return false
                 }
 
@@ -305,7 +311,7 @@ extension ScreenObserverPredicate {
         recursively: Bool = true
     ) -> Self {
         Self { [weak pushingContainer] observer, container, iterator in
-            guard var pushingContainer = pushingContainer else {
+            guard var pushingContainer else {
                 return false
             }
 
@@ -325,7 +331,9 @@ extension ScreenObserverPredicate {
 
             if stack[safe: stackNextIndex] == container as? UIViewController {
                 return true
-            } else if !recursively {
+            }
+
+            if !recursively {
                 return false
             }
 

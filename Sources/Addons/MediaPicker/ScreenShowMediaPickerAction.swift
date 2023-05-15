@@ -22,7 +22,7 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
     private func requestPhotosAccess(completion: @escaping (_ authorized: Bool) -> Void) {
         let handler: (PHAuthorizationStatus) -> Void = { _ in
             DispatchQueue.main.async {
-                self.requestPhotosAccessIfNeeded(completion: completion)
+                requestPhotosAccessIfNeeded(completion: completion)
             }
         }
 
@@ -60,7 +60,7 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
     private func requestCameraAccess(completion: @escaping (_ authorized: Bool) -> Void) {
         AVCaptureDevice.requestAccess(for: .video) { _ in
             DispatchQueue.main.async {
-                self.requestCameraAccessIfNeeded(completion: completion)
+                requestCameraAccessIfNeeded(completion: completion)
             }
         }
     }

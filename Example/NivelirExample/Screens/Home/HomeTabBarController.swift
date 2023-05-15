@@ -27,6 +27,31 @@ final class HomeTabBarController: UITabBarController, ScreenKeyedContainer {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private func showWhatsNewIfNeeded() {
+        let bottomSheet = BottomSheet(
+            detents: [.content, .large],
+            preferredCard: BottomSheetCard(
+                backgroundColor: Colors.background,
+                contentInsets: UIEdgeInsets(
+                    top: 12.0,
+                    left: .zero,
+                    bottom: .zero,
+                    right: .zero
+                )
+            ),
+            preferredGrabber: .default,
+            prefferedGrabberForMaximumDetentValue: .default
+        )
+
+        screenNavigator.navigate(from: self) { route in
+            route.present(
+                screens
+                    .whatsNewScreen()
+                    .withBottomSheetStack(bottomSheet)
+            )
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +61,8 @@ final class HomeTabBarController: UITabBarController, ScreenKeyedContainer {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        showWhatsNewIfNeeded()
 
         deeplinkManager.activate(screens: screens)
     }

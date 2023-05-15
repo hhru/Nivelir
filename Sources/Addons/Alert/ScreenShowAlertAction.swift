@@ -73,8 +73,8 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
 
         alertContainer.screenPayload.store(textFieldsManager)
 
-        actions.forEach {
-            alertContainer.addAction($0)
+        actions.forEach { action in
+            alertContainer.addAction(action)
         }
 
         return alertContainer

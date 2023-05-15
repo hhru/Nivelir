@@ -20,7 +20,9 @@ internal final class URLQueryDeserializer {
             .map { index, part in
                 if part.last == .rightSquareBracket {
                     return String(part.dropLast())
-                } else if key.first != .leftSquareBracket, index == .zero {
+                }
+
+                if key.first != .leftSquareBracket, index == .zero {
                     return String(part)
                 }
 
@@ -37,7 +39,7 @@ internal final class URLQueryDeserializer {
         _ value: Substring?,
         path: [String]
     ) throws -> URLQueryComponent? {
-        guard let value = value else {
+        guard let value else {
             return nil
         }
 

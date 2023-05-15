@@ -147,7 +147,7 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
 
     private func handleDeeplinkIfPossible(_ deeplink: DeeplinkStorage?) -> Bool {
-        if let deeplink = deeplink {
+        if let deeplink {
             pendingDeeplink = deeplink
         }
 
@@ -159,7 +159,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         of type: DeeplinkType,
         scope: DeeplinkScope
     ) -> DeeplinkResult? {
-        guard let deeplink = deeplink else {
+        guard let deeplink else {
             return nil
         }
 
@@ -592,7 +592,7 @@ public final class DeeplinkManager: DeeplinkHandler {
             return
         }
 
-        guard let applicationStateSubscription = applicationStateSubscription else {
+        guard let applicationStateSubscription else {
             return
         }
 
