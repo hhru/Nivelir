@@ -160,10 +160,10 @@ internal final class BottomSheetDismissingInteraction: BottomSheetInteraction {
         gestureRecognizer: UIPanGestureRecognizer,
         simultaneousScrollView: UIScrollView?
     ) {
-        let gestureProjectedValue = resolveGestureValue(
+        let gesturePredictedValue = resolveGestureValue(
             presentationController: presentationController,
             simultaneousScrollView: simultaneousScrollView,
-            gestureTranslation: gestureRecognizer.projectedTranslation(
+            gestureTranslation: gestureRecognizer.predictedTranslation(
                 in: nil,
                 decelerationRate: .fast
             )
@@ -173,12 +173,12 @@ internal final class BottomSheetDismissingInteraction: BottomSheetInteraction {
             .detention
             .resolveSmallestDetentValue()
 
-        if gestureProjectedValue > 0.5 * smallestDetentValue {
+        if gesturePredictedValue > 0.5 * smallestDetentValue {
             presentationController.transition.cancel()
 
             presentationController
                 .detention
-                .selectNearestDetent(for: gestureProjectedValue)
+                .selectNearestDetent(for: gesturePredictedValue)
         } else {
             presentationController.transition.finish()
         }

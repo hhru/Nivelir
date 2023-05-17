@@ -3,7 +3,7 @@ import UIKit
 
 extension UIPanGestureRecognizer {
 
-    internal func projectedLocation(
+    internal func predictedLocation(
         in view: UIView?,
         decelerationRate: UIScrollView.DecelerationRate
     ) -> CGPoint {
@@ -27,13 +27,13 @@ extension UIPanGestureRecognizer {
         )
     }
 
-    internal func projectedTranslation(
+    internal func predictedTranslation(
         in view: UIView?,
         decelerationRate: UIScrollView.DecelerationRate
     ) -> CGPoint {
         let location = location(in: view)
 
-        let projectedLocation = projectedLocation(
+        let predictedLocation = predictedLocation(
             in: view,
             decelerationRate: .fast
         )
@@ -41,8 +41,8 @@ extension UIPanGestureRecognizer {
         let translation = translation(in: view)
 
         return CGPoint(
-            x: translation.x + projectedLocation.x - location.x,
-            y: translation.y + projectedLocation.y - location.y
+            x: translation.x + predictedLocation.x - location.x,
+            y: translation.y + predictedLocation.y - location.y
         )
     }
 }
