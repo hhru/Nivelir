@@ -955,7 +955,6 @@
 		C0959154285312AB00729E93 /* ScreenShowSafariAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShowSafariAction.swift; sourceTree = "<group>"; };
 		C09591572853257700729E93 /* InvalidSafariURLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidSafariURLError.swift; sourceTree = "<group>"; };
 		C095915A28532CC900729E93 /* Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
-		C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1523CB8FFC00AC2C3A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0A01A1723CB900900AC2C3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C0A01A1823CB900900AC2C3A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -1280,7 +1279,6 @@
 				C06DFA08276EB08400D751C4 /* Deeplink */,
 				C08F980E25EEB5A60077AE40 /* Screen */,
 				C0A7289E279ACBA1000BFBF9 /* Tools */,
-				C0A01A1423CB8FF300AC2C3A /* .swiftlint.yml */,
 				C057F01223CB8EEB00C2D895 /* Info.plist */,
 				C057F01123CB8EEB00C2D895 /* Nivelir.h */,
 			);
