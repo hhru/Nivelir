@@ -72,7 +72,6 @@ internal final class BottomSheetTransitionView: UIView {
     private func setupContainerView() {
         addSubview(containerView)
 
-        containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.clipsToBounds = false
     }
 
@@ -116,7 +115,6 @@ internal final class BottomSheetTransitionView: UIView {
     private func setupCardShadowView() {
         containerView.addSubview(cardShadowView)
 
-        cardShadowView.translatesAutoresizingMaskIntoConstraints = false
         cardShadowView.isUserInteractionEnabled = false
         cardShadowView.clipsToBounds = false
 
@@ -142,7 +140,6 @@ internal final class BottomSheetTransitionView: UIView {
     private func setupCardView() {
         containerView.addSubview(cardView)
 
-        cardView.translatesAutoresizingMaskIntoConstraints = false
         cardView.clipsToBounds = true
 
         updateCardView()
@@ -194,7 +191,6 @@ internal final class BottomSheetTransitionView: UIView {
     private func setupGrabberView() {
         containerView.addSubview(grabberView)
 
-        grabberView.translatesAutoresizingMaskIntoConstraints = false
         grabberView.isUserInteractionEnabled = false
         grabberView.clipsToBounds = true
 
