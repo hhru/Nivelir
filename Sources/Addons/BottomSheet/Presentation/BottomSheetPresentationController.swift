@@ -431,7 +431,6 @@ internal final class BottomSheetPresentationController: UIPresentationController
     private func setupTransitionView() {
         let transitionView = BottomSheetTransitionView(contentView: contentView)
 
-        transitionView.translatesAutoresizingMaskIntoConstraints = false
         transitionView.clipsToBounds = false
 
         let gestureRecognizer = UIPanGestureRecognizer()
