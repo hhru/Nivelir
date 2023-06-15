@@ -171,7 +171,7 @@ internal final class BottomSheetDismissingInteraction: BottomSheetInteraction {
 
         let smallestDetentValue = presentationController
             .detention
-            .resolveSmallestDetentValue()
+            .resolveSmallestDetentValueIgnoringKeyboard()
 
         if gesturePredictedValue > 0.5 * smallestDetentValue {
             presentationController.transition.cancel()

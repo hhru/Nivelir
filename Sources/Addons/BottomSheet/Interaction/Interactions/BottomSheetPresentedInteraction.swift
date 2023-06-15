@@ -62,7 +62,7 @@ internal final class BottomSheetPresentedInteraction: BottomSheetInteraction {
 
         let smallestDetentValue = presentationController
             .detention
-            .resolveSmallestDetentValue()
+            .resolveSmallestDetentValueIgnoringKeyboard()
 
         if gestureValue < smallestDetentValue - .leastNonzeroMagnitude {
             let smallestDetentDelta = smallestDetentValue - currentDetentValue
@@ -89,7 +89,7 @@ internal final class BottomSheetPresentedInteraction: BottomSheetInteraction {
 
         let smallestDetentValue = presentationController
             .detention
-            .resolveSmallestDetentValue()
+            .resolveSmallestDetentValueIgnoringKeyboard()
 
         let dismissalThreshold = isGestureFinished
             ? smallestDetentValue * 0.5
