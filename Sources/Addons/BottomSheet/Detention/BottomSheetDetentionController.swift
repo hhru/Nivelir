@@ -5,6 +5,7 @@ internal final class BottomSheetDetentionController {
 
     private var cachedDetentValues: [BottomSheetDetentKey: CGFloat?] = [:]
 
+    private var cachedSmallestDetentValueIgnoringKeyboard: CGFloat?
     private var cachedSmallestDetentValue: CGFloat?
     private var cachedLargestDetentValue: CGFloat?
     private var cachedCurrentDetentValue: CGFloat?
@@ -13,6 +14,7 @@ internal final class BottomSheetDetentionController {
 
     internal var keyboardHeight: CGFloat = .zero {
         didSet {
+            cachedSmallestDetentValue = nil
             cachedLargestDetentValue = nil
             cachedCurrentDetentValue = nil
         }
@@ -71,6 +73,20 @@ internal final class BottomSheetDetentionController {
         return resolveDetentValue(detent: detent)
     }
 
+    internal func resolveSmallestDetentValueIgnoringKeyboard() -> CGFloat {
+        if let cachedSmallestDetentValueIgnoringKeyboard {
+            return cachedSmallestDetentValueIgnoringKeyboard
+        }
+
+        let smallestDetentValue = detents
+            .compactMap(resolveDetentValue(detent:))
+            .min() ?? .zero
+
+        cachedSmallestDetentValueIgnoringKeyboard = smallestDetentValue
+
+        return smallestDetentValue
+    }
+
     internal func resolveSmallestDetentValue() -> CGFloat {
         if let cachedSmallestDetentValue {
             return cachedSmallestDetentValue
@@ -78,9 +94,10 @@ internal final class BottomSheetDetentionController {
 
         let smallestDetentValue = detents
             .compactMap(resolveDetentValue(detent:))
-            .min() ?? .zero
+            .min()
+            .map { min($0 + keyboardHeight, maximumDetentValue) } ?? .zero
 
-        self.cachedSmallestDetentValue = smallestDetentValue
+        cachedSmallestDetentValue = smallestDetentValue
 
         return smallestDetentValue
     }
@@ -95,7 +112,7 @@ internal final class BottomSheetDetentionController {
             .max()
             .map { min($0 + keyboardHeight, maximumDetentValue) } ?? .zero
 
-        self.cachedLargestDetentValue = largestDetentValue
+        cachedLargestDetentValue = largestDetentValue
 
         return largestDetentValue
     }
@@ -116,7 +133,7 @@ internal final class BottomSheetDetentionController {
             .map { min($0 + self.keyboardHeight, self.maximumDetentValue) }
             .min() ?? .zero
 
-        self.cachedCurrentDetentValue = currentDetentValue
+        cachedCurrentDetentValue = currentDetentValue
 
         return currentDetentValue
     }
@@ -159,6 +176,7 @@ internal final class BottomSheetDetentionController {
     internal func invalidateDetents() {
         cachedDetentValues = [:]
 
+        cachedSmallestDetentValueIgnoringKeyboard = nil
         cachedSmallestDetentValue = nil
         cachedLargestDetentValue = nil
         cachedCurrentDetentValue = nil
