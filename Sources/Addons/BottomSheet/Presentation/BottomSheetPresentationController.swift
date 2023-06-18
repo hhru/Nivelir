@@ -305,9 +305,15 @@ internal final class BottomSheetPresentationController: UIPresentationController
     }
 
     @objc private func onDimmingViewTapGesture() {
-        if delegate?.presentationControllerShouldDismiss?(self) ?? true {
-            presentingViewController.dismiss(animated: true)
+        guard state == .presented else {
+            return
         }
+
+        guard delegate?.presentationControllerShouldDismiss?(self) ?? true else {
+            return
+        }
+
+        dismissPresentedViewController()
     }
 
     @objc private func onTransitionViewPanGesture(recognizer: UIPanGestureRecognizer) {
@@ -474,6 +480,16 @@ internal final class BottomSheetPresentationController: UIPresentationController
         animator.startAnimation()
     }
 
+    internal func dismissPresentedViewController() {
+        delegate?.presentationControllerWillDismiss?(self)
+
+        presentingViewController.dismiss(animated: true) {
+            if self.state == .dismissed {
+                self.delegate?.presentationControllerDidDismiss?(self)
+            }
+        }
+    }
+
     internal override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
 
@@ -506,8 +522,6 @@ internal final class BottomSheetPresentationController: UIPresentationController
     internal override func dismissalTransitionWillBegin() {
         super.dismissalTransitionWillBegin()
 
-        delegate?.presentationControllerWillDismiss?(self)
-
         animateChangesAlongsideTransition {
             self.dimmingView?.alpha = .zero
         }
@@ -521,8 +535,6 @@ internal final class BottomSheetPresentationController: UIPresentationController
         transition.wantsInteractiveStart = false
 
         if completed {
-            delegate?.presentationControllerDidDismiss?(self)
-
             dimmingView?.removeFromSuperview()
             transitionView?.removeFromSuperview()
 
