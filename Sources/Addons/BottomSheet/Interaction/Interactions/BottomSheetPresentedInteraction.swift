@@ -111,9 +111,7 @@ internal final class BottomSheetPresentedInteraction: BottomSheetInteraction {
             .transition
             .wantsInteractiveStart = !isGestureFinished
 
-        presentationController
-            .presentingViewController
-            .dismiss(animated: true)
+        presentationController.dismissPresentedViewController()
     }
 
     internal func start(
