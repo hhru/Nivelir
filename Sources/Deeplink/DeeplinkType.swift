@@ -9,6 +9,9 @@ public enum DeeplinkType {
     /// A ``Deeplink`` handled from a Notification.
     case notification
 
+    /// A ``Deeplink`` handled from a PushKit.
+    case push
+
     /// A ``Deeplink`` handled from a Shortcut.
     case shortcut
 }

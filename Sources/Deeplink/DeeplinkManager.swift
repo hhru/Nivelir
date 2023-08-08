@@ -5,6 +5,10 @@ import UIKit
 import UserNotifications
 #endif
 
+#if canImport(PushKit)
+import PushKit
+#endif
+
 /// The `DeeplinkManager` keeps track of the opening of ``Deeplink``.
 ///
 /// The manager is the entry point when working with ``Deeplink``.
@@ -329,6 +333,59 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
     #endif
 
+    #if canImport(PushKit) && os(iOS)
+    private func makePushDeeplinkIfPossible(
+        of deeplinkType: AnyPushDeeplink.Type,
+        payload: PKPushPayload,
+        context: Any?,
+        scope: DeeplinkScope
+    ) -> DeeplinkResult? {
+        do {
+            let dictionaryPayloadOptions = try deeplinkType.pushDictionaryPayloadOptions(context: context)
+
+            let dictionaryPayloadDecoder = DictionaryDecoder(
+                dateDecodingStrategy: dictionaryPayloadOptions.dateDecodingStrategy,
+                dataDecodingStrategy: dictionaryPayloadOptions.dataDecodingStrategy,
+                nonConformingFloatDecodingStrategy: dictionaryPayloadOptions.nonConformingFloatDecodingStrategy,
+                keyDecodingStrategy: dictionaryPayloadOptions.keyDecodingStrategy,
+                userInfo: dictionaryPayloadOptions.userInfo
+            )
+
+            let deeplink = try deeplinkType.push(
+                payload: payload,
+                dictionaryPayloadDecoder: dictionaryPayloadDecoder,
+                context: context
+            )
+
+            return resolveDeeplinkResult(
+                deeplink: deeplink,
+                of: .push,
+                scope: scope
+            )
+        } catch {
+            return resolveDeeplinkResult(error: error)
+        }
+    }
+
+    private func makePushDeeplinkIfPossible(
+        payload: PKPushPayload,
+        context: Any?
+    ) throws -> DeeplinkStorage? {
+        try makeDeeplinkIfPossible(of: AnyPushDeeplink.self) { scope, index in
+            self.deeplinkTypes[scope]
+                .flatMap { $0[index] as? AnyPushDeeplink.Type }
+                .flatMap { deeplinkType in
+                    self.makePushDeeplinkIfPossible(
+                        of: deeplinkType,
+                        payload: payload,
+                        context: context,
+                        scope: scope
+                    )
+                }
+        }
+    }
+    #endif
+
     #if canImport(UIKit) && os(iOS)
     private func makeShortcutDeeplinkIfPossible(
         of deeplinkType: AnyShortcutDeeplink.Type,
@@ -479,6 +536,54 @@ public final class DeeplinkManager: DeeplinkHandler {
     public func handleNotificationIfPossible(response: UNNotificationResponse, context: Any?) -> Bool {
         do {
             return try handleNotification(response: response, context: context)
+        } catch {
+            navigator.logError(error)
+        }
+
+        return false
+    }
+    #endif
+
+    #if canImport(PushKit) && os(iOS)
+    public func canHandlePush(payload: PKPushPayload, context: Any?) -> Bool {
+        let deeplink = try? makePushDeeplinkIfPossible(
+            payload: payload,
+            context: context
+        )
+
+        return deeplink != nil
+    }
+
+    @discardableResult
+    public func handlePush(payload: PKPushPayload, context: Any?) throws -> Bool {
+        navigator.logInfo(
+            """
+            Handling navigation for notification:
+            \(payload.logDescription ?? "nil")
+            """
+        )
+
+        let deeplink = try makePushDeeplinkIfPossible(
+            payload: payload,
+            context: context
+        )
+
+        return handleDeeplinkIfPossible(deeplink)
+    }
+
+    /// Handle the Push by a suitable ``PushDeeplink`` and perform navigation, if possible.
+    ///
+    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// - Parameters:
+    ///   - payload: An object that contains information about a received PushKit notification.
+    ///   - context: Additional context for checking and creating ``PushDeeplink``.
+    ///   Must match the context type of ``PushDeeplink/PushContext``.
+    /// - Returns: `false` if there is no suitable ``PushDeeplink`` to handle the Push;
+    /// otherwise `true`.
+    @discardableResult
+    public func handlePushIfPossible(payload: PKPushPayload, context: Any?) -> Bool {
+        do {
+            return try handlePush(payload: payload, context: context)
         } catch {
             navigator.logError(error)
         }

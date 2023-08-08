@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		8E41C80628AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
 		8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
+		8E547F752A815E1D008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E547F742A815E1D008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift */; };
+		8E547F762A815E20008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E547F742A815E1D008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift */; };
+		8E547F782A820571008B7B22 /* PKPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E547F772A820571008B7B22 /* PKPushPayload.swift */; };
+		8E547F792A820571008B7B22 /* PKPushPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E547F772A820571008B7B22 /* PKPushPayload.swift */; };
+		8EE513E52A80CB18004AF40B /* AnyPushDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513E42A80CB18004AF40B /* AnyPushDeeplink.swift */; };
+		8EE513E62A80CB18004AF40B /* AnyPushDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513E42A80CB18004AF40B /* AnyPushDeeplink.swift */; };
+		8EE513E82A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513E72A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift */; };
+		8EE513E92A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513E72A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift */; };
+		8EE513EB2A80CCF1004AF40B /* PushDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513EA2A80CCF1004AF40B /* PushDeeplink.swift */; };
+		8EE513EC2A80CCF1004AF40B /* PushDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513EA2A80CCF1004AF40B /* PushDeeplink.swift */; };
+		8EE513EE2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513ED2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift */; };
+		8EE513EF2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE513ED2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift */; };
 		C01294B62859B2C80039D06B /* SharingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B52859B2C80039D06B /* SharingActivity.swift */; };
 		C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */; };
 		C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B92859B2EC0039D06B /* SharingCustomItem.swift */; };
@@ -674,6 +686,12 @@
 
 /* Begin PBXFileReference section */
 		8E41C80528AD38B400E3E1B2 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		8E547F742A815E1D008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDeeplinkInvalidDictionaryPayloadError.swift; sourceTree = "<group>"; };
+		8E547F772A820571008B7B22 /* PKPushPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKPushPayload.swift; sourceTree = "<group>"; };
+		8EE513E42A80CB18004AF40B /* AnyPushDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPushDeeplink.swift; sourceTree = "<group>"; };
+		8EE513E72A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDeeplinkDictionaryPayloadOptions.swift; sourceTree = "<group>"; };
+		8EE513EA2A80CCF1004AF40B /* PushDeeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDeeplink.swift; sourceTree = "<group>"; };
+		8EE513ED2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDeeplinkDictionaryPayloadDecoder.swift; sourceTree = "<group>"; };
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C01294B52859B2C80039D06B /* SharingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivity.swift; sourceTree = "<group>"; };
@@ -1072,6 +1090,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E547F732A815E07008B7B22 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				8E547F742A815E1D008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		8EE513E32A80CAB9004AF40B /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				8E547F732A815E07008B7B22 /* Errors */,
+				8EE513E42A80CB18004AF40B /* AnyPushDeeplink.swift */,
+				8EE513EA2A80CCF1004AF40B /* PushDeeplink.swift */,
+				8EE513ED2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift */,
+				8EE513E72A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
 		C0115CD02810092D0039BA13 /* Observation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1365,6 +1403,7 @@
 				C0238EE627A7DAB100148E91 /* Errors */,
 				C0959140285256CE00729E93 /* Extensions */,
 				C06DFA16276EBF8700D751C4 /* Notification */,
+				8EE513E32A80CAB9004AF40B /* Push */,
 				C0A7286927994EF0000BFBF9 /* Shortcut */,
 				C06DFA11276EBB2A00D751C4 /* URL */,
 				C0A728622799487B000BFBF9 /* AnyDeeplink.swift */,
@@ -2109,6 +2148,7 @@
 		C0959140285256CE00729E93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8E547F772A820571008B7B22 /* PKPushPayload.swift */,
 				C0959141285256CE00729E93 /* UIApplicationShortcutItem+Extensions.swift */,
 				C0959142285256CE00729E93 /* UNNotificationResponse+Extensions.swift */,
 			);
@@ -2689,10 +2729,12 @@
 				C0A7286F27996E4A000BFBF9 /* AnyNotificationDeeplink.swift in Sources */,
 				C05849402847766500DE42F0 /* ScreenObserverSharedStorage.swift in Sources */,
 				C0238EF427A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
+				8EE513E82A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift in Sources */,
 				C088603B26B6C60B00CA0A77 /* MediaPickerSourceAccessDeniedError.swift in Sources */,
 				C0885F7426B6BA0100CA0A77 /* ScreenFromAction.swift in Sources */,
 				C089D9552A0B1AC300B6400C /* BottomSheetDismissedInteraction.swift in Sources */,
 				C0D5794D279FD69900084220 /* URLQueryDecodingOptions.swift in Sources */,
+				8E547F752A815E1D008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift in Sources */,
 				C06DFA13276EBB3400D751C4 /* URLDeeplinkQueryDecoder.swift in Sources */,
 				C08FA8EA26BC647A008C274A /* ScreenRoute.swift in Sources */,
 				C06B5816262C610000BE4762 /* AnyScreenBaseBox.swift in Sources */,
@@ -2781,8 +2823,10 @@
 				C078FD572861A1DA0008FC6E /* ProgressImageIndicator.swift in Sources */,
 				C088600B26B6C60B00CA0A77 /* ScreenRequestStoreReviewAction.swift in Sources */,
 				C0E9EF2426BC3094005A20E3 /* ScreenNavigateAction.swift in Sources */,
+				8E547F782A820571008B7B22 /* PKPushPayload.swift in Sources */,
 				C0D5796927A0088000084220 /* URLQueryDataDecodingStrategy.swift in Sources */,
 				C078FDA92861C7E00008FC6E /* Progress+Activity.swift in Sources */,
+				8EE513E52A80CB18004AF40B /* AnyPushDeeplink.swift in Sources */,
 				C0C3427026BC4511007A45E9 /* ScreenWindowRoute.swift in Sources */,
 				C078FD612861A1DA0008FC6E /* Progress.swift in Sources */,
 				C0D5798B27A16D6200084220 /* URLQueryComponentDecoder.swift in Sources */,
@@ -2872,6 +2916,7 @@
 				C0885FB426B6C0A500CA0A77 /* ScreenStackModifier.swift in Sources */,
 				C0D5796F27A05E5600084220 /* URLQueryComponent.swift in Sources */,
 				C052C7B52822D9E100132875 /* ScreenObservation.swift in Sources */,
+				8EE513EB2A80CCF1004AF40B /* PushDeeplink.swift in Sources */,
 				C089D9432A0B1AC300B6400C /* BottomSheetController.swift in Sources */,
 				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
 				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
@@ -2894,6 +2939,7 @@
 				C078FD632861A1DA0008FC6E /* ProgressView.swift in Sources */,
 				C0959155285312AB00729E93 /* ScreenShowSafariAction.swift in Sources */,
 				C0A728BA279AD575000BFBF9 /* DictionaryKeyedDecodingContainer.swift in Sources */,
+				8EE513EE2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2917,6 +2963,7 @@
 				C0866B5B2853A59D00B85C54 /* ScreenGetAction.swift in Sources */,
 				C05F488C26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C088602226B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
+				8E547F792A820571008B7B22 /* PKPushPayload.swift in Sources */,
 				C0238F0527A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */,
 				C0A728C1279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C052C7D12823A94500132875 /* ScreenObserverPredicate.swift in Sources */,
@@ -2960,6 +3007,7 @@
 				C0885F8B26B6BA0100CA0A77 /* ScreenRootTransitionAnimation.swift in Sources */,
 				C089D8F72A0B190000B6400C /* UIPanGestureRecognizer+Extensions.swift in Sources */,
 				C0A7286E27996E48000BFBF9 /* NotificationDeeplink.swift in Sources */,
+				8EE513EC2A80CCF1004AF40B /* PushDeeplink.swift in Sources */,
 				C089D95A2A0B1AC300B6400C /* BottomSheetPresentingInteraction.swift in Sources */,
 				C0238ECD27A40F6C00148E91 /* DictionaryDateDecodingStrategy.swift in Sources */,
 				C05F488E26B68B7F0002DF52 /* AnyScreenActionBox.swift in Sources */,
@@ -2991,10 +3039,12 @@
 				C089D9622A0B1AC300B6400C /* BottomSheetAnimationOptions.swift in Sources */,
 				C0885F7126B6BA0100CA0A77 /* ScreenRefreshableContainer.swift in Sources */,
 				C0270E6025F3EC7200ECC57C /* DefaultScreenLogger.swift in Sources */,
+				8EE513E92A80CCBD004AF40B /* PushDeeplinkDictionaryPayloadOptions.swift in Sources */,
 				C08FA8F226BC68F8008C274A /* ScreenRootRoute.swift in Sources */,
 				C0AADC8425EFB5360087439E /* Collection+Extensions.swift in Sources */,
 				C0A728BE279AD5A2000BFBF9 /* DictionarySingleValueDecodingContainer.swift in Sources */,
 				C0C3427326BC4511007A45E9 /* ScreenStackRoute.swift in Sources */,
+				8EE513EF2A80D19A004AF40B /* PushDeeplinkDictionaryPayloadDecoder.swift in Sources */,
 				C0959152285256E400729E93 /* DeeplinkWarningsError.swift in Sources */,
 				C089D9542A0B1AC300B6400C /* BottomSheetInteraction.swift in Sources */,
 				C0E932E8262B166D0041C564 /* ScreenStackDecorator.swift in Sources */,
@@ -3033,6 +3083,7 @@
 				C089D9402A0B1AC300B6400C /* BottomSheetTransitionView.swift in Sources */,
 				C0E93306262B16B80041C564 /* ScreenModalStyleDecorator.swift in Sources */,
 				C05849412847766500DE42F0 /* ScreenObserverSharedStorage.swift in Sources */,
+				8E547F762A815E20008B7B22 /* PushDeeplinkInvalidDictionaryPayloadError.swift in Sources */,
 				C0238EF527A7E71000148E91 /* DeeplinkDecodingError.swift in Sources */,
 				C015F484265A8466003ECCB0 /* ScreenPayloadedContainer.swift in Sources */,
 				C078FDB32861C8630008FC6E /* Progress+Percentage.swift in Sources */,
@@ -3172,6 +3223,7 @@
 				C0E93300262B16B80041C564 /* ScreenRightBarButtonDecorator.swift in Sources */,
 				C078FD4E2861A1DA0008FC6E /* ProgressPercentageIndicatorView.swift in Sources */,
 				C089D92C2A0B1AC300B6400C /* BottomSheetDetentContext.swift in Sources */,
+				8EE513E62A80CB18004AF40B /* AnyPushDeeplink.swift in Sources */,
 				C058493E2847760E00DE42F0 /* ScreenObserverWeakStorage.swift in Sources */,
 				C078FD762861A1DA0008FC6E /* ProgressHeader.swift in Sources */,
 				C089D8ED2A0B18C800B6400C /* ObjectAssociation.swift in Sources */,
