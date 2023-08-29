@@ -85,13 +85,13 @@ internal final class BottomSheetTransitionView: UIView {
     private func setupCardView() {
         containerView.addSubview(cardView)
 
+        cardView.clipsToBounds = true
+
         updateCardView()
     }
 
     private func setupCardContentView() {
         cardView.addSubview(cardContentView)
-
-        cardContentView.clipsToBounds = true
     }
 
     private func setupContentView() {
