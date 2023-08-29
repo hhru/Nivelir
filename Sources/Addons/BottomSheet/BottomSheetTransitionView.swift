@@ -6,6 +6,7 @@ internal final class BottomSheetTransitionView: UIView {
     private let containerView = UIView()
     private let cardShadowView = UIView()
     private let cardView = UIView()
+    private let cardContentView = UIView()
     private let grabberView = UIView()
 
     internal private(set) weak var contentView: UIView?
@@ -45,6 +46,7 @@ internal final class BottomSheetTransitionView: UIView {
         setupContainerView()
         setupCardShadowView()
         setupCardView()
+        setupCardContentView()
         setupContentView()
         setupGrabberView()
     }
@@ -65,24 +67,52 @@ internal final class BottomSheetTransitionView: UIView {
         ]
     }
 
-    private func layoutContainerView() {
-        containerView.frame = bounds.inset(by: contentInsets)
-    }
-
     private func setupContainerView() {
         addSubview(containerView)
 
         containerView.clipsToBounds = false
     }
 
-    private func updateCardShadowView() {
-        let shadow = card?.shadow ?? .default
+    private func setupCardShadowView() {
+        containerView.addSubview(cardShadowView)
 
-        cardShadowView.layer.shadowOffset = shadow.offset
-        cardShadowView.layer.shadowRadius = shadow.radius
-        cardShadowView.layer.shadowColor = shadow.color?.cgColor
-        cardShadowView.layer.shadowOpacity = shadow.opacity
-        cardShadowView.layer.shouldRasterize = shadow.shouldRasterize
+        cardShadowView.isUserInteractionEnabled = false
+        cardShadowView.clipsToBounds = false
+
+        updateCardShadowView()
+    }
+
+    private func setupCardView() {
+        containerView.addSubview(cardView)
+
+        updateCardView()
+    }
+
+    private func setupCardContentView() {
+        cardView.addSubview(cardContentView)
+
+        cardContentView.clipsToBounds = true
+    }
+
+    private func setupContentView() {
+        guard let contentView else {
+            return
+        }
+
+        cardContentView.addSubview(contentView)
+    }
+
+    private func setupGrabberView() {
+        containerView.addSubview(grabberView)
+
+        grabberView.isUserInteractionEnabled = false
+        grabberView.clipsToBounds = true
+
+        updateGrabberView()
+    }
+
+    private func layoutContainerView() {
+        containerView.frame = bounds.inset(by: contentInsets)
     }
 
     private func layoutCardShadowView() {
@@ -112,37 +142,16 @@ internal final class BottomSheetTransitionView: UIView {
         ).cgPath
     }
 
-    private func setupCardShadowView() {
-        containerView.addSubview(cardShadowView)
-
-        cardShadowView.isUserInteractionEnabled = false
-        cardShadowView.clipsToBounds = false
-
-        updateCardShadowView()
-    }
-
-    private func updateCardView() {
-        cardView.backgroundColor = card?.backgroundColor
-        cardView.layer.cornerRadius = card?.cornerRadius ?? .zero
-
-        let border = card?.border ?? .default
-
-        cardView.layer.borderWidth = border.width
-        cardView.layer.borderColor = border.color?.cgColor
-    }
-
     private func layoutCardView() {
         cardView.frame = cardShadowView.frame
 
         cardView.layer.maskedCorners = resolveCardMaskedCorners()
     }
 
-    private func setupCardView() {
-        containerView.addSubview(cardView)
-
-        cardView.clipsToBounds = true
-
-        updateCardView()
+    private func layoutCardContentView() {
+        cardContentView.frame = cardView
+            .bounds
+            .inset(by: card?.contentInsets ?? .zero)
     }
 
     private func layoutContentView() {
@@ -150,24 +159,7 @@ internal final class BottomSheetTransitionView: UIView {
             return
         }
 
-        contentView.frame = cardView
-            .bounds
-            .inset(by: card?.contentInsets ?? .zero)
-
-        contentView.layoutIfNeeded()
-    }
-
-    private func setupContentView() {
-        guard let contentView else {
-            return
-        }
-
-        cardView.addSubview(contentView)
-    }
-
-    private func updateGrabberView() {
-        grabberView.alpha = grabber == nil ? .zero : 1.0
-        grabberView.backgroundColor = grabber?.color
+        contentView.frame = cardContentView.bounds
     }
 
     private func layoutGrabberView() {
@@ -188,13 +180,29 @@ internal final class BottomSheetTransitionView: UIView {
         grabberView.layer.cornerRadius = 0.5 * min(size.width, size.height)
     }
 
-    private func setupGrabberView() {
-        containerView.addSubview(grabberView)
+    private func updateCardShadowView() {
+        let shadow = card?.shadow ?? .default
 
-        grabberView.isUserInteractionEnabled = false
-        grabberView.clipsToBounds = true
+        cardShadowView.layer.shadowOffset = shadow.offset
+        cardShadowView.layer.shadowRadius = shadow.radius
+        cardShadowView.layer.shadowColor = shadow.color?.cgColor
+        cardShadowView.layer.shadowOpacity = shadow.opacity
+        cardShadowView.layer.shouldRasterize = shadow.shouldRasterize
+    }
 
-        updateGrabberView()
+    private func updateCardView() {
+        cardView.backgroundColor = card?.backgroundColor
+        cardView.layer.cornerRadius = card?.cornerRadius ?? .zero
+
+        let border = card?.border ?? .default
+
+        cardView.layer.borderWidth = border.width
+        cardView.layer.borderColor = border.color?.cgColor
+    }
+
+    private func updateGrabberView() {
+        grabberView.alpha = grabber == nil ? .zero : 1.0
+        grabberView.backgroundColor = grabber?.color
     }
 
     internal override func layoutSubviews() {
@@ -203,6 +211,7 @@ internal final class BottomSheetTransitionView: UIView {
         layoutContainerView()
         layoutCardShadowView()
         layoutCardView()
+        layoutCardContentView()
         layoutContentView()
         layoutGrabberView()
     }
