@@ -122,7 +122,7 @@ internal final class BottomSheetPresentationController: UIPresentationController
     }
 
     internal override var shouldPresentInFullscreen: Bool {
-        false
+        true
     }
 
     internal override init(
