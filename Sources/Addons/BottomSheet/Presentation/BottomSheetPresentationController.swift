@@ -122,7 +122,7 @@ internal final class BottomSheetPresentationController: UIPresentationController
     }
 
     internal override var shouldPresentInFullscreen: Bool {
-        false
+        true
     }
 
     internal override init(
@@ -208,7 +208,10 @@ internal final class BottomSheetPresentationController: UIPresentationController
 
     private func resolveDimmingViewRatio() -> CGFloat {
         let invisibleHeight = min(transitionView?.contentInsets.bottom ?? .zero, .zero)
-        let visibleHeight = contentView.frame.height + invisibleHeight
+
+        let visibleHeight = contentView.frame.height
+            - contentView.safeAreaInsets.bottom
+            + invisibleHeight
 
         let largestUndimmedHeight = preferredDimming
             .largestUndimmedDetentKey
