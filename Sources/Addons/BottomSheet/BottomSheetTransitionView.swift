@@ -112,6 +112,12 @@ internal final class BottomSheetTransitionView: UIView {
     }
 
     private func layoutContainerView() {
+        let frame = bounds.inset(by: contentInsets)
+
+        guard containerView.frame != frame else {
+            return
+        }
+
         containerView.frame = bounds.inset(by: contentInsets)
     }
 
@@ -126,6 +132,10 @@ internal final class BottomSheetTransitionView: UIView {
             width: containerView.bounds.width,
             height: containerView.bounds.height - topInset
         )
+
+        guard cardShadowView.frame != frame else {
+            return
+        }
 
         cardShadowView.frame = frame
 
@@ -143,19 +153,32 @@ internal final class BottomSheetTransitionView: UIView {
     }
 
     private func layoutCardView() {
-        cardView.frame = cardShadowView.frame
+        guard cardView.frame != cardShadowView.frame else {
+            return
+        }
 
+        cardView.frame = cardShadowView.frame
         cardView.layer.maskedCorners = resolveCardMaskedCorners()
     }
 
     private func layoutCardContentView() {
-        cardContentView.frame = cardView
+        let frame = cardView
             .bounds
             .inset(by: card?.contentInsets ?? .zero)
+
+        guard cardContentView.frame != frame else {
+            return
+        }
+
+        cardContentView.frame = frame
     }
 
     private func layoutContentView() {
         guard let contentView else {
+            return
+        }
+
+        guard contentView.frame != cardContentView.bounds else {
             return
         }
 
@@ -170,13 +193,18 @@ internal final class BottomSheetTransitionView: UIView {
         let size = grabber.size
         let inset = grabber.inset
 
-        grabberView.frame = CGRect(
+        let frame = CGRect(
             x: containerView.bounds.midX - size.width * 0.5,
             y: cardView.frame.minY + inset,
             width: size.width,
             height: size.height
         )
 
+        guard grabberView.frame != frame else {
+            return
+        }
+
+        grabberView.frame = frame
         grabberView.layer.cornerRadius = 0.5 * min(size.width, size.height)
     }
 
