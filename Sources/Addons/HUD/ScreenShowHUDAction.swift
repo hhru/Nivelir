@@ -31,7 +31,7 @@ public struct ScreenShowHUDAction<Container: ScreenContainer>: ScreenAction {
             return completion(.containerNotFound(type: UIWindow.self, for: self))
         }
 
-        HUD.show(hud, in: window, animation: animation, duration: duration) {
+        HUD.show(hud, in: container, animation: animation, duration: duration) {
             completion(.success)
         }
     }

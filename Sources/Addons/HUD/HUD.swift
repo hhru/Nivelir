@@ -54,11 +54,15 @@ extension HUD {
     ///   If the `animation` is `nil`, the closure will be called immediately after the showing.
     public static func show(
         _ hud: HUD,
-        in window: UIWindow,
+        in container: UIViewController,
         animation: HUDAnimation? = .default,
         duration: TimeInterval? = nil,
         completion: (() -> Void)? = nil
     ) {
+        guard let window = container.view.window else {
+            return completion(.failure(ScreenContainerNotFoundError(type: UIWindow, for: self)))
+        }
+
         HUDView.showHUD(
             hud,
             in: window,

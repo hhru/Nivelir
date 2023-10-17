@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8E41C80628AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
 		8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
+		C0125D9F2ADE949000FE9063 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0125D9E2ADE949000FE9063 /* SnackBar.swift */; };
+		C0125DA22ADE949D00FE9063 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0125DA12ADE949D00FE9063 /* SnackBarView.swift */; };
+		C0125DA42ADE94A900FE9063 /* SnackBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0125DA32ADE94A900FE9063 /* SnackBarContent.swift */; };
+		C0125DA62ADE94C900FE9063 /* SnackBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0125DA52ADE94C900FE9063 /* SnackBarContentView.swift */; };
+		C0125DA82ADE952600FE9063 /* AnySnackBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0125DA72ADE952600FE9063 /* AnySnackBarContent.swift */; };
 		C01294B62859B2C80039D06B /* SharingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B52859B2C80039D06B /* SharingActivity.swift */; };
 		C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */; };
 		C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B92859B2EC0039D06B /* SharingCustomItem.swift */; };
@@ -676,6 +681,11 @@
 		8E41C80528AD38B400E3E1B2 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C0125D9E2ADE949000FE9063 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
+		C0125DA12ADE949D00FE9063 /* SnackBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
+		C0125DA32ADE94A900FE9063 /* SnackBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarContent.swift; sourceTree = "<group>"; };
+		C0125DA52ADE94C900FE9063 /* SnackBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarContentView.swift; sourceTree = "<group>"; };
+		C0125DA72ADE952600FE9063 /* AnySnackBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySnackBarContent.swift; sourceTree = "<group>"; };
 		C01294B52859B2C80039D06B /* SharingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivity.swift; sourceTree = "<group>"; };
 		C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingCustomActivity.swift; sourceTree = "<group>"; };
 		C01294B92859B2EC0039D06B /* SharingCustomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingCustomItem.swift; sourceTree = "<group>"; };
@@ -1082,6 +1092,26 @@
 				C058492C2846761D00DE42F0 /* ScreenObserverToken.swift */,
 			);
 			path = Observation;
+			sourceTree = "<group>";
+		};
+		C0125D9D2ADE948500FE9063 /* SnackBar */ = {
+			isa = PBXGroup;
+			children = (
+				C0125DA02ADE949200FE9063 /* Content */,
+				C0125D9E2ADE949000FE9063 /* SnackBar.swift */,
+				C0125DA12ADE949D00FE9063 /* SnackBarView.swift */,
+			);
+			path = SnackBar;
+			sourceTree = "<group>";
+		};
+		C0125DA02ADE949200FE9063 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				C0125DA72ADE952600FE9063 /* AnySnackBarContent.swift */,
+				C0125DA32ADE94A900FE9063 /* SnackBarContent.swift */,
+				C0125DA52ADE94C900FE9063 /* SnackBarContentView.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		C01294B42859B2BD0039D06B /* Sharing */ = {
@@ -1789,6 +1819,7 @@
 		C0885FC626B6C60B00CA0A77 /* Addons */ = {
 			isa = PBXGroup;
 			children = (
+				C0125D9D2ADE948500FE9063 /* SnackBar */,
 				C0885FC726B6C60B00CA0A77 /* ActionSheet */,
 				C0885FCB26B6C60B00CA0A77 /* Alert */,
 				C089D8FA2A0B1AC300B6400C /* BottomSheet */,
@@ -2582,6 +2613,7 @@
 				C088600D26B6C60B00CA0A77 /* UIDocumentInteractionController+ScreenPayloadContainer.swift in Sources */,
 				C0A728A1279ACBEC000BFBF9 /* AnyCodingKey.swift in Sources */,
 				C0885FC226B6C0A500CA0A77 /* ScreenStackVisibleAction.swift in Sources */,
+				C0125DA82ADE952600FE9063 /* AnySnackBarContent.swift in Sources */,
 				C0C3426426BC4511007A45E9 /* ScreenThenable.swift in Sources */,
 				C078FD812861A1DA0008FC6E /* HUD.swift in Sources */,
 				C05E19B42669A95100255A69 /* ScreenPayloadedContainer+NSObject.swift in Sources */,
@@ -2710,6 +2742,7 @@
 				C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
 				C089D9412A0B1AC300B6400C /* BottomSheetBorder.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
+				C0125D9F2ADE949000FE9063 /* SnackBar.swift in Sources */,
 				C078FD882861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */,
 				C078FDB82861C8AB0008FC6E /* Progress+Success.swift in Sources */,
 				C088600526B6C60B00CA0A77 /* ScreenShowAlertAction.swift in Sources */,
@@ -2717,6 +2750,7 @@
 				C078FD492861A1DA0008FC6E /* ProgressActivityIndicatorView.swift in Sources */,
 				C088603F26B6C60B00CA0A77 /* MediaPickerManager.swift in Sources */,
 				C0164933286428380045C80B /* DeeplinkType.swift in Sources */,
+				C0125DA42ADE94A900FE9063 /* SnackBarContent.swift in Sources */,
 				C06B5824262C625A00BE4762 /* AnyScreen.swift in Sources */,
 				C0F9A47725FD61EB00DAE060 /* ScreenContainerNotFoundError.swift in Sources */,
 				C0C9FE982655E5340074D669 /* ScreenKeyWindowProvider.swift in Sources */,
@@ -2834,6 +2868,7 @@
 				C0A728762799A5BF000BFBF9 /* AnyShortcutDeeplink.swift in Sources */,
 				C078FD552861A1DA0008FC6E /* ProgressSpinnerIndicator.swift in Sources */,
 				C027114C25F6083100ECC57C /* AnyModalScreen.swift in Sources */,
+				C0125DA22ADE949D00FE9063 /* SnackBarView.swift in Sources */,
 				C078FD7F2861A1DA0008FC6E /* HUDCustomAnimation.swift in Sources */,
 				C0A728C3279AD909000BFBF9 /* DictionaryDecoder.swift in Sources */,
 				C0885FBE26B6C0A500CA0A77 /* ScreenStackCustomAnimation.swift in Sources */,
@@ -2874,6 +2909,7 @@
 				C052C7B52822D9E100132875 /* ScreenObservation.swift in Sources */,
 				C089D9432A0B1AC300B6400C /* BottomSheetController.swift in Sources */,
 				C027107125F50F9200ECC57C /* ScreenIterator.swift in Sources */,
+				C0125DA62ADE94C900FE9063 /* SnackBarContentView.swift in Sources */,
 				C027108B25F5120300ECC57C /* ScreenIterationPredicate.swift in Sources */,
 				C089D9662A0B1AF400B6400C /* CACornerMask+Extensions.swift in Sources */,
 				C0885F6E26B6BA0100CA0A77 /* ScreenRefreshAction.swift in Sources */,
