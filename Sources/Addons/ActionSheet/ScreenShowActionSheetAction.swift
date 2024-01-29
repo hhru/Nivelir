@@ -97,7 +97,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
         let alertContainer = makeAlertContainer()
 
         switch UIDevice.current.userInterfaceIdiom {
-        case .pad, .mac:
+        case .pad, .mac, .vision:
             showAlertContainerUsingPopover(
                 alertContainer,
                 from: actionSheet.anchor,

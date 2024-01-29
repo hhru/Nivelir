@@ -109,7 +109,7 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
         let activitiesContainer = makeActivitiesContainer(navigator: navigator)
 
         switch UIDevice.current.userInterfaceIdiom {
-        case .pad, .mac:
+        case .pad, .mac, .vision:
             showActivitiesContainerInPopover(
                 activitiesContainer,
                 on: container,
