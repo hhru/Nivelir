@@ -52,7 +52,7 @@ jobs:
 
   Cocoapods:
     name: Cocoapods
-    runs-on: macOS-latest
+    runs-on: macOS-13
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
@@ -60,12 +60,14 @@ jobs:
         run: |
           gem install bundler
           bundle install --without=documentation
+      - name: Switch Xcode version
+        run: sudo xcode-select --switch /Applications/Xcode_15.2.app
       - name: Linting
         run: bundle exec pod lib lint --skip-tests --allow-warnings
 
   SPM:
     name: Swift Package Manager
-    runs-on: macOS-latest
+    runs-on: macOS-13
     steps:
       - uses: actions/checkout@v3
       - name: Build
