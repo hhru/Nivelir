@@ -17,11 +17,11 @@ public struct BottomSheet {
     public let prefersWidthFollowsPreferredContentSize: Bool
     public let prefersEdgeAttachedInCompactHeight: Bool
 
+    public let rubberBandEffect: BottomSheetRubberBandEffect?
+
     public let changesAnimationOptions: BottomSheetAnimationOptions
     public let presentAnimationOptions: BottomSheetAnimationOptions
     public let dismissAnimationOptions: BottomSheetAnimationOptions
-
-    public let rubberBandEffect: BottomSheetRubberBandEffect?
 
     public let canEndEditing: (() -> Bool)?
     public let shouldDismiss: (() -> Bool)?
@@ -43,10 +43,10 @@ public struct BottomSheet {
         prefersScrollingExpandsHeight: Bool = true,
         prefersWidthFollowsPreferredContentSize: Bool = false,
         prefersEdgeAttachedInCompactHeight: Bool = false,
+        rubberBandEffect: BottomSheetRubberBandEffect? = .default,
         changesAnimationOptions: BottomSheetAnimationOptions = .changes,
         presentAnimationOptions: BottomSheetAnimationOptions = .transition,
         dismissAnimationOptions: BottomSheetAnimationOptions = .transition,
-        rubberBandEffect: BottomSheetRubberBandEffect? = .default,
         canEndEditing: (() -> Bool)? = nil,
         shouldDismiss: (() -> Bool)? = nil,
         didAttemptToDismiss: (() -> Void)? = nil,
@@ -66,11 +66,11 @@ public struct BottomSheet {
         self.prefersWidthFollowsPreferredContentSize = prefersWidthFollowsPreferredContentSize
         self.prefersEdgeAttachedInCompactHeight = prefersEdgeAttachedInCompactHeight
 
+        self.rubberBandEffect = rubberBandEffect
+
         self.changesAnimationOptions = changesAnimationOptions
         self.presentAnimationOptions = presentAnimationOptions
         self.dismissAnimationOptions = dismissAnimationOptions
-
-        self.rubberBandEffect = rubberBandEffect
 
         self.canEndEditing = canEndEditing
         self.shouldDismiss = shouldDismiss
