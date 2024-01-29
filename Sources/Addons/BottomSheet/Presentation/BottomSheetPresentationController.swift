@@ -93,11 +93,16 @@ internal final class BottomSheetPresentationController: UIPresentationController
         }
     }
 
+    internal var rubberBandEffect: BottomSheetRubberBandEffect? = .default {
+        didSet {
+            layoutTransitionSubviews()
+            updateDimmingViewRatio()
+        }
+    }
+
     internal var changesAnimationOptions: BottomSheetAnimationOptions = .changes {
         didSet { transition.completionCurve = changesAnimationOptions.curve }
     }
-
-    internal var rubberBandEffect: BottomSheetRubberBandEffect? = .default
 
     internal var isEdgeAttached: Bool {
         prefersEdgeAttachedInCompactHeight || (traitCollection.verticalSizeClass != .compact)

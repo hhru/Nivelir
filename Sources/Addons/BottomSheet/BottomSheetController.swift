@@ -77,6 +77,10 @@ public class BottomSheetController: NSObject {
         }
     }
 
+    public var rubberBandEffect: BottomSheetRubberBandEffect? {
+        didSet { presentation?.rubberBandEffect = rubberBandEffect }
+    }
+
     public var changesAnimationOptions: BottomSheetAnimationOptions {
         didSet {
             if presentation?.changesAnimationOptions != changesAnimationOptions {
@@ -87,8 +91,6 @@ public class BottomSheetController: NSObject {
 
     public var presentAnimationOptions: BottomSheetAnimationOptions
     public var dismissAnimationOptions: BottomSheetAnimationOptions
-
-    public var rubberBandEffect: BottomSheetRubberBandEffect?
 
     public var canEndEditing: (() -> Bool)?
     public var shouldDismiss: (() -> Bool)?
