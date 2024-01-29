@@ -88,6 +88,8 @@ public class BottomSheetController: NSObject {
     public var presentAnimationOptions: BottomSheetAnimationOptions
     public var dismissAnimationOptions: BottomSheetAnimationOptions
 
+    public var rubberBandEffect: BottomSheetRubberBandEffect?
+
     public var canEndEditing: (() -> Bool)?
     public var shouldDismiss: (() -> Bool)?
 
@@ -114,6 +116,8 @@ public class BottomSheetController: NSObject {
         self.changesAnimationOptions = bottomSheet.changesAnimationOptions
         self.presentAnimationOptions = bottomSheet.presentAnimationOptions
         self.dismissAnimationOptions = bottomSheet.dismissAnimationOptions
+
+        self.rubberBandEffect = bottomSheet.rubberBandEffect
 
         self.canEndEditing = bottomSheet.canEndEditing
         self.shouldDismiss = bottomSheet.shouldDismiss
@@ -192,8 +196,6 @@ extension BottomSheetController: UIViewControllerTransitioningDelegate {
         presentation.delegate = self
         presentation.detention.delegate = self
 
-        presentation.changesAnimationOptions = changesAnimationOptions
-
         presentation.detents = detents
         presentation.selectedDetentKey = selectedDetentKey
 
@@ -205,6 +207,9 @@ extension BottomSheetController: UIViewControllerTransitioningDelegate {
         presentation.prefersScrollingExpandsHeight = prefersScrollingExpandsHeight
         presentation.prefersWidthFollowsPreferredContentSize = prefersWidthFollowsPreferredContentSize
         presentation.prefersEdgeAttachedInCompactHeight = prefersEdgeAttachedInCompactHeight
+
+        presentation.changesAnimationOptions = changesAnimationOptions
+        presentation.rubberBandEffect = rubberBandEffect
 
         self.presentation = presentation
 
