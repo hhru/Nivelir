@@ -11,7 +11,7 @@ public struct Safari: CustomStringConvertible {
     /// The URL to navigate to. The URL must use the http or https scheme.
     public let url: URL
 
-    /// The color to tint the background of the navigation bar and the toolbar.
+    /// The color to tint the background of the navigation bar and th toolbar.
     public let preferredBarTintColor: UIColor?
 
     /// The color to tint the control buttons on the navigation bar and the toolbar.

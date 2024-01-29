@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8E41C80628AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
 		8E41C80728AD38B400E3E1B2 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8E41C80528AD38B400E3E1B2 /* Documentation.docc */; };
+		C002FF202B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002FF1F2B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift */; };
+		C002FF212B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002FF1F2B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift */; };
 		C01294B62859B2C80039D06B /* SharingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B52859B2C80039D06B /* SharingActivity.swift */; };
 		C01294B82859B2DA0039D06B /* SharingCustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */; };
 		C01294BA2859B2EC0039D06B /* SharingCustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01294B92859B2EC0039D06B /* SharingCustomItem.swift */; };
@@ -675,6 +677,7 @@
 /* Begin PBXFileReference section */
 		8E41C80528AD38B400E3E1B2 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		C0007FFA23CBAAA5005F95E0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		C002FF1F2B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetRubberBandEffect.swift; sourceTree = "<group>"; };
 		C010082725EEA6B700A2FF1A /* Nivelir.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Nivelir.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C01294B52859B2C80039D06B /* SharingActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingActivity.swift; sourceTree = "<group>"; };
 		C01294B72859B2DA0039D06B /* SharingCustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingCustomActivity.swift; sourceTree = "<group>"; };
@@ -1957,6 +1960,7 @@
 				C089D9102A0B1AC300B6400C /* BottomSheetCard.swift */,
 				C089D90F2A0B1AC300B6400C /* BottomSheetController.swift */,
 				C089D9092A0B1AC300B6400C /* BottomSheetGrabber.swift */,
+				C002FF1F2B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift */,
 				C089D9112A0B1AC300B6400C /* BottomSheetShadow.swift */,
 				C089D9062A0B1AC300B6400C /* BottomSheetStackController.swift */,
 				C089D90D2A0B1AC300B6400C /* BottomSheetTransitionView.swift */,
@@ -2708,6 +2712,7 @@
 				C078FD5D2861A1DA0008FC6E /* ProgressFailureIndicator.swift in Sources */,
 				C0959148285256CE00729E93 /* UNNotificationResponse+Extensions.swift in Sources */,
 				C0A728EE279EF148000BFBF9 /* Character+Extensions.swift in Sources */,
+				C002FF202B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift in Sources */,
 				C089D9412A0B1AC300B6400C /* BottomSheetBorder.swift in Sources */,
 				C088603726B6C60B00CA0A77 /* UnavailableMediaPickerSourceError.swift in Sources */,
 				C078FD882861AAEC0008FC6E /* ScreenHideHUDAction.swift in Sources */,
@@ -2917,6 +2922,7 @@
 				C0866B5B2853A59D00B85C54 /* ScreenGetAction.swift in Sources */,
 				C05F488C26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
 				C088602226B6C60B00CA0A77 /* InvalidMailParametersError.swift in Sources */,
+				C002FF212B67FE0900D07C8B /* BottomSheetRubberBandEffect.swift in Sources */,
 				C0238F0527A7F77D00148E91 /* ShortcutDeeplinkUserInfoOptions.swift in Sources */,
 				C0A728C1279AD889000BFBF9 /* DictionaryUnkeyedDecodingContainer.swift in Sources */,
 				C052C7D12823A94500132875 /* ScreenObserverPredicate.swift in Sources */,

@@ -14,10 +14,6 @@ internal final class BottomSheetPresentationController: UIPresentationController
         didSet { interaction.handlePresentationState(state) }
     }
 
-    internal var changesAnimationOptions: BottomSheetAnimationOptions = .changes {
-        didSet { transition.completionCurve = changesAnimationOptions.curve }
-    }
-
     internal var detents: [BottomSheetDetent] {
         get { detention.detents }
 
@@ -96,6 +92,12 @@ internal final class BottomSheetPresentationController: UIPresentationController
             updateDimmingViewRatio()
         }
     }
+
+    internal var changesAnimationOptions: BottomSheetAnimationOptions = .changes {
+        didSet { transition.completionCurve = changesAnimationOptions.curve }
+    }
+
+    internal var rubberBandEffect: BottomSheetRubberBandEffect? = .default
 
     internal var isEdgeAttached: Bool {
         prefersEdgeAttachedInCompactHeight || (traitCollection.verticalSizeClass != .compact)

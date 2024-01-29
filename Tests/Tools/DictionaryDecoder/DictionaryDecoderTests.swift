@@ -202,6 +202,23 @@ final class DictionaryDecoderTests: XCTestCase, DictionaryDecoderTesting {
         assertDecoderSucceeds(decoding: DecodableStruct.self, from: dictionary)
     }
 
+    func testThatDecoderSucceedsWhenDecodingStructWithURL() {
+        struct DecodableStruct: Decodable, Equatable {
+            let foobar: URL?
+        }
+
+        let url = URL(string: "https://apple.com")!
+
+        let dictionary = [
+            "foobar": "https://apple.com"
+        ]
+
+        assertDecoderSucceeds(
+            decoding: DecodableStruct(foobar: url),
+            from: dictionary
+        )
+    }
+
     func testThatDecoderSucceedsWhenDecodingStructWithMultipleProperties() {
         struct DecodableStruct: Decodable, Equatable {
             let foo: Bool
@@ -562,7 +579,7 @@ final class DictionaryDecoderTests: XCTestCase, DictionaryDecoderTesting {
     }
 
     func testThatDecoderFailsWhenDecodingInvalidURL() {
-        let dictionary = ["foobar": "invalid url"]
+        let dictionary = ["foobar": "//invalid url"]
 
         assertDecoderFails(decoding: [String: URL].self, from: dictionary) { error in
             switch error {

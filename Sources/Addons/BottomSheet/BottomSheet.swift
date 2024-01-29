@@ -21,6 +21,8 @@ public struct BottomSheet {
     public let presentAnimationOptions: BottomSheetAnimationOptions
     public let dismissAnimationOptions: BottomSheetAnimationOptions
 
+    public let rubberBandEffect: BottomSheetRubberBandEffect?
+
     public let canEndEditing: (() -> Bool)?
     public let shouldDismiss: (() -> Bool)?
 
@@ -44,6 +46,7 @@ public struct BottomSheet {
         changesAnimationOptions: BottomSheetAnimationOptions = .changes,
         presentAnimationOptions: BottomSheetAnimationOptions = .transition,
         dismissAnimationOptions: BottomSheetAnimationOptions = .transition,
+        rubberBandEffect: BottomSheetRubberBandEffect? = .default,
         canEndEditing: (() -> Bool)? = nil,
         shouldDismiss: (() -> Bool)? = nil,
         didAttemptToDismiss: (() -> Void)? = nil,
@@ -66,6 +69,8 @@ public struct BottomSheet {
         self.changesAnimationOptions = changesAnimationOptions
         self.presentAnimationOptions = presentAnimationOptions
         self.dismissAnimationOptions = dismissAnimationOptions
+
+        self.rubberBandEffect = rubberBandEffect
 
         self.canEndEditing = canEndEditing
         self.shouldDismiss = shouldDismiss
