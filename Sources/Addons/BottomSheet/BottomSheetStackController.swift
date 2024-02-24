@@ -14,9 +14,17 @@ open class BottomSheetStackController: UINavigationController {
             .preferredContentSize
             .width + additionalSafeAreaInsets.horizontal
 
+        guard preferredContentWidth != .zero else {
+            return
+        }
+
         let preferredContentHeight = topViewController
             .preferredContentSize
             .height + additionalSafeAreaInsets.vertical
+
+        guard preferredContentHeight != .zero else {
+            return
+        }
 
         let preferredContentSize = CGSize(
             width: preferredContentWidth,
@@ -76,11 +84,11 @@ open class BottomSheetStackController: UINavigationController {
     }
 
     open override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
-        super.preferredContentSizeDidChange(forChildContentContainer: container)
-
-        if !isUpdatingStack {
-            updatePreferredContentSizeIfNeeded()
+        guard !isUpdatingStack else {
+            return
         }
+
+        updatePreferredContentSizeIfNeeded()
     }
 }
 #endif

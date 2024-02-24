@@ -859,7 +859,7 @@ final class URLQueryDecoderTests: XCTestCase, URLQueryDecoderTesting {
     }
 
     func testThatDecoderFailsWhenDecodingInvalidURL() {
-        let url = "invalid url"
+        let url = "//invalid url"
         let query = "foobar=\(url.urlQueryEncoded!)"
 
         assertDecoderFails(decoding: [String: URL].self, from: query) { error in

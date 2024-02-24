@@ -14,10 +14,6 @@ internal final class BottomSheetPresentationController: UIPresentationController
         didSet { interaction.handlePresentationState(state) }
     }
 
-    internal var changesAnimationOptions: BottomSheetAnimationOptions = .changes {
-        didSet { transition.completionCurve = changesAnimationOptions.curve }
-    }
-
     internal var detents: [BottomSheetDetent] {
         get { detention.detents }
 
@@ -97,6 +93,17 @@ internal final class BottomSheetPresentationController: UIPresentationController
         }
     }
 
+    internal var rubberBandEffect: BottomSheetRubberBandEffect? = .default {
+        didSet {
+            layoutTransitionSubviews()
+            updateDimmingViewRatio()
+        }
+    }
+
+    internal var changesAnimationOptions: BottomSheetAnimationOptions = .changes {
+        didSet { transition.completionCurve = changesAnimationOptions.curve }
+    }
+
     internal var isEdgeAttached: Bool {
         prefersEdgeAttachedInCompactHeight || (traitCollection.verticalSizeClass != .compact)
     }
@@ -122,7 +129,7 @@ internal final class BottomSheetPresentationController: UIPresentationController
     }
 
     internal override var shouldPresentInFullscreen: Bool {
-        false
+        true
     }
 
     internal override init(
@@ -208,7 +215,10 @@ internal final class BottomSheetPresentationController: UIPresentationController
 
     private func resolveDimmingViewRatio() -> CGFloat {
         let invisibleHeight = min(transitionView?.contentInsets.bottom ?? .zero, .zero)
-        let visibleHeight = contentView.frame.height + invisibleHeight
+
+        let visibleHeight = contentView.frame.height
+            - contentView.safeAreaInsets.bottom
+            + invisibleHeight
 
         let largestUndimmedHeight = preferredDimming
             .largestUndimmedDetentKey

@@ -43,9 +43,13 @@ internal final class BottomSheetPresentingInteraction: BottomSheetInteraction {
 
         if gestureValue > largestDetentValue + .leastNonzeroMagnitude {
             let largestDetentDelta = largestDetentValue - currentDetentValue
-            let largestDetentExcess = gestureValue - largestDetentValue
 
-            return largestDetentDelta + 2.0 * largestDetentExcess.squareRoot()
+            let rubberBandEffect = presentationController.rubberBandEffect?(
+                value: gestureValue,
+                limit: largestDetentValue
+            ) ?? .zero
+
+            return largestDetentDelta + rubberBandEffect
         }
 
         return gestureValue - currentDetentValue

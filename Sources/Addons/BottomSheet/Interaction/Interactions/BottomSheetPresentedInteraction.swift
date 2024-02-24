@@ -53,11 +53,17 @@ internal final class BottomSheetPresentedInteraction: BottomSheetInteraction {
 
         if gestureValue > largestDetentValue + .leastNonzeroMagnitude {
             let largestDetentDelta = largestDetentValue - currentDetentValue
-            let largestDetentExcess = gestureValue - largestDetentValue
 
-            return simultaneousScrollView?.canScrollVertically ?? false
-                ? largestDetentDelta
-                : largestDetentDelta + 2.0 * largestDetentExcess.squareRoot()
+            if simultaneousScrollView?.canScrollVertically ?? false {
+                return largestDetentDelta
+            }
+
+            let rubberBandEffect = presentationController.rubberBandEffect?(
+                value: gestureValue,
+                limit: largestDetentValue
+            ) ?? .zero
+
+            return largestDetentDelta + rubberBandEffect
         }
 
         let smallestDetentValue = presentationController
@@ -66,9 +72,13 @@ internal final class BottomSheetPresentedInteraction: BottomSheetInteraction {
 
         if gestureValue < smallestDetentValue - .leastNonzeroMagnitude {
             let smallestDetentDelta = smallestDetentValue - currentDetentValue
-            let smallestDetentExcess = smallestDetentValue - gestureValue
 
-            return smallestDetentDelta - 2.0 * smallestDetentExcess.squareRoot()
+            let rubberBandEffect = presentationController.rubberBandEffect?(
+                value: gestureValue,
+                limit: smallestDetentValue
+            ) ?? .zero
+
+            return smallestDetentDelta - rubberBandEffect
         }
 
         return gestureValue - currentDetentValue

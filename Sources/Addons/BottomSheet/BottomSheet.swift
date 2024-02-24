@@ -17,6 +17,8 @@ public struct BottomSheet {
     public let prefersWidthFollowsPreferredContentSize: Bool
     public let prefersEdgeAttachedInCompactHeight: Bool
 
+    public let rubberBandEffect: BottomSheetRubberBandEffect?
+
     public let changesAnimationOptions: BottomSheetAnimationOptions
     public let presentAnimationOptions: BottomSheetAnimationOptions
     public let dismissAnimationOptions: BottomSheetAnimationOptions
@@ -41,6 +43,7 @@ public struct BottomSheet {
         prefersScrollingExpandsHeight: Bool = true,
         prefersWidthFollowsPreferredContentSize: Bool = false,
         prefersEdgeAttachedInCompactHeight: Bool = false,
+        rubberBandEffect: BottomSheetRubberBandEffect? = .default,
         changesAnimationOptions: BottomSheetAnimationOptions = .changes,
         presentAnimationOptions: BottomSheetAnimationOptions = .transition,
         dismissAnimationOptions: BottomSheetAnimationOptions = .transition,
@@ -62,6 +65,8 @@ public struct BottomSheet {
         self.prefersScrollingExpandsHeight = prefersScrollingExpandsHeight
         self.prefersWidthFollowsPreferredContentSize = prefersWidthFollowsPreferredContentSize
         self.prefersEdgeAttachedInCompactHeight = prefersEdgeAttachedInCompactHeight
+
+        self.rubberBandEffect = rubberBandEffect
 
         self.changesAnimationOptions = changesAnimationOptions
         self.presentAnimationOptions = presentAnimationOptions

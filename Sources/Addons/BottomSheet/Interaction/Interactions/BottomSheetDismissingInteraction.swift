@@ -51,11 +51,17 @@ internal final class BottomSheetDismissingInteraction: BottomSheetInteraction {
 
         if gestureValue > largestDetentValue + .leastNonzeroMagnitude {
             let largestDetentDelta = largestDetentValue - currentDetentValue
-            let largestDetentExcess = gestureValue - largestDetentValue
 
-            return simultaneousScrollView?.canScrollVertically ?? false
-                ? largestDetentDelta
-                : largestDetentDelta + 2.0 * largestDetentExcess.squareRoot()
+            if simultaneousScrollView?.canScrollVertically ?? false {
+                return largestDetentDelta
+            }
+
+            let rubberBandEffect = presentationController.rubberBandEffect?(
+                value: gestureValue,
+                limit: largestDetentValue
+            ) ?? .zero
+
+            return largestDetentDelta + rubberBandEffect
         }
 
         return gestureValue - currentDetentValue
