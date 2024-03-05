@@ -25,6 +25,10 @@ public struct ScreenShowStoreProductAction<Container: UIViewController>: ScreenA
     ) {
         navigator.logInfo("Presenting \(storeProduct) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         guard let storeProductID = Int(storeProduct.itemID).map(NSNumber.init(value:)) else {
             return completion(.invalidStoreProductID(for: self))
         }

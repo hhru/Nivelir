@@ -36,6 +36,10 @@ public struct ScreenPresentAction<
     ) {
         navigator.logInfo("Presenting \(screen) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         let presented = screen.build(navigator: navigator)
 
         container.present(presented, animated: animated) {

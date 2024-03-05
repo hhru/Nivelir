@@ -144,6 +144,10 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
     ) {
         navigator.logInfo("Presenting \(mediaPicker) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         requestAccessIfNeeded { authorized in
             guard authorized else {
                 return completion(.mediaPickerSourceAccessDenied(for: self))
