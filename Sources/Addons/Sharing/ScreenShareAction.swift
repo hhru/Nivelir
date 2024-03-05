@@ -106,6 +106,10 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
     ) {
         navigator.logInfo("Sharing \(sharing.items) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         let activitiesContainer = makeActivitiesContainer(navigator: navigator)
 
         switch UIDevice.current.userInterfaceIdiom {

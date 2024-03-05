@@ -25,6 +25,10 @@ public struct ScreenShowSafariAction<Container: UIViewController>: ScreenAction 
     ) {
         navigator.logInfo("Presenting \(safari) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         guard safari.url.scheme.map({ ["http", "https"].contains($0) }) ?? false else {
             return completion(.invalidSafariURL(for: self))
         }
