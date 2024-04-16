@@ -36,7 +36,7 @@ public struct ScreenPresentAction<
     ) {
         navigator.logInfo("Presenting \(screen) on \(type(of: container))")
 
-        guard container.presented == nil else {
+        guard container.presented?.isBeingDismissed != false else {
             return completion(.containerAlreadyPresenting(container, for: self))
         }
 
