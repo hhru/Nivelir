@@ -36,7 +36,11 @@ public struct ScreenPresentAction<
     ) {
         navigator.logInfo("Presenting \(screen) on \(type(of: container))")
 
-        guard container.presented?.isBeingDismissed != false else {
+        let canPresent = container.presented.map { presented in
+            presented.isBeingDismissed || presented.modalPresentationStyle == .overCurrentContext
+        } ?? true
+
+        guard canPresent else {
             return completion(.containerAlreadyPresenting(container, for: self))
         }
 
