@@ -420,20 +420,27 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     /// Handle the URL by a suitable ``URLDeeplink`` and perform navigation, if possible.
     ///
-    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// This method does not raise an exception. Instead the error is logged through the navigator if needed.
     /// - Parameters:
     ///   - url: A URL Scheme or Universal Link from `UIApplicationDelegate` or `UIWindowSceneDelegate`.
     ///
     ///   - context: Additional context for checking and creating ``URLDeeplink``.
     ///   Must match the context type of ``URLDeeplink/URLContext``.
     ///
+    ///   - shouldLogError: A Boolean flag indicating whether errors should be logged. The default value is `true`.
     /// - Returns: `false` if there is no suitable ``URLDeeplink`` to handle the URL; otherwise `true`.
     @discardableResult
-    public func handleURLIfPossible(_ url: URL, context: Any?) -> Bool {
+    public func handleURLIfPossible(
+        _ url: URL,
+        context: Any?,
+        shouldLogError: Bool = true
+    ) -> Bool {
         do {
             return try handleURL(url, context: context)
         } catch {
-            navigator.logError(error)
+            if shouldLogError {
+                navigator.logError(error)
+            }
         }
 
         return false
@@ -468,19 +475,28 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     /// Handle the Notification by a suitable ``NotificationDeeplink`` and perform navigation, if possible.
     ///
-    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// This method does not raise an exception. Instead the error is logged through the navigator if needed.
     /// - Parameters:
     ///   - response: The user’s response to an actionable notification.
+    ///
     ///   - context: Additional context for checking and creating ``NotificationDeeplink``.
     ///   Must match the context type of ``NotificationDeeplink/NotificationContext``.
+    ///
+    ///   - shouldLogError: A Boolean flag indicating whether errors should be logged. The default value is `true`.
     /// - Returns: `false` if there is no suitable ``NotificationDeeplink`` to handle the Notification;
     /// otherwise `true`.
     @discardableResult
-    public func handleNotificationIfPossible(response: UNNotificationResponse, context: Any?) -> Bool {
+    public func handleNotificationIfPossible(
+        response: UNNotificationResponse,
+        context: Any?,
+        shouldLogError: Bool = true
+    ) -> Bool {
         do {
             return try handleNotification(response: response, context: context)
         } catch {
-            navigator.logError(error)
+            if shouldLogError {
+                navigator.logError(error)
+            }
         }
 
         return false
@@ -516,7 +532,7 @@ public final class DeeplinkManager: DeeplinkHandler {
 
     /// Handle the Notification by a suitable ``NotificationDeeplink`` and perform navigation, if possible.
     ///
-    /// This method does not raise an exception. Instead the error is logged through the navigator.
+    /// This method does not raise an exception. Instead the error is logged through the navigator if needed.
     /// - Parameters:
     ///   - shortcut: An application shortcut item, also called a *Home screen dynamic quick action*,
     ///   that specifies a user-initiated action for your app.
@@ -524,14 +540,22 @@ public final class DeeplinkManager: DeeplinkHandler {
     ///   - context: Additional context for checking and creating ``ShortcutDeeplink``.
     ///   Must match the context type of ``ShortcutDeeplink/ShortcutContext``.
     ///
+    ///   - shouldLogError: A Boolean flag indicating whether errors should be logged. The default value is `true`.
+    ///
     /// - Returns: `false` if there is no suitable ``ShortcutDeeplink`` to handle the Shortcut App;
     /// otherwise `true`.
     @discardableResult
-    public func handleShortcutIfPossible(_ shortcut: UIApplicationShortcutItem, context: Any?) -> Bool {
+    public func handleShortcutIfPossible(
+        _ shortcut: UIApplicationShortcutItem,
+        context: Any?,
+        shouldLogError: Bool = true
+    ) -> Bool {
         do {
             return try handleShortcut(shortcut, context: context)
         } catch {
-            navigator.logError(error)
+            if shouldLogError {
+                navigator.logError(error)
+            }
         }
 
         return false

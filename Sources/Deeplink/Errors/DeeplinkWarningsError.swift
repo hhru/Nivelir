@@ -14,6 +14,10 @@ internal struct DeeplinkWarningsError: DeeplinkError {
         """
     }
 
+    internal var isWarning: Bool {
+        true
+    }
+
     internal let deeplinkType: Any.Type
     internal let warnings: [Error]
 

@@ -49,7 +49,11 @@ public struct ScreenPresentAction<
         }
 
         container.present(presented, animated: animated) {
-            completion(.success(presented))
+            if container.presented === presented {
+                completion(.success(presented))
+            } else {
+                completion(.containerAlreadyPresenting(container, for: self))
+            }
         }
 
         if container.presented !== presented {
