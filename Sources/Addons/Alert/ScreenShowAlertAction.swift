@@ -87,6 +87,10 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
     ) {
         navigator.logInfo("Presenting \(alert) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         let alertContainer = makeAlertContainer()
 
         container.present(alertContainer, animated: animated) {

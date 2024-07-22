@@ -94,6 +94,10 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
     ) {
         navigator.logInfo("Presenting \(actionSheet) on \(type(of: container))")
 
+        guard container.presented == nil else {
+            return completion(.containerAlreadyPresenting(container, for: self))
+        }
+
         let alertContainer = makeAlertContainer()
 
         switch UIDevice.current.userInterfaceIdiom {
