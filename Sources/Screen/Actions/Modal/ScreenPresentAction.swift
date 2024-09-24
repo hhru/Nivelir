@@ -56,8 +56,10 @@ public struct ScreenPresentAction<
             }
         }
 
-        if container.presented !== presented {
-            completion(.containerAlreadyPresenting(container, for: self))
+        DispatchQueue.main.async {
+            if container.presented !== presented {
+                completion(.containerAlreadyPresenting(container, for: self))
+            }
         }
     }
 }
