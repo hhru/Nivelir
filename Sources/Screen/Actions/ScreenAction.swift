@@ -17,6 +17,7 @@ import Foundation
 /// For example, show a screen for authorization,
 /// as a result of which `completion` is called with success if authorization was completed,
 /// or with an error (for example `ScreenCanceledError`) if the user canceled authorization.
+@MainActor
 public protocol ScreenAction {
 
     /// A type of container that the action uses for navigation.

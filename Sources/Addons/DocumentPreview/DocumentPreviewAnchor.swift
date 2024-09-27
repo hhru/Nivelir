@@ -2,6 +2,7 @@
 import UIKit
 
 /// Anchor of the starting point for animating the display of a document preview.
+@MainActor
 public struct DocumentPreviewAnchor {
 
     /// The rectangle to use as the starting point for animating

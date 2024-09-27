@@ -32,9 +32,7 @@ public struct MediaPicker: CustomStringConvertible {
     /// called when the user has selected a still image or movie or has canceled the pick operation.
     public let didFinish: (_ result: MediaPickerResult?) -> Void
 
-    public var description: String {
-        "ImagePicker(from: \"\(source)\")"
-    }
+    public let description: String
 
     /// Creates a configuration for selecting media items.
     /// - Parameters:
@@ -71,6 +69,8 @@ public struct MediaPicker: CustomStringConvertible {
 
         self.didInitialize = didInitialize
         self.didFinish = didFinish
+
+        description = "ImagePicker(from: \"\(source)\")"
     }
 
     /// Creates a configuration for selecting media items.
@@ -103,6 +103,8 @@ public struct MediaPicker: CustomStringConvertible {
 
         self.didInitialize = didInitialize
         self.didFinish = didFinish
+
+        description = "ImagePicker(from: \"\(source)\")"
     }
 }
 #endif

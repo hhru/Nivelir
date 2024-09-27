@@ -148,6 +148,7 @@ public protocol Screen: CustomStringConvertible {
     /// - Returns: Container instance.
     ///
     /// - SeeAlso: `ScreenNavigator`
+    @MainActor
     func build(navigator: ScreenNavigator) -> Container
 
     /// Builds the screen module and returns its container.
@@ -159,6 +160,7 @@ public protocol Screen: CustomStringConvertible {
     ///
     /// - SeeAlso: `ScreenNavigator`
     /// - SeeAlso: `ScreenObservation`
+    @MainActor
     func build(
         navigator: ScreenNavigator,
         observation: ScreenObservation<Observer>
@@ -174,6 +176,7 @@ extension Screen where Self: ScreenContainer, Observer == Never {
 
 extension Screen where Observer == Never {
 
+    @MainActor
     public func build(
         navigator: ScreenNavigator,
         observation: ScreenObservation<Never>
@@ -184,6 +187,7 @@ extension Screen where Observer == Never {
 
 extension Screen {
 
+    @MainActor
     public func build(navigator: ScreenNavigator) -> Container {
         let observation = navigator.observation(of: Observer.self)
 

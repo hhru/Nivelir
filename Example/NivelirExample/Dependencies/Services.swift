@@ -7,12 +7,14 @@ struct Services {
 
     let window: UIWindow
 
+    @MainActor
     func screenNavigator() -> ScreenNavigator {
         container.shared {
             ScreenNavigator(window: window)
         }
     }
 
+    @MainActor
     func deeplinkManager() -> DeeplinkManager {
         container.shared {
             DeeplinkManager(
@@ -30,6 +32,7 @@ struct Services {
         }
     }
 
+    @MainActor
     func profileService() -> ProfileService {
         DefaultProfileService(authorizationService: authorizationService())
     }

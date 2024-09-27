@@ -18,12 +18,11 @@ public struct ScreenModalStyleDecorator<Container: UIViewController>: ScreenDeco
         }
     }
 
-    public var description: String {
-        "ModalStyleDecorator"
-    }
+    public let description: String
 
     public init(style: ScreenModalStyle) {
         self.style = style
+        description = "ModalStyleDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -57,6 +56,7 @@ extension Screen where Container: UIViewController {
     ///
     /// - Parameter style: Type of modal presentation style.
     /// - Returns: New `Screen`, which will be animated with the selected style when presented.
+    @MainActor
     public func withModalStyle(_ style: ScreenModalStyle) -> AnyScreen<Container> {
         decorated(by: ScreenModalStyleDecorator(style: style))
     }
@@ -66,6 +66,7 @@ extension Screen where Container: UIViewController {
     /// - Returns: New `Screen` with the `modalPresentationStyle` property set.
     ///
     /// - SeeAlso: `UIModalPresentationStyle`
+    @MainActor
     public func withModalPresentationStyle(_ style: UIModalPresentationStyle) -> AnyScreen<Container> {
         withModalStyle(.default(presentation: style))
     }
@@ -75,6 +76,7 @@ extension Screen where Container: UIViewController {
     /// - Returns: New `Screen` with the `modalTransitionStyle` property set.
     ///
     /// - SeeAlso: `UIModalTransitionStyle`
+    @MainActor
     public func withModalTransitionStyle(_ style: UIModalTransitionStyle) -> AnyScreen<Container> {
         withModalStyle(.default(transition: style))
     }
@@ -101,6 +103,7 @@ extension Screen where Container: UIViewController {
     /// The lifecycle of the implementation class will correspond to the lifecycle of the screen container.
     ///
     /// - Returns: New `Screen` with the `transitioningDelegate` property set.
+    @MainActor
     public func withModalTransitioningDelegate(
         _ delegate: UIViewControllerTransitioningDelegate
     ) -> AnyScreen<Container> {

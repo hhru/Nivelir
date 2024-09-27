@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 public enum ScreenStackAnimation {
 
     case `default`
@@ -43,7 +44,7 @@ public enum ScreenStackAnimation {
 
 extension ScreenStackAnimation: Equatable {
 
-    public static func == (lhs: Self, rhs: Self) -> Bool {
+    nonisolated public static func == (lhs: Self, rhs: Self) -> Bool {
         switch (lhs, rhs) {
         case (.default, .default):
             return true

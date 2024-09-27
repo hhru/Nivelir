@@ -1,9 +1,8 @@
 #if canImport(UIKit)
 import Foundation
 
-public struct BottomSheet {
-
-    public static let `default` = Self()
+@MainActor
+public struct BottomSheet: Sendable {
 
     public let detents: [BottomSheetDetent]
     public let selectedDetentKey: BottomSheetDetentKey?
@@ -23,18 +22,18 @@ public struct BottomSheet {
     public let presentAnimationOptions: BottomSheetAnimationOptions
     public let dismissAnimationOptions: BottomSheetAnimationOptions
 
-    public let canEndEditing: (() -> Bool)?
-    public let shouldDismiss: (() -> Bool)?
+    public let canEndEditing: (@Sendable () -> Bool)?
+    public let shouldDismiss: (@Sendable () -> Bool)?
 
-    public let didAttemptToDismiss: (() -> Void)?
+    public let didAttemptToDismiss: (@Sendable () -> Void)?
 
-    public let willDismiss: (() -> Void)?
-    public let didDismiss: (() -> Void)?
+    public let willDismiss: (@Sendable () -> Void)?
+    public let didDismiss: (@Sendable () -> Void)?
 
-    public let didChangeSelectedDetentKey: ((_ detentKey: BottomSheetDetentKey?) -> Void)?
+    public let didChangeSelectedDetentKey: (@Sendable(_ detentKey: BottomSheetDetentKey?) -> Void)?
 
     public init(
-        detents: [BottomSheetDetent] = [.large],
+        detents: [BottomSheetDetent]? = nil,
         selectedDetentKey: BottomSheetDetentKey? = nil,
         preferredDimming: BottomSheetDimming = .default,
         preferredCard: BottomSheetCard = .default,
@@ -47,14 +46,14 @@ public struct BottomSheet {
         changesAnimationOptions: BottomSheetAnimationOptions = .changes,
         presentAnimationOptions: BottomSheetAnimationOptions = .transition,
         dismissAnimationOptions: BottomSheetAnimationOptions = .transition,
-        canEndEditing: (() -> Bool)? = nil,
-        shouldDismiss: (() -> Bool)? = nil,
-        didAttemptToDismiss: (() -> Void)? = nil,
-        willDismiss: (() -> Void)? = nil,
-        didDismiss: (() -> Void)? = nil,
-        didChangeSelectedDetentKey: ((_ detentKey: BottomSheetDetentKey?) -> Void)? = nil
+        canEndEditing: (@Sendable () -> Bool)? = nil,
+        shouldDismiss: (@Sendable () -> Bool)? = nil,
+        didAttemptToDismiss: (@Sendable () -> Void)? = nil,
+        willDismiss: (@Sendable () -> Void)? = nil,
+        didDismiss: (@Sendable () -> Void)? = nil,
+        didChangeSelectedDetentKey: (@Sendable (_ detentKey: BottomSheetDetentKey?) -> Void)? = nil
     ) {
-        self.detents = detents
+        self.detents = detents ?? [.large]
         self.selectedDetentKey = selectedDetentKey
 
         self.preferredDimming = preferredDimming

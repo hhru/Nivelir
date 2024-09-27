@@ -23,9 +23,7 @@ public struct ProgressPercentageIndicator: ProgressIndicator {
     /// Additional indents to expand the container.
     public let insets: UIEdgeInsets
 
-    public var logDescription: String? {
-        ".percentage(\(ratio))"
-    }
+    public let logDescription: String?
 
     /// Creates new indicator content.
     /// - Parameters:
@@ -45,8 +43,10 @@ public struct ProgressPercentageIndicator: ProgressIndicator {
         self.ratio = ratio
         self.color = color
         self.insets = insets
+        logDescription = ".percentage(\(ratio))"
     }
 
+    @MainActor
     public func updateContentView(_ contentView: View) -> View {
         contentView.content = self
 

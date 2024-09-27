@@ -17,9 +17,7 @@ public struct StoreProduct: CustomStringConvertible {
     /// Called when the user dismisses the store screen.
     public let didFinish: (() -> Void)?
 
-    public var description: String {
-        "StoreProduct(\(parameters))"
-    }
+    public let description: String
 
     /// Creates a configuration.
     /// - Parameters:
@@ -37,6 +35,7 @@ public struct StoreProduct: CustomStringConvertible {
         self.parameters = parameters
         self.didInitialize = didInitialize
         self.didFinish = didFinish
+        description = "StoreProduct(\(parameters))"
     }
 }
 #endif

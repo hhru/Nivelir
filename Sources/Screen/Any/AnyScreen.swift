@@ -40,9 +40,7 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
         box.traits
     }
 
-    public var description: String {
-        box.description
-    }
+    public let description: String
 
     internal init<Wrapped: Screen>(
         _ wrapped: Wrapped,
@@ -52,11 +50,13 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
         ) -> Container
     ) {
         self.box = AnyScreenBox(wrapped, builder: builder)
+        description = box.description
     }
 
     /// Creates a type-erasing screen to wrap the provided screen.
     ///
     /// - Parameter wrapped: A screen to wrap with a type-eraser.
+    @MainActor
     public init<Wrapped: Screen>(
         _ wrapped: Wrapped
     ) where Wrapped.Container == Container {
@@ -82,6 +82,7 @@ extension Screen {
     /// - Returns: An `AnyScreen` wrapping this screen.
     ///
     /// - SeeAlso: `AnyScreen`
+    @MainActor
     public func eraseToAnyScreen() -> AnyScreen<Container> {
         AnyScreen(self)
     }

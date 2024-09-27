@@ -57,8 +57,8 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
 
             switch result {
             case .success:
-                self.screenNavigator.navigate(
-                    from: self.presenting,
+                screenNavigator.navigate(
+                    from: presenting,
                     to: { route in
                         route
                             .showHUD(.success, duration: 1.0)
@@ -73,7 +73,7 @@ final class AuthorizationViewController: UIViewController, ScreenKeyedContainer 
                 )
 
             case .failure:
-                self.screenNavigator.navigate { route in
+                screenNavigator.navigate { route in
                     route.showHUD(.failure, duration: 1.0)
                 }
             }

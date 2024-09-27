@@ -5,18 +5,7 @@ import Foundation
 /// This error occurs whenever an action fails to find the container.
 public struct ScreenContainerNotFoundError: ScreenError {
 
-    public var description: String {
-        """
-        No container of \(type) type found for:
-          \(trigger)
-        """
-    }
-
-    /// The type of container that could not be found.
-    public let type: Any.Type
-
-    /// The action that caused the error.
-    public let trigger: Any
+    public let description: String
 
     /// Creates an error.
     ///
@@ -24,8 +13,10 @@ public struct ScreenContainerNotFoundError: ScreenError {
     ///   - type: The type of container that could not be found.
     ///   - trigger: The action that caused the error.
     public init(type: Any.Type, for trigger: Any) {
-        self.type = type
-        self.trigger = trigger
+        description = """
+        No container of \(type) type found for:
+          \(trigger)
+        """
     }
 }
 

@@ -1,6 +1,7 @@
 import Foundation
 
 /// A type that iterates and searches through containers of screens with a given predicate.
+@MainActor
 public protocol ScreenIterator {
 
     /// Iterate through containers starting from a given `container` as long as the `predicate` condition holds.

@@ -10,12 +10,11 @@ public struct ScreenTabBarItemDecorator<Container: UIViewController>: ScreenDeco
         nil
     }
 
-    public var description: String {
-        "TabBarItemDecorator"
-    }
+    public let description: String
 
     public init(item: UITabBarItem) {
         self.item = item
+        description = "TabBarItemDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -35,6 +34,7 @@ extension Screen where Container: UIViewController {
     /// Sets the `tabBarItem` property for a container with type `UIViewController`.
     /// - Parameter item: `item` to set.
     /// - Returns: New `Screen` with `UITabBarItem` set to `tabBarItem`.
+    @MainActor
     public func withTabBarItem(_ item: UITabBarItem) -> AnyScreen<Container> {
         decorated(by: ScreenTabBarItemDecorator(item: item))
     }

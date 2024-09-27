@@ -31,9 +31,7 @@ public struct DocumentPreview: CustomStringConvertible {
     /// Called when a document interaction controller’s document has been handed off to the specified application.
     public let didEndSendingToApplication: ((_ bundleID: String?) -> Void)?
 
-    public var description: String {
-        "DocumentPreview(\"\(url)\")"
-    }
+    public let description: String
 
     /// Creates and returns a new `DocumentPreview` object.
     /// - Parameters:
@@ -71,6 +69,8 @@ public struct DocumentPreview: CustomStringConvertible {
 
         self.willBeginSendingToApplication = willBeginSendingToApplication
         self.didEndSendingToApplication = didEndSendingToApplication
+
+        description = "DocumentPreview(\"\(url)\")"
     }
 }
 

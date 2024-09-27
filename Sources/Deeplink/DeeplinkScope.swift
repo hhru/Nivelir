@@ -4,7 +4,7 @@ import Foundation
 ///
 /// The scope allows you to split deep links by activating and deactivating each scope independently.
 /// See ``DeeplinkManager`` for details.
-public struct DeeplinkScope: Hashable, ExpressibleByStringLiteral {
+public struct DeeplinkScope: Hashable, ExpressibleByStringLiteral, Sendable {
 
     /// A unique key for identifying a scope.
     public let key: String?

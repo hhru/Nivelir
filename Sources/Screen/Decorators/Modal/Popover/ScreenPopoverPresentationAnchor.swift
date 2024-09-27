@@ -4,6 +4,7 @@ import UIKit
 /// Anchor to configure the `UIPopoverPresentationController` for the `UIViewController`.
 ///
 /// - SeeAlso: `popoverPresentationController`
+@MainActor
 public struct ScreenPopoverPresentationAnchor {
 
     public let rect: CGRect?

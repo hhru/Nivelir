@@ -7,7 +7,7 @@ import Foundation
 ///
 /// - SeeAlso: `Screen`.
 /// - SeeAlso: `ScreenKeyedContainer`.
-public struct ScreenKey: Hashable, CustomStringConvertible {
+public struct ScreenKey: Hashable, CustomStringConvertible, Sendable {
 
     /// Screen name.
     public let name: String
@@ -15,13 +15,7 @@ public struct ScreenKey: Hashable, CustomStringConvertible {
     /// Screen traits that are used to distinguish screens with the same name.
     public let traits: Set<AnyHashable>
 
-    public var description: String {
-        let traits = self.traits.map { $0.base }
-
-        return traits.isEmpty
-            ? name
-            : "\(name)(\(traits))"
-    }
+    public let description: String
 
     /// Creates a screen key.
     ///
@@ -31,5 +25,9 @@ public struct ScreenKey: Hashable, CustomStringConvertible {
     public init(name: String, traits: Set<AnyHashable> = []) {
         self.name = name
         self.traits = traits
+        let traits = self.traits.map { $0.base }
+        description = traits.isEmpty
+            ? name
+            : "\(name)(\(traits))"
     }
 }

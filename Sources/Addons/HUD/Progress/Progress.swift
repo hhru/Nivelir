@@ -8,6 +8,8 @@ import Foundation
 /// which are configured through the content
 /// by implementing the appropriate protocols ``ProgressHeader``, ``ProgressIndicator`` and ``ProgressFooter``.
 /// Each component is displayed with an animation defined in the ``animation`` property.
+
+@MainActor
 public struct Progress: CustomStringConvertible {
 
     /// Erased type of header content.
@@ -22,20 +24,7 @@ public struct Progress: CustomStringConvertible {
     /// Animation of the appearance of progress components.
     public let animation: ProgressAnimation?
 
-    public var description: String {
-        let fields = [
-            "header": header,
-            "indicator": indicator,
-            "footer": footer
-        ]
-
-        return fields
-            .compactMap { key, value in
-                value.logDescription.map { (key, $0) }
-            }
-            .map { "\($0): \($1)" }
-            .joined(separator: ", ")
-    }
+    public let description: String
 
     /// Creates a new object with progress components and animation.
     /// - Parameters:
@@ -57,6 +46,19 @@ public struct Progress: CustomStringConvertible {
         self.indicator = indicator
         self.footer = footer
         self.animation = animation
+
+        let fields: [String: AnyProgressContent] = [
+            "header": header,
+            "indicator": indicator,
+            "footer": footer
+        ]
+
+        description = fields
+            .compactMap { key, value in
+                value.logDescription.map { (key, $0) }
+            }
+            .map { "\($0): \($1)" }
+            .joined(separator: ", ")
     }
 }
 

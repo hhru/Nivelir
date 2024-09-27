@@ -6,6 +6,7 @@ import Foundation
 ///
 /// - SeeAlso: `ScreenRoute`
 /// - SeeAlso: `ScreenRootRoute`
+@MainActor
 public protocol ScreenRouteConvertible {
 
     /// Returns the root route with the actions of the current instance.

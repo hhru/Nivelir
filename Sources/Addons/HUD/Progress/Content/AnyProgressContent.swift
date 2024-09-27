@@ -4,6 +4,7 @@ import UIKit
 /// Erased protocol type ``ProgressContent``.
 ///
 /// - SeeAlso: ``ProgressContent``
+@MainActor
 public protocol AnyProgressContent {
 
     /// A console log representation of `self`.

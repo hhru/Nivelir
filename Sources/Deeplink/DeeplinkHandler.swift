@@ -13,6 +13,7 @@ import UserNotifications
 /// The handler converts the external source (URL, Push-Notification, Shortcut)
 /// into a suitable ``Deeplink`` to make the navigation.
 /// If no suitable ``Deeplink`` was found, the handler methods will return `false`.
+@MainActor
 public protocol DeeplinkHandler {
 
     /// Returns a Boolean value that indicates whether ``URLDeeplink`` exists to handle the URL.

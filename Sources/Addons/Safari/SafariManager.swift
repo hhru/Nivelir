@@ -2,6 +2,7 @@
 import Foundation
 import SafariServices
 
+@MainActor
 internal final class SafariManager:
     NSObject,
     SFSafariViewControllerDelegate {

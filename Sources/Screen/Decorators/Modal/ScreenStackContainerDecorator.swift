@@ -11,11 +11,11 @@ public struct ScreenStackContainerDecorator<
         nil
     }
 
-    public var description: String {
-        "StackContainerDecorator"
-    }
+    public let description: String
 
-    public init() { }
+    public init() {
+        description = "StackContainerDecorator"
+    }
 
     public func build<Wrapped: Screen>(
         screen: Wrapped,
@@ -30,6 +30,7 @@ extension Screen where Container: UIViewController {
     /// Wraps the screen container in a navigation controller with the specified class type.
     /// - Parameter type: `UINavigationController` class type.
     /// - Returns: New `Screen` with new container of class type `UINavigationController`.
+    @MainActor
     public func withStackContainer<Output: UINavigationController>(
         of type: Output.Type
     ) -> AnyScreen<Output> {
@@ -38,6 +39,7 @@ extension Screen where Container: UIViewController {
 
     /// Wraps the screen container in a navigation controller.
     /// - Returns: New `Screen` with new container of class `UINavigationController`.
+    @MainActor
     public func withStackContainer() -> AnyStackScreen {
         withStackContainer(of: UINavigationController.self)
     }

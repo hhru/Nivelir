@@ -1,6 +1,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
+@MainActor
 internal final class SharingActivityManager<Activity: SharingCustomActivity>: UIActivity {
 
     internal override class var activityCategory: UIActivity.Category {
@@ -33,7 +34,9 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
             self?.activityDidFinish(completed)
         }
 
-        return screen.build(navigator: navigator)
+        return MainActor.assumeIsolated { [navigator] in
+            screen.build(navigator: navigator)
+        }
     }
 
     internal init(
