@@ -56,7 +56,7 @@ final class DefaultProfileService: ProfileService, Sendable {
 
             Task {
                 await MainActor.run {
-                    progress(intervalCount.value * 0.01)
+                    progress(self.intervalCount.value * 0.01)
                 }
             }
 

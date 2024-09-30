@@ -1053,7 +1053,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7VKZYG8P42;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1072,7 +1072,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7VKZYG8P42;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1092,6 +1092,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1100,7 +1101,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.7;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -1112,6 +1113,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NivelirExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1120,7 +1122,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.hh.Nivelir-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.7;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;

@@ -1,8 +1,8 @@
 import UIKit
 
-@MainActor
 protocol ProfileService {
 
+    @MainActor
     func uploadPhoto(
         image: UIImage,
         progress: @MainActor @Sendable @escaping (_ ratio: CGFloat) -> Void,
