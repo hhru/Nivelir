@@ -1,9 +1,9 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-@MainActor
-public protocol SharingSilentActivity: SharingCustomActivity {
+public protocol SharingSilentActivity: SharingCustomActivity, Sendable {
 
+    @MainActor
     func perform(
         for items: [SharingItem],
         navigator: ScreenNavigator,

@@ -1,7 +1,6 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-@MainActor
 public protocol SharingCustomActivity {
 
     static var category: SharingActivityCategory { get }

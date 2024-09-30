@@ -3,7 +3,7 @@ import UIKit
 
 public struct SharingActivity {
 
-    private typealias Body = @MainActor (_ navigator: ScreenNavigator) -> UIActivity
+    private typealias Body = (_ navigator: ScreenNavigator) -> UIActivity
 
     private let body: Body
 
@@ -11,7 +11,6 @@ public struct SharingActivity {
         self.body = body
     }
 
-    @MainActor
     internal func activity(navigator: ScreenNavigator) -> UIActivity {
         body(navigator)
     }
@@ -25,6 +24,7 @@ extension SharingActivity {
         }
     }
 
+    @MainActor
     public static func custom<Value: SharingVisualActivity>(_ value: Value) -> Self {
         Self { navigator in
             SharingActivityManager(
@@ -34,6 +34,7 @@ extension SharingActivity {
         }
     }
 
+    @MainActor
     public static func custom<Value: SharingSilentActivity>(_ value: Value) -> Self {
         Self { navigator in
             SharingActivityManager(
