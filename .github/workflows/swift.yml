@@ -31,6 +31,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
+      - name: List available Xcode versions
+        run: ls /Applications | grep Xcode
       - name: Bundler
         run: |
           gem install bundler
