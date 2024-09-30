@@ -61,7 +61,7 @@ jobs:
           gem install bundler
           bundle install --without=documentation
       - name: Switch Xcode version
-        run: sudo xcode-select --switch /Applications/Xcode_15.2.app
+        run: sudo xcode-select --switch /Applications/Xcode_16.0.app
       - name: Linting
         run: bundle exec pod lib lint --skip-tests --allow-warnings
 
