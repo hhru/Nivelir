@@ -17,13 +17,13 @@ jobs:
     name: Build & Tests
     runs-on: macOS-13
     env:
-      DEVELOPER_DIR: /Applications/Xcode_15.2.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_16.0.app/Contents/Developer
       XCODE_PROJECT: Nivelir.xcodeproj
       IOS_SCHEME: Nivelir iOS
-      IOS_DESTINATION: OS=17.2,name=iPhone 15
+      IOS_DESTINATION: OS=18.0,name=iPhone 16
       IOS_RESULT_PATH: xcodebuild-ios.xcresult
       TVOS_SCHEME: Nivelir tvOS
-      TVOS_DESTINATION: OS=17.2,name=Apple TV
+      TVOS_DESTINATION: OS=18.0,name=Apple TV
       TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
       SWIFTLINT_VERSION: 0.52.2
