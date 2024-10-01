@@ -10,12 +10,11 @@ public struct ScreenRightBarButtonDecorator<Container: UIViewController>: Screen
         nil
     }
 
-    public var description: String {
-        "RightBarButtonDecorator"
-    }
+    public let description: String
 
     public init(item: UIBarButtonItem) {
         self.item = item
+        description = "RightBarButtonDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -38,6 +37,7 @@ extension Screen where Container: UIViewController {
     ///
     /// - SeeAlso: `UINavigationItem`
     /// - SeeAlso: `UIBarButtonItem`
+    @MainActor
     public func withRightBarButton(_ item: UIBarButtonItem) -> AnyScreen<Container> {
         decorated(by: ScreenRightBarButtonDecorator(item: item))
     }
