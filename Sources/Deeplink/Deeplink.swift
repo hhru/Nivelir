@@ -23,6 +23,7 @@ public protocol Deeplink: AnyDeeplink {
     ///   - screens: Screen Factory.
     ///   - navigator: Navigator for performing navigation actions.
     ///   - handler: Handler for processing a new ``Deeplink``
+    @MainActor
     func navigate(
         screens: Screens,
         navigator: ScreenNavigator,
@@ -70,6 +71,7 @@ extension Deeplink {
 
 extension Deeplink {
 
+    @MainActor
     public func navigateIfPossible(
         screens: Any?,
         navigator: ScreenNavigator,

@@ -3,6 +3,7 @@ import Foundation
 /// Erased type of ``Deeplink`` protocol.
 ///
 /// - SeeAlso: ``Deeplink``
+@MainActor
 public protocol AnyDeeplink {
 
     /// The default implementation casts `screens` to the ``Deeplink/Screens`` type
