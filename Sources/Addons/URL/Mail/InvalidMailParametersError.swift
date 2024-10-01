@@ -3,17 +3,13 @@ import Foundation
 
 public struct InvalidMailParametersError: ScreenError {
 
-    public var description: String {
-        """
+    public let description: String
+
+    public init(for trigger: Any) {
+        description = """
         Invalid mail parameters for:
           \(trigger)
         """
-    }
-
-    public let trigger: Any
-
-    public init(for trigger: Any) {
-        self.trigger = trigger
     }
 }
 

@@ -2,16 +2,7 @@ import Foundation
 
 internal struct DeeplinkDecodingError: DeeplinkError {
 
-    internal var description: String {
-        """
-        Failed to decode data for \(trigger) with error:
-          \(underlyingError)
-        """
-    }
-
-    internal let underlyingError: Error
-
-    internal let trigger: Any
+    internal let description: String
 
     internal var isWarning: Bool {
         true
@@ -21,7 +12,9 @@ internal struct DeeplinkDecodingError: DeeplinkError {
         underlyingError: Error,
         trigger: Any
     ) {
-        self.underlyingError = underlyingError
-        self.trigger = trigger
+        description = """
+        Failed to decode data for \(trigger) with error:
+          \(underlyingError)
+        """
     }
 }

@@ -5,21 +5,7 @@ import Foundation
 /// This error occurs whenever an action fails to cast the container to the expected type.
 public struct ScreenContainerTypeMismatchError: ScreenError {
 
-    public var description: String {
-        """
-        The type of the container \(container) does not match the expected type \(type) for:
-          \(trigger)
-        """
-    }
-
-    /// Container that does not match the expected type.
-    public let container: ScreenContainer
-
-    /// Expected container type
-    public let type: Any.Type
-
-    /// The action that caused the error.
-    public let trigger: Any
+    public let description: String
 
     /// Creates an error.
     ///
@@ -28,9 +14,10 @@ public struct ScreenContainerTypeMismatchError: ScreenError {
     ///   - type: Expected container type.
     ///   - trigger: The action that caused the error.
     public init(container: ScreenContainer, type: Any.Type, for trigger: Any) {
-        self.container = container
-        self.type = type
-        self.trigger = trigger
+        description = """
+        The type of the container \(container) does not match the expected type \(type) for:
+          \(trigger)
+        """
     }
 }
 
