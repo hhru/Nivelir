@@ -6,6 +6,7 @@ import UIKit
 /// The HUD is displayed on top of the `UIWindow` with a dimmed background and progress in the center of the screen.
 /// The style and progress of the HUD is fully customizable.
 /// Use the ``progress`` and ``style`` properties for this.
+@MainActor
 public struct HUD: CustomStringConvertible {
 
     /// Creates a HUD with ``HUDStyle/default`` style.
@@ -21,9 +22,7 @@ public struct HUD: CustomStringConvertible {
     /// Configuration the appearance of the HUD.
     public let style: HUDStyle
 
-    public var description: String {
-        "HUD(\(progress))"
-    }
+    public let description: String
 
     /// Creates a HUD with progress and style representations.
     /// - Parameters:
@@ -35,6 +34,7 @@ public struct HUD: CustomStringConvertible {
     ) {
         self.progress = progress
         self.style = style
+        description = "HUD(\(progress))"
     }
 }
 

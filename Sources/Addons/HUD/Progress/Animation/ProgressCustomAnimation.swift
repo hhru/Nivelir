@@ -4,6 +4,7 @@ import UIKit
 /// A type describing the animation of updating progress view of``HUD``.
 ///
 /// See ``ProgressDefaultAnimation`` for example.
+@MainActor
 public protocol ProgressCustomAnimation {
 
     /// Animates updates of parts of the progress view.
