@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct BottomSheetAnimationOptions: Equatable {
+public struct BottomSheetAnimationOptions: Equatable, Sendable {
 
     public static let transition = Self()
     public static let changes = Self(duration: 0.3)

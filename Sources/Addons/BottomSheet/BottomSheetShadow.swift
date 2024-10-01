@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct BottomSheetShadow: Equatable {
+public struct BottomSheetShadow: Equatable, Sendable {
 
     public static let `default` = Self()
 

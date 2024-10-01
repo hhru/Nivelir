@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import Foundation
 
-public struct BottomSheetDetentKey: Hashable, RawRepresentable {
+public struct BottomSheetDetentKey: Hashable, RawRepresentable, Sendable {
 
     public let rawValue: String
 

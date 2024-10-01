@@ -1,9 +1,10 @@
 #if canImport(UIKit)
 import Foundation
 
-public struct BottomSheetDetent {
+@MainActor
+public struct BottomSheetDetent: Sendable {
 
-    public typealias Resolver = (_ context: BottomSheetDetentContext) -> CGFloat?
+    public typealias Resolver = @MainActor @Sendable (_ context: BottomSheetDetentContext) -> CGFloat?
 
     public let key: BottomSheetDetentKey
     public let resolver: Resolver

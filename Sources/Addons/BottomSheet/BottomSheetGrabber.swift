@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct BottomSheetGrabber: Equatable {
+public struct BottomSheetGrabber: Equatable, Sendable {
 
     public static let `default` = Self()
 
