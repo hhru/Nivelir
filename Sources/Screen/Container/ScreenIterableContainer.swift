@@ -10,6 +10,7 @@ import UIKit
 /// This protocol is used to find the specific container in nested containers.
 ///
 /// - SeeAlso: `ScreenContainer`
+@MainActor
 public protocol ScreenIterableContainer: ScreenContainer {
 
     /// Returns the nested containers of a container.

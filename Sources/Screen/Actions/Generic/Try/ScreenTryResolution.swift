@@ -1,5 +1,6 @@
 import Foundation
 
+@MainActor
 public struct ScreenTryResolution<Container: ScreenContainer, Output> {
 
     public typealias DoneAction = (_ value: Output) -> AnyScreenAction<Container, Void>

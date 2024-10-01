@@ -10,6 +10,7 @@ import UIKit
 /// The `UIWindow` and `UIViewController` classes and all their subclasses already implement this protocol
 ///
 /// - SeeAlso: `ScreenContainer`
+@MainActor
 public protocol ScreenVisibleContainer: ScreenContainer {
 
     /// A Boolean value indicating whether the container is visible.
