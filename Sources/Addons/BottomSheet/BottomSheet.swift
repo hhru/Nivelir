@@ -24,15 +24,15 @@ public struct BottomSheet: Sendable {
     public let presentAnimationOptions: BottomSheetAnimationOptions
     public let dismissAnimationOptions: BottomSheetAnimationOptions
 
-    public let canEndEditing: (@Sendable () -> Bool)?
-    public let shouldDismiss: (@Sendable () -> Bool)?
+    public let canEndEditing: (@MainActor @Sendable () -> Bool)?
+    public let shouldDismiss: (@MainActor @Sendable () -> Bool)?
 
-    public let didAttemptToDismiss: (@Sendable () -> Void)?
+    public let didAttemptToDismiss: (@MainActor @Sendable () -> Void)?
 
-    public let willDismiss: (@Sendable () -> Void)?
-    public let didDismiss: (@Sendable () -> Void)?
+    public let willDismiss: (@MainActor @Sendable () -> Void)?
+    public let didDismiss: (@MainActor @Sendable () -> Void)?
 
-    public let didChangeSelectedDetentKey: (@Sendable(_ detentKey: BottomSheetDetentKey?) -> Void)?
+    public let didChangeSelectedDetentKey: (@MainActor @Sendable (_ detentKey: BottomSheetDetentKey?) -> Void)?
 
     public init(
         detents: [BottomSheetDetent]? = nil,
@@ -48,12 +48,12 @@ public struct BottomSheet: Sendable {
         changesAnimationOptions: BottomSheetAnimationOptions = .changes,
         presentAnimationOptions: BottomSheetAnimationOptions = .transition,
         dismissAnimationOptions: BottomSheetAnimationOptions = .transition,
-        canEndEditing: (@Sendable () -> Bool)? = nil,
-        shouldDismiss: (@Sendable () -> Bool)? = nil,
-        didAttemptToDismiss: (@Sendable () -> Void)? = nil,
-        willDismiss: (@Sendable () -> Void)? = nil,
-        didDismiss: (@Sendable () -> Void)? = nil,
-        didChangeSelectedDetentKey: (@Sendable (_ detentKey: BottomSheetDetentKey?) -> Void)? = nil
+        canEndEditing: (@MainActor @Sendable () -> Bool)? = nil,
+        shouldDismiss: (@MainActor @Sendable () -> Bool)? = nil,
+        didAttemptToDismiss: (@MainActor @Sendable () -> Void)? = nil,
+        willDismiss: (@MainActor @Sendable () -> Void)? = nil,
+        didDismiss: (@MainActor @Sendable () -> Void)? = nil,
+        didChangeSelectedDetentKey: (@MainActor @Sendable (_ detentKey: BottomSheetDetentKey?) -> Void)? = nil
     ) {
         self.detents = detents ?? [.large]
         self.selectedDetentKey = selectedDetentKey
