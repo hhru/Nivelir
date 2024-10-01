@@ -1,6 +1,7 @@
 import UIKit
 import Nivelir
 
+@MainActor
 extension Alert {
 
     static let somethingWentWrong = Self(

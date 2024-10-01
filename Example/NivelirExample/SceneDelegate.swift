@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private var services: Services?
     private var screens: Screens?
 
-    private func setupNotifications() {
+    private nonisolated func setupNotifications() {
         #if os(iOS)
         let notificationCenter = UNUserNotificationCenter.current()
 
@@ -148,7 +148,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 #if os(iOS)
-extension SceneDelegate: UNUserNotificationCenterDelegate {
+extension SceneDelegate: @preconcurrency UNUserNotificationCenterDelegate {
 
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,

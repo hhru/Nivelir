@@ -70,6 +70,7 @@ extension SharingActivityType {
 
 extension SharingActivity {
 
+    @MainActor
     static var openInBrowser: Self {
         .custom(SharingOpenInBrowserActivity())
     }
