@@ -10,5 +10,5 @@ public enum DictionaryDataDecodingStrategy {
     case base64
 
     /// The strategy that decodes data using a user-defined function.
-    case custom((_ decoder: Decoder) throws -> Data)
+    case custom(@Sendable (_ decoder: Decoder) throws -> Data)
 }

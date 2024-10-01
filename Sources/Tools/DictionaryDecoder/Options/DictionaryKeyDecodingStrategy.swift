@@ -7,5 +7,5 @@ public enum DictionaryKeyDecodingStrategy {
     case useDefaultKeys
 
     /// A key decoding strategy defined by the closure you supply.
-    case custom((_ codingPath: [CodingKey]) -> CodingKey)
+    case custom(@Sendable (_ codingPath: [CodingKey]) -> CodingKey)
 }

@@ -1,7 +1,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-internal protocol KeyboardHandler: AnyObject {
+internal protocol KeyboardHandler: AnyObject, Sendable {
 
     var keyboardFrame: CGRect { get set }
 
@@ -14,6 +14,7 @@ internal protocol KeyboardHandler: AnyObject {
     var keyboardWillHideNotificationObserver: NotificationObserver? { get set }
     var keyboardDidHideNotificationObserver: NotificationObserver? { get set }
 
+    @MainActor
     func handleKeyboardFrame(
         _ keyboardFrame: CGRect,
         animationDuration: TimeInterval,
@@ -102,12 +103,16 @@ extension KeyboardHandler {
         }
 
         self.keyboardFrame = keyboardFrame
+        let duration = resolveKeyboardAnimationDuration(from: notification)
+        let options = resolveKeyboardAnimationOptions(from: notification)
 
-        handleKeyboardFrame(
-            keyboardFrame,
-            animationDuration: resolveKeyboardAnimationDuration(from: notification),
-            animationOptions: resolveKeyboardAnimationOptions(from: notification)
-        )
+        MainActor.assumeIsolated {
+            handleKeyboardFrame(
+                keyboardFrame,
+                animationDuration: duration,
+                animationOptions: options
+            )
+        }
     }
 
     internal func subscribeToKeyboardNotifications() {
