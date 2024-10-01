@@ -4,6 +4,8 @@ import Foundation
 @MainActor
 public struct BottomSheet: Sendable {
 
+    public static let `default` = Self()
+
     public let detents: [BottomSheetDetent]
     public let selectedDetentKey: BottomSheetDetentKey?
 
