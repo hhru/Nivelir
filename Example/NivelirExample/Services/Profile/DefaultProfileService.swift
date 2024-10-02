@@ -31,10 +31,8 @@ final class DefaultProfileService: ProfileService, Sendable {
             guard intervalCount.value <= 100 else {
                 timer.invalidate()
 
-                Task {
-                    await MainActor.run {
-                        progress(1.0)
-                    }
+                Task { @MainActor in
+                    progress(1.0)
                 }
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -54,10 +52,8 @@ final class DefaultProfileService: ProfileService, Sendable {
                 return
             }
 
-            Task {
-                await MainActor.run {
-                    progress(self.intervalCount.value * 0.01)
-                }
+            Task { @MainActor in
+                progress(self.intervalCount.value * 0.01)
             }
 
             intervalCount.value += 1.0

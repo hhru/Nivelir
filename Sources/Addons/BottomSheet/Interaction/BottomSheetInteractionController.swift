@@ -50,8 +50,8 @@ internal final class BottomSheetInteractionController: NSObject {
         state = .starting
 
         simultaneousScrollObservation = simultaneousScrollView?.observe(\.contentOffset) { [weak self] _, _ in
-            Task {
-                await self?.resetSimultaneousScrollIfNeeded()
+            MainActor.assumeIsolated {
+                self?.resetSimultaneousScrollIfNeeded()
             }
         }
 
