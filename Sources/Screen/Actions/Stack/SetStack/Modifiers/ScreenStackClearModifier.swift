@@ -3,11 +3,11 @@ import UIKit
 
 public struct ScreenStackClearModifier: ScreenStackModifier {
 
-    public var description: String {
-        "Clear"
-    }
+    public let description: String
 
-    public init() { }
+    public init() {
+        description = "Clear"
+    }
 
     public func perform(
         stack: [UIViewController],

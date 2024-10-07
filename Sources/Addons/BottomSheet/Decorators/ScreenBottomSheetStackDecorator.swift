@@ -12,12 +12,11 @@ public struct ScreenBottomSheetStackDecorator<
         nil
     }
 
-    public var description: String {
-        "ScreenBottomSheetStackDecorator"
-    }
+    public let description: String
 
     public init(bottomSheet: BottomSheet) {
         self.bottomSheet = bottomSheet
+        description = "ScreenBottomSheetStackDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -33,6 +32,7 @@ public struct ScreenBottomSheetStackDecorator<
 
 extension Screen where Container: UIViewController {
 
+    @MainActor
     public func withBottomSheetStack<Output: BottomSheetStackController>(
         _ bottomSheet: BottomSheet,
         of type: Output.Type
@@ -40,6 +40,7 @@ extension Screen where Container: UIViewController {
         decorated(by: ScreenBottomSheetStackDecorator<Container, Output>(bottomSheet: bottomSheet))
     }
 
+    @MainActor
     public func withBottomSheetStack(_ bottomSheet: BottomSheet) -> AnyScreen<BottomSheetStackController> {
         withBottomSheetStack(bottomSheet, of: BottomSheetStackController.self)
     }

@@ -4,6 +4,7 @@ import UIKit
 /// A type describing the animation of showing, updating and hiding the ``HUD``.
 ///
 /// See ``HUDDefaultAnimation`` for example.
+@MainActor
 public protocol HUDCustomAnimation {
 
     /// Animates the appearance for the specified `view`.

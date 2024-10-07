@@ -5,12 +5,11 @@ public struct ScreenStackPopModifier: ScreenStackModifier {
 
     public let predicate: ScreenStackPopPredicate
 
-    public var description: String {
-        "Pop \(predicate)"
-    }
+    public let description: String
 
     public init(predicate: ScreenStackPopPredicate) {
         self.predicate = predicate
+        description = "Pop \(predicate)"
     }
 
     public func perform(

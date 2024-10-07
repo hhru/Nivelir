@@ -2,7 +2,7 @@
 import UIKit
 
 /// The style that will be applied to the appearance of the HUD.
-public struct HUDStyle {
+public struct HUDStyle: Sendable {
 
     /// Default style.
     ///

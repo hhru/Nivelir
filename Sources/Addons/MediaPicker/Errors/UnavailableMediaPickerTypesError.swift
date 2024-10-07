@@ -3,17 +3,13 @@ import Foundation
 
 public struct UnavailableMediaPickerTypesError: ScreenError {
 
-    public var description: String {
-        """
+    public let description: String
+
+    public init(for trigger: Any) {
+        description = """
         Media types are not available for:
           \(trigger)
         """
-    }
-
-    public let trigger: Any
-
-    public init(for trigger: Any) {
-        self.trigger = trigger
     }
 }
 

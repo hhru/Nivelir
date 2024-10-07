@@ -11,12 +11,11 @@ public struct ScreenTabsDecorator<Container: UITabBarController>: ScreenDecorato
         nil
     }
 
-    public var description: String {
-        "TabsDecorator"
-    }
+    public let description: String
 
     public init(tabs: [AnyModalScreen], selected: Int = 0) {
         self.tabs = tabs
+        description = "TabsDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -42,6 +41,7 @@ extension Screen where Container: UITabBarController {
     /// with the screen at index 0 representing the left-most tab,
     /// the screen at index 1 the next tab to the right, and so on.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs(_ tabs: [AnyModalScreen]) -> AnyScreen<Container> {
         decorated(by: ScreenTabsDecorator(tabs: tabs))
     }
@@ -53,6 +53,7 @@ extension Screen where Container: UITabBarController {
     /// with the screen at index 0 representing the left-most tab,
     /// the screen at index 1 the next tab to the right, and so on.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs(_ tabs: AnyModalScreen...) -> AnyScreen<Container> {
         withTabs(tabs)
     }
@@ -61,6 +62,7 @@ extension Screen where Container: UITabBarController {
     /// Sets the `viewControllers` property for a container with type `UITabBarController`.
     /// - Parameter screen: The screen to display in the tab bar interface.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs<T: Screen>(
         _ screen: T
     ) -> AnyScreen<Container> where T.Container: UIViewController {
@@ -75,6 +77,7 @@ extension Screen where Container: UITabBarController {
     ///   - screen0: The screen representing the left-most tab.
     ///   - screen1: The screen of the next tab after `screen0`.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs<T0: Screen, T1: Screen>(
         _ screen0: T0,
         _ screen1: T1
@@ -94,6 +97,7 @@ extension Screen where Container: UITabBarController {
     ///   - screen1: The screen of the next tab after `screen0`.
     ///   - screen2: The screen of the next tab after `screen1`.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs<T0: Screen, T1: Screen, T2: Screen>(
         _ screen0: T0,
         _ screen1: T1,
@@ -117,6 +121,7 @@ extension Screen where Container: UITabBarController {
     ///   - screen2: The screen of the next tab after `screen1`.
     ///   - screen3: The screen of the next tab after `screen2`.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs<T0: Screen, T1: Screen, T2: Screen, T3: Screen>(
         _ screen0: T0,
         _ screen1: T1,
@@ -144,6 +149,7 @@ extension Screen where Container: UITabBarController {
     ///   - screen3: The screen of the next tab after `screen2`.
     ///   - screen4: The screen of the next tab after `screen3`.
     /// - Returns: New `Screen` with updated `viewControllers` in container.
+    @MainActor
     public func withTabs<T0: Screen, T1: Screen, T2: Screen, T3: Screen, T4: Screen>(
         _ screen0: T0,
         _ screen1: T1,

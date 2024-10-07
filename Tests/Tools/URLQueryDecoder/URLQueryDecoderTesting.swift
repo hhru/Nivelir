@@ -13,7 +13,7 @@ extension URLQueryDecoderTesting {
         decoding valueType: [Key: Value].Type,
         from query: String,
         expecting expectedValue: [Key: Value],
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
         do {
@@ -34,7 +34,7 @@ extension URLQueryDecoderTesting {
         decoding valueType: T.Type,
         from query: String,
         expecting expectedValue: T,
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
         do {
@@ -49,7 +49,7 @@ extension URLQueryDecoderTesting {
     func assertDecoderFails<T: Decodable>(
         decoding valueType: T.Type,
         from query: String,
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line,
         errorValidation: (_ error: Error) -> Bool
     ) {

@@ -7,12 +7,11 @@ public struct ScreenStackPushModifier<
 
     public let screen: New
 
-    public var description: String {
-        "Push \(screen)"
-    }
+    public let description: String
 
     public init(screen: New) {
         self.screen = screen
+        description = "Push \(screen)"
     }
 
     public func perform(

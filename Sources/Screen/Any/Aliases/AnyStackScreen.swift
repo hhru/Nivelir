@@ -11,6 +11,7 @@ extension AnyStackScreen {
     /// Creates a type-erasing screen to wrap the provided screen.
     ///
     /// - Parameter wrapped: A screen to wrap with a type-eraser.
+    @MainActor
     public init<Wrapped: Screen>(
         _ wrapped: Wrapped
     ) where Wrapped.Container: UINavigationController {
@@ -33,6 +34,7 @@ extension Screen where Container: UINavigationController {
     ///
     /// - SeeAlso: `AnyStackScreen`
     /// - SeeAlso: `AnyScreen`
+    @MainActor
     public func eraseToAnyStackScreen() -> AnyStackScreen {
         AnyStackScreen(self)
     }

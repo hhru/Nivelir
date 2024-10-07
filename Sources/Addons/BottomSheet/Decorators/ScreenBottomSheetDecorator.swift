@@ -11,13 +11,12 @@ public struct ScreenBottomSheetDecorator<Container: UIViewController>: ScreenDec
         bottomSheetController
     }
 
-    public var description: String {
-        "BottomSheetDecorator"
-    }
+    public let description: String
 
     public init(bottomSheet: BottomSheet) {
         self.bottomSheet = bottomSheet
         self.bottomSheetController = BottomSheetController(bottomSheet: bottomSheet)
+        description = "BottomSheetDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -35,6 +34,7 @@ public struct ScreenBottomSheetDecorator<Container: UIViewController>: ScreenDec
 
 extension Screen where Container: UIViewController {
 
+    @MainActor
     public func withBottomSheet(_ bottomSheet: BottomSheet) -> AnyScreen<Container> {
         decorated(by: ScreenBottomSheetDecorator(bottomSheet: bottomSheet))
     }

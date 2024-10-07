@@ -1,11 +1,11 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct BottomSheetRubberBandEffect {
+public struct BottomSheetRubberBandEffect: Sendable {
 
-    public let handler: (_ delta: CGFloat) -> CGFloat
+    public let handler: @Sendable (_ delta: CGFloat) -> CGFloat
 
-    public init(handler: @escaping (_ delta: CGFloat) -> CGFloat) {
+    public init(handler: @escaping @Sendable (_ delta: CGFloat) -> CGFloat) {
         self.handler = handler
     }
 

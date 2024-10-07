@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct ScreenStackTransitionAnimation: ScreenStackCustomAnimation, Equatable {
+public struct ScreenStackTransitionAnimation: ScreenStackCustomAnimation, Equatable, Sendable {
 
     public let duration: TimeInterval
     public let options: UIView.AnimationOptions

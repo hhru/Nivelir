@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 internal final class AlertTextFieldsManager: NSObject {
 
     private let textFields: [UITextField?]

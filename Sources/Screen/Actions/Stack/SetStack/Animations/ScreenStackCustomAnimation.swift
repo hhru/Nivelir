@@ -2,8 +2,10 @@
 import UIKit
 
 public protocol ScreenStackCustomAnimation {
+
     func isEqual(to other: ScreenStackCustomAnimation) -> Bool
 
+    @MainActor
     func animate(
         container: UINavigationController,
         stack: [UIViewController],

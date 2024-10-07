@@ -13,12 +13,11 @@ public struct ScreenPopoverPresentationDecorator<Container: UIViewController>: S
         nil
     }
 
-    public var description: String {
-        "PopoverPresentationDecorator"
-    }
+    public let description: String
 
     public init(anchor: ScreenPopoverPresentationAnchor) {
         self.anchor = anchor
+        description = "PopoverPresentationDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -56,6 +55,7 @@ extension Screen where Container: UIViewController {
     ///
     /// - Parameter anchor: Anchor for `popoverPresentationController`.
     /// - Returns: New `Screen` with configured `UIPopoverPresentationController`.
+    @MainActor
     public func withPopoverPresentation(anchor: ScreenPopoverPresentationAnchor) -> AnyScreen<Container> {
         decorated(by: ScreenPopoverPresentationDecorator(anchor: anchor))
     }

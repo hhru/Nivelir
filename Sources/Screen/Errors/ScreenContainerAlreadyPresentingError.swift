@@ -6,18 +6,7 @@ import Foundation
 /// which is already presenting another container.
 public struct ScreenContainerAlreadyPresentingError: ScreenError {
 
-    public var description: String {
-        """
-        The container \(container) is already presenting another container for:
-          \(trigger)
-        """
-    }
-
-    /// Container that is already presenting another screen.
-    public let container: ScreenContainer
-
-    /// The action that caused the error.
-    public let trigger: Any
+    public let description: String
 
     /// Creates an error.
     ///
@@ -25,8 +14,10 @@ public struct ScreenContainerAlreadyPresentingError: ScreenError {
     ///   - container: Container that is already presenting another screen.
     ///   - trigger: The action that caused the error.
     public init(container: ScreenContainer, for trigger: Any) {
-        self.container = container
-        self.trigger = trigger
+        description = """
+        The container \(container) is already presenting another container for:
+          \(trigger)
+        """
     }
 }
 

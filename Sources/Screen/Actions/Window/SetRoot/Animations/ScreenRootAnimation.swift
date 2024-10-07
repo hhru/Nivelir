@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 public enum ScreenRootAnimation {
 
     case custom(ScreenRootCustomAnimation)

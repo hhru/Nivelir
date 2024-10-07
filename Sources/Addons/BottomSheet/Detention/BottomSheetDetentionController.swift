@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 internal final class BottomSheetDetentionController {
 
     private var cachedDetentValues: [BottomSheetDetentKey: CGFloat?] = [:]
@@ -79,7 +80,9 @@ internal final class BottomSheetDetentionController {
         }
 
         let smallestDetentValue = detents
-            .compactMap(resolveDetentValue(detent:))
+            .compactMap { detent in
+                resolveDetentValue(detent: detent)
+            }
             .min() ?? .zero
 
         cachedSmallestDetentValueIgnoringKeyboard = smallestDetentValue
@@ -93,7 +96,9 @@ internal final class BottomSheetDetentionController {
         }
 
         let smallestDetentValue = detents
-            .compactMap(resolveDetentValue(detent:))
+            .compactMap { detent in
+                resolveDetentValue(detent: detent)
+            }
             .min()
             .map { min($0 + keyboardHeight, maximumDetentValue) } ?? .zero
 
@@ -108,7 +113,9 @@ internal final class BottomSheetDetentionController {
         }
 
         let largestDetentValue = detents
-            .compactMap(resolveDetentValue(detent:))
+            .compactMap { detent in
+                resolveDetentValue(detent: detent)
+            }
             .max()
             .map { min($0 + keyboardHeight, maximumDetentValue) } ?? .zero
 

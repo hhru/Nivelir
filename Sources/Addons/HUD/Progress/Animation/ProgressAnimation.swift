@@ -4,6 +4,7 @@ import UIKit
 /// The type of progress view animation of the ``HUD``.
 ///
 /// An animation is used to update and show the `header`, `indicator` and `footer` parts of the progress view.
+@MainActor
 public enum ProgressAnimation {
 
     /// Custom animation for showing progress view of the HUD.

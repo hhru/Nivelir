@@ -11,12 +11,11 @@ public struct ScreenStackDecorator<Container: UINavigationController>: ScreenDec
         nil
     }
 
-    public var description: String {
-        "StackDecorator"
-    }
+    public let description: String
 
     public init(stack: [AnyModalScreen]) {
         self.stack = stack
+        description = "StackDecorator"
     }
 
     public func build<Wrapped: Screen>(
@@ -42,6 +41,7 @@ extension Screen where Container: UINavigationController {
     /// the new bottom-to-top order of the controllers in the navigation stack.
     /// Thus, the last item added to the array becomes the top item of the navigation stack.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack(_ stack: [AnyModalScreen]) -> AnyScreen<Container> {
         decorated(by: ScreenStackDecorator(stack: stack))
     }
@@ -53,6 +53,7 @@ extension Screen where Container: UINavigationController {
     /// the new bottom-to-top order of the controllers in the navigation stack.
     /// Thus, the last item added to the array becomes the top item of the navigation stack.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack(_ stack: AnyModalScreen...) -> AnyScreen<Container> {
         withStack(stack)
     }
@@ -61,6 +62,7 @@ extension Screen where Container: UINavigationController {
     /// Sets the `viewControllers` property for a container with type `UINavigationController`.
     /// - Parameter screen: The screen to place in the stack as root.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack<T: Screen>(
         _ screen: T
     ) -> AnyScreen<Container> where T.Container: UIViewController {
@@ -75,6 +77,7 @@ extension Screen where Container: UINavigationController {
     ///   - screen0: The screen to place in the stack as root.
     ///   - screen1: The screen to place in the stack as top.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack<T0: Screen, T1: Screen>(
         _ screen0: T0,
         _ screen1: T1
@@ -94,6 +97,7 @@ extension Screen where Container: UINavigationController {
     ///   - screen1: The screen to place in the stack as second after the root.
     ///   - screen2: The screen to place in the stack as top.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack<T0: Screen, T1: Screen, T2: Screen>(
         _ screen0: T0,
         _ screen1: T1,
@@ -117,6 +121,7 @@ extension Screen where Container: UINavigationController {
     ///   - screen2: The screen to place in the stack as third after the root.
     ///   - screen3: The screen to place in the stack as top.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack<T0: Screen, T1: Screen, T2: Screen, T3: Screen>(
         _ screen0: T0,
         _ screen1: T1,
@@ -144,6 +149,7 @@ extension Screen where Container: UINavigationController {
     ///   - screen3: The screen to place in the stack as fourth after the root.
     ///   - screen4: The screen to place in the stack as top.
     /// - Returns: New `Screen` with replaced `viewControllers` in container.
+    @MainActor
     public func withStack<T0: Screen, T1: Screen, T2: Screen, T3: Screen, T4: Screen>(
         _ screen0: T0,
         _ screen1: T1,

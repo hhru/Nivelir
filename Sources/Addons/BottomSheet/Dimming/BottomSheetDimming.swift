@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct BottomSheetDimming: Equatable {
+public struct BottomSheetDimming: Equatable, Sendable {
 
     public static let `default` = Self()
 

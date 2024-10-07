@@ -6,7 +6,7 @@ internal class AnyScreenActionBaseBox<Container: ScreenContainer, Output>:
 
     internal typealias Output = Output
 
-    internal var description: String {
+    nonisolated internal var description: String {
         fatalError("\(#function) has not been implemented")
     }
 

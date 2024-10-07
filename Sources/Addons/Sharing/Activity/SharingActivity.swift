@@ -24,6 +24,7 @@ extension SharingActivity {
         }
     }
 
+    @MainActor
     public static func custom<Value: SharingVisualActivity>(_ value: Value) -> Self {
         Self { navigator in
             SharingActivityManager(
@@ -33,6 +34,7 @@ extension SharingActivity {
         }
     }
 
+    @MainActor
     public static func custom<Value: SharingSilentActivity>(_ value: Value) -> Self {
         Self { navigator in
             SharingActivityManager(

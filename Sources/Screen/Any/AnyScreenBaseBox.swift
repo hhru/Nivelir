@@ -10,7 +10,7 @@ internal class AnyScreenBaseBox<Container: ScreenContainer>: Screen {
         fatalError("\(#function) has not been implemented")
     }
 
-    internal var description: String {
+    nonisolated internal var description: String {
         fatalError("\(#function) has not been implemented")
     }
 

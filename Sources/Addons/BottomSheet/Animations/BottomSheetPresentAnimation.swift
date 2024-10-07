@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 internal class BottomSheetPresentAnimation: NSObject {
 
     private var animator: UIViewImplicitlyAnimating?

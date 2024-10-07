@@ -6,6 +6,7 @@ struct ChatDeeplink {
     let roomID: Int
     let chatID: Int
 
+    @MainActor
     func navigate(
         screens: Screens,
         navigator: ScreenNavigator,

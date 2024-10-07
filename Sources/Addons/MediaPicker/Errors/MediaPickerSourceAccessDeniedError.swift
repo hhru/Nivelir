@@ -3,17 +3,13 @@ import Foundation
 
 public struct MediaPickerSourceAccessDeniedError: ScreenError {
 
-    public var description: String {
-        """
+    public let description: String
+
+    public init(for trigger: Any) {
+        description = """
         User does not allow the app to access the media source for:
           \(trigger)
         """
-    }
-
-    public let trigger: Any
-
-    public init(for trigger: Any) {
-        self.trigger = trigger
     }
 }
 

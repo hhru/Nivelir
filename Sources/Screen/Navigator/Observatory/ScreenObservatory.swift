@@ -88,6 +88,7 @@ import Foundation
 /// - SeeAlso: `ScreenObserver`
 /// - SeeAlso: `ScreenObservation`
 /// - SeeAlso: `ScreenObserverPredicate`
+@MainActor
 public protocol ScreenObservatory {
 
     /// Observing containers by an observer.
