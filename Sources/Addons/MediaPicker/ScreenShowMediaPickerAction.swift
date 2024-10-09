@@ -24,7 +24,7 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         if #available(iOS 14, *) {
             await PHPhotoLibrary.requestAuthorization(for: .readWrite)
         } else {
-            try? await withCheckedThrowingContinuation { continuation in
+            await withCheckedContinuation { continuation in
                 PHPhotoLibrary.requestAuthorization { _ in
                     continuation.resume()
                 }
