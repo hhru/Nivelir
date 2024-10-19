@@ -1,8 +1,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-@MainActor
-internal final class SharingActivityManager<Activity: SharingCustomActivity>: UIActivity, Sendable {
+internal final class SharingActivityManager<Activity: SharingCustomActivity>: UIActivity, @unchecked Sendable {
 
     internal override class var activityCategory: UIActivity.Category {
         Activity.category
@@ -14,21 +13,15 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
     internal let activity: Activity
 
     internal override var activityType: UIActivity.ActivityType? {
-        MainActor.assumeIsolated {
-            activity.type
-        }
+        activity.type
     }
 
     internal override var activityTitle: String? {
-        MainActor.assumeIsolated {
-            activity.title
-        }
+        activity.title
     }
 
     internal override var activityImage: UIImage? {
-        MainActor.assumeIsolated {
-            activity.image
-        }
+        activity.image
     }
 
     internal override var activityViewController: UIViewController? {
@@ -55,16 +48,12 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
 
     internal override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         let activityItems = activityItems.map(SharingItem.init(activityItem:))
-        return MainActor.assumeIsolated {
-            activity.isApplicable(for: activityItems)
-        }
+        return activity.isApplicable(for: activityItems)
     }
 
     internal override func prepare(withActivityItems activityItems: [Any]) {
         let activityItems = activityItems.map(SharingItem.init(activityItem:))
-        MainActor.assumeIsolated {
-            items = activityItems
-        }
+        items = activityItems
     }
 
     internal override func perform() {
