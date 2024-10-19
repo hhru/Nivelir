@@ -7,7 +7,25 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
         Activity.category
     }
 
-    private var items: [SharingItem] = []
+    private let accessQueue = DispatchQueue(
+        label: "SharingActivityManager \(UUID().uuidString)",
+        qos: .userInitiated,
+        attributes: .concurrent
+    )
+
+    private var _items: [SharingItem] = []
+    private var items: [SharingItem] {
+        get {
+            accessQueue.sync {
+                _items
+            }
+        }
+        set {
+            accessQueue.async(flags: .barrier) { [weak self] in
+                self?._items = newValue
+            }
+        }
+    }
 
     internal let navigator: ScreenNavigator
     internal let activity: Activity
