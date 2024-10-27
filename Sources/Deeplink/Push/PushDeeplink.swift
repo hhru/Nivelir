@@ -143,7 +143,7 @@ extension PushDeeplink where PushDictionaryPayload == [String: Any] {
         context: Any?
     ) throws -> AnyPushDeeplink? {
         guard let dictionaryPayload = payload.dictionaryPayload as? [String: Any] else {
-            throw PushDeeplinkInvalidDictionaryPayloadError(payload: payload, for: self)
+            throw PushDeeplinkInvalidDictionaryPayloadError(for: self)
         }
 
         return try push(
@@ -162,7 +162,7 @@ extension PushDeeplink where PushDictionaryPayload: Decodable {
         context: Any?
     ) throws -> AnyPushDeeplink? {
         guard let dictionaryPayload = payload.dictionaryPayload as? [String: Any] else {
-            throw PushDeeplinkInvalidDictionaryPayloadError(payload: payload, for: self)
+            throw PushDeeplinkInvalidDictionaryPayloadError(for: self)
         }
 
         let decodedDictionaryPayload: PushDictionaryPayload
