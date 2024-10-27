@@ -10,13 +10,15 @@ internal final class AnyScreenActionBox<
     private let wrapped: Wrapped
     private let mapper: Mapper
 
+    private let _description: String
     internal override var description: String {
-        "\(wrapped)"
+        _description
     }
 
     internal init(_ wrapped: Wrapped, mapper: @escaping Mapper) {
         self.wrapped = wrapped
         self.mapper = mapper
+        _description = "\(wrapped)"
     }
 
     internal override func cast<Action: ScreenAction>(to type: Action.Type) -> Action? {

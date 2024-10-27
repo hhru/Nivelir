@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 public class BottomSheetController: NSObject {
 
     private weak var presentation: BottomSheetPresentationController?
@@ -102,7 +103,10 @@ public class BottomSheetController: NSObject {
 
     public var didChangeSelectedDetentKey: ((_ detentKey: BottomSheetDetentKey?) -> Void)?
 
-    public init(bottomSheet: BottomSheet = .default) {
+    /// Optional init required because of complier crash with not-nil default value.
+    /// Reprodused in Xcode 16.0 with Swift 6.0
+    public init(bottomSheet: BottomSheet? = nil) {
+        let bottomSheet = bottomSheet ?? BottomSheet()
         self.detents = bottomSheet.detents
         self.selectedDetentKey = bottomSheet.selectedDetentKey
 

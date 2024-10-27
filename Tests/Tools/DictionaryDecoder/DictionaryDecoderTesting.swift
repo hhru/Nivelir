@@ -28,7 +28,7 @@ extension DictionaryDecoderTesting {
     func assertDecoderSucceeds<Key: Decodable & Hashable, Value: Decodable & FloatingPoint & Equatable>(
         decoding expectedValue: [Key: Value],
         from dictionary: [String: Any],
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
         do {
@@ -48,7 +48,7 @@ extension DictionaryDecoderTesting {
     func assertDecoderSucceeds<Key: Decodable & Hashable, Value: Decodable & FloatingPoint & Equatable>(
         decoding valueType: [Key: Value].Type,
         from dictionary: [String: Any],
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
         do {
@@ -68,7 +68,7 @@ extension DictionaryDecoderTesting {
     func assertDecoderSucceeds<T: Decodable & Equatable>(
         decoding expectedValue: T,
         from dictionary: [String: Any],
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
         do {
@@ -83,7 +83,7 @@ extension DictionaryDecoderTesting {
     func assertDecoderSucceeds<T: Decodable & Equatable>(
         decoding valueType: T.Type,
         from dictionary: [String: Any],
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line
     ) {
         do {
@@ -103,7 +103,7 @@ extension DictionaryDecoderTesting {
     func assertDecoderFails<T: Decodable>(
         decoding valueType: T.Type,
         from dictionary: [String: Any],
-        file: StaticString = #file,
+        file: StaticString = #filePath,
         line: UInt = #line,
         errorValidation: (_ error: Error) -> Bool
     ) {

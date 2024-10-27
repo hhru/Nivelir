@@ -3,21 +3,7 @@ import Foundation
 /// The `Context` instance is not supported by the deeplink type.
 public struct DeeplinkInvalidContextError: DeeplinkError {
 
-    public var description: String {
-        """
-        The type of the context \(context ?? "nil") does not match the expected type \(type) for:
-          \(trigger)
-        """
-    }
-
-    /// Context instance.
-    public let context: Any?
-
-    /// Expected context type.
-    public let type: Any.Type
-
-    /// The deeplink that caused the error.
-    public let trigger: Any
+    public let description: String
 
     /// Creates an error.
     ///
@@ -30,8 +16,9 @@ public struct DeeplinkInvalidContextError: DeeplinkError {
         type: Any.Type,
         for trigger: Any
     ) {
-        self.context = context
-        self.type = type
-        self.trigger = trigger
+        description = """
+        The type of the context \(context ?? "nil") does not match the expected type \(type) for:
+          \(trigger)
+        """
     }
 }

@@ -32,6 +32,7 @@ import Foundation
 /// - SeeAlso: `ScreenObservatory`
 /// - SeeAlso: `ScreenIterator`
 /// - SeeAlso: `ScreenLogger`
+@MainActor
 public final class ScreenNavigator {
 
     /// Closure with the result of the navigation action.
@@ -84,15 +85,15 @@ public final class ScreenNavigator {
     ///   - iterator: Implementation of a container iterator for searching.
     ///   - logger: Implementation of the navigation log output. Pass `nil` to disable logging.
     public init(
-        windowProvider: ScreenWindowProvider = ScreenKeyWindowProvider(),
-        observatory: ScreenObservatory = DefaultScreenObservatory(),
-        iterator: ScreenIterator = DefaultScreenIterator(),
-        logger: ScreenLogger? = DefaultScreenLogger()
+        windowProvider: ScreenWindowProvider? = nil,
+        observatory: ScreenObservatory? = nil,
+        iterator: ScreenIterator? = nil,
+        logger: ScreenLogger? = nil
     ) {
-        self.windowProvider = windowProvider
-        self.observatory = observatory
-        self.iterator = iterator
-        self.logger = logger
+        self.windowProvider = windowProvider ?? ScreenKeyWindowProvider()
+        self.observatory = observatory ?? DefaultScreenObservatory()
+        self.iterator = iterator ?? DefaultScreenIterator()
+        self.logger = logger ?? DefaultScreenLogger()
     }
 
     /// Initializing an instance of `ScreenNavigator`.
@@ -104,14 +105,14 @@ public final class ScreenNavigator {
     ///   - logger: Implementation of the navigation log output. Pass `nil` to disable logging.
     public init(
         window: UIWindow,
-        observatory: ScreenObservatory = DefaultScreenObservatory(),
-        iterator: ScreenIterator = DefaultScreenIterator(),
-        logger: ScreenLogger? = DefaultScreenLogger()
+        observatory: ScreenObservatory? = nil,
+        iterator: ScreenIterator? = nil,
+        logger: ScreenLogger? = nil
     ) {
         self.windowProvider = ScreenCustomWindowProvider(window: window)
-        self.observatory = observatory
-        self.iterator = iterator
-        self.logger = logger
+        self.observatory = observatory ?? DefaultScreenObservatory()
+        self.iterator = iterator ?? DefaultScreenIterator()
+        self.logger = logger ?? DefaultScreenLogger()
     }
 #else
     /// Initializing an instance of `ScreenNavigator`.

@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@MainActor
 public struct ScreenTabPredicate: CustomStringConvertible {
 
     public let description: String

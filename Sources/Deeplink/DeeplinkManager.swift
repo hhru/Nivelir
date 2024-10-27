@@ -694,7 +694,9 @@ public final class DeeplinkManager: DeeplinkHandler {
             object: nil,
             queue: nil
         ) { [weak self] _ in
-            self?.navigateIfPossible()
+            Task { @MainActor in
+                self?.navigateIfPossible()
+            }
         }
     }
 

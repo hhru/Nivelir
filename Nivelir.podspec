@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.author = { "Almaz Ibragimov" => "almazrafi@gmail.com" }
   spec.source = { :git => "https://github.com/hhru/Nivelir.git", :tag => "#{spec.version}" }
 
-  spec.swift_version = '5.7'
+  spec.swift_version = '6.0'
   spec.requires_arc = true
   spec.source_files = 'Sources/**/*.swift'
 

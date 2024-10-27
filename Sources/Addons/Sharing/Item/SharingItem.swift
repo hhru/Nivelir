@@ -1,7 +1,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-public enum SharingItem: CustomStringConvertible {
+public enum SharingItem: CustomStringConvertible, @unchecked Sendable {
 
     case regular(Any)
     case custom(SharingCustomItem)

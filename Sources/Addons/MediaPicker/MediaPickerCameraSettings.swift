@@ -2,7 +2,7 @@
 import UIKit
 
 /// The object that defines the settings for the camera.
-public struct MediaPickerCameraSettings {
+public struct MediaPickerCameraSettings: Sendable {
 
     /// Default settings
     public static let `default` = Self()

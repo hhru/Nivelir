@@ -1,6 +1,6 @@
 import Foundation
 
-internal final class ObjectAssociation<T> {
+internal final class ObjectAssociation<T>: Sendable {
 
     private let policy: objc_AssociationPolicy
 

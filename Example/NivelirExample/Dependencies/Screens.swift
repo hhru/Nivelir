@@ -1,6 +1,7 @@
 import Foundation
 import Nivelir
 
+@MainActor
 struct Screens {
 
     let services: Services

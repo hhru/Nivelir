@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public struct BottomSheetCard: Equatable {
+public struct BottomSheetCard: Equatable, Sendable {
 
     public static let `default` = Self()
 

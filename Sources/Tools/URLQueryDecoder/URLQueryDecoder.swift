@@ -2,6 +2,7 @@ import Foundation
 
 internal struct URLQueryDecoder {
 
+    @MainActor
     internal static let `default` = Self()
 
     internal var dateDecodingStrategy: URLQueryDateDecodingStrategy

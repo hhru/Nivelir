@@ -1,6 +1,7 @@
 import Foundation
 
 /// A protocol representing the route to which actions can be added.
+@MainActor
 public protocol ScreenThenable {
 
     /// A type of root container that will be used to perform actions.

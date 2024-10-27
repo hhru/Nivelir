@@ -42,6 +42,7 @@ import UIKit
 /// ```
 ///
 /// - SeeAlso: ``ScreenObserver``
+@MainActor
 public struct ScreenObserverPredicate {
 
     public typealias Filter = (

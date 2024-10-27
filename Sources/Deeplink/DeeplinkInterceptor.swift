@@ -20,6 +20,7 @@ public protocol DeeplinkInterceptor {
     ///   - navigator: Navigator for performing navigation actions.
     ///   - completion: Interceptor result. If `.success`, the intercepted ``Deeplink`` will be performed,
     ///   otherwise cancelled.
+    @MainActor
     func interceptDeeplink(
         _ deeplink: AnyDeeplink,
         of type: DeeplinkType,

@@ -156,7 +156,9 @@ extension HUDView {
 
         let timer = duration.map { duration in
             Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { _ in
-                hideHUD(in: window, completion: nil)
+                MainActor.assumeIsolated {
+                    hideHUD(in: window, completion: nil)
+                }
             }
         }
 

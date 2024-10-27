@@ -48,6 +48,7 @@ import Foundation
 /// - SeeAlso: `Screen`
 /// - SeeAlso: `ScreenKey`
 /// - SeeAlso: `ScreenContainer`
+@MainActor
 public protocol ScreenKeyedContainer: ScreenContainer {
 
     /// Screen key that is used to find the container in the container hierarchy.

@@ -5,18 +5,7 @@ import Foundation
 /// This error occurs whenever an action handles an unsupported container type.
 public struct ScreenContainerNotSupportedError: ScreenError {
 
-    public var description: String {
-        """
-        The type of the container \(container) is not supported for:
-          \(trigger)
-        """
-    }
-
-    /// Container that is not supported.
-    public let container: ScreenContainer
-
-    /// The action that caused the error.
-    public let trigger: Any
+    public let description: String
 
     /// Creates an error.
     ///
@@ -24,8 +13,10 @@ public struct ScreenContainerNotSupportedError: ScreenError {
     ///   - container: Container that does not match the expected type.
     ///   - trigger: The action that caused the error.
     public init(container: ScreenContainer, for trigger: Any) {
-        self.container = container
-        self.trigger = trigger
+        description = """
+        The type of the container \(container) is not supported for:
+          \(trigger)
+        """
     }
 }
 

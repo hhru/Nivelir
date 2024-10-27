@@ -4,6 +4,7 @@ import UIKit
 import Foundation
 #endif
 
+@MainActor
 public struct ScreenPredicate<Container: ScreenContainer>: CustomStringConvertible {
 
     public let description: String

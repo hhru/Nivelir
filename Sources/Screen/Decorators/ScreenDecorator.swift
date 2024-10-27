@@ -20,6 +20,7 @@ import Foundation
 /// ```
 ///
 /// - SeeAlso: `Screen`
+@MainActor
 public protocol ScreenDecorator: CustomStringConvertible {
 
     /// The type of screen container to be decorated.
@@ -57,6 +58,7 @@ extension Screen {
     /// Decorating the screen with the decorator.
     /// - Parameter decorator: A decorator instance that implements `ScreenDecorator`.
     /// - Returns: New `Screen` with the container type specified in the `Output` of decorator.
+    @MainActor
     public func decorated<Decorator: ScreenDecorator>(
         by decorator: Decorator
     ) -> AnyScreen<Decorator.Output> where Container == Decorator.Container {

@@ -6,6 +6,7 @@ import UIKit
 /// This protocol provides a blueprint for a content object, which encompasses content for a content view.
 /// The content encapsulates all of the supported properties and behaviors for content view customization.
 /// You use the content to create the content view.
+@MainActor
 public protocol ProgressContent: AnyProgressContent, Equatable {
 
     /// The view type associated with the content.

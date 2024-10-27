@@ -11,6 +11,7 @@ extension AnyTabsScreen {
     /// Creates a type-erasing screen to wrap the provided screen.
     ///
     /// - Parameter wrapped: A screen to wrap with a type-eraser.
+    @MainActor
     public init<Wrapped: Screen>(
         _ wrapped: Wrapped
     ) where Wrapped.Container: UITabBarController {
@@ -33,6 +34,7 @@ extension Screen where Container: UITabBarController {
     ///
     /// - SeeAlso: `AnyTabsScreen`
     /// - SeeAlso: `AnyScreen`
+    @MainActor
     public func eraseToAnyTabsScreen() -> AnyTabsScreen {
         AnyTabsScreen(self)
     }

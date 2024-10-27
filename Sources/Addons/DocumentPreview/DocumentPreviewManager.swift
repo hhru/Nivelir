@@ -26,7 +26,9 @@ internal final class DocumentPreviewManager:
         _ controller: UIDocumentInteractionController
     ) -> UIView? {
         documentPreview.anchor.map { anchor in
-            anchor.view ?? container.view
+            MainActor.assumeIsolated { [container] in
+                anchor.view ?? container.view
+            }
         }
     }
 
@@ -34,12 +36,14 @@ internal final class DocumentPreviewManager:
         _ controller: UIDocumentInteractionController
     ) -> CGRect {
         documentPreview.anchor.map { anchor in
-            anchor.rect ?? CGRect(
-                x: container.view.bounds.midX,
-                y: container.view.bounds.midY,
-                width: .zero,
-                height: .zero
-            )
+            MainActor.assumeIsolated { [container] in
+                anchor.rect ?? CGRect(
+                    x: container.view.bounds.midX,
+                    y: container.view.bounds.midY,
+                    width: .zero,
+                    height: .zero
+                )
+            }
         } ?? .zero
     }
 

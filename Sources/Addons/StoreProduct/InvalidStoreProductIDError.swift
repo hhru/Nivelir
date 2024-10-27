@@ -3,17 +3,13 @@ import Foundation
 
 public struct InvalidStoreProductIDError: ScreenError {
 
-    public var description: String {
-        """
+    public let description: String
+
+    public init(for trigger: Any) {
+        description = """
         Invalid store product ID for:
           \(trigger)
         """
-    }
-
-    public let trigger: Any
-
-    public init(for trigger: Any) {
-        self.trigger = trigger
     }
 }
 

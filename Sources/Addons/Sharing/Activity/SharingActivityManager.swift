@@ -1,13 +1,31 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-internal final class SharingActivityManager<Activity: SharingCustomActivity>: UIActivity {
+internal final class SharingActivityManager<Activity: SharingCustomActivity>: UIActivity, @unchecked Sendable {
 
     internal override class var activityCategory: UIActivity.Category {
         Activity.category
     }
 
-    private var items: [SharingItem] = []
+    private let accessQueue = DispatchQueue(
+        label: "SharingActivityManager \(UUID().uuidString)",
+        qos: .userInitiated,
+        attributes: .concurrent
+    )
+
+    private var _items: [SharingItem] = []
+    private var items: [SharingItem] {
+        get {
+            accessQueue.sync {
+                _items
+            }
+        }
+        set {
+            accessQueue.async(flags: .barrier) { [weak self] in
+                self?._items = newValue
+            }
+        }
+    }
 
     internal let navigator: ScreenNavigator
     internal let activity: Activity
@@ -25,15 +43,17 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
     }
 
     internal override var activityViewController: UIViewController? {
-        guard let activity = activity as? SharingVisualActivity else {
-            return nil
-        }
+        MainActor.assumeIsolated {
+            guard let activity = activity as? SharingVisualActivity else {
+                return nil
+            }
 
-        let screen = activity.prepare(for: items) { [weak self] completed in
-            self?.activityDidFinish(completed)
-        }
+            let screen = activity.prepare(for: items) { [weak self] completed in
+                self?.activityDidFinish(completed)
+            }
 
-        return screen.build(navigator: navigator)
+            return screen.build(navigator: navigator)
+        }
     }
 
     internal init(
@@ -45,20 +65,24 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
     }
 
     internal override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
-        activity.isApplicable(for: activityItems.map(SharingItem.init(activityItem:)))
+        let activityItems = activityItems.map(SharingItem.init(activityItem:))
+        return activity.isApplicable(for: activityItems)
     }
 
     internal override func prepare(withActivityItems activityItems: [Any]) {
-        items = activityItems.map(SharingItem.init(activityItem:))
+        let activityItems = activityItems.map(SharingItem.init(activityItem:))
+        items = activityItems
     }
 
     internal override func perform() {
-        guard let activity = activity as? SharingSilentActivity else {
-            return activityDidFinish(false)
-        }
+        MainActor.assumeIsolated {
+            guard let activity = activity as? SharingSilentActivity else {
+                return activityDidFinish(false)
+            }
 
-        activity.perform(for: items, navigator: navigator) { [weak self] completed in
-            self?.activityDidFinish(completed)
+            activity.perform(for: items, navigator: navigator) { [weak self] completed in
+                self?.activityDidFinish(completed)
+            }
         }
     }
 }

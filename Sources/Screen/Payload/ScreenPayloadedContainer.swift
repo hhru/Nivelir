@@ -10,6 +10,7 @@ import Foundation
 /// to associate the payload with the container.
 ///
 /// - SeeAlso: `ScreenContainer`
+@MainActor
 public protocol ScreenPayloadedContainer: ScreenContainer {
 
     /// Screen payload.
