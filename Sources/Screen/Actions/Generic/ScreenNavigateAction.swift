@@ -83,7 +83,7 @@ extension ScreenNavigator {
             completion: completion
         )
     }
-    
+
     public func navigate(
         to route: (_ route: ScreenWindowRoute) -> ScreenRouteConvertible
     ) {
