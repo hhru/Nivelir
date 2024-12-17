@@ -62,7 +62,7 @@ final class HomeTabBarController: UITabBarController, ScreenKeyedContainer {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        showWhatsNewIfNeeded()
+//        showWhatsNewIfNeeded()
 
         deeplinkManager.activate(screens: screens)
     }

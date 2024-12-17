@@ -67,6 +67,37 @@ final class ChatListViewController: UITableViewController, ScreenKeyedContainer 
         tableView.registerReusableCell(of: ChatListCell.self)
     }
 
+    private func showWhatsNewIfNeeded() {
+        let bottomSheet = BottomSheet(
+            detents: [.content, .large],
+            preferredCard: BottomSheetCard(
+                backgroundColor: Colors.background,
+                contentInsets: UIEdgeInsets(
+                    top: 12.0,
+                    left: .zero,
+                    bottom: .zero,
+                    right: .zero
+                )
+            ),
+            preferredGrabber: .default,
+            prefferedGrabberForMaximumDetentValue: .default
+        )
+
+        screenNavigator.navigate(from: self) { route in
+            route.present(
+                screens
+                    .whatsNewScreen()
+                    .withBottomSheetStack(bottomSheet)
+            )
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        showWhatsNewIfNeeded()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

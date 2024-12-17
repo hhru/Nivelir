@@ -37,9 +37,11 @@ final class WhatsNewViewController: UIViewController, ScreenKeyedContainer {
     }
 
     @objc private func onMoreButtonTouchUpInside() {
-        screenNavigator.navigate(from: stack) { route in
+        screenNavigator.navigate { route in
             #if os(iOS)
-                route.push(screens.whatsNewMoreScreen())
+                route
+                    .top(.stack)
+                    .push(screens.whatsNewMoreScreen())
             #else
                 route.push(screens.whatsNewScreen())
             #endif
