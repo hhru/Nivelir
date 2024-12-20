@@ -67,12 +67,22 @@ extension ScreenNavigator {
     public func navigate<Output: ScreenContainer>(
         from container: Output?,
         to route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible,
-        completion: Completion? = nil
+        completion: Completion?
     ) {
         navigate(
             from: container,
             to: route(.initial).route(),
             completion: completion
+        )
+    }
+
+    public func navigate<Output: ScreenContainer>(
+        from container: Output?,
+        to route: (_ route: ScreenRootRoute<Output>) -> ScreenRouteConvertible
+    ) {
+        navigate(
+            from: container,
+            to: route(.initial).route()
         )
     }
 }
