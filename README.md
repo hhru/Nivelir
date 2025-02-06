@@ -1,5 +1,5 @@
 # Nivelir
-[![Build Status](https://github.com/hhru/Nivelir/workflows/CI/badge.svg?branch=main)](https://github.com/hhru/Nivelir/actions)
+[![Build Status](https://github.com/hhru/Nivelir/actions/workflows/swift.yml/badge.svg?branch=main)](https://github.com/hhru/Nivelir/actions)
 [![Cocoapods](https://img.shields.io/cocoapods/v/Nivelir)](http://cocoapods.org/pods/Nivelir)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen)](https://github.com/Carthage/Carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen)](https://swift.org/package-manager/)
