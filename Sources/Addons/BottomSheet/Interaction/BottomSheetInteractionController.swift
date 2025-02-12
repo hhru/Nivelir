@@ -206,6 +206,10 @@ extension BottomSheetInteractionController: UIGestureRecognizerDelegate {
             return false
         }
 
+        if let textView = otherGestureRecognizer.view as? UITextView, textView.isFirstResponder {
+            return false
+        }
+
         guard let scrollView = otherGestureRecognizer.view as? UIScrollView else {
             return otherGestureRecognizer is UITapGestureRecognizer
         }
