@@ -51,7 +51,7 @@ public final class DeeplinkManager: DeeplinkHandler {
         didSet { navigateIfPossible() }
     }
 
-    private var pendingDeeplink: DeeplinkStorage? {
+    private var pendingDeeplink: [DeeplinkScope: DeeplinkStorage] = [:] {
         didSet { navigateIfPossible() }
     }
 
@@ -119,39 +119,44 @@ public final class DeeplinkManager: DeeplinkHandler {
             return
         }
 
-        guard let deeplink = pendingDeeplink else {
+        guard !pendingDeeplink.isEmpty else {
             return
         }
 
-        guard let screens = screens[deeplink.scope] else {
-            return
-        }
-
-        navigator.logInfo("Performing navigation for deeplink: \(deeplink.value)")
-
-        pendingDeeplink = nil
-
-        performInterceptors(for: deeplink) { result in
-            do {
-                try result.get()
-
-                try deeplink.value.navigateIfPossible(
-                    screens: screens,
-                    navigator: self.navigator,
-                    handler: self
-                )
-            } catch {
-                self.navigator.logError(error)
+        for (scope, deeplink) in pendingDeeplink {
+            guard let screens = screens[scope] else {
+                continue
             }
+
+            navigator.logInfo("Performing navigation for deeplink: \(deeplink.value)")
+
+            pendingDeeplink.removeValue(forKey: scope)
+
+            performInterceptors(for: deeplink) { result in
+                do {
+                    try result.get()
+
+                    try deeplink.value.navigateIfPossible(
+                        screens: screens,
+                        navigator: self.navigator,
+                        handler: self
+                    )
+                } catch {
+                    self.navigator.logError(error)
+                }
+            }
+
         }
     }
 
     private func handleDeeplinkIfPossible(_ deeplink: DeeplinkStorage?) -> Bool {
-        if let deeplink {
-            pendingDeeplink = deeplink
+        guard let deeplink else {
+            return false
         }
 
-        return deeplink != nil
+        pendingDeeplink[deeplink.scope] = deeplink
+
+        return true
     }
 
     private func resolveDeeplinkResult(
