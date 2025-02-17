@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "Nivelir"
-  spec.version = "1.9.5"
+  spec.version = "1.9.6"
   spec.summary = "A Swift DSL for navigation in iOS and tvOS apps with a simplified, chainable, and compile time safe syntax."
 
   spec.homepage = "https://github.com/hhru/Nivelir"
