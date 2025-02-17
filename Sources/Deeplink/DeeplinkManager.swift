@@ -145,7 +145,6 @@ public final class DeeplinkManager: DeeplinkHandler {
                     self.navigator.logError(error)
                 }
             }
-
         }
     }
 
