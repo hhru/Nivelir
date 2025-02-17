@@ -5,6 +5,8 @@ import UIKit
 import UserNotifications
 #endif
 
+// swiftlint:disable type_body_length
+
 /// The `DeeplinkManager` keeps track of the opening of ``Deeplink``.
 ///
 /// The manager is the entry point when working with ``Deeplink``.
@@ -644,3 +646,4 @@ public final class DeeplinkManager: DeeplinkHandler {
     }
 }
 #endif
+// swiftlint:enable type_body_length
