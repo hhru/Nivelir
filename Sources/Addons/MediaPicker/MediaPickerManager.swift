@@ -12,9 +12,10 @@ internal final class MediaPickerManager: NSObject, UINavigationControllerDelegat
 
 extension MediaPickerManager: UIImagePickerControllerDelegate {
 
+    @objc
     internal func imagePickerController(
         _ picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
+        didFinishPickingMediaWithInfo info: [String: Any]
     ) {
         mediaPicker.didFinish(MediaPickerResult(info: info))
     }
