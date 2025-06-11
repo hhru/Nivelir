@@ -456,6 +456,7 @@ internal final class BottomSheetPresentationController: UIPresentationController
             action: #selector(onTransitionViewPanGesture(recognizer:))
         )
 
+        gestureRecognizer.cancelsTouchesInView = false
         gestureRecognizer.delegate = interaction
 
         containerView?.addSubview(transitionView)
