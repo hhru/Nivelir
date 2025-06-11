@@ -1,26 +1,27 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-internal final class MediaPickerManager: NSObject, UINavigationControllerDelegate {
+internal final class MediaPickerManager:
+    NSObject,
+    UINavigationControllerDelegate,
+    UIImagePickerControllerDelegate {
 
-    private let mediaPicker: MediaPicker
+    nonisolated private let proxy: MediaPickerProxy
 
     internal init(mediaPicker: MediaPicker) {
-        self.mediaPicker = mediaPicker
-    }
-}
-
-extension MediaPickerManager: UIImagePickerControllerDelegate {
-
-    internal func imagePickerController(
-        _ picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
-    ) {
-        mediaPicker.didFinish(MediaPickerResult(info: info))
+        self.proxy = MediaPickerProxy(mediaPicker: mediaPicker)
     }
 
-    internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        mediaPicker.didFinish(nil)
+    internal override func responds(to aSelector: Selector?) -> Bool {
+        super.responds(to: aSelector) || proxy.responds(to: aSelector) == true
+    }
+
+    internal override func forwardingTarget(for aSelector: Selector?) -> Any? {
+        if proxy.responds(to: aSelector) == true {
+            return proxy
+        }
+
+        return super.forwardingTarget(for: aSelector)
     }
 }
 #endif

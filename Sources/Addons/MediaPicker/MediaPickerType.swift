@@ -19,7 +19,7 @@ import MobileCoreServices
 /// - Note: If you want to display a Live Photo rendered as a Loop or a Bounce, you must include ``movie`` case.
 ///
 /// To designate all available media types for a source, use a ``MediaPickerSource/availableMediaTypes``.
-public enum MediaPickerType {
+public enum MediaPickerType: Sendable {
 
     /// The designates the still camera interface when capturing media,
     /// and specifies that only still images should be displayed in the media picker when browsing saved media.
