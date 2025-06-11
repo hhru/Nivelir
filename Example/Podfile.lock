@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  Nivelir: eebfd6d908e0a86828d042dbc7b837437935084c
+  Nivelir: 53439405e5a0d15af9a71cfa7f2acc987030cc25
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: da8b281ef18accce1d0505caaeb1d708354daf4e

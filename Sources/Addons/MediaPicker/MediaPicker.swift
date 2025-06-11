@@ -2,7 +2,7 @@
 import UIKit
 
 /// An object for configuring a selection of media items (photos and videos) from the Library or Camera.
-public struct MediaPicker: CustomStringConvertible {
+public struct MediaPicker: CustomStringConvertible, Sendable {
 
     /// The type of picker interface to be displayed by the controller.
     public let source: MediaPickerSource
@@ -26,11 +26,11 @@ public struct MediaPicker: CustomStringConvertible {
     public let videoQuality: UIImagePickerController.QualityType
 
     /// A closure that returns the created `UIImagePickerController` in the argument.
-    public let didInitialize: ((_ container: UIImagePickerController) -> Void)?
+    public let didInitialize: (@MainActor (_ container: UIImagePickerController) -> Void)?
 
     /// Closure with result,
     /// called when the user has selected a still image or movie or has canceled the pick operation.
-    public let didFinish: (_ result: MediaPickerResult?) -> Void
+    public let didFinish: @MainActor (_ result: MediaPickerResult?) -> Void
 
     public let description: String
 
@@ -56,8 +56,8 @@ public struct MediaPicker: CustomStringConvertible {
         videoExportPreset: String? = nil,
         videoMaximumDuration: TimeInterval = 600.0,
         videoQuality: UIImagePickerController.QualityType = .typeMedium,
-        didInitialize: ((_ container: UIImagePickerController) -> Void)? = nil,
-        didFinish: @escaping (_ result: MediaPickerResult?) -> Void
+        didInitialize: (@MainActor (_ container: UIImagePickerController) -> Void)? = nil,
+        didFinish: @escaping @MainActor (_ result: MediaPickerResult?) -> Void
     ) {
         self.source = source
         self.types = types
@@ -90,8 +90,8 @@ public struct MediaPicker: CustomStringConvertible {
         allowsEditing: Bool = false,
         videoMaximumDuration: TimeInterval = 600.0,
         videoQuality: UIImagePickerController.QualityType = .typeMedium,
-        didInitialize: ((_ container: UIImagePickerController) -> Void)? = nil,
-        didFinish: @escaping (_ result: MediaPickerResult?) -> Void
+        didInitialize: (@MainActor (_ container: UIImagePickerController) -> Void)? = nil,
+        didFinish: @escaping @MainActor (_ result: MediaPickerResult?) -> Void
     ) {
         self.source = source
         self.types = types

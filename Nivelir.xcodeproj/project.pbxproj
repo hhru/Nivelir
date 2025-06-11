@@ -99,6 +99,8 @@
 		C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */; };
 		C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
 		C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
+		C04167EA2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */; };
+		C04167EB2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */; };
 		C04C26E22B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C26E12B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift */; };
 		C04C26E32B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C26E12B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift */; };
 		C052C7B52822D9E100132875 /* ScreenObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052C7B42822D9E100132875 /* ScreenObservation.swift */; };
@@ -729,6 +731,7 @@
 		C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenIterator.swift; sourceTree = "<group>"; };
 		C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationPredicate.swift; sourceTree = "<group>"; };
 		C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationResult.swift; sourceTree = "<group>"; };
+		C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerProxy.swift; sourceTree = "<group>"; };
 		C04C26E12B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerAlreadyPresentingError.swift; sourceTree = "<group>"; };
 		C052C7B42822D9E100132875 /* ScreenObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObservation.swift; sourceTree = "<group>"; };
 		C052C7CC2823A90F00132875 /* ScreenObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObserver.swift; sourceTree = "<group>"; };
@@ -1914,6 +1917,7 @@
 				C0885FEC26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift */,
 				C0885FF426B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift */,
 				C0885FF526B6C60B00CA0A77 /* MediaPickerManager.swift */,
+				C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */,
 				C0885FEA26B6C60B00CA0A77 /* MediaPickerResult.swift */,
 				C0885FED26B6C60B00CA0A77 /* MediaPickerSource.swift */,
 				C0885FEE26B6C60B00CA0A77 /* MediaPickerType.swift */,
@@ -2561,6 +2565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04167EB2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */,
 				C078FD412861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */,
 				C089D9572A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift in Sources */,
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
@@ -3078,6 +3083,7 @@
 				C0B1448928634C1F000E2F2C /* DeeplinkInterceptor.swift in Sources */,
 				C078FD6A2861A1DA0008FC6E /* ProgressAnimation.swift in Sources */,
 				C0238EF827A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */,
+				C04167EA2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */,
 				C089D9732A0B1CA700B6400C /* ScreenBottomSheetDecorator.swift in Sources */,
 				C078FDB92861C8AB0008FC6E /* Progress+Success.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,

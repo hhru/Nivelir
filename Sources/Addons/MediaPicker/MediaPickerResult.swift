@@ -34,32 +34,32 @@ public struct MediaPickerResult {
     /// A Photos asset for the image.
     public let phAsset: PHAsset?
 
-    internal init(info: [String: Any]) {
-        self.type = (info[UIImagePickerController.InfoKey.mediaType.rawValue] as? String)
+    internal init(info: [UIImagePickerController.InfoKey: Any]) {
+        self.type = info[.mediaType]
+            .flatMap { $0 as? String }
             .flatMap(MediaPickerType.init(rawValue:))
 
-        self.metadata = info[UIImagePickerController.InfoKey.mediaMetadata.rawValue] as? [String: Any]
-        self.url = info[UIImagePickerController.InfoKey.mediaURL.rawValue] as? URL
+        self.metadata = info[.mediaMetadata] as? [String: Any]
+
+        self.url = info[.mediaURL] as? URL
 
         if #available(iOS 11.0, *) {
-            self.imageURL = info[UIImagePickerController.InfoKey.imageURL.rawValue] as? URL
+            self.imageURL = info[.imageURL] as? URL
         } else {
             self.imageURL = nil
         }
 
-        self.originalImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
-        self.editedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
+        self.originalImage = info[.originalImage] as? UIImage
+        self.editedImage = info[.editedImage] as? UIImage
 
-        if let value = info[UIImagePickerController.InfoKey.cropRect.rawValue] as? NSValue {
-            self.cropRect = value.cgRectValue
-        } else {
-            self.cropRect = nil
-        }
+        self.cropRect = info[.cropRect]
+            .flatMap { $0 as? NSValue }
+            .map { $0.cgRectValue }
 
-        self.livePhoto = info[UIImagePickerController.InfoKey.livePhoto.rawValue] as? PHLivePhoto
+        self.livePhoto = info[.livePhoto] as? PHLivePhoto
 
         if #available(iOS 11.0, *) {
-            self.phAsset = info[UIImagePickerController.InfoKey.phAsset.rawValue] as? PHAsset
+            self.phAsset = info[.phAsset] as? PHAsset
         } else {
             self.phAsset = nil
         }
