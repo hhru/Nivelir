@@ -13,16 +13,15 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
         attributes: .concurrent
     )
 
-    private var _items: [SharingItem] = []
+    private var unsafeItems: [SharingItem] = []
+
     private var items: [SharingItem] {
         get {
-            accessQueue.sync {
-                _items
-            }
+            accessQueue.sync { unsafeItems }
         }
         set {
-            accessQueue.async(flags: .barrier) { [weak self] in
-                self?._items = newValue
+            accessQueue.async(flags: .barrier) {
+                self.unsafeItems = newValue
             }
         }
     }
@@ -66,12 +65,12 @@ internal final class SharingActivityManager<Activity: SharingCustomActivity>: UI
 
     internal override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         let activityItems = activityItems.map(SharingItem.init(activityItem:))
+
         return activity.isApplicable(for: activityItems)
     }
 
     internal override func prepare(withActivityItems activityItems: [Any]) {
-        let activityItems = activityItems.map(SharingItem.init(activityItem:))
-        items = activityItems
+        items = activityItems.map(SharingItem.init(activityItem:))
     }
 
     internal override func perform() {

@@ -27,9 +27,14 @@ public enum SharingItem: CustomStringConvertible, @unchecked Sendable {
     }
 
     internal init(activityItem: Any) {
-        if let manager = activityItem as? SharingItemManager {
+        switch activityItem {
+        case let item as SharingCustomItem:
+            self = .custom(item)
+
+        case let manager as SharingItemManager:
             self = .custom(manager.item)
-        } else {
+
+        default:
             self = .regular(activityItem)
         }
     }
