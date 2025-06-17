@@ -32,7 +32,7 @@ internal final class SharingItemManager: NSObject, UIActivityItemSource {
         _ activityViewController: UIActivityViewController,
         itemForActivityType activityType: UIActivity.ActivityType?
     ) -> Any? {
-        item.value(for: activityType)
+        item
     }
 
     internal func activityViewController(
