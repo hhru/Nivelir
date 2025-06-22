@@ -1,7 +1,6 @@
 #if canImport(UIKit)
 import Foundation
 
-@MainActor
 public struct BottomSheetDetent: Sendable {
 
     public typealias Resolver = @MainActor @Sendable (_ context: BottomSheetDetentContext) -> CGFloat?
@@ -17,6 +16,7 @@ public struct BottomSheetDetent: Sendable {
         self.resolver = resolver
     }
 
+    @MainActor
     internal func resolve(for context: BottomSheetDetentContext) -> CGFloat? {
         resolver(context)
     }

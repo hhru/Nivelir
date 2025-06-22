@@ -1984,9 +1984,9 @@
 		C089D8FE2A0B1AC300B6400C /* Detent */ = {
 			isa = PBXGroup;
 			children = (
-				C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */,
-				C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */,
 				C089D9012A0B1AC300B6400C /* BottomSheetDetent.swift */,
+				C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */,
+				C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */,
 			);
 			path = Detent;
 			sourceTree = "<group>";
@@ -2448,7 +2448,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1640;
 				ORGANIZATIONNAME = HeadHunter;
 				TargetAttributes = {
 					C057F00D23CB8EEB00C2D895 = {
@@ -3445,7 +3445,6 @@
 		C057F02623CB8EEB00C2D895 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -3464,7 +3463,6 @@
 		C057F02723CB8EEB00C2D895 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -3546,7 +3544,6 @@
 		C0A01A5C23CB92EB00AC2C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -3566,7 +3563,6 @@
 		C0A01A5D23CB92EB00AC2C3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
