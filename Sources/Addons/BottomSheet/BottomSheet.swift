@@ -1,7 +1,6 @@
 #if canImport(UIKit)
 import Foundation
 
-@MainActor
 public struct BottomSheet: Sendable {
 
     public static let `default` = Self()
