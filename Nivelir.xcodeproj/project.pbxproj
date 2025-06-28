@@ -111,6 +111,8 @@
 		C027115E25F60A5100ECC57C /* AnyStackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EE925F4A61F00ECC57C /* AnyStackScreen.swift */; };
 		C027116325F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
 		C027116825F60A5600ECC57C /* AnyTabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0270EF025F4A63400ECC57C /* AnyTabsScreen.swift */; };
+		C04167EA2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */; };
+		C04167EB2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */; };
 		C04C26E22B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C26E12B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift */; };
 		C04C26E32B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C26E12B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift */; };
 		C052C7B52822D9E100132875 /* ScreenObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052C7B42822D9E100132875 /* ScreenObservation.swift */; };
@@ -126,7 +128,6 @@
 		C055B45D2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C055B45C2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift */; };
 		C055B45E2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C055B45C2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift */; };
 		C057F01823CB8EEB00C2D895 /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C057F00E23CB8EEB00C2D895 /* Nivelir.framework */; };
-		C057F01F23CB8EEB00C2D895 /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C058492B2846759700DE42F0 /* ScreenObserverStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058492A2846759700DE42F0 /* ScreenObserverStorage.swift */; };
 		C058492D2846761D00DE42F0 /* ScreenObserverToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058492C2846761D00DE42F0 /* ScreenObserverToken.swift */; };
 		C058492F2846762800DE42F0 /* ScreenObserverStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058492A2846759700DE42F0 /* ScreenObserverStorage.swift */; };
@@ -527,7 +528,6 @@
 		C09591582853257700729E93 /* InvalidSafariURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09591572853257700729E93 /* InvalidSafariURLError.swift */; };
 		C095915B28532CC900729E93 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095915A28532CC900729E93 /* Safari.swift */; };
 		C0A01A5023CB92EB00AC2C3A /* Nivelir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A01A4723CB92EB00AC2C3A /* Nivelir.framework */; };
-		C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */ = {isa = PBXBuildFile; fileRef = C057F01123CB8EEB00C2D895 /* Nivelir.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A72860279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A7285F279932C5000BFBF9 /* ScreenMakeKeyAction.swift */; };
 		C0A72861279932C5000BFBF9 /* ScreenMakeKeyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A7285F279932C5000BFBF9 /* ScreenMakeKeyAction.swift */; };
 		C0A728632799487B000BFBF9 /* AnyDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A728622799487B000BFBF9 /* AnyDeeplink.swift */; };
@@ -749,6 +749,7 @@
 		C027107A25F50FE300ECC57C /* DefaultScreenIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultScreenIterator.swift; sourceTree = "<group>"; };
 		C027108A25F5120300ECC57C /* ScreenIterationPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationPredicate.swift; sourceTree = "<group>"; };
 		C027109E25F51C7F00ECC57C /* ScreenIterationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIterationResult.swift; sourceTree = "<group>"; };
+		C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPickerProxy.swift; sourceTree = "<group>"; };
 		C04C26E12B970FB90086F4E4 /* ScreenContainerAlreadyPresentingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerAlreadyPresentingError.swift; sourceTree = "<group>"; };
 		C052C7B42822D9E100132875 /* ScreenObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObservation.swift; sourceTree = "<group>"; };
 		C052C7CC2823A90F00132875 /* ScreenObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenObserver.swift; sourceTree = "<group>"; };
@@ -757,7 +758,6 @@
 		C055B4592823CCAD00C4EBC4 /* ScreenContainerSharedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerSharedStorage.swift; sourceTree = "<group>"; };
 		C055B45C2823CD4200C4EBC4 /* ScreenContainerWeakStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerWeakStorage.swift; sourceTree = "<group>"; };
 		C057F00E23CB8EEB00C2D895 /* Nivelir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nivelir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C057F01123CB8EEB00C2D895 /* Nivelir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nivelir.h; sourceTree = "<group>"; };
 		C057F01223CB8EEB00C2D895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C057F01723CB8EEB00C2D895 /* Nivelir Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nivelir Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C057F01E23CB8EEB00C2D895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1324,7 +1324,6 @@
 				C08F980E25EEB5A60077AE40 /* Screen */,
 				C0A7289E279ACBA1000BFBF9 /* Tools */,
 				C057F01223CB8EEB00C2D895 /* Info.plist */,
-				C057F01123CB8EEB00C2D895 /* Nivelir.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1957,6 +1956,7 @@
 				C0885FEC26B6C60B00CA0A77 /* MediaPickerCameraSettings.swift */,
 				C0885FF426B6C60B00CA0A77 /* MediaPickerImageExportPreset.swift */,
 				C0885FF526B6C60B00CA0A77 /* MediaPickerManager.swift */,
+				C04167E92DF9F1D100CED7EA /* MediaPickerProxy.swift */,
 				C0885FEA26B6C60B00CA0A77 /* MediaPickerResult.swift */,
 				C0885FED26B6C60B00CA0A77 /* MediaPickerSource.swift */,
 				C0885FEE26B6C60B00CA0A77 /* MediaPickerType.swift */,
@@ -2023,9 +2023,9 @@
 		C089D8FE2A0B1AC300B6400C /* Detent */ = {
 			isa = PBXGroup;
 			children = (
-				C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */,
-				C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */,
 				C089D9012A0B1AC300B6400C /* BottomSheetDetent.swift */,
+				C089D9002A0B1AC300B6400C /* BottomSheetDetentContext.swift */,
+				C089D8FF2A0B1AC300B6400C /* BottomSheetDetentKey.swift */,
 			);
 			path = Detent;
 			sourceTree = "<group>";
@@ -2393,7 +2393,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C057F01F23CB8EEB00C2D895 /* Nivelir.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2401,7 +2400,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A01A5E23CB92F200AC2C3A /* Nivelir.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2490,7 +2488,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1640;
 				ORGANIZATIONNAME = HeadHunter;
 				TargetAttributes = {
 					C057F00D23CB8EEB00C2D895 = {
@@ -2607,6 +2605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04167EB2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */,
 				C078FD412861A1DA0008FC6E /* ProgressMessageFooter.swift in Sources */,
 				C089D9572A0B1AC300B6400C /* BottomSheetPresentedInteraction.swift in Sources */,
 				C05F488B26B68B7F0002DF52 /* AnyScreenActionBaseBox.swift in Sources */,
@@ -3135,6 +3134,7 @@
 				C0B1448928634C1F000E2F2C /* DeeplinkInterceptor.swift in Sources */,
 				C078FD6A2861A1DA0008FC6E /* ProgressAnimation.swift in Sources */,
 				C0238EF827A7E92200148E91 /* URLDeeplinkInvalidComponentsError.swift in Sources */,
+				C04167EA2DF9F1D100CED7EA /* MediaPickerProxy.swift in Sources */,
 				C089D9732A0B1CA700B6400C /* ScreenBottomSheetDecorator.swift in Sources */,
 				C078FDB92861C8AB0008FC6E /* Progress+Success.swift in Sources */,
 				C027108125F50FEB00ECC57C /* ScreenIterator.swift in Sources */,
@@ -3450,7 +3450,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.2;
+				MARKETING_VERSION = 1.9.9;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
@@ -3482,7 +3482,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.2;
+				MARKETING_VERSION = 1.9.9;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
@@ -3497,7 +3497,6 @@
 		C057F02623CB8EEB00C2D895 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -3516,7 +3515,6 @@
 		C057F02723CB8EEB00C2D895 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -3550,7 +3548,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.2;
+				MARKETING_VERSION = 1.9.9;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
@@ -3582,7 +3580,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.2;
+				MARKETING_VERSION = 1.9.9;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.hh.Nivelir;
@@ -3598,7 +3596,6 @@
 		C0A01A5C23CB92EB00AC2C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -3618,7 +3615,6 @@
 		C0A01A5D23CB92EB00AC2C3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;

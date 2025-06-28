@@ -1,5 +1,5 @@
 # Nivelir
-[![Build Status](https://github.com/hhru/Nivelir/workflows/CI/badge.svg?branch=main)](https://github.com/hhru/Nivelir/actions)
+[![Build Status](https://github.com/hhru/Nivelir/actions/workflows/swift.yml/badge.svg?branch=main)](https://github.com/hhru/Nivelir/actions)
 [![Cocoapods](https://img.shields.io/cocoapods/v/Nivelir)](http://cocoapods.org/pods/Nivelir)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen)](https://github.com/Carthage/Carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen)](https://swift.org/package-manager/)
@@ -38,7 +38,7 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for ma
 To integrate Nivelir into your Xcode project using Swift Package Manager,
 add the following as a dependency to your `Package.swift`:
 ``` swift
-.package(url: "https://github.com/hhru/Nivelir.git", from: "1.8.2")
+.package(url: "https://github.com/hhru/Nivelir.git", from: "1.9.9")
 ```
 Then specify `"Nivelir"` as a dependency of the Target in which you wish to use Nivelir.
 
@@ -53,7 +53,7 @@ let package = Package(
         .library(name: "MyPackage", targets: ["MyPackage"])
     ],
     dependencies: [
-        .package(url: "https://github.com/hhru/Nivelir.git", from: "1.8.2")
+        .package(url: "https://github.com/hhru/Nivelir.git", from: "1.9.9")
     ],
     targets: [
         .target(name: "MyPackage", dependencies: ["Nivelir"])
@@ -71,7 +71,7 @@ $ brew install carthage
 
 To integrate Nivelir into your Xcode project using Carthage, specify it in your `Cartfile`:
 ``` ogdl
-github "hhru/Nivelir" ~> 1.8.2
+github "hhru/Nivelir" ~> 1.9.9
 ```
 
 Finally run `carthage update` to build the framework and drag the built `Nivelir.framework` into your Xcode project.
@@ -89,7 +89,7 @@ platform :ios, '13.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Nivelir', '~> 1.8.2'
+    pod 'Nivelir', '~> 1.9.9'
 end
 ```
 

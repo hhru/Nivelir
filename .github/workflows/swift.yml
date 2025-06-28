@@ -15,9 +15,9 @@ env:
 jobs:
   BuildAndTests:
     name: Build & Tests
-    runs-on: macOS-14
+    runs-on: macOS-15
     env:
-      DEVELOPER_DIR: /Applications/Xcode_16.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_16.0.app
       XCODE_PROJECT: Nivelir.xcodeproj
       IOS_SCHEME: Nivelir iOS
       IOS_DESTINATION: OS=18.0,name=iPhone 16
@@ -26,7 +26,7 @@ jobs:
       TVOS_DESTINATION: OS=18.0,name=Apple TV
       TVOS_RESULT_PATH: xcodebuild-tvos.xcresult
       SKIP_SWIFTLINT: YES
-      SWIFTLINT_VERSION: 0.52.2
+      SWIFTLINT_VERSION: 0.54.0
       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
     steps:
       - uses: actions/checkout@v3
@@ -52,7 +52,9 @@ jobs:
 
   Cocoapods:
     name: Cocoapods
-    runs-on: macOS-14
+    runs-on: macOS-15
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.0.app
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
@@ -60,14 +62,14 @@ jobs:
         run: |
           gem install bundler
           bundle install --without=documentation
-      - name: Switch Xcode version
-        run: sudo xcode-select --switch /Applications/Xcode_16.app
       - name: Linting
         run: bundle exec pod lib lint --skip-tests --allow-warnings
 
   SPM:
     name: Swift Package Manager
-    runs-on: macOS-14
+    runs-on: macOS-15
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.0.app
     steps:
       - uses: actions/checkout@v3
       - name: Build
