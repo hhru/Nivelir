@@ -2,6 +2,7 @@
 import UIKit
 
 /// A type that specifies how to export images to the client application.
+@frozen
 public enum MediaPickerImageExportPreset: Sendable {
 
     @available(iOS 11, *)

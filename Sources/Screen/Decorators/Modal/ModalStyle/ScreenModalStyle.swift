@@ -3,6 +3,7 @@ import UIKit
 
 /// Modal screen presentation style.
 /// Changes the presentation animation when the screen is shown modally.
+@frozen
 public enum ScreenModalStyle {
 
     /// Default animation using `UIModalPresentationStyle` and `UIModalTransitionStyle`.

@@ -2,6 +2,7 @@
 import UIKit
 
 @MainActor
+@frozen
 public enum ScreenTabAnimation {
 
     case custom(ScreenTabCustomAnimation)
