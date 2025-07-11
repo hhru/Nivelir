@@ -5,6 +5,7 @@ import UIKit
 ///
 /// An animation is used to update and show the `header`, `indicator` and `footer` parts of the progress view.
 @MainActor
+@frozen
 public enum ProgressAnimation {
 
     /// Custom animation for showing progress view of the HUD.
