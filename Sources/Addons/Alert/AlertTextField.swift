@@ -2,6 +2,7 @@
 import UIKit
 
 /// Types of text fields added to the alert.
+@frozen
 public enum AlertTextField: Sendable {
 
     /// A text field, with text and placeholder customization.

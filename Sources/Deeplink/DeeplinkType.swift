@@ -1,6 +1,7 @@
 import Foundation
 
 /// Different types of deep links.
+@frozen
 public enum DeeplinkType {
 
     /// A ``Deeplink`` handled from a URL.

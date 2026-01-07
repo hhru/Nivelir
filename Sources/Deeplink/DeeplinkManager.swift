@@ -87,6 +87,7 @@ public final class DeeplinkManager: DeeplinkHandler {
     ) {
         self.init(
             deeplinkTypes: [.default: deeplinkTypes],
+            interceptors: interceptors,
             navigator: navigator
         )
     }

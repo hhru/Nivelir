@@ -1,6 +1,7 @@
 import Foundation
 
 /// The strategies available for formatting dates when decoding them from Dictionary.
+@frozen
 public enum DictionaryDateDecodingStrategy {
 
     /// The strategy that uses formatting from the Date structure.

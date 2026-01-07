@@ -6,6 +6,7 @@ import UIKit
 /// A given source may not be available on a given device because the source is not physically present
 /// or because it cannot currently be accessed.
 @MainActor
+@frozen
 public enum MediaPickerSource: CustomStringConvertible {
 
     /// Specifies the device’s photo library as the source for the image picker controller.

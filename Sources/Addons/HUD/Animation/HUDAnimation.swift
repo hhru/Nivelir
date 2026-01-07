@@ -3,6 +3,7 @@ import UIKit
 
 /// The animation type that should be used when the ``HUD`` is shown and hidden.
 @MainActor
+@frozen
 public enum HUDAnimation {
 
     /// Custom animation for showing and hiding the HUD.

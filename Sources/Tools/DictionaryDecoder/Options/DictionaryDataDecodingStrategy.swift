@@ -1,6 +1,7 @@
 import Foundation
 
 /// The strategies for decoding raw data.
+@frozen
 public enum DictionaryDataDecodingStrategy {
 
     /// The strategy that encodes data using the encoding specified by the data instance itself.

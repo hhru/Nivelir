@@ -1,6 +1,7 @@
 import Foundation
 
 /// The values that determine how to decode a type’s coding keys from Dictionary keys.
+@frozen
 public enum DictionaryKeyDecodingStrategy {
 
     /// A key decoding strategy that doesn’t change key names during decoding.

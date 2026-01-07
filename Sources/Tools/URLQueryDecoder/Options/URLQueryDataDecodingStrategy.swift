@@ -1,6 +1,7 @@
 import Foundation
 
 /// The strategies for decoding raw data.
+@frozen
 public enum URLQueryDataDecodingStrategy {
 
     /// The strategy that encodes data using the encoding specified by the data instance itself.

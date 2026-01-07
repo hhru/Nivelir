@@ -1,4 +1,4 @@
-#if canImport(UIKit) && canImport(Photos) && canImport(AVFoundation) && os(iOS)
+#if canImport(UIKit) && canImport(Photos) && canImport(AVFoundation) && os(iOS) && !targetEnvironment(macCatalyst)
 import UIKit
 import Photos
 import AVFoundation

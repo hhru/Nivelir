@@ -1,6 +1,7 @@
 import Foundation
 
 /// The strategies available for formatting dates when decoding them from URL.
+@frozen
 public enum URLQueryDateDecodingStrategy {
 
     /// The strategy that uses formatting from the Date structure.
