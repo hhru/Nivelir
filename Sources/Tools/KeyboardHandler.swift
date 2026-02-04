@@ -1,9 +1,10 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
+@MainActor
 internal protocol KeyboardHandler: AnyObject, Sendable {
 
-    var keyboardFrame: CGRect { get set }
+    var keyboardFrame: CGRect { get }
 
     var keyboardWillShowNotificationObserver: NotificationObserver? { get set }
     var keyboardDidShowNotificationObserver: NotificationObserver? { get set }
@@ -14,7 +15,6 @@ internal protocol KeyboardHandler: AnyObject, Sendable {
     var keyboardWillHideNotificationObserver: NotificationObserver? { get set }
     var keyboardDidHideNotificationObserver: NotificationObserver? { get set }
 
-    @MainActor
     func handleKeyboardFrame(
         _ keyboardFrame: CGRect,
         animationDuration: TimeInterval,
@@ -36,8 +36,18 @@ private let keyboardDidHideNotificationAssociation = ObjectAssociation<Notificat
 extension KeyboardHandler where Self: NSObject {
 
     internal var keyboardFrame: CGRect {
-        get { keyboardFrameAssociation[self] ?? .zero }
-        set { keyboardFrameAssociation[self] = newValue }
+        if let keyboardFrame = keyboardFrameAssociation[self] {
+            return keyboardFrame
+        }
+
+        let screenBounds = UIScreen.main.bounds
+
+        return CGRect(
+            x: screenBounds.minX,
+            y: screenBounds.maxY,
+            width: screenBounds.width,
+            height: .zero
+        )
     }
 
     internal var keyboardWillShowNotificationObserver: NotificationObserver? {
@@ -73,46 +83,76 @@ extension KeyboardHandler where Self: NSObject {
 
 extension KeyboardHandler {
 
-    private func resolveKeyboardFrame(from notification: Notification) -> CGRect {
-        notification
+    private nonisolated func handleKeyboardFrameNotification(_ notification: Notification) {
+        let keyboardFrame = notification
             .userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
             .flatMap { $0 as? NSValue }
             .map { $0.cgRectValue } ?? .zero
-    }
 
-    private func resolveKeyboardAnimationDuration(from notification: Notification) -> TimeInterval {
-        notification
+        let animationDuration = notification
             .userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey]
             .flatMap { $0 as? NSNumber }
             .map { $0.doubleValue } ?? .zero
-    }
 
-    private func resolveKeyboardAnimationOptions(from notification: Notification) -> UIView.AnimationOptions {
-        notification
+        let animationOptions = notification
             .userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey]
             .flatMap { $0 as? NSNumber }
             .map { $0.intValue }
             .map { UIView.AnimationOptions(rawValue: UInt($0) << 16) } ?? .curveLinear
-    }
-
-    private func handleKeyboardFrameNotification(_ notification: Notification) {
-        let keyboardFrame = resolveKeyboardFrame(from: notification)
-
-        guard self.keyboardFrame != keyboardFrame else {
-            return
-        }
-
-        self.keyboardFrame = keyboardFrame
-        let duration = resolveKeyboardAnimationDuration(from: notification)
-        let options = resolveKeyboardAnimationOptions(from: notification)
 
         MainActor.assumeIsolated {
+            guard keyboardFrameAssociation[self] != keyboardFrame else {
+                return
+            }
+
+            keyboardFrameAssociation[self] = keyboardFrame
+
             handleKeyboardFrame(
                 keyboardFrame,
-                animationDuration: duration,
-                animationOptions: options
+                animationDuration: animationDuration,
+                animationOptions: animationOptions
             )
         }
+    }
+}
+
+extension KeyboardHandler {
+
+    internal func keyboardHeight(in view: UIView) -> CGFloat {
+        let windowFrame = view.window.map { window in
+            window.convert(window.bounds, to: nil)
+        } ?? UIScreen.main.bounds
+
+        let keyboardFrame = keyboardFrame
+
+        guard windowFrame.intersects(keyboardFrame) else {
+            return .zero
+        }
+
+        let isKeyboardFloating = abs(keyboardFrame.width - windowFrame.width) > 2.0
+            || abs(keyboardFrame.maxX - windowFrame.maxX) > 2.0
+            || abs(keyboardFrame.maxY - windowFrame.maxY) > 2.0
+
+        guard !isKeyboardFloating else {
+            return .zero
+        }
+
+        let viewFrame = view.convert(view.bounds, to: nil)
+
+        guard windowFrame.intersects(viewFrame) else {
+            return .zero
+        }
+
+        guard viewFrame.intersects(keyboardFrame) else {
+            return .zero
+        }
+
+        let viewVisibleFrame = windowFrame.intersection(viewFrame)
+        let keyboardVisibleFrame = windowFrame.intersection(keyboardFrame)
+
+        let keyboardHeight = viewVisibleFrame.maxY - keyboardVisibleFrame.minY
+
+        return min(max(keyboardHeight, .zero), keyboardVisibleFrame.height)
     }
 
     internal func subscribeToKeyboardNotifications() {
