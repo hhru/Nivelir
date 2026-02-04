@@ -178,9 +178,10 @@ internal final class BottomSheetPresentationController: UIPresentationController
             return .zero
         }
 
-        let verticalInsets = traitCollection.horizontalSizeClass == .regular
-            ? max(0.5 * (containerView.bounds.height - appleMagicSize.height), minInsets)
-            : .zero
+        let verticalInsets = max(
+            0.5 * (containerView.bounds.height - appleMagicSize.height),
+            minInsets
+        )
 
         return UIEdgeInsets(
             top: max(verticalInsets - safeAreaInsets.top, .zero),
@@ -598,11 +599,10 @@ extension BottomSheetPresentationController: KeyboardHandler {
         animationDuration: TimeInterval,
         animationOptions: UIView.AnimationOptions
     ) {
+        let additionalInsets = resolveAdditionalInsets()
+
         let keyboardHeight = transitionView.map { transitionView in
-            transitionView
-                .convert(transitionView.bounds, to: nil)
-                .intersection(keyboardFrame)
-                .height
+            max(self.keyboardHeight(in: transitionView) - additionalInsets.bottom, .zero)
         } ?? .zero
 
         detention.keyboardHeight = contentView.firstResponder != nil
