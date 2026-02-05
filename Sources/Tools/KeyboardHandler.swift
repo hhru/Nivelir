@@ -150,9 +150,9 @@ extension KeyboardHandler {
         let viewVisibleFrame = windowFrame.intersection(viewFrame)
         let keyboardVisibleFrame = windowFrame.intersection(keyboardFrame)
 
-        let keyboardHeight = viewVisibleFrame.maxY - keyboardVisibleFrame.minY
-
-        return min(max(keyboardHeight, .zero), keyboardVisibleFrame.height)
+        return viewVisibleFrame
+            .intersection(keyboardVisibleFrame)
+            .height
     }
 
     internal func subscribeToKeyboardNotifications() {
