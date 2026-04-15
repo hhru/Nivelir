@@ -20,7 +20,7 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
     }
 
     @MainActor
-    private func requestPhotosAccess() async -> Bool {
+    private func requestPhotosAccess() async throws {
         if #available(iOS 14, *) {
             await PHPhotoLibrary.requestAuthorization(for: .readWrite)
         } else {
@@ -30,11 +30,12 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
                 }
             }
         }
-        return await requestPhotosAccessIfNeeded()
+
+        try await requestPhotosAccessIfNeeded(isRequested: true)
     }
 
     @MainActor
-    private func requestPhotosAccessIfNeeded() async -> Bool {
+    private func requestPhotosAccessIfNeeded(isRequested: Bool = false) async throws {
         let authorizationStatus: PHAuthorizationStatus
 
         if #available(iOS 14, *) {
@@ -44,51 +45,64 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         }
 
         switch authorizationStatus {
+        case .notDetermined:
+            try await requestPhotosAccess()
+
         case .authorized, .limited:
-            return true
+            break
 
         case .denied, .restricted:
-            return false
-
-        case .notDetermined:
-            return await requestPhotosAccess()
+            throw MediaPickerSourceAccessDeniedError(
+                for: self,
+                isRequested: isRequested
+            )
 
         @unknown default:
-            return false
+            throw MediaPickerSourceAccessDeniedError(
+                for: self,
+                isRequested: isRequested
+            )
         }
     }
 
     @MainActor
-    private func requestCameraAccess() async -> Bool {
+    private func requestCameraAccess() async throws {
         await AVCaptureDevice.requestAccess(for: .video)
-        return await requestCameraAccessIfNeeded()
+
+        try await requestCameraAccessIfNeeded(isRequested: true)
     }
 
     @MainActor
-    private func requestCameraAccessIfNeeded() async -> Bool {
+    private func requestCameraAccessIfNeeded(isRequested: Bool = false) async throws {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .notDetermined:
+            try await requestCameraAccess()
+
         case .authorized:
-            return true
+            break
 
         case .denied, .restricted:
-            return false
-
-        case .notDetermined:
-            return await requestCameraAccess()
+            throw MediaPickerSourceAccessDeniedError(
+                for: self,
+                isRequested: isRequested
+            )
 
         @unknown default:
-            return false
+            throw MediaPickerSourceAccessDeniedError(
+                for: self,
+                isRequested: isRequested
+            )
         }
     }
 
     @MainActor
-    private func requestAccessIfNeeded() async -> Bool {
+    private func requestAccessIfNeeded() async throws {
         switch mediaPicker.source {
         case .photoLibrary, .savedPhotosAlbum:
-            await requestPhotosAccessIfNeeded()
+            try await requestPhotosAccessIfNeeded()
 
         case .camera:
-            await requestCameraAccessIfNeeded()
+            try await requestCameraAccessIfNeeded()
         }
     }
 
@@ -150,9 +164,10 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         }
 
         Task { @MainActor in
-            let authorized = await requestAccessIfNeeded()
-            guard authorized else {
-                return completion(.mediaPickerSourceAccessDenied(for: self))
+            do {
+                try await requestAccessIfNeeded()
+            } catch {
+                return completion(.failure(error))
             }
 
             guard mediaPicker.source.isAvailable else {
