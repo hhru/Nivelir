@@ -3,6 +3,7 @@ import UIKit
 
 open class BottomSheetStackController: UINavigationController {
 
+    private var lastPreferredContentSize = CGSize.zero
     private var isUpdatingStack = false
 
     private func updatePreferredContentSizeIfNeeded() {
@@ -31,7 +32,9 @@ open class BottomSheetStackController: UINavigationController {
             height: preferredContentHeight
         )
 
-        if self.preferredContentSize != preferredContentSize {
+        if lastPreferredContentSize != preferredContentSize {
+            lastPreferredContentSize = preferredContentSize
+
             self.preferredContentSize = preferredContentSize
         }
     }
