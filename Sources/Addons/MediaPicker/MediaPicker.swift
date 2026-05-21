@@ -2,7 +2,7 @@
 import UIKit
 
 /// An object for configuring a selection of media items (photos and videos) from the Library or Camera.
-public struct MediaPicker: CustomStringConvertible, Sendable {
+public struct MediaPicker: Sendable {
 
     /// The type of picker interface to be displayed by the controller.
     public let source: MediaPickerSource
@@ -25,14 +25,15 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
     /// The video recording and transcoding quality.
     public let videoQuality: UIImagePickerController.QualityType
 
+    /// The user interface style for the image picker controller.
+    public let userInterfaceStyle: UIUserInterfaceStyle?
+
     /// A closure that returns the created `UIImagePickerController` in the argument.
     public let didInitialize: (@MainActor (_ container: UIImagePickerController) -> Void)?
 
     /// Closure with result,
     /// called when the user has selected a still image or movie or has canceled the pick operation.
     public let didFinish: @MainActor (_ result: MediaPickerResult?) -> Void
-
-    public let description: String
 
     /// Creates a configuration for selecting media items.
     /// - Parameters:
@@ -44,6 +45,7 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
     ///   - videoExportPreset: The preset to use when preparing video for export to your app.
     ///   - videoMaximumDuration: The maximum duration, in seconds, for a video recording.
     ///   - videoQuality: The video recording and transcoding quality.
+    ///   - userInterfaceStyle: The user interface style for the image picker controller.
     ///   - didInitialize: Closure to configure the `UIImagePickerController` after initialization.
     ///   - didFinish: Closure with result, called when the user
     ///   has selected a still image or movie or has canceled the pick operation.
@@ -56,6 +58,7 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
         videoExportPreset: String? = nil,
         videoMaximumDuration: TimeInterval = 600.0,
         videoQuality: UIImagePickerController.QualityType = .typeMedium,
+        userInterfaceStyle: UIUserInterfaceStyle? = nil,
         didInitialize: (@MainActor (_ container: UIImagePickerController) -> Void)? = nil,
         didFinish: @escaping @MainActor (_ result: MediaPickerResult?) -> Void
     ) {
@@ -66,11 +69,10 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
         self.videoExportPreset = videoExportPreset
         self.videoMaximumDuration = videoMaximumDuration
         self.videoQuality = videoQuality
+        self.userInterfaceStyle = userInterfaceStyle
 
         self.didInitialize = didInitialize
         self.didFinish = didFinish
-
-        description = "ImagePicker(from: \"\(source)\")"
     }
 
     /// Creates a configuration for selecting media items.
@@ -81,6 +83,7 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
     ///   the user is allowed to edit a selected still image or movie.
     ///   - videoMaximumDuration: The maximum duration, in seconds, for a video recording.
     ///   - videoQuality: The video recording and transcoding quality.
+    ///   - userInterfaceStyle: The user interface style for the image picker controller.
     ///   - didInitialize: Closure to configure the `UIImagePickerController` after initialization.
     ///   - didFinish: Closure with result, called when the user
     ///   has selected a still image or movie or has canceled the pick operation.
@@ -90,6 +93,7 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
         allowsEditing: Bool = false,
         videoMaximumDuration: TimeInterval = 600.0,
         videoQuality: UIImagePickerController.QualityType = .typeMedium,
+        userInterfaceStyle: UIUserInterfaceStyle? = nil,
         didInitialize: (@MainActor (_ container: UIImagePickerController) -> Void)? = nil,
         didFinish: @escaping @MainActor (_ result: MediaPickerResult?) -> Void
     ) {
@@ -100,11 +104,17 @@ public struct MediaPicker: CustomStringConvertible, Sendable {
         self.videoExportPreset = nil
         self.videoMaximumDuration = videoMaximumDuration
         self.videoQuality = videoQuality
+        self.userInterfaceStyle = userInterfaceStyle
 
         self.didInitialize = didInitialize
         self.didFinish = didFinish
+    }
+}
 
-        description = "ImagePicker(from: \"\(source)\")"
+extension MediaPicker: CustomStringConvertible {
+
+    public var description: String {
+        "ImagePicker(from: \"\(source)\")"
     }
 }
 #endif

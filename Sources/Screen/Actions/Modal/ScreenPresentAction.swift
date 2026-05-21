@@ -37,16 +37,6 @@ public struct ScreenPresentAction<
         navigator.logInfo("Presenting \(screen) on \(type(of: container))")
 
         let presented = screen.build(navigator: navigator)
-        var completed = false
-
-        let completion = { result in
-            guard !completed else {
-                return
-            }
-
-            completed = true
-            completion(result)
-        }
 
         container.present(presented, animated: animated) {
             if container.presented === presented {
@@ -54,10 +44,6 @@ public struct ScreenPresentAction<
             } else {
                 completion(.containerAlreadyPresenting(container, for: self))
             }
-        }
-
-        if container.presented !== presented {
-            completion(.containerAlreadyPresenting(container, for: self))
         }
     }
 }

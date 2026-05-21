@@ -149,6 +149,10 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         mediaPickerContainer.videoMaximumDuration = mediaPicker.videoMaximumDuration
         mediaPickerContainer.videoQuality = mediaPicker.videoQuality
 
+        if let userInterfaceStyle = mediaPicker.userInterfaceStyle {
+            mediaPickerContainer.overrideUserInterfaceStyle = userInterfaceStyle
+        }
+
         return mediaPickerContainer
     }
 
