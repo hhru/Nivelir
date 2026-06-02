@@ -21,30 +21,14 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
 
     @MainActor
     private func requestPhotosAccess() async throws {
-        if #available(iOS 14, *) {
-            await PHPhotoLibrary.requestAuthorization(for: .readWrite)
-        } else {
-            try? await withCheckedThrowingContinuation { continuation in
-                PHPhotoLibrary.requestAuthorization { _ in
-                    continuation.resume()
-                }
-            }
-        }
+        await PHPhotoLibrary.requestAuthorization(for: .readWrite)
 
         try await requestPhotosAccessIfNeeded(isRequested: true)
     }
 
     @MainActor
     private func requestPhotosAccessIfNeeded(isRequested: Bool = false) async throws {
-        let authorizationStatus: PHAuthorizationStatus
-
-        if #available(iOS 14, *) {
-            authorizationStatus = PHPhotoLibrary.authorizationStatus(for: .readWrite)
-        } else {
-            authorizationStatus = PHPhotoLibrary.authorizationStatus()
-        }
-
-        switch authorizationStatus {
+        switch PHPhotoLibrary.authorizationStatus(for: .readWrite) {
         case .notDetermined:
             try await requestPhotosAccess()
 
@@ -148,6 +132,10 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
 
         mediaPickerContainer.videoMaximumDuration = mediaPicker.videoMaximumDuration
         mediaPickerContainer.videoQuality = mediaPicker.videoQuality
+
+        if let userInterfaceStyle = mediaPicker.userInterfaceStyle {
+            mediaPickerContainer.overrideUserInterfaceStyle = userInterfaceStyle
+        }
 
         return mediaPickerContainer
     }

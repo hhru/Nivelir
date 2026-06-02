@@ -17,15 +17,11 @@ public struct ScreenRequestStoreReviewAction<Container: ScreenVisibleContainer>:
     ) {
         navigator.logInfo("Requesting app review on \(type(of: container))")
 
-        if #available(iOS 14.0, *) {
-            guard let windowScene = container.windowScene else {
-                return completion(.containerNotFound(type: UIWindowScene.self, for: self))
-            }
-
-            SKStoreReviewController.requestReview(in: windowScene)
-        } else {
-            SKStoreReviewController.requestReview()
+        guard let windowScene = container.windowScene else {
+            return completion(.containerNotFound(type: UIWindowScene.self, for: self))
         }
+
+        SKStoreReviewController.requestReview(in: windowScene)
 
         DispatchQueue.main.async {
             completion(.success)
