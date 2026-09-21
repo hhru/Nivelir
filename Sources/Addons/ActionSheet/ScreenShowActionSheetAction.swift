@@ -14,6 +14,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
         self.animated = animated
     }
 
+    @MainActor
     private func showAlertContainer(
         _ alertContainer: UIAlertController,
         in container: Container,
@@ -24,6 +25,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
         }
     }
 
+    @MainActor
     private func showAlertContainerUsingPopover(
         _ alertContainer: UIAlertController,
         from source: ScreenPopoverPresentationAnchor,
@@ -59,6 +61,7 @@ public struct ScreenShowActionSheetAction<Container: UIViewController>: ScreenAc
         )
     }
 
+    @MainActor
     private func makeAlertContainer() -> UIAlertController {
         let alertContainer = UIAlertController(
             title: actionSheet.title,

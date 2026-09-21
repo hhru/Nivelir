@@ -17,7 +17,6 @@ import Foundation
 /// For example, show a screen for authorization,
 /// as a result of which `completion` is called with success if authorization was completed,
 /// or with an error (for example `ScreenCanceledError`) if the user canceled authorization.
-@MainActor
 public protocol ScreenAction {
 
     /// A type of container that the action uses for navigation.
@@ -120,6 +119,7 @@ public protocol ScreenAction {
     ///                 This closure has no return value and takes the result of the navigation action.
     ///
     /// - SeeAlso: `ScreenNavigator`
+    @MainActor
     func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -137,6 +137,7 @@ public protocol ScreenAction {
     ///
     /// - SeeAlso: `ScreenNavigator`
     /// - SeeAlso: `ScreenActionStorage`
+    @MainActor
     func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -147,6 +148,7 @@ public protocol ScreenAction {
 
 extension ScreenAction where State == Never {
 
+    @MainActor
     public func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -173,6 +175,7 @@ extension ScreenAction {
         nil
     }
 
+    @MainActor
     public func perform(
         container: Container,
         navigator: ScreenNavigator,
