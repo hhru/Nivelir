@@ -17,7 +17,26 @@ import Foundation
 /// For example, show a screen for authorization,
 /// as a result of which `completion` is called with success if authorization was completed,
 /// or with an error (for example `ScreenCanceledError`) if the user canceled authorization.
-public protocol ScreenAction {
+///
+/// **Concurrency**
+///
+/// The protocol refines `Sendable` so that a type eraser can build its `description` lazily,
+/// outside of the main actor, instead of building it eagerly in its initializer.
+///
+/// A conformance declared in the primary type declaration needs no changes: the `@MainActor`
+/// attribute isolates the whole type, which makes it implicitly `Sendable`, so the refinement
+/// is satisfied without any additional work.
+///
+/// A conformance declared in an extension does not inherit that isolation, so the type is
+/// checked against `Sendable` as written. Annotate the type itself with `@MainActor` if it
+/// stores non-`Sendable` values or is a class with mutable state; annotating the extension
+/// has no effect. A conditional conformance does not imply conformance to `Sendable` at all
+/// and needs an explicit `Sendable` conformance instead.
+///
+/// These diagnostics are warnings in the Swift 5 language mode and errors in the Swift 6
+/// language mode. `@preconcurrency import Nivelir` silences them in either mode.
+@MainActor
+public protocol ScreenAction: Sendable {
 
     /// A type of container that the action uses for navigation.
     ///
@@ -119,7 +138,6 @@ public protocol ScreenAction {
     ///                 This closure has no return value and takes the result of the navigation action.
     ///
     /// - SeeAlso: `ScreenNavigator`
-    @MainActor
     func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -137,7 +155,6 @@ public protocol ScreenAction {
     ///
     /// - SeeAlso: `ScreenNavigator`
     /// - SeeAlso: `ScreenActionStorage`
-    @MainActor
     func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -148,7 +165,6 @@ public protocol ScreenAction {
 
 extension ScreenAction where State == Never {
 
-    @MainActor
     public func perform(
         container: Container,
         navigator: ScreenNavigator,
@@ -175,7 +191,6 @@ extension ScreenAction {
         nil
     }
 
-    @MainActor
     public func perform(
         container: Container,
         navigator: ScreenNavigator,

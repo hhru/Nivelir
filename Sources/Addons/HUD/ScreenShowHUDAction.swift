@@ -10,7 +10,6 @@ public struct ScreenShowHUDAction<Container: ScreenContainer>: ScreenAction {
     public let animation: HUDAnimation?
     public let duration: TimeInterval?
 
-    @MainActor
     public init(
         hud: HUD,
         animation: HUDAnimation? = .default,

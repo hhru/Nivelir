@@ -17,7 +17,6 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
         self.animated = animated
     }
 
-    @MainActor
     private func showActivitiesContainer(
         _ activitiesContainer: UIActivityViewController,
         on container: Container,
@@ -28,7 +27,6 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
         }
     }
 
-    @MainActor
     private func showActivitiesContainerInPopover(
         _ activitiesContainer: UIActivityViewController,
         on container: Container,
@@ -68,7 +66,6 @@ public struct ScreenShareAction<Container: UIViewController>: ScreenAction {
         )
     }
 
-    @MainActor
     private func makeActivitiesContainer(navigator: ScreenNavigator) -> UIActivityViewController {
         let sharingContainer = UIActivityViewController(
             activityItems: sharing

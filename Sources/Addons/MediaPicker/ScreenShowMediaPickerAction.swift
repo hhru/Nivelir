@@ -90,7 +90,6 @@ public struct ScreenShowMediaPickerAction<Container: UIViewController>: ScreenAc
         }
     }
 
-    @MainActor
     private func makeImagePickerContainer(availableTypes: [MediaPickerType]) -> UIImagePickerController {
         let mediaPickerContainer = UIImagePickerController()
         let mediaPickerManager = MediaPickerManager(mediaPicker: mediaPicker)

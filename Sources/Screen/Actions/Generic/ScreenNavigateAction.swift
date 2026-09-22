@@ -16,7 +16,6 @@ public struct ScreenNavigateAction<Container: ScreenContainer>: ScreenAction {
         self.actions = actions
     }
 
-    @MainActor
     private func performActions(
         _ actions: [AnyScreenAction<Container, Void>],
         from index: Int = .zero,
