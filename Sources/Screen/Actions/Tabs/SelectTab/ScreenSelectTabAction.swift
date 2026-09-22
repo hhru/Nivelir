@@ -17,7 +17,6 @@ public struct ScreenSelectTabAction<
         self.animation = animation
     }
 
-    @MainActor
     private func animateIfNeeded(
         container: Container,
         from selectedTab: UIViewController?,

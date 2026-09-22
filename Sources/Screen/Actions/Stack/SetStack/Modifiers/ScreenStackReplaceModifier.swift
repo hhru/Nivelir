@@ -7,12 +7,11 @@ public struct ScreenStackReplaceModifier<
 
     public let screen: New
 
-    public var description: String {
-        "Replace with \(screen)"
-    }
+    public let description: String
 
     public init(screen: New) {
         self.screen = screen
+        description = "Replace with \(screen)"
     }
 
     public func perform(

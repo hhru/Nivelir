@@ -18,7 +18,6 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         self.resolution = resolution
     }
 
-    @MainActor
     private func performResolutionActions(
         _ actions: [AnyScreenAction<Container, Void>],
         from index: Int = .zero,
@@ -47,7 +46,6 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         }
     }
 
-    @MainActor
     private func performEnsureActions(
         container: Container,
         navigator: ScreenNavigator,
@@ -61,7 +59,6 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         )
     }
 
-    @MainActor
     private func performResultActions(
         ensureResult: Result<Void, Error>,
         actionResult: Result<Action.Output, Error>,
@@ -99,7 +96,6 @@ public struct ScreenTryAction<Action: ScreenAction>: ScreenAction {
         )
     }
 
-    @MainActor
     private func performResolution(
         actionResult: Result<Action.Output, Error>,
         container: Container,

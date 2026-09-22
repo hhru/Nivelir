@@ -7,10 +7,10 @@ internal final class AnyScreenActionBox<
 
     internal typealias Mapper = (_ result: Result<Wrapped.Output, Error>) -> Result<Output, Error>
 
-    private let wrapped: Wrapped
+    nonisolated private let wrapped: Wrapped
     private let mapper: Mapper
 
-    internal override var description: String {
+    nonisolated internal override var description: String {
         "\(wrapped)"
     }
 

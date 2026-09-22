@@ -53,7 +53,6 @@ public struct ScreenSetStackAction<Container: UINavigationController>: ScreenAct
         }
     }
 
-    @MainActor
     private func performStack(
         _ newStack: [UIViewController],
         container: Container,

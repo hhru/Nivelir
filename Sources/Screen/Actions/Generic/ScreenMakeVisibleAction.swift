@@ -19,7 +19,6 @@ public struct ScreenMakeVisibleAction<Container: UIViewController>: ScreenAction
         self.dissmissAnimated = dissmissAnimated
     }
 
-    @MainActor
     private func showContainer(_ container: UIViewController) throws -> ScreenRootRoute<Container> {
         guard let parent = container.parent else {
             return .initial

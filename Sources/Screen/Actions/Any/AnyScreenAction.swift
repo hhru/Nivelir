@@ -22,7 +22,7 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>:
 
     private let box: AnyScreenActionBaseBox<Container, Output>
 
-    public var description: String {
+    nonisolated public var description: String {
         box.description
     }
 

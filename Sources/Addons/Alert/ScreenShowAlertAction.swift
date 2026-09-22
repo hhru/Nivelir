@@ -14,7 +14,6 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
         self.animated = animated
     }
 
-    @MainActor
     private func addTextField(
         _ textField: AlertTextField,
         to alertContainer: UIAlertController
@@ -37,7 +36,6 @@ public struct ScreenShowAlertAction<Container: UIViewController>: ScreenAction {
         return alertTextField
     }
 
-    @MainActor
     private func makeAlertContainer() -> UIAlertController {
         let alertContainer = UIAlertController(
             title: alert.title,
