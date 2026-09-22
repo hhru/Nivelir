@@ -1,9 +1,9 @@
 #if canImport(UIKit)
 import UIKit
 
-@MainActor
 public protocol ScreenStackModifier: CustomStringConvertible {
 
+    @MainActor
     func perform(
         stack: [UIViewController],
         navigator: ScreenNavigator

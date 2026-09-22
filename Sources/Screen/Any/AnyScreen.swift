@@ -40,7 +40,9 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
         box.traits
     }
 
-    public let description: String
+    public var description: String {
+        box.description
+    }
 
     internal init<Wrapped: Screen>(
         _ wrapped: Wrapped,
@@ -50,7 +52,6 @@ public struct AnyScreen<Container: ScreenContainer>: Screen {
         ) -> Container
     ) {
         self.box = AnyScreenBox(wrapped, builder: builder)
-        description = box.description
     }
 
     /// Creates a type-erasing screen to wrap the provided screen.

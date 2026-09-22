@@ -22,7 +22,10 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>:
 
     private let box: AnyScreenActionBaseBox<Container, Output>
 
-    public let description: String
+    public var description: String {
+        box.description
+    }
+
     /// Creates a type-erasing action to wrap the provided action.
     ///
     /// - Parameter wrapped: An action to wrap with a type-eraser.
@@ -30,7 +33,6 @@ public struct AnyScreenAction<Container: ScreenContainer, Output>:
         _ wrapped: Wrapped
     ) where Wrapped.Container == Container, Wrapped.Output == Output {
         box = AnyScreenActionBox(wrapped) { $0 }
-        description = box.description
     }
 
     public func cast<Action: ScreenAction>(to type: Action.Type) -> Action? {
@@ -64,7 +66,6 @@ extension AnyScreenAction where Output == Void {
         box = AnyScreenActionBox(wrapped) { result in
             result.ignoringValue()
         }
-        description = box.description
     }
 }
 
