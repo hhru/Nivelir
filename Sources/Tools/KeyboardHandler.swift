@@ -84,7 +84,12 @@ extension KeyboardHandler where Self: NSObject {
 extension KeyboardHandler {
 
     private nonisolated func handleKeyboardFrameNotification(_ notification: Notification) {
-        let keyboardFrame = notification
+        let keyboardFrameBegin = notification
+            .userInfo?[UIResponder.keyboardFrameBeginUserInfoKey]
+            .flatMap { $0 as? NSValue }
+            .map { $0.cgRectValue } ?? .zero
+
+        let keyboardFrameEnd = notification
             .userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
             .flatMap { $0 as? NSValue }
             .map { $0.cgRectValue } ?? .zero
@@ -101,14 +106,26 @@ extension KeyboardHandler {
             .map { UIView.AnimationOptions(rawValue: UInt($0) << 16) } ?? .curveLinear
 
         MainActor.assumeIsolated {
-            guard keyboardFrameAssociation[self] != keyboardFrame else {
+            // При выключенных анимациях iOS 26+ с включенным Liquid Glass постит лишний цикл обновления,
+            // в котором прилетает высота клавиатуры без учета высоты inputAccessoryView.
+            // Такое обновление отличается нулевой анимацией и равенством начального и конечного фрейма,
+            // поэтому фильтруем такие обновления. Воспроизводится в чистом проекте и является багом iOS.
+            let shouldIgnoreKeyboardFrame = !UIView.areAnimationsEnabled
+                && animationDuration <= .leastNonzeroMagnitude
+                && keyboardFrameBegin == keyboardFrameEnd
+
+            guard !shouldIgnoreKeyboardFrame else {
                 return
             }
 
-            keyboardFrameAssociation[self] = keyboardFrame
+            guard keyboardFrameAssociation[self] != keyboardFrameEnd else {
+                return
+            }
+
+            keyboardFrameAssociation[self] = keyboardFrameEnd
 
             handleKeyboardFrame(
-                keyboardFrame,
+                keyboardFrameEnd,
                 animationDuration: animationDuration,
                 animationOptions: animationOptions
             )
