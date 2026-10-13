@@ -440,7 +440,9 @@ internal final class BottomSheetPresentationController: UIPresentationController
     }
 
     private func layoutTransitionView() {
-        transitionView?.frame = resolveTransitionViewFrame()
+        if state != .dismissing {
+            transitionView?.frame = resolveTransitionViewFrame()
+        }
 
         layoutTransitionSubviews()
     }
