@@ -6,6 +6,13 @@ open class BottomSheetStackController: UINavigationController {
     private var lastPreferredContentSize = CGSize.zero
     private var isUpdatingStack = false
 
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if !isUpdatingStack {
+            updatePreferredContentSizeIfNeeded()
+        }
+    }
+
     private func updatePreferredContentSizeIfNeeded() {
         guard isPresentedAsBottomSheet, let topViewController else {
             return
@@ -19,12 +26,17 @@ open class BottomSheetStackController: UINavigationController {
             return
         }
 
-        let preferredContentHeight = topViewController
+        var preferredContentHeight = topViewController
             .preferredContentSize
             .height + additionalSafeAreaInsets.vertical
 
         guard preferredContentHeight != .zero else {
             return
+        }
+
+        if !isNavigationBarHidden, let view = viewIfLoaded, view.window != nil {
+            let barTop = navigationBar.convert(navigationBar.bounds.origin, to: view).y
+            preferredContentHeight += max(0, barTop - view.safeAreaInsets.top)
         }
 
         let preferredContentSize = CGSize(
